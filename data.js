@@ -13,7 +13,7 @@ export const CHROME_PROFILE_PATH = `./UserData/${USER_EMAIL}/ProfileData`;
 /**
  * User Leetcode Data Directory
  */
-export const LEETMATION_DATA_PATH = `./UserData/${USER_EMAIL}/LeetmationData`;
+export const LEETMATION_DATA_PATH = `./UserData/${USER_EMAIL}/LeetcoderData`;
 /**
  * User Leetcode Data Directory
  */

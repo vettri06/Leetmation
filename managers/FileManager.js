@@ -49,6 +49,8 @@ class FileManager {
     return obj;
   }
 
+  static #solvedProblemSet = null;
+
   static async #ensureSolvedProblemSetFile() {
     try {
       await fs.access(SOLVED_PROBLEMS_PATH);
@@ -60,9 +62,13 @@ class FileManager {
   }
 
   static async getSolvedProblemSet() {
+    if (this.#solvedProblemSet) {
+      return this.#solvedProblemSet;
+    }
     await this.#ensureSolvedProblemSetFile();
     const data = await fs.readFile(SOLVED_PROBLEMS_PATH, 'utf8');
-    return new Set(JSON.parse(data))
+    this.#solvedProblemSet = new Set(JSON.parse(data));
+    return this.#solvedProblemSet;
   }
 
   static async setSolvedProblemSet(problemName) {

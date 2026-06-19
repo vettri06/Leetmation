@@ -1,67 +1,85 @@
-<h1 align="center">Leetmation</h1>
+# Leetmation
 
-<p align="center">
-  Automate login, solving, and scraping on LeetCode so you can focus on learning — not busywork.
-</p>
+Automate login, solving, and scraping on LeetCode so you can focus on learning — not busywork.
 
 ---
 
-## Important notes
+> [!IMPORTANT]
+> **Key Compatibility Requirements:**
+> * Works on **LeetCode's newer dynamic layout** only.
+> * Supported on **Windows** operating systems.
+> * **Use responsibly** and in line with LeetCode's terms.
+> * **Privacy first:** All data is stored locally on your machine.
 
-1. Works on **LeetCode's newer dynamic layout** only.
-2. **Windows only** for now.
-3. **Use responsibly** and in line with LeetCode's terms.
-4. **Privacy:** no data is sent anywhere outside your machine by this tool.
+Leetmation is designed to streamline problem-solving and scraping. With its optimized automation flow, **Leetmation can process on the order of ~200 problems per hour** (network and UI loading speed permitting).
 
-Leetmation is built to make problem-solving and scraping more efficient. With its automated flow, **Leetmation can solve on the order of ~200 problems in about an hour** (network and UI permitting).
+---
 
 ## Features
 
-1. ### Automated problem solving  
-   Automates solving LeetCode questions from your saved solutions.
+1. **Automated Problem Solving**  
+   Automatically loads saved solutions and submits them directly in the LeetCode editor.
+2. **Seamless Authentication**  
+   Utilizes a persistent local Chrome profile, keeping you logged in and bypassing repeated login hurdles.
+3. **Solution Scraping**  
+   Scrapes and archives accepted submissions into a structured local repository.
+4. **Resumable Runs**  
+   Tracks successfully submitted and already solved problems to ensure runs continue where they left off without redundant checks.
 
-2. ### Seamless login  
-   Handles authentication via a persistent Chrome profile.
+---
 
-3. ### Solution scraping  
-   Scrapes and organizes accepted solutions into a local archive.
+## Getting Started
 
-4. ### Resume where you left off  
-   Remembers solved problem names so runs can continue after interruption.
+### 1. Installation
+Clone the repository and install the dependencies:
+```bash
+git clone https://github.com/vettri06/Leetmation.git
+cd Leetmation
+yarn install
+```
 
-## Usage disclaimer
+### 2. Configuration
+Create a `.env` file in the root directory:
+```env
+# Profile folder name matching your LeetCode account email
+USER_EMAIL=your_email@example.com
 
-Leetmation is for **educational use**. Do not use it to misrepresent your progress or break LeetCode's rules. Always follow [LeetCode's terms of service](https://leetcode.com/terms/) and community guidelines.
+# Executable path to your Google Chrome browser
+GOOGLE_CHROME_EXECUTABLE_PATH=C:/Program Files/Google/Chrome/Application/chrome.exe
+```
 
-## Getting started
+### 3. Execution
+Launch the interactive command line interface:
+```bash
+node index.js
+```
 
-1. Clone the repo.
-   ```bash
-   git clone https://github.com/vettri06/Leetmation
-   ```
-2. Open the project in your editor.
-3. In the terminal: `yarn install`
-4. Create a `.env` in the project root:
-   ```text
-   ; Used only for the local Chrome profile folder name.
-   USER_EMAIL=your_email_here
-   ; Chrome → chrome://version/ → Executable Path
-   GOOGLE_CHROME_EXECUTABLE_PATH=C:/Program Files/Google/Chrome/Application/chrome.exe
-   ```
-5. Run: `node index.js`
+---
 
-### Where data lives
+## Data Directories & Cache Files
 
-| Kind | Path |
-|------|------|
-| Scraped solutions | `./UserData/your_email/LeetmationData/ScrapedSolutions` |
-| Solved problem list (resume) | `./UserData/your_email/LeetmationData/SolvedProblems.json` |
-| Chrome profile (stay logged in) | `./UserData/your_email/ProfileData` |
+All configurations and solved history are stored locally under the user profile directories:
 
-## Compatibility
+| Data Type | Path | Description |
+| :--- | :--- | :--- |
+| **Solved Problems Cache** | `./UserData/<your_email>/LeetcoderData/SolvedProblems.json` | JSON list of problem slugs that have been successfully solved. These are **skipped automatically** on startup. |
+| **Submission Reports** | `./UserData/<your_email>/LeetcoderData/SubmissionReport.json` | Detailed telemetry of your solved, failed, and skipped runs. |
+| **Scraped Solutions** | `./UserData/<your_email>/LeetcoderData/ScrapedSolutions/` | Folder containing all downloaded accepted solutions. |
+| **Chrome Profile Data** | `./UserData/<your_email>/ProfileData/` | Local user profile data containing session cookies and configuration. |
 
-Leetmation targets **Windows**. Behavior on macOS is not supported today.
+---
+
+## Skip Logic for Already Solved Problems
+
+To optimize speed and prevent redundant checks, Leetmation performs two layers of verification:
+
+1. **In-Memory & Disk Cache Check:**  
+   Before navigations occur, Leetmation checks if the problem's slug exists in the local `./UserData/<your_email>/LeetcoderData/SolvedProblems.json` file. If present, it logs `[SOLVED_EARLIER]` and skips it without opening the page.
+2. **On-Page Verification:**  
+   If a problem is opened but not in the cache, Leetmation inspects the UI for the "Solved" label. If found, it records it in `SolvedProblems.json` and skips it, avoiding unnecessary submissions.
+
+---
 
 ## License
 
-Open source under the [MIT License](LICENSE). Free to use and modify for fun or learning; no warranty.
+Open source under the [MIT License](LICENSE). Free to use and modify.
