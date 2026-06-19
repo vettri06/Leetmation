@@ -1,0 +1,33 @@
+{
+    "problemName": "exchange-seats",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT s1.id, COALESCE(s2.student, s1.student) AS student\r\nFROM\r\n    Seat AS s1\r\n    LEFT JOIN Seat AS s2 ON (s1.id + 1) ^ 1 - 1 = s2.id\r\nORDER BY 1;",
+    "problemId": 626,
+    "title": "Exchange Seats",
+    "problemUrl": "https://leetcode.com/problems/exchange-seats/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0626.Exchange Seats/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0626.Exchange Seats/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0626.Exchange Seats/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0626.Exchange Seats/Solution3.sql",
+            "sourceFile": "Solution3.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0626.Exchange Seats/Solution4.sql",
+            "sourceFile": "Solution4.sql"
+        }
+    ]
+}

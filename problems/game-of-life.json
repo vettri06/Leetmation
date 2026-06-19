@@ -1,0 +1,48 @@
+{
+    "problemName": "game-of-life",
+    "language": "python3",
+    "code": "class Solution:\r\n    def gameOfLife(self, board: List[List[int]]) -> None:\r\n        m, n = len(board), len(board[0])\r\n        for i in range(m):\r\n            for j in range(n):\r\n                live = -board[i][j]\r\n                for x in range(i - 1, i + 2):\r\n                    for y in range(j - 1, j + 2):\r\n                        if 0 <= x < m and 0 <= y < n and board[x][y] > 0:\r\n                            live += 1\r\n                if board[i][j] and (live < 2 or live > 3):\r\n                    board[i][j] = 2\r\n                if board[i][j] == 0 and live == 3:\r\n                    board[i][j] = -1\r\n        for i in range(m):\r\n            for j in range(n):\r\n                if board[i][j] == 2:\r\n                    board[i][j] = 0\r\n                elif board[i][j] == -1:\r\n                    board[i][j] = 1",
+    "problemId": 289,
+    "title": "Game of Life",
+    "problemUrl": "https://leetcode.com/problems/game-of-life/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0289.Game of Life/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0289.Game of Life/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0289.Game of Life/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0289.Game of Life/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0289.Game of Life/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0289.Game of Life/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0289.Game of Life/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0289.Game of Life/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

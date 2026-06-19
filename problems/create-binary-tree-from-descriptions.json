@@ -1,0 +1,43 @@
+{
+    "problemName": "create-binary-tree-from-descriptions",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def createBinaryTree(self, descriptions: List[List[int]]) -> Optional[TreeNode]:\r\n        nodes = defaultdict(TreeNode)\r\n        children = set()\r\n        for parent, child, isLeft in descriptions:\r\n            if parent not in nodes:\r\n                nodes[parent] = TreeNode(parent)\r\n            if child not in nodes:\r\n                nodes[child] = TreeNode(child)\r\n            children.add(child)\r\n            if isLeft:\r\n                nodes[parent].left = nodes[child]\r\n            else:\r\n                nodes[parent].right = nodes[child]\r\n        root = (set(nodes.keys()) - children).pop()\r\n        return nodes[root]",
+    "problemId": 2196,
+    "title": "Create Binary Tree From Descriptions",
+    "problemUrl": "https://leetcode.com/problems/create-binary-tree-from-descriptions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2196.Create Binary Tree From Descriptions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2196.Create Binary Tree From Descriptions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2196.Create Binary Tree From Descriptions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2196.Create Binary Tree From Descriptions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2196.Create Binary Tree From Descriptions/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2196.Create Binary Tree From Descriptions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2196.Create Binary Tree From Descriptions/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

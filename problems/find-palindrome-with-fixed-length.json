@@ -1,0 +1,43 @@
+{
+    "problemName": "find-palindrome-with-fixed-length",
+    "language": "python3",
+    "code": "class Solution:\r\n    def kthPalindrome(self, queries: List[int], intLength: int) -> List[int]:\r\n        l = (intLength + 1) >> 1\r\n        start, end = 10 ** (l - 1), 10**l - 1\r\n        ans = []\r\n        for q in queries:\r\n            v = start + q - 1\r\n            if v > end:\r\n                ans.append(-1)\r\n                continue\r\n            s = str(v)\r\n            s += s[::-1][intLength % 2 :]\r\n            ans.append(int(s))\r\n        return ans",
+    "problemId": 2217,
+    "title": "Find Palindrome With Fixed Length",
+    "problemUrl": "https://leetcode.com/problems/find-palindrome-with-fixed-length/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2217.Find Palindrome With Fixed Length/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2217.Find Palindrome With Fixed Length/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2217.Find Palindrome With Fixed Length/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2217.Find Palindrome With Fixed Length/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2217.Find Palindrome With Fixed Length/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2217.Find Palindrome With Fixed Length/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2217.Find Palindrome With Fixed Length/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

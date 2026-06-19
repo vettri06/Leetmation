@@ -1,0 +1,33 @@
+{
+    "problemName": "bulb-switcher-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def flipLights(self, n: int, presses: int) -> int:\r\n        ops = (0b111111, 0b010101, 0b101010, 0b100100)\r\n        n = min(n, 6)\r\n        vis = set()\r\n        for mask in range(1 << 4):\r\n            cnt = mask.bit_count()\r\n            if cnt <= presses and cnt % 2 == presses % 2:\r\n                t = 0\r\n                for i, op in enumerate(ops):\r\n                    if (mask >> i) & 1:\r\n                        t ^= op\r\n                t &= (1 << 6) - 1\r\n                t >>= 6 - n\r\n                vis.add(t)\r\n        return len(vis)",
+    "problemId": 672,
+    "title": "Bulb Switcher II",
+    "problemUrl": "https://leetcode.com/problems/bulb-switcher-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0672.Bulb Switcher II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0672.Bulb Switcher II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0672.Bulb Switcher II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0672.Bulb Switcher II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0672.Bulb Switcher II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

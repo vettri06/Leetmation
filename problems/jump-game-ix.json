@@ -1,0 +1,43 @@
+{
+    "problemName": "jump-game-ix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxValue(self, nums: List[int]) -> List[int]:\r\n        n = len(nums)\r\n        ans = [0] * n\r\n        pre_max = [nums[0]] * n\r\n        for i in range(1, n):\r\n            pre_max[i] = max(pre_max[i - 1], nums[i])\r\n        suf_min = inf\r\n        for i in range(n - 1, -1, -1):\r\n            ans[i] = ans[i + 1] if pre_max[i] > suf_min else pre_max[i]\r\n            suf_min = min(suf_min, nums[i])\r\n        return ans",
+    "problemId": 3660,
+    "title": "Jump Game IX",
+    "problemUrl": "https://leetcode.com/problems/jump-game-ix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3660.Jump Game IX/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3660.Jump Game IX/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3660.Jump Game IX/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3660.Jump Game IX/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3660.Jump Game IX/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3660.Jump Game IX/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3660.Jump Game IX/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

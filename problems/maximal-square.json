@@ -1,0 +1,38 @@
+{
+    "problemName": "maximal-square",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximalSquare(self, matrix: List[List[str]]) -> int:\r\n        m, n = len(matrix), len(matrix[0])\r\n        dp = [[0] * (n + 1) for _ in range(m + 1)]\r\n        mx = 0\r\n        for i in range(m):\r\n            for j in range(n):\r\n                if matrix[i][j] == '1':\r\n                    dp[i + 1][j + 1] = min(dp[i][j + 1], dp[i + 1][j], dp[i][j]) + 1\r\n                    mx = max(mx, dp[i + 1][j + 1])\r\n        return mx * mx",
+    "problemId": 221,
+    "title": "Maximal Square",
+    "problemUrl": "https://leetcode.com/problems/maximal-square/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0221.Maximal Square/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0221.Maximal Square/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0221.Maximal Square/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0221.Maximal Square/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0221.Maximal Square/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0221.Maximal Square/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

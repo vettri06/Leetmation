@@ -1,0 +1,33 @@
+{
+    "problemName": "make-the-xor-of-all-segments-equal-to-zero",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minChanges(self, nums: List[int], k: int) -> int:\r\n        n = 1 << 10\r\n        cnt = [Counter() for _ in range(k)]\r\n        size = [0] * k\r\n        for i, v in enumerate(nums):\r\n            cnt[i % k][v] += 1\r\n            size[i % k] += 1\r\n        f = [inf] * n\r\n        f[0] = 0\r\n        for i in range(k):\r\n            g = [min(f) + size[i]] * n\r\n            for j in range(n):\r\n                for v, c in cnt[i].items():\r\n                    g[j] = min(g[j], f[j ^ v] + size[i] - c)\r\n            f = g\r\n        return f[0]",
+    "problemId": 1787,
+    "title": "Make the XOR of All Segments Equal to Zero",
+    "problemUrl": "https://leetcode.com/problems/make-the-xor-of-all-segments-equal-to-zero/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1787.Make the XOR of All Segments Equal to Zero/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1787.Make the XOR of All Segments Equal to Zero/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1787.Make the XOR of All Segments Equal to Zero/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1787.Make the XOR of All Segments Equal to Zero/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1787.Make the XOR of All Segments Equal to Zero/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

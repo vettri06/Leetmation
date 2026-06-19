@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-genetic-mutation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minMutation(self, startGene: str, endGene: str, bank: List[str]) -> int:\r\n        q = deque([(startGene, 0)])\r\n        vis = {startGene}\r\n        while q:\r\n            gene, depth = q.popleft()\r\n            if gene == endGene:\r\n                return depth\r\n            for nxt in bank:\r\n                diff = sum(a != b for a, b in zip(gene, nxt))\r\n                if diff == 1 and nxt not in vis:\r\n                    q.append((nxt, depth + 1))\r\n                    vis.add(nxt)\r\n        return -1",
+    "problemId": 433,
+    "title": "Minimum Genetic Mutation",
+    "problemUrl": "https://leetcode.com/problems/minimum-genetic-mutation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0433.Minimum Genetic Mutation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0433.Minimum Genetic Mutation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0433.Minimum Genetic Mutation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0433.Minimum Genetic Mutation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0433.Minimum Genetic Mutation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0433.Minimum Genetic Mutation/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

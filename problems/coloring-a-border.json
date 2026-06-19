@@ -1,0 +1,38 @@
+{
+    "problemName": "coloring-a-border",
+    "language": "python3",
+    "code": "class Solution:\r\n    def colorBorder(\r\n        self, grid: List[List[int]], row: int, col: int, color: int\r\n    ) -> List[List[int]]:\r\n        def dfs(i: int, j: int, c: int) -> None:\r\n            vis[i][j] = True\r\n            for a, b in pairwise((-1, 0, 1, 0, -1)):\r\n                x, y = i + a, j + b\r\n                if 0 <= x < m and 0 <= y < n:\r\n                    if not vis[x][y]:\r\n                        if grid[x][y] == c:\r\n                            dfs(x, y, c)\r\n                        else:\r\n                            grid[i][j] = color\r\n                else:\r\n                    grid[i][j] = color\r\n\r\n        m, n = len(grid), len(grid[0])\r\n        vis = [[False] * n for _ in range(m)]\r\n        dfs(row, col, grid[row][col])\r\n        return grid",
+    "problemId": 1034,
+    "title": "Coloring A Border",
+    "problemUrl": "https://leetcode.com/problems/coloring-a-border/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1034.Coloring A Border/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1034.Coloring A Border/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1034.Coloring A Border/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1034.Coloring A Border/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1034.Coloring A Border/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1034.Coloring A Border/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

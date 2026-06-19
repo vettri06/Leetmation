@@ -1,0 +1,48 @@
+{
+    "problemName": "card-flipping-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def flipgame(self, fronts: List[int], backs: List[int]) -> int:\r\n        s = {a for a, b in zip(fronts, backs) if a == b}\r\n        return min((x for x in chain(fronts, backs) if x not in s), default=0)",
+    "problemId": 822,
+    "title": "Card Flipping Game",
+    "problemUrl": "https://leetcode.com/problems/card-flipping-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0822.Card Flipping Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0822.Card Flipping Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0822.Card Flipping Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0822.Card Flipping Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0822.Card Flipping Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0822.Card Flipping Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0822.Card Flipping Game/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0822.Card Flipping Game/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

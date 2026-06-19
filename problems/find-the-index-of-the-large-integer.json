@@ -1,0 +1,33 @@
+{
+    "problemName": "find-the-index-of-the-large-integer",
+    "language": "python3",
+    "code": "# \"\"\"\r\n# This is ArrayReader's API interface.\r\n# You should not implement it, or speculate about its implementation\r\n# \"\"\"\r\n# class ArrayReader(object):\r\n# \t # Compares the sum of arr[l..r] with the sum of arr[x..y]\r\n# \t # return 1 if sum(arr[l..r]) > sum(arr[x..y])\r\n# \t # return 0 if sum(arr[l..r]) == sum(arr[x..y])\r\n# \t # return -1 if sum(arr[l..r]) < sum(arr[x..y])\r\n#    def compareSub(self, l: int, r: int, x: int, y: int) -> int:\r\n#\r\n# \t # Returns the length of the array\r\n#    def length(self) -> int:\r\n#\r\n\r\n\r\nclass Solution:\r\n    def getIndex(self, reader: 'ArrayReader') -> int:\r\n        left, right = 0, reader.length() - 1\r\n        while left < right:\r\n            t1, t2, t3 = (\r\n                left,\r\n                left + (right - left) // 3,\r\n                left + ((right - left) // 3) * 2 + 1,\r\n            )\r\n            cmp = reader.compareSub(t1, t2, t2 + 1, t3)\r\n            if cmp == 0:\r\n                left = t3 + 1\r\n            elif cmp == 1:\r\n                right = t2\r\n            else:\r\n                left, right = t2 + 1, t3\r\n        return left",
+    "problemId": 1533,
+    "title": "Find the Index of the Large Integer",
+    "problemUrl": "https://leetcode.com/problems/find-the-index-of-the-large-integer/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1533.Find the Index of the Large Integer/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1533.Find the Index of the Large Integer/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1533.Find the Index of the Large Integer/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1533.Find the Index of the Large Integer/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1533.Find the Index of the Large Integer/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

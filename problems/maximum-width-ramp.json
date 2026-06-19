@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-width-ramp",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxWidthRamp(self, nums: List[int]) -> int:\r\n        stk = []\r\n        for i, v in enumerate(nums):\r\n            if not stk or nums[stk[-1]] > v:\r\n                stk.append(i)\r\n        ans = 0\r\n        for i in range(len(nums) - 1, -1, -1):\r\n            while stk and nums[stk[-1]] <= nums[i]:\r\n                ans = max(ans, i - stk.pop())\r\n            if not stk:\r\n                break\r\n        return ans",
+    "problemId": 962,
+    "title": "Maximum Width Ramp",
+    "problemUrl": "https://leetcode.com/problems/maximum-width-ramp/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0962.Maximum Width Ramp/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0962.Maximum Width Ramp/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0962.Maximum Width Ramp/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0962.Maximum Width Ramp/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0962.Maximum Width Ramp/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0962.Maximum Width Ramp/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0962.Maximum Width Ramp/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

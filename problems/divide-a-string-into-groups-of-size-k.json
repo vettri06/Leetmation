@@ -1,0 +1,38 @@
+{
+    "problemName": "divide-a-string-into-groups-of-size-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def divideString(self, s: str, k: int, fill: str) -> List[str]:\r\n        return [s[i : i + k].ljust(k, fill) for i in range(0, len(s), k)]",
+    "problemId": 2138,
+    "title": "Divide a String Into Groups of Size k",
+    "problemUrl": "https://leetcode.com/problems/divide-a-string-into-groups-of-size-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2138.Divide a String Into Groups of Size k/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2138.Divide a String Into Groups of Size k/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2138.Divide a String Into Groups of Size k/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2138.Divide a String Into Groups of Size k/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2138.Divide a String Into Groups of Size k/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2138.Divide a String Into Groups of Size k/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

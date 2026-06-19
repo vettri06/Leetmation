@@ -1,0 +1,48 @@
+{
+    "problemName": "merge-similar-items",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mergeSimilarItems(\r\n        self, items1: List[List[int]], items2: List[List[int]]\r\n    ) -> List[List[int]]:\r\n        cnt = Counter()\r\n        for v, w in chain(items1, items2):\r\n            cnt[v] += w\r\n        return sorted(cnt.items())",
+    "problemId": 2363,
+    "title": "Merge Similar Items",
+    "problemUrl": "https://leetcode.com/problems/merge-similar-items/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2363.Merge Similar Items/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2363.Merge Similar Items/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2363.Merge Similar Items/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2363.Merge Similar Items/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2363.Merge Similar Items/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2363.Merge Similar Items/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2363.Merge Similar Items/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2363.Merge Similar Items/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

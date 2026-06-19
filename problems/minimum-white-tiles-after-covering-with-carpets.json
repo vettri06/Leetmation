@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-white-tiles-after-covering-with-carpets",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumWhiteTiles(self, floor: str, numCarpets: int, carpetLen: int) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int) -> int:\r\n            if i >= n:\r\n                return 0\r\n            if floor[i] == \"0\":\r\n                return dfs(i + 1, j)\r\n            if j == 0:\r\n                return s[-1] - s[i]\r\n            return min(1 + dfs(i + 1, j), dfs(i + carpetLen, j - 1))\r\n\r\n        n = len(floor)\r\n        s = [0] * (n + 1)\r\n        for i, c in enumerate(floor):\r\n            s[i + 1] = s[i] + int(c == \"1\")\r\n        ans = dfs(0, numCarpets)\r\n        dfs.cache_clear()\r\n        return ans",
+    "problemId": 2209,
+    "title": "Minimum White Tiles After Covering With Carpets",
+    "problemUrl": "https://leetcode.com/problems/minimum-white-tiles-after-covering-with-carpets/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2209.Minimum White Tiles After Covering With Carpets/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2209.Minimum White Tiles After Covering With Carpets/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2209.Minimum White Tiles After Covering With Carpets/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2209.Minimum White Tiles After Covering With Carpets/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2209.Minimum White Tiles After Covering With Carpets/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2209.Minimum White Tiles After Covering With Carpets/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2209.Minimum White Tiles After Covering With Carpets/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

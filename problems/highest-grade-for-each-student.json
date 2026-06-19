@@ -1,0 +1,23 @@
+{
+    "problemName": "highest-grade-for-each-student",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            *,\r\n            RANK() OVER (\r\n                PARTITION BY student_id\r\n                ORDER BY grade DESC, course_id\r\n            ) AS rk\r\n        FROM Enrollments\r\n    )\r\nSELECT student_id, course_id, grade\r\nFROM T\r\nWHERE rk = 1\r\nORDER BY student_id;",
+    "problemId": 1112,
+    "title": "Highest Grade For Each Student",
+    "problemUrl": "https://leetcode.com/problems/highest-grade-for-each-student/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1112.Highest Grade For Each Student/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1112.Highest Grade For Each Student/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1112.Highest Grade For Each Student/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

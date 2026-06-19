@@ -1,0 +1,43 @@
+{
+    "problemName": "boundary-of-binary-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def boundaryOfBinaryTree(self, root: Optional[TreeNode]) -> List[int]:\r\n        def dfs(nums: List[int], root: Optional[TreeNode], i: int):\r\n            if root is None:\r\n                return\r\n            if i == 0:\r\n                if root.left != root.right:\r\n                    nums.append(root.val)\r\n                    if root.left:\r\n                        dfs(nums, root.left, i)\r\n                    else:\r\n                        dfs(nums, root.right, i)\r\n            elif i == 1:\r\n                if root.left == root.right:\r\n                    nums.append(root.val)\r\n                else:\r\n                    dfs(nums, root.left, i)\r\n                    dfs(nums, root.right, i)\r\n            else:\r\n                if root.left != root.right:\r\n                    nums.append(root.val)\r\n                    if root.right:\r\n                        dfs(nums, root.right, i)\r\n                    else:\r\n                        dfs(nums, root.left, i)\r\n\r\n        ans = [root.val]\r\n        if root.left == root.right:\r\n            return ans\r\n        left, leaves, right = [], [], []\r\n        dfs(left, root.left, 0)\r\n        dfs(leaves, root, 1)\r\n        dfs(right, root.right, 2)\r\n        ans += left + leaves + right[::-1]\r\n        return ans",
+    "problemId": 545,
+    "title": "Boundary of Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/boundary-of-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0545.Boundary of Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0545.Boundary of Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0545.Boundary of Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0545.Boundary of Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0545.Boundary of Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0545.Boundary of Binary Tree/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0545.Boundary of Binary Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

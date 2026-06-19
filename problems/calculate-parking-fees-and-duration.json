@@ -1,0 +1,18 @@
+{
+    "problemName": "calculate-parking-fees-and-duration",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            car_id,\r\n            lot_id,\r\n            SUM(TIMESTAMPDIFF(SECOND, entry_time, exit_time)) AS duration\r\n        FROM ParkingTransactions\r\n        GROUP BY 1, 2\r\n    ),\r\n    P AS (\r\n        SELECT\r\n            *,\r\n            RANK() OVER (\r\n                PARTITION BY car_id\r\n                ORDER BY duration DESC\r\n            ) AS rk\r\n        FROM T\r\n    )\r\nSELECT\r\n    t1.car_id,\r\n    SUM(fee_paid) AS total_fee_paid,\r\n    ROUND(\r\n        SUM(fee_paid) / (SUM(TIMESTAMPDIFF(SECOND, entry_time, exit_time)) / 3600),\r\n        2\r\n    ) AS avg_hourly_fee,\r\n    t2.lot_id AS most_time_lot\r\nFROM\r\n    ParkingTransactions AS t1\r\n    LEFT JOIN P AS t2 ON t1.car_id = t2.car_id AND t2.rk = 1\r\nGROUP BY 1\r\nORDER BY 1;",
+    "problemId": 3166,
+    "title": "Calculate Parking Fees and Duration",
+    "problemUrl": "https://leetcode.com/problems/calculate-parking-fees-and-duration/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3166.Calculate Parking Fees and Duration/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3166.Calculate Parking Fees and Duration/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

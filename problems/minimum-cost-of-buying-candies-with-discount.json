@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-of-buying-candies-with-discount",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumCost(self, cost: List[int]) -> int:\r\n        cost.sort(reverse=True)\r\n        return sum(cost) - sum(cost[2::3])",
+    "problemId": 2144,
+    "title": "Minimum Cost of Buying Candies With Discount",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2144.Minimum Cost of Buying Candies With Discount/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2144.Minimum Cost of Buying Candies With Discount/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2144.Minimum Cost of Buying Candies With Discount/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2144.Minimum Cost of Buying Candies With Discount/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2144.Minimum Cost of Buying Candies With Discount/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2144.Minimum Cost of Buying Candies With Discount/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

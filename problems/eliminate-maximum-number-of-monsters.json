@@ -1,0 +1,48 @@
+{
+    "problemName": "eliminate-maximum-number-of-monsters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def eliminateMaximum(self, dist: List[int], speed: List[int]) -> int:\r\n        times = sorted((d - 1) // s for d, s in zip(dist, speed))\r\n        for i, t in enumerate(times):\r\n            if t < i:\r\n                return i\r\n        return len(times)",
+    "problemId": 1921,
+    "title": "Eliminate Maximum Number of Monsters",
+    "problemUrl": "https://leetcode.com/problems/eliminate-maximum-number-of-monsters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1921.Eliminate Maximum Number of Monsters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1921.Eliminate Maximum Number of Monsters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1921.Eliminate Maximum Number of Monsters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1921.Eliminate Maximum Number of Monsters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1921.Eliminate Maximum Number of Monsters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1921.Eliminate Maximum Number of Monsters/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1921.Eliminate Maximum Number of Monsters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1921.Eliminate Maximum Number of Monsters/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

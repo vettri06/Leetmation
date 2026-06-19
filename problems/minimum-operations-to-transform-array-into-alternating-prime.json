@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-operations-to-transform-array-into-alternating-prime",
+    "language": "python3",
+    "code": "MX = 200000\r\nis_prime = [True] * (MX + 1)\r\nis_prime[0] = is_prime[1] = False\r\n\r\nfor i in range(2, int(MX**0.5) + 1):\r\n    if is_prime[i]:\r\n        for j in range(i * i, MX + 1, i):\r\n            is_prime[j] = False\r\n\r\nprimes = [i for i in range(2, MX + 1) if is_prime[i]]\r\n\r\n\r\nclass Solution:\r\n    def minOperations(self, nums: list[int]) -> int:\r\n        ans = 0\r\n        for i, x in enumerate(nums):\r\n            if i % 2 == 0:\r\n                j = bisect_left(primes, x)\r\n                ans += primes[j] - x\r\n            else:\r\n                if is_prime[x]:\r\n                    ans += 2 if x == 2 else 1\r\n        return ans",
+    "problemId": 3896,
+    "title": "Minimum Operations to Transform Array into Alternating Prime",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-transform-array-into-alternating-prime/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3896.Minimum Operations to Transform Array into Alternating Prime/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3896.Minimum Operations to Transform Array into Alternating Prime/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3896.Minimum Operations to Transform Array into Alternating Prime/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3896.Minimum Operations to Transform Array into Alternating Prime/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3896.Minimum Operations to Transform Array into Alternating Prime/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3896.Minimum Operations to Transform Array into Alternating Prime/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

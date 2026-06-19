@@ -1,0 +1,38 @@
+{
+    "problemName": "maximize-the-profit-as-the-salesman",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximizeTheProfit(self, n: int, offers: List[List[int]]) -> int:\r\n        offers.sort(key=lambda x: x[1])\r\n        f = [0] * (len(offers) + 1)\r\n        g = [x[1] for x in offers]\r\n        for i, (s, _, v) in enumerate(offers, 1):\r\n            j = bisect_left(g, s)\r\n            f[i] = max(f[i - 1], f[j] + v)\r\n        return f[-1]",
+    "problemId": 2830,
+    "title": "Maximize the Profit as the Salesman",
+    "problemUrl": "https://leetcode.com/problems/maximize-the-profit-as-the-salesman/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2830.Maximize the Profit as the Salesman/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2830.Maximize the Profit as the Salesman/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2830.Maximize the Profit as the Salesman/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2830.Maximize the Profit as the Salesman/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2830.Maximize the Profit as the Salesman/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2830.Maximize the Profit as the Salesman/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

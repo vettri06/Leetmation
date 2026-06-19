@@ -1,0 +1,33 @@
+{
+    "problemName": "array-with-elements-not-equal-to-average-of-neighbors",
+    "language": "python3",
+    "code": "class Solution:\r\n    def rearrangeArray(self, nums: List[int]) -> List[int]:\r\n        nums.sort()\r\n        n = len(nums)\r\n        m = (n + 1) // 2\r\n        ans = []\r\n        for i in range(m):\r\n            ans.append(nums[i])\r\n            if i + m < n:\r\n                ans.append(nums[i + m])\r\n        return ans",
+    "problemId": 1968,
+    "title": "Array With Elements Not Equal to Average of Neighbors",
+    "problemUrl": "https://leetcode.com/problems/array-with-elements-not-equal-to-average-of-neighbors/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1968.Array With Elements Not Equal to Average of Neighbors/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1968.Array With Elements Not Equal to Average of Neighbors/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1968.Array With Elements Not Equal to Average of Neighbors/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1968.Array With Elements Not Equal to Average of Neighbors/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1968.Array With Elements Not Equal to Average of Neighbors/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

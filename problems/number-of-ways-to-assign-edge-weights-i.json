@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-ways-to-assign-edge-weights-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def assignEdgeWeights(self, edges: List[List[int]]) -> int:\r\n        def dfs(i: int, fa: int = 0) -> int:\r\n            res = 0\r\n            for j in g[i]:\r\n                if j != fa:\r\n                    res = max(res, dfs(j, i) + 1)\r\n            return res\r\n\r\n        n = len(edges) + 1\r\n        g = [[] for _ in range(n + 1)]\r\n        for u, v in edges:\r\n            g[u].append(v)\r\n            g[v].append(u)\r\n        d = dfs(1)\r\n        return pow(2, d - 1, 10**9 + 7)",
+    "problemId": 3558,
+    "title": "Number of Ways to Assign Edge Weights I",
+    "problemUrl": "https://leetcode.com/problems/number-of-ways-to-assign-edge-weights-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3558.Number of Ways to Assign Edge Weights I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3558.Number of Ways to Assign Edge Weights I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3558.Number of Ways to Assign Edge Weights I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3558.Number of Ways to Assign Edge Weights I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3558.Number of Ways to Assign Edge Weights I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3558.Number of Ways to Assign Edge Weights I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "smallest-subsequence-of-distinct-characters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestSubsequence(self, s: str) -> str:\r\n        last = {c: i for i, c in enumerate(s)}\r\n        stk = []\r\n        vis = set()\r\n        for i, c in enumerate(s):\r\n            if c in vis:\r\n                continue\r\n            while stk and stk[-1] > c and last[stk[-1]] > i:\r\n                vis.remove(stk.pop())\r\n            stk.append(c)\r\n            vis.add(c)\r\n        return \"\".join(stk)",
+    "problemId": 1081,
+    "title": "Smallest Subsequence of Distinct Characters",
+    "problemUrl": "https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1081.Smallest Subsequence of Distinct Characters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1081.Smallest Subsequence of Distinct Characters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1081.Smallest Subsequence of Distinct Characters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1081.Smallest Subsequence of Distinct Characters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1081.Smallest Subsequence of Distinct Characters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1081.Smallest Subsequence of Distinct Characters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1081.Smallest Subsequence of Distinct Characters/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

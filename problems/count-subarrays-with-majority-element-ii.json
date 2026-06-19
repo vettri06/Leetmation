@@ -1,0 +1,38 @@
+{
+    "problemName": "count-subarrays-with-majority-element-ii",
+    "language": "python3",
+    "code": "class BinaryIndexedTree:\r\n    __slots__ = \"n\", \"c\"\r\n\r\n    def __init__(self, n: int):\r\n        self.n = n\r\n        self.c = [0] * (n + 1)\r\n\r\n    def update(self, x: int, delta: int) -> None:\r\n        while x <= self.n:\r\n            self.c[x] += delta\r\n            x += x & -x\r\n\r\n    def query(self, x: int) -> int:\r\n        s = 0\r\n        while x:\r\n            s += self.c[x]\r\n            x -= x & -x\r\n        return s\r\n\r\n\r\nclass Solution:\r\n    def countMajoritySubarrays(self, nums: List[int], target: int) -> int:\r\n        n = len(nums)\r\n        tree = BinaryIndexedTree(n * 2 + 1)\r\n        s = n + 1\r\n        tree.update(s, 1)\r\n        ans = 0\r\n        for x in nums:\r\n            s += 1 if x == target else -1\r\n            ans += tree.query(s - 1)\r\n            tree.update(s, 1)\r\n        return ans",
+    "problemId": 3739,
+    "title": "Count Subarrays With Majority Element II",
+    "problemUrl": "https://leetcode.com/problems/count-subarrays-with-majority-element-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3739.Count Subarrays With Majority Element II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3739.Count Subarrays With Majority Element II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3739.Count Subarrays With Majority Element II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3739.Count Subarrays With Majority Element II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3739.Count Subarrays With Majority Element II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3739.Count Subarrays With Majority Element II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

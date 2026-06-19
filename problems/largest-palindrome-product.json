@@ -1,0 +1,33 @@
+{
+    "problemName": "largest-palindrome-product",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestPalindrome(self, n: int) -> int:\r\n        mx = 10**n - 1\r\n        for a in range(mx, mx // 10, -1):\r\n            b = x = a\r\n            while b:\r\n                x = x * 10 + b % 10\r\n                b //= 10\r\n            t = mx\r\n            while t * t >= x:\r\n                if x % t == 0:\r\n                    return x % 1337\r\n                t -= 1\r\n        return 9",
+    "problemId": 479,
+    "title": "Largest Palindrome Product",
+    "problemUrl": "https://leetcode.com/problems/largest-palindrome-product/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0479.Largest Palindrome Product/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0479.Largest Palindrome Product/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0479.Largest Palindrome Product/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0479.Largest Palindrome Product/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0479.Largest Palindrome Product/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

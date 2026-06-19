@@ -1,0 +1,38 @@
+{
+    "problemName": "reach-a-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reachNumber(self, target: int) -> int:\r\n        target = abs(target)\r\n        s = k = 0\r\n        while 1:\r\n            if s >= target and (s - target) % 2 == 0:\r\n                return k\r\n            k += 1\r\n            s += k",
+    "problemId": 754,
+    "title": "Reach a Number",
+    "problemUrl": "https://leetcode.com/problems/reach-a-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0754.Reach a Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0754.Reach a Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0754.Reach a Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0754.Reach a Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0754.Reach a Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0754.Reach a Number/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

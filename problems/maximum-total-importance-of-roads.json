@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-total-importance-of-roads",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumImportance(self, n: int, roads: List[List[int]]) -> int:\r\n        deg = [0] * n\r\n        for a, b in roads:\r\n            deg[a] += 1\r\n            deg[b] += 1\r\n        deg.sort()\r\n        return sum(i * v for i, v in enumerate(deg, 1))",
+    "problemId": 2285,
+    "title": "Maximum Total Importance of Roads",
+    "problemUrl": "https://leetcode.com/problems/maximum-total-importance-of-roads/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2285.Maximum Total Importance of Roads/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2285.Maximum Total Importance of Roads/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2285.Maximum Total Importance of Roads/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2285.Maximum Total Importance of Roads/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2285.Maximum Total Importance of Roads/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2285.Maximum Total Importance of Roads/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

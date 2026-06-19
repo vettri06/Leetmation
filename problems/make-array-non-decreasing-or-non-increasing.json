@@ -1,0 +1,33 @@
+{
+    "problemName": "make-array-non-decreasing-or-non-increasing",
+    "language": "python3",
+    "code": "class Solution:\r\n    def convertArray(self, nums: List[int]) -> int:\r\n        def solve(nums):\r\n            n = len(nums)\r\n            f = [[0] * 1001 for _ in range(n + 1)]\r\n            for i, x in enumerate(nums, 1):\r\n                mi = inf\r\n                for j in range(1001):\r\n                    if mi > f[i - 1][j]:\r\n                        mi = f[i - 1][j]\r\n                    f[i][j] = mi + abs(x - j)\r\n            return min(f[n])\r\n\r\n        return min(solve(nums), solve(nums[::-1]))",
+    "problemId": 2263,
+    "title": "Make Array Non-decreasing or Non-increasing",
+    "problemUrl": "https://leetcode.com/problems/make-array-non-decreasing-or-non-increasing/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2263.Make Array Non-decreasing or Non-increasing/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2263.Make Array Non-decreasing or Non-increasing/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2263.Make Array Non-decreasing or Non-increasing/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2263.Make Array Non-decreasing or Non-increasing/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2263.Make Array Non-decreasing or Non-increasing/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

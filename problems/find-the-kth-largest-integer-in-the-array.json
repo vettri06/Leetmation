@@ -1,0 +1,33 @@
+{
+    "problemName": "find-the-kth-largest-integer-in-the-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def kthLargestNumber(self, nums: List[str], k: int) -> str:\r\n        return nlargest(k, nums, key=lambda x: int(x))[k - 1]",
+    "problemId": 1985,
+    "title": "Find the Kth Largest Integer in the Array",
+    "problemUrl": "https://leetcode.com/problems/find-the-kth-largest-integer-in-the-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1985.Find the Kth Largest Integer in the Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1985.Find the Kth Largest Integer in the Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1985.Find the Kth Largest Integer in the Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1985.Find the Kth Largest Integer in the Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1985.Find the Kth Largest Integer in the Array/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

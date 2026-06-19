@@ -1,0 +1,38 @@
+{
+    "problemName": "adding-spaces-to-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def addSpaces(self, s: str, spaces: List[int]) -> str:\r\n        ans = []\r\n        j = 0\r\n        for i, c in enumerate(s):\r\n            if j < len(spaces) and i == spaces[j]:\r\n                ans.append(' ')\r\n                j += 1\r\n            ans.append(c)\r\n        return ''.join(ans)",
+    "problemId": 2109,
+    "title": "Adding Spaces to a String",
+    "problemUrl": "https://leetcode.com/problems/adding-spaces-to-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2109.Adding Spaces to a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2109.Adding Spaces to a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2109.Adding Spaces to a String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2109.Adding Spaces to a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2109.Adding Spaces to a String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2109.Adding Spaces to a String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

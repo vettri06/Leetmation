@@ -1,0 +1,38 @@
+{
+    "problemName": "make-array-non-decreasing",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumPossibleSize(self, nums: List[int]) -> int:\r\n        ans = mx = 0\r\n        for x in nums:\r\n            if mx <= x:\r\n                ans += 1\r\n                mx = x\r\n        return ans",
+    "problemId": 3523,
+    "title": "Make Array Non-decreasing",
+    "problemUrl": "https://leetcode.com/problems/make-array-non-decreasing/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3523.Make Array Non-decreasing/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3523.Make Array Non-decreasing/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3523.Make Array Non-decreasing/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3523.Make Array Non-decreasing/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3523.Make Array Non-decreasing/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3523.Make Array Non-decreasing/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

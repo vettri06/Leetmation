@@ -1,0 +1,38 @@
+{
+    "problemName": "compare-strings-by-frequency-of-the-smallest-character",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numSmallerByFrequency(self, queries: List[str], words: List[str]) -> List[int]:\r\n        def f(s: str) -> int:\r\n            cnt = Counter(s)\r\n            return next(cnt[c] for c in ascii_lowercase if cnt[c])\r\n\r\n        n = len(words)\r\n        nums = sorted(f(w) for w in words)\r\n        return [n - bisect_right(nums, f(q)) for q in queries]",
+    "problemId": 1170,
+    "title": "Compare Strings by Frequency of the Smallest Character",
+    "problemUrl": "https://leetcode.com/problems/compare-strings-by-frequency-of-the-smallest-character/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1170.Compare Strings by Frequency of the Smallest Character/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1170.Compare Strings by Frequency of the Smallest Character/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1170.Compare Strings by Frequency of the Smallest Character/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1170.Compare Strings by Frequency of the Smallest Character/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1170.Compare Strings by Frequency of the Smallest Character/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1170.Compare Strings by Frequency of the Smallest Character/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

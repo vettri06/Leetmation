@@ -1,0 +1,18 @@
+{
+    "problemName": "the-number-of-passengers-in-each-bus-ii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            *,\r\n            SUM(cnt) OVER (ORDER BY dt, bus_id) AS cur,\r\n            IF(@t > 0, @t := cnt, @t := @t + cnt) AS cur_sum\r\n        FROM\r\n            (\r\n                SELECT bus_id, arrival_time AS dt, capacity AS cnt FROM Buses\r\n                UNION ALL\r\n                SELECT -1, arrival_time AS dt, -1 FROM Passengers\r\n            ) AS a\r\n            JOIN (SELECT @t := 0 AS x) AS b\r\n    )\r\nSELECT\r\n    bus_id,\r\n    IF(cur_sum > 0, cnt - cur_sum, cnt) AS passengers_cnt\r\nFROM T\r\nWHERE bus_id > 0\r\nORDER BY bus_id;",
+    "problemId": 2153,
+    "title": "The Number of Passengers in Each Bus II",
+    "problemUrl": "https://leetcode.com/problems/the-number-of-passengers-in-each-bus-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2153.The Number of Passengers in Each Bus II/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2153.The Number of Passengers in Each Bus II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

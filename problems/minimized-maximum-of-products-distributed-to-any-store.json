@@ -1,0 +1,38 @@
+{
+    "problemName": "minimized-maximum-of-products-distributed-to-any-store",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimizedMaximum(self, n: int, quantities: List[int]) -> int:\r\n        def check(x):\r\n            return sum((v + x - 1) // x for v in quantities) <= n\r\n\r\n        return 1 + bisect_left(range(1, 10**6), True, key=check)",
+    "problemId": 2064,
+    "title": "Minimized Maximum of Products Distributed to Any Store",
+    "problemUrl": "https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2064.Minimized Maximum of Products Distributed to Any Store/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2064.Minimized Maximum of Products Distributed to Any Store/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2064.Minimized Maximum of Products Distributed to Any Store/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2064.Minimized Maximum of Products Distributed to Any Store/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2064.Minimized Maximum of Products Distributed to Any Store/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2064.Minimized Maximum of Products Distributed to Any Store/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

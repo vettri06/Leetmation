@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-to-reach-destination-in-time",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(\r\n        self, maxTime: int, edges: List[List[int]], passingFees: List[int]\r\n    ) -> int:\r\n        m, n = maxTime, len(passingFees)\r\n        f = [[inf] * n for _ in range(m + 1)]\r\n        f[0][0] = passingFees[0]\r\n        for i in range(1, m + 1):\r\n            for x, y, t in edges:\r\n                if t <= i:\r\n                    f[i][x] = min(f[i][x], f[i - t][y] + passingFees[x])\r\n                    f[i][y] = min(f[i][y], f[i - t][x] + passingFees[y])\r\n        ans = min(f[i][n - 1] for i in range(m + 1))\r\n        return ans if ans < inf else -1",
+    "problemId": 1928,
+    "title": "Minimum Cost to Reach Destination in Time",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1928.Minimum Cost to Reach Destination in Time/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1928.Minimum Cost to Reach Destination in Time/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1928.Minimum Cost to Reach Destination in Time/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1928.Minimum Cost to Reach Destination in Time/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1928.Minimum Cost to Reach Destination in Time/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1928.Minimum Cost to Reach Destination in Time/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

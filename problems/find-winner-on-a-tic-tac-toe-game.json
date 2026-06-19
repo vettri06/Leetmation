@@ -1,0 +1,38 @@
+{
+    "problemName": "find-winner-on-a-tic-tac-toe-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def tictactoe(self, moves: List[List[int]]) -> str:\r\n        n = len(moves)\r\n        cnt = [0] * 8\r\n        for k in range(n - 1, -1, -2):\r\n            i, j = moves[k]\r\n            cnt[i] += 1\r\n            cnt[j + 3] += 1\r\n            if i == j:\r\n                cnt[6] += 1\r\n            if i + j == 2:\r\n                cnt[7] += 1\r\n            if any(v == 3 for v in cnt):\r\n                return \"B\" if k & 1 else \"A\"\r\n        return \"Draw\" if n == 9 else \"Pending\"",
+    "problemId": 1275,
+    "title": "Find Winner on a Tic Tac Toe Game",
+    "problemUrl": "https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1275.Find Winner on a Tic Tac Toe Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1275.Find Winner on a Tic Tac Toe Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1275.Find Winner on a Tic Tac Toe Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1275.Find Winner on a Tic Tac Toe Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1275.Find Winner on a Tic Tac Toe Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1275.Find Winner on a Tic Tac Toe Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "split-array-into-fibonacci-sequence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def splitIntoFibonacci(self, num: str) -> List[int]:\r\n        def dfs(i):\r\n            if i == n:\r\n                return len(ans) > 2\r\n            x = 0\r\n            for j in range(i, n):\r\n                if j > i and num[i] == '0':\r\n                    break\r\n                x = x * 10 + int(num[j])\r\n                if x > 2**31 - 1 or (len(ans) > 2 and x > ans[-2] + ans[-1]):\r\n                    break\r\n                if len(ans) < 2 or ans[-2] + ans[-1] == x:\r\n                    ans.append(x)\r\n                    if dfs(j + 1):\r\n                        return True\r\n                    ans.pop()\r\n            return False\r\n\r\n        n = len(num)\r\n        ans = []\r\n        dfs(0)\r\n        return ans",
+    "problemId": 842,
+    "title": "Split Array into Fibonacci Sequence",
+    "problemUrl": "https://leetcode.com/problems/split-array-into-fibonacci-sequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0842.Split Array into Fibonacci Sequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0842.Split Array into Fibonacci Sequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0842.Split Array into Fibonacci Sequence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0842.Split Array into Fibonacci Sequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0842.Split Array into Fibonacci Sequence/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

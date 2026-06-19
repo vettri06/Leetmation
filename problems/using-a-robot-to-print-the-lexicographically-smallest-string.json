@@ -1,0 +1,43 @@
+{
+    "problemName": "using-a-robot-to-print-the-lexicographically-smallest-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def robotWithString(self, s: str) -> str:\r\n        cnt = Counter(s)\r\n        ans = []\r\n        stk = []\r\n        mi = 'a'\r\n        for c in s:\r\n            cnt[c] -= 1\r\n            while mi < 'z' and cnt[mi] == 0:\r\n                mi = chr(ord(mi) + 1)\r\n            stk.append(c)\r\n            while stk and stk[-1] <= mi:\r\n                ans.append(stk.pop())\r\n        return ''.join(ans)",
+    "problemId": 2434,
+    "title": "Using a Robot to Print the Lexicographically Smallest String",
+    "problemUrl": "https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2434.Using a Robot to Print the Lexicographically Smallest String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2434.Using a Robot to Print the Lexicographically Smallest String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2434.Using a Robot to Print the Lexicographically Smallest String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2434.Using a Robot to Print the Lexicographically Smallest String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2434.Using a Robot to Print the Lexicographically Smallest String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2434.Using a Robot to Print the Lexicographically Smallest String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2434.Using a Robot to Print the Lexicographically Smallest String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

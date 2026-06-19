@@ -1,0 +1,38 @@
+{
+    "problemName": "buddy-strings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def buddyStrings(self, s: str, goal: str) -> bool:\r\n        m, n = len(s), len(goal)\r\n        if m != n:\r\n            return False\r\n        cnt1, cnt2 = Counter(s), Counter(goal)\r\n        if cnt1 != cnt2:\r\n            return False\r\n        diff = sum(s[i] != goal[i] for i in range(n))\r\n        return diff == 2 or (diff == 0 and any(v > 1 for v in cnt1.values()))",
+    "problemId": 859,
+    "title": "Buddy Strings",
+    "problemUrl": "https://leetcode.com/problems/buddy-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0859.Buddy Strings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0859.Buddy Strings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0859.Buddy Strings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0859.Buddy Strings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0859.Buddy Strings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0859.Buddy Strings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

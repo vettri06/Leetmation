@@ -1,0 +1,33 @@
+{
+    "problemName": "logger-rate-limiter",
+    "language": "python3",
+    "code": "class Logger:\r\n\r\n    def __init__(self):\r\n        self.ts = {}\r\n\r\n    def shouldPrintMessage(self, timestamp: int, message: str) -> bool:\r\n        t = self.ts.get(message, 0)\r\n        if t > timestamp:\r\n            return False\r\n        self.ts[message] = timestamp + 10\r\n        return True\r\n\r\n\r\n# Your Logger object will be instantiated and called as such:\r\n# obj = Logger()\r\n# param_1 = obj.shouldPrintMessage(timestamp,message)",
+    "problemId": 359,
+    "title": "Logger Rate Limiter",
+    "problemUrl": "https://leetcode.com/problems/logger-rate-limiter/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0359.Logger Rate Limiter/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0359.Logger Rate Limiter/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0359.Logger Rate Limiter/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0359.Logger Rate Limiter/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0359.Logger Rate Limiter/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

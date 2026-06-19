@@ -1,0 +1,63 @@
+{
+    "problemName": "diet-plan-performance",
+    "language": "python3",
+    "code": "class Solution:\r\n    def dietPlanPerformance(\r\n        self, calories: List[int], k: int, lower: int, upper: int\r\n    ) -> int:\r\n        s = list(accumulate(calories, initial=0))\r\n        ans, n = 0, len(calories)\r\n        for i in range(n - k + 1):\r\n            t = s[i + k] - s[i]\r\n            if t < lower:\r\n                ans -= 1\r\n            elif t > upper:\r\n                ans += 1\r\n        return ans",
+    "problemId": 1176,
+    "title": "Diet Plan Performance",
+    "problemUrl": "https://leetcode.com/problems/diet-plan-performance/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1176.Diet Plan Performance/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1176.Diet Plan Performance/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1176.Diet Plan Performance/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1176.Diet Plan Performance/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1176.Diet Plan Performance/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1176.Diet Plan Performance/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1176.Diet Plan Performance/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1176.Diet Plan Performance/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1176.Diet Plan Performance/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1176.Diet Plan Performance/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1176.Diet Plan Performance/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

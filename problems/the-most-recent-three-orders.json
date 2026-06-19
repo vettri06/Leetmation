@@ -1,0 +1,18 @@
+{
+    "problemName": "the-most-recent-three-orders",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            *,\r\n            ROW_NUMBER() OVER (\r\n                PARTITION BY customer_id\r\n                ORDER BY order_date DESC\r\n            ) AS rk\r\n        FROM\r\n            Orders\r\n            JOIN Customers USING (customer_id)\r\n    )\r\nSELECT name AS customer_name, customer_id, order_id, order_date\r\nFROM T\r\nWHERE rk <= 3\r\nORDER BY 1, 2, 4 DESC;",
+    "problemId": 1532,
+    "title": "The Most Recent Three Orders",
+    "problemUrl": "https://leetcode.com/problems/the-most-recent-three-orders/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1532.The Most Recent Three Orders/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1532.The Most Recent Three Orders/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "find-maximum-area-of-a-triangle",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxArea(self, coords: List[List[int]]) -> int:\r\n        def calc() -> int:\r\n            mn, mx = inf, 0\r\n            f = {}\r\n            g = {}\r\n            for x, y in coords:\r\n                mn = min(mn, x)\r\n                mx = max(mx, x)\r\n                if x in f:\r\n                    f[x] = min(f[x], y)\r\n                    g[x] = max(g[x], y)\r\n                else:\r\n                    f[x] = g[x] = y\r\n            ans = 0\r\n            for x, y in f.items():\r\n                d = g[x] - y\r\n                ans = max(ans, d * max(mx - x, x - mn))\r\n            return ans\r\n\r\n        ans = calc()\r\n        for c in coords:\r\n            c[0], c[1] = c[1], c[0]\r\n        ans = max(ans, calc())\r\n        return ans if ans else -1",
+    "problemId": 3588,
+    "title": "Find Maximum Area of a Triangle",
+    "problemUrl": "https://leetcode.com/problems/find-maximum-area-of-a-triangle/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3588.Find Maximum Area of a Triangle/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3588.Find Maximum Area of a Triangle/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3588.Find Maximum Area of a Triangle/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3588.Find Maximum Area of a Triangle/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3588.Find Maximum Area of a Triangle/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3588.Find Maximum Area of a Triangle/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

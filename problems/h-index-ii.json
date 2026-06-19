@@ -1,0 +1,48 @@
+{
+    "problemName": "h-index-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def hIndex(self, citations: List[int]) -> int:\r\n        n = len(citations)\r\n        left, right = 0, n\r\n        while left < right:\r\n            mid = (left + right + 1) >> 1\r\n            if citations[n - mid] >= mid:\r\n                left = mid\r\n            else:\r\n                right = mid - 1\r\n        return left",
+    "problemId": 275,
+    "title": "H-Index II",
+    "problemUrl": "https://leetcode.com/problems/h-index-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0275.H-Index II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0275.H-Index II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0275.H-Index II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0275.H-Index II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0275.H-Index II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0275.H-Index II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0275.H-Index II/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0275.H-Index II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "circular-array-loop",
+    "language": "python3",
+    "code": "class Solution:\r\n    def circularArrayLoop(self, nums: List[int]) -> bool:\r\n        n = len(nums)\r\n\r\n        def next(i):\r\n            return (i + nums[i] % n + n) % n\r\n\r\n        for i in range(n):\r\n            if nums[i] == 0:\r\n                continue\r\n            slow, fast = i, next(i)\r\n            while nums[slow] * nums[fast] > 0 and nums[slow] * nums[next(fast)] > 0:\r\n                if slow == fast:\r\n                    if slow != next(slow):\r\n                        return True\r\n                    break\r\n                slow, fast = next(slow), next(next(fast))\r\n            j = i\r\n            while nums[j] * nums[next(j)] > 0:\r\n                nums[j] = 0\r\n                j = next(j)\r\n        return False",
+    "problemId": 457,
+    "title": "Circular Array Loop",
+    "problemUrl": "https://leetcode.com/problems/circular-array-loop/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0457.Circular Array Loop/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0457.Circular Array Loop/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0457.Circular Array Loop/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0457.Circular Array Loop/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0457.Circular Array Loop/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

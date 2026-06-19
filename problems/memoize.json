@@ -1,0 +1,18 @@
+{
+    "problemName": "memoize",
+    "language": "typescript",
+    "code": "type Fn = (...params: any) => any;\r\n\r\nfunction memoize(fn: Fn): Fn {\r\n    const cache: Record<any, any> = {};\r\n\r\n    return function (...args) {\r\n        if (args in cache) {\r\n            return cache[args];\r\n        }\r\n        const result = fn(...args);\r\n        cache[args] = result;\r\n        return result;\r\n    };\r\n}\r\n\r\n/**\r\n * let callCount = 0;\r\n * const memoizedFn = memoize(function (a, b) {\r\n *\t callCount += 1;\r\n *   return a + b;\r\n * })\r\n * memoizedFn(2, 3) // 5\r\n * memoizedFn(2, 3) // 5\r\n * console.log(callCount) // 1\r\n */",
+    "problemId": 2623,
+    "title": "Memoize",
+    "problemUrl": "https://leetcode.com/problems/memoize/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2623.Memoize/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2623.Memoize/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

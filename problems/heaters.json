@@ -1,0 +1,38 @@
+{
+    "problemName": "heaters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findRadius(self, houses: List[int], heaters: List[int]) -> int:\r\n        houses.sort()\r\n        heaters.sort()\r\n\r\n        def check(r):\r\n            m, n = len(houses), len(heaters)\r\n            i = j = 0\r\n            while i < m:\r\n                if j >= n:\r\n                    return False\r\n                mi = heaters[j] - r\r\n                mx = heaters[j] + r\r\n                if houses[i] < mi:\r\n                    return False\r\n                if houses[i] > mx:\r\n                    j += 1\r\n                else:\r\n                    i += 1\r\n            return True\r\n\r\n        left, right = 0, int(1e9)\r\n        while left < right:\r\n            mid = (left + right) >> 1\r\n            if check(mid):\r\n                right = mid\r\n            else:\r\n                left = mid + 1\r\n        return left",
+    "problemId": 475,
+    "title": "Heaters",
+    "problemUrl": "https://leetcode.com/problems/heaters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0475.Heaters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0475.Heaters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0475.Heaters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0475.Heaters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0475.Heaters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0475.Heaters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

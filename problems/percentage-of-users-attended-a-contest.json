@@ -1,0 +1,18 @@
+{
+    "problemName": "percentage-of-users-attended-a-contest",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    contest_id,\r\n    ROUND(COUNT(1) * 100 / (SELECT COUNT(1) FROM Users), 2) AS percentage\r\nFROM Register\r\nGROUP BY 1\r\nORDER BY 2 DESC, 1;",
+    "problemId": 1633,
+    "title": "Percentage of Users Attended a Contest",
+    "problemUrl": "https://leetcode.com/problems/percentage-of-users-attended-a-contest/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1633.Percentage of Users Attended a Contest/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1633.Percentage of Users Attended a Contest/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

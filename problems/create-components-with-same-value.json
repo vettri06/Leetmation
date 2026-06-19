@@ -1,0 +1,33 @@
+{
+    "problemName": "create-components-with-same-value",
+    "language": "python3",
+    "code": "class Solution:\r\n    def componentValue(self, nums: List[int], edges: List[List[int]]) -> int:\r\n        def dfs(i, fa):\r\n            x = nums[i]\r\n            for j in g[i]:\r\n                if j != fa:\r\n                    y = dfs(j, i)\r\n                    if y == -1:\r\n                        return -1\r\n                    x += y\r\n            if x > t:\r\n                return -1\r\n            return x if x < t else 0\r\n\r\n        n = len(nums)\r\n        g = defaultdict(list)\r\n        for a, b in edges:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n        s = sum(nums)\r\n        mx = max(nums)\r\n        for k in range(min(n, s // mx), 1, -1):\r\n            if s % k == 0:\r\n                t = s // k\r\n                if dfs(0, -1) == 0:\r\n                    return k - 1\r\n        return 0",
+    "problemId": 2440,
+    "title": "Create Components With Same Value",
+    "problemUrl": "https://leetcode.com/problems/create-components-with-same-value/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2440.Create Components With Same Value/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2440.Create Components With Same Value/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2440.Create Components With Same Value/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2440.Create Components With Same Value/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2440.Create Components With Same Value/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

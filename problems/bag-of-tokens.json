@@ -1,0 +1,38 @@
+{
+    "problemName": "bag-of-tokens",
+    "language": "python3",
+    "code": "class Solution:\r\n    def bagOfTokensScore(self, tokens: List[int], power: int) -> int:\r\n        tokens.sort()\r\n        ans = score = 0\r\n        i, j = 0, len(tokens) - 1\r\n        while i <= j:\r\n            if power >= tokens[i]:\r\n                power -= tokens[i]\r\n                score, i = score + 1, i + 1\r\n                ans = max(ans, score)\r\n            elif score:\r\n                power += tokens[j]\r\n                score, j = score - 1, j - 1\r\n            else:\r\n                break\r\n        return ans",
+    "problemId": 948,
+    "title": "Bag of Tokens",
+    "problemUrl": "https://leetcode.com/problems/bag-of-tokens/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0948.Bag of Tokens/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0948.Bag of Tokens/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0948.Bag of Tokens/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0948.Bag of Tokens/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0948.Bag of Tokens/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0948.Bag of Tokens/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

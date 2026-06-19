@@ -1,0 +1,78 @@
+{
+    "problemName": "check-if-two-string-arrays-are-equivalent",
+    "language": "python3",
+    "code": "class Solution:\r\n    def arrayStringsAreEqual(self, word1: List[str], word2: List[str]) -> bool:\r\n        return ''.join(word1) == ''.join(word2)",
+    "problemId": 1662,
+    "title": "Check If Two String Arrays are Equivalent",
+    "problemUrl": "https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1662.Check If Two String Arrays are Equivalent/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1662.Check If Two String Arrays are Equivalent/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1662.Check If Two String Arrays are Equivalent/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1662.Check If Two String Arrays are Equivalent/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1662.Check If Two String Arrays are Equivalent/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1662.Check If Two String Arrays are Equivalent/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1662.Check If Two String Arrays are Equivalent/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1662.Check If Two String Arrays are Equivalent/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1662.Check If Two String Arrays are Equivalent/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1662.Check If Two String Arrays are Equivalent/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1662.Check If Two String Arrays are Equivalent/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1662.Check If Two String Arrays are Equivalent/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1662.Check If Two String Arrays are Equivalent/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1662.Check If Two String Arrays are Equivalent/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "problemName": "meeting-rooms-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minMeetingRooms(self, intervals: List[List[int]]) -> int:\r\n        m = max(e[1] for e in intervals)\r\n        d = [0] * (m + 1)\r\n        for l, r in intervals:\r\n            d[l] += 1\r\n            d[r] -= 1\r\n        ans = s = 0\r\n        for v in d:\r\n            s += v\r\n            ans = max(ans, s)\r\n        return ans",
+    "problemId": 253,
+    "title": "Meeting Rooms II",
+    "problemUrl": "https://leetcode.com/problems/meeting-rooms-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0253.Meeting Rooms II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0253.Meeting Rooms II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0253.Meeting Rooms II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0253.Meeting Rooms II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0253.Meeting Rooms II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0253.Meeting Rooms II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0253.Meeting Rooms II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0253.Meeting Rooms II/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0253.Meeting Rooms II/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0253.Meeting Rooms II/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0253.Meeting Rooms II/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0253.Meeting Rooms II/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0253.Meeting Rooms II/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-points-inside-the-square",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxPointsInsideSquare(self, points: List[List[int]], s: str) -> int:\r\n        g = defaultdict(list)\r\n        for i, (x, y) in enumerate(points):\r\n            g[max(abs(x), abs(y))].append(i)\r\n        vis = set()\r\n        ans = 0\r\n        for d in sorted(g):\r\n            idx = g[d]\r\n            for i in idx:\r\n                if s[i] in vis:\r\n                    return ans\r\n                vis.add(s[i])\r\n            ans += len(idx)\r\n        return ans",
+    "problemId": 3143,
+    "title": "Maximum Points Inside the Square",
+    "problemUrl": "https://leetcode.com/problems/maximum-points-inside-the-square/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3143.Maximum Points Inside the Square/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3143.Maximum Points Inside the Square/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3143.Maximum Points Inside the Square/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3143.Maximum Points Inside the Square/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3143.Maximum Points Inside the Square/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3143.Maximum Points Inside the Square/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

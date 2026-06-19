@@ -1,0 +1,43 @@
+{
+    "problemName": "construct-binary-tree-from-inorder-and-postorder-traversal",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def buildTree(self, inorder: List[int], postorder: List[int]) -> Optional[TreeNode]:\r\n        def dfs(i: int, j: int, n: int) -> Optional[TreeNode]:\r\n            if n <= 0:\r\n                return None\r\n            v = postorder[j + n - 1]\r\n            k = d[v]\r\n            l = dfs(i, j, k - i)\r\n            r = dfs(k + 1, j + k - i, n - k + i - 1)\r\n            return TreeNode(v, l, r)\r\n\r\n        d = {v: i for i, v in enumerate(inorder)}\r\n        return dfs(0, 0, len(inorder))",
+    "problemId": 106,
+    "title": "Construct Binary Tree from Inorder and Postorder Traversal",
+    "problemUrl": "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0106.Construct Binary Tree from Inorder and Postorder Traversal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0106.Construct Binary Tree from Inorder and Postorder Traversal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0106.Construct Binary Tree from Inorder and Postorder Traversal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0106.Construct Binary Tree from Inorder and Postorder Traversal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0106.Construct Binary Tree from Inorder and Postorder Traversal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0106.Construct Binary Tree from Inorder and Postorder Traversal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0106.Construct Binary Tree from Inorder and Postorder Traversal/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

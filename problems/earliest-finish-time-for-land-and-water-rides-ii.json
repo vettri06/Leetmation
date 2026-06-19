@@ -1,0 +1,38 @@
+{
+    "problemName": "earliest-finish-time-for-land-and-water-rides-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def earliestFinishTime(\r\n        self,\r\n        landStartTime: List[int],\r\n        landDuration: List[int],\r\n        waterStartTime: List[int],\r\n        waterDuration: List[int],\r\n    ) -> int:\r\n        def calc(a1, t1, a2, t2):\r\n            min_end = min(a + t for a, t in zip(a1, t1))\r\n            return min(max(a, min_end) + t for a, t in zip(a2, t2))\r\n\r\n        x = calc(landStartTime, landDuration, waterStartTime, waterDuration)\r\n        y = calc(waterStartTime, waterDuration, landStartTime, landDuration)\r\n        return min(x, y)",
+    "problemId": 3635,
+    "title": "Earliest Finish Time for Land and Water Rides II",
+    "problemUrl": "https://leetcode.com/problems/earliest-finish-time-for-land-and-water-rides-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3635.Earliest Finish Time for Land and Water Rides II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3635.Earliest Finish Time for Land and Water Rides II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3635.Earliest Finish Time for Land and Water Rides II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3635.Earliest Finish Time for Land and Water Rides II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3635.Earliest Finish Time for Land and Water Rides II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3635.Earliest Finish Time for Land and Water Rides II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

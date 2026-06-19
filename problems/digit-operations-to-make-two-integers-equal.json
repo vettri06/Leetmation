@@ -1,0 +1,33 @@
+{
+    "problemName": "digit-operations-to-make-two-integers-equal",
+    "language": "python3",
+    "code": "import heapq\r\n\r\n\r\nclass Solution:\r\n    def __init__(self):\r\n        self.sieve = []\r\n\r\n    def run_sieve(self):\r\n        self.sieve = [True] * 100000\r\n        self.sieve[0], self.sieve[1] = False, False\r\n        for i in range(2, 100000):\r\n            if self.sieve[i]:\r\n                for j in range(2 * i, 100000, i):\r\n                    self.sieve[j] = False\r\n\r\n    def solve(self, n, m):\r\n        pq = []\r\n        heapq.heappush(pq, (n, n))\r\n        visited = set()\r\n\r\n        while pq:\r\n            sum_, cur = heapq.heappop(pq)\r\n\r\n            if cur in visited:\r\n                continue\r\n            visited.add(cur)\r\n\r\n            if cur == m:\r\n                return sum_\r\n\r\n            s = list(str(cur))\r\n            for i in range(len(s)):\r\n                c = s[i]\r\n\r\n                if s[i] < '9':\r\n                    s[i] = chr(ord(s[i]) + 1)\r\n                    next_ = int(''.join(s))\r\n                    if not self.sieve[next_] and next_ not in visited:\r\n                        heapq.heappush(pq, (sum_ + next_, next_))\r\n                    s[i] = c\r\n\r\n                if s[i] > '0' and not (i == 0 and s[i] == '1'):\r\n                    s[i] = chr(ord(s[i]) - 1)\r\n                    next_ = int(''.join(s))\r\n                    if not self.sieve[next_] and next_ not in visited:\r\n                        heapq.heappush(pq, (sum_ + next_, next_))\r\n                    s[i] = c\r\n\r\n        return -1\r\n\r\n    def minOperations(self, n, m):\r\n        self.run_sieve()\r\n        if self.sieve[n] or self.sieve[m]:\r\n            return -1\r\n        return self.solve(n, m)",
+    "problemId": 3377,
+    "title": "Digit Operations to Make Two Integers Equal",
+    "problemUrl": "https://leetcode.com/problems/digit-operations-to-make-two-integers-equal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3377.Digit Operations to Make Two Integers Equal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3377.Digit Operations to Make Two Integers Equal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3377.Digit Operations to Make Two Integers Equal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3377.Digit Operations to Make Two Integers Equal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3377.Digit Operations to Make Two Integers Equal/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

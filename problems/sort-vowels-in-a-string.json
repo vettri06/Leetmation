@@ -1,0 +1,43 @@
+{
+    "problemName": "sort-vowels-in-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sortVowels(self, s: str) -> str:\r\n        vs = [c for c in s if c.lower() in \"aeiou\"]\r\n        vs.sort()\r\n        cs = list(s)\r\n        j = 0\r\n        for i, c in enumerate(cs):\r\n            if c.lower() in \"aeiou\":\r\n                cs[i] = vs[j]\r\n                j += 1\r\n        return \"\".join(cs)",
+    "problemId": 2785,
+    "title": "Sort Vowels in a String",
+    "problemUrl": "https://leetcode.com/problems/sort-vowels-in-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2785.Sort Vowels in a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2785.Sort Vowels in a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2785.Sort Vowels in a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2785.Sort Vowels in a String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2785.Sort Vowels in a String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2785.Sort Vowels in a String/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2785.Sort Vowels in a String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

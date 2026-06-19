@@ -1,0 +1,43 @@
+{
+    "problemName": "last-visited-integers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lastVisitedIntegers(self, nums: List[int]) -> List[int]:\r\n        seen = []\r\n        ans = []\r\n        k = 0\r\n        for x in nums:\r\n            if x == -1:\r\n                k += 1\r\n                ans.append(-1 if k > len(seen) else seen[-k])\r\n            else:\r\n                k = 0\r\n                seen.append(x)\r\n        return ans",
+    "problemId": 2899,
+    "title": "Last Visited Integers",
+    "problemUrl": "https://leetcode.com/problems/last-visited-integers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2899.Last Visited Integers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2899.Last Visited Integers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2899.Last Visited Integers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2899.Last Visited Integers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2899.Last Visited Integers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2899.Last Visited Integers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2899.Last Visited Integers/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

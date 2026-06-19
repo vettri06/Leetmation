@@ -1,0 +1,38 @@
+{
+    "problemName": "count-number-of-trapezoids-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countTrapezoids(self, points: List[List[int]]) -> int:\r\n        n = len(points)\r\n\r\n        # cnt1: k -> (b -> count)\r\n        cnt1: dict[float, dict[float, int]] = defaultdict(lambda: defaultdict(int))\r\n        # cnt2: p -> (k -> count)\r\n        cnt2: dict[int, dict[float, int]] = defaultdict(lambda: defaultdict(int))\r\n\r\n        for i in range(n):\r\n            x1, y1 = points[i]\r\n            for j in range(i):\r\n                x2, y2 = points[j]\r\n                dx, dy = x2 - x1, y2 - y1\r\n\r\n                if dx == 0:\r\n                    k = 1e9\r\n                    b = x1\r\n                else:\r\n                    k = dy / dx\r\n                    b = (y1 * dx - x1 * dy) / dx\r\n\r\n                cnt1[k][b] += 1\r\n\r\n                p = (x1 + x2 + 2000) * 4000 + (y1 + y2 + 2000)\r\n                cnt2[p][k] += 1\r\n\r\n        ans = 0\r\n\r\n        for e in cnt1.values():\r\n            s = 0\r\n            for t in e.values():\r\n                ans += s * t\r\n                s += t\r\n\r\n        for e in cnt2.values():\r\n            s = 0\r\n            for t in e.values():\r\n                ans -= s * t\r\n                s += t\r\n\r\n        return ans",
+    "problemId": 3625,
+    "title": "Count Number of Trapezoids II",
+    "problemUrl": "https://leetcode.com/problems/count-number-of-trapezoids-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3625.Count Number of Trapezoids II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3625.Count Number of Trapezoids II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3625.Count Number of Trapezoids II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3625.Count Number of Trapezoids II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3625.Count Number of Trapezoids II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3625.Count Number of Trapezoids II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

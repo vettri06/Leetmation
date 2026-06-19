@@ -1,0 +1,23 @@
+{
+    "problemName": "parallel-execution-of-promises-for-individual-results-retrieval",
+    "language": "javascript",
+    "code": "/**\r\n * @param {Array<Function>} functions\r\n * @return {Promise}\r\n */\r\nvar promiseAllSettled = function (functions) {\r\n    return new Promise(resolve => {\r\n        const res = [];\r\n        let count = 0;\r\n        for (let i in functions) {\r\n            functions[i]()\r\n                .then(value => ({ status: 'fulfilled', value }))\r\n                .catch(reason => ({ status: 'rejected', reason }))\r\n                .then(obj => {\r\n                    res[i] = obj;\r\n                    if (++count === functions.length) {\r\n                        resolve(res);\r\n                    }\r\n                });\r\n        }\r\n    });\r\n};",
+    "problemId": 2795,
+    "title": "Parallel Execution of Promises for Individual Results Retrieval",
+    "problemUrl": "https://leetcode.com/problems/parallel-execution-of-promises-for-individual-results-retrieval/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2795.Parallel Execution of Promises for Individual Results Retrieval/Solution.js",
+    "sourceFile": "Solution.js",
+    "sourceCandidates": [
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2795.Parallel Execution of Promises for Individual Results Retrieval/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2795.Parallel Execution of Promises for Individual Results Retrieval/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

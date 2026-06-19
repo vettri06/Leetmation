@@ -1,0 +1,38 @@
+{
+    "problemName": "sum-of-gcd-of-formed-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def gcdSum(self, nums: list[int]) -> int:\r\n        n = len(nums)\r\n        prefix_gcd = [0] * n\r\n        mx = 0\r\n        for i, x in enumerate(nums):\r\n            mx = max(mx, x)\r\n            prefix_gcd[i] = gcd(x, mx)\r\n        prefix_gcd.sort()\r\n        return sum(gcd(prefix_gcd[i], prefix_gcd[-i - 1]) for i in range(n // 2))",
+    "problemId": 3867,
+    "title": "Sum of GCD of Formed Pairs",
+    "problemUrl": "https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3867.Sum of GCD of Formed Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3867.Sum of GCD of Formed Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3867.Sum of GCD of Formed Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3867.Sum of GCD of Formed Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3867.Sum of GCD of Formed Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3867.Sum of GCD of Formed Pairs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

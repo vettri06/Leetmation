@@ -1,0 +1,18 @@
+{
+    "problemName": "call-function-with-custom-context",
+    "language": "typescript",
+    "code": "declare global {\r\n    interface Function {\r\n        callPolyfill(context: Record<any, any>, ...args: any[]): any;\r\n    }\r\n}\r\n\r\nFunction.prototype.callPolyfill = function (context, ...args): any {\r\n    const fn = this.bind(context);\r\n    return fn(...args);\r\n};\r\n\r\n/**\r\n * function increment() { this.count++; return this.count; }\r\n * increment.callPolyfill({count: 1}); // 2\r\n */",
+    "problemId": 2693,
+    "title": "Call Function with Custom Context",
+    "problemUrl": "https://leetcode.com/problems/call-function-with-custom-context/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2693.Call Function with Custom Context/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2693.Call Function with Custom Context/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

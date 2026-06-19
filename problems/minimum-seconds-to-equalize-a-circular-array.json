@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-seconds-to-equalize-a-circular-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumSeconds(self, nums: List[int]) -> int:\r\n        d = defaultdict(list)\r\n        for i, x in enumerate(nums):\r\n            d[x].append(i)\r\n        ans = inf\r\n        n = len(nums)\r\n        for idx in d.values():\r\n            t = idx[0] + n - idx[-1]\r\n            for i, j in pairwise(idx):\r\n                t = max(t, j - i)\r\n            ans = min(ans, t // 2)\r\n        return ans",
+    "problemId": 2808,
+    "title": "Minimum Seconds to Equalize a Circular Array",
+    "problemUrl": "https://leetcode.com/problems/minimum-seconds-to-equalize-a-circular-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2808.Minimum Seconds to Equalize a Circular Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2808.Minimum Seconds to Equalize a Circular Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2808.Minimum Seconds to Equalize a Circular Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2808.Minimum Seconds to Equalize a Circular Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2808.Minimum Seconds to Equalize a Circular Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2808.Minimum Seconds to Equalize a Circular Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

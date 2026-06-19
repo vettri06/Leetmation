@@ -1,0 +1,38 @@
+{
+    "problemName": "count-houses-in-a-circular-street",
+    "language": "python3",
+    "code": "# Definition for a street.\r\n# class Street:\r\n#     def openDoor(self):\r\n#         pass\r\n#     def closeDoor(self):\r\n#         pass\r\n#     def isDoorOpen(self):\r\n#         pass\r\n#     def moveRight(self):\r\n#         pass\r\n#     def moveLeft(self):\r\n#         pass\r\nclass Solution:\r\n    def houseCount(self, street: Optional[\"Street\"], k: int) -> int:\r\n        for _ in range(k):\r\n            street.openDoor()\r\n            street.moveLeft()\r\n        ans = 0\r\n        while street.isDoorOpen():\r\n            street.closeDoor()\r\n            street.moveLeft()\r\n            ans += 1\r\n        return ans",
+    "problemId": 2728,
+    "title": "Count Houses in a Circular Street",
+    "problemUrl": "https://leetcode.com/problems/count-houses-in-a-circular-street/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2728.Count Houses in a Circular Street/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2728.Count Houses in a Circular Street/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2728.Count Houses in a Circular Street/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2728.Count Houses in a Circular Street/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2728.Count Houses in a Circular Street/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2728.Count Houses in a Circular Street/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

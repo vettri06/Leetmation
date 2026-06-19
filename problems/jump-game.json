@@ -1,0 +1,53 @@
+{
+    "problemName": "jump-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canJump(self, nums: List[int]) -> bool:\r\n        mx = 0\r\n        for i, x in enumerate(nums):\r\n            if mx < i:\r\n                return False\r\n            mx = max(mx, i + x)\r\n        return True",
+    "problemId": 55,
+    "title": "Jump Game",
+    "problemUrl": "https://leetcode.com/problems/jump-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0055.Jump Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0055.Jump Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0055.Jump Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0055.Jump Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0055.Jump Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0055.Jump Game/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0055.Jump Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0055.Jump Game/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0055.Jump Game/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

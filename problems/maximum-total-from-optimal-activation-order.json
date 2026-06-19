@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-total-from-optimal-activation-order",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxTotal(self, value: List[int], limit: List[int]) -> int:\r\n        g = defaultdict(list)\r\n        for v, lim in zip(value, limit):\r\n            g[lim].append(v)\r\n        ans = 0\r\n        for lim, vs in g.items():\r\n            vs.sort()\r\n            ans += sum(vs[-lim:])\r\n        return ans",
+    "problemId": 3645,
+    "title": "Maximum Total from Optimal Activation Order",
+    "problemUrl": "https://leetcode.com/problems/maximum-total-from-optimal-activation-order/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3645.Maximum Total from Optimal Activation Order/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3645.Maximum Total from Optimal Activation Order/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3645.Maximum Total from Optimal Activation Order/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3645.Maximum Total from Optimal Activation Order/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3645.Maximum Total from Optimal Activation Order/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3645.Maximum Total from Optimal Activation Order/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

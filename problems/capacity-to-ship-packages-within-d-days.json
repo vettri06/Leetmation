@@ -1,0 +1,38 @@
+{
+    "problemName": "capacity-to-ship-packages-within-d-days",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shipWithinDays(self, weights: List[int], days: int) -> int:\r\n        def check(mx):\r\n            ws, cnt = 0, 1\r\n            for w in weights:\r\n                ws += w\r\n                if ws > mx:\r\n                    cnt += 1\r\n                    ws = w\r\n            return cnt <= days\r\n\r\n        left, right = max(weights), sum(weights) + 1\r\n        return left + bisect_left(range(left, right), True, key=check)",
+    "problemId": 1011,
+    "title": "Capacity To Ship Packages Within D Days",
+    "problemUrl": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1011.Capacity To Ship Packages Within D Days/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1011.Capacity To Ship Packages Within D Days/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1011.Capacity To Ship Packages Within D Days/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1011.Capacity To Ship Packages Within D Days/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1011.Capacity To Ship Packages Within D Days/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1011.Capacity To Ship Packages Within D Days/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

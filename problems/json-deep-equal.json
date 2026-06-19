@@ -1,0 +1,18 @@
+{
+    "problemName": "json-deep-equal",
+    "language": "typescript",
+    "code": "function areDeeplyEqual(o1: any, o2: any): boolean {\r\n    if (o1 === null || typeof o1 !== 'object') {\r\n        return o1 === o2;\r\n    }\r\n    if (typeof o1 !== typeof o2) {\r\n        return false;\r\n    }\r\n    if (Array.isArray(o1) !== Array.isArray(o2)) {\r\n        return false;\r\n    }\r\n    if (Array.isArray(o1)) {\r\n        if (o1.length !== o2.length) {\r\n            return false;\r\n        }\r\n        for (let i = 0; i < o1.length; i++) {\r\n            if (!areDeeplyEqual(o1[i], o2[i])) {\r\n                return false;\r\n            }\r\n        }\r\n        return true;\r\n    } else {\r\n        const keys1 = Object.keys(o1);\r\n        const keys2 = Object.keys(o2);\r\n        if (keys1.length !== keys2.length) {\r\n            return false;\r\n        }\r\n        for (const key of keys1) {\r\n            if (!areDeeplyEqual(o1[key], o2[key])) {\r\n                return false;\r\n            }\r\n        }\r\n        return true;\r\n    }\r\n}",
+    "problemId": 2628,
+    "title": "JSON Deep Equal",
+    "problemUrl": "https://leetcode.com/problems/json-deep-equal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2628.JSON Deep Equal/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2628.JSON Deep Equal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

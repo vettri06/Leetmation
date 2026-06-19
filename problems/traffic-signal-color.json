@@ -1,0 +1,38 @@
+{
+    "problemName": "traffic-signal-color",
+    "language": "python3",
+    "code": "class Solution:\r\n    def trafficSignal(self, timer: int) -> str:\r\n        if timer == 0:\r\n            return \"Green\"\r\n        if timer == 30:\r\n            return \"Orange\"\r\n        if 30 < timer <= 90:\r\n            return \"Red\"\r\n        return \"Invalid\"",
+    "problemId": 3894,
+    "title": "Traffic Signal Color",
+    "problemUrl": "https://leetcode.com/problems/traffic-signal-color/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3894.Traffic Signal Color/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3894.Traffic Signal Color/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3894.Traffic Signal Color/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3894.Traffic Signal Color/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3894.Traffic Signal Color/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3894.Traffic Signal Color/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

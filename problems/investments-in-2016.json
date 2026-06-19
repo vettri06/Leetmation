@@ -1,0 +1,18 @@
+{
+    "problemName": "investments-in-2016",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            tiv_2016,\r\n            COUNT(1) OVER (PARTITION BY tiv_2015) AS cnt1,\r\n            COUNT(1) OVER (PARTITION BY lat, lon) AS cnt2\r\n        FROM Insurance\r\n    )\r\nSELECT ROUND(SUM(tiv_2016), 2) AS tiv_2016\r\nFROM T\r\nWHERE cnt1 > 1 AND cnt2 = 1;",
+    "problemId": 585,
+    "title": "Investments in 2016",
+    "problemUrl": "https://leetcode.com/problems/investments-in-2016/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0585.Investments in 2016/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0585.Investments in 2016/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "flip-string-to-monotone-increasing",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minFlipsMonoIncr(self, s: str) -> int:\r\n        tot = s.count(\"0\")\r\n        ans, cur = tot, 0\r\n        for i, c in enumerate(s, 1):\r\n            cur += int(c == \"0\")\r\n            ans = min(ans, i - cur + tot - cur)\r\n        return ans",
+    "problemId": 926,
+    "title": "Flip String to Monotone Increasing",
+    "problemUrl": "https://leetcode.com/problems/flip-string-to-monotone-increasing/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0926.Flip String to Monotone Increasing/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0926.Flip String to Monotone Increasing/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0926.Flip String to Monotone Increasing/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0926.Flip String to Monotone Increasing/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0926.Flip String to Monotone Increasing/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0926.Flip String to Monotone Increasing/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0926.Flip String to Monotone Increasing/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

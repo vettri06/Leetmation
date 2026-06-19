@@ -1,0 +1,43 @@
+{
+    "problemName": "permutation-difference-between-two-strings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findPermutationDifference(self, s: str, t: str) -> int:\r\n        d = {c: i for i, c in enumerate(s)}\r\n        return sum(abs(d[c] - i) for i, c in enumerate(t))",
+    "problemId": 3146,
+    "title": "Permutation Difference between Two Strings",
+    "problemUrl": "https://leetcode.com/problems/permutation-difference-between-two-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3146.Permutation Difference between Two Strings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3146.Permutation Difference between Two Strings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3146.Permutation Difference between Two Strings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3146.Permutation Difference between Two Strings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3146.Permutation Difference between Two Strings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3146.Permutation Difference between Two Strings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3146.Permutation Difference between Two Strings/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

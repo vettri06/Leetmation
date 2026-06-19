@@ -1,0 +1,23 @@
+{
+    "problemName": "page-recommendations",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT user1_id AS user_id FROM Friendship WHERE user2_id = 1\r\n        UNION\r\n        SELECT user2_id AS user_id FROM Friendship WHERE user1_id = 1\r\n    )\r\nSELECT DISTINCT page_id AS recommended_page\r\nFROM\r\n    T\r\n    JOIN Likes USING (user_id)\r\nWHERE page_id NOT IN (SELECT page_id FROM Likes WHERE user_id = 1);",
+    "problemId": 1264,
+    "title": "Page Recommendations",
+    "problemUrl": "https://leetcode.com/problems/page-recommendations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1264.Page Recommendations/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1264.Page Recommendations/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1264.Page Recommendations/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

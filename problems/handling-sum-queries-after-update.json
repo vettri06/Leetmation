@@ -1,0 +1,33 @@
+{
+    "problemName": "handling-sum-queries-after-update",
+    "language": "python3",
+    "code": "class Node:\r\n    def __init__(self):\r\n        self.l = self.r = 0\r\n        self.s = self.lazy = 0\r\n\r\n\r\nclass SegmentTree:\r\n    def __init__(self, nums):\r\n        self.nums = nums\r\n        n = len(nums)\r\n        self.tr = [Node() for _ in range(n << 2)]\r\n        self.build(1, 1, n)\r\n\r\n    def build(self, u, l, r):\r\n        self.tr[u].l, self.tr[u].r = l, r\r\n        if l == r:\r\n            self.tr[u].s = self.nums[l - 1]\r\n            return\r\n        mid = (l + r) >> 1\r\n        self.build(u << 1, l, mid)\r\n        self.build(u << 1 | 1, mid + 1, r)\r\n        self.pushup(u)\r\n\r\n    def modify(self, u, l, r):\r\n        if self.tr[u].l >= l and self.tr[u].r <= r:\r\n            self.tr[u].lazy ^= 1\r\n            self.tr[u].s = self.tr[u].r - self.tr[u].l + 1 - self.tr[u].s\r\n            return\r\n        self.pushdown(u)\r\n        mid = (self.tr[u].l + self.tr[u].r) >> 1\r\n        if l <= mid:\r\n            self.modify(u << 1, l, r)\r\n        if r > mid:\r\n            self.modify(u << 1 | 1, l, r)\r\n        self.pushup(u)\r\n\r\n    def query(self, u, l, r):\r\n        if self.tr[u].l >= l and self.tr[u].r <= r:\r\n            return self.tr[u].s\r\n        self.pushdown(u)\r\n        mid = (self.tr[u].l + self.tr[u].r) >> 1\r\n        res = 0\r\n        if l <= mid:\r\n            res += self.query(u << 1, l, r)\r\n        if r > mid:\r\n            res += self.query(u << 1 | 1, l, r)\r\n        return res\r\n\r\n    def pushup(self, u):\r\n        self.tr[u].s = self.tr[u << 1].s + self.tr[u << 1 | 1].s\r\n\r\n    def pushdown(self, u):\r\n        if self.tr[u].lazy:\r\n            mid = (self.tr[u].l + self.tr[u].r) >> 1\r\n            self.tr[u << 1].s = mid - self.tr[u].l + 1 - self.tr[u << 1].s\r\n            self.tr[u << 1].lazy ^= 1\r\n            self.tr[u << 1 | 1].s = self.tr[u].r - mid - self.tr[u << 1 | 1].s\r\n            self.tr[u << 1 | 1].lazy ^= 1\r\n            self.tr[u].lazy ^= 1\r\n\r\n\r\nclass Solution:\r\n    def handleQuery(\r\n        self, nums1: List[int], nums2: List[int], queries: List[List[int]]\r\n    ) -> List[int]:\r\n        tree = SegmentTree(nums1)\r\n        s = sum(nums2)\r\n        ans = []\r\n        for op, a, b in queries:\r\n            if op == 1:\r\n                tree.modify(1, a + 1, b + 1)\r\n            elif op == 2:\r\n                s += a * tree.query(1, 1, len(nums1))\r\n            else:\r\n                ans.append(s)\r\n        return ans",
+    "problemId": 2569,
+    "title": "Handling Sum Queries After Update",
+    "problemUrl": "https://leetcode.com/problems/handling-sum-queries-after-update/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2569.Handling Sum Queries After Update/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2569.Handling Sum Queries After Update/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2569.Handling Sum Queries After Update/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2569.Handling Sum Queries After Update/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2569.Handling Sum Queries After Update/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

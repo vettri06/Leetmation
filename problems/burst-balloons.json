@@ -1,0 +1,43 @@
+{
+    "problemName": "burst-balloons",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxCoins(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        arr = [1] + nums + [1]\r\n        f = [[0] * (n + 2) for _ in range(n + 2)]\r\n        for i in range(n - 1, -1, -1):\r\n            for j in range(i + 2, n + 2):\r\n                for k in range(i + 1, j):\r\n                    f[i][j] = max(f[i][j], f[i][k] + f[k][j] + arr[i] * arr[k] * arr[j])\r\n        return f[0][-1]",
+    "problemId": 312,
+    "title": "Burst Balloons",
+    "problemUrl": "https://leetcode.com/problems/burst-balloons/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0312.Burst Balloons/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0312.Burst Balloons/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0312.Burst Balloons/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0312.Burst Balloons/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0312.Burst Balloons/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0312.Burst Balloons/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0312.Burst Balloons/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

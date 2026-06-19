@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-number-of-operations-to-make-all-array-elements-equal-to-1",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        cnt = nums.count(1)\r\n        if cnt:\r\n            return n - cnt\r\n        mi = n + 1\r\n        for i in range(n):\r\n            g = 0\r\n            for j in range(i, n):\r\n                g = gcd(g, nums[j])\r\n                if g == 1:\r\n                    mi = min(mi, j - i + 1)\r\n        return -1 if mi > n else n - 1 + mi - 1",
+    "problemId": 2654,
+    "title": "Minimum Number of Operations to Make All Array Elements Equal to 1",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-operations-to-make-all-array-elements-equal-to-1/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2654.Minimum Number of Operations to Make All Array Elements Equal to 1/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2654.Minimum Number of Operations to Make All Array Elements Equal to 1/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2654.Minimum Number of Operations to Make All Array Elements Equal to 1/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2654.Minimum Number of Operations to Make All Array Elements Equal to 1/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2654.Minimum Number of Operations to Make All Array Elements Equal to 1/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2654.Minimum Number of Operations to Make All Array Elements Equal to 1/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2654.Minimum Number of Operations to Make All Array Elements Equal to 1/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

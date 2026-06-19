@@ -1,0 +1,28 @@
+{
+    "problemName": "customers-who-never-order",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_customers(customers: pd.DataFrame, orders: pd.DataFrame) -> pd.DataFrame:\r\n    # Select the customers whose 'id' is not present in the orders DataFrame's 'customerId' column.\r\n    df = customers[~customers[\"id\"].isin(orders[\"customerId\"])]\r\n\r\n    # Build a DataFrame that only contains the 'name' column and rename it as 'Customers'.\r\n    df = df[[\"name\"]].rename(columns={\"name\": \"Customers\"})\r\n\r\n    return df",
+    "problemId": 183,
+    "title": "Customers Who Never Order",
+    "problemUrl": "https://leetcode.com/problems/customers-who-never-order/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0183.Customers Who Never Order/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0183.Customers Who Never Order/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0183.Customers Who Never Order/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0183.Customers Who Never Order/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

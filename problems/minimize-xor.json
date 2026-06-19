@@ -1,0 +1,48 @@
+{
+    "problemName": "minimize-xor",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimizeXor(self, num1: int, num2: int) -> int:\r\n        cnt = num2.bit_count()\r\n        x = 0\r\n        for i in range(30, -1, -1):\r\n            if num1 >> i & 1 and cnt:\r\n                x |= 1 << i\r\n                cnt -= 1\r\n        for i in range(30):\r\n            if num1 >> i & 1 ^ 1 and cnt:\r\n                x |= 1 << i\r\n                cnt -= 1\r\n        return x",
+    "problemId": 2429,
+    "title": "Minimize XOR",
+    "problemUrl": "https://leetcode.com/problems/minimize-xor/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2429.Minimize XOR/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2429.Minimize XOR/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2429.Minimize XOR/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2429.Minimize XOR/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2429.Minimize XOR/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2429.Minimize XOR/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2429.Minimize XOR/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2429.Minimize XOR/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

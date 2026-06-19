@@ -1,0 +1,33 @@
+{
+    "problemName": "alphabet-board-path",
+    "language": "python3",
+    "code": "class Solution:\r\n    def alphabetBoardPath(self, target: str) -> str:\r\n        i = j = 0\r\n        ans = []\r\n        for c in target:\r\n            v = ord(c) - ord(\"a\")\r\n            x, y = v // 5, v % 5\r\n            while j > y:\r\n                j -= 1\r\n                ans.append(\"L\")\r\n            while i > x:\r\n                i -= 1\r\n                ans.append(\"U\")\r\n            while j < y:\r\n                j += 1\r\n                ans.append(\"R\")\r\n            while i < x:\r\n                i += 1\r\n                ans.append(\"D\")\r\n            ans.append(\"!\")\r\n        return \"\".join(ans)",
+    "problemId": 1138,
+    "title": "Alphabet Board Path",
+    "problemUrl": "https://leetcode.com/problems/alphabet-board-path/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1138.Alphabet Board Path/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1138.Alphabet Board Path/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1138.Alphabet Board Path/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1138.Alphabet Board Path/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1138.Alphabet Board Path/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

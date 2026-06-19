@@ -1,0 +1,43 @@
+{
+    "problemName": "valid-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isNumber(self, s: str) -> bool:\r\n        n = len(s)\r\n        i = 0\r\n        if s[i] in '+-':\r\n            i += 1\r\n        if i == n:\r\n            return False\r\n        if s[i] == '.' and (i + 1 == n or s[i + 1] in 'eE'):\r\n            return False\r\n        dot = e = 0\r\n        j = i\r\n        while j < n:\r\n            if s[j] == '.':\r\n                if e or dot:\r\n                    return False\r\n                dot += 1\r\n            elif s[j] in 'eE':\r\n                if e or j == i or j == n - 1:\r\n                    return False\r\n                e += 1\r\n                if s[j + 1] in '+-':\r\n                    j += 1\r\n                    if j == n - 1:\r\n                        return False\r\n            elif not s[j].isnumeric():\r\n                return False\r\n            j += 1\r\n        return True",
+    "problemId": 65,
+    "title": "Valid Number",
+    "problemUrl": "https://leetcode.com/problems/valid-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0065.Valid Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0065.Valid Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0065.Valid Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0065.Valid Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0065.Valid Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0065.Valid Number/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0065.Valid Number/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

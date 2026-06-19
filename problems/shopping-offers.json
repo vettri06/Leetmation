@@ -1,0 +1,33 @@
+{
+    "problemName": "shopping-offers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shoppingOffers(\r\n        self, price: List[int], special: List[List[int]], needs: List[int]\r\n    ) -> int:\r\n        @cache\r\n        def dfs(cur: int) -> int:\r\n            ans = sum(p * (cur >> (i * bits) & 0xF) for i, p in enumerate(price))\r\n            for offer in special:\r\n                nxt = cur\r\n                for j in range(len(needs)):\r\n                    if (cur >> (j * bits) & 0xF) < offer[j]:\r\n                        break\r\n                    nxt -= offer[j] << (j * bits)\r\n                else:\r\n                    ans = min(ans, offer[-1] + dfs(nxt))\r\n            return ans\r\n\r\n        bits, mask = 4, 0\r\n        for i, need in enumerate(needs):\r\n            mask |= need << i * bits\r\n        return dfs(mask)",
+    "problemId": 638,
+    "title": "Shopping Offers",
+    "problemUrl": "https://leetcode.com/problems/shopping-offers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0638.Shopping Offers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0638.Shopping Offers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0638.Shopping Offers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0638.Shopping Offers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0638.Shopping Offers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

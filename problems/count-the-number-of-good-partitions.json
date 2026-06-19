@@ -1,0 +1,38 @@
+{
+    "problemName": "count-the-number-of-good-partitions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfGoodPartitions(self, nums: List[int]) -> int:\r\n        last = {x: i for i, x in enumerate(nums)}\r\n        mod = 10**9 + 7\r\n        j, k = -1, 0\r\n        for i, x in enumerate(nums):\r\n            j = max(j, last[x])\r\n            k += i == j\r\n        return pow(2, k - 1, mod)",
+    "problemId": 2963,
+    "title": "Count the Number of Good Partitions",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-good-partitions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2963.Count the Number of Good Partitions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2963.Count the Number of Good Partitions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2963.Count the Number of Good Partitions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2963.Count the Number of Good Partitions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2963.Count the Number of Good Partitions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2963.Count the Number of Good Partitions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

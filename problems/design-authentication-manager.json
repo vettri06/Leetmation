@@ -1,0 +1,43 @@
+{
+    "problemName": "design-authentication-manager",
+    "language": "python3",
+    "code": "class AuthenticationManager:\r\n    def __init__(self, timeToLive: int):\r\n        self.t = timeToLive\r\n        self.d = defaultdict(int)\r\n\r\n    def generate(self, tokenId: str, currentTime: int) -> None:\r\n        self.d[tokenId] = currentTime + self.t\r\n\r\n    def renew(self, tokenId: str, currentTime: int) -> None:\r\n        if self.d[tokenId] <= currentTime:\r\n            return\r\n        self.d[tokenId] = currentTime + self.t\r\n\r\n    def countUnexpiredTokens(self, currentTime: int) -> int:\r\n        return sum(exp > currentTime for exp in self.d.values())\r\n\r\n\r\n# Your AuthenticationManager object will be instantiated and called as such:\r\n# obj = AuthenticationManager(timeToLive)\r\n# obj.generate(tokenId,currentTime)\r\n# obj.renew(tokenId,currentTime)\r\n# param_3 = obj.countUnexpiredTokens(currentTime)",
+    "problemId": 1797,
+    "title": "Design Authentication Manager",
+    "problemUrl": "https://leetcode.com/problems/design-authentication-manager/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1797.Design Authentication Manager/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1797.Design Authentication Manager/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1797.Design Authentication Manager/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1797.Design Authentication Manager/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1797.Design Authentication Manager/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1797.Design Authentication Manager/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1797.Design Authentication Manager/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

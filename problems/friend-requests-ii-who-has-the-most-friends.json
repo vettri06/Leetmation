@@ -1,0 +1,18 @@
+{
+    "problemName": "friend-requests-ii-who-has-the-most-friends",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT requester_id, accepter_id FROM RequestAccepted\r\n        UNION ALL\r\n        SELECT accepter_id, requester_id FROM RequestAccepted\r\n    )\r\nSELECT requester_id AS id, COUNT(1) AS num\r\nFROM T\r\nGROUP BY 1\r\nORDER BY 2 DESC\r\nLIMIT 1;",
+    "problemId": 602,
+    "title": "Friend Requests II Who Has the Most Friends",
+    "problemUrl": "https://leetcode.com/problems/friend-requests-ii-who-has-the-most-friends/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0602.Friend Requests II Who Has the Most Friends/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0602.Friend Requests II Who Has the Most Friends/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "smallest-subtree-with-all-the-deepest-nodes",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def subtreeWithAllDeepest(self, root: Optional[TreeNode]) -> Optional[TreeNode]:\r\n        def dfs(root: Optional[TreeNode]) -> Tuple[Optional[TreeNode], int]:\r\n            if root is None:\r\n                return None, 0\r\n            l, ld = dfs(root.left)\r\n            r, rd = dfs(root.right)\r\n            if ld > rd:\r\n                return l, ld + 1\r\n            if ld < rd:\r\n                return r, rd + 1\r\n            return root, ld + 1\r\n\r\n        return dfs(root)[0]",
+    "problemId": 865,
+    "title": "Smallest Subtree with all the Deepest Nodes",
+    "problemUrl": "https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0865.Smallest Subtree with all the Deepest Nodes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0865.Smallest Subtree with all the Deepest Nodes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0865.Smallest Subtree with all the Deepest Nodes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0865.Smallest Subtree with all the Deepest Nodes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0865.Smallest Subtree with all the Deepest Nodes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0865.Smallest Subtree with all the Deepest Nodes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0865.Smallest Subtree with all the Deepest Nodes/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

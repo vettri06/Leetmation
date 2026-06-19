@@ -1,0 +1,18 @@
+{
+    "problemName": "classifying-triangles-by-lengths",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    CASE\r\n        WHEN A + B <= C\r\n        OR A + C <= B\r\n        OR B + C <= A THEN 'Not A Triangle'\r\n        WHEN A = B\r\n        AND B = c THEN 'Equilateral'\r\n        WHEN (A = B) + (B = C) + (A = C) = 1 THEN 'Isosceles'\r\n        ELSE 'Scalene'\r\n    END AS triangle_type\r\nFROM Triangles;",
+    "problemId": 3053,
+    "title": "Classifying Triangles by Lengths",
+    "problemUrl": "https://leetcode.com/problems/classifying-triangles-by-lengths/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3053.Classifying Triangles by Lengths/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3053.Classifying Triangles by Lengths/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

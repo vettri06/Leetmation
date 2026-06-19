@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-points-after-collecting-coins-from-all-nodes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumPoints(self, edges: List[List[int]], coins: List[int], k: int) -> int:\r\n        @cache\r\n        def dfs(i: int, fa: int, j: int) -> int:\r\n            a = (coins[i] >> j) - k\r\n            b = coins[i] >> (j + 1)\r\n            for c in g[i]:\r\n                if c != fa:\r\n                    a += dfs(c, i, j)\r\n                    if j < 14:\r\n                        b += dfs(c, i, j + 1)\r\n            return max(a, b)\r\n\r\n        n = len(coins)\r\n        g = [[] for _ in range(n)]\r\n        for a, b in edges:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n        ans = dfs(0, -1, 0)\r\n        dfs.cache_clear()\r\n        return ans",
+    "problemId": 2920,
+    "title": "Maximum Points After Collecting Coins From All Nodes",
+    "problemUrl": "https://leetcode.com/problems/maximum-points-after-collecting-coins-from-all-nodes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2920.Maximum Points After Collecting Coins From All Nodes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2920.Maximum Points After Collecting Coins From All Nodes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2920.Maximum Points After Collecting Coins From All Nodes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2920.Maximum Points After Collecting Coins From All Nodes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2920.Maximum Points After Collecting Coins From All Nodes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2920.Maximum Points After Collecting Coins From All Nodes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

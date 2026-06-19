@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-swaps-to-arrange-a-binary-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSwaps(self, grid: List[List[int]]) -> int:\r\n        n = len(grid)\r\n        pos = [-1] * n\r\n        for i in range(n):\r\n            for j in range(n - 1, -1, -1):\r\n                if grid[i][j] == 1:\r\n                    pos[i] = j\r\n                    break\r\n        ans = 0\r\n        for i in range(n):\r\n            k = -1\r\n            for j in range(i, n):\r\n                if pos[j] <= i:\r\n                    ans += j - i\r\n                    k = j\r\n                    break\r\n            if k == -1:\r\n                return -1\r\n            while k > i:\r\n                pos[k], pos[k - 1] = pos[k - 1], pos[k]\r\n                k -= 1\r\n        return ans",
+    "problemId": 1536,
+    "title": "Minimum Swaps to Arrange a Binary Grid",
+    "problemUrl": "https://leetcode.com/problems/minimum-swaps-to-arrange-a-binary-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1536.Minimum Swaps to Arrange a Binary Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1536.Minimum Swaps to Arrange a Binary Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1536.Minimum Swaps to Arrange a Binary Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1536.Minimum Swaps to Arrange a Binary Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1536.Minimum Swaps to Arrange a Binary Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1536.Minimum Swaps to Arrange a Binary Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

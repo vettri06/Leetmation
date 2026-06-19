@@ -1,0 +1,68 @@
+{
+    "problemName": "maximum-value-of-a-string-in-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumValue(self, strs: List[str]) -> int:\r\n        def f(s: str) -> int:\r\n            return int(s) if all(c.isdigit() for c in s) else len(s)\r\n\r\n        return max(f(s) for s in strs)",
+    "problemId": 2496,
+    "title": "Maximum Value of a String in an Array",
+    "problemUrl": "https://leetcode.com/problems/maximum-value-of-a-string-in-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2496.Maximum Value of a String in an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2496.Maximum Value of a String in an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2496.Maximum Value of a String in an Array/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2496.Maximum Value of a String in an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2496.Maximum Value of a String in an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2496.Maximum Value of a String in an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2496.Maximum Value of a String in an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2496.Maximum Value of a String in an Array/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2496.Maximum Value of a String in an Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2496.Maximum Value of a String in an Array/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2496.Maximum Value of a String in an Array/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2496.Maximum Value of a String in an Array/Solution3.rs",
+            "sourceFile": "Solution3.rs"
+        }
+    ]
+}

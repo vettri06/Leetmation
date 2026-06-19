@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-subarray-sum-after-one-operation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSumAfterOperation(self, nums: List[int]) -> int:\r\n        f = g = 0\r\n        ans = -inf\r\n        for x in nums:\r\n            ff = max(f, 0) + x\r\n            gg = max(max(f, 0) + x * x, g + x)\r\n            f, g = ff, gg\r\n            ans = max(ans, f, g)\r\n        return ans",
+    "problemId": 1746,
+    "title": "Maximum Subarray Sum After One Operation",
+    "problemUrl": "https://leetcode.com/problems/maximum-subarray-sum-after-one-operation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1746.Maximum Subarray Sum After One Operation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1746.Maximum Subarray Sum After One Operation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1746.Maximum Subarray Sum After One Operation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1746.Maximum Subarray Sum After One Operation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1746.Maximum Subarray Sum After One Operation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1746.Maximum Subarray Sum After One Operation/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

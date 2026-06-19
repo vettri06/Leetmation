@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-divisible-triplet-sums",
+    "language": "python3",
+    "code": "class Solution:\r\n    def divisibleTripletCount(self, nums: List[int], d: int) -> int:\r\n        cnt = defaultdict(int)\r\n        ans, n = 0, len(nums)\r\n        for j in range(n):\r\n            for k in range(j + 1, n):\r\n                x = (d - (nums[j] + nums[k]) % d) % d\r\n                ans += cnt[x]\r\n            cnt[nums[j] % d] += 1\r\n        return ans",
+    "problemId": 2964,
+    "title": "Number of Divisible Triplet Sums",
+    "problemUrl": "https://leetcode.com/problems/number-of-divisible-triplet-sums/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2964.Number of Divisible Triplet Sums/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2964.Number of Divisible Triplet Sums/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2964.Number of Divisible Triplet Sums/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2964.Number of Divisible Triplet Sums/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2964.Number of Divisible Triplet Sums/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2964.Number of Divisible Triplet Sums/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

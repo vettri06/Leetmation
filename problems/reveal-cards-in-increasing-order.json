@@ -1,0 +1,33 @@
+{
+    "problemName": "reveal-cards-in-increasing-order",
+    "language": "python3",
+    "code": "class Solution:\r\n    def deckRevealedIncreasing(self, deck: List[int]) -> List[int]:\r\n        q = deque()\r\n        for v in sorted(deck, reverse=True):\r\n            if q:\r\n                q.appendleft(q.pop())\r\n            q.appendleft(v)\r\n        return list(q)",
+    "problemId": 950,
+    "title": "Reveal Cards In Increasing Order",
+    "problemUrl": "https://leetcode.com/problems/reveal-cards-in-increasing-order/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0950.Reveal Cards In Increasing Order/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0950.Reveal Cards In Increasing Order/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0950.Reveal Cards In Increasing Order/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0950.Reveal Cards In Increasing Order/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0950.Reveal Cards In Increasing Order/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "plates-between-candles",
+    "language": "python3",
+    "code": "class Solution:\r\n    def platesBetweenCandles(self, s: str, queries: List[List[int]]) -> List[int]:\r\n        n = len(s)\r\n        presum = [0] * (n + 1)\r\n        for i, c in enumerate(s):\r\n            presum[i + 1] = presum[i] + (c == '*')\r\n\r\n        left, right = [0] * n, [0] * n\r\n        l = r = -1\r\n        for i, c in enumerate(s):\r\n            if c == '|':\r\n                l = i\r\n            left[i] = l\r\n        for i in range(n - 1, -1, -1):\r\n            if s[i] == '|':\r\n                r = i\r\n            right[i] = r\r\n\r\n        ans = [0] * len(queries)\r\n        for k, (l, r) in enumerate(queries):\r\n            i, j = right[l], left[r]\r\n            if i >= 0 and j >= 0 and i < j:\r\n                ans[k] = presum[j] - presum[i + 1]\r\n        return ans",
+    "problemId": 2055,
+    "title": "Plates Between Candles",
+    "problemUrl": "https://leetcode.com/problems/plates-between-candles/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2055.Plates Between Candles/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2055.Plates Between Candles/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2055.Plates Between Candles/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2055.Plates Between Candles/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2055.Plates Between Candles/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

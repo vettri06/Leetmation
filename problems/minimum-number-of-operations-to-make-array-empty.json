@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-number-of-operations-to-make-array-empty",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums: List[int]) -> int:\r\n        count = Counter(nums)\r\n        ans = 0\r\n        for c in count.values():\r\n            if c == 1:\r\n                return -1\r\n            ans += (c + 2) // 3\r\n        return ans",
+    "problemId": 2870,
+    "title": "Minimum Number of Operations to Make Array Empty",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-operations-to-make-array-empty/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2870.Minimum Number of Operations to Make Array Empty/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2870.Minimum Number of Operations to Make Array Empty/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2870.Minimum Number of Operations to Make Array Empty/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2870.Minimum Number of Operations to Make Array Empty/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2870.Minimum Number of Operations to Make Array Empty/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2870.Minimum Number of Operations to Make Array Empty/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

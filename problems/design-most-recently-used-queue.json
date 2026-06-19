@@ -1,0 +1,43 @@
+{
+    "problemName": "design-most-recently-used-queue",
+    "language": "python3",
+    "code": "class MRUQueue:\r\n    def __init__(self, n: int):\r\n        self.q = list(range(1, n + 1))\r\n\r\n    def fetch(self, k: int) -> int:\r\n        ans = self.q[k - 1]\r\n        self.q[k - 1 : k] = []\r\n        self.q.append(ans)\r\n        return ans\r\n\r\n\r\n# Your MRUQueue object will be instantiated and called as such:\r\n# obj = MRUQueue(n)\r\n# param_1 = obj.fetch(k)",
+    "problemId": 1756,
+    "title": "Design Most Recently Used Queue",
+    "problemUrl": "https://leetcode.com/problems/design-most-recently-used-queue/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1756.Design Most Recently Used Queue/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1756.Design Most Recently Used Queue/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1756.Design Most Recently Used Queue/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1756.Design Most Recently Used Queue/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1756.Design Most Recently Used Queue/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1756.Design Most Recently Used Queue/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1756.Design Most Recently Used Queue/Solution2.py",
+            "sourceFile": "Solution2.py"
+        }
+    ]
+}

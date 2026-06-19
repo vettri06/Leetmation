@@ -1,0 +1,23 @@
+{
+    "problemName": "fix-names-in-a-table",
+    "language": "mysql",
+    "code": "SELECT\r\n    user_id,\r\n    CONCAT(UPPER(LEFT(name, 1)), LOWER(SUBSTRING(name, 2))) AS name\r\nFROM users\r\nORDER BY user_id;",
+    "problemId": 1667,
+    "title": "Fix Names in a Table",
+    "problemUrl": "https://leetcode.com/problems/fix-names-in-a-table/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1667.Fix Names in a Table/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1667.Fix Names in a Table/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1667.Fix Names in a Table/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

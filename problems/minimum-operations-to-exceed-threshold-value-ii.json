@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-operations-to-exceed-threshold-value-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums: List[int], k: int) -> int:\r\n        heapify(nums)\r\n        ans = 0\r\n        while len(nums) > 1 and nums[0] < k:\r\n            x, y = heappop(nums), heappop(nums)\r\n            heappush(nums, x * 2 + y)\r\n            ans += 1\r\n        return ans",
+    "problemId": 3066,
+    "title": "Minimum Operations to Exceed Threshold Value II",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3066.Minimum Operations to Exceed Threshold Value II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3066.Minimum Operations to Exceed Threshold Value II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3066.Minimum Operations to Exceed Threshold Value II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3066.Minimum Operations to Exceed Threshold Value II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3066.Minimum Operations to Exceed Threshold Value II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3066.Minimum Operations to Exceed Threshold Value II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3066.Minimum Operations to Exceed Threshold Value II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

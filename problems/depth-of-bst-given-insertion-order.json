@@ -1,0 +1,23 @@
+{
+    "problemName": "depth-of-bst-given-insertion-order",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxDepthBST(self, order: List[int]) -> int:\r\n        sd = SortedDict({0: 0, inf: 0, order[0]: 1})\r\n        ans = 1\r\n        for v in order[1:]:\r\n            lower = sd.bisect_left(v) - 1\r\n            higher = lower + 1\r\n            depth = 1 + max(sd.values()[lower], sd.values()[higher])\r\n            ans = max(ans, depth)\r\n            sd[v] = depth\r\n        return ans",
+    "problemId": 1902,
+    "title": "Depth of BST Given Insertion Order",
+    "problemUrl": "https://leetcode.com/problems/depth-of-bst-given-insertion-order/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1902.Depth of BST Given Insertion Order/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1902.Depth of BST Given Insertion Order/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1902.Depth of BST Given Insertion Order/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

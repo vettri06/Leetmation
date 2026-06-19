@@ -1,0 +1,73 @@
+{
+    "problemName": "lowest-common-ancestor-of-a-binary-search-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, x):\r\n#         self.val = x\r\n#         self.left = None\r\n#         self.right = None\r\n\r\n\r\nclass Solution:\r\n    def lowestCommonAncestor(\r\n        self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode'\r\n    ) -> 'TreeNode':\r\n        while 1:\r\n            if root.val < min(p.val, q.val):\r\n                root = root.right\r\n            elif root.val > max(p.val, q.val):\r\n                root = root.left\r\n            else:\r\n                return root",
+    "problemId": 235,
+    "title": "Lowest Common Ancestor of a Binary Search Tree",
+    "problemUrl": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0235.Lowest Common Ancestor of a Binary Search Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0235.Lowest Common Ancestor of a Binary Search Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0235.Lowest Common Ancestor of a Binary Search Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0235.Lowest Common Ancestor of a Binary Search Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0235.Lowest Common Ancestor of a Binary Search Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0235.Lowest Common Ancestor of a Binary Search Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0235.Lowest Common Ancestor of a Binary Search Tree/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0235.Lowest Common Ancestor of a Binary Search Tree/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0235.Lowest Common Ancestor of a Binary Search Tree/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0235.Lowest Common Ancestor of a Binary Search Tree/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0235.Lowest Common Ancestor of a Binary Search Tree/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0235.Lowest Common Ancestor of a Binary Search Tree/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0235.Lowest Common Ancestor of a Binary Search Tree/Solution2.cs",
+            "sourceFile": "Solution2.cs"
+        }
+    ]
+}

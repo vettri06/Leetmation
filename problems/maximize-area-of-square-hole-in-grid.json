@@ -1,0 +1,43 @@
+{
+    "problemName": "maximize-area-of-square-hole-in-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximizeSquareHoleArea(\r\n        self, n: int, m: int, hBars: List[int], vBars: List[int]\r\n    ) -> int:\r\n        def f(nums: List[int]) -> int:\r\n            nums.sort()\r\n            ans = cnt = 1\r\n            for i in range(1, len(nums)):\r\n                if nums[i] == nums[i - 1] + 1:\r\n                    cnt += 1\r\n                    ans = max(ans, cnt)\r\n                else:\r\n                    cnt = 1\r\n            return ans + 1\r\n\r\n        return min(f(hBars), f(vBars)) ** 2",
+    "problemId": 2943,
+    "title": "Maximize Area of Square Hole in Grid",
+    "problemUrl": "https://leetcode.com/problems/maximize-area-of-square-hole-in-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2943.Maximize Area of Square Hole in Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2943.Maximize Area of Square Hole in Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2943.Maximize Area of Square Hole in Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2943.Maximize Area of Square Hole in Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2943.Maximize Area of Square Hole in Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2943.Maximize Area of Square Hole in Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2943.Maximize Area of Square Hole in Grid/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

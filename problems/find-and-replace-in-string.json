@@ -1,0 +1,38 @@
+{
+    "problemName": "find-and-replace-in-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findReplaceString(\r\n        self, s: str, indices: List[int], sources: List[str], targets: List[str]\r\n    ) -> str:\r\n        n = len(s)\r\n        d = [-1] * n\r\n        for k, (i, src) in enumerate(zip(indices, sources)):\r\n            if s.startswith(src, i):\r\n                d[i] = k\r\n        ans = []\r\n        i = 0\r\n        while i < n:\r\n            if ~d[i]:\r\n                ans.append(targets[d[i]])\r\n                i += len(sources[d[i]])\r\n            else:\r\n                ans.append(s[i])\r\n                i += 1\r\n        return \"\".join(ans)",
+    "problemId": 833,
+    "title": "Find And Replace in String",
+    "problemUrl": "https://leetcode.com/problems/find-and-replace-in-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0833.Find And Replace in String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0833.Find And Replace in String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0833.Find And Replace in String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0833.Find And Replace in String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0833.Find And Replace in String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0833.Find And Replace in String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

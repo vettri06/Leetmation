@@ -1,0 +1,43 @@
+{
+    "problemName": "seat-reservation-manager",
+    "language": "python3",
+    "code": "class SeatManager:\r\n    def __init__(self, n: int):\r\n        self.q = list(range(1, n + 1))\r\n\r\n    def reserve(self) -> int:\r\n        return heappop(self.q)\r\n\r\n    def unreserve(self, seatNumber: int) -> None:\r\n        heappush(self.q, seatNumber)\r\n\r\n\r\n# Your SeatManager object will be instantiated and called as such:\r\n# obj = SeatManager(n)\r\n# param_1 = obj.reserve()\r\n# obj.unreserve(seatNumber)",
+    "problemId": 1845,
+    "title": "Seat Reservation Manager",
+    "problemUrl": "https://leetcode.com/problems/seat-reservation-manager/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1845.Seat Reservation Manager/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1845.Seat Reservation Manager/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1845.Seat Reservation Manager/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1845.Seat Reservation Manager/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1845.Seat Reservation Manager/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1845.Seat Reservation Manager/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1845.Seat Reservation Manager/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

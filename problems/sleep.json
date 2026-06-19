@@ -1,0 +1,23 @@
+{
+    "problemName": "sleep",
+    "language": "javascript",
+    "code": "/**\r\n * @param {number} millis\r\n * @return {Promise}\r\n */\r\nasync function sleep(millis) {\r\n    return new Promise(r => setTimeout(r, millis));\r\n}\r\n\r\n/**\r\n * let t = Date.now()\r\n * sleep(100).then(() => console.log(Date.now() - t)) // 100\r\n */",
+    "problemId": 2621,
+    "title": "Sleep",
+    "problemUrl": "https://leetcode.com/problems/sleep/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2621.Sleep/Solution.js",
+    "sourceFile": "Solution.js",
+    "sourceCandidates": [
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2621.Sleep/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2621.Sleep/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "problemName": "is-graph-bipartite",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isBipartite(self, graph: List[List[int]]) -> bool:\r\n        def dfs(a: int, c: int) -> bool:\r\n            color[a] = c\r\n            for b in graph[a]:\r\n                if color[b] == c or (color[b] == 0 and not dfs(b, -c)):\r\n                    return False\r\n            return True\r\n\r\n        n = len(graph)\r\n        color = [0] * n\r\n        for i in range(n):\r\n            if color[i] == 0 and not dfs(i, 1):\r\n                return False\r\n        return True",
+    "problemId": 785,
+    "title": "Is Graph Bipartite",
+    "problemUrl": "https://leetcode.com/problems/is-graph-bipartite/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0785.Is Graph Bipartite/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0785.Is Graph Bipartite/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0785.Is Graph Bipartite/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0785.Is Graph Bipartite/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0785.Is Graph Bipartite/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0785.Is Graph Bipartite/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0785.Is Graph Bipartite/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0785.Is Graph Bipartite/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0785.Is Graph Bipartite/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0785.Is Graph Bipartite/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0785.Is Graph Bipartite/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0785.Is Graph Bipartite/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0785.Is Graph Bipartite/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

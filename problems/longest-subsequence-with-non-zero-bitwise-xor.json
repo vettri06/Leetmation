@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-subsequence-with-non-zero-bitwise-xor",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestSubsequence(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        xor = cnt0 = 0\r\n        for x in nums:\r\n            xor ^= x\r\n            cnt0 += int(x == 0)\r\n        if xor:\r\n            return n\r\n        if cnt0 == n:\r\n            return 0\r\n        return n - 1",
+    "problemId": 3702,
+    "title": "Longest Subsequence With Non-Zero Bitwise XOR",
+    "problemUrl": "https://leetcode.com/problems/longest-subsequence-with-non-zero-bitwise-xor/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3702.Longest Subsequence With Non-Zero Bitwise XOR/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3702.Longest Subsequence With Non-Zero Bitwise XOR/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3702.Longest Subsequence With Non-Zero Bitwise XOR/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3702.Longest Subsequence With Non-Zero Bitwise XOR/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3702.Longest Subsequence With Non-Zero Bitwise XOR/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3702.Longest Subsequence With Non-Zero Bitwise XOR/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

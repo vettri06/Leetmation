@@ -1,0 +1,63 @@
+{
+    "problemName": "count-of-smaller-numbers-after-self",
+    "language": "python3",
+    "code": "class BinaryIndexedTree:\r\n    def __init__(self, n):\r\n        self.n = n\r\n        self.c = [0] * (n + 1)\r\n\r\n    @staticmethod\r\n    def lowbit(x):\r\n        return x & -x\r\n\r\n    def update(self, x, delta):\r\n        while x <= self.n:\r\n            self.c[x] += delta\r\n            x += BinaryIndexedTree.lowbit(x)\r\n\r\n    def query(self, x):\r\n        s = 0\r\n        while x > 0:\r\n            s += self.c[x]\r\n            x -= BinaryIndexedTree.lowbit(x)\r\n        return s\r\n\r\n\r\nclass Solution:\r\n    def countSmaller(self, nums: List[int]) -> List[int]:\r\n        alls = sorted(set(nums))\r\n        m = {v: i for i, v in enumerate(alls, 1)}\r\n        tree = BinaryIndexedTree(len(m))\r\n        ans = []\r\n        for v in nums[::-1]:\r\n            x = m[v]\r\n            tree.update(x, 1)\r\n            ans.append(tree.query(x - 1))\r\n        return ans[::-1]",
+    "problemId": 315,
+    "title": "Count of Smaller Numbers After Self",
+    "problemUrl": "https://leetcode.com/problems/count-of-smaller-numbers-after-self/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0315.Count of Smaller Numbers After Self/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0315.Count of Smaller Numbers After Self/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0315.Count of Smaller Numbers After Self/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0315.Count of Smaller Numbers After Self/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0315.Count of Smaller Numbers After Self/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0315.Count of Smaller Numbers After Self/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0315.Count of Smaller Numbers After Self/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0315.Count of Smaller Numbers After Self/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0315.Count of Smaller Numbers After Self/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0315.Count of Smaller Numbers After Self/Solution3.py",
+            "sourceFile": "Solution3.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0315.Count of Smaller Numbers After Self/Solution3.cpp",
+            "sourceFile": "Solution3.cpp"
+        }
+    ]
+}

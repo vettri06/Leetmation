@@ -1,0 +1,23 @@
+{
+    "problemName": "team-dominance-by-pass-success",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef calculate_team_dominance(teams: pd.DataFrame, passes: pd.DataFrame) -> pd.DataFrame:\r\n    passes_with_teams = passes.merge(\r\n        teams, left_on=\"pass_from\", right_on=\"player_id\", suffixes=(\"\", \"_team_from\")\r\n    ).merge(\r\n        teams,\r\n        left_on=\"pass_to\",\r\n        right_on=\"player_id\",\r\n        suffixes=(\"_team_from\", \"_team_to\"),\r\n    )\r\n    passes_with_teams[\"half_number\"] = passes_with_teams[\"time_stamp\"].apply(\r\n        lambda x: 1 if x <= \"45:00\" else 2\r\n    )\r\n    passes_with_teams[\"dominance\"] = passes_with_teams.apply(\r\n        lambda row: 1 if row[\"team_name_team_from\"] == row[\"team_name_team_to\"] else -1,\r\n        axis=1,\r\n    )\r\n    result = (\r\n        passes_with_teams.groupby([\"team_name_team_from\", \"half_number\"])[\"dominance\"]\r\n        .sum()\r\n        .reset_index()\r\n    )\r\n    result.columns = [\"team_name\", \"half_number\", \"dominance\"]\r\n    result = result.sort_values(by=[\"team_name\", \"half_number\"])\r\n    return result",
+    "problemId": 3384,
+    "title": "Team Dominance by Pass Success",
+    "problemUrl": "https://leetcode.com/problems/team-dominance-by-pass-success/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3384.Team Dominance by Pass Success/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3384.Team Dominance by Pass Success/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3384.Team Dominance by Pass Success/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

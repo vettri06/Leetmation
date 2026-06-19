@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-reverse-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minReverseOperations(\r\n        self, n: int, p: int, banned: List[int], k: int\r\n    ) -> List[int]:\r\n        ans = [-1] * n\r\n        ans[p] = 0\r\n        ts = [SortedSet() for _ in range(2)]\r\n        for i in range(n):\r\n            ts[i % 2].add(i)\r\n        ts[p % 2].remove(p)\r\n        for i in banned:\r\n            ts[i % 2].remove(i)\r\n        ts[0].add(n)\r\n        ts[1].add(n)\r\n        q = deque([p])\r\n        while q:\r\n            i = q.popleft()\r\n            mi = max(i - k + 1, k - i - 1)\r\n            mx = min(i + k - 1, n * 2 - k - i - 1)\r\n            s = ts[mi % 2]\r\n            j = s.bisect_left(mi)\r\n            while s[j] <= mx:\r\n                q.append(s[j])\r\n                ans[s[j]] = ans[i] + 1\r\n                s.remove(s[j])\r\n                j = s.bisect_left(mi)\r\n        return ans",
+    "problemId": 2612,
+    "title": "Minimum Reverse Operations",
+    "problemUrl": "https://leetcode.com/problems/minimum-reverse-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2612.Minimum Reverse Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2612.Minimum Reverse Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2612.Minimum Reverse Operations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2612.Minimum Reverse Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2612.Minimum Reverse Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2612.Minimum Reverse Operations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2612.Minimum Reverse Operations/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

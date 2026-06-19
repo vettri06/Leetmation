@@ -1,0 +1,38 @@
+{
+    "problemName": "count-positions-on-street-with-required-brightness",
+    "language": "python3",
+    "code": "class Solution:\r\n    def meetRequirement(\r\n        self, n: int, lights: List[List[int]], requirement: List[int]\r\n    ) -> int:\r\n        d = [0] * (n + 1)\r\n        for p, r in lights:\r\n            i, j = max(0, p - r), min(n - 1, p + r)\r\n            d[i] += 1\r\n            d[j + 1] -= 1\r\n        return sum(s >= r for s, r in zip(accumulate(d), requirement))",
+    "problemId": 2237,
+    "title": "Count Positions on Street With Required Brightness",
+    "problemUrl": "https://leetcode.com/problems/count-positions-on-street-with-required-brightness/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2237.Count Positions on Street With Required Brightness/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2237.Count Positions on Street With Required Brightness/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2237.Count Positions on Street With Required Brightness/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2237.Count Positions on Street With Required Brightness/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2237.Count Positions on Street With Required Brightness/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2237.Count Positions on Street With Required Brightness/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

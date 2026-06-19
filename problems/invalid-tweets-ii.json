@@ -1,0 +1,23 @@
+{
+    "problemName": "invalid-tweets-ii",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_invalid_tweets(tweets: pd.DataFrame) -> pd.DataFrame:\r\n    invalid_tweets = tweets[\r\n        (tweets[\"content\"].str.len() > 140)\r\n        | (tweets[\"content\"].str.count(\"@\") > 3)\r\n        | (tweets[\"content\"].str.count(\"#\") > 3)\r\n    ].sort_values(by=\"tweet_id\")\r\n    return invalid_tweets[[\"tweet_id\"]]",
+    "problemId": 3150,
+    "title": "Invalid Tweets II",
+    "problemUrl": "https://leetcode.com/problems/invalid-tweets-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3150.Invalid Tweets II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3150.Invalid Tweets II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3150.Invalid Tweets II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

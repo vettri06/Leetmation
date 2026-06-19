@@ -1,0 +1,38 @@
+{
+    "problemName": "lexicographically-smallest-string-after-reverse",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lexSmallest(self, s: str) -> str:\r\n        ans = s\r\n        for k in range(1, len(s) + 1):\r\n            t1 = s[:k][::-1] + s[k:]\r\n            t2 = s[:-k] + s[-k:][::-1]\r\n            ans = min(ans, t1, t2)\r\n        return ans",
+    "problemId": 3722,
+    "title": "Lexicographically Smallest String After Reverse",
+    "problemUrl": "https://leetcode.com/problems/lexicographically-smallest-string-after-reverse/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3722.Lexicographically Smallest String After Reverse/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3722.Lexicographically Smallest String After Reverse/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3722.Lexicographically Smallest String After Reverse/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3722.Lexicographically Smallest String After Reverse/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3722.Lexicographically Smallest String After Reverse/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3722.Lexicographically Smallest String After Reverse/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

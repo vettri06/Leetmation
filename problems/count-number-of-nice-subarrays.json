@@ -1,0 +1,38 @@
+{
+    "problemName": "count-number-of-nice-subarrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfSubarrays(self, nums: List[int], k: int) -> int:\r\n        cnt = Counter({0: 1})\r\n        ans = t = 0\r\n        for v in nums:\r\n            t += v & 1\r\n            ans += cnt[t - k]\r\n            cnt[t] += 1\r\n        return ans",
+    "problemId": 1248,
+    "title": "Count Number of Nice Subarrays",
+    "problemUrl": "https://leetcode.com/problems/count-number-of-nice-subarrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1248.Count Number of Nice Subarrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1248.Count Number of Nice Subarrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1248.Count Number of Nice Subarrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1248.Count Number of Nice Subarrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1248.Count Number of Nice Subarrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1248.Count Number of Nice Subarrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

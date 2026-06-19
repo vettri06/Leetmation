@@ -1,0 +1,38 @@
+{
+    "problemName": "gcd-of-odd-and-even-sums",
+    "language": "python3",
+    "code": "class Solution:\r\n    def gcdOfOddEvenSums(self, n: int) -> int:\r\n        return n",
+    "problemId": 3658,
+    "title": "GCD of Odd and Even Sums",
+    "problemUrl": "https://leetcode.com/problems/gcd-of-odd-and-even-sums/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3658.GCD of Odd and Even Sums/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3658.GCD of Odd and Even Sums/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3658.GCD of Odd and Even Sums/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3658.GCD of Odd and Even Sums/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3658.GCD of Odd and Even Sums/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3658.GCD of Odd and Even Sums/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

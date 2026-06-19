@@ -1,0 +1,18 @@
+{
+    "problemName": "find-expensive-cities",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT city\r\nFROM Listings\r\nGROUP BY city\r\nHAVING AVG(price) > (SELECT AVG(price) FROM Listings)\r\nORDER BY 1;",
+    "problemId": 2987,
+    "title": "Find Expensive Cities",
+    "problemUrl": "https://leetcode.com/problems/find-expensive-cities/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2987.Find Expensive Cities/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2987.Find Expensive Cities/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

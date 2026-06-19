@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-students-taking-exam",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxStudents(self, seats: List[List[str]]) -> int:\r\n        def f(seat: List[str]) -> int:\r\n            mask = 0\r\n            for i, c in enumerate(seat):\r\n                if c == '.':\r\n                    mask |= 1 << i\r\n            return mask\r\n\r\n        @cache\r\n        def dfs(seat: int, i: int) -> int:\r\n            ans = 0\r\n            for mask in range(1 << n):\r\n                if (seat | mask) != seat or (mask & (mask << 1)):\r\n                    continue\r\n                cnt = mask.bit_count()\r\n                if i == len(ss) - 1:\r\n                    ans = max(ans, cnt)\r\n                else:\r\n                    nxt = ss[i + 1]\r\n                    nxt &= ~(mask << 1)\r\n                    nxt &= ~(mask >> 1)\r\n                    ans = max(ans, cnt + dfs(nxt, i + 1))\r\n            return ans\r\n\r\n        n = len(seats[0])\r\n        ss = [f(s) for s in seats]\r\n        return dfs(ss[0], 0)",
+    "problemId": 1349,
+    "title": "Maximum Students Taking Exam",
+    "problemUrl": "https://leetcode.com/problems/maximum-students-taking-exam/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1349.Maximum Students Taking Exam/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1349.Maximum Students Taking Exam/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1349.Maximum Students Taking Exam/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1349.Maximum Students Taking Exam/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1349.Maximum Students Taking Exam/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1349.Maximum Students Taking Exam/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

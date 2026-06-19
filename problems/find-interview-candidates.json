@@ -1,0 +1,18 @@
+{
+    "problemName": "find-interview-candidates",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    S AS (\r\n        SELECT contest_id, gold_medal AS user_id, 1 AS type\r\n        FROM Contests\r\n        UNION\r\n        SELECT contest_id, silver_medal AS user_id, 2 AS type\r\n        FROM Contests\r\n        UNION\r\n        SELECT contest_id, bronze_medal AS user_id, 3 AS type\r\n        FROM Contests\r\n    ),\r\n    T AS (\r\n        SELECT\r\n            user_id,\r\n            (\r\n                contest_id - ROW_NUMBER() OVER (\r\n                    PARTITION BY user_id\r\n                    ORDER BY contest_id\r\n                )\r\n            ) AS diff\r\n        FROM S\r\n    ),\r\n    P AS (\r\n        SELECT user_id\r\n        FROM S\r\n        WHERE type = 1\r\n        GROUP BY user_id\r\n        HAVING COUNT(1) >= 3\r\n        UNION\r\n        SELECT DISTINCT user_id\r\n        FROM T\r\n        GROUP BY user_id, diff\r\n        HAVING COUNT(1) >= 3\r\n    )\r\nSELECT name, mail\r\nFROM\r\n    P AS p\r\n    LEFT JOIN Users AS u ON p.user_id = u.user_id;",
+    "problemId": 1811,
+    "title": "Find Interview Candidates",
+    "problemUrl": "https://leetcode.com/problems/find-interview-candidates/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1811.Find Interview Candidates/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1811.Find Interview Candidates/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

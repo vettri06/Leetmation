@@ -1,0 +1,18 @@
+{
+    "problemName": "game-play-analysis-v",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            player_id,\r\n            event_date,\r\n            MIN(event_date) OVER (PARTITION BY player_id) AS install_dt\r\n        FROM Activity\r\n    )\r\nSELECT\r\n    install_dt,\r\n    COUNT(DISTINCT player_id) AS installs,\r\n    ROUND(\r\n        SUM(DATEDIFF(event_date, install_dt) = 1) / COUNT(DISTINCT player_id),\r\n        2\r\n    ) AS day1_retention\r\nFROM T\r\nGROUP BY 1;",
+    "problemId": 1097,
+    "title": "Game Play Analysis V",
+    "problemUrl": "https://leetcode.com/problems/game-play-analysis-v/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1097.Game Play Analysis V/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1097.Game Play Analysis V/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

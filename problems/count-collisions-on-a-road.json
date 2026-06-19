@@ -1,0 +1,48 @@
+{
+    "problemName": "count-collisions-on-a-road",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countCollisions(self, directions: str) -> int:\r\n        s = directions.lstrip(\"L\").rstrip(\"R\")\r\n        return len(s) - s.count(\"S\")",
+    "problemId": 2211,
+    "title": "Count Collisions on a Road",
+    "problemUrl": "https://leetcode.com/problems/count-collisions-on-a-road/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2211.Count Collisions on a Road/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2211.Count Collisions on a Road/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2211.Count Collisions on a Road/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2211.Count Collisions on a Road/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2211.Count Collisions on a Road/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2211.Count Collisions on a Road/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2211.Count Collisions on a Road/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2211.Count Collisions on a Road/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "longest-unequal-adjacent-groups-subsequence-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getLongestSubsequence(self, words: List[str], groups: List[int]) -> List[str]:\r\n        return [words[i] for i, x in enumerate(groups) if i == 0 or x != groups[i - 1]]",
+    "problemId": 2900,
+    "title": "Longest Unequal Adjacent Groups Subsequence I",
+    "problemUrl": "https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2900.Longest Unequal Adjacent Groups Subsequence I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2900.Longest Unequal Adjacent Groups Subsequence I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2900.Longest Unequal Adjacent Groups Subsequence I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2900.Longest Unequal Adjacent Groups Subsequence I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2900.Longest Unequal Adjacent Groups Subsequence I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2900.Longest Unequal Adjacent Groups Subsequence I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2900.Longest Unequal Adjacent Groups Subsequence I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

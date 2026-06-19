@@ -1,0 +1,38 @@
+{
+    "problemName": "substring-with-concatenation-of-all-words",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findSubstring(self, s: str, words: List[str]) -> List[int]:\r\n        cnt = Counter(words)\r\n        m, n = len(s), len(words)\r\n        k = len(words[0])\r\n        ans = []\r\n        for i in range(k):\r\n            l = r = i\r\n            cnt1 = Counter()\r\n            while r + k <= m:\r\n                t = s[r : r + k]\r\n                r += k\r\n                if cnt[t] == 0:\r\n                    l = r\r\n                    cnt1.clear()\r\n                    continue\r\n                cnt1[t] += 1\r\n                while cnt1[t] > cnt[t]:\r\n                    rem = s[l : l + k]\r\n                    l += k\r\n                    cnt1[rem] -= 1\r\n                if r - l == n * k:\r\n                    ans.append(l)\r\n        return ans",
+    "problemId": 30,
+    "title": "Substring with Concatenation of All Words",
+    "problemUrl": "https://leetcode.com/problems/substring-with-concatenation-of-all-words/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0030.Substring with Concatenation of All Words/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0030.Substring with Concatenation of All Words/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0030.Substring with Concatenation of All Words/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0030.Substring with Concatenation of All Words/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0030.Substring with Concatenation of All Words/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0030.Substring with Concatenation of All Words/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

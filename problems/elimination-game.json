@@ -1,0 +1,33 @@
+{
+    "problemName": "elimination-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lastRemaining(self, n: int) -> int:\r\n        a1, an = 1, n\r\n        i, step, cnt = 0, 1, n\r\n        while cnt > 1:\r\n            if i % 2:\r\n                an -= step\r\n                if cnt % 2:\r\n                    a1 += step\r\n            else:\r\n                a1 += step\r\n                if cnt % 2:\r\n                    an -= step\r\n            cnt >>= 1\r\n            step <<= 1\r\n            i += 1\r\n        return a1",
+    "problemId": 390,
+    "title": "Elimination Game",
+    "problemUrl": "https://leetcode.com/problems/elimination-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0390.Elimination Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0390.Elimination Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0390.Elimination Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0390.Elimination Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0390.Elimination Game/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

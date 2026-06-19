@@ -1,0 +1,38 @@
+{
+    "problemName": "multiply-two-polynomials",
+    "language": "python3",
+    "code": "class Solution:\r\n    def multiply(self, poly1: List[int], poly2: List[int]) -> List[int]:\r\n        if not poly1 or not poly2:\r\n            return []\r\n\r\n        m = len(poly1) + len(poly2) - 1\r\n        n = 1\r\n        while n < m:\r\n            n <<= 1\r\n\r\n        fa = list(map(complex, poly1)) + [0j] * (n - len(poly1))\r\n        fb = list(map(complex, poly2)) + [0j] * (n - len(poly2))\r\n\r\n        self._fft(fa, invert=False)\r\n        self._fft(fb, invert=False)\r\n\r\n        for i in range(n):\r\n            fa[i] *= fb[i]\r\n\r\n        self._fft(fa, invert=True)\r\n        return [int(round(fa[i].real)) for i in range(m)]\r\n\r\n    def _fft(self, a: List[complex], invert: bool) -> None:\r\n        n = len(a)\r\n\r\n        j = 0\r\n        for i in range(1, n):\r\n            bit = n >> 1\r\n            while j & bit:\r\n                j ^= bit\r\n                bit >>= 1\r\n            j ^= bit\r\n            if i < j:\r\n                a[i], a[j] = a[j], a[i]\r\n\r\n        len_ = 2\r\n        while len_ <= n:\r\n            ang = 2 * math.pi / len_ * (-1 if invert else 1)\r\n            wlen = complex(math.cos(ang), math.sin(ang))\r\n            for i in range(0, n, len_):\r\n                w = 1 + 0j\r\n                half = i + len_ // 2\r\n                for j in range(i, half):\r\n                    u = a[j]\r\n                    v = a[j + len_ // 2] * w\r\n                    a[j] = u + v\r\n                    a[j + len_ // 2] = u - v\r\n                    w *= wlen\r\n            len_ <<= 1\r\n\r\n        if invert:\r\n            for i in range(n):\r\n                a[i] /= n",
+    "problemId": 3549,
+    "title": "Multiply Two Polynomials",
+    "problemUrl": "https://leetcode.com/problems/multiply-two-polynomials/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3549.Multiply Two Polynomials/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3549.Multiply Two Polynomials/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3549.Multiply Two Polynomials/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3549.Multiply Two Polynomials/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3549.Multiply Two Polynomials/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3549.Multiply Two Polynomials/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

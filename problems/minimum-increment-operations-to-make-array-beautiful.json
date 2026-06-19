@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-increment-operations-to-make-array-beautiful",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minIncrementOperations(self, nums: List[int], k: int) -> int:\r\n        f = g = h = 0\r\n        for x in nums:\r\n            f, g, h = g, h, min(f, g, h) + max(k - x, 0)\r\n        return min(f, g, h)",
+    "problemId": 2919,
+    "title": "Minimum Increment Operations to Make Array Beautiful",
+    "problemUrl": "https://leetcode.com/problems/minimum-increment-operations-to-make-array-beautiful/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2919.Minimum Increment Operations to Make Array Beautiful/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2919.Minimum Increment Operations to Make Array Beautiful/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2919.Minimum Increment Operations to Make Array Beautiful/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2919.Minimum Increment Operations to Make Array Beautiful/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2919.Minimum Increment Operations to Make Array Beautiful/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2919.Minimum Increment Operations to Make Array Beautiful/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2919.Minimum Increment Operations to Make Array Beautiful/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

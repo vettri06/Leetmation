@@ -1,0 +1,73 @@
+{
+    "problemName": "find-all-possible-stable-binary-arrays-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfStableArrays(self, zero: int, one: int, limit: int) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int, k: int) -> int:\r\n            if i == 0:\r\n                return int(k == 1 and j <= limit)\r\n            if j == 0:\r\n                return int(k == 0 and i <= limit)\r\n            if k == 0:\r\n                return (\r\n                    dfs(i - 1, j, 0)\r\n                    + dfs(i - 1, j, 1)\r\n                    - (0 if i - limit - 1 < 0 else dfs(i - limit - 1, j, 1))\r\n                )\r\n            return (\r\n                dfs(i, j - 1, 0)\r\n                + dfs(i, j - 1, 1)\r\n                - (0 if j - limit - 1 < 0 else dfs(i, j - limit - 1, 0))\r\n            )\r\n\r\n        mod = 10**9 + 7\r\n        ans = (dfs(zero, one, 0) + dfs(zero, one, 1)) % mod\r\n        dfs.cache_clear()\r\n        return ans",
+    "problemId": 3129,
+    "title": "Find All Possible Stable Binary Arrays I",
+    "problemUrl": "https://leetcode.com/problems/find-all-possible-stable-binary-arrays-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3129.Find All Possible Stable Binary Arrays I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3129.Find All Possible Stable Binary Arrays I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3129.Find All Possible Stable Binary Arrays I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3129.Find All Possible Stable Binary Arrays I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3129.Find All Possible Stable Binary Arrays I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3129.Find All Possible Stable Binary Arrays I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3129.Find All Possible Stable Binary Arrays I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3129.Find All Possible Stable Binary Arrays I/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3129.Find All Possible Stable Binary Arrays I/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3129.Find All Possible Stable Binary Arrays I/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3129.Find All Possible Stable Binary Arrays I/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3129.Find All Possible Stable Binary Arrays I/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3129.Find All Possible Stable Binary Arrays I/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "problemName": "maximum-number-of-pairs-in-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfPairs(self, nums: List[int]) -> List[int]:\r\n        cnt = Counter(nums)\r\n        s = sum(v // 2 for v in cnt.values())\r\n        return [s, len(nums) - s * 2]",
+    "problemId": 2341,
+    "title": "Maximum Number of Pairs in Array",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-pairs-in-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2341.Maximum Number of Pairs in Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2341.Maximum Number of Pairs in Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2341.Maximum Number of Pairs in Array/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2341.Maximum Number of Pairs in Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2341.Maximum Number of Pairs in Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2341.Maximum Number of Pairs in Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2341.Maximum Number of Pairs in Array/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2341.Maximum Number of Pairs in Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2341.Maximum Number of Pairs in Array/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2341.Maximum Number of Pairs in Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "super-palindromes",
+    "language": "python3",
+    "code": "ps = []\r\nfor i in range(1, 10**5 + 1):\r\n    s = str(i)\r\n    t1 = s[::-1]\r\n    t2 = s[:-1][::-1]\r\n    ps.append(int(s + t1))\r\n    ps.append(int(s + t2))\r\n\r\n\r\nclass Solution:\r\n    def superpalindromesInRange(self, left: str, right: str) -> int:\r\n        def is_palindrome(x: int) -> bool:\r\n            y, t = 0, x\r\n            while t:\r\n                y = y * 10 + t % 10\r\n                t //= 10\r\n            return x == y\r\n\r\n        l, r = int(left), int(right)\r\n        return sum(l <= x <= r and is_palindrome(x) for x in map(lambda x: x * x, ps))",
+    "problemId": 906,
+    "title": "Super Palindromes",
+    "problemUrl": "https://leetcode.com/problems/super-palindromes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0906.Super Palindromes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0906.Super Palindromes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0906.Super Palindromes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0906.Super Palindromes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0906.Super Palindromes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0906.Super Palindromes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

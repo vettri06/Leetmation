@@ -1,0 +1,38 @@
+{
+    "problemName": "find-all-duplicates-in-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findDuplicates(self, nums: List[int]) -> List[int]:\r\n        for i in range(len(nums)):\r\n            while nums[i] != nums[nums[i] - 1]:\r\n                nums[nums[i] - 1], nums[i] = nums[i], nums[nums[i] - 1]\r\n        return [v for i, v in enumerate(nums) if v != i + 1]",
+    "problemId": 442,
+    "title": "Find All Duplicates in an Array",
+    "problemUrl": "https://leetcode.com/problems/find-all-duplicates-in-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0442.Find All Duplicates in an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0442.Find All Duplicates in an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0442.Find All Duplicates in an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0442.Find All Duplicates in an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0442.Find All Duplicates in an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0442.Find All Duplicates in an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

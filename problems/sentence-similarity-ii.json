@@ -1,0 +1,33 @@
+{
+    "problemName": "sentence-similarity-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def areSentencesSimilarTwo(\r\n        self, sentence1: List[str], sentence2: List[str], similarPairs: List[List[str]]\r\n    ) -> bool:\r\n        if len(sentence1) != len(sentence2):\r\n            return False\r\n        n = len(similarPairs)\r\n        p = list(range(n << 1))\r\n\r\n        def find(x):\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        words = {}\r\n        idx = 0\r\n        for a, b in similarPairs:\r\n            if a not in words:\r\n                words[a] = idx\r\n                idx += 1\r\n            if b not in words:\r\n                words[b] = idx\r\n                idx += 1\r\n            p[find(words[a])] = find(words[b])\r\n\r\n        for i in range(len(sentence1)):\r\n            if sentence1[i] == sentence2[i]:\r\n                continue\r\n            if (\r\n                sentence1[i] not in words\r\n                or sentence2[i] not in words\r\n                or find(words[sentence1[i]]) != find(words[sentence2[i]])\r\n            ):\r\n                return False\r\n        return True",
+    "problemId": 737,
+    "title": "Sentence Similarity II",
+    "problemUrl": "https://leetcode.com/problems/sentence-similarity-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0737.Sentence Similarity II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0737.Sentence Similarity II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0737.Sentence Similarity II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0737.Sentence Similarity II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0737.Sentence Similarity II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

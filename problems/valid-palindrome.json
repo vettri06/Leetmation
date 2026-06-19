@@ -1,0 +1,53 @@
+{
+    "problemName": "valid-palindrome",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isPalindrome(self, s: str) -> bool:\r\n        i, j = 0, len(s) - 1\r\n        while i < j:\r\n            if not s[i].isalnum():\r\n                i += 1\r\n            elif not s[j].isalnum():\r\n                j -= 1\r\n            elif s[i].lower() != s[j].lower():\r\n                return False\r\n            else:\r\n                i, j = i + 1, j - 1\r\n        return True",
+    "problemId": 125,
+    "title": "Valid Palindrome",
+    "problemUrl": "https://leetcode.com/problems/valid-palindrome/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0125.Valid Palindrome/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0125.Valid Palindrome/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0125.Valid Palindrome/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0125.Valid Palindrome/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0125.Valid Palindrome/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0125.Valid Palindrome/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0125.Valid Palindrome/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0125.Valid Palindrome/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0125.Valid Palindrome/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

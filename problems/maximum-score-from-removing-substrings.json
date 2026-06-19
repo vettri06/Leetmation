@@ -1,0 +1,53 @@
+{
+    "problemName": "maximum-score-from-removing-substrings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumGain(self, s: str, x: int, y: int) -> int:\r\n        a, b = \"a\", \"b\"\r\n        if x < y:\r\n            x, y = y, x\r\n            a, b = b, a\r\n        ans = cnt1 = cnt2 = 0\r\n        for c in s:\r\n            if c == a:\r\n                cnt1 += 1\r\n            elif c == b:\r\n                if cnt1:\r\n                    ans += x\r\n                    cnt1 -= 1\r\n                else:\r\n                    cnt2 += 1\r\n            else:\r\n                ans += min(cnt1, cnt2) * y\r\n                cnt1 = cnt2 = 0\r\n        ans += min(cnt1, cnt2) * y\r\n        return ans",
+    "problemId": 1717,
+    "title": "Maximum Score From Removing Substrings",
+    "problemUrl": "https://leetcode.com/problems/maximum-score-from-removing-substrings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1717.Maximum Score From Removing Substrings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1717.Maximum Score From Removing Substrings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1717.Maximum Score From Removing Substrings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1717.Maximum Score From Removing Substrings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1717.Maximum Score From Removing Substrings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1717.Maximum Score From Removing Substrings/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1717.Maximum Score From Removing Substrings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1717.Maximum Score From Removing Substrings/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1717.Maximum Score From Removing Substrings/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

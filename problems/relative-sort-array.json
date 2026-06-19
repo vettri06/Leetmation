@@ -1,0 +1,73 @@
+{
+    "problemName": "relative-sort-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def relativeSortArray(self, arr1: List[int], arr2: List[int]) -> List[int]:\r\n        pos = {x: i for i, x in enumerate(arr2)}\r\n        return sorted(arr1, key=lambda x: pos.get(x, 1000 + x))",
+    "problemId": 1122,
+    "title": "Relative Sort Array",
+    "problemUrl": "https://leetcode.com/problems/relative-sort-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1122.Relative Sort Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1122.Relative Sort Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1122.Relative Sort Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1122.Relative Sort Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1122.Relative Sort Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1122.Relative Sort Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "swift",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1122.Relative Sort Array/Solution.swift",
+            "sourceFile": "Solution.swift"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1122.Relative Sort Array/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1122.Relative Sort Array/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1122.Relative Sort Array/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1122.Relative Sort Array/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1122.Relative Sort Array/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "swift",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1122.Relative Sort Array/Solution2.swift",
+            "sourceFile": "Solution2.swift"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-ideal-subsequence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestIdealString(self, s: str, k: int) -> int:\r\n        n = len(s)\r\n        ans = 1\r\n        dp = [1] * n\r\n        d = {s[0]: 0}\r\n        for i in range(1, n):\r\n            a = ord(s[i])\r\n            for b in ascii_lowercase:\r\n                if abs(a - ord(b)) > k:\r\n                    continue\r\n                if b in d:\r\n                    dp[i] = max(dp[i], dp[d[b]] + 1)\r\n            d[s[i]] = i\r\n        return max(dp)",
+    "problemId": 2370,
+    "title": "Longest Ideal Subsequence",
+    "problemUrl": "https://leetcode.com/problems/longest-ideal-subsequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2370.Longest Ideal Subsequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2370.Longest Ideal Subsequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2370.Longest Ideal Subsequence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2370.Longest Ideal Subsequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2370.Longest Ideal Subsequence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2370.Longest Ideal Subsequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

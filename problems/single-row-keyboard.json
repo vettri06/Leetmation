@@ -1,0 +1,38 @@
+{
+    "problemName": "single-row-keyboard",
+    "language": "python3",
+    "code": "class Solution:\r\n    def calculateTime(self, keyboard: str, word: str) -> int:\r\n        pos = {c: i for i, c in enumerate(keyboard)}\r\n        ans = i = 0\r\n        for c in word:\r\n            ans += abs(pos[c] - i)\r\n            i = pos[c]\r\n        return ans",
+    "problemId": 1165,
+    "title": "Single-Row Keyboard",
+    "problemUrl": "https://leetcode.com/problems/single-row-keyboard/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1165.Single-Row Keyboard/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1165.Single-Row Keyboard/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1165.Single-Row Keyboard/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1165.Single-Row Keyboard/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1165.Single-Row Keyboard/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1165.Single-Row Keyboard/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

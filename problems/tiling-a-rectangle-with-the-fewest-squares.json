@@ -1,0 +1,63 @@
+{
+    "problemName": "tiling-a-rectangle-with-the-fewest-squares",
+    "language": "python3",
+    "code": "class Solution:\r\n    def tilingRectangle(self, n: int, m: int) -> int:\r\n        def dfs(i: int, j: int, t: int):\r\n            nonlocal ans\r\n            if j == m:\r\n                i += 1\r\n                j = 0\r\n            if i == n:\r\n                ans = t\r\n                return\r\n            if filled[i] >> j & 1:\r\n                dfs(i, j + 1, t)\r\n            elif t + 1 < ans:\r\n                r = c = 0\r\n                for k in range(i, n):\r\n                    if filled[k] >> j & 1:\r\n                        break\r\n                    r += 1\r\n                for k in range(j, m):\r\n                    if filled[i] >> k & 1:\r\n                        break\r\n                    c += 1\r\n                mx = r if r < c else c\r\n                for w in range(1, mx + 1):\r\n                    for k in range(w):\r\n                        filled[i + w - 1] |= 1 << (j + k)\r\n                        filled[i + k] |= 1 << (j + w - 1)\r\n                    dfs(i, j + w, t + 1)\r\n                for x in range(i, i + mx):\r\n                    for y in range(j, j + mx):\r\n                        filled[x] ^= 1 << y\r\n\r\n        ans = n * m\r\n        filled = [0] * n\r\n        dfs(0, 0, 0)\r\n        return ans",
+    "problemId": 1240,
+    "title": "Tiling a Rectangle with the Fewest Squares",
+    "problemUrl": "https://leetcode.com/problems/tiling-a-rectangle-with-the-fewest-squares/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1240.Tiling a Rectangle with the Fewest Squares/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1240.Tiling a Rectangle with the Fewest Squares/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1240.Tiling a Rectangle with the Fewest Squares/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1240.Tiling a Rectangle with the Fewest Squares/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1240.Tiling a Rectangle with the Fewest Squares/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1240.Tiling a Rectangle with the Fewest Squares/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1240.Tiling a Rectangle with the Fewest Squares/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1240.Tiling a Rectangle with the Fewest Squares/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1240.Tiling a Rectangle with the Fewest Squares/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1240.Tiling a Rectangle with the Fewest Squares/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1240.Tiling a Rectangle with the Fewest Squares/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

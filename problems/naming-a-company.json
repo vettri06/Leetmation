@@ -1,0 +1,33 @@
+{
+    "problemName": "naming-a-company",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distinctNames(self, ideas: List[str]) -> int:\r\n        s = set(ideas)\r\n        f = [[0] * 26 for _ in range(26)]\r\n        for v in ideas:\r\n            i = ord(v[0]) - ord('a')\r\n            t = list(v)\r\n            for j in range(26):\r\n                t[0] = chr(ord('a') + j)\r\n                if ''.join(t) not in s:\r\n                    f[i][j] += 1\r\n        ans = 0\r\n        for v in ideas:\r\n            i = ord(v[0]) - ord('a')\r\n            t = list(v)\r\n            for j in range(26):\r\n                t[0] = chr(ord('a') + j)\r\n                if ''.join(t) not in s:\r\n                    ans += f[j][i]\r\n        return ans",
+    "problemId": 2306,
+    "title": "Naming a Company",
+    "problemUrl": "https://leetcode.com/problems/naming-a-company/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2306.Naming a Company/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2306.Naming a Company/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2306.Naming a Company/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2306.Naming a Company/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2306.Naming a Company/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

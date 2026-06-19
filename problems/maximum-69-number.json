@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-69-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximum69Number(self, num: int) -> int:\r\n        return int(str(num).replace(\"6\", \"9\", 1))",
+    "problemId": 1323,
+    "title": "Maximum 69 Number",
+    "problemUrl": "https://leetcode.com/problems/maximum-69-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1323.Maximum 69 Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1323.Maximum 69 Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1323.Maximum 69 Number/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1323.Maximum 69 Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1323.Maximum 69 Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1323.Maximum 69 Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1323.Maximum 69 Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1323.Maximum 69 Number/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "subsequence-with-the-minimum-score",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumScore(self, s: str, t: str) -> int:\r\n        def check(x):\r\n            for k in range(n):\r\n                i, j = k - 1, k + x\r\n                l = f[i] if i >= 0 else -1\r\n                r = g[j] if j < n else m + 1\r\n                if l < r:\r\n                    return True\r\n            return False\r\n\r\n        m, n = len(s), len(t)\r\n        f = [inf] * n\r\n        g = [-1] * n\r\n        i, j = 0, 0\r\n        while i < m and j < n:\r\n            if s[i] == t[j]:\r\n                f[j] = i\r\n                j += 1\r\n            i += 1\r\n        i, j = m - 1, n - 1\r\n        while i >= 0 and j >= 0:\r\n            if s[i] == t[j]:\r\n                g[j] = i\r\n                j -= 1\r\n            i -= 1\r\n\r\n        return bisect_left(range(n + 1), True, key=check)",
+    "problemId": 2565,
+    "title": "Subsequence With the Minimum Score",
+    "problemUrl": "https://leetcode.com/problems/subsequence-with-the-minimum-score/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2565.Subsequence With the Minimum Score/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2565.Subsequence With the Minimum Score/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2565.Subsequence With the Minimum Score/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2565.Subsequence With the Minimum Score/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2565.Subsequence With the Minimum Score/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

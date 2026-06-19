@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-increasing-paths-in-a-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPaths(self, grid: List[List[int]]) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int) -> int:\r\n            ans = 1\r\n            for a, b in pairwise((-1, 0, 1, 0, -1)):\r\n                x, y = i + a, j + b\r\n                if 0 <= x < m and 0 <= y < n and grid[i][j] < grid[x][y]:\r\n                    ans = (ans + dfs(x, y)) % mod\r\n            return ans\r\n\r\n        mod = 10**9 + 7\r\n        m, n = len(grid), len(grid[0])\r\n        return sum(dfs(i, j) for i in range(m) for j in range(n)) % mod",
+    "problemId": 2328,
+    "title": "Number of Increasing Paths in a Grid",
+    "problemUrl": "https://leetcode.com/problems/number-of-increasing-paths-in-a-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2328.Number of Increasing Paths in a Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2328.Number of Increasing Paths in a Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2328.Number of Increasing Paths in a Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2328.Number of Increasing Paths in a Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2328.Number of Increasing Paths in a Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2328.Number of Increasing Paths in a Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

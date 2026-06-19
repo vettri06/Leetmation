@@ -1,0 +1,53 @@
+{
+    "problemName": "min-stack",
+    "language": "python3",
+    "code": "class MinStack:\r\n    def __init__(self):\r\n        self.stk1 = []\r\n        self.stk2 = [inf]\r\n\r\n    def push(self, val: int) -> None:\r\n        self.stk1.append(val)\r\n        self.stk2.append(min(val, self.stk2[-1]))\r\n\r\n    def pop(self) -> None:\r\n        self.stk1.pop()\r\n        self.stk2.pop()\r\n\r\n    def top(self) -> int:\r\n        return self.stk1[-1]\r\n\r\n    def getMin(self) -> int:\r\n        return self.stk2[-1]\r\n\r\n\r\n# Your MinStack object will be instantiated and called as such:\r\n# obj = MinStack()\r\n# obj.push(val)\r\n# obj.pop()\r\n# param_3 = obj.top()\r\n# param_4 = obj.getMin()",
+    "problemId": 155,
+    "title": "Min Stack",
+    "problemUrl": "https://leetcode.com/problems/min-stack/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0155.Min Stack/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0155.Min Stack/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0155.Min Stack/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0155.Min Stack/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0155.Min Stack/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0155.Min Stack/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0155.Min Stack/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0155.Min Stack/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0155.Min Stack/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

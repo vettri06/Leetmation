@@ -1,0 +1,38 @@
+{
+    "problemName": "find-longest-awesome-substring",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestAwesome(self, s: str) -> int:\r\n        st = 0\r\n        d = {0: -1}\r\n        ans = 1\r\n        for i, c in enumerate(s):\r\n            v = int(c)\r\n            st ^= 1 << v\r\n            if st in d:\r\n                ans = max(ans, i - d[st])\r\n            else:\r\n                d[st] = i\r\n            for v in range(10):\r\n                if st ^ (1 << v) in d:\r\n                    ans = max(ans, i - d[st ^ (1 << v)])\r\n        return ans",
+    "problemId": 1542,
+    "title": "Find Longest Awesome Substring",
+    "problemUrl": "https://leetcode.com/problems/find-longest-awesome-substring/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1542.Find Longest Awesome Substring/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1542.Find Longest Awesome Substring/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1542.Find Longest Awesome Substring/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1542.Find Longest Awesome Substring/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1542.Find Longest Awesome Substring/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1542.Find Longest Awesome Substring/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

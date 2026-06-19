@@ -1,0 +1,38 @@
+{
+    "problemName": "find-xor-sum-of-all-pairs-bitwise-and",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getXORSum(self, arr1: List[int], arr2: List[int]) -> int:\r\n        a = reduce(xor, arr1)\r\n        b = reduce(xor, arr2)\r\n        return a & b",
+    "problemId": 1835,
+    "title": "Find XOR Sum of All Pairs Bitwise AND",
+    "problemUrl": "https://leetcode.com/problems/find-xor-sum-of-all-pairs-bitwise-and/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1835.Find XOR Sum of All Pairs Bitwise AND/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1835.Find XOR Sum of All Pairs Bitwise AND/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1835.Find XOR Sum of All Pairs Bitwise AND/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1835.Find XOR Sum of All Pairs Bitwise AND/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1835.Find XOR Sum of All Pairs Bitwise AND/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1835.Find XOR Sum of All Pairs Bitwise AND/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

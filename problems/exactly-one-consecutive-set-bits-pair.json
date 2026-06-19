@@ -1,0 +1,38 @@
+{
+    "problemName": "exactly-one-consecutive-set-bits-pair",
+    "language": "python3",
+    "code": "class Solution:\r\n    def consecutiveSetBits(self, n: int) -> bool:\r\n        pre = 0\r\n        vis = False\r\n        while n:\r\n            cur = n & 1\r\n            if pre == cur == 1:\r\n                if vis:\r\n                    return False\r\n                vis = True\r\n            pre = cur\r\n            n = n >> 1\r\n        return vis",
+    "problemId": 3950,
+    "title": "Exactly One Consecutive Set Bits Pair",
+    "problemUrl": "https://leetcode.com/problems/exactly-one-consecutive-set-bits-pair/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3950.Exactly One Consecutive Set Bits Pair/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3950.Exactly One Consecutive Set Bits Pair/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3950.Exactly One Consecutive Set Bits Pair/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3950.Exactly One Consecutive Set Bits Pair/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3950.Exactly One Consecutive Set Bits Pair/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3950.Exactly One Consecutive Set Bits Pair/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

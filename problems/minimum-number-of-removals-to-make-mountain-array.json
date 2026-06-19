@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-number-of-removals-to-make-mountain-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumMountainRemovals(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        left = [1] * n\r\n        right = [1] * n\r\n        for i in range(1, n):\r\n            for j in range(i):\r\n                if nums[i] > nums[j]:\r\n                    left[i] = max(left[i], left[j] + 1)\r\n        for i in range(n - 2, -1, -1):\r\n            for j in range(i + 1, n):\r\n                if nums[i] > nums[j]:\r\n                    right[i] = max(right[i], right[j] + 1)\r\n        return n - max(a + b - 1 for a, b in zip(left, right) if a > 1 and b > 1)",
+    "problemId": 1671,
+    "title": "Minimum Number of Removals to Make Mountain Array",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1671.Minimum Number of Removals to Make Mountain Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1671.Minimum Number of Removals to Make Mountain Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1671.Minimum Number of Removals to Make Mountain Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1671.Minimum Number of Removals to Make Mountain Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1671.Minimum Number of Removals to Make Mountain Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1671.Minimum Number of Removals to Make Mountain Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1671.Minimum Number of Removals to Make Mountain Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

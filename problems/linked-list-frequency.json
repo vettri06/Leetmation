@@ -1,0 +1,38 @@
+{
+    "problemName": "linked-list-frequency",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def frequenciesOfElements(self, head: Optional[ListNode]) -> Optional[ListNode]:\r\n        cnt = Counter()\r\n        while head:\r\n            cnt[head.val] += 1\r\n            head = head.next\r\n        dummy = ListNode()\r\n        for val in cnt.values():\r\n            dummy.next = ListNode(val, dummy.next)\r\n        return dummy.next",
+    "problemId": 3063,
+    "title": "Linked List Frequency",
+    "problemUrl": "https://leetcode.com/problems/linked-list-frequency/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3063.Linked List Frequency/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3063.Linked List Frequency/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3063.Linked List Frequency/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3063.Linked List Frequency/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3063.Linked List Frequency/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3063.Linked List Frequency/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "previous-permutation-with-one-swap",
+    "language": "python3",
+    "code": "class Solution:\r\n    def prevPermOpt1(self, arr: List[int]) -> List[int]:\r\n        n = len(arr)\r\n        for i in range(n - 1, 0, -1):\r\n            if arr[i - 1] > arr[i]:\r\n                for j in range(n - 1, i - 1, -1):\r\n                    if arr[j] < arr[i - 1] and arr[j] != arr[j - 1]:\r\n                        arr[i - 1], arr[j] = arr[j], arr[i - 1]\r\n                        return arr\r\n        return arr",
+    "problemId": 1053,
+    "title": "Previous Permutation With One Swap",
+    "problemUrl": "https://leetcode.com/problems/previous-permutation-with-one-swap/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1053.Previous Permutation With One Swap/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1053.Previous Permutation With One Swap/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1053.Previous Permutation With One Swap/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1053.Previous Permutation With One Swap/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1053.Previous Permutation With One Swap/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1053.Previous Permutation With One Swap/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "maximize-sum-of-array-after-k-negations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestSumAfterKNegations(self, nums: List[int], k: int) -> int:\r\n        cnt = Counter(nums)\r\n        for x in range(-100, 0):\r\n            if cnt[x]:\r\n                m = min(cnt[x], k)\r\n                cnt[x] -= m\r\n                cnt[-x] += m\r\n                k -= m\r\n                if k == 0:\r\n                    break\r\n        if k & 1 and cnt[0] == 0:\r\n            for x in range(1, 101):\r\n                if cnt[x]:\r\n                    cnt[x] -= 1\r\n                    cnt[-x] += 1\r\n                    break\r\n        return sum(x * v for x, v in cnt.items())",
+    "problemId": 1005,
+    "title": "Maximize Sum Of Array After K Negations",
+    "problemUrl": "https://leetcode.com/problems/maximize-sum-of-array-after-k-negations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1005.Maximize Sum Of Array After K Negations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1005.Maximize Sum Of Array After K Negations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1005.Maximize Sum Of Array After K Negations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1005.Maximize Sum Of Array After K Negations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1005.Maximize Sum Of Array After K Negations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1005.Maximize Sum Of Array After K Negations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "problemName": "reverse-integer",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reverse(self, x: int) -> int:\r\n        ans = 0\r\n        mi, mx = -(2**31), 2**31 - 1\r\n        while x:\r\n            if ans < mi // 10 + 1 or ans > mx // 10:\r\n                return 0\r\n            y = x % 10\r\n            if x < 0 and y > 0:\r\n                y -= 10\r\n            ans = ans * 10 + y\r\n            x = (x - y) // 10\r\n        return ans",
+    "problemId": 7,
+    "title": "Reverse Integer",
+    "problemUrl": "https://leetcode.com/problems/reverse-integer/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0007.Reverse Integer/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0007.Reverse Integer/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0007.Reverse Integer/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0007.Reverse Integer/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0007.Reverse Integer/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0007.Reverse Integer/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0007.Reverse Integer/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0007.Reverse Integer/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0007.Reverse Integer/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

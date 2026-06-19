@@ -1,0 +1,28 @@
+{
+    "problemName": "nested-list-weight-sum",
+    "language": "python3",
+    "code": "# \"\"\"\r\n# This is the interface that allows for creating nested lists.\r\n# You should not implement it, or speculate about its implementation\r\n# \"\"\"\r\n# class NestedInteger:\r\n#    def __init__(self, value=None):\r\n#        \"\"\"\r\n#        If value is not specified, initializes an empty list.\r\n#        Otherwise initializes a single integer equal to value.\r\n#        \"\"\"\r\n#\r\n#    def isInteger(self):\r\n#        \"\"\"\r\n#        @return True if this NestedInteger holds a single integer, rather than a nested list.\r\n#        :rtype bool\r\n#        \"\"\"\r\n#\r\n#    def add(self, elem):\r\n#        \"\"\"\r\n#        Set this NestedInteger to hold a nested list and adds a nested integer elem to it.\r\n#        :rtype void\r\n#        \"\"\"\r\n#\r\n#    def setInteger(self, value):\r\n#        \"\"\"\r\n#        Set this NestedInteger to hold a single integer equal to value.\r\n#        :rtype void\r\n#        \"\"\"\r\n#\r\n#    def getInteger(self):\r\n#        \"\"\"\r\n#        @return the single integer that this NestedInteger holds, if it holds a single integer\r\n#        Return None if this NestedInteger holds a nested list\r\n#        :rtype int\r\n#        \"\"\"\r\n#\r\n#    def getList(self):\r\n#        \"\"\"\r\n#        @return the nested list that this NestedInteger holds, if it holds a nested list\r\n#        Return None if this NestedInteger holds a single integer\r\n#        :rtype List[NestedInteger]\r\n#        \"\"\"\r\nclass Solution:\r\n    def depthSum(self, nestedList: List[NestedInteger]) -> int:\r\n        def dfs(nestedList, depth):\r\n            depth_sum = 0\r\n            for item in nestedList:\r\n                if item.isInteger():\r\n                    depth_sum += item.getInteger() * depth\r\n                else:\r\n                    depth_sum += dfs(item.getList(), depth + 1)\r\n            return depth_sum\r\n\r\n        return dfs(nestedList, 1)",
+    "problemId": 339,
+    "title": "Nested List Weight Sum",
+    "problemUrl": "https://leetcode.com/problems/nested-list-weight-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0339.Nested List Weight Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0339.Nested List Weight Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0339.Nested List Weight Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0339.Nested List Weight Sum/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "lexicographically-smallest-string-after-substring-operation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestString(self, s: str) -> str:\r\n        n = len(s)\r\n        i = 0\r\n        while i < n and s[i] == \"a\":\r\n            i += 1\r\n        if i == n:\r\n            return s[:-1] + \"z\"\r\n        j = i\r\n        while j < n and s[j] != \"a\":\r\n            j += 1\r\n        return s[:i] + \"\".join(chr(ord(c) - 1) for c in s[i:j]) + s[j:]",
+    "problemId": 2734,
+    "title": "Lexicographically Smallest String After Substring Operation",
+    "problemUrl": "https://leetcode.com/problems/lexicographically-smallest-string-after-substring-operation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2734.Lexicographically Smallest String After Substring Operation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2734.Lexicographically Smallest String After Substring Operation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2734.Lexicographically Smallest String After Substring Operation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2734.Lexicographically Smallest String After Substring Operation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2734.Lexicographically Smallest String After Substring Operation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2734.Lexicographically Smallest String After Substring Operation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2734.Lexicographically Smallest String After Substring Operation/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

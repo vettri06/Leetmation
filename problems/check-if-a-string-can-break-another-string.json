@@ -1,0 +1,38 @@
+{
+    "problemName": "check-if-a-string-can-break-another-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkIfCanBreak(self, s1: str, s2: str) -> bool:\r\n        cs1 = sorted(s1)\r\n        cs2 = sorted(s2)\r\n        return all(a >= b for a, b in zip(cs1, cs2)) or all(\r\n            a <= b for a, b in zip(cs1, cs2)\r\n        )",
+    "problemId": 1433,
+    "title": "Check If a String Can Break Another String",
+    "problemUrl": "https://leetcode.com/problems/check-if-a-string-can-break-another-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1433.Check If a String Can Break Another String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1433.Check If a String Can Break Another String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1433.Check If a String Can Break Another String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1433.Check If a String Can Break Another String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1433.Check If a String Can Break Another String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1433.Check If a String Can Break Another String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

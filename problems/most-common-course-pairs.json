@@ -1,0 +1,23 @@
+{
+    "problemName": "most-common-course-pairs",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef topLearnerCourseTransitions(course_completions: pd.DataFrame) -> pd.DataFrame:\r\n    grp = course_completions.groupby(\"user_id\")\r\n    top_students = grp.filter(\r\n        lambda df: df.shape[0] >= 5 and df[\"course_rating\"].mean() >= 4\r\n    )[\"user_id\"].unique()\r\n\r\n    df = course_completions[course_completions[\"user_id\"].isin(top_students)].copy()\r\n    df = df.sort_values([\"user_id\", \"completion_date\"])\r\n    df[\"second_course\"] = df.groupby(\"user_id\")[\"course_name\"].shift(-1)\r\n    df[\"first_course\"] = df[\"course_name\"]\r\n\r\n    pairs = df[df[\"second_course\"].notna()][[\"first_course\", \"second_course\"]]\r\n\r\n    result = (\r\n        pairs.groupby([\"first_course\", \"second_course\"])\r\n        .size()\r\n        .reset_index(name=\"transition_count\")\r\n        .sort_values(\r\n            [\"transition_count\", \"first_course\", \"second_course\"],\r\n            ascending=[False, True, True],\r\n            key=lambda col: col.str.lower() if col.dtype == \"object\" else col,\r\n        )\r\n        .reset_index(drop=True)\r\n    )\r\n\r\n    return result",
+    "problemId": 3764,
+    "title": "Most Common Course Pairs",
+    "problemUrl": "https://leetcode.com/problems/most-common-course-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3764.Most Common Course Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3764.Most Common Course Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3764.Most Common Course Pairs/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "problemName": "median-of-two-sorted-arrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:\r\n        def f(i: int, j: int, k: int) -> int:\r\n            if i >= m:\r\n                return nums2[j + k - 1]\r\n            if j >= n:\r\n                return nums1[i + k - 1]\r\n            if k == 1:\r\n                return min(nums1[i], nums2[j])\r\n            p = k // 2\r\n            x = nums1[i + p - 1] if i + p - 1 < m else inf\r\n            y = nums2[j + p - 1] if j + p - 1 < n else inf\r\n            return f(i + p, j, k - p) if x < y else f(i, j + p, k - p)\r\n\r\n        m, n = len(nums1), len(nums2)\r\n        a = f(0, 0, (m + n + 1) // 2)\r\n        b = f(0, 0, (m + n + 2) // 2)\r\n        return (a + b) / 2",
+    "problemId": 4,
+    "title": "Median of Two Sorted Arrays",
+    "problemUrl": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0004.Median of Two Sorted Arrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0004.Median of Two Sorted Arrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0004.Median of Two Sorted Arrays/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0004.Median of Two Sorted Arrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0004.Median of Two Sorted Arrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0004.Median of Two Sorted Arrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0004.Median of Two Sorted Arrays/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0004.Median of Two Sorted Arrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0004.Median of Two Sorted Arrays/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

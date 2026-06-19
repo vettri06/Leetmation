@@ -1,0 +1,38 @@
+{
+    "problemName": "apply-operations-to-maximize-frequency-score",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxFrequencyScore(self, nums: List[int], k: int) -> int:\r\n        nums.sort()\r\n        s = list(accumulate(nums, initial=0))\r\n        n = len(nums)\r\n        l, r = 0, n\r\n        while l < r:\r\n            mid = (l + r + 1) >> 1\r\n            ok = False\r\n            for i in range(n - mid + 1):\r\n                j = i + mid\r\n                x = nums[(i + j) // 2]\r\n                left = ((i + j) // 2 - i) * x - (s[(i + j) // 2] - s[i])\r\n                right = (s[j] - s[(i + j) // 2]) - ((j - (i + j) // 2) * x)\r\n                if left + right <= k:\r\n                    ok = True\r\n                    break\r\n            if ok:\r\n                l = mid\r\n            else:\r\n                r = mid - 1\r\n        return l",
+    "problemId": 2968,
+    "title": "Apply Operations to Maximize Frequency Score",
+    "problemUrl": "https://leetcode.com/problems/apply-operations-to-maximize-frequency-score/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2968.Apply Operations to Maximize Frequency Score/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2968.Apply Operations to Maximize Frequency Score/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2968.Apply Operations to Maximize Frequency Score/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2968.Apply Operations to Maximize Frequency Score/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2968.Apply Operations to Maximize Frequency Score/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2968.Apply Operations to Maximize Frequency Score/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

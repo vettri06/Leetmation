@@ -1,0 +1,73 @@
+{
+    "problemName": "minimum-add-to-make-parentheses-valid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minAddToMakeValid(self, s: str) -> int:\r\n        stk = []\r\n        for c in s:\r\n            if c == ')' and stk and stk[-1] == '(':\r\n                stk.pop()\r\n            else:\r\n                stk.append(c)\r\n        return len(stk)",
+    "problemId": 921,
+    "title": "Minimum Add to Make Parentheses Valid",
+    "problemUrl": "https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0921.Minimum Add to Make Parentheses Valid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0921.Minimum Add to Make Parentheses Valid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0921.Minimum Add to Make Parentheses Valid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0921.Minimum Add to Make Parentheses Valid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0921.Minimum Add to Make Parentheses Valid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0921.Minimum Add to Make Parentheses Valid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0921.Minimum Add to Make Parentheses Valid/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0921.Minimum Add to Make Parentheses Valid/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0921.Minimum Add to Make Parentheses Valid/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0921.Minimum Add to Make Parentheses Valid/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0921.Minimum Add to Make Parentheses Valid/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0921.Minimum Add to Make Parentheses Valid/Solution3.js",
+            "sourceFile": "Solution3.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0921.Minimum Add to Make Parentheses Valid/Solution3.ts",
+            "sourceFile": "Solution3.ts"
+        }
+    ]
+}

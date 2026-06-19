@@ -1,0 +1,48 @@
+{
+    "problemName": "count-covered-buildings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countCoveredBuildings(self, n: int, buildings: List[List[int]]) -> int:\r\n        g1 = defaultdict(list)\r\n        g2 = defaultdict(list)\r\n        for x, y in buildings:\r\n            g1[x].append(y)\r\n            g2[y].append(x)\r\n        for x in g1:\r\n            g1[x].sort()\r\n        for y in g2:\r\n            g2[y].sort()\r\n        ans = 0\r\n        for x, y in buildings:\r\n            l1 = g1[x]\r\n            l2 = g2[y]\r\n            if l2[0] < x < l2[-1] and l1[0] < y < l1[-1]:\r\n                ans += 1\r\n        return ans",
+    "problemId": 3531,
+    "title": "Count Covered Buildings",
+    "problemUrl": "https://leetcode.com/problems/count-covered-buildings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3531.Count Covered Buildings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3531.Count Covered Buildings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3531.Count Covered Buildings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3531.Count Covered Buildings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3531.Count Covered Buildings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3531.Count Covered Buildings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3531.Count Covered Buildings/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3531.Count Covered Buildings/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

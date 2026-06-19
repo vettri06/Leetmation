@@ -1,0 +1,43 @@
+{
+    "problemName": "implement-magic-dictionary",
+    "language": "python3",
+    "code": "class Trie:\r\n    __slots__ = [\"children\", \"is_end\"]\r\n\r\n    def __init__(self):\r\n        self.children = {}\r\n        self.is_end = False\r\n\r\n    def insert(self, w: str) -> None:\r\n        node = self\r\n        for c in w:\r\n            if c not in node.children:\r\n                node.children[c] = Trie()\r\n            node = node.children[c]\r\n        node.is_end = True\r\n\r\n    def search(self, w: str) -> bool:\r\n        def dfs(i: int, node: Trie, diff: int) -> bool:\r\n            if i == len(w):\r\n                return diff == 1 and node.is_end\r\n            if w[i] in node.children and dfs(i + 1, node.children[w[i]], diff):\r\n                return True\r\n            return diff == 0 and any(\r\n                dfs(i + 1, node.children[c], 1) for c in node.children if c != w[i]\r\n            )\r\n\r\n        return dfs(0, self, 0)\r\n\r\n\r\nclass MagicDictionary:\r\n    def __init__(self):\r\n        self.trie = Trie()\r\n\r\n    def buildDict(self, dictionary: List[str]) -> None:\r\n        for w in dictionary:\r\n            self.trie.insert(w)\r\n\r\n    def search(self, searchWord: str) -> bool:\r\n        return self.trie.search(searchWord)\r\n\r\n\r\n# Your MagicDictionary object will be instantiated and called as such:\r\n# obj = MagicDictionary()\r\n# obj.buildDict(dictionary)\r\n# param_2 = obj.search(searchWord)",
+    "problemId": 676,
+    "title": "Implement Magic Dictionary",
+    "problemUrl": "https://leetcode.com/problems/implement-magic-dictionary/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0676.Implement Magic Dictionary/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0676.Implement Magic Dictionary/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0676.Implement Magic Dictionary/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0676.Implement Magic Dictionary/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0676.Implement Magic Dictionary/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0676.Implement Magic Dictionary/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0676.Implement Magic Dictionary/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

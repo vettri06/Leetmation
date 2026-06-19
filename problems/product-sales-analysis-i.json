@@ -1,0 +1,18 @@
+{
+    "problemName": "product-sales-analysis-i",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT product_name, year, price\r\nFROM\r\n    Sales\r\n    JOIN Product USING (product_id);",
+    "problemId": 1068,
+    "title": "Product Sales Analysis I",
+    "problemUrl": "https://leetcode.com/problems/product-sales-analysis-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1068.Product Sales Analysis I/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1068.Product Sales Analysis I/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

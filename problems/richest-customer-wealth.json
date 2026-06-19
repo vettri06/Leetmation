@@ -1,0 +1,53 @@
+{
+    "problemName": "richest-customer-wealth",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumWealth(self, accounts: List[List[int]]) -> int:\r\n        return max(sum(v) for v in accounts)",
+    "problemId": 1672,
+    "title": "Richest Customer Wealth",
+    "problemUrl": "https://leetcode.com/problems/richest-customer-wealth/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1672.Richest Customer Wealth/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1672.Richest Customer Wealth/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1672.Richest Customer Wealth/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1672.Richest Customer Wealth/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1672.Richest Customer Wealth/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1672.Richest Customer Wealth/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1672.Richest Customer Wealth/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1672.Richest Customer Wealth/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "kotlin",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1672.Richest Customer Wealth/Solution.kt",
+            "sourceFile": "Solution.kt"
+        }
+    ]
+}

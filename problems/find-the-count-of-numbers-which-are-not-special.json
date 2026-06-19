@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-count-of-numbers-which-are-not-special",
+    "language": "python3",
+    "code": "m = 31623\r\nprimes = [True] * (m + 1)\r\nprimes[0] = primes[1] = False\r\nfor i in range(2, m + 1):\r\n    if primes[i]:\r\n        for j in range(i + i, m + 1, i):\r\n            primes[j] = False\r\n\r\n\r\nclass Solution:\r\n    def nonSpecialCount(self, l: int, r: int) -> int:\r\n        lo = ceil(sqrt(l))\r\n        hi = floor(sqrt(r))\r\n        cnt = sum(primes[i] for i in range(lo, hi + 1))\r\n        return r - l + 1 - cnt",
+    "problemId": 3233,
+    "title": "Find the Count of Numbers Which Are Not Special",
+    "problemUrl": "https://leetcode.com/problems/find-the-count-of-numbers-which-are-not-special/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3233.Find the Count of Numbers Which Are Not Special/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3233.Find the Count of Numbers Which Are Not Special/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3233.Find the Count of Numbers Which Are Not Special/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3233.Find the Count of Numbers Which Are Not Special/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3233.Find the Count of Numbers Which Are Not Special/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3233.Find the Count of Numbers Which Are Not Special/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

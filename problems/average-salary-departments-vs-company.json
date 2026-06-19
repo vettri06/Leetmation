@@ -1,0 +1,23 @@
+{
+    "problemName": "average-salary-departments-vs-company",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    t AS (\r\n        SELECT\r\n            DATE_FORMAT(pay_date, '%Y-%m') AS pay_month,\r\n            department_id,\r\n            AVG(amount) OVER (PARTITION BY pay_date) AS company_avg_amount,\r\n            AVG(amount) OVER (PARTITION BY pay_date, department_id) AS department_avg_amount\r\n        FROM\r\n            Salary AS s\r\n            JOIN Employee AS e ON s.employee_id = e.employee_id\r\n    )\r\nSELECT DISTINCT\r\n    pay_month,\r\n    department_id,\r\n    CASE\r\n        WHEN company_avg_amount = department_avg_amount THEN 'same'\r\n        WHEN company_avg_amount < department_avg_amount THEN 'higher'\r\n        ELSE 'lower'\r\n    END AS comparison\r\nFROM t;",
+    "problemId": 615,
+    "title": "Average Salary Departments VS Company",
+    "problemUrl": "https://leetcode.com/problems/average-salary-departments-vs-company/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0615.Average Salary Departments VS Company/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0615.Average Salary Departments VS Company/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0615.Average Salary Departments VS Company/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

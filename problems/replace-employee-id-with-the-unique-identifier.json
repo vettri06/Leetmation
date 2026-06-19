@@ -1,0 +1,18 @@
+{
+    "problemName": "replace-employee-id-with-the-unique-identifier",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT unique_id, name\r\nFROM\r\n    Employees\r\n    LEFT JOIN EmployeeUNI USING (id);",
+    "problemId": 1378,
+    "title": "Replace Employee ID With The Unique Identifier",
+    "problemUrl": "https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1378.Replace Employee ID With The Unique Identifier/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1378.Replace Employee ID With The Unique Identifier/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

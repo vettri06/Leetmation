@@ -1,0 +1,43 @@
+{
+    "problemName": "group-the-people-given-the-group-size-they-belong-to",
+    "language": "python3",
+    "code": "class Solution:\r\n    def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:\r\n        g = defaultdict(list)\r\n        for i, v in enumerate(groupSizes):\r\n            g[v].append(i)\r\n        return [v[j : j + i] for i, v in g.items() for j in range(0, len(v), i)]",
+    "problemId": 1282,
+    "title": "Group the People Given the Group Size They Belong To",
+    "problemUrl": "https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1282.Group the People Given the Group Size They Belong To/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1282.Group the People Given the Group Size They Belong To/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1282.Group the People Given the Group Size They Belong To/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1282.Group the People Given the Group Size They Belong To/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1282.Group the People Given the Group Size They Belong To/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1282.Group the People Given the Group Size They Belong To/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1282.Group the People Given the Group Size They Belong To/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

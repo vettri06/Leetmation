@@ -1,0 +1,73 @@
+{
+    "problemName": "count-vowels-permutation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countVowelPermutation(self, n: int) -> int:\r\n        f = [1] * 5\r\n        mod = 10**9 + 7\r\n        for _ in range(n - 1):\r\n            g = [0] * 5\r\n            g[0] = (f[1] + f[2] + f[4]) % mod\r\n            g[1] = (f[0] + f[2]) % mod\r\n            g[2] = (f[1] + f[3]) % mod\r\n            g[3] = f[2]\r\n            g[4] = (f[2] + f[3]) % mod\r\n            f = g\r\n        return sum(f) % mod",
+    "problemId": 1220,
+    "title": "Count Vowels Permutation",
+    "problemUrl": "https://leetcode.com/problems/count-vowels-permutation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1220.Count Vowels Permutation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1220.Count Vowels Permutation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1220.Count Vowels Permutation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1220.Count Vowels Permutation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1220.Count Vowels Permutation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1220.Count Vowels Permutation/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1220.Count Vowels Permutation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1220.Count Vowels Permutation/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1220.Count Vowels Permutation/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1220.Count Vowels Permutation/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1220.Count Vowels Permutation/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1220.Count Vowels Permutation/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1220.Count Vowels Permutation/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

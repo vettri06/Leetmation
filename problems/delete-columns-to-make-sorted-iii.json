@@ -1,0 +1,38 @@
+{
+    "problemName": "delete-columns-to-make-sorted-iii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minDeletionSize(self, strs: List[str]) -> int:\r\n        n = len(strs[0])\r\n        f = [1] * n\r\n        for i in range(n):\r\n            for j in range(i):\r\n                if all(s[j] <= s[i] for s in strs):\r\n                    f[i] = max(f[i], f[j] + 1)\r\n        return n - max(f)",
+    "problemId": 960,
+    "title": "Delete Columns to Make Sorted III",
+    "problemUrl": "https://leetcode.com/problems/delete-columns-to-make-sorted-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0960.Delete Columns to Make Sorted III/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0960.Delete Columns to Make Sorted III/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0960.Delete Columns to Make Sorted III/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0960.Delete Columns to Make Sorted III/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0960.Delete Columns to Make Sorted III/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0960.Delete Columns to Make Sorted III/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

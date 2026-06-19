@@ -1,0 +1,23 @@
+{
+    "problemName": "employees-earning-more-than-their-managers",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_employees(employee: pd.DataFrame) -> pd.DataFrame:\r\n    merged = employee.merge(\r\n        employee, left_on=\"managerId\", right_on=\"id\", suffixes=(\"\", \"_manager\")\r\n    )\r\n    result = merged[merged[\"salary\"] > merged[\"salary_manager\"]][[\"name\"]]\r\n    result.columns = [\"Employee\"]\r\n    return result",
+    "problemId": 181,
+    "title": "Employees Earning More Than Their Managers",
+    "problemUrl": "https://leetcode.com/problems/employees-earning-more-than-their-managers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0181.Employees Earning More Than Their Managers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0181.Employees Earning More Than Their Managers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0181.Employees Earning More Than Their Managers/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

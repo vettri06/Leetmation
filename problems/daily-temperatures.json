@@ -1,0 +1,48 @@
+{
+    "problemName": "daily-temperatures",
+    "language": "python3",
+    "code": "class Solution:\r\n    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:\r\n        stk = []\r\n        n = len(temperatures)\r\n        ans = [0] * n\r\n        for i in range(n - 1, -1, -1):\r\n            while stk and temperatures[stk[-1]] <= temperatures[i]:\r\n                stk.pop()\r\n            if stk:\r\n                ans[i] = stk[-1] - i\r\n            stk.append(i)\r\n        return ans",
+    "problemId": 739,
+    "title": "Daily Temperatures",
+    "problemUrl": "https://leetcode.com/problems/daily-temperatures/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0739.Daily Temperatures/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0739.Daily Temperatures/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0739.Daily Temperatures/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0739.Daily Temperatures/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0739.Daily Temperatures/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0739.Daily Temperatures/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0739.Daily Temperatures/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0739.Daily Temperatures/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

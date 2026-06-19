@@ -1,0 +1,38 @@
+{
+    "problemName": "find-xor-beauty-of-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def xorBeauty(self, nums: List[int]) -> int:\r\n        return reduce(xor, nums)",
+    "problemId": 2527,
+    "title": "Find Xor-Beauty of Array",
+    "problemUrl": "https://leetcode.com/problems/find-xor-beauty-of-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2527.Find Xor-Beauty of Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2527.Find Xor-Beauty of Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2527.Find Xor-Beauty of Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2527.Find Xor-Beauty of Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2527.Find Xor-Beauty of Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2527.Find Xor-Beauty of Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

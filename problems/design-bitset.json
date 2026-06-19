@@ -1,0 +1,33 @@
+{
+    "problemName": "design-bitset",
+    "language": "python3",
+    "code": "class Bitset:\r\n    def __init__(self, size: int):\r\n        self.a = ['0'] * size\r\n        self.b = ['1'] * size\r\n        self.cnt = 0\r\n\r\n    def fix(self, idx: int) -> None:\r\n        if self.a[idx] == '0':\r\n            self.a[idx] = '1'\r\n            self.cnt += 1\r\n        self.b[idx] = '0'\r\n\r\n    def unfix(self, idx: int) -> None:\r\n        if self.a[idx] == '1':\r\n            self.a[idx] = '0'\r\n            self.cnt -= 1\r\n        self.b[idx] = '1'\r\n\r\n    def flip(self) -> None:\r\n        self.a, self.b = self.b, self.a\r\n        self.cnt = len(self.a) - self.cnt\r\n\r\n    def all(self) -> bool:\r\n        return self.cnt == len(self.a)\r\n\r\n    def one(self) -> bool:\r\n        return self.cnt > 0\r\n\r\n    def count(self) -> int:\r\n        return self.cnt\r\n\r\n    def toString(self) -> str:\r\n        return ''.join(self.a)\r\n\r\n\r\n# Your Bitset object will be instantiated and called as such:\r\n# obj = Bitset(size)\r\n# obj.fix(idx)\r\n# obj.unfix(idx)\r\n# obj.flip()\r\n# param_4 = obj.all()\r\n# param_5 = obj.one()\r\n# param_6 = obj.count()\r\n# param_7 = obj.toString()",
+    "problemId": 2166,
+    "title": "Design Bitset",
+    "problemUrl": "https://leetcode.com/problems/design-bitset/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2166.Design Bitset/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2166.Design Bitset/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2166.Design Bitset/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2166.Design Bitset/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2166.Design Bitset/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

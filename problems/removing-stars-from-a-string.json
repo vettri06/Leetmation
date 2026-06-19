@@ -1,0 +1,43 @@
+{
+    "problemName": "removing-stars-from-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def removeStars(self, s: str) -> str:\r\n        ans = []\r\n        for c in s:\r\n            if c == '*':\r\n                ans.pop()\r\n            else:\r\n                ans.append(c)\r\n        return ''.join(ans)",
+    "problemId": 2390,
+    "title": "Removing Stars From a String",
+    "problemUrl": "https://leetcode.com/problems/removing-stars-from-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2390.Removing Stars From a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2390.Removing Stars From a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2390.Removing Stars From a String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2390.Removing Stars From a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2390.Removing Stars From a String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2390.Removing Stars From a String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2390.Removing Stars From a String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "path-with-maximum-gold",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getMaximumGold(self, grid: List[List[int]]) -> int:\r\n        def dfs(i: int, j: int) -> int:\r\n            if not (0 <= i < m and 0 <= j < n and grid[i][j]):\r\n                return 0\r\n            v = grid[i][j]\r\n            grid[i][j] = 0\r\n            ans = max(dfs(i + a, j + b) for a, b in pairwise(dirs)) + v\r\n            grid[i][j] = v\r\n            return ans\r\n\r\n        m, n = len(grid), len(grid[0])\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        return max(dfs(i, j) for i in range(m) for j in range(n))",
+    "problemId": 1219,
+    "title": "Path with Maximum Gold",
+    "problemUrl": "https://leetcode.com/problems/path-with-maximum-gold/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1219.Path with Maximum Gold/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1219.Path with Maximum Gold/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1219.Path with Maximum Gold/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1219.Path with Maximum Gold/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1219.Path with Maximum Gold/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1219.Path with Maximum Gold/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1219.Path with Maximum Gold/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

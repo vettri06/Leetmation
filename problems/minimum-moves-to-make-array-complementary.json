@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-moves-to-make-array-complementary",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minMoves(self, nums: List[int], limit: int) -> int:\r\n        d = [0] * (2 * limit + 2)\r\n        n = len(nums)\r\n        for i in range(n // 2):\r\n            x, y = nums[i], nums[-i - 1]\r\n            if x > y:\r\n                x, y = y, x\r\n            d[2] += 2\r\n            d[x + 1] -= 2\r\n            d[x + 1] += 1\r\n            d[x + y] -= 1\r\n            d[x + y + 1] += 1\r\n            d[y + limit + 1] -= 1\r\n            d[y + limit + 1] += 2\r\n        return min(accumulate(d[2:]))",
+    "problemId": 1674,
+    "title": "Minimum Moves to Make Array Complementary",
+    "problemUrl": "https://leetcode.com/problems/minimum-moves-to-make-array-complementary/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1674.Minimum Moves to Make Array Complementary/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1674.Minimum Moves to Make Array Complementary/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1674.Minimum Moves to Make Array Complementary/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1674.Minimum Moves to Make Array Complementary/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1674.Minimum Moves to Make Array Complementary/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1674.Minimum Moves to Make Array Complementary/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

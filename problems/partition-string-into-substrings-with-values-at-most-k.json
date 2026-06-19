@@ -1,0 +1,33 @@
+{
+    "problemName": "partition-string-into-substrings-with-values-at-most-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumPartition(self, s: str, k: int) -> int:\r\n        @cache\r\n        def dfs(i):\r\n            if i >= n:\r\n                return 0\r\n            res, v = inf, 0\r\n            for j in range(i, n):\r\n                v = v * 10 + int(s[j])\r\n                if v > k:\r\n                    break\r\n                res = min(res, dfs(j + 1))\r\n            return res + 1\r\n\r\n        n = len(s)\r\n        ans = dfs(0)\r\n        return ans if ans < inf else -1",
+    "problemId": 2522,
+    "title": "Partition String Into Substrings With Values at Most K",
+    "problemUrl": "https://leetcode.com/problems/partition-string-into-substrings-with-values-at-most-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2522.Partition String Into Substrings With Values at Most K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2522.Partition String Into Substrings With Values at Most K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2522.Partition String Into Substrings With Values at Most K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2522.Partition String Into Substrings With Values at Most K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2522.Partition String Into Substrings With Values at Most K/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

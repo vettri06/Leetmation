@@ -1,0 +1,18 @@
+{
+    "problemName": "ad-free-sessions",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT session_id\r\nFROM Playback\r\nWHERE\r\n    session_id NOT IN (\r\n        SELECT session_id\r\n        FROM\r\n            Playback AS p\r\n            JOIN Ads AS a\r\n                ON p.customer_id = a.customer_id AND a.timestamp BETWEEN p.start_time AND p.end_time\r\n    );",
+    "problemId": 1809,
+    "title": "Ad-Free Sessions",
+    "problemUrl": "https://leetcode.com/problems/ad-free-sessions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1809.Ad-Free Sessions/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1809.Ad-Free Sessions/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

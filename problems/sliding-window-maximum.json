@@ -1,0 +1,68 @@
+{
+    "problemName": "sliding-window-maximum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:\r\n        q = [(-v, i) for i, v in enumerate(nums[: k - 1])]\r\n        heapify(q)\r\n        ans = []\r\n        for i in range(k - 1, len(nums)):\r\n            heappush(q, (-nums[i], i))\r\n            while q[0][1] <= i - k:\r\n                heappop(q)\r\n            ans.append(-q[0][0])\r\n        return ans",
+    "problemId": 239,
+    "title": "Sliding Window Maximum",
+    "problemUrl": "https://leetcode.com/problems/sliding-window-maximum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0239.Sliding Window Maximum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0239.Sliding Window Maximum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0239.Sliding Window Maximum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0239.Sliding Window Maximum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0239.Sliding Window Maximum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0239.Sliding Window Maximum/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0239.Sliding Window Maximum/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0239.Sliding Window Maximum/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0239.Sliding Window Maximum/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0239.Sliding Window Maximum/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0239.Sliding Window Maximum/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0239.Sliding Window Maximum/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

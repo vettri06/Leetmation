@@ -1,0 +1,38 @@
+{
+    "problemName": "check-if-string-is-a-prefix-of-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isPrefixString(self, s: str, words: List[str]) -> bool:\r\n        n, m = len(s), 0\r\n        for i, w in enumerate(words):\r\n            m += len(w)\r\n            if m == n:\r\n                return \"\".join(words[: i + 1]) == s\r\n        return False",
+    "problemId": 1961,
+    "title": "Check If String Is a Prefix of Array",
+    "problemUrl": "https://leetcode.com/problems/check-if-string-is-a-prefix-of-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1961.Check If String Is a Prefix of Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1961.Check If String Is a Prefix of Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1961.Check If String Is a Prefix of Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1961.Check If String Is a Prefix of Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1961.Check If String Is a Prefix of Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1961.Check If String Is a Prefix of Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

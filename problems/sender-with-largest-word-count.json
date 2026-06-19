@@ -1,0 +1,38 @@
+{
+    "problemName": "sender-with-largest-word-count",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestWordCount(self, messages: List[str], senders: List[str]) -> str:\r\n        cnt = Counter()\r\n        for message, sender in zip(messages, senders):\r\n            cnt[sender] += message.count(\" \") + 1\r\n        ans = senders[0]\r\n        for k, v in cnt.items():\r\n            if cnt[ans] < v or (cnt[ans] == v and ans < k):\r\n                ans = k\r\n        return ans",
+    "problemId": 2284,
+    "title": "Sender With Largest Word Count",
+    "problemUrl": "https://leetcode.com/problems/sender-with-largest-word-count/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2284.Sender With Largest Word Count/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2284.Sender With Largest Word Count/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2284.Sender With Largest Word Count/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2284.Sender With Largest Word Count/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2284.Sender With Largest Word Count/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2284.Sender With Largest Word Count/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

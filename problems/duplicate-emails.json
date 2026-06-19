@@ -1,0 +1,28 @@
+{
+    "problemName": "duplicate-emails",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef duplicate_emails(person: pd.DataFrame) -> pd.DataFrame:\r\n    results = pd.DataFrame()\r\n\r\n    results = person.loc[person.duplicated(subset=[\"email\"]), [\"email\"]]\r\n\r\n    return results.drop_duplicates()",
+    "problemId": 182,
+    "title": "Duplicate Emails",
+    "problemUrl": "https://leetcode.com/problems/duplicate-emails/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0182.Duplicate Emails/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0182.Duplicate Emails/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0182.Duplicate Emails/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0182.Duplicate Emails/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

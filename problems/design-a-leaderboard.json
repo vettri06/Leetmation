@@ -1,0 +1,33 @@
+{
+    "problemName": "design-a-leaderboard",
+    "language": "python3",
+    "code": "class Leaderboard:\r\n    def __init__(self):\r\n        self.d = defaultdict(int)\r\n        self.rank = SortedList()\r\n\r\n    def addScore(self, playerId: int, score: int) -> None:\r\n        if playerId not in self.d:\r\n            self.d[playerId] = score\r\n            self.rank.add(score)\r\n        else:\r\n            self.rank.remove(self.d[playerId])\r\n            self.d[playerId] += score\r\n            self.rank.add(self.d[playerId])\r\n\r\n    def top(self, K: int) -> int:\r\n        return sum(self.rank[-K:])\r\n\r\n    def reset(self, playerId: int) -> None:\r\n        self.rank.remove(self.d.pop(playerId))\r\n\r\n\r\n# Your Leaderboard object will be instantiated and called as such:\r\n# obj = Leaderboard()\r\n# obj.addScore(playerId,score)\r\n# param_2 = obj.top(K)\r\n# obj.reset(playerId)",
+    "problemId": 1244,
+    "title": "Design A Leaderboard",
+    "problemUrl": "https://leetcode.com/problems/design-a-leaderboard/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1244.Design A Leaderboard/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1244.Design A Leaderboard/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1244.Design A Leaderboard/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1244.Design A Leaderboard/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1244.Design A Leaderboard/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

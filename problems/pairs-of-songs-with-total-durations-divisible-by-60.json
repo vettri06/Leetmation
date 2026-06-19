@@ -1,0 +1,43 @@
+{
+    "problemName": "pairs-of-songs-with-total-durations-divisible-by-60",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numPairsDivisibleBy60(self, time: List[int]) -> int:\r\n        cnt = Counter()\r\n        ans = 0\r\n        for x in time:\r\n            x %= 60\r\n            y = (60 - x) % 60\r\n            ans += cnt[y]\r\n            cnt[x] += 1\r\n        return ans",
+    "problemId": 1010,
+    "title": "Pairs of Songs With Total Durations Divisible by 60",
+    "problemUrl": "https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1010.Pairs of Songs With Total Durations Divisible by 60/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1010.Pairs of Songs With Total Durations Divisible by 60/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1010.Pairs of Songs With Total Durations Divisible by 60/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1010.Pairs of Songs With Total Durations Divisible by 60/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1010.Pairs of Songs With Total Durations Divisible by 60/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1010.Pairs of Songs With Total Durations Divisible by 60/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1010.Pairs of Songs With Total Durations Divisible by 60/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

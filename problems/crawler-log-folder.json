@@ -1,0 +1,53 @@
+{
+    "problemName": "crawler-log-folder",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, logs: List[str]) -> int:\r\n        ans = 0\r\n        for v in logs:\r\n            if v == \"../\":\r\n                ans = max(0, ans - 1)\r\n            elif v[0] != \".\":\r\n                ans += 1\r\n        return ans",
+    "problemId": 1598,
+    "title": "Crawler Log Folder",
+    "problemUrl": "https://leetcode.com/problems/crawler-log-folder/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1598.Crawler Log Folder/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1598.Crawler Log Folder/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1598.Crawler Log Folder/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1598.Crawler Log Folder/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1598.Crawler Log Folder/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1598.Crawler Log Folder/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1598.Crawler Log Folder/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1598.Crawler Log Folder/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1598.Crawler Log Folder/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "problemName": "minimum-removals-to-balance-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minRemoval(self, nums: List[int], k: int) -> int:\r\n        nums.sort()\r\n        cnt = 0\r\n        for i, x in enumerate(nums):\r\n            j = bisect_right(nums, k * x)\r\n            cnt = max(cnt, j - i)\r\n        return len(nums) - cnt",
+    "problemId": 3634,
+    "title": "Minimum Removals to Balance Array",
+    "problemUrl": "https://leetcode.com/problems/minimum-removals-to-balance-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3634.Minimum Removals to Balance Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3634.Minimum Removals to Balance Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3634.Minimum Removals to Balance Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3634.Minimum Removals to Balance Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3634.Minimum Removals to Balance Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3634.Minimum Removals to Balance Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3634.Minimum Removals to Balance Array/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3634.Minimum Removals to Balance Array/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3634.Minimum Removals to Balance Array/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3634.Minimum Removals to Balance Array/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3634.Minimum Removals to Balance Array/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

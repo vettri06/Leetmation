@@ -1,0 +1,68 @@
+{
+    "problemName": "reverse-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reversePairs(self, nums: List[int]) -> int:\r\n        def merge_sort(l, r):\r\n            if l >= r:\r\n                return 0\r\n            mid = (l + r) >> 1\r\n            ans = merge_sort(l, mid) + merge_sort(mid + 1, r)\r\n            t = []\r\n            i, j = l, mid + 1\r\n            while i <= mid and j <= r:\r\n                if nums[i] <= 2 * nums[j]:\r\n                    i += 1\r\n                else:\r\n                    ans += mid - i + 1\r\n                    j += 1\r\n            i, j = l, mid + 1\r\n            while i <= mid and j <= r:\r\n                if nums[i] <= nums[j]:\r\n                    t.append(nums[i])\r\n                    i += 1\r\n                else:\r\n                    t.append(nums[j])\r\n                    j += 1\r\n            t.extend(nums[i : mid + 1])\r\n            t.extend(nums[j : r + 1])\r\n            nums[l : r + 1] = t\r\n            return ans\r\n\r\n        return merge_sort(0, len(nums) - 1)",
+    "problemId": 493,
+    "title": "Reverse Pairs",
+    "problemUrl": "https://leetcode.com/problems/reverse-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0493.Reverse Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0493.Reverse Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0493.Reverse Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0493.Reverse Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0493.Reverse Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0493.Reverse Pairs/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0493.Reverse Pairs/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0493.Reverse Pairs/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0493.Reverse Pairs/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0493.Reverse Pairs/Solution3.py",
+            "sourceFile": "Solution3.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0493.Reverse Pairs/Solution3.cpp",
+            "sourceFile": "Solution3.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0493.Reverse Pairs/Solution3.java",
+            "sourceFile": "Solution3.java"
+        }
+    ]
+}

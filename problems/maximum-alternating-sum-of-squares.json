@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-alternating-sum-of-squares",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxAlternatingSum(self, nums: List[int]) -> int:\r\n        nums.sort(key=lambda x: x * x)\r\n        n = len(nums)\r\n        s1 = sum(x * x for x in nums[: n // 2])\r\n        s2 = sum(x * x for x in nums[n // 2 :])\r\n        return s2 - s1",
+    "problemId": 3727,
+    "title": "Maximum Alternating Sum of Squares",
+    "problemUrl": "https://leetcode.com/problems/maximum-alternating-sum-of-squares/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3727.Maximum Alternating Sum of Squares/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3727.Maximum Alternating Sum of Squares/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3727.Maximum Alternating Sum of Squares/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3727.Maximum Alternating Sum of Squares/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3727.Maximum Alternating Sum of Squares/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

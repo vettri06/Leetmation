@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-matching-of-players-with-trainers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def matchPlayersAndTrainers(self, players: List[int], trainers: List[int]) -> int:\r\n        players.sort()\r\n        trainers.sort()\r\n        j, n = 0, len(trainers)\r\n        for i, p in enumerate(players):\r\n            while j < n and trainers[j] < p:\r\n                j += 1\r\n            if j == n:\r\n                return i\r\n            j += 1\r\n        return len(players)",
+    "problemId": 2410,
+    "title": "Maximum Matching of Players With Trainers",
+    "problemUrl": "https://leetcode.com/problems/maximum-matching-of-players-with-trainers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2410.Maximum Matching of Players With Trainers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2410.Maximum Matching of Players With Trainers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2410.Maximum Matching of Players With Trainers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2410.Maximum Matching of Players With Trainers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2410.Maximum Matching of Players With Trainers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2410.Maximum Matching of Players With Trainers/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

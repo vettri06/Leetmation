@@ -1,0 +1,58 @@
+{
+    "problemName": "lemonade-change",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lemonadeChange(self, bills: List[int]) -> bool:\r\n        five = ten = 0\r\n        for v in bills:\r\n            if v == 5:\r\n                five += 1\r\n            elif v == 10:\r\n                ten += 1\r\n                five -= 1\r\n            else:\r\n                if ten:\r\n                    ten -= 1\r\n                    five -= 1\r\n                else:\r\n                    five -= 3\r\n            if five < 0:\r\n                return False\r\n        return True",
+    "problemId": 860,
+    "title": "Lemonade Change",
+    "problemUrl": "https://leetcode.com/problems/lemonade-change/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0860.Lemonade Change/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0860.Lemonade Change/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0860.Lemonade Change/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0860.Lemonade Change/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0860.Lemonade Change/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0860.Lemonade Change/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0860.Lemonade Change/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0860.Lemonade Change/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0860.Lemonade Change/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0860.Lemonade Change/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

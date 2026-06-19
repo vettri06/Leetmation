@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-to-make-two-binary-strings-equal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumCost(\r\n        self, s: str, t: str, flipCost: int, swapCost: int, crossCost: int\r\n    ) -> int:\r\n        diff = [0] * 2\r\n        for c1, c2 in zip(s, t):\r\n            if c1 != c2:\r\n                diff[int(c1)] += 1\r\n        ans = (diff[0] + diff[1]) * flipCost\r\n        mx = max(diff)\r\n        mn = min(diff)\r\n        ans = min(ans, mn * swapCost + (mx - mn) * flipCost)\r\n        avg = (mx + mn) // 2\r\n        ans = min(\r\n            ans,\r\n            (avg - mn) * crossCost + avg * swapCost + (mx + mn - avg * 2) * flipCost,\r\n        )\r\n        return ans",
+    "problemId": 3800,
+    "title": "Minimum Cost to Make Two Binary Strings Equal",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-make-two-binary-strings-equal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3800.Minimum Cost to Make Two Binary Strings Equal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3800.Minimum Cost to Make Two Binary Strings Equal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3800.Minimum Cost to Make Two Binary Strings Equal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3800.Minimum Cost to Make Two Binary Strings Equal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3800.Minimum Cost to Make Two Binary Strings Equal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3800.Minimum Cost to Make Two Binary Strings Equal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

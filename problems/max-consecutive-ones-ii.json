@@ -1,0 +1,43 @@
+{
+    "problemName": "max-consecutive-ones-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMaxConsecutiveOnes(self, nums: List[int]) -> int:\r\n        l = cnt = 0\r\n        for x in nums:\r\n            cnt += x ^ 1\r\n            if cnt > 1:\r\n                cnt -= nums[l] ^ 1\r\n                l += 1\r\n        return len(nums) - l",
+    "problemId": 487,
+    "title": "Max Consecutive Ones II",
+    "problemUrl": "https://leetcode.com/problems/max-consecutive-ones-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0487.Max Consecutive Ones II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0487.Max Consecutive Ones II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0487.Max Consecutive Ones II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0487.Max Consecutive Ones II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0487.Max Consecutive Ones II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0487.Max Consecutive Ones II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0487.Max Consecutive Ones II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

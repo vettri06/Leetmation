@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-repeating-substring",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxRepeating(self, sequence: str, word: str) -> int:\r\n        for k in range(len(sequence) // len(word), -1, -1):\r\n            if word * k in sequence:\r\n                return k",
+    "problemId": 1668,
+    "title": "Maximum Repeating Substring",
+    "problemUrl": "https://leetcode.com/problems/maximum-repeating-substring/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1668.Maximum Repeating Substring/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1668.Maximum Repeating Substring/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1668.Maximum Repeating Substring/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1668.Maximum Repeating Substring/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1668.Maximum Repeating Substring/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1668.Maximum Repeating Substring/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1668.Maximum Repeating Substring/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1668.Maximum Repeating Substring/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

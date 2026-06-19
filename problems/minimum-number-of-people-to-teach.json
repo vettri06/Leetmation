@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-number-of-people-to-teach",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumTeachings(\r\n        self, n: int, languages: List[List[int]], friendships: List[List[int]]\r\n    ) -> int:\r\n        def check(u: int, v: int) -> bool:\r\n            for x in languages[u - 1]:\r\n                for y in languages[v - 1]:\r\n                    if x == y:\r\n                        return True\r\n            return False\r\n\r\n        s = set()\r\n        for u, v in friendships:\r\n            if not check(u, v):\r\n                s.add(u)\r\n                s.add(v)\r\n        cnt = Counter()\r\n        for u in s:\r\n            for l in languages[u - 1]:\r\n                cnt[l] += 1\r\n        return len(s) - max(cnt.values(), default=0)",
+    "problemId": 1733,
+    "title": "Minimum Number of People to Teach",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-people-to-teach/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1733.Minimum Number of People to Teach/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1733.Minimum Number of People to Teach/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1733.Minimum Number of People to Teach/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1733.Minimum Number of People to Teach/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1733.Minimum Number of People to Teach/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1733.Minimum Number of People to Teach/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

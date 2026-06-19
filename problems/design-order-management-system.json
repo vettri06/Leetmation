@@ -1,0 +1,43 @@
+{
+    "problemName": "design-order-management-system",
+    "language": "python3",
+    "code": "class OrderManagementSystem:\r\n\r\n    def __init__(self):\r\n        self.orders = {}\r\n        self.t = defaultdict(list)\r\n\r\n    def addOrder(self, orderId: int, orderType: str, price: int) -> None:\r\n        self.orders[orderId] = (orderType, price)\r\n        self.t[(orderType, price)].append(orderId)\r\n\r\n    def modifyOrder(self, orderId: int, newPrice: int) -> None:\r\n        orderType, price = self.orders[orderId]\r\n        self.orders[orderId] = (orderType, newPrice)\r\n        self.t[(orderType, price)].remove(orderId)\r\n        self.t[(orderType, newPrice)].append(orderId)\r\n\r\n    def cancelOrder(self, orderId: int) -> None:\r\n        orderType, price = self.orders[orderId]\r\n        del self.orders[orderId]\r\n        self.t[(orderType, price)].remove(orderId)\r\n\r\n    def getOrdersAtPrice(self, orderType: str, price: int) -> List[int]:\r\n        return self.t[(orderType, price)]\r\n\r\n\r\n# Your OrderManagementSystem object will be instantiated and called as such:\r\n# obj = OrderManagementSystem()\r\n# obj.addOrder(orderId,orderType,price)\r\n# obj.modifyOrder(orderId,newPrice)\r\n# obj.cancelOrder(orderId)\r\n# param_4 = obj.getOrdersAtPrice(orderType,price)",
+    "problemId": 3822,
+    "title": "Design Order Management System",
+    "problemUrl": "https://leetcode.com/problems/design-order-management-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3822.Design Order Management System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3822.Design Order Management System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3822.Design Order Management System/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3822.Design Order Management System/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3822.Design Order Management System/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3822.Design Order Management System/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3822.Design Order Management System/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "problemName": "shortest-palindrome",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shortestPalindrome(self, s: str) -> str:\r\n        base = 131\r\n        mod = 10**9 + 7\r\n        n = len(s)\r\n        prefix = suffix = 0\r\n        mul = 1\r\n        idx = 0\r\n        for i, c in enumerate(s):\r\n            prefix = (prefix * base + (ord(c) - ord('a') + 1)) % mod\r\n            suffix = (suffix + (ord(c) - ord('a') + 1) * mul) % mod\r\n            mul = (mul * base) % mod\r\n            if prefix == suffix:\r\n                idx = i + 1\r\n        return s if idx == n else s[idx:][::-1] + s",
+    "problemId": 214,
+    "title": "Shortest Palindrome",
+    "problemUrl": "https://leetcode.com/problems/shortest-palindrome/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0214.Shortest Palindrome/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0214.Shortest Palindrome/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0214.Shortest Palindrome/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0214.Shortest Palindrome/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0214.Shortest Palindrome/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0214.Shortest Palindrome/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0214.Shortest Palindrome/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0214.Shortest Palindrome/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0214.Shortest Palindrome/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0214.Shortest Palindrome/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0214.Shortest Palindrome/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0214.Shortest Palindrome/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0214.Shortest Palindrome/Solution2.cs",
+            "sourceFile": "Solution2.cs"
+        }
+    ]
+}

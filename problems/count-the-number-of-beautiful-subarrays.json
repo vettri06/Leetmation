@@ -1,0 +1,43 @@
+{
+    "problemName": "count-the-number-of-beautiful-subarrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def beautifulSubarrays(self, nums: List[int]) -> int:\r\n        cnt = Counter({0: 1})\r\n        ans = mask = 0\r\n        for x in nums:\r\n            mask ^= x\r\n            ans += cnt[mask]\r\n            cnt[mask] += 1\r\n        return ans",
+    "problemId": 2588,
+    "title": "Count the Number of Beautiful Subarrays",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-beautiful-subarrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2588.Count the Number of Beautiful Subarrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2588.Count the Number of Beautiful Subarrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2588.Count the Number of Beautiful Subarrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2588.Count the Number of Beautiful Subarrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2588.Count the Number of Beautiful Subarrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2588.Count the Number of Beautiful Subarrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2588.Count the Number of Beautiful Subarrays/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

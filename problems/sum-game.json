@@ -1,0 +1,38 @@
+{
+    "problemName": "sum-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumGame(self, num: str) -> bool:\r\n        n = len(num)\r\n        cnt1 = num[: n // 2].count(\"?\")\r\n        cnt2 = num[n // 2 :].count(\"?\")\r\n        s1 = sum(int(x) for x in num[: n // 2] if x != \"?\")\r\n        s2 = sum(int(x) for x in num[n // 2 :] if x != \"?\")\r\n        return (cnt1 + cnt2) % 2 == 1 or s1 - s2 != 9 * (cnt2 - cnt1) // 2",
+    "problemId": 1927,
+    "title": "Sum Game",
+    "problemUrl": "https://leetcode.com/problems/sum-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1927.Sum Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1927.Sum Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1927.Sum Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1927.Sum Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1927.Sum Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1927.Sum Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

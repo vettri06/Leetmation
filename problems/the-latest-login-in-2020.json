@@ -1,0 +1,18 @@
+{
+    "problemName": "the-latest-login-in-2020",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT user_id, MAX(time_stamp) AS last_stamp\r\nFROM Logins\r\nWHERE YEAR(time_stamp) = 2020\r\nGROUP BY 1;",
+    "problemId": 1890,
+    "title": "The Latest Login in 2020",
+    "problemUrl": "https://leetcode.com/problems/the-latest-login-in-2020/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1890.The Latest Login in 2020/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1890.The Latest Login in 2020/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

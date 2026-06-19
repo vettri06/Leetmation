@@ -1,0 +1,33 @@
+{
+    "problemName": "building-boxes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumBoxes(self, n: int) -> int:\r\n        s, k = 0, 1\r\n        while s + k * (k + 1) // 2 <= n:\r\n            s += k * (k + 1) // 2\r\n            k += 1\r\n        k -= 1\r\n        ans = k * (k + 1) // 2\r\n        k = 1\r\n        while s < n:\r\n            ans += 1\r\n            s += k\r\n            k += 1\r\n        return ans",
+    "problemId": 1739,
+    "title": "Building Boxes",
+    "problemUrl": "https://leetcode.com/problems/building-boxes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1739.Building Boxes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1739.Building Boxes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1739.Building Boxes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1739.Building Boxes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1739.Building Boxes/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "count-subarrays-with-cost-less-than-or-equal-to-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSubarrays(self, nums: List[int], k: int) -> int:\r\n        ans = 0\r\n        q1 = deque()\r\n        q2 = deque()\r\n        l = 0\r\n        for r, x in enumerate(nums):\r\n            while q1 and nums[q1[-1]] <= x:\r\n                q1.pop()\r\n            while q2 and nums[q2[-1]] >= x:\r\n                q2.pop()\r\n            q1.append(r)\r\n            q2.append(r)\r\n            while l < r and (nums[q1[0]] - nums[q2[0]]) * (r - l + 1) > k:\r\n                l += 1\r\n                if q1[0] < l:\r\n                    q1.popleft()\r\n                if q2[0] < l:\r\n                    q2.popleft()\r\n            ans += r - l + 1\r\n        return ans",
+    "problemId": 3835,
+    "title": "Count Subarrays With Cost Less Than or Equal to K",
+    "problemUrl": "https://leetcode.com/problems/count-subarrays-with-cost-less-than-or-equal-to-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3835.Count Subarrays With Cost Less Than or Equal to K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3835.Count Subarrays With Cost Less Than or Equal to K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3835.Count Subarrays With Cost Less Than or Equal to K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3835.Count Subarrays With Cost Less Than or Equal to K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3835.Count Subarrays With Cost Less Than or Equal to K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3835.Count Subarrays With Cost Less Than or Equal to K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

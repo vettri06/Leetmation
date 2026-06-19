@@ -1,0 +1,38 @@
+{
+    "problemName": "verify-preorder-serialization-of-a-binary-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isValidSerialization(self, preorder: str) -> bool:\r\n        stk = []\r\n        for c in preorder.split(\",\"):\r\n            stk.append(c)\r\n            while len(stk) > 2 and stk[-1] == stk[-2] == \"#\" and stk[-3] != \"#\":\r\n                stk = stk[:-3]\r\n                stk.append(\"#\")\r\n        return len(stk) == 1 and stk[0] == \"#\"",
+    "problemId": 331,
+    "title": "Verify Preorder Serialization of a Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0331.Verify Preorder Serialization of a Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0331.Verify Preorder Serialization of a Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0331.Verify Preorder Serialization of a Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0331.Verify Preorder Serialization of a Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0331.Verify Preorder Serialization of a Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0331.Verify Preorder Serialization of a Binary Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "shortest-path-in-a-grid-with-obstacles-elimination",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shortestPath(self, grid: List[List[int]], k: int) -> int:\r\n        m, n = len(grid), len(grid[0])\r\n        if k >= m + n - 3:\r\n            return m + n - 2\r\n        q = deque([(0, 0, k)])\r\n        vis = {(0, 0, k)}\r\n        ans = 0\r\n        while q:\r\n            ans += 1\r\n            for _ in range(len(q)):\r\n                i, j, k = q.popleft()\r\n                for a, b in [[0, -1], [0, 1], [1, 0], [-1, 0]]:\r\n                    x, y = i + a, j + b\r\n                    if 0 <= x < m and 0 <= y < n:\r\n                        if x == m - 1 and y == n - 1:\r\n                            return ans\r\n                        if grid[x][y] == 0 and (x, y, k) not in vis:\r\n                            q.append((x, y, k))\r\n                            vis.add((x, y, k))\r\n                        if grid[x][y] == 1 and k > 0 and (x, y, k - 1) not in vis:\r\n                            q.append((x, y, k - 1))\r\n                            vis.add((x, y, k - 1))\r\n        return -1",
+    "problemId": 1293,
+    "title": "Shortest Path in a Grid with Obstacles Elimination",
+    "problemUrl": "https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1293.Shortest Path in a Grid with Obstacles Elimination/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1293.Shortest Path in a Grid with Obstacles Elimination/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1293.Shortest Path in a Grid with Obstacles Elimination/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1293.Shortest Path in a Grid with Obstacles Elimination/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1293.Shortest Path in a Grid with Obstacles Elimination/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1293.Shortest Path in a Grid with Obstacles Elimination/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

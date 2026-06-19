@@ -1,0 +1,68 @@
+{
+    "problemName": "design-linked-list",
+    "language": "python3",
+    "code": "class MyLinkedList:\r\n    def __init__(self):\r\n        self.dummy = ListNode()\r\n        self.cnt = 0\r\n\r\n    def get(self, index: int) -> int:\r\n        if index < 0 or index >= self.cnt:\r\n            return -1\r\n        cur = self.dummy.next\r\n        for _ in range(index):\r\n            cur = cur.next\r\n        return cur.val\r\n\r\n    def addAtHead(self, val: int) -> None:\r\n        self.addAtIndex(0, val)\r\n\r\n    def addAtTail(self, val: int) -> None:\r\n        self.addAtIndex(self.cnt, val)\r\n\r\n    def addAtIndex(self, index: int, val: int) -> None:\r\n        if index > self.cnt:\r\n            return\r\n        pre = self.dummy\r\n        for _ in range(index):\r\n            pre = pre.next\r\n        pre.next = ListNode(val, pre.next)\r\n        self.cnt += 1\r\n\r\n    def deleteAtIndex(self, index: int) -> None:\r\n        if index >= self.cnt:\r\n            return\r\n        pre = self.dummy\r\n        for _ in range(index):\r\n            pre = pre.next\r\n        t = pre.next\r\n        pre.next = t.next\r\n        t.next = None\r\n        self.cnt -= 1\r\n\r\n\r\n# Your MyLinkedList object will be instantiated and called as such:\r\n# obj = MyLinkedList()\r\n# param_1 = obj.get(index)\r\n# obj.addAtHead(val)\r\n# obj.addAtTail(val)\r\n# obj.addAtIndex(index,val)\r\n# obj.deleteAtIndex(index)",
+    "problemId": 707,
+    "title": "Design Linked List",
+    "problemUrl": "https://leetcode.com/problems/design-linked-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0707.Design Linked List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0707.Design Linked List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0707.Design Linked List/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0707.Design Linked List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0707.Design Linked List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0707.Design Linked List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0707.Design Linked List/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0707.Design Linked List/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0707.Design Linked List/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0707.Design Linked List/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0707.Design Linked List/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0707.Design Linked List/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

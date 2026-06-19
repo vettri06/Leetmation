@@ -1,0 +1,28 @@
+{
+    "problemName": "smallest-good-base",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestGoodBase(self, n: str) -> str:\r\n        def cal(k, m):\r\n            p = s = 1\r\n            for i in range(m):\r\n                p *= k\r\n                s += p\r\n            return s\r\n\r\n        num = int(n)\r\n        for m in range(63, 1, -1):\r\n            l, r = 2, num - 1\r\n            while l < r:\r\n                mid = (l + r) >> 1\r\n                if cal(mid, m) >= num:\r\n                    r = mid\r\n                else:\r\n                    l = mid + 1\r\n            if cal(l, m) == num:\r\n                return str(l)\r\n        return str(num - 1)",
+    "problemId": 483,
+    "title": "Smallest Good Base",
+    "problemUrl": "https://leetcode.com/problems/smallest-good-base/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0483.Smallest Good Base/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0483.Smallest Good Base/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0483.Smallest Good Base/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0483.Smallest Good Base/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

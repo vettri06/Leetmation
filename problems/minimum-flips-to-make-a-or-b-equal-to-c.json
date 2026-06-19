@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-flips-to-make-a-or-b-equal-to-c",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minFlips(self, a: int, b: int, c: int) -> int:\r\n        ans = 0\r\n        for i in range(32):\r\n            x, y, z = a >> i & 1, b >> i & 1, c >> i & 1\r\n            ans += x + y if z == 0 else int(x == 0 and y == 0)\r\n        return ans",
+    "problemId": 1318,
+    "title": "Minimum Flips to Make a OR b Equal to c",
+    "problemUrl": "https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1318.Minimum Flips to Make a OR b Equal to c/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1318.Minimum Flips to Make a OR b Equal to c/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1318.Minimum Flips to Make a OR b Equal to c/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1318.Minimum Flips to Make a OR b Equal to c/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1318.Minimum Flips to Make a OR b Equal to c/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1318.Minimum Flips to Make a OR b Equal to c/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "nth-magical-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def nthMagicalNumber(self, n: int, a: int, b: int) -> int:\r\n        mod = 10**9 + 7\r\n        c = lcm(a, b)\r\n        r = (a + b) * n\r\n        return bisect_left(range(r), x=n, key=lambda x: x // a + x // b - x // c) % mod",
+    "problemId": 878,
+    "title": "Nth Magical Number",
+    "problemUrl": "https://leetcode.com/problems/nth-magical-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0878.Nth Magical Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0878.Nth Magical Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0878.Nth Magical Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0878.Nth Magical Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0878.Nth Magical Number/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

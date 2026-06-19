@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-strength-of-k-disjoint-subarrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumStrength(self, nums: List[int], k: int) -> int:\r\n        n = len(nums)\r\n        f = [[[-inf, -inf] for _ in range(k + 1)] for _ in range(n + 1)]\r\n        f[0][0][0] = 0\r\n        for i, x in enumerate(nums, 1):\r\n            for j in range(k + 1):\r\n                sign = 1 if j & 1 else -1\r\n                f[i][j][0] = max(f[i - 1][j][0], f[i - 1][j][1])\r\n                f[i][j][1] = max(f[i][j][1], f[i - 1][j][1] + sign * x * (k - j + 1))\r\n                if j:\r\n                    f[i][j][1] = max(\r\n                        f[i][j][1], max(f[i - 1][j - 1]) + sign * x * (k - j + 1)\r\n                    )\r\n        return max(f[n][k])",
+    "problemId": 3077,
+    "title": "Maximum Strength of K Disjoint Subarrays",
+    "problemUrl": "https://leetcode.com/problems/maximum-strength-of-k-disjoint-subarrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3077.Maximum Strength of K Disjoint Subarrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3077.Maximum Strength of K Disjoint Subarrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3077.Maximum Strength of K Disjoint Subarrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3077.Maximum Strength of K Disjoint Subarrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3077.Maximum Strength of K Disjoint Subarrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3077.Maximum Strength of K Disjoint Subarrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

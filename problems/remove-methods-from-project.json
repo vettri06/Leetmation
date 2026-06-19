@@ -1,0 +1,38 @@
+{
+    "problemName": "remove-methods-from-project",
+    "language": "python3",
+    "code": "class Solution:\r\n    def remainingMethods(\r\n        self, n: int, k: int, invocations: List[List[int]]\r\n    ) -> List[int]:\r\n        def dfs(i: int):\r\n            suspicious[i] = True\r\n            for j in g[i]:\r\n                if not suspicious[j]:\r\n                    dfs(j)\r\n\r\n        def dfs2(i: int):\r\n            vis[i] = True\r\n            for j in f[i]:\r\n                if not vis[j]:\r\n                    suspicious[j] = False\r\n                    dfs2(j)\r\n\r\n        f = [[] for _ in range(n)]\r\n        g = [[] for _ in range(n)]\r\n        for a, b in invocations:\r\n            f[a].append(b)\r\n            f[b].append(a)\r\n            g[a].append(b)\r\n        suspicious = [False] * n\r\n        dfs(k)\r\n\r\n        vis = [False] * n\r\n        ans = []\r\n        for i in range(n):\r\n            if not suspicious[i] and not vis[i]:\r\n                dfs2(i)\r\n        return [i for i in range(n) if not suspicious[i]]",
+    "problemId": 3310,
+    "title": "Remove Methods From Project",
+    "problemUrl": "https://leetcode.com/problems/remove-methods-from-project/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3310.Remove Methods From Project/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3310.Remove Methods From Project/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3310.Remove Methods From Project/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3310.Remove Methods From Project/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3310.Remove Methods From Project/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3310.Remove Methods From Project/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

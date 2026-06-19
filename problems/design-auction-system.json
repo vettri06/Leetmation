@@ -1,0 +1,28 @@
+{
+    "problemName": "design-auction-system",
+    "language": "python3",
+    "code": "class AuctionSystem:\r\n\r\n    def __init__(self):\r\n        self.items = defaultdict(SortedList)\r\n        self.users = {}\r\n\r\n    def addBid(self, userId: int, itemId: int, bidAmount: int) -> None:\r\n        if userId not in self.users:\r\n            self.users[userId] = {}\r\n        if itemId in self.users[userId]:\r\n            self.removeBid(userId, itemId)\r\n        self.users[userId][itemId] = bidAmount\r\n        self.items[itemId].add((bidAmount, userId))\r\n\r\n    def updateBid(self, userId: int, itemId: int, newAmount: int) -> None:\r\n        oldAmount = self.users[userId][itemId]\r\n        self.items[itemId].remove((oldAmount, userId))\r\n        self.items[itemId].add((newAmount, userId))\r\n        self.users[userId][itemId] = newAmount\r\n\r\n    def removeBid(self, userId: int, itemId: int) -> None:\r\n        oldAmount = self.users[userId][itemId]\r\n        self.items[itemId].remove((oldAmount, userId))\r\n        self.users[userId].pop(itemId)\r\n\r\n    def getHighestBidder(self, itemId: int) -> int:\r\n        ls = self.items[itemId]\r\n        return -1 if not ls else ls[-1][1]\r\n\r\n\r\n# Your AuctionSystem object will be instantiated and called as such:\r\n# obj = AuctionSystem()\r\n# obj.addBid(userId,itemId,bidAmount)\r\n# obj.updateBid(userId,itemId,newAmount)\r\n# obj.removeBid(userId,itemId)\r\n# param_4 = obj.getHighestBidder(itemId)",
+    "problemId": 3815,
+    "title": "Design Auction System",
+    "problemUrl": "https://leetcode.com/problems/design-auction-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3815.Design Auction System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3815.Design Auction System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3815.Design Auction System/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3815.Design Auction System/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

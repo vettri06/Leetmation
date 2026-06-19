@@ -1,0 +1,38 @@
+{
+    "problemName": "stone-game-iii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def stoneGameIII(self, stoneValue: List[int]) -> str:\r\n        @cache\r\n        def dfs(i: int) -> int:\r\n            if i >= n:\r\n                return 0\r\n            ans, s = -inf, 0\r\n            for j in range(3):\r\n                if i + j >= n:\r\n                    break\r\n                s += stoneValue[i + j]\r\n                ans = max(ans, s - dfs(i + j + 1))\r\n            return ans\r\n\r\n        n = len(stoneValue)\r\n        ans = dfs(0)\r\n        if ans == 0:\r\n            return 'Tie'\r\n        return 'Alice' if ans > 0 else 'Bob'",
+    "problemId": 1406,
+    "title": "Stone Game III",
+    "problemUrl": "https://leetcode.com/problems/stone-game-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1406.Stone Game III/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1406.Stone Game III/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1406.Stone Game III/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1406.Stone Game III/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1406.Stone Game III/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1406.Stone Game III/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

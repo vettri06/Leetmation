@@ -1,0 +1,63 @@
+{
+    "problemName": "three-divisors",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isThree(self, n: int) -> bool:\r\n        return sum(n % i == 0 for i in range(2, n)) == 1",
+    "problemId": 1952,
+    "title": "Three Divisors",
+    "problemUrl": "https://leetcode.com/problems/three-divisors/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1952.Three Divisors/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1952.Three Divisors/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1952.Three Divisors/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1952.Three Divisors/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1952.Three Divisors/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1952.Three Divisors/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1952.Three Divisors/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1952.Three Divisors/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1952.Three Divisors/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1952.Three Divisors/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1952.Three Divisors/Solution2.js",
+            "sourceFile": "Solution2.js"
+        }
+    ]
+}

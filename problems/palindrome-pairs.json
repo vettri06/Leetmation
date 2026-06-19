@@ -1,0 +1,38 @@
+{
+    "problemName": "palindrome-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def palindromePairs(self, words: List[str]) -> List[List[int]]:\r\n        d = {w: i for i, w in enumerate(words)}\r\n        ans = []\r\n        for i, w in enumerate(words):\r\n            for j in range(len(w) + 1):\r\n                a, b = w[:j], w[j:]\r\n                ra, rb = a[::-1], b[::-1]\r\n                if ra in d and d[ra] != i and b == rb:\r\n                    ans.append([i, d[ra]])\r\n                if j and rb in d and d[rb] != i and a == ra:\r\n                    ans.append([d[rb], i])\r\n        return ans",
+    "problemId": 336,
+    "title": "Palindrome Pairs",
+    "problemUrl": "https://leetcode.com/problems/palindrome-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0336.Palindrome Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0336.Palindrome Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0336.Palindrome Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0336.Palindrome Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0336.Palindrome Pairs/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0336.Palindrome Pairs/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

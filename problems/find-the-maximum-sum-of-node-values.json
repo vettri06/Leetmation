@@ -1,0 +1,48 @@
+{
+    "problemName": "find-the-maximum-sum-of-node-values",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumValueSum(self, nums: List[int], k: int, edges: List[List[int]]) -> int:\r\n        f0, f1 = 0, -inf\r\n        for x in nums:\r\n            f0, f1 = max(f0 + x, f1 + (x ^ k)), max(f1 + x, f0 + (x ^ k))\r\n        return f0",
+    "problemId": 3068,
+    "title": "Find the Maximum Sum of Node Values",
+    "problemUrl": "https://leetcode.com/problems/find-the-maximum-sum-of-node-values/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3068.Find the Maximum Sum of Node Values/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3068.Find the Maximum Sum of Node Values/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3068.Find the Maximum Sum of Node Values/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3068.Find the Maximum Sum of Node Values/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3068.Find the Maximum Sum of Node Values/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3068.Find the Maximum Sum of Node Values/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3068.Find the Maximum Sum of Node Values/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3068.Find the Maximum Sum of Node Values/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-total-beauty-of-the-gardens",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumBeauty(\r\n        self, flowers: List[int], newFlowers: int, target: int, full: int, partial: int\r\n    ) -> int:\r\n        flowers.sort()\r\n        n = len(flowers)\r\n        s = list(accumulate(flowers, initial=0))\r\n        ans, i = 0, n - bisect_left(flowers, target)\r\n        for x in range(i, n + 1):\r\n            newFlowers -= 0 if x == 0 else max(target - flowers[n - x], 0)\r\n            if newFlowers < 0:\r\n                break\r\n            l, r = 0, n - x - 1\r\n            while l < r:\r\n                mid = (l + r + 1) >> 1\r\n                if flowers[mid] * (mid + 1) - s[mid + 1] <= newFlowers:\r\n                    l = mid\r\n                else:\r\n                    r = mid - 1\r\n            y = 0\r\n            if r != -1:\r\n                cost = flowers[l] * (l + 1) - s[l + 1]\r\n                y = min(flowers[l] + (newFlowers - cost) // (l + 1), target - 1)\r\n            ans = max(ans, x * full + y * partial)\r\n        return ans",
+    "problemId": 2234,
+    "title": "Maximum Total Beauty of the Gardens",
+    "problemUrl": "https://leetcode.com/problems/maximum-total-beauty-of-the-gardens/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2234.Maximum Total Beauty of the Gardens/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2234.Maximum Total Beauty of the Gardens/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2234.Maximum Total Beauty of the Gardens/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2234.Maximum Total Beauty of the Gardens/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2234.Maximum Total Beauty of the Gardens/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2234.Maximum Total Beauty of the Gardens/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

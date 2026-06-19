@@ -1,0 +1,18 @@
+{
+    "problemName": "group-by",
+    "language": "typescript",
+    "code": "declare global {\r\n    interface Array<T> {\r\n        groupBy(fn: (item: T) => string): Record<string, T[]>;\r\n    }\r\n}\r\n\r\nArray.prototype.groupBy = function (fn) {\r\n    return this.reduce((acc, item) => {\r\n        const key = fn(item);\r\n        if (acc[key]) {\r\n            acc[key].push(item);\r\n        } else {\r\n            acc[key] = [item];\r\n        }\r\n        return acc;\r\n    }, {});\r\n};\r\n\r\n/**\r\n * [1,2,3].groupBy(String) // {\"1\":[1],\"2\":[2],\"3\":[3]}\r\n */",
+    "problemId": 2631,
+    "title": "Group By",
+    "problemUrl": "https://leetcode.com/problems/group-by/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2631.Group By/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2631.Group By/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

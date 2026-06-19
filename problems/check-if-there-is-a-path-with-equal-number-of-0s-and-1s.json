@@ -1,0 +1,33 @@
+{
+    "problemName": "check-if-there-is-a-path-with-equal-number-of-0s-and-1s",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isThereAPath(self, grid: List[List[int]]) -> bool:\r\n        @cache\r\n        def dfs(i, j, k):\r\n            if i >= m or j >= n:\r\n                return False\r\n            k += grid[i][j]\r\n            if k > s or i + j + 1 - k > s:\r\n                return False\r\n            if i == m - 1 and j == n - 1:\r\n                return k == s\r\n            return dfs(i + 1, j, k) or dfs(i, j + 1, k)\r\n\r\n        m, n = len(grid), len(grid[0])\r\n        s = m + n - 1\r\n        if s & 1:\r\n            return False\r\n        s >>= 1\r\n        return dfs(0, 0, 0)",
+    "problemId": 2510,
+    "title": "Check if There is a Path With Equal Number of 0's And 1's",
+    "problemUrl": "https://leetcode.com/problems/check-if-there-is-a-path-with-equal-number-of-0s-and-1s/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2510.Check if There is a Path With Equal Number of 0's And 1's/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2510.Check if There is a Path With Equal Number of 0's And 1's/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2510.Check if There is a Path With Equal Number of 0's And 1's/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2510.Check if There is a Path With Equal Number of 0's And 1's/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2510.Check if There is a Path With Equal Number of 0's And 1's/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

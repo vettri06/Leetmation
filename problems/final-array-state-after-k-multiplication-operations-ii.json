@@ -1,0 +1,33 @@
+{
+    "problemName": "final-array-state-after-k-multiplication-operations-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getFinalState(self, nums: List[int], k: int, multiplier: int) -> List[int]:\r\n        if multiplier == 1:\r\n            return nums\r\n        pq = [(x, i) for i, x in enumerate(nums)]\r\n        heapify(pq)\r\n        m = max(nums)\r\n        while k and pq[0][0] < m:\r\n            x, i = heappop(pq)\r\n            heappush(pq, (x * multiplier, i))\r\n            k -= 1\r\n        n = len(nums)\r\n        mod = 10**9 + 7\r\n        pq.sort()\r\n        for i, (x, j) in enumerate(pq):\r\n            nums[j] = x * pow(multiplier, k // n + int(i < k % n), mod) % mod\r\n        return nums",
+    "problemId": 3266,
+    "title": "Final Array State After K Multiplication Operations II",
+    "problemUrl": "https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3266.Final Array State After K Multiplication Operations II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3266.Final Array State After K Multiplication Operations II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3266.Final Array State After K Multiplication Operations II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3266.Final Array State After K Multiplication Operations II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3266.Final Array State After K Multiplication Operations II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

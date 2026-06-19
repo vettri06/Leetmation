@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-subarray-sum-with-length-divisible-by-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSubarraySum(self, nums: List[int], k: int) -> int:\r\n        f = [inf] * k\r\n        ans = -inf\r\n        s = f[-1] = 0\r\n        for i, x in enumerate(nums):\r\n            s += x\r\n            ans = max(ans, s - f[i % k])\r\n            f[i % k] = min(f[i % k], s)\r\n        return ans",
+    "problemId": 3381,
+    "title": "Maximum Subarray Sum With Length Divisible by K",
+    "problemUrl": "https://leetcode.com/problems/maximum-subarray-sum-with-length-divisible-by-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3381.Maximum Subarray Sum With Length Divisible by K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3381.Maximum Subarray Sum With Length Divisible by K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3381.Maximum Subarray Sum With Length Divisible by K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3381.Maximum Subarray Sum With Length Divisible by K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3381.Maximum Subarray Sum With Length Divisible by K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3381.Maximum Subarray Sum With Length Divisible by K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3381.Maximum Subarray Sum With Length Divisible by K/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

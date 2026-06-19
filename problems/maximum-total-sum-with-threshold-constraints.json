@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-total-sum-with-threshold-constraints",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSum(self, nums: List[int], threshold: List[int]) -> int:\r\n        n = len(nums)\r\n        idx = sorted(range(n), key=lambda i: threshold[i])\r\n        sl = SortedList()\r\n        step = 1\r\n        ans = i = 0\r\n        while True:\r\n            while i < n and threshold[idx[i]] <= step:\r\n                sl.add(nums[idx[i]])\r\n                i += 1\r\n            if not sl:\r\n                break\r\n            ans += sl.pop()\r\n            step += 1\r\n        return ans",
+    "problemId": 3763,
+    "title": "Maximum Total Sum with Threshold Constraints",
+    "problemUrl": "https://leetcode.com/problems/maximum-total-sum-with-threshold-constraints/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3763.Maximum Total Sum with Threshold Constraints/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3763.Maximum Total Sum with Threshold Constraints/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3763.Maximum Total Sum with Threshold Constraints/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3763.Maximum Total Sum with Threshold Constraints/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3763.Maximum Total Sum with Threshold Constraints/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3763.Maximum Total Sum with Threshold Constraints/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3763.Maximum Total Sum with Threshold Constraints/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

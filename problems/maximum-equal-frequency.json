@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-equal-frequency",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxEqualFreq(self, nums: List[int]) -> int:\r\n        cnt = Counter()\r\n        ccnt = Counter()\r\n        ans = mx = 0\r\n        for i, v in enumerate(nums, 1):\r\n            if v in cnt:\r\n                ccnt[cnt[v]] -= 1\r\n            cnt[v] += 1\r\n            mx = max(mx, cnt[v])\r\n            ccnt[cnt[v]] += 1\r\n            if mx == 1:\r\n                ans = i\r\n            elif ccnt[mx] * mx + ccnt[mx - 1] * (mx - 1) == i and ccnt[mx] == 1:\r\n                ans = i\r\n            elif ccnt[mx] * mx + 1 == i and ccnt[1] == 1:\r\n                ans = i\r\n        return ans",
+    "problemId": 1224,
+    "title": "Maximum Equal Frequency",
+    "problemUrl": "https://leetcode.com/problems/maximum-equal-frequency/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1224.Maximum Equal Frequency/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1224.Maximum Equal Frequency/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1224.Maximum Equal Frequency/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1224.Maximum Equal Frequency/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1224.Maximum Equal Frequency/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1224.Maximum Equal Frequency/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

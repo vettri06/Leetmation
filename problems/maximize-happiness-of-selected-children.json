@@ -1,0 +1,48 @@
+{
+    "problemName": "maximize-happiness-of-selected-children",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumHappinessSum(self, happiness: List[int], k: int) -> int:\r\n        happiness.sort(reverse=True)\r\n        ans = 0\r\n        for i, x in enumerate(happiness[:k]):\r\n            x -= i\r\n            ans += max(x, 0)\r\n        return ans",
+    "problemId": 3075,
+    "title": "Maximize Happiness of Selected Children",
+    "problemUrl": "https://leetcode.com/problems/maximize-happiness-of-selected-children/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3075.Maximize Happiness of Selected Children/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3075.Maximize Happiness of Selected Children/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3075.Maximize Happiness of Selected Children/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3075.Maximize Happiness of Selected Children/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3075.Maximize Happiness of Selected Children/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3075.Maximize Happiness of Selected Children/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3075.Maximize Happiness of Selected Children/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3075.Maximize Happiness of Selected Children/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

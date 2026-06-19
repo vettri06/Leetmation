@@ -1,0 +1,38 @@
+{
+    "problemName": "decoded-string-at-index",
+    "language": "python3",
+    "code": "class Solution:\r\n    def decodeAtIndex(self, s: str, k: int) -> str:\r\n        m = 0\r\n        for c in s:\r\n            if c.isdigit():\r\n                m *= int(c)\r\n            else:\r\n                m += 1\r\n        for c in s[::-1]:\r\n            k %= m\r\n            if k == 0 and c.isalpha():\r\n                return c\r\n            if c.isdigit():\r\n                m //= int(c)\r\n            else:\r\n                m -= 1",
+    "problemId": 880,
+    "title": "Decoded String at Index",
+    "problemUrl": "https://leetcode.com/problems/decoded-string-at-index/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0880.Decoded String at Index/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0880.Decoded String at Index/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0880.Decoded String at Index/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0880.Decoded String at Index/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0880.Decoded String at Index/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0880.Decoded String at Index/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

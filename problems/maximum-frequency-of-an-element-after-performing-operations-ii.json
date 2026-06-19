@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-frequency-of-an-element-after-performing-operations-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxFrequency(self, nums: List[int], k: int, numOperations: int) -> int:\r\n        cnt = defaultdict(int)\r\n        d = defaultdict(int)\r\n        for x in nums:\r\n            cnt[x] += 1\r\n            d[x] += 0\r\n            d[x - k] += 1\r\n            d[x + k + 1] -= 1\r\n        ans = s = 0\r\n        for x, t in sorted(d.items()):\r\n            s += t\r\n            ans = max(ans, min(s, cnt[x] + numOperations))\r\n        return ans",
+    "problemId": 3347,
+    "title": "Maximum Frequency of an Element After Performing Operations II",
+    "problemUrl": "https://leetcode.com/problems/maximum-frequency-of-an-element-after-performing-operations-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3347.Maximum Frequency of an Element After Performing Operations II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3347.Maximum Frequency of an Element After Performing Operations II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3347.Maximum Frequency of an Element After Performing Operations II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3347.Maximum Frequency of an Element After Performing Operations II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3347.Maximum Frequency of an Element After Performing Operations II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3347.Maximum Frequency of an Element After Performing Operations II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3347.Maximum Frequency of an Element After Performing Operations II/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3347.Maximum Frequency of an Element After Performing Operations II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

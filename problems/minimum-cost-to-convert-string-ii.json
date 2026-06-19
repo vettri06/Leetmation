@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-cost-to-convert-string-ii",
+    "language": "python3",
+    "code": "class Node:\r\n    __slots__ = [\"children\", \"v\"]\r\n\r\n    def __init__(self):\r\n        self.children: List[Node | None] = [None] * 26\r\n        self.v = -1\r\n\r\n\r\nclass Solution:\r\n    def minimumCost(\r\n        self,\r\n        source: str,\r\n        target: str,\r\n        original: List[str],\r\n        changed: List[str],\r\n        cost: List[int],\r\n    ) -> int:\r\n        m = len(cost)\r\n        g = [[inf] * (m << 1) for _ in range(m << 1)]\r\n        for i in range(m << 1):\r\n            g[i][i] = 0\r\n        root = Node()\r\n        idx = 0\r\n\r\n        def insert(w: str) -> int:\r\n            node = root\r\n            for c in w:\r\n                i = ord(c) - ord(\"a\")\r\n                if node.children[i] is None:\r\n                    node.children[i] = Node()\r\n                node = node.children[i]\r\n            if node.v < 0:\r\n                nonlocal idx\r\n                node.v = idx\r\n                idx += 1\r\n            return node.v\r\n\r\n        @cache\r\n        def dfs(i: int) -> int:\r\n            if i >= len(source):\r\n                return 0\r\n            res = dfs(i + 1) if source[i] == target[i] else inf\r\n            p = q = root\r\n            for j in range(i, len(source)):\r\n                p = p.children[ord(source[j]) - ord(\"a\")]\r\n                q = q.children[ord(target[j]) - ord(\"a\")]\r\n                if p is None or q is None:\r\n                    break\r\n                if p.v < 0 or q.v < 0:\r\n                    continue\r\n                res = min(res, dfs(j + 1) + g[p.v][q.v])\r\n            return res\r\n\r\n        for x, y, z in zip(original, changed, cost):\r\n            x = insert(x)\r\n            y = insert(y)\r\n            g[x][y] = min(g[x][y], z)\r\n        for k in range(idx):\r\n            for i in range(idx):\r\n                if g[i][k] >= inf:\r\n                    continue\r\n                for j in range(idx):\r\n                    # g[i][j] = min(g[i][j], g[i][k] + g[k][j])\r\n                    if g[i][k] + g[k][j] < g[i][j]:\r\n                        g[i][j] = g[i][k] + g[k][j]\r\n\r\n        ans = dfs(0)\r\n        return -1 if ans >= inf else ans",
+    "problemId": 2977,
+    "title": "Minimum Cost to Convert String II",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-convert-string-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2977.Minimum Cost to Convert String II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2977.Minimum Cost to Convert String II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2977.Minimum Cost to Convert String II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2977.Minimum Cost to Convert String II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2977.Minimum Cost to Convert String II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2977.Minimum Cost to Convert String II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2977.Minimum Cost to Convert String II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

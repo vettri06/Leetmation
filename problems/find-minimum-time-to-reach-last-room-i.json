@@ -1,0 +1,38 @@
+{
+    "problemName": "find-minimum-time-to-reach-last-room-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minTimeToReach(self, moveTime: List[List[int]]) -> int:\r\n        n, m = len(moveTime), len(moveTime[0])\r\n        dist = [[inf] * m for _ in range(n)]\r\n        dist[0][0] = 0\r\n        pq = [(0, 0, 0)]\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        while 1:\r\n            d, i, j = heappop(pq)\r\n            if i == n - 1 and j == m - 1:\r\n                return d\r\n            if d > dist[i][j]:\r\n                continue\r\n            for a, b in pairwise(dirs):\r\n                x, y = i + a, j + b\r\n                if 0 <= x < n and 0 <= y < m:\r\n                    t = max(moveTime[x][y], dist[i][j]) + 1\r\n                    if dist[x][y] > t:\r\n                        dist[x][y] = t\r\n                        heappush(pq, (t, x, y))",
+    "problemId": 3341,
+    "title": "Find Minimum Time to Reach Last Room I",
+    "problemUrl": "https://leetcode.com/problems/find-minimum-time-to-reach-last-room-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3341.Find Minimum Time to Reach Last Room I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3341.Find Minimum Time to Reach Last Room I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3341.Find Minimum Time to Reach Last Room I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3341.Find Minimum Time to Reach Last Room I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3341.Find Minimum Time to Reach Last Room I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3341.Find Minimum Time to Reach Last Room I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

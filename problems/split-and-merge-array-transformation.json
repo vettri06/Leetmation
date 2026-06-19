@@ -1,0 +1,33 @@
+{
+    "problemName": "split-and-merge-array-transformation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSplitMerge(self, nums1: List[int], nums2: List[int]) -> int:\r\n        n = len(nums1)\r\n        target = tuple(nums2)\r\n        start = tuple(nums1)\r\n\r\n        q = [start]\r\n        vis = set()\r\n        vis.add(start)\r\n\r\n        for ans in count(0):\r\n            t = q\r\n            q = []\r\n            for cur in t:\r\n                if cur == target:\r\n                    return ans\r\n                for l in range(n):\r\n                    for r in range(l, n):\r\n                        remain = list(cur[:l]) + list(cur[r + 1 :])\r\n                        sub = cur[l : r + 1]\r\n                        for i in range(len(remain) + 1):\r\n                            nxt = tuple(remain[:i] + list(sub) + remain[i:])\r\n                            if nxt not in vis:\r\n                                vis.add(nxt)\r\n                                q.append(nxt)",
+    "problemId": 3690,
+    "title": "Split and Merge Array Transformation",
+    "problemUrl": "https://leetcode.com/problems/split-and-merge-array-transformation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3690.Split and Merge Array Transformation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3690.Split and Merge Array Transformation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3690.Split and Merge Array Transformation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3690.Split and Merge Array Transformation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3690.Split and Merge Array Transformation/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

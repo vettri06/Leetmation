@@ -1,0 +1,53 @@
+{
+    "problemName": "iterator-for-combination",
+    "language": "python3",
+    "code": "class CombinationIterator:\r\n    def __init__(self, characters: str, combinationLength: int):\r\n        def dfs(i):\r\n            if len(t) == combinationLength:\r\n                cs.append(''.join(t))\r\n                return\r\n            if i == n:\r\n                return\r\n            t.append(characters[i])\r\n            dfs(i + 1)\r\n            t.pop()\r\n            dfs(i + 1)\r\n\r\n        cs = []\r\n        n = len(characters)\r\n        t = []\r\n        dfs(0)\r\n        self.cs = cs\r\n        self.idx = 0\r\n\r\n    def next(self) -> str:\r\n        ans = self.cs[self.idx]\r\n        self.idx += 1\r\n        return ans\r\n\r\n    def hasNext(self) -> bool:\r\n        return self.idx < len(self.cs)\r\n\r\n\r\n# Your CombinationIterator object will be instantiated and called as such:\r\n# obj = CombinationIterator(characters, combinationLength)\r\n# param_1 = obj.next()\r\n# param_2 = obj.hasNext()",
+    "problemId": 1286,
+    "title": "Iterator for Combination",
+    "problemUrl": "https://leetcode.com/problems/iterator-for-combination/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1286.Iterator for Combination/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1286.Iterator for Combination/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1286.Iterator for Combination/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1286.Iterator for Combination/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1286.Iterator for Combination/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1286.Iterator for Combination/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1286.Iterator for Combination/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1286.Iterator for Combination/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1286.Iterator for Combination/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

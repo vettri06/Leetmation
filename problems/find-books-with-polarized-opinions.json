@@ -1,0 +1,23 @@
+{
+    "problemName": "find-books-with-polarized-opinions",
+    "language": "python3",
+    "code": "import pandas as pd\r\nfrom decimal import Decimal, ROUND_HALF_UP\r\n\r\n\r\ndef find_polarized_books(\r\n    books: pd.DataFrame, reading_sessions: pd.DataFrame\r\n) -> pd.DataFrame:\r\n    df = books.merge(reading_sessions, on=\"book_id\")\r\n    agg_df = (\r\n        df.groupby([\"book_id\", \"title\", \"author\", \"genre\", \"pages\"])\r\n        .agg(\r\n            max_rating=(\"session_rating\", \"max\"),\r\n            min_rating=(\"session_rating\", \"min\"),\r\n            rating_spread=(\"session_rating\", lambda x: x.max() - x.min()),\r\n            count_sessions=(\"session_rating\", \"count\"),\r\n            low_or_high_count=(\"session_rating\", lambda x: ((x <= 2) | (x >= 4)).sum()),\r\n        )\r\n        .reset_index()\r\n    )\r\n\r\n    agg_df[\"polarization_score\"] = agg_df.apply(\r\n        lambda r: float(\r\n            Decimal(r[\"low_or_high_count\"] / r[\"count_sessions\"]).quantize(\r\n                Decimal(\"0.01\"), rounding=ROUND_HALF_UP\r\n            )\r\n        ),\r\n        axis=1,\r\n    )\r\n\r\n    result = agg_df[\r\n        (agg_df[\"count_sessions\"] >= 5)\r\n        & (agg_df[\"max_rating\"] >= 4)\r\n        & (agg_df[\"min_rating\"] <= 2)\r\n        & (agg_df[\"polarization_score\"] >= 0.6)\r\n    ]\r\n\r\n    return result.sort_values(\r\n        by=[\"polarization_score\", \"title\"], ascending=[False, False]\r\n    )[\r\n        [\r\n            \"book_id\",\r\n            \"title\",\r\n            \"author\",\r\n            \"genre\",\r\n            \"pages\",\r\n            \"rating_spread\",\r\n            \"polarization_score\",\r\n        ]\r\n    ]",
+    "problemId": 3642,
+    "title": "Find Books with Polarized Opinions",
+    "problemUrl": "https://leetcode.com/problems/find-books-with-polarized-opinions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3642.Find Books with Polarized Opinions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3642.Find Books with Polarized Opinions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3642.Find Books with Polarized Opinions/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

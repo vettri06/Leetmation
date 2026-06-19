@@ -1,0 +1,18 @@
+{
+    "problemName": "return-length-of-arguments-passed",
+    "language": "typescript",
+    "code": "function argumentsLength(...args: any[]): number {\r\n    return args.length;\r\n}\r\n\r\n/**\r\n * argumentsLength(1, 2, 3); // 3\r\n */",
+    "problemId": 2703,
+    "title": "Return Length of Arguments Passed",
+    "problemUrl": "https://leetcode.com/problems/return-length-of-arguments-passed/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2703.Return Length of Arguments Passed/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2703.Return Length of Arguments Passed/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

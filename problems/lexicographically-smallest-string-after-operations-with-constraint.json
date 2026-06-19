@@ -1,0 +1,38 @@
+{
+    "problemName": "lexicographically-smallest-string-after-operations-with-constraint",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getSmallestString(self, s: str, k: int) -> str:\r\n        cs = list(s)\r\n        for i, c1 in enumerate(s):\r\n            for c2 in ascii_lowercase:\r\n                if c2 >= c1:\r\n                    break\r\n                d = min(ord(c1) - ord(c2), 26 - ord(c1) + ord(c2))\r\n                if d <= k:\r\n                    cs[i] = c2\r\n                    k -= d\r\n                    break\r\n        return \"\".join(cs)",
+    "problemId": 3106,
+    "title": "Lexicographically Smallest String After Operations With Constraint",
+    "problemUrl": "https://leetcode.com/problems/lexicographically-smallest-string-after-operations-with-constraint/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3106.Lexicographically Smallest String After Operations With Constraint/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3106.Lexicographically Smallest String After Operations With Constraint/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3106.Lexicographically Smallest String After Operations With Constraint/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3106.Lexicographically Smallest String After Operations With Constraint/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3106.Lexicographically Smallest String After Operations With Constraint/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3106.Lexicographically Smallest String After Operations With Constraint/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

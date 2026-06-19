@@ -1,0 +1,38 @@
+{
+    "problemName": "reconstruct-itinerary",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findItinerary(self, tickets: List[List[str]]) -> List[str]:\r\n        def dfs(f: str):\r\n            while g[f]:\r\n                dfs(g[f].pop())\r\n            ans.append(f)\r\n\r\n        g = defaultdict(list)\r\n        for f, t in sorted(tickets, reverse=True):\r\n            g[f].append(t)\r\n        ans = []\r\n        dfs(\"JFK\")\r\n        return ans[::-1]",
+    "problemId": 332,
+    "title": "Reconstruct Itinerary",
+    "problemUrl": "https://leetcode.com/problems/reconstruct-itinerary/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0332.Reconstruct Itinerary/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0332.Reconstruct Itinerary/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0332.Reconstruct Itinerary/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0332.Reconstruct Itinerary/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0332.Reconstruct Itinerary/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0332.Reconstruct Itinerary/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

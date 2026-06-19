@@ -1,0 +1,53 @@
+{
+    "problemName": "reorder-list",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def reorderList(self, head: Optional[ListNode]) -> None:\r\n        fast = slow = head\r\n        while fast.next and fast.next.next:\r\n            slow = slow.next\r\n            fast = fast.next.next\r\n\r\n        cur = slow.next\r\n        slow.next = None\r\n\r\n        pre = None\r\n        while cur:\r\n            t = cur.next\r\n            cur.next = pre\r\n            pre, cur = cur, t\r\n        cur = head\r\n\r\n        while pre:\r\n            t = pre.next\r\n            pre.next = cur.next\r\n            cur.next = pre\r\n            cur, pre = pre.next, t",
+    "problemId": 143,
+    "title": "Reorder List",
+    "problemUrl": "https://leetcode.com/problems/reorder-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0143.Reorder List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0143.Reorder List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0143.Reorder List/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0143.Reorder List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0143.Reorder List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0143.Reorder List/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0143.Reorder List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0143.Reorder List/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0143.Reorder List/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

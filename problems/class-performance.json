@@ -1,0 +1,18 @@
+{
+    "problemName": "class-performance",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    MAX(assignment1 + assignment2 + assignment3) - MIN(\r\n        assignment1 + assignment2 + assignment3\r\n    ) AS difference_in_score\r\nFROM Scores;",
+    "problemId": 2989,
+    "title": "Class Performance",
+    "problemUrl": "https://leetcode.com/problems/class-performance/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2989.Class Performance/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2989.Class Performance/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

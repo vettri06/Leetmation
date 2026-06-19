@@ -1,0 +1,48 @@
+{
+    "problemName": "find-the-number-of-ways-to-place-people-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfPairs(self, points: List[List[int]]) -> int:\r\n        points.sort(key=lambda x: (x[0], -x[1]))\r\n        ans = 0\r\n        for i, (_, y1) in enumerate(points):\r\n            max_y = -inf\r\n            for _, y2 in points[i + 1 :]:\r\n                if max_y < y2 <= y1:\r\n                    max_y = y2\r\n                    ans += 1\r\n        return ans",
+    "problemId": 3027,
+    "title": "Find the Number of Ways to Place People II",
+    "problemUrl": "https://leetcode.com/problems/find-the-number-of-ways-to-place-people-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3027.Find the Number of Ways to Place People II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3027.Find the Number of Ways to Place People II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3027.Find the Number of Ways to Place People II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3027.Find the Number of Ways to Place People II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3027.Find the Number of Ways to Place People II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3027.Find the Number of Ways to Place People II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3027.Find the Number of Ways to Place People II/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3027.Find the Number of Ways to Place People II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

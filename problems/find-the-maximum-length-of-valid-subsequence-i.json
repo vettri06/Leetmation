@@ -1,0 +1,48 @@
+{
+    "problemName": "find-the-maximum-length-of-valid-subsequence-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumLength(self, nums: List[int]) -> int:\r\n        k = 2\r\n        f = [[0] * k for _ in range(k)]\r\n        ans = 0\r\n        for x in nums:\r\n            x %= k\r\n            for j in range(k):\r\n                y = (j - x + k) % k\r\n                f[x][y] = f[y][x] + 1\r\n                ans = max(ans, f[x][y])\r\n        return ans",
+    "problemId": 3201,
+    "title": "Find the Maximum Length of Valid Subsequence I",
+    "problemUrl": "https://leetcode.com/problems/find-the-maximum-length-of-valid-subsequence-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3201.Find the Maximum Length of Valid Subsequence I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3201.Find the Maximum Length of Valid Subsequence I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3201.Find the Maximum Length of Valid Subsequence I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3201.Find the Maximum Length of Valid Subsequence I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3201.Find the Maximum Length of Valid Subsequence I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3201.Find the Maximum Length of Valid Subsequence I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3201.Find the Maximum Length of Valid Subsequence I/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3201.Find the Maximum Length of Valid Subsequence I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

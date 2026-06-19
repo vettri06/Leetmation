@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-split-of-positive-even-integers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumEvenSplit(self, finalSum: int) -> List[int]:\r\n        if finalSum & 1:\r\n            return []\r\n        ans = []\r\n        i = 2\r\n        while i <= finalSum:\r\n            finalSum -= i\r\n            ans.append(i)\r\n            i += 2\r\n        ans[-1] += finalSum\r\n        return ans",
+    "problemId": 2178,
+    "title": "Maximum Split of Positive Even Integers",
+    "problemUrl": "https://leetcode.com/problems/maximum-split-of-positive-even-integers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2178.Maximum Split of Positive Even Integers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2178.Maximum Split of Positive Even Integers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2178.Maximum Split of Positive Even Integers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2178.Maximum Split of Positive Even Integers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2178.Maximum Split of Positive Even Integers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2178.Maximum Split of Positive Even Integers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2178.Maximum Split of Positive Even Integers/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2178.Maximum Split of Positive Even Integers/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

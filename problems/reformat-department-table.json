@@ -1,0 +1,18 @@
+{
+    "problemName": "reformat-department-table",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    id,\r\n    SUM(\r\n        CASE month\r\n            WHEN 'Jan' THEN revenue\r\n        END\r\n    ) AS Jan_Revenue,\r\n    SUM(\r\n        CASE month\r\n            WHEN 'Feb' THEN revenue\r\n        END\r\n    ) AS Feb_Revenue,\r\n    SUM(\r\n        CASE month\r\n            WHEN 'Mar' THEN revenue\r\n        END\r\n    ) AS Mar_Revenue,\r\n    SUM(\r\n        CASE month\r\n            WHEN 'Apr' THEN revenue\r\n        END\r\n    ) AS Apr_Revenue,\r\n    SUM(\r\n        CASE month\r\n            WHEN 'May' THEN revenue\r\n        END\r\n    ) AS May_Revenue,\r\n    SUM(\r\n        CASE month\r\n            WHEN 'Jun' THEN revenue\r\n        END\r\n    ) AS Jun_Revenue,\r\n    SUM(\r\n        CASE month\r\n            WHEN 'Jul' THEN revenue\r\n        END\r\n    ) AS Jul_Revenue,\r\n    SUM(\r\n        CASE month\r\n            WHEN 'Aug' THEN revenue\r\n        END\r\n    ) AS Aug_Revenue,\r\n    SUM(\r\n        CASE month\r\n            WHEN 'Sep' THEN revenue\r\n        END\r\n    ) AS Sep_Revenue,\r\n    SUM(\r\n        CASE month\r\n            WHEN 'Oct' THEN revenue\r\n        END\r\n    ) AS Oct_Revenue,\r\n    SUM(\r\n        CASE month\r\n            WHEN 'Nov' THEN revenue\r\n        END\r\n    ) AS Nov_Revenue,\r\n    SUM(\r\n        CASE month\r\n            WHEN 'Dec' THEN revenue\r\n        END\r\n    ) AS Dec_Revenue\r\nFROM Department\r\nGROUP BY 1;",
+    "problemId": 1179,
+    "title": "Reformat Department Table",
+    "problemUrl": "https://leetcode.com/problems/reformat-department-table/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1179.Reformat Department Table/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1179.Reformat Department Table/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

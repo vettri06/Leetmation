@@ -1,0 +1,48 @@
+{
+    "problemName": "find-longest-special-substring-that-occurs-thrice-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumLength(self, s: str) -> int:\r\n        def check(x: int) -> bool:\r\n            cnt = defaultdict(int)\r\n            i = 0\r\n            while i < n:\r\n                j = i + 1\r\n                while j < n and s[j] == s[i]:\r\n                    j += 1\r\n                cnt[s[i]] += max(0, j - i - x + 1)\r\n                i = j\r\n            return max(cnt.values()) >= 3\r\n\r\n        n = len(s)\r\n        l, r = 0, n\r\n        while l < r:\r\n            mid = (l + r + 1) >> 1\r\n            if check(mid):\r\n                l = mid\r\n            else:\r\n                r = mid - 1\r\n        return -1 if l == 0 else l",
+    "problemId": 2981,
+    "title": "Find Longest Special Substring That Occurs Thrice I",
+    "problemUrl": "https://leetcode.com/problems/find-longest-special-substring-that-occurs-thrice-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2981.Find Longest Special Substring That Occurs Thrice I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2981.Find Longest Special Substring That Occurs Thrice I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2981.Find Longest Special Substring That Occurs Thrice I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2981.Find Longest Special Substring That Occurs Thrice I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2981.Find Longest Special Substring That Occurs Thrice I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2981.Find Longest Special Substring That Occurs Thrice I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2981.Find Longest Special Substring That Occurs Thrice I/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2981.Find Longest Special Substring That Occurs Thrice I/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

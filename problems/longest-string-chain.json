@@ -1,0 +1,48 @@
+{
+    "problemName": "longest-string-chain",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestStrChain(self, words: List[str]) -> int:\r\n        def check(w1, w2):\r\n            if len(w2) - len(w1) != 1:\r\n                return False\r\n            i = j = cnt = 0\r\n            while i < len(w1) and j < len(w2):\r\n                if w1[i] != w2[j]:\r\n                    cnt += 1\r\n                else:\r\n                    i += 1\r\n                j += 1\r\n            return cnt < 2 and i == len(w1)\r\n\r\n        n = len(words)\r\n        dp = [1] * (n + 1)\r\n        words.sort(key=lambda x: len(x))\r\n        res = 1\r\n        for i in range(1, n):\r\n            for j in range(i):\r\n                if check(words[j], words[i]):\r\n                    dp[i] = max(dp[i], dp[j] + 1)\r\n            res = max(res, dp[i])\r\n        return res",
+    "problemId": 1048,
+    "title": "Longest String Chain",
+    "problemUrl": "https://leetcode.com/problems/longest-string-chain/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1048.Longest String Chain/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1048.Longest String Chain/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1048.Longest String Chain/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1048.Longest String Chain/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1048.Longest String Chain/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1048.Longest String Chain/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1048.Longest String Chain/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1048.Longest String Chain/Solution2.py",
+            "sourceFile": "Solution2.py"
+        }
+    ]
+}

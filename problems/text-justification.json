@@ -1,0 +1,43 @@
+{
+    "problemName": "text-justification",
+    "language": "python3",
+    "code": "class Solution:\r\n    def fullJustify(self, words: List[str], maxWidth: int) -> List[str]:\r\n        ans = []\r\n        i, n = 0, len(words)\r\n        while i < n:\r\n            t = []\r\n            cnt = len(words[i])\r\n            t.append(words[i])\r\n            i += 1\r\n            while i < n and cnt + 1 + len(words[i]) <= maxWidth:\r\n                cnt += 1 + len(words[i])\r\n                t.append(words[i])\r\n                i += 1\r\n            if i == n or len(t) == 1:\r\n                left = ' '.join(t)\r\n                right = ' ' * (maxWidth - len(left))\r\n                ans.append(left + right)\r\n                continue\r\n            space_width = maxWidth - (cnt - len(t) + 1)\r\n            w, m = divmod(space_width, len(t) - 1)\r\n            row = []\r\n            for j, s in enumerate(t[:-1]):\r\n                row.append(s)\r\n                row.append(' ' * (w + (1 if j < m else 0)))\r\n            row.append(t[-1])\r\n            ans.append(''.join(row))\r\n        return ans",
+    "problemId": 68,
+    "title": "Text Justification",
+    "problemUrl": "https://leetcode.com/problems/text-justification/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0068.Text Justification/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0068.Text Justification/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0068.Text Justification/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0068.Text Justification/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0068.Text Justification/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0068.Text Justification/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0068.Text Justification/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "bank-account-summary-ii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    name,\r\n    SUM(amount) AS balance\r\nFROM\r\n    Users\r\n    JOIN Transactions USING (account)\r\nGROUP BY account\r\nHAVING balance > 10000;",
+    "problemId": 1587,
+    "title": "Bank Account Summary II",
+    "problemUrl": "https://leetcode.com/problems/bank-account-summary-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1587.Bank Account Summary II/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1587.Bank Account Summary II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

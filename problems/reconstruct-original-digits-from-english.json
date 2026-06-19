@@ -1,0 +1,33 @@
+{
+    "problemName": "reconstruct-original-digits-from-english",
+    "language": "python3",
+    "code": "class Solution:\r\n    def originalDigits(self, s: str) -> str:\r\n        counter = Counter(s)\r\n        cnt = [0] * 10\r\n\r\n        cnt[0] = counter['z']\r\n        cnt[2] = counter['w']\r\n        cnt[4] = counter['u']\r\n        cnt[6] = counter['x']\r\n        cnt[8] = counter['g']\r\n\r\n        cnt[3] = counter['h'] - cnt[8]\r\n        cnt[5] = counter['f'] - cnt[4]\r\n        cnt[7] = counter['s'] - cnt[6]\r\n\r\n        cnt[1] = counter['o'] - cnt[0] - cnt[2] - cnt[4]\r\n        cnt[9] = counter['i'] - cnt[5] - cnt[6] - cnt[8]\r\n\r\n        return ''.join(cnt[i] * str(i) for i in range(10))",
+    "problemId": 423,
+    "title": "Reconstruct Original Digits from English",
+    "problemUrl": "https://leetcode.com/problems/reconstruct-original-digits-from-english/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0423.Reconstruct Original Digits from English/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0423.Reconstruct Original Digits from English/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0423.Reconstruct Original Digits from English/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0423.Reconstruct Original Digits from English/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0423.Reconstruct Original Digits from English/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

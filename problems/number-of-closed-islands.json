@@ -1,0 +1,73 @@
+{
+    "problemName": "number-of-closed-islands",
+    "language": "python3",
+    "code": "class Solution:\r\n    def closedIsland(self, grid: List[List[int]]) -> int:\r\n        def dfs(i: int, j: int) -> int:\r\n            res = int(0 < i < m - 1 and 0 < j < n - 1)\r\n            grid[i][j] = 1\r\n            for a, b in pairwise(dirs):\r\n                x, y = i + a, j + b\r\n                if 0 <= x < m and 0 <= y < n and grid[x][y] == 0:\r\n                    res &= dfs(x, y)\r\n            return res\r\n\r\n        m, n = len(grid), len(grid[0])\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        return sum(grid[i][j] == 0 and dfs(i, j) for i in range(m) for j in range(n))",
+    "problemId": 1254,
+    "title": "Number of Closed Islands",
+    "problemUrl": "https://leetcode.com/problems/number-of-closed-islands/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1254.Number of Closed Islands/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1254.Number of Closed Islands/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1254.Number of Closed Islands/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1254.Number of Closed Islands/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1254.Number of Closed Islands/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1254.Number of Closed Islands/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1254.Number of Closed Islands/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1254.Number of Closed Islands/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1254.Number of Closed Islands/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1254.Number of Closed Islands/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1254.Number of Closed Islands/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1254.Number of Closed Islands/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1254.Number of Closed Islands/Solution2.cs",
+            "sourceFile": "Solution2.cs"
+        }
+    ]
+}

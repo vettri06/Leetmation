@@ -1,0 +1,48 @@
+{
+    "problemName": "difference-between-ones-and-zeros-in-row-and-column",
+    "language": "python3",
+    "code": "class Solution:\r\n    def onesMinusZeros(self, grid: List[List[int]]) -> List[List[int]]:\r\n        m, n = len(grid), len(grid[0])\r\n        rows = [0] * m\r\n        cols = [0] * n\r\n        for i, row in enumerate(grid):\r\n            for j, v in enumerate(row):\r\n                rows[i] += v\r\n                cols[j] += v\r\n        diff = [[0] * n for _ in range(m)]\r\n        for i, r in enumerate(rows):\r\n            for j, c in enumerate(cols):\r\n                diff[i][j] = r + c - (n - r) - (m - c)\r\n        return diff",
+    "problemId": 2482,
+    "title": "Difference Between Ones and Zeros in Row and Column",
+    "problemUrl": "https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2482.Difference Between Ones and Zeros in Row and Column/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2482.Difference Between Ones and Zeros in Row and Column/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2482.Difference Between Ones and Zeros in Row and Column/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2482.Difference Between Ones and Zeros in Row and Column/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2482.Difference Between Ones and Zeros in Row and Column/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2482.Difference Between Ones and Zeros in Row and Column/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2482.Difference Between Ones and Zeros in Row and Column/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2482.Difference Between Ones and Zeros in Row and Column/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "pancake-sorting",
+    "language": "python3",
+    "code": "class Solution:\r\n    def pancakeSort(self, arr: List[int]) -> List[int]:\r\n        def reverse(arr, j):\r\n            i = 0\r\n            while i < j:\r\n                arr[i], arr[j] = arr[j], arr[i]\r\n                i, j = i + 1, j - 1\r\n\r\n        n = len(arr)\r\n        ans = []\r\n        for i in range(n - 1, 0, -1):\r\n            j = i\r\n            while j > 0 and arr[j] != i + 1:\r\n                j -= 1\r\n            if j < i:\r\n                if j > 0:\r\n                    ans.append(j + 1)\r\n                    reverse(arr, j)\r\n                ans.append(i + 1)\r\n                reverse(arr, i)\r\n        return ans",
+    "problemId": 969,
+    "title": "Pancake Sorting",
+    "problemUrl": "https://leetcode.com/problems/pancake-sorting/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0969.Pancake Sorting/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0969.Pancake Sorting/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0969.Pancake Sorting/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0969.Pancake Sorting/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0969.Pancake Sorting/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0969.Pancake Sorting/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0969.Pancake Sorting/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

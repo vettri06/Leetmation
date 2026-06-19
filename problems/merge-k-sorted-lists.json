@@ -1,0 +1,53 @@
+{
+    "problemName": "merge-k-sorted-lists",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:\r\n        setattr(ListNode, \"__lt__\", lambda a, b: a.val < b.val)\r\n        pq = [head for head in lists if head]\r\n        heapify(pq)\r\n        dummy = cur = ListNode()\r\n        while pq:\r\n            node = heappop(pq)\r\n            if node.next:\r\n                heappush(pq, node.next)\r\n            cur.next = node\r\n            cur = cur.next\r\n        return dummy.next",
+    "problemId": 23,
+    "title": "Merge k Sorted Lists",
+    "problemUrl": "https://leetcode.com/problems/merge-k-sorted-lists/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0023.Merge k Sorted Lists/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0023.Merge k Sorted Lists/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0023.Merge k Sorted Lists/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0023.Merge k Sorted Lists/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0023.Merge k Sorted Lists/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0023.Merge k Sorted Lists/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0023.Merge k Sorted Lists/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0023.Merge k Sorted Lists/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0023.Merge k Sorted Lists/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

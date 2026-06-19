@@ -1,0 +1,43 @@
+{
+    "problemName": "mean-of-array-after-removing-some-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def trimMean(self, arr: List[int]) -> float:\r\n        n = len(arr)\r\n        start, end = int(n * 0.05), int(n * 0.95)\r\n        arr.sort()\r\n        t = arr[start:end]\r\n        return round(sum(t) / len(t), 5)",
+    "problemId": 1619,
+    "title": "Mean of Array After Removing Some Elements",
+    "problemUrl": "https://leetcode.com/problems/mean-of-array-after-removing-some-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1619.Mean of Array After Removing Some Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1619.Mean of Array After Removing Some Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1619.Mean of Array After Removing Some Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1619.Mean of Array After Removing Some Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1619.Mean of Array After Removing Some Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1619.Mean of Array After Removing Some Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1619.Mean of Array After Removing Some Elements/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "count-items-matching-a-rule",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countMatches(self, items: List[List[str]], ruleKey: str, ruleValue: str) -> int:\r\n        i = 0 if ruleKey[0] == 't' else (1 if ruleKey[0] == 'c' else 2)\r\n        return sum(v[i] == ruleValue for v in items)",
+    "problemId": 1773,
+    "title": "Count Items Matching a Rule",
+    "problemUrl": "https://leetcode.com/problems/count-items-matching-a-rule/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1773.Count Items Matching a Rule/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1773.Count Items Matching a Rule/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1773.Count Items Matching a Rule/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1773.Count Items Matching a Rule/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1773.Count Items Matching a Rule/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1773.Count Items Matching a Rule/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1773.Count Items Matching a Rule/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1773.Count Items Matching a Rule/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

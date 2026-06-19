@@ -1,0 +1,33 @@
+{
+    "problemName": "frequency-balance-subarray",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getLength(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        ans = 1\r\n        for l in range(n):\r\n            cnt = Counter()\r\n            freq = Counter()\r\n            for r in range(l, n):\r\n                x = nums[r]\r\n                if freq[cnt[x]]:\r\n                    freq[cnt[x]] -= 1\r\n                    if freq[cnt[x]] == 0:\r\n                        freq.pop(cnt[x])\r\n                cnt[x] += 1\r\n                freq[cnt[x]] += 1\r\n                if (len(cnt) == 1) or (\r\n                    len(freq) == 2\r\n                    and (freq[cnt[x] * 2] or (cnt[x] % 2 == 0 and freq[cnt[x] // 2]))\r\n                ):\r\n                    ans = max(ans, r - l + 1)\r\n        return ans",
+    "problemId": 3960,
+    "title": "Frequency Balance Subarray",
+    "problemUrl": "https://leetcode.com/problems/frequency-balance-subarray/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3960.Frequency Balance Subarray/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3960.Frequency Balance Subarray/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3960.Frequency Balance Subarray/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3960.Frequency Balance Subarray/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3960.Frequency Balance Subarray/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

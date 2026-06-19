@@ -1,0 +1,18 @@
+{
+    "problemName": "maximize-items",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT SUM(square_footage) AS s\r\n        FROM Inventory\r\n        WHERE item_type = 'prime_eligible'\r\n    )\r\nSELECT\r\n    'prime_eligible' AS item_type,\r\n    COUNT(1) * FLOOR(500000 / s) AS item_count\r\nFROM\r\n    Inventory\r\n    JOIN T\r\nWHERE item_type = 'prime_eligible'\r\nUNION ALL\r\nSELECT\r\n    'not_prime',\r\n    IFNULL(COUNT(1) * FLOOR(IF(s = 0, 500000, 500000 % s) / SUM(square_footage)), 0)\r\nFROM\r\n    Inventory\r\n    JOIN T\r\nWHERE item_type = 'not_prime';",
+    "problemId": 3052,
+    "title": "Maximize Items",
+    "problemUrl": "https://leetcode.com/problems/maximize-items/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3052.Maximize Items/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3052.Maximize Items/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

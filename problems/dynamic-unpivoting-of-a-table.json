@@ -1,0 +1,18 @@
+{
+    "problemName": "dynamic-unpivoting-of-a-table",
+    "language": "mysql",
+    "code": "CREATE PROCEDURE UnpivotProducts()\r\nBEGIN\r\n    # Write your MySQL query statement below.\r\n    SET group_concat_max_len = 5000;\r\n    WITH\r\n        t AS (\r\n            SELECT column_name\r\n            FROM information_schema.columns\r\n            WHERE\r\n                table_schema = DATABASE()\r\n                AND table_name = 'Products'\r\n                AND column_name != 'product_id'\r\n        )\r\n    SELECT\r\n        GROUP_CONCAT(\r\n            'SELECT product_id, \\'',\r\n            column_name,\r\n            '\\' store, ',\r\n            column_name,\r\n            ' price FROM Products WHERE ',\r\n            column_name,\r\n            ' IS NOT NULL' SEPARATOR ' UNION '\r\n        ) INTO @sql from t;\r\n    PREPARE stmt FROM @sql;\r\n    EXECUTE stmt;\r\n    DEALLOCATE PREPARE stmt;\r\nEND;",
+    "problemId": 2253,
+    "title": "Dynamic Unpivoting of a Table",
+    "problemUrl": "https://leetcode.com/problems/dynamic-unpivoting-of-a-table/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2253.Dynamic Unpivoting of a Table/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2253.Dynamic Unpivoting of a Table/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "delete-greatest-value-in-each-row",
+    "language": "python3",
+    "code": "class Solution:\r\n    def deleteGreatestValue(self, grid: List[List[int]]) -> int:\r\n        for row in grid:\r\n            row.sort()\r\n        return sum(max(col) for col in zip(*grid))",
+    "problemId": 2500,
+    "title": "Delete Greatest Value in Each Row",
+    "problemUrl": "https://leetcode.com/problems/delete-greatest-value-in-each-row/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2500.Delete Greatest Value in Each Row/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2500.Delete Greatest Value in Each Row/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2500.Delete Greatest Value in Each Row/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2500.Delete Greatest Value in Each Row/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2500.Delete Greatest Value in Each Row/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2500.Delete Greatest Value in Each Row/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

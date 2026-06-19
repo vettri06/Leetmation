@@ -1,0 +1,38 @@
+{
+    "problemName": "count-the-number-of-infection-sequences",
+    "language": "python3",
+    "code": "mod = 10**9 + 7\r\nmx = 10**5\r\nfac = [1] * (mx + 1)\r\nfor i in range(2, mx + 1):\r\n    fac[i] = fac[i - 1] * i % mod\r\n\r\n\r\nclass Solution:\r\n    def numberOfSequence(self, n: int, sick: List[int]) -> int:\r\n        nums = [b - a - 1 for a, b in pairwise([-1] + sick + [n])]\r\n        ans = 1\r\n        s = sum(nums)\r\n        ans = fac[s]\r\n        for x in nums:\r\n            if x:\r\n                ans = ans * pow(fac[x], mod - 2, mod) % mod\r\n        for x in nums[1:-1]:\r\n            if x > 1:\r\n                ans = ans * pow(2, x - 1, mod) % mod\r\n        return ans",
+    "problemId": 2954,
+    "title": "Count the Number of Infection Sequences",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-infection-sequences/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2954.Count the Number of Infection Sequences/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2954.Count the Number of Infection Sequences/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2954.Count the Number of Infection Sequences/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2954.Count the Number of Infection Sequences/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2954.Count the Number of Infection Sequences/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2954.Count the Number of Infection Sequences/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

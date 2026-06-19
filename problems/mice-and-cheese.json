@@ -1,0 +1,63 @@
+{
+    "problemName": "mice-and-cheese",
+    "language": "python3",
+    "code": "class Solution:\r\n    def miceAndCheese(self, reward1: List[int], reward2: List[int], k: int) -> int:\r\n        n = len(reward1)\r\n        idx = sorted(range(n), key=lambda i: reward1[i] - reward2[i], reverse=True)\r\n        return sum(reward1[i] for i in idx[:k]) + sum(reward2[i] for i in idx[k:])",
+    "problemId": 2611,
+    "title": "Mice and Cheese",
+    "problemUrl": "https://leetcode.com/problems/mice-and-cheese/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2611.Mice and Cheese/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2611.Mice and Cheese/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2611.Mice and Cheese/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2611.Mice and Cheese/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2611.Mice and Cheese/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2611.Mice and Cheese/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2611.Mice and Cheese/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2611.Mice and Cheese/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2611.Mice and Cheese/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2611.Mice and Cheese/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2611.Mice and Cheese/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

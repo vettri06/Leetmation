@@ -1,0 +1,18 @@
+{
+    "problemName": "create-a-dataframe-from-list",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef createDataframe(student_data: List[List[int]]) -> pd.DataFrame:\r\n    return pd.DataFrame(student_data, columns=['student_id', 'age'])",
+    "problemId": 2877,
+    "title": "Create a DataFrame from List",
+    "problemUrl": "https://leetcode.com/problems/create-a-dataframe-from-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2877.Create a DataFrame from List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2877.Create a DataFrame from List/Solution.py",
+            "sourceFile": "Solution.py"
+        }
+    ]
+}

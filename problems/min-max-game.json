@@ -1,0 +1,48 @@
+{
+    "problemName": "min-max-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minMaxGame(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        while n > 1:\r\n            n >>= 1\r\n            for i in range(n):\r\n                a, b = nums[i << 1], nums[i << 1 | 1]\r\n                nums[i] = min(a, b) if i % 2 == 0 else max(a, b)\r\n        return nums[0]",
+    "problemId": 2293,
+    "title": "Min Max Game",
+    "problemUrl": "https://leetcode.com/problems/min-max-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2293.Min Max Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2293.Min Max Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2293.Min Max Game/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2293.Min Max Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2293.Min Max Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2293.Min Max Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2293.Min Max Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2293.Min Max Game/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

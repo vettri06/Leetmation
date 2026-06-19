@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-subsequence-in-non-increasing-order",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSubsequence(self, nums: List[int]) -> List[int]:\r\n        ans = []\r\n        s, t = sum(nums), 0\r\n        for x in sorted(nums, reverse=True):\r\n            t += x\r\n            ans.append(x)\r\n            if t > s - t:\r\n                break\r\n        return ans",
+    "problemId": 1403,
+    "title": "Minimum Subsequence in Non-Increasing Order",
+    "problemUrl": "https://leetcode.com/problems/minimum-subsequence-in-non-increasing-order/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1403.Minimum Subsequence in Non-Increasing Order/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1403.Minimum Subsequence in Non-Increasing Order/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1403.Minimum Subsequence in Non-Increasing Order/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1403.Minimum Subsequence in Non-Increasing Order/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1403.Minimum Subsequence in Non-Increasing Order/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1403.Minimum Subsequence in Non-Increasing Order/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1403.Minimum Subsequence in Non-Increasing Order/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

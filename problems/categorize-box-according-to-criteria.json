@@ -1,0 +1,73 @@
+{
+    "problemName": "categorize-box-according-to-criteria",
+    "language": "python3",
+    "code": "class Solution:\r\n    def categorizeBox(self, length: int, width: int, height: int, mass: int) -> str:\r\n        v = length * width * height\r\n        bulky = int(any(x >= 10000 for x in (length, width, height)) or v >= 10**9)\r\n        heavy = int(mass >= 100)\r\n        i = heavy << 1 | bulky\r\n        d = ['Neither', 'Bulky', 'Heavy', 'Both']\r\n        return d[i]",
+    "problemId": 2525,
+    "title": "Categorize Box According to Criteria",
+    "problemUrl": "https://leetcode.com/problems/categorize-box-according-to-criteria/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2525.Categorize Box According to Criteria/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2525.Categorize Box According to Criteria/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2525.Categorize Box According to Criteria/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2525.Categorize Box According to Criteria/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2525.Categorize Box According to Criteria/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2525.Categorize Box According to Criteria/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2525.Categorize Box According to Criteria/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2525.Categorize Box According to Criteria/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2525.Categorize Box According to Criteria/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2525.Categorize Box According to Criteria/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2525.Categorize Box According to Criteria/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2525.Categorize Box According to Criteria/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2525.Categorize Box According to Criteria/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

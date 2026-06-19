@@ -1,0 +1,58 @@
+{
+    "problemName": "max-points-on-a-line",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxPoints(self, points: List[List[int]]) -> int:\r\n        n = len(points)\r\n        ans = 1\r\n        for i in range(n):\r\n            x1, y1 = points[i]\r\n            for j in range(i + 1, n):\r\n                x2, y2 = points[j]\r\n                cnt = 2\r\n                for k in range(j + 1, n):\r\n                    x3, y3 = points[k]\r\n                    a = (y2 - y1) * (x3 - x1)\r\n                    b = (y3 - y1) * (x2 - x1)\r\n                    cnt += a == b\r\n                ans = max(ans, cnt)\r\n        return ans",
+    "problemId": 149,
+    "title": "Max Points on a Line",
+    "problemUrl": "https://leetcode.com/problems/max-points-on-a-line/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0149.Max Points on a Line/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0149.Max Points on a Line/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0149.Max Points on a Line/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0149.Max Points on a Line/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0149.Max Points on a Line/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0149.Max Points on a Line/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0149.Max Points on a Line/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0149.Max Points on a Line/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0149.Max Points on a Line/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0149.Max Points on a Line/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

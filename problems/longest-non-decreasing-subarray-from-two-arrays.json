@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-non-decreasing-subarray-from-two-arrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxNonDecreasingLength(self, nums1: List[int], nums2: List[int]) -> int:\r\n        n = len(nums1)\r\n        f = g = 1\r\n        ans = 1\r\n        for i in range(1, n):\r\n            ff = gg = 1\r\n            if nums1[i] >= nums1[i - 1]:\r\n                ff = max(ff, f + 1)\r\n            if nums1[i] >= nums2[i - 1]:\r\n                ff = max(ff, g + 1)\r\n            if nums2[i] >= nums1[i - 1]:\r\n                gg = max(gg, f + 1)\r\n            if nums2[i] >= nums2[i - 1]:\r\n                gg = max(gg, g + 1)\r\n            f, g = ff, gg\r\n            ans = max(ans, f, g)\r\n        return ans",
+    "problemId": 2771,
+    "title": "Longest Non-decreasing Subarray From Two Arrays",
+    "problemUrl": "https://leetcode.com/problems/longest-non-decreasing-subarray-from-two-arrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2771.Longest Non-decreasing Subarray From Two Arrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2771.Longest Non-decreasing Subarray From Two Arrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2771.Longest Non-decreasing Subarray From Two Arrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2771.Longest Non-decreasing Subarray From Two Arrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2771.Longest Non-decreasing Subarray From Two Arrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2771.Longest Non-decreasing Subarray From Two Arrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "pour-water-between-buckets-to-make-water-levels-equal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def equalizeWater(self, buckets: List[int], loss: int) -> float:\r\n        def check(v):\r\n            a = b = 0\r\n            for x in buckets:\r\n                if x >= v:\r\n                    a += x - v\r\n                else:\r\n                    b += (v - x) * 100 / (100 - loss)\r\n            return a >= b\r\n\r\n        l, r = 0, max(buckets)\r\n        while r - l > 1e-5:\r\n            mid = (l + r) / 2\r\n            if check(mid):\r\n                l = mid\r\n            else:\r\n                r = mid\r\n        return l",
+    "problemId": 2137,
+    "title": "Pour Water Between Buckets to Make Water Levels Equal",
+    "problemUrl": "https://leetcode.com/problems/pour-water-between-buckets-to-make-water-levels-equal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2137.Pour Water Between Buckets to Make Water Levels Equal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2137.Pour Water Between Buckets to Make Water Levels Equal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2137.Pour Water Between Buckets to Make Water Levels Equal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2137.Pour Water Between Buckets to Make Water Levels Equal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2137.Pour Water Between Buckets to Make Water Levels Equal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2137.Pour Water Between Buckets to Make Water Levels Equal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

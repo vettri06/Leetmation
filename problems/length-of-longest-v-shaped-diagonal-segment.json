@@ -1,0 +1,33 @@
+{
+    "problemName": "length-of-longest-v-shaped-diagonal-segment",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lenOfVDiagonal(self, grid: List[List[int]]) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int, k: int, cnt: int) -> int:\r\n            x, y = i + dirs[k], j + dirs[k + 1]\r\n            target = 2 if grid[i][j] == 1 else (2 - grid[i][j])\r\n            if not 0 <= x < m or not 0 <= y < n or grid[x][y] != target:\r\n                return 0\r\n            res = dfs(x, y, k, cnt)\r\n            if cnt > 0:\r\n                res = max(res, dfs(x, y, (k + 1) % 4, 0))\r\n            return 1 + res\r\n\r\n        m, n = len(grid), len(grid[0])\r\n        dirs = (1, 1, -1, -1, 1)\r\n        ans = 0\r\n        for i, row in enumerate(grid):\r\n            for j, x in enumerate(row):\r\n                if x == 1:\r\n                    for k in range(4):\r\n                        ans = max(ans, dfs(i, j, k, 1) + 1)\r\n        return ans",
+    "problemId": 3459,
+    "title": "Length of Longest V-Shaped Diagonal Segment",
+    "problemUrl": "https://leetcode.com/problems/length-of-longest-v-shaped-diagonal-segment/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3459.Length of Longest V-Shaped Diagonal Segment/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3459.Length of Longest V-Shaped Diagonal Segment/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3459.Length of Longest V-Shaped Diagonal Segment/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3459.Length of Longest V-Shaped Diagonal Segment/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3459.Length of Longest V-Shaped Diagonal Segment/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "find-the-winner-of-an-array-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getWinner(self, arr: List[int], k: int) -> int:\r\n        mx = arr[0]\r\n        cnt = 0\r\n        for x in arr[1:]:\r\n            if mx < x:\r\n                mx = x\r\n                cnt = 1\r\n            else:\r\n                cnt += 1\r\n            if cnt == k:\r\n                break\r\n        return mx",
+    "problemId": 1535,
+    "title": "Find the Winner of an Array Game",
+    "problemUrl": "https://leetcode.com/problems/find-the-winner-of-an-array-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1535.Find the Winner of an Array Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1535.Find the Winner of an Array Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1535.Find the Winner of an Array Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1535.Find the Winner of an Array Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1535.Find the Winner of an Array Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1535.Find the Winner of an Array Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1535.Find the Winner of an Array Game/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

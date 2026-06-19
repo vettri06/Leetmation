@@ -1,0 +1,33 @@
+{
+    "problemName": "online-majority-element-in-subarray",
+    "language": "python3",
+    "code": "class Node:\r\n    __slots__ = (\"l\", \"r\", \"x\", \"cnt\")\r\n\r\n    def __init__(self):\r\n        self.l = self.r = 0\r\n        self.x = self.cnt = 0\r\n\r\n\r\nclass SegmentTree:\r\n    def __init__(self, nums):\r\n        self.nums = nums\r\n        n = len(nums)\r\n        self.tr = [Node() for _ in range(n << 2)]\r\n        self.build(1, 1, n)\r\n\r\n    def build(self, u, l, r):\r\n        self.tr[u].l, self.tr[u].r = l, r\r\n        if l == r:\r\n            self.tr[u].x = self.nums[l - 1]\r\n            self.tr[u].cnt = 1\r\n            return\r\n        mid = (l + r) >> 1\r\n        self.build(u << 1, l, mid)\r\n        self.build(u << 1 | 1, mid + 1, r)\r\n        self.pushup(u)\r\n\r\n    def query(self, u, l, r):\r\n        if self.tr[u].l >= l and self.tr[u].r <= r:\r\n            return self.tr[u].x, self.tr[u].cnt\r\n        mid = (self.tr[u].l + self.tr[u].r) >> 1\r\n        if r <= mid:\r\n            return self.query(u << 1, l, r)\r\n        if l > mid:\r\n            return self.query(u << 1 | 1, l, r)\r\n        x1, cnt1 = self.query(u << 1, l, r)\r\n        x2, cnt2 = self.query(u << 1 | 1, l, r)\r\n        if x1 == x2:\r\n            return x1, cnt1 + cnt2\r\n        if cnt1 >= cnt2:\r\n            return x1, cnt1 - cnt2\r\n        else:\r\n            return x2, cnt2 - cnt1\r\n\r\n    def pushup(self, u):\r\n        if self.tr[u << 1].x == self.tr[u << 1 | 1].x:\r\n            self.tr[u].x = self.tr[u << 1].x\r\n            self.tr[u].cnt = self.tr[u << 1].cnt + self.tr[u << 1 | 1].cnt\r\n        elif self.tr[u << 1].cnt >= self.tr[u << 1 | 1].cnt:\r\n            self.tr[u].x = self.tr[u << 1].x\r\n            self.tr[u].cnt = self.tr[u << 1].cnt - self.tr[u << 1 | 1].cnt\r\n        else:\r\n            self.tr[u].x = self.tr[u << 1 | 1].x\r\n            self.tr[u].cnt = self.tr[u << 1 | 1].cnt - self.tr[u << 1].cnt\r\n\r\n\r\nclass MajorityChecker:\r\n    def __init__(self, arr: List[int]):\r\n        self.tree = SegmentTree(arr)\r\n        self.d = defaultdict(list)\r\n        for i, x in enumerate(arr):\r\n            self.d[x].append(i)\r\n\r\n    def query(self, left: int, right: int, threshold: int) -> int:\r\n        x, _ = self.tree.query(1, left + 1, right + 1)\r\n        l = bisect_left(self.d[x], left)\r\n        r = bisect_left(self.d[x], right + 1)\r\n        return x if r - l >= threshold else -1\r\n\r\n\r\n# Your MajorityChecker object will be instantiated and called as such:\r\n# obj = MajorityChecker(arr)\r\n# param_1 = obj.query(left,right,threshold)",
+    "problemId": 1157,
+    "title": "Online Majority Element In Subarray",
+    "problemUrl": "https://leetcode.com/problems/online-majority-element-in-subarray/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1157.Online Majority Element In Subarray/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1157.Online Majority Element In Subarray/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1157.Online Majority Element In Subarray/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1157.Online Majority Element In Subarray/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1157.Online Majority Element In Subarray/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

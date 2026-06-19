@@ -1,0 +1,23 @@
+{
+    "problemName": "insert-delete-getrandom-o-1-duplicates-allowed",
+    "language": "python3",
+    "code": "class RandomizedCollection:\r\n    def __init__(self):\r\n        \"\"\"\r\n        Initialize your data structure here.\r\n        \"\"\"\r\n        self.m = {}\r\n        self.l = []\r\n\r\n    def insert(self, val: int) -> bool:\r\n        \"\"\"\r\n        Inserts a value to the collection. Returns true if the collection did not already contain the specified element.\r\n        \"\"\"\r\n        idx_set = self.m.get(val, set())\r\n        idx_set.add(len(self.l))\r\n        self.m[val] = idx_set\r\n        self.l.append(val)\r\n        return len(idx_set) == 1\r\n\r\n    def remove(self, val: int) -> bool:\r\n        \"\"\"\r\n        Removes a value from the collection. Returns true if the collection contained the specified element.\r\n        \"\"\"\r\n        if val not in self.m:\r\n            return False\r\n        idx_set = self.m[val]\r\n        idx = list(idx_set)[0]\r\n        last_idx = len(self.l) - 1\r\n        self.l[idx] = self.l[last_idx]\r\n        idx_set.remove(idx)\r\n\r\n        last_idx_set = self.m[self.l[last_idx]]\r\n        if last_idx in last_idx_set:\r\n            last_idx_set.remove(last_idx)\r\n        if idx < last_idx:\r\n            last_idx_set.add(idx)\r\n        if not idx_set:\r\n            self.m.pop(val)\r\n        self.l.pop()\r\n        return True\r\n\r\n    def getRandom(self) -> int:\r\n        \"\"\"\r\n        Get a random element from the collection.\r\n        \"\"\"\r\n        return -1 if len(self.l) == 0 else random.choice(self.l)\r\n\r\n\r\n# Your RandomizedCollection object will be instantiated and called as such:\r\n# obj = RandomizedCollection()\r\n# param_1 = obj.insert(val)\r\n# param_2 = obj.remove(val)\r\n# param_3 = obj.getRandom()",
+    "problemId": 381,
+    "title": "Insert Delete GetRandom O(1) - Duplicates allowed",
+    "problemUrl": "https://leetcode.com/problems/insert-delete-getrandom-o-1-duplicates-allowed/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0381.Insert Delete GetRandom O(1) - Duplicates allowed/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0381.Insert Delete GetRandom O(1) - Duplicates allowed/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0381.Insert Delete GetRandom O(1) - Duplicates allowed/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

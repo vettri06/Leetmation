@@ -1,0 +1,38 @@
+{
+    "problemName": "find-maximum-removals-from-source-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxRemovals(self, source: str, pattern: str, targetIndices: List[int]) -> int:\r\n        m, n = len(source), len(pattern)\r\n        f = [[-inf] * (n + 1) for _ in range(m + 1)]\r\n        f[0][0] = 0\r\n        s = set(targetIndices)\r\n        for i, c in enumerate(source, 1):\r\n            for j in range(n + 1):\r\n                f[i][j] = f[i - 1][j] + int((i - 1) in s)\r\n                if j and c == pattern[j - 1]:\r\n                    f[i][j] = max(f[i][j], f[i - 1][j - 1])\r\n        return f[m][n]",
+    "problemId": 3316,
+    "title": "Find Maximum Removals From Source String",
+    "problemUrl": "https://leetcode.com/problems/find-maximum-removals-from-source-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3316.Find Maximum Removals From Source String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3316.Find Maximum Removals From Source String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3316.Find Maximum Removals From Source String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3316.Find Maximum Removals From Source String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3316.Find Maximum Removals From Source String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3316.Find Maximum Removals From Source String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

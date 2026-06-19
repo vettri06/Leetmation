@@ -1,0 +1,33 @@
+{
+    "problemName": "sum-of-two-integers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getSum(self, a: int, b: int) -> int:\r\n        a, b = a & 0xFFFFFFFF, b & 0xFFFFFFFF\r\n        while b:\r\n            carry = ((a & b) << 1) & 0xFFFFFFFF\r\n            a, b = a ^ b, carry\r\n        return a if a < 0x80000000 else ~(a ^ 0xFFFFFFFF)",
+    "problemId": 371,
+    "title": "Sum of Two Integers",
+    "problemUrl": "https://leetcode.com/problems/sum-of-two-integers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0371.Sum of Two Integers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0371.Sum of Two Integers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0371.Sum of Two Integers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0371.Sum of Two Integers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0371.Sum of Two Integers/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

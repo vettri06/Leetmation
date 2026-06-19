@@ -1,0 +1,43 @@
+{
+    "problemName": "all-ancestors-of-a-node-in-a-directed-acyclic-graph",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getAncestors(self, n: int, edges: List[List[int]]) -> List[List[int]]:\r\n        def bfs(s: int):\r\n            q = deque([s])\r\n            vis = {s}\r\n            while q:\r\n                i = q.popleft()\r\n                for j in g[i]:\r\n                    if j not in vis:\r\n                        vis.add(j)\r\n                        q.append(j)\r\n                        ans[j].append(s)\r\n\r\n        g = defaultdict(list)\r\n        for u, v in edges:\r\n            g[u].append(v)\r\n        ans = [[] for _ in range(n)]\r\n        for i in range(n):\r\n            bfs(i)\r\n        return ans",
+    "problemId": 2192,
+    "title": "All Ancestors of a Node in a Directed Acyclic Graph",
+    "problemUrl": "https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2192.All Ancestors of a Node in a Directed Acyclic Graph/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2192.All Ancestors of a Node in a Directed Acyclic Graph/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2192.All Ancestors of a Node in a Directed Acyclic Graph/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2192.All Ancestors of a Node in a Directed Acyclic Graph/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2192.All Ancestors of a Node in a Directed Acyclic Graph/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2192.All Ancestors of a Node in a Directed Acyclic Graph/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2192.All Ancestors of a Node in a Directed Acyclic Graph/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

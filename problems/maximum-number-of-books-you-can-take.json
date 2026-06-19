@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-number-of-books-you-can-take",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumBooks(self, books: List[int]) -> int:\r\n        nums = [v - i for i, v in enumerate(books)]\r\n        n = len(nums)\r\n        left = [-1] * n\r\n        stk = []\r\n        for i, v in enumerate(nums):\r\n            while stk and nums[stk[-1]] >= v:\r\n                stk.pop()\r\n            if stk:\r\n                left[i] = stk[-1]\r\n            stk.append(i)\r\n        ans = 0\r\n        dp = [0] * n\r\n        dp[0] = books[0]\r\n        for i, v in enumerate(books):\r\n            j = left[i]\r\n            cnt = min(v, i - j)\r\n            u = v - cnt + 1\r\n            s = (u + v) * cnt // 2\r\n            dp[i] = s + (0 if j == -1 else dp[j])\r\n            ans = max(ans, dp[i])\r\n        return ans",
+    "problemId": 2355,
+    "title": "Maximum Number of Books You Can Take",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-books-you-can-take/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2355.Maximum Number of Books You Can Take/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2355.Maximum Number of Books You Can Take/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2355.Maximum Number of Books You Can Take/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2355.Maximum Number of Books You Can Take/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2355.Maximum Number of Books You Can Take/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

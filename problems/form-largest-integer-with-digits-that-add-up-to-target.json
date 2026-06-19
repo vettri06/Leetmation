@@ -1,0 +1,38 @@
+{
+    "problemName": "form-largest-integer-with-digits-that-add-up-to-target",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestNumber(self, cost: List[int], target: int) -> str:\r\n        f = [[-inf] * (target + 1) for _ in range(10)]\r\n        f[0][0] = 0\r\n        g = [[0] * (target + 1) for _ in range(10)]\r\n        for i, c in enumerate(cost, 1):\r\n            for j in range(target + 1):\r\n                if j < c or f[i][j - c] + 1 < f[i - 1][j]:\r\n                    f[i][j] = f[i - 1][j]\r\n                    g[i][j] = j\r\n                else:\r\n                    f[i][j] = f[i][j - c] + 1\r\n                    g[i][j] = j - c\r\n        if f[9][target] < 0:\r\n            return \"0\"\r\n        ans = []\r\n        i, j = 9, target\r\n        while i:\r\n            if j == g[i][j]:\r\n                i -= 1\r\n            else:\r\n                ans.append(str(i))\r\n                j = g[i][j]\r\n        return \"\".join(ans)",
+    "problemId": 1449,
+    "title": "Form Largest Integer With Digits That Add up to Target",
+    "problemUrl": "https://leetcode.com/problems/form-largest-integer-with-digits-that-add-up-to-target/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1449.Form Largest Integer With Digits That Add up to Target/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1449.Form Largest Integer With Digits That Add up to Target/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1449.Form Largest Integer With Digits That Add up to Target/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1449.Form Largest Integer With Digits That Add up to Target/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1449.Form Largest Integer With Digits That Add up to Target/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1449.Form Largest Integer With Digits That Add up to Target/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

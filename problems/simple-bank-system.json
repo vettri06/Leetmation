@@ -1,0 +1,43 @@
+{
+    "problemName": "simple-bank-system",
+    "language": "python3",
+    "code": "class Bank:\r\n    def __init__(self, balance: List[int]):\r\n        self.balance = balance\r\n        self.n = len(balance)\r\n\r\n    def transfer(self, account1: int, account2: int, money: int) -> bool:\r\n        if account1 > self.n or account2 > self.n or self.balance[account1 - 1] < money:\r\n            return False\r\n        self.balance[account1 - 1] -= money\r\n        self.balance[account2 - 1] += money\r\n        return True\r\n\r\n    def deposit(self, account: int, money: int) -> bool:\r\n        if account > self.n:\r\n            return False\r\n        self.balance[account - 1] += money\r\n        return True\r\n\r\n    def withdraw(self, account: int, money: int) -> bool:\r\n        if account > self.n or self.balance[account - 1] < money:\r\n            return False\r\n        self.balance[account - 1] -= money\r\n        return True\r\n\r\n\r\n# Your Bank object will be instantiated and called as such:\r\n# obj = Bank(balance)\r\n# param_1 = obj.transfer(account1,account2,money)\r\n# param_2 = obj.deposit(account,money)\r\n# param_3 = obj.withdraw(account,money)",
+    "problemId": 2043,
+    "title": "Simple Bank System",
+    "problemUrl": "https://leetcode.com/problems/simple-bank-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2043.Simple Bank System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2043.Simple Bank System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2043.Simple Bank System/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2043.Simple Bank System/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2043.Simple Bank System/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2043.Simple Bank System/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2043.Simple Bank System/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "problemName": "compact-object",
+    "language": "javascript",
+    "code": "/**\r\n * @param {Object|Array} obj\r\n * @return {Object|Array}\r\n */\r\nvar compactObject = function (obj) {\r\n    if (!obj || typeof obj !== 'object') {\r\n        return obj;\r\n    }\r\n    if (Array.isArray(obj)) {\r\n        return obj.filter(Boolean).map(compactObject);\r\n    }\r\n    return Object.entries(obj).reduce((acc, [key, value]) => {\r\n        if (value) {\r\n            acc[key] = compactObject(value);\r\n        }\r\n        return acc;\r\n    }, {});\r\n};",
+    "problemId": 2705,
+    "title": "Compact Object",
+    "problemUrl": "https://leetcode.com/problems/compact-object/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2705.Compact Object/Solution.js",
+    "sourceFile": "Solution.js",
+    "sourceCandidates": [
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2705.Compact Object/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2705.Compact Object/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

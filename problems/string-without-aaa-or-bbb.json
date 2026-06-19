@@ -1,0 +1,33 @@
+{
+    "problemName": "string-without-aaa-or-bbb",
+    "language": "python3",
+    "code": "class Solution:\r\n    def strWithout3a3b(self, a: int, b: int) -> str:\r\n        ans = []\r\n        while a and b:\r\n            if a > b:\r\n                ans.append('aab')\r\n                a, b = a - 2, b - 1\r\n            elif a < b:\r\n                ans.append('bba')\r\n                a, b = a - 1, b - 2\r\n            else:\r\n                ans.append('ab')\r\n                a, b = a - 1, b - 1\r\n        if a:\r\n            ans.append('a' * a)\r\n        if b:\r\n            ans.append('b' * b)\r\n        return ''.join(ans)",
+    "problemId": 984,
+    "title": "String Without AAA or BBB",
+    "problemUrl": "https://leetcode.com/problems/string-without-aaa-or-bbb/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0984.String Without AAA or BBB/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0984.String Without AAA or BBB/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0984.String Without AAA or BBB/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0984.String Without AAA or BBB/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0984.String Without AAA or BBB/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

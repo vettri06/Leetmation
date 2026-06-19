@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-non-negative-product-in-a-matrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxProductPath(self, grid: List[List[int]]) -> int:\r\n        m, n = len(grid), len(grid[0])\r\n        f = [[[0, 0] for _ in range(n)] for _ in range(m)]\r\n\r\n        for i in range(m):\r\n            for j in range(n):\r\n                x = grid[i][j]\r\n                if i == 0 and j == 0:\r\n                    f[i][j][0] = x\r\n                    f[i][j][1] = x\r\n                    continue\r\n\r\n                mn, mx = inf, -inf\r\n\r\n                if i > 0:\r\n                    a, b = f[i - 1][j]\r\n                    mn = min(mn, a * x, b * x)\r\n                    mx = max(mx, a * x, b * x)\r\n\r\n                if j > 0:\r\n                    a, b = f[i][j - 1]\r\n                    mn = min(mn, a * x, b * x)\r\n                    mx = max(mx, a * x, b * x)\r\n\r\n                f[i][j][0], f[i][j][1] = mn, mx\r\n\r\n        ans = f[m - 1][n - 1][1]\r\n        mod = 10**9 + 7\r\n        return -1 if ans < 0 else ans % mod",
+    "problemId": 1594,
+    "title": "Maximum Non Negative Product in a Matrix",
+    "problemUrl": "https://leetcode.com/problems/maximum-non-negative-product-in-a-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1594.Maximum Non Negative Product in a Matrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1594.Maximum Non Negative Product in a Matrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1594.Maximum Non Negative Product in a Matrix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1594.Maximum Non Negative Product in a Matrix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1594.Maximum Non Negative Product in a Matrix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1594.Maximum Non Negative Product in a Matrix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1594.Maximum Non Negative Product in a Matrix/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "generate-fibonacci-sequence",
+    "language": "typescript",
+    "code": "function* fibGenerator(): Generator<number, any, number> {\r\n    let a = 0;\r\n    let b = 1;\r\n    while (true) {\r\n        yield a;\r\n        [a, b] = [b, a + b];\r\n    }\r\n}\r\n\r\n/**\r\n * const gen = fibGenerator();\r\n * gen.next().value; // 0\r\n * gen.next().value; // 1\r\n */",
+    "problemId": 2648,
+    "title": "Generate Fibonacci Sequence",
+    "problemUrl": "https://leetcode.com/problems/generate-fibonacci-sequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2648.Generate Fibonacci Sequence/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2648.Generate Fibonacci Sequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

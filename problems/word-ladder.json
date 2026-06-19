@@ -1,0 +1,63 @@
+{
+    "problemName": "word-ladder",
+    "language": "python3",
+    "code": "class Solution:\r\n    def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:\r\n        words = set(wordList)\r\n        q = deque([beginWord])\r\n        ans = 1\r\n        while q:\r\n            ans += 1\r\n            for _ in range(len(q)):\r\n                s = q.popleft()\r\n                s = list(s)\r\n                for i in range(len(s)):\r\n                    ch = s[i]\r\n                    for j in range(26):\r\n                        s[i] = chr(ord('a') + j)\r\n                        t = ''.join(s)\r\n                        if t not in words:\r\n                            continue\r\n                        if t == endWord:\r\n                            return ans\r\n                        q.append(t)\r\n                        words.remove(t)\r\n                    s[i] = ch\r\n        return 0",
+    "problemId": 127,
+    "title": "Word Ladder",
+    "problemUrl": "https://leetcode.com/problems/word-ladder/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0127.Word Ladder/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0127.Word Ladder/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0127.Word Ladder/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0127.Word Ladder/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0127.Word Ladder/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0127.Word Ladder/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0127.Word Ladder/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0127.Word Ladder/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0127.Word Ladder/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0127.Word Ladder/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0127.Word Ladder/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "single-threaded-cpu",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getOrder(self, tasks: List[List[int]]) -> List[int]:\r\n        for i, task in enumerate(tasks):\r\n            task.append(i)\r\n        tasks.sort()\r\n        ans = []\r\n        q = []\r\n        n = len(tasks)\r\n        i = t = 0\r\n        while q or i < n:\r\n            if not q:\r\n                t = max(t, tasks[i][0])\r\n            while i < n and tasks[i][0] <= t:\r\n                heappush(q, (tasks[i][1], tasks[i][2]))\r\n                i += 1\r\n            pt, j = heappop(q)\r\n            ans.append(j)\r\n            t += pt\r\n        return ans",
+    "problemId": 1834,
+    "title": "Single-Threaded CPU",
+    "problemUrl": "https://leetcode.com/problems/single-threaded-cpu/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1834.Single-Threaded CPU/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1834.Single-Threaded CPU/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1834.Single-Threaded CPU/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1834.Single-Threaded CPU/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1834.Single-Threaded CPU/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

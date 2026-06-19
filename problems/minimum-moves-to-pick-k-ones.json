@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-moves-to-pick-k-ones",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumMoves(self, nums: List[int], k: int, maxChanges: int) -> int:\r\n        n = len(nums)\r\n        cnt = [0] * (n + 1)\r\n        s = [0] * (n + 1)\r\n        for i, x in enumerate(nums, 1):\r\n            cnt[i] = cnt[i - 1] + x\r\n            s[i] = s[i - 1] + i * x\r\n        ans = inf\r\n        max = lambda x, y: x if x > y else y\r\n        min = lambda x, y: x if x < y else y\r\n        for i, x in enumerate(nums, 1):\r\n            t = 0\r\n            need = k - x\r\n            for j in (i - 1, i + 1):\r\n                if need > 0 and 1 <= j <= n and nums[j - 1] == 1:\r\n                    need -= 1\r\n                    t += 1\r\n            c = min(need, maxChanges)\r\n            need -= c\r\n            t += c * 2\r\n            if need <= 0:\r\n                ans = min(ans, t)\r\n                continue\r\n            l, r = 2, max(i - 1, n - i)\r\n            while l <= r:\r\n                mid = (l + r) >> 1\r\n                l1, r1 = max(1, i - mid), max(0, i - 2)\r\n                l2, r2 = min(n + 1, i + 2), min(n, i + mid)\r\n                c1 = cnt[r1] - cnt[l1 - 1]\r\n                c2 = cnt[r2] - cnt[l2 - 1]\r\n                if c1 + c2 >= need:\r\n                    t1 = c1 * i - (s[r1] - s[l1 - 1])\r\n                    t2 = s[r2] - s[l2 - 1] - c2 * i\r\n                    ans = min(ans, t + t1 + t2)\r\n                    r = mid - 1\r\n                else:\r\n                    l = mid + 1\r\n        return ans",
+    "problemId": 3086,
+    "title": "Minimum Moves to Pick K Ones",
+    "problemUrl": "https://leetcode.com/problems/minimum-moves-to-pick-k-ones/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3086.Minimum Moves to Pick K Ones/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3086.Minimum Moves to Pick K Ones/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3086.Minimum Moves to Pick K Ones/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3086.Minimum Moves to Pick K Ones/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3086.Minimum Moves to Pick K Ones/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3086.Minimum Moves to Pick K Ones/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

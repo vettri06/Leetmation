@@ -1,0 +1,23 @@
+{
+    "problemName": "design-search-autocomplete-system",
+    "language": "python3",
+    "code": "class Trie:\r\n    def __init__(self):\r\n        self.children = [None] * 27\r\n        self.v = 0\r\n        self.w = ''\r\n\r\n    def insert(self, w, t):\r\n        node = self\r\n        for c in w:\r\n            idx = 26 if c == ' ' else ord(c) - ord('a')\r\n            if node.children[idx] is None:\r\n                node.children[idx] = Trie()\r\n            node = node.children[idx]\r\n        node.v += t\r\n        node.w = w\r\n\r\n    def search(self, pref):\r\n        node = self\r\n        for c in pref:\r\n            idx = 26 if c == ' ' else ord(c) - ord('a')\r\n            if node.children[idx] is None:\r\n                return None\r\n            node = node.children[idx]\r\n        return node\r\n\r\n\r\nclass AutocompleteSystem:\r\n    def __init__(self, sentences: List[str], times: List[int]):\r\n        self.trie = Trie()\r\n        for a, b in zip(sentences, times):\r\n            self.trie.insert(a, b)\r\n        self.t = []\r\n\r\n    def input(self, c: str) -> List[str]:\r\n        def dfs(node):\r\n            if node is None:\r\n                return\r\n            if node.v:\r\n                res.append((node.v, node.w))\r\n            for nxt in node.children:\r\n                dfs(nxt)\r\n\r\n        if c == '#':\r\n            s = ''.join(self.t)\r\n            self.trie.insert(s, 1)\r\n            self.t = []\r\n            return []\r\n\r\n        res = []\r\n        self.t.append(c)\r\n        node = self.trie.search(''.join(self.t))\r\n        if node is None:\r\n            return res\r\n        dfs(node)\r\n        res.sort(key=lambda x: (-x[0], x[1]))\r\n        return [v[1] for v in res[:3]]\r\n\r\n\r\n# Your AutocompleteSystem object will be instantiated and called as such:\r\n# obj = AutocompleteSystem(sentences, times)\r\n# param_1 = obj.input(c)",
+    "problemId": 642,
+    "title": "Design Search Autocomplete System",
+    "problemUrl": "https://leetcode.com/problems/design-search-autocomplete-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0642.Design Search Autocomplete System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0642.Design Search Autocomplete System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0642.Design Search Autocomplete System/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

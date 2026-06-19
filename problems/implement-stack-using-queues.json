@@ -1,0 +1,43 @@
+{
+    "problemName": "implement-stack-using-queues",
+    "language": "python3",
+    "code": "class MyStack:\r\n    def __init__(self):\r\n        self.q1 = deque()\r\n        self.q2 = deque()\r\n\r\n    def push(self, x: int) -> None:\r\n        self.q2.append(x)\r\n        while self.q1:\r\n            self.q2.append(self.q1.popleft())\r\n        self.q1, self.q2 = self.q2, self.q1\r\n\r\n    def pop(self) -> int:\r\n        return self.q1.popleft()\r\n\r\n    def top(self) -> int:\r\n        return self.q1[0]\r\n\r\n    def empty(self) -> bool:\r\n        return len(self.q1) == 0\r\n\r\n\r\n# Your MyStack object will be instantiated and called as such:\r\n# obj = MyStack()\r\n# obj.push(x)\r\n# param_2 = obj.pop()\r\n# param_3 = obj.top()\r\n# param_4 = obj.empty()",
+    "problemId": 225,
+    "title": "Implement Stack using Queues",
+    "problemUrl": "https://leetcode.com/problems/implement-stack-using-queues/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0225.Implement Stack using Queues/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0225.Implement Stack using Queues/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0225.Implement Stack using Queues/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0225.Implement Stack using Queues/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0225.Implement Stack using Queues/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0225.Implement Stack using Queues/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0225.Implement Stack using Queues/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

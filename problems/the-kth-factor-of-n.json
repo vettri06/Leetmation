@@ -1,0 +1,63 @@
+{
+    "problemName": "the-kth-factor-of-n",
+    "language": "python3",
+    "code": "class Solution:\r\n    def kthFactor(self, n: int, k: int) -> int:\r\n        for i in range(1, n + 1):\r\n            if n % i == 0:\r\n                k -= 1\r\n                if k == 0:\r\n                    return i\r\n        return -1",
+    "problemId": 1492,
+    "title": "The kth Factor of n",
+    "problemUrl": "https://leetcode.com/problems/the-kth-factor-of-n/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1492.The kth Factor of n/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1492.The kth Factor of n/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1492.The kth Factor of n/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1492.The kth Factor of n/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1492.The kth Factor of n/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1492.The kth Factor of n/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1492.The kth Factor of n/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1492.The kth Factor of n/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1492.The kth Factor of n/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1492.The kth Factor of n/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1492.The kth Factor of n/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

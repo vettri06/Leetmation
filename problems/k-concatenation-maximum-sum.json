@@ -1,0 +1,33 @@
+{
+    "problemName": "k-concatenation-maximum-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:\r\n        s = mx_pre = mi_pre = mx_sub = 0\r\n        for x in arr:\r\n            s += x\r\n            mx_pre = max(mx_pre, s)\r\n            mi_pre = min(mi_pre, s)\r\n            mx_sub = max(mx_sub, s - mi_pre)\r\n        ans = mx_sub\r\n        mod = 10**9 + 7\r\n        if k == 1:\r\n            return ans % mod\r\n        mx_suf = s - mi_pre\r\n        ans = max(ans, mx_pre + mx_suf)\r\n        if s > 0:\r\n            ans = max(ans, (k - 2) * s + mx_pre + mx_suf)\r\n        return ans % mod",
+    "problemId": 1191,
+    "title": "K-Concatenation Maximum Sum",
+    "problemUrl": "https://leetcode.com/problems/k-concatenation-maximum-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1191.K-Concatenation Maximum Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1191.K-Concatenation Maximum Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1191.K-Concatenation Maximum Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1191.K-Concatenation Maximum Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1191.K-Concatenation Maximum Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

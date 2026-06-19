@@ -1,0 +1,38 @@
+{
+    "problemName": "find-maximum-non-decreasing-array-length",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMaximumLength(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        s = list(accumulate(nums, initial=0))\r\n        f = [0] * (n + 1)\r\n        pre = [0] * (n + 2)\r\n        for i in range(1, n + 1):\r\n            pre[i] = max(pre[i], pre[i - 1])\r\n            f[i] = f[pre[i]] + 1\r\n            j = bisect_left(s, s[i] * 2 - s[pre[i]])\r\n            pre[j] = i\r\n        return f[n]",
+    "problemId": 2945,
+    "title": "Find Maximum Non-decreasing Array Length",
+    "problemUrl": "https://leetcode.com/problems/find-maximum-non-decreasing-array-length/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2945.Find Maximum Non-decreasing Array Length/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2945.Find Maximum Non-decreasing Array Length/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2945.Find Maximum Non-decreasing Array Length/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2945.Find Maximum Non-decreasing Array Length/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2945.Find Maximum Non-decreasing Array Length/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2945.Find Maximum Non-decreasing Array Length/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

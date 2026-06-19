@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-space-wasted-from-packaging",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minWastedSpace(self, packages: List[int], boxes: List[List[int]]) -> int:\r\n        mod = 10**9 + 7\r\n        ans = inf\r\n        packages.sort()\r\n        for box in boxes:\r\n            box.sort()\r\n            if packages[-1] > box[-1]:\r\n                continue\r\n            s = i = 0\r\n            for b in box:\r\n                j = bisect_right(packages, b, lo=i)\r\n                s += (j - i) * b\r\n                i = j\r\n            ans = min(ans, s)\r\n        if ans == inf:\r\n            return -1\r\n        return (ans - sum(packages)) % mod",
+    "problemId": 1889,
+    "title": "Minimum Space Wasted From Packaging",
+    "problemUrl": "https://leetcode.com/problems/minimum-space-wasted-from-packaging/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1889.Minimum Space Wasted From Packaging/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1889.Minimum Space Wasted From Packaging/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1889.Minimum Space Wasted From Packaging/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1889.Minimum Space Wasted From Packaging/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1889.Minimum Space Wasted From Packaging/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1889.Minimum Space Wasted From Packaging/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

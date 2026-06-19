@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-xor-product",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumXorProduct(self, a: int, b: int, n: int) -> int:\r\n        mod = 10**9 + 7\r\n        ax, bx = (a >> n) << n, (b >> n) << n\r\n        for i in range(n - 1, -1, -1):\r\n            x = a >> i & 1\r\n            y = b >> i & 1\r\n            if x == y:\r\n                ax |= 1 << i\r\n                bx |= 1 << i\r\n            elif ax > bx:\r\n                bx |= 1 << i\r\n            else:\r\n                ax |= 1 << i\r\n        return ax * bx % mod",
+    "problemId": 2939,
+    "title": "Maximum Xor Product",
+    "problemUrl": "https://leetcode.com/problems/maximum-xor-product/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2939.Maximum Xor Product/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2939.Maximum Xor Product/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2939.Maximum Xor Product/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2939.Maximum Xor Product/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2939.Maximum Xor Product/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2939.Maximum Xor Product/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "house-robber-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def rob(self, nums: List[int]) -> int:\r\n        def _rob(nums):\r\n            f = g = 0\r\n            for x in nums:\r\n                f, g = max(f, g), f + x\r\n            return max(f, g)\r\n\r\n        if len(nums) == 1:\r\n            return nums[0]\r\n        return max(_rob(nums[1:]), _rob(nums[:-1]))",
+    "problemId": 213,
+    "title": "House Robber II",
+    "problemUrl": "https://leetcode.com/problems/house-robber-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0213.House Robber II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0213.House Robber II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0213.House Robber II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0213.House Robber II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0213.House Robber II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0213.House Robber II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0213.House Robber II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-operations-to-collect-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums: List[int], k: int) -> int:\r\n        is_added = [False] * k\r\n        count = 0\r\n        n = len(nums)\r\n        for i in range(n - 1, -1, -1):\r\n            if nums[i] > k or is_added[nums[i] - 1]:\r\n                continue\r\n            is_added[nums[i] - 1] = True\r\n            count += 1\r\n            if count == k:\r\n                return n - i",
+    "problemId": 2869,
+    "title": "Minimum Operations to Collect Elements",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-collect-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2869.Minimum Operations to Collect Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2869.Minimum Operations to Collect Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2869.Minimum Operations to Collect Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2869.Minimum Operations to Collect Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2869.Minimum Operations to Collect Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2869.Minimum Operations to Collect Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

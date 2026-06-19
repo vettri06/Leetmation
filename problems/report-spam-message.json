@@ -1,0 +1,33 @@
+{
+    "problemName": "report-spam-message",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reportSpam(self, message: List[str], bannedWords: List[str]) -> bool:\r\n        s = set(bannedWords)\r\n        return sum(w in s for w in message) >= 2",
+    "problemId": 3295,
+    "title": "Report Spam Message",
+    "problemUrl": "https://leetcode.com/problems/report-spam-message/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3295.Report Spam Message/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3295.Report Spam Message/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3295.Report Spam Message/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3295.Report Spam Message/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3295.Report Spam Message/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "time-to-cross-a-bridge",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findCrossingTime(self, n: int, k: int, time: List[List[int]]) -> int:\r\n        time.sort(key=lambda x: x[0] + x[2])\r\n        cur = 0\r\n        wait_in_left, wait_in_right = [], []\r\n        work_in_left, work_in_right = [], []\r\n        for i in range(k):\r\n            heappush(wait_in_left, -i)\r\n        while 1:\r\n            while work_in_left:\r\n                t, i = work_in_left[0]\r\n                if t > cur:\r\n                    break\r\n                heappop(work_in_left)\r\n                heappush(wait_in_left, -i)\r\n            while work_in_right:\r\n                t, i = work_in_right[0]\r\n                if t > cur:\r\n                    break\r\n                heappop(work_in_right)\r\n                heappush(wait_in_right, -i)\r\n            left_to_go = n > 0 and wait_in_left\r\n            right_to_go = bool(wait_in_right)\r\n            if not left_to_go and not right_to_go:\r\n                nxt = inf\r\n                if work_in_left:\r\n                    nxt = min(nxt, work_in_left[0][0])\r\n                if work_in_right:\r\n                    nxt = min(nxt, work_in_right[0][0])\r\n                cur = nxt\r\n                continue\r\n            if right_to_go:\r\n                i = -heappop(wait_in_right)\r\n                cur += time[i][2]\r\n                if n == 0 and not wait_in_right and not work_in_right:\r\n                    return cur\r\n                heappush(work_in_left, (cur + time[i][3], i))\r\n            else:\r\n                i = -heappop(wait_in_left)\r\n                cur += time[i][0]\r\n                n -= 1\r\n                heappush(work_in_right, (cur + time[i][1], i))",
+    "problemId": 2532,
+    "title": "Time to Cross a Bridge",
+    "problemUrl": "https://leetcode.com/problems/time-to-cross-a-bridge/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2532.Time to Cross a Bridge/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2532.Time to Cross a Bridge/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2532.Time to Cross a Bridge/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2532.Time to Cross a Bridge/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2532.Time to Cross a Bridge/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

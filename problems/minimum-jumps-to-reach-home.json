@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-jumps-to-reach-home",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumJumps(self, forbidden: List[int], a: int, b: int, x: int) -> int:\r\n        s = set(forbidden)\r\n        q = deque([(0, 1)])\r\n        vis = {(0, 1)}\r\n        ans = 0\r\n        while q:\r\n            for _ in range(len(q)):\r\n                i, k = q.popleft()\r\n                if i == x:\r\n                    return ans\r\n                nxt = [(i + a, 1)]\r\n                if k & 1:\r\n                    nxt.append((i - b, 0))\r\n                for j, k in nxt:\r\n                    if 0 <= j < 6000 and j not in s and (j, k) not in vis:\r\n                        q.append((j, k))\r\n                        vis.add((j, k))\r\n            ans += 1\r\n        return -1",
+    "problemId": 1654,
+    "title": "Minimum Jumps to Reach Home",
+    "problemUrl": "https://leetcode.com/problems/minimum-jumps-to-reach-home/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1654.Minimum Jumps to Reach Home/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1654.Minimum Jumps to Reach Home/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1654.Minimum Jumps to Reach Home/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1654.Minimum Jumps to Reach Home/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1654.Minimum Jumps to Reach Home/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1654.Minimum Jumps to Reach Home/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

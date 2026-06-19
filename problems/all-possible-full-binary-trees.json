@@ -1,0 +1,48 @@
+{
+    "problemName": "all-possible-full-binary-trees",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def allPossibleFBT(self, n: int) -> List[Optional[TreeNode]]:\r\n        @cache\r\n        def dfs(n: int) -> List[Optional[TreeNode]]:\r\n            if n == 1:\r\n                return [TreeNode()]\r\n            ans = []\r\n            for i in range(n - 1):\r\n                j = n - 1 - i\r\n                for left in dfs(i):\r\n                    for right in dfs(j):\r\n                        ans.append(TreeNode(0, left, right))\r\n            return ans\r\n\r\n        return dfs(n)",
+    "problemId": 894,
+    "title": "All Possible Full Binary Trees",
+    "problemUrl": "https://leetcode.com/problems/all-possible-full-binary-trees/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0894.All Possible Full Binary Trees/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0894.All Possible Full Binary Trees/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0894.All Possible Full Binary Trees/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0894.All Possible Full Binary Trees/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0894.All Possible Full Binary Trees/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0894.All Possible Full Binary Trees/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0894.All Possible Full Binary Trees/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0894.All Possible Full Binary Trees/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

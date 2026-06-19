@@ -1,0 +1,38 @@
+{
+    "problemName": "count-the-repetitions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getMaxRepetitions(self, s1: str, n1: int, s2: str, n2: int) -> int:\r\n        n = len(s2)\r\n        d = {}\r\n        for i in range(n):\r\n            cnt = 0\r\n            j = i\r\n            for c in s1:\r\n                if c == s2[j]:\r\n                    j += 1\r\n                if j == n:\r\n                    cnt += 1\r\n                    j = 0\r\n            d[i] = (cnt, j)\r\n\r\n        ans = 0\r\n        j = 0\r\n        for _ in range(n1):\r\n            cnt, j = d[j]\r\n            ans += cnt\r\n        return ans // n2",
+    "problemId": 466,
+    "title": "Count The Repetitions",
+    "problemUrl": "https://leetcode.com/problems/count-the-repetitions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0466.Count The Repetitions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0466.Count The Repetitions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0466.Count The Repetitions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0466.Count The Repetitions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0466.Count The Repetitions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0466.Count The Repetitions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "shortest-distance-from-all-buildings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shortestDistance(self, grid: List[List[int]]) -> int:\r\n        m, n = len(grid), len(grid[0])\r\n        q = deque()\r\n        total = 0\r\n        cnt = [[0] * n for _ in range(m)]\r\n        dist = [[0] * n for _ in range(m)]\r\n        for i in range(m):\r\n            for j in range(n):\r\n                if grid[i][j] == 1:\r\n                    total += 1\r\n                    q.append((i, j))\r\n                    d = 0\r\n                    vis = set()\r\n                    while q:\r\n                        d += 1\r\n                        for _ in range(len(q)):\r\n                            r, c = q.popleft()\r\n                            for a, b in [[0, 1], [0, -1], [1, 0], [-1, 0]]:\r\n                                x, y = r + a, c + b\r\n                                if (\r\n                                    0 <= x < m\r\n                                    and 0 <= y < n\r\n                                    and grid[x][y] == 0\r\n                                    and (x, y) not in vis\r\n                                ):\r\n                                    cnt[x][y] += 1\r\n                                    dist[x][y] += d\r\n                                    q.append((x, y))\r\n                                    vis.add((x, y))\r\n        ans = inf\r\n        for i in range(m):\r\n            for j in range(n):\r\n                if grid[i][j] == 0 and cnt[i][j] == total:\r\n                    ans = min(ans, dist[i][j])\r\n        return -1 if ans == inf else ans",
+    "problemId": 317,
+    "title": "Shortest Distance from All Buildings",
+    "problemUrl": "https://leetcode.com/problems/shortest-distance-from-all-buildings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0317.Shortest Distance from All Buildings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0317.Shortest Distance from All Buildings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0317.Shortest Distance from All Buildings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0317.Shortest Distance from All Buildings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0317.Shortest Distance from All Buildings/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

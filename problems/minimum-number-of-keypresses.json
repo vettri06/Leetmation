@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-number-of-keypresses",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumKeypresses(self, s: str) -> int:\r\n        cnt = Counter(s)\r\n        ans, k = 0, 1\r\n        for i, x in enumerate(sorted(cnt.values(), reverse=True), 1):\r\n            ans += k * x\r\n            if i % 9 == 0:\r\n                k += 1\r\n        return ans",
+    "problemId": 2268,
+    "title": "Minimum Number of Keypresses",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-keypresses/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2268.Minimum Number of Keypresses/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2268.Minimum Number of Keypresses/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2268.Minimum Number of Keypresses/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2268.Minimum Number of Keypresses/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2268.Minimum Number of Keypresses/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2268.Minimum Number of Keypresses/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

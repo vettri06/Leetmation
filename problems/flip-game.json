@@ -1,0 +1,38 @@
+{
+    "problemName": "flip-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def generatePossibleNextMoves(self, currentState: str) -> List[str]:\r\n        s = list(currentState)\r\n        ans = []\r\n        for i, (a, b) in enumerate(pairwise(s)):\r\n            if a == b == \"+\":\r\n                s[i] = s[i + 1] = \"-\"\r\n                ans.append(\"\".join(s))\r\n                s[i] = s[i + 1] = \"+\"\r\n        return ans",
+    "problemId": 293,
+    "title": "Flip Game",
+    "problemUrl": "https://leetcode.com/problems/flip-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0293.Flip Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0293.Flip Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0293.Flip Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0293.Flip Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0293.Flip Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0293.Flip Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

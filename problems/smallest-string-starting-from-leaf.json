@@ -1,0 +1,33 @@
+{
+    "problemName": "smallest-string-starting-from-leaf",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def smallestFromLeaf(self, root: TreeNode) -> str:\r\n        ans = chr(ord('z') + 1)\r\n\r\n        def dfs(root, path):\r\n            nonlocal ans\r\n            if root:\r\n                path.append(chr(ord('a') + root.val))\r\n                if root.left is None and root.right is None:\r\n                    ans = min(ans, ''.join(reversed(path)))\r\n                dfs(root.left, path)\r\n                dfs(root.right, path)\r\n                path.pop()\r\n\r\n        dfs(root, [])\r\n        return ans",
+    "problemId": 988,
+    "title": "Smallest String Starting From Leaf",
+    "problemUrl": "https://leetcode.com/problems/smallest-string-starting-from-leaf/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0988.Smallest String Starting From Leaf/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0988.Smallest String Starting From Leaf/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0988.Smallest String Starting From Leaf/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0988.Smallest String Starting From Leaf/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0988.Smallest String Starting From Leaf/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

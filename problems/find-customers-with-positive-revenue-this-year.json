@@ -1,0 +1,18 @@
+{
+    "problemName": "find-customers-with-positive-revenue-this-year",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    customer_id\r\nFROM Customers\r\nWHERE year = '2021' AND revenue > 0;",
+    "problemId": 1821,
+    "title": "Find Customers With Positive Revenue this Year",
+    "problemUrl": "https://leetcode.com/problems/find-customers-with-positive-revenue-this-year/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1821.Find Customers With Positive Revenue this Year/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1821.Find Customers With Positive Revenue this Year/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

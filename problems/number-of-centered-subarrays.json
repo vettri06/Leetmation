@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-centered-subarrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def centeredSubarrays(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        ans = 0\r\n        for i in range(n):\r\n            st = set()\r\n            s = 0\r\n            for j in range(i, n):\r\n                s += nums[j]\r\n                st.add(nums[j])\r\n                if s in st:\r\n                    ans += 1\r\n        return ans",
+    "problemId": 3804,
+    "title": "Number of Centered Subarrays",
+    "problemUrl": "https://leetcode.com/problems/number-of-centered-subarrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3804.Number of Centered Subarrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3804.Number of Centered Subarrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3804.Number of Centered Subarrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3804.Number of Centered Subarrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3804.Number of Centered Subarrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3804.Number of Centered Subarrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

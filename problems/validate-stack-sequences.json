@@ -1,0 +1,53 @@
+{
+    "problemName": "validate-stack-sequences",
+    "language": "python3",
+    "code": "class Solution:\r\n    def validateStackSequences(self, pushed: List[int], popped: List[int]) -> bool:\r\n        stk = []\r\n        i = 0\r\n        for x in pushed:\r\n            stk.append(x)\r\n            while stk and stk[-1] == popped[i]:\r\n                stk.pop()\r\n                i += 1\r\n        return i == len(popped)",
+    "problemId": 946,
+    "title": "Validate Stack Sequences",
+    "problemUrl": "https://leetcode.com/problems/validate-stack-sequences/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0946.Validate Stack Sequences/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0946.Validate Stack Sequences/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0946.Validate Stack Sequences/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0946.Validate Stack Sequences/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0946.Validate Stack Sequences/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0946.Validate Stack Sequences/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0946.Validate Stack Sequences/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0946.Validate Stack Sequences/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0946.Validate Stack Sequences/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

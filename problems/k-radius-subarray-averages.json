@@ -1,0 +1,38 @@
+{
+    "problemName": "k-radius-subarray-averages",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getAverages(self, nums: List[int], k: int) -> List[int]:\r\n        n = len(nums)\r\n        ans = [-1] * n\r\n        s = 0\r\n        for i, x in enumerate(nums):\r\n            s += x\r\n            if i >= k * 2:\r\n                ans[i - k] = s // (k * 2 + 1)\r\n                s -= nums[i - k * 2]\r\n        return ans",
+    "problemId": 2090,
+    "title": "K Radius Subarray Averages",
+    "problemUrl": "https://leetcode.com/problems/k-radius-subarray-averages/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2090.K Radius Subarray Averages/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2090.K Radius Subarray Averages/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2090.K Radius Subarray Averages/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2090.K Radius Subarray Averages/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2090.K Radius Subarray Averages/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2090.K Radius Subarray Averages/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

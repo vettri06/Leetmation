@@ -1,0 +1,48 @@
+{
+    "problemName": "robot-return-to-origin",
+    "language": "python3",
+    "code": "class Solution:\r\n    def judgeCircle(self, moves: str) -> bool:\r\n        x = y = 0\r\n        for c in moves:\r\n            match c:\r\n                case \"U\":\r\n                    y += 1\r\n                case \"D\":\r\n                    y -= 1\r\n                case \"L\":\r\n                    x -= 1\r\n                case \"R\":\r\n                    x += 1\r\n        return x == 0 and y == 0",
+    "problemId": 657,
+    "title": "Robot Return to Origin",
+    "problemUrl": "https://leetcode.com/problems/robot-return-to-origin/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0657.Robot Return to Origin/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0657.Robot Return to Origin/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0657.Robot Return to Origin/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0657.Robot Return to Origin/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0657.Robot Return to Origin/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0657.Robot Return to Origin/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0657.Robot Return to Origin/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0657.Robot Return to Origin/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

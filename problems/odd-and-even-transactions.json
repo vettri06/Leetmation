@@ -1,0 +1,23 @@
+{
+    "problemName": "odd-and-even-transactions",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef sum_daily_odd_even(transactions: pd.DataFrame) -> pd.DataFrame:\r\n    transactions[\"odd_sum\"] = transactions[\"amount\"].where(\r\n        transactions[\"amount\"] % 2 == 1, 0\r\n    )\r\n    transactions[\"even_sum\"] = transactions[\"amount\"].where(\r\n        transactions[\"amount\"] % 2 == 0, 0\r\n    )\r\n\r\n    result = (\r\n        transactions.groupby(\"transaction_date\")\r\n        .agg(odd_sum=(\"odd_sum\", \"sum\"), even_sum=(\"even_sum\", \"sum\"))\r\n        .reset_index()\r\n    )\r\n\r\n    result = result.sort_values(\"transaction_date\")\r\n\r\n    return result",
+    "problemId": 3220,
+    "title": "Odd and Even Transactions",
+    "problemUrl": "https://leetcode.com/problems/odd-and-even-transactions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3220.Odd and Even Transactions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3220.Odd and Even Transactions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3220.Odd and Even Transactions/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-single-divisor-triplets",
+    "language": "python3",
+    "code": "class Solution:\r\n    def singleDivisorTriplet(self, nums: List[int]) -> int:\r\n        cnt = Counter(nums)\r\n        ans = 0\r\n        for a, x in cnt.items():\r\n            for b, y in cnt.items():\r\n                for c, z in cnt.items():\r\n                    s = a + b + c\r\n                    if sum(s % v == 0 for v in (a, b, c)) == 1:\r\n                        if a == b:\r\n                            ans += x * (x - 1) * z\r\n                        elif a == c:\r\n                            ans += x * (x - 1) * y\r\n                        elif b == c:\r\n                            ans += x * y * (y - 1)\r\n                        else:\r\n                            ans += x * y * z\r\n        return ans",
+    "problemId": 2198,
+    "title": "Number of Single Divisor Triplets",
+    "problemUrl": "https://leetcode.com/problems/number-of-single-divisor-triplets/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2198.Number of Single Divisor Triplets/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2198.Number of Single Divisor Triplets/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2198.Number of Single Divisor Triplets/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2198.Number of Single Divisor Triplets/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2198.Number of Single Divisor Triplets/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2198.Number of Single Divisor Triplets/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

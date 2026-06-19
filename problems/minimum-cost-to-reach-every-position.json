@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-to-reach-every-position",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCosts(self, cost: List[int]) -> List[int]:\r\n        n = len(cost)\r\n        ans = [0] * n\r\n        mi = cost[0]\r\n        for i, c in enumerate(cost):\r\n            mi = min(mi, c)\r\n            ans[i] = mi\r\n        return ans",
+    "problemId": 3502,
+    "title": "Minimum Cost to Reach Every Position",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-reach-every-position/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3502.Minimum Cost to Reach Every Position/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3502.Minimum Cost to Reach Every Position/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3502.Minimum Cost to Reach Every Position/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3502.Minimum Cost to Reach Every Position/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3502.Minimum Cost to Reach Every Position/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3502.Minimum Cost to Reach Every Position/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

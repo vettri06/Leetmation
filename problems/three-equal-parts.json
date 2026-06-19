@@ -1,0 +1,38 @@
+{
+    "problemName": "three-equal-parts",
+    "language": "python3",
+    "code": "class Solution:\r\n    def threeEqualParts(self, arr: List[int]) -> List[int]:\r\n        def find(x):\r\n            s = 0\r\n            for i, v in enumerate(arr):\r\n                s += v\r\n                if s == x:\r\n                    return i\r\n\r\n        n = len(arr)\r\n        cnt, mod = divmod(sum(arr), 3)\r\n        if mod:\r\n            return [-1, -1]\r\n        if cnt == 0:\r\n            return [0, n - 1]\r\n\r\n        i, j, k = find(1), find(cnt + 1), find(cnt * 2 + 1)\r\n        while k < n and arr[i] == arr[j] == arr[k]:\r\n            i, j, k = i + 1, j + 1, k + 1\r\n        return [i - 1, j] if k == n else [-1, -1]",
+    "problemId": 927,
+    "title": "Three Equal Parts",
+    "problemUrl": "https://leetcode.com/problems/three-equal-parts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0927.Three Equal Parts/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0927.Three Equal Parts/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0927.Three Equal Parts/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0927.Three Equal Parts/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0927.Three Equal Parts/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0927.Three Equal Parts/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "design-underground-system",
+    "language": "python3",
+    "code": "class UndergroundSystem:\r\n    def __init__(self):\r\n        self.ts = {}\r\n        self.d = {}\r\n\r\n    def checkIn(self, id: int, stationName: str, t: int) -> None:\r\n        self.ts[id] = (t, stationName)\r\n\r\n    def checkOut(self, id: int, stationName: str, t: int) -> None:\r\n        t0, station = self.ts[id]\r\n        x = self.d.get((station, stationName), (0, 0))\r\n        self.d[(station, stationName)] = (x[0] + t - t0, x[1] + 1)\r\n\r\n    def getAverageTime(self, startStation: str, endStation: str) -> float:\r\n        x = self.d[(startStation, endStation)]\r\n        return x[0] / x[1]\r\n\r\n\r\n# Your UndergroundSystem object will be instantiated and called as such:\r\n# obj = UndergroundSystem()\r\n# obj.checkIn(id,stationName,t)\r\n# obj.checkOut(id,stationName,t)\r\n# param_3 = obj.getAverageTime(startStation,endStation)",
+    "problemId": 1396,
+    "title": "Design Underground System",
+    "problemUrl": "https://leetcode.com/problems/design-underground-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1396.Design Underground System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1396.Design Underground System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1396.Design Underground System/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1396.Design Underground System/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1396.Design Underground System/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

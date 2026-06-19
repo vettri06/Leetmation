@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-multiplication-score",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxScore(self, a: List[int], b: List[int]) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int) -> int:\r\n            if j >= len(b):\r\n                return 0 if i >= len(a) else -inf\r\n            if i >= len(a):\r\n                return 0\r\n            return max(dfs(i, j + 1), a[i] * b[j] + dfs(i + 1, j + 1))\r\n\r\n        return dfs(0, 0)",
+    "problemId": 3290,
+    "title": "Maximum Multiplication Score",
+    "problemUrl": "https://leetcode.com/problems/maximum-multiplication-score/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3290.Maximum Multiplication Score/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3290.Maximum Multiplication Score/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3290.Maximum Multiplication Score/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3290.Maximum Multiplication Score/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3290.Maximum Multiplication Score/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3290.Maximum Multiplication Score/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

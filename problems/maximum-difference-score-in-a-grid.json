@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-difference-score-in-a-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxScore(self, grid: List[List[int]]) -> int:\r\n        f = [[0] * len(grid[0]) for _ in range(len(grid))]\r\n        ans = -inf\r\n        for i, row in enumerate(grid):\r\n            for j, x in enumerate(row):\r\n                mi = inf\r\n                if i:\r\n                    mi = min(mi, f[i - 1][j])\r\n                if j:\r\n                    mi = min(mi, f[i][j - 1])\r\n                ans = max(ans, x - mi)\r\n                f[i][j] = min(x, mi)\r\n        return ans",
+    "problemId": 3148,
+    "title": "Maximum Difference Score in a Grid",
+    "problemUrl": "https://leetcode.com/problems/maximum-difference-score-in-a-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3148.Maximum Difference Score in a Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3148.Maximum Difference Score in a Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3148.Maximum Difference Score in a Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3148.Maximum Difference Score in a Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3148.Maximum Difference Score in a Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3148.Maximum Difference Score in a Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

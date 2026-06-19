@@ -1,0 +1,93 @@
+{
+    "problemName": "combination-sum-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:\r\n        def dfs(i: int, s: int):\r\n            if s == 0:\r\n                ans.append(t[:])\r\n                return\r\n            if i >= len(candidates) or s < candidates[i]:\r\n                return\r\n            for j in range(i, len(candidates)):\r\n                if j > i and candidates[j] == candidates[j - 1]:\r\n                    continue\r\n                t.append(candidates[j])\r\n                dfs(j + 1, s - candidates[j])\r\n                t.pop()\r\n\r\n        candidates.sort()\r\n        ans = []\r\n        t = []\r\n        dfs(0, target)\r\n        return ans",
+    "problemId": 40,
+    "title": "Combination Sum II",
+    "problemUrl": "https://leetcode.com/problems/combination-sum-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution2.cs",
+            "sourceFile": "Solution2.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0040.Combination Sum II/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

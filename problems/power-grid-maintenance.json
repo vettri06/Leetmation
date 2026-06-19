@@ -1,0 +1,28 @@
+{
+    "problemName": "power-grid-maintenance",
+    "language": "python3",
+    "code": "class UnionFind:\r\n    def __init__(self, n):\r\n        self.p = list(range(n))\r\n        self.size = [1] * n\r\n\r\n    def find(self, x):\r\n        if self.p[x] != x:\r\n            self.p[x] = self.find(self.p[x])\r\n        return self.p[x]\r\n\r\n    def union(self, a, b):\r\n        pa, pb = self.find(a), self.find(b)\r\n        if pa == pb:\r\n            return False\r\n        if self.size[pa] > self.size[pb]:\r\n            self.p[pb] = pa\r\n            self.size[pa] += self.size[pb]\r\n        else:\r\n            self.p[pa] = pb\r\n            self.size[pb] += self.size[pa]\r\n        return True\r\n\r\n\r\nclass Solution:\r\n    def processQueries(\r\n        self, c: int, connections: List[List[int]], queries: List[List[int]]\r\n    ) -> List[int]:\r\n        uf = UnionFind(c + 1)\r\n        for u, v in connections:\r\n            uf.union(u, v)\r\n        st = [SortedList() for _ in range(c + 1)]\r\n        for i in range(1, c + 1):\r\n            st[uf.find(i)].add(i)\r\n        ans = []\r\n        for a, x in queries:\r\n            root = uf.find(x)\r\n            if a == 1:\r\n                if x in st[root]:\r\n                    ans.append(x)\r\n                elif len(st[root]):\r\n                    ans.append(st[root][0])\r\n                else:\r\n                    ans.append(-1)\r\n            else:\r\n                st[root].discard(x)\r\n        return ans",
+    "problemId": 3607,
+    "title": "Power Grid Maintenance",
+    "problemUrl": "https://leetcode.com/problems/power-grid-maintenance/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3607.Power Grid Maintenance/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3607.Power Grid Maintenance/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3607.Power Grid Maintenance/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3607.Power Grid Maintenance/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

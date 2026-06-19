@@ -1,0 +1,38 @@
+{
+    "problemName": "maximize-sum-of-device-ratings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxRatings(self, units: List[List[int]]) -> int:\r\n        n = len(units[0])\r\n        if n == 1:\r\n            return sum(x[0] for x in units)\r\n\r\n        ans = 0\r\n        mn = mn2 = inf\r\n        for x in units:\r\n            x.sort()\r\n            ans += x[1]\r\n            mn2 = min(mn2, x[1])\r\n            mn = min(mn, x[0])\r\n        ans -= mn2 - mn\r\n        return ans",
+    "problemId": 3961,
+    "title": "Maximize Sum of Device Ratings",
+    "problemUrl": "https://leetcode.com/problems/maximize-sum-of-device-ratings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3961.Maximize Sum of Device Ratings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3961.Maximize Sum of Device Ratings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3961.Maximize Sum of Device Ratings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3961.Maximize Sum of Device Ratings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3961.Maximize Sum of Device Ratings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3961.Maximize Sum of Device Ratings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

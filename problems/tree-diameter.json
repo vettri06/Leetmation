@@ -1,0 +1,38 @@
+{
+    "problemName": "tree-diameter",
+    "language": "python3",
+    "code": "class Solution:\r\n    def treeDiameter(self, edges: List[List[int]]) -> int:\r\n        def dfs(i: int, fa: int, t: int):\r\n            for j in g[i]:\r\n                if j != fa:\r\n                    dfs(j, i, t + 1)\r\n            nonlocal ans, a\r\n            if ans < t:\r\n                ans = t\r\n                a = i\r\n\r\n        g = defaultdict(list)\r\n        for a, b in edges:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n        ans = a = 0\r\n        dfs(0, -1, 0)\r\n        dfs(a, -1, 0)\r\n        return ans",
+    "problemId": 1245,
+    "title": "Tree Diameter",
+    "problemUrl": "https://leetcode.com/problems/tree-diameter/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1245.Tree Diameter/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1245.Tree Diameter/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1245.Tree Diameter/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1245.Tree Diameter/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1245.Tree Diameter/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1245.Tree Diameter/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

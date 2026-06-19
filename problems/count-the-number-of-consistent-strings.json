@@ -1,0 +1,83 @@
+{
+    "problemName": "count-the-number-of-consistent-strings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countConsistentStrings(self, allowed: str, words: List[str]) -> int:\r\n        s = set(allowed)\r\n        return sum(all(c in s for c in w) for w in words)",
+    "problemId": 1684,
+    "title": "Count the Number of Consistent Strings",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-consistent-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1684.Count the Number of Consistent Strings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1684.Count the Number of Consistent Strings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1684.Count the Number of Consistent Strings/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1684.Count the Number of Consistent Strings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1684.Count the Number of Consistent Strings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1684.Count the Number of Consistent Strings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1684.Count the Number of Consistent Strings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1684.Count the Number of Consistent Strings/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1684.Count the Number of Consistent Strings/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1684.Count the Number of Consistent Strings/Solution2.c",
+            "sourceFile": "Solution2.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1684.Count the Number of Consistent Strings/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1684.Count the Number of Consistent Strings/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1684.Count the Number of Consistent Strings/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1684.Count the Number of Consistent Strings/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1684.Count the Number of Consistent Strings/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

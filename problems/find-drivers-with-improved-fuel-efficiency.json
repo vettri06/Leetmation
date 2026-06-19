@@ -1,0 +1,23 @@
+{
+    "problemName": "find-drivers-with-improved-fuel-efficiency",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_improved_efficiency_drivers(\r\n    drivers: pd.DataFrame, trips: pd.DataFrame\r\n) -> pd.DataFrame:\r\n    trips = trips.copy()\r\n    trips[\"trip_date\"] = pd.to_datetime(trips[\"trip_date\"])\r\n    trips[\"half\"] = trips[\"trip_date\"].dt.month.apply(lambda m: 1 if m <= 6 else 2)\r\n    trips[\"efficiency\"] = trips[\"distance_km\"] / trips[\"fuel_consumed\"]\r\n    half_avg = (\r\n        trips.groupby([\"driver_id\", \"half\"])[\"efficiency\"]\r\n        .mean()\r\n        .reset_index(name=\"half_avg\")\r\n    )\r\n    pivot = half_avg.pivot(index=\"driver_id\", columns=\"half\", values=\"half_avg\").rename(\r\n        columns={1: \"first_half_avg\", 2: \"second_half_avg\"}\r\n    )\r\n    pivot = pivot.dropna()\r\n    pivot = pivot[pivot[\"second_half_avg\"] > pivot[\"first_half_avg\"]]\r\n    pivot[\"efficiency_improvement\"] = (\r\n        pivot[\"second_half_avg\"] - pivot[\"first_half_avg\"]\r\n    ).round(2)\r\n    pivot[\"first_half_avg\"] = pivot[\"first_half_avg\"].round(2)\r\n    pivot[\"second_half_avg\"] = pivot[\"second_half_avg\"].round(2)\r\n    result = pivot.reset_index().merge(drivers, on=\"driver_id\")\r\n    result = result.sort_values(\r\n        by=[\"efficiency_improvement\", \"driver_name\"], ascending=[False, True]\r\n    )\r\n    return result[\r\n        [\r\n            \"driver_id\",\r\n            \"driver_name\",\r\n            \"first_half_avg\",\r\n            \"second_half_avg\",\r\n            \"efficiency_improvement\",\r\n        ]\r\n    ]",
+    "problemId": 3601,
+    "title": "Find Drivers with Improved Fuel Efficiency",
+    "problemUrl": "https://leetcode.com/problems/find-drivers-with-improved-fuel-efficiency/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3601.Find Drivers with Improved Fuel Efficiency/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3601.Find Drivers with Improved Fuel Efficiency/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3601.Find Drivers with Improved Fuel Efficiency/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

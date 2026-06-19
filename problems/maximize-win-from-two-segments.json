@@ -1,0 +1,38 @@
+{
+    "problemName": "maximize-win-from-two-segments",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximizeWin(self, prizePositions: List[int], k: int) -> int:\r\n        n = len(prizePositions)\r\n        f = [0] * (n + 1)\r\n        ans = 0\r\n        for i, x in enumerate(prizePositions, 1):\r\n            j = bisect_left(prizePositions, x - k)\r\n            ans = max(ans, f[j] + i - j)\r\n            f[i] = max(f[i - 1], i - j)\r\n        return ans",
+    "problemId": 2555,
+    "title": "Maximize Win From Two Segments",
+    "problemUrl": "https://leetcode.com/problems/maximize-win-from-two-segments/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2555.Maximize Win From Two Segments/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2555.Maximize Win From Two Segments/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2555.Maximize Win From Two Segments/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2555.Maximize Win From Two Segments/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2555.Maximize Win From Two Segments/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2555.Maximize Win From Two Segments/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

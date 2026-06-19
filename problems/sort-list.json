@@ -1,0 +1,53 @@
+{
+    "problemName": "sort-list",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:\r\n        if head is None or head.next is None:\r\n            return head\r\n        slow, fast = head, head.next\r\n        while fast and fast.next:\r\n            slow = slow.next\r\n            fast = fast.next.next\r\n        l1, l2 = head, slow.next\r\n        slow.next = None\r\n        l1, l2 = self.sortList(l1), self.sortList(l2)\r\n        dummy = ListNode()\r\n        tail = dummy\r\n        while l1 and l2:\r\n            if l1.val <= l2.val:\r\n                tail.next = l1\r\n                l1 = l1.next\r\n            else:\r\n                tail.next = l2\r\n                l2 = l2.next\r\n            tail = tail.next\r\n        tail.next = l1 or l2\r\n        return dummy.next",
+    "problemId": 148,
+    "title": "Sort List",
+    "problemUrl": "https://leetcode.com/problems/sort-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0148.Sort List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0148.Sort List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0148.Sort List/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0148.Sort List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0148.Sort List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0148.Sort List/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0148.Sort List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0148.Sort List/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0148.Sort List/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

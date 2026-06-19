@@ -1,0 +1,33 @@
+{
+    "problemName": "find-distance-in-a-binary-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def findDistance(self, root: Optional[TreeNode], p: int, q: int) -> int:\r\n        def lca(root, p, q):\r\n            if root is None or root.val in [p, q]:\r\n                return root\r\n            left = lca(root.left, p, q)\r\n            right = lca(root.right, p, q)\r\n            if left is None:\r\n                return right\r\n            if right is None:\r\n                return left\r\n            return root\r\n\r\n        def dfs(root, v):\r\n            if root is None:\r\n                return -1\r\n            if root.val == v:\r\n                return 0\r\n            left, right = dfs(root.left, v), dfs(root.right, v)\r\n            if left == right == -1:\r\n                return -1\r\n            return 1 + max(left, right)\r\n\r\n        g = lca(root, p, q)\r\n        return dfs(g, p) + dfs(g, q)",
+    "problemId": 1740,
+    "title": "Find Distance in a Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/find-distance-in-a-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1740.Find Distance in a Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1740.Find Distance in a Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1740.Find Distance in a Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1740.Find Distance in a Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1740.Find Distance in a Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "length-of-longest-fibonacci-subsequence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lenLongestFibSubseq(self, arr: List[int]) -> int:\r\n        n = len(arr)\r\n        f = [[0] * n for _ in range(n)]\r\n        d = {x: i for i, x in enumerate(arr)}\r\n        for i in range(n):\r\n            for j in range(i):\r\n                f[i][j] = 2\r\n        ans = 0\r\n        for i in range(2, n):\r\n            for j in range(1, i):\r\n                t = arr[i] - arr[j]\r\n                if t in d and (k := d[t]) < j:\r\n                    f[i][j] = max(f[i][j], f[j][k] + 1)\r\n                    ans = max(ans, f[i][j])\r\n        return ans",
+    "problemId": 873,
+    "title": "Length of Longest Fibonacci Subsequence",
+    "problemUrl": "https://leetcode.com/problems/length-of-longest-fibonacci-subsequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0873.Length of Longest Fibonacci Subsequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0873.Length of Longest Fibonacci Subsequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0873.Length of Longest Fibonacci Subsequence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0873.Length of Longest Fibonacci Subsequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0873.Length of Longest Fibonacci Subsequence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0873.Length of Longest Fibonacci Subsequence/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0873.Length of Longest Fibonacci Subsequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0873.Length of Longest Fibonacci Subsequence/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

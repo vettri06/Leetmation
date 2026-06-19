@@ -1,0 +1,23 @@
+{
+    "problemName": "find-stores-with-inventory-imbalance",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_inventory_imbalance(\r\n    stores: pd.DataFrame, inventory: pd.DataFrame\r\n) -> pd.DataFrame:\r\n    # Step 1: Identify stores with at least 3 products\r\n    store_counts = inventory[\"store_id\"].value_counts()\r\n    valid_stores = store_counts[store_counts >= 3].index\r\n\r\n    # Step 2: Find most expensive product for each valid store\r\n    # Sort by price (descending) then quantity (descending) and take first record per store\r\n    most_expensive = (\r\n        inventory[inventory[\"store_id\"].isin(valid_stores)]\r\n        .sort_values([\"store_id\", \"price\", \"quantity\"], ascending=[True, False, False])\r\n        .groupby(\"store_id\")\r\n        .first()\r\n        .reset_index()\r\n    )\r\n\r\n    # Step 3: Find cheapest product for each store\r\n    # Sort by price (ascending) then quantity (descending) and take first record per store\r\n    cheapest = (\r\n        inventory.sort_values(\r\n            [\"store_id\", \"price\", \"quantity\"], ascending=[True, True, False]\r\n        )\r\n        .groupby(\"store_id\")\r\n        .first()\r\n        .reset_index()\r\n    )\r\n\r\n    # Step 4: Merge the two datasets on store_id\r\n    merged = pd.merge(\r\n        most_expensive, cheapest, on=\"store_id\", suffixes=(\"_most\", \"_cheap\")\r\n    )\r\n\r\n    # Step 5: Filter for cases where cheapest product has higher quantity than most expensive\r\n    result = merged[merged[\"quantity_most\"] < merged[\"quantity_cheap\"]].copy()\r\n\r\n    # Step 6: Calculate imbalance ratio (cheapest quantity / most expensive quantity)\r\n    result[\"imbalance_ratio\"] = (\r\n        result[\"quantity_cheap\"] / result[\"quantity_most\"]\r\n    ).round(2)\r\n\r\n    # Step 7: Merge with store information to get store names and locations\r\n    result = pd.merge(result, stores, on=\"store_id\")\r\n\r\n    # Step 8: Select and rename columns for final output\r\n    result = result[\r\n        [\r\n            \"store_id\",\r\n            \"store_name\",\r\n            \"location\",\r\n            \"product_name_most\",\r\n            \"product_name_cheap\",\r\n            \"imbalance_ratio\",\r\n        ]\r\n    ].rename(\r\n        columns={\r\n            \"product_name_most\": \"most_exp_product\",\r\n            \"product_name_cheap\": \"cheapest_product\",\r\n        }\r\n    )\r\n\r\n    # Step 9: Sort by imbalance ratio (descending) then store name (ascending)\r\n    result = result.sort_values(\r\n        [\"imbalance_ratio\", \"store_name\"], ascending=[False, True]\r\n    ).reset_index(drop=True)\r\n\r\n    return result",
+    "problemId": 3626,
+    "title": "Find Stores with Inventory Imbalance",
+    "problemUrl": "https://leetcode.com/problems/find-stores-with-inventory-imbalance/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3626.Find Stores with Inventory Imbalance/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3626.Find Stores with Inventory Imbalance/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3626.Find Stores with Inventory Imbalance/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "number-of-subsequences-that-satisfy-the-given-sum-condition",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numSubseq(self, nums: List[int], target: int) -> int:\r\n        mod = 10**9 + 7\r\n        nums.sort()\r\n        n = len(nums)\r\n        f = [1] + [0] * n\r\n        for i in range(1, n + 1):\r\n            f[i] = f[i - 1] * 2 % mod\r\n        ans = 0\r\n        for i, x in enumerate(nums):\r\n            if x * 2 > target:\r\n                break\r\n            j = bisect_right(nums, target - x, i + 1) - 1\r\n            ans = (ans + f[j - i]) % mod\r\n        return ans",
+    "problemId": 1498,
+    "title": "Number of Subsequences That Satisfy the Given Sum Condition",
+    "problemUrl": "https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1498.Number of Subsequences That Satisfy the Given Sum Condition/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1498.Number of Subsequences That Satisfy the Given Sum Condition/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1498.Number of Subsequences That Satisfy the Given Sum Condition/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1498.Number of Subsequences That Satisfy the Given Sum Condition/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1498.Number of Subsequences That Satisfy the Given Sum Condition/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1498.Number of Subsequences That Satisfy the Given Sum Condition/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1498.Number of Subsequences That Satisfy the Given Sum Condition/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

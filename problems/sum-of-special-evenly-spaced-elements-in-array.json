@@ -1,0 +1,38 @@
+{
+    "problemName": "sum-of-special-evenly-spaced-elements-in-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def solve(self, nums: List[int], queries: List[List[int]]) -> List[int]:\r\n        mod = 10**9 + 7\r\n        n = len(nums)\r\n        m = int(sqrt(n))\r\n        suf = [[0] * (n + 1) for _ in range(m + 1)]\r\n        for i in range(1, m + 1):\r\n            for j in range(n - 1, -1, -1):\r\n                suf[i][j] = suf[i][min(n, j + i)] + nums[j]\r\n        ans = []\r\n        for x, y in queries:\r\n            if y <= m:\r\n                ans.append(suf[y][x] % mod)\r\n            else:\r\n                ans.append(sum(nums[x::y]) % mod)\r\n        return ans",
+    "problemId": 1714,
+    "title": "Sum Of Special Evenly-Spaced Elements In Array",
+    "problemUrl": "https://leetcode.com/problems/sum-of-special-evenly-spaced-elements-in-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1714.Sum Of Special Evenly-Spaced Elements In Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1714.Sum Of Special Evenly-Spaced Elements In Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1714.Sum Of Special Evenly-Spaced Elements In Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1714.Sum Of Special Evenly-Spaced Elements In Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1714.Sum Of Special Evenly-Spaced Elements In Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1714.Sum Of Special Evenly-Spaced Elements In Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

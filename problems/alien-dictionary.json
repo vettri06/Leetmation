@@ -1,0 +1,33 @@
+{
+    "problemName": "alien-dictionary",
+    "language": "python3",
+    "code": "class Solution:\r\n    def alienOrder(self, words: List[str]) -> str:\r\n        g = [[False] * 26 for _ in range(26)]\r\n        s = [False] * 26\r\n        cnt = 0\r\n        n = len(words)\r\n        for i in range(n - 1):\r\n            for c in words[i]:\r\n                if cnt == 26:\r\n                    break\r\n                o = ord(c) - ord('a')\r\n                if not s[o]:\r\n                    cnt += 1\r\n                    s[o] = True\r\n            m = len(words[i])\r\n            for j in range(m):\r\n                if j >= len(words[i + 1]):\r\n                    return ''\r\n                c1, c2 = words[i][j], words[i + 1][j]\r\n                if c1 == c2:\r\n                    continue\r\n                o1, o2 = ord(c1) - ord('a'), ord(c2) - ord('a')\r\n                if g[o2][o1]:\r\n                    return ''\r\n                g[o1][o2] = True\r\n                break\r\n        for c in words[n - 1]:\r\n            if cnt == 26:\r\n                break\r\n            o = ord(c) - ord('a')\r\n            if not s[o]:\r\n                cnt += 1\r\n                s[o] = True\r\n\r\n        indegree = [0] * 26\r\n        for i in range(26):\r\n            for j in range(26):\r\n                if i != j and s[i] and s[j] and g[i][j]:\r\n                    indegree[j] += 1\r\n        q = deque()\r\n        ans = []\r\n        for i in range(26):\r\n            if s[i] and indegree[i] == 0:\r\n                q.append(i)\r\n        while q:\r\n            t = q.popleft()\r\n            ans.append(chr(t + ord('a')))\r\n            for i in range(26):\r\n                if s[i] and i != t and g[t][i]:\r\n                    indegree[i] -= 1\r\n                    if indegree[i] == 0:\r\n                        q.append(i)\r\n        return '' if len(ans) < cnt else ''.join(ans)",
+    "problemId": 269,
+    "title": "Alien Dictionary",
+    "problemUrl": "https://leetcode.com/problems/alien-dictionary/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0269.Alien Dictionary/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0269.Alien Dictionary/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0269.Alien Dictionary/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0269.Alien Dictionary/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0269.Alien Dictionary/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-to-split-into-ones-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, n: int) -> int:\r\n        return n * (n - 1) // 2",
+    "problemId": 3958,
+    "title": "Minimum Cost to Split into Ones II",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-split-into-ones-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3958.Minimum Cost to Split into Ones II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3958.Minimum Cost to Split into Ones II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3958.Minimum Cost to Split into Ones II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3958.Minimum Cost to Split into Ones II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3958.Minimum Cost to Split into Ones II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3958.Minimum Cost to Split into Ones II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "problemName": "step-by-step-directions-from-a-binary-tree-node-to-another",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\n\r\n\r\nclass Solution:\r\n    def getDirections(\r\n        self, root: Optional[TreeNode], startValue: int, destValue: int\r\n    ) -> str:\r\n        def lca(node: Optional[TreeNode], p: int, q: int):\r\n            if node is None or node.val in (p, q):\r\n                return node\r\n            left = lca(node.left, p, q)\r\n            right = lca(node.right, p, q)\r\n            if left and right:\r\n                return node\r\n            return left or right\r\n\r\n        def dfs(node: Optional[TreeNode], x: int, path: List[str]):\r\n            if node is None:\r\n                return False\r\n            if node.val == x:\r\n                return True\r\n            path.append(\"L\")\r\n            if dfs(node.left, x, path):\r\n                return True\r\n            path[-1] = \"R\"\r\n            if dfs(node.right, x, path):\r\n                return True\r\n            path.pop()\r\n            return False\r\n\r\n        node = lca(root, startValue, destValue)\r\n\r\n        path_to_start = []\r\n        path_to_dest = []\r\n\r\n        dfs(node, startValue, path_to_start)\r\n        dfs(node, destValue, path_to_dest)\r\n\r\n        return \"U\" * len(path_to_start) + \"\".join(path_to_dest)",
+    "problemId": 2096,
+    "title": "Step-By-Step Directions From a Binary Tree Node to Another",
+    "problemUrl": "https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2096.Step-By-Step Directions From a Binary Tree Node to Another/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2096.Step-By-Step Directions From a Binary Tree Node to Another/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2096.Step-By-Step Directions From a Binary Tree Node to Another/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2096.Step-By-Step Directions From a Binary Tree Node to Another/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2096.Step-By-Step Directions From a Binary Tree Node to Another/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2096.Step-By-Step Directions From a Binary Tree Node to Another/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2096.Step-By-Step Directions From a Binary Tree Node to Another/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2096.Step-By-Step Directions From a Binary Tree Node to Another/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2096.Step-By-Step Directions From a Binary Tree Node to Another/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2096.Step-By-Step Directions From a Binary Tree Node to Another/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2096.Step-By-Step Directions From a Binary Tree Node to Another/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2096.Step-By-Step Directions From a Binary Tree Node to Another/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2096.Step-By-Step Directions From a Binary Tree Node to Another/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

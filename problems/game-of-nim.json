@@ -1,0 +1,38 @@
+{
+    "problemName": "game-of-nim",
+    "language": "python3",
+    "code": "class Solution:\r\n    def nimGame(self, piles: List[int]) -> bool:\r\n        @cache\r\n        def dfs(st):\r\n            lst = list(st)\r\n            for i, x in enumerate(lst):\r\n                for j in range(1, x + 1):\r\n                    lst[i] -= j\r\n                    if not dfs(tuple(lst)):\r\n                        return True\r\n                    lst[i] += j\r\n            return False\r\n\r\n        return dfs(tuple(piles))",
+    "problemId": 1908,
+    "title": "Game of Nim",
+    "problemUrl": "https://leetcode.com/problems/game-of-nim/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1908.Game of Nim/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1908.Game of Nim/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1908.Game of Nim/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1908.Game of Nim/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1908.Game of Nim/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1908.Game of Nim/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "longest-unequal-adjacent-groups-subsequence-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getWordsInLongestSubsequence(\r\n        self, words: List[str], groups: List[int]\r\n    ) -> List[str]:\r\n        def check(s: str, t: str) -> bool:\r\n            return len(s) == len(t) and sum(a != b for a, b in zip(s, t)) == 1\r\n\r\n        n = len(groups)\r\n        f = [1] * n\r\n        g = [-1] * n\r\n        mx = 1\r\n        for i, x in enumerate(groups):\r\n            for j, y in enumerate(groups[:i]):\r\n                if x != y and f[i] < f[j] + 1 and check(words[i], words[j]):\r\n                    f[i] = f[j] + 1\r\n                    g[i] = j\r\n                    mx = max(mx, f[i])\r\n        ans = []\r\n        for i in range(n):\r\n            if f[i] == mx:\r\n                j = i\r\n                while j >= 0:\r\n                    ans.append(words[j])\r\n                    j = g[j]\r\n                break\r\n        return ans[::-1]",
+    "problemId": 2901,
+    "title": "Longest Unequal Adjacent Groups Subsequence II",
+    "problemUrl": "https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2901.Longest Unequal Adjacent Groups Subsequence II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2901.Longest Unequal Adjacent Groups Subsequence II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2901.Longest Unequal Adjacent Groups Subsequence II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2901.Longest Unequal Adjacent Groups Subsequence II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2901.Longest Unequal Adjacent Groups Subsequence II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2901.Longest Unequal Adjacent Groups Subsequence II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2901.Longest Unequal Adjacent Groups Subsequence II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-number-of-operations-to-sort-a-binary-tree-by-level",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def minimumOperations(self, root: Optional[TreeNode]) -> int:\r\n        def swap(arr, i, j):\r\n            arr[i], arr[j] = arr[j], arr[i]\r\n\r\n        def f(t):\r\n            n = len(t)\r\n            m = {v: i for i, v in enumerate(sorted(t))}\r\n            for i in range(n):\r\n                t[i] = m[t[i]]\r\n            ans = 0\r\n            for i in range(n):\r\n                while t[i] != i:\r\n                    swap(t, i, t[i])\r\n                    ans += 1\r\n            return ans\r\n\r\n        q = deque([root])\r\n        ans = 0\r\n        while q:\r\n            t = []\r\n            for _ in range(len(q)):\r\n                node = q.popleft()\r\n                t.append(node.val)\r\n                if node.left:\r\n                    q.append(node.left)\r\n                if node.right:\r\n                    q.append(node.right)\r\n            ans += f(t)\r\n        return ans",
+    "problemId": 2471,
+    "title": "Minimum Number of Operations to Sort a Binary Tree by Level",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-operations-to-sort-a-binary-tree-by-level/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2471.Minimum Number of Operations to Sort a Binary Tree by Level/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2471.Minimum Number of Operations to Sort a Binary Tree by Level/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2471.Minimum Number of Operations to Sort a Binary Tree by Level/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2471.Minimum Number of Operations to Sort a Binary Tree by Level/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2471.Minimum Number of Operations to Sort a Binary Tree by Level/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2471.Minimum Number of Operations to Sort a Binary Tree by Level/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2471.Minimum Number of Operations to Sort a Binary Tree by Level/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

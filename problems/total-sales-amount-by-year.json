@@ -1,0 +1,18 @@
+{
+    "problemName": "total-sales-amount-by-year",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    s.product_id,\r\n    p.product_name,\r\n    y.YEAR AS report_year,\r\n    s.average_daily_sales * (\r\n        IF(YEAR(s.period_end) > y.YEAR, y.days_of_year, DAYOFYEAR(s.period_end)) - IF(\r\n            YEAR(s.period_start) < y.YEAR,\r\n            1,\r\n            DAYOFYEAR(s.period_start)\r\n        ) + 1\r\n    ) AS total_amount\r\nFROM\r\n    Sales AS s\r\n    INNER JOIN (\r\n        SELECT\r\n            '2018' AS YEAR,\r\n            365 AS days_of_year\r\n        UNION ALL\r\n        SELECT\r\n            '2019' AS YEAR,\r\n            365 AS days_of_year\r\n        UNION ALL\r\n        SELECT\r\n            '2020' AS YEAR,\r\n            366 AS days_of_year\r\n    ) AS y\r\n        ON YEAR(s.period_start) <= y.YEAR AND YEAR(s.period_end) >= y.YEAR\r\n    INNER JOIN Product AS p ON p.product_id = s.product_id\r\nORDER BY s.product_id, y.YEAR;",
+    "problemId": 1384,
+    "title": "Total Sales Amount by Year",
+    "problemUrl": "https://leetcode.com/problems/total-sales-amount-by-year/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1384.Total Sales Amount by Year/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1384.Total Sales Amount by Year/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

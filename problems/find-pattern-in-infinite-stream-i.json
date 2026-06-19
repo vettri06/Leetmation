@@ -1,0 +1,33 @@
+{
+    "problemName": "find-pattern-in-infinite-stream-i",
+    "language": "python3",
+    "code": "# Definition for an infinite stream.\r\n# class InfiniteStream:\r\n#     def next(self) -> int:\r\n#         pass\r\nclass Solution:\r\n    def findPattern(\r\n        self, stream: Optional[\"InfiniteStream\"], pattern: List[int]\r\n    ) -> int:\r\n        a = b = 0\r\n        m = len(pattern)\r\n        half = m >> 1\r\n        mask1 = (1 << half) - 1\r\n        mask2 = (1 << (m - half)) - 1\r\n        for i in range(half):\r\n            a |= pattern[i] << (half - 1 - i)\r\n        for i in range(half, m):\r\n            b |= pattern[i] << (m - 1 - i)\r\n        x = y = 0\r\n        for i in count(1):\r\n            v = stream.next()\r\n            y = y << 1 | v\r\n            v = y >> (m - half) & 1\r\n            y &= mask2\r\n            x = x << 1 | v\r\n            x &= mask1\r\n            if i >= m and a == x and b == y:\r\n                return i - m",
+    "problemId": 3023,
+    "title": "Find Pattern in Infinite Stream I",
+    "problemUrl": "https://leetcode.com/problems/find-pattern-in-infinite-stream-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3023.Find Pattern in Infinite Stream I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3023.Find Pattern in Infinite Stream I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3023.Find Pattern in Infinite Stream I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3023.Find Pattern in Infinite Stream I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3023.Find Pattern in Infinite Stream I/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

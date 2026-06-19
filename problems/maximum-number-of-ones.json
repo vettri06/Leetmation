@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-number-of-ones",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumNumberOfOnes(\r\n        self, width: int, height: int, sideLength: int, maxOnes: int\r\n    ) -> int:\r\n        x = sideLength\r\n        cnt = [0] * (x * x)\r\n        for i in range(width):\r\n            for j in range(height):\r\n                k = (i % x) * x + (j % x)\r\n                cnt[k] += 1\r\n        cnt.sort(reverse=True)\r\n        return sum(cnt[:maxOnes])",
+    "problemId": 1183,
+    "title": "Maximum Number of Ones",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-ones/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1183.Maximum Number of Ones/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1183.Maximum Number of Ones/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1183.Maximum Number of Ones/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1183.Maximum Number of Ones/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1183.Maximum Number of Ones/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1183.Maximum Number of Ones/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

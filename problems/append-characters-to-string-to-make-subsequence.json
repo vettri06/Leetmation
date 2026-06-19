@@ -1,0 +1,38 @@
+{
+    "problemName": "append-characters-to-string-to-make-subsequence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def appendCharacters(self, s: str, t: str) -> int:\r\n        n, j = len(t), 0\r\n        for c in s:\r\n            if j < n and c == t[j]:\r\n                j += 1\r\n        return n - j",
+    "problemId": 2486,
+    "title": "Append Characters to String to Make Subsequence",
+    "problemUrl": "https://leetcode.com/problems/append-characters-to-string-to-make-subsequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2486.Append Characters to String to Make Subsequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2486.Append Characters to String to Make Subsequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2486.Append Characters to String to Make Subsequence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2486.Append Characters to String to Make Subsequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2486.Append Characters to String to Make Subsequence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2486.Append Characters to String to Make Subsequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "the-knights-tour",
+    "language": "python3",
+    "code": "class Solution:\r\n    def tourOfKnight(self, m: int, n: int, r: int, c: int) -> List[List[int]]:\r\n        def dfs(i: int, j: int):\r\n            nonlocal ok\r\n            if g[i][j] == m * n - 1:\r\n                ok = True\r\n                return\r\n            for a, b in pairwise((-2, -1, 2, 1, -2, 1, 2, -1, -2)):\r\n                x, y = i + a, j + b\r\n                if 0 <= x < m and 0 <= y < n and g[x][y] == -1:\r\n                    g[x][y] = g[i][j] + 1\r\n                    dfs(x, y)\r\n                    if ok:\r\n                        return\r\n                    g[x][y] = -1\r\n\r\n        g = [[-1] * n for _ in range(m)]\r\n        g[r][c] = 0\r\n        ok = False\r\n        dfs(r, c)\r\n        return g",
+    "problemId": 2664,
+    "title": "The Knight’s Tour",
+    "problemUrl": "https://leetcode.com/problems/the-knights-tour/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2664.The Knight’s Tour/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2664.The Knight’s Tour/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2664.The Knight’s Tour/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2664.The Knight’s Tour/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2664.The Knight’s Tour/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2664.The Knight’s Tour/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2664.The Knight’s Tour/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "count-ways-to-distribute-candies",
+    "language": "python3",
+    "code": "class Solution:\r\n    def waysToDistribute(self, n: int, k: int) -> int:\r\n        mod = 10**9 + 7\r\n        f = [[0] * (k + 1) for _ in range(n + 1)]\r\n        f[0][0] = 1\r\n        for i in range(1, n + 1):\r\n            for j in range(1, k + 1):\r\n                f[i][j] = (f[i - 1][j] * j + f[i - 1][j - 1]) % mod\r\n        return f[n][k]",
+    "problemId": 1692,
+    "title": "Count Ways to Distribute Candies",
+    "problemUrl": "https://leetcode.com/problems/count-ways-to-distribute-candies/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1692.Count Ways to Distribute Candies/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1692.Count Ways to Distribute Candies/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1692.Count Ways to Distribute Candies/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1692.Count Ways to Distribute Candies/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1692.Count Ways to Distribute Candies/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1692.Count Ways to Distribute Candies/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

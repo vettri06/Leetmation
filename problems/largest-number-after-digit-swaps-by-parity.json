@@ -1,0 +1,38 @@
+{
+    "problemName": "largest-number-after-digit-swaps-by-parity",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestInteger(self, num: int) -> int:\r\n        nums = [int(c) for c in str(num)]\r\n        cnt = Counter(nums)\r\n        idx = [8, 9]\r\n        ans = 0\r\n        for x in nums:\r\n            while cnt[idx[x & 1]] == 0:\r\n                idx[x & 1] -= 2\r\n            ans = ans * 10 + idx[x & 1]\r\n            cnt[idx[x & 1]] -= 1\r\n        return ans",
+    "problemId": 2231,
+    "title": "Largest Number After Digit Swaps by Parity",
+    "problemUrl": "https://leetcode.com/problems/largest-number-after-digit-swaps-by-parity/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2231.Largest Number After Digit Swaps by Parity/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2231.Largest Number After Digit Swaps by Parity/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2231.Largest Number After Digit Swaps by Parity/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2231.Largest Number After Digit Swaps by Parity/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2231.Largest Number After Digit Swaps by Parity/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2231.Largest Number After Digit Swaps by Parity/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

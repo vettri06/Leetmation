@@ -1,0 +1,68 @@
+{
+    "problemName": "longest-happy-prefix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestPrefix(self, s: str) -> str:\r\n        for i in range(1, len(s)):\r\n            if s[:-i] == s[i:]:\r\n                return s[i:]\r\n        return ''",
+    "problemId": 1392,
+    "title": "Longest Happy Prefix",
+    "problemUrl": "https://leetcode.com/problems/longest-happy-prefix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1392.Longest Happy Prefix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1392.Longest Happy Prefix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1392.Longest Happy Prefix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1392.Longest Happy Prefix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1392.Longest Happy Prefix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1392.Longest Happy Prefix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1392.Longest Happy Prefix/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1392.Longest Happy Prefix/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1392.Longest Happy Prefix/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1392.Longest Happy Prefix/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1392.Longest Happy Prefix/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1392.Longest Happy Prefix/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

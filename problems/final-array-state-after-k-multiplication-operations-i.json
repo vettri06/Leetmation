@@ -1,0 +1,38 @@
+{
+    "problemName": "final-array-state-after-k-multiplication-operations-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getFinalState(self, nums: List[int], k: int, multiplier: int) -> List[int]:\r\n        pq = [(x, i) for i, x in enumerate(nums)]\r\n        heapify(pq)\r\n        for _ in range(k):\r\n            _, i = heappop(pq)\r\n            nums[i] *= multiplier\r\n            heappush(pq, (nums[i], i))\r\n        return nums",
+    "problemId": 3264,
+    "title": "Final Array State After K Multiplication Operations I",
+    "problemUrl": "https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3264.Final Array State After K Multiplication Operations I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3264.Final Array State After K Multiplication Operations I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3264.Final Array State After K Multiplication Operations I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3264.Final Array State After K Multiplication Operations I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3264.Final Array State After K Multiplication Operations I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3264.Final Array State After K Multiplication Operations I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

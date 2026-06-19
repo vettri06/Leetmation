@@ -1,0 +1,48 @@
+{
+    "problemName": "make-sum-divisible-by-p",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSubarray(self, nums: List[int], p: int) -> int:\r\n        k = sum(nums) % p\r\n        if k == 0:\r\n            return 0\r\n        last = {0: -1}\r\n        cur = 0\r\n        ans = len(nums)\r\n        for i, x in enumerate(nums):\r\n            cur = (cur + x) % p\r\n            target = (cur - k + p) % p\r\n            if target in last:\r\n                ans = min(ans, i - last[target])\r\n            last[cur] = i\r\n        return -1 if ans == len(nums) else ans",
+    "problemId": 1590,
+    "title": "Make Sum Divisible by P",
+    "problemUrl": "https://leetcode.com/problems/make-sum-divisible-by-p/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1590.Make Sum Divisible by P/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1590.Make Sum Divisible by P/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1590.Make Sum Divisible by P/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1590.Make Sum Divisible by P/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1590.Make Sum Divisible by P/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1590.Make Sum Divisible by P/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1590.Make Sum Divisible by P/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1590.Make Sum Divisible by P/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

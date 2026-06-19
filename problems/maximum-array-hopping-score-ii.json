@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-array-hopping-score-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxScore(self, nums: List[int]) -> int:\r\n        stk = []\r\n        for i, x in enumerate(nums):\r\n            while stk and nums[stk[-1]] <= x:\r\n                stk.pop()\r\n            stk.append(i)\r\n        ans = i = 0\r\n        for j in stk:\r\n            ans += nums[j] * (j - i)\r\n            i = j\r\n        return ans",
+    "problemId": 3221,
+    "title": "Maximum Array Hopping Score II",
+    "problemUrl": "https://leetcode.com/problems/maximum-array-hopping-score-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3221.Maximum Array Hopping Score II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3221.Maximum Array Hopping Score II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3221.Maximum Array Hopping Score II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3221.Maximum Array Hopping Score II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3221.Maximum Array Hopping Score II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3221.Maximum Array Hopping Score II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

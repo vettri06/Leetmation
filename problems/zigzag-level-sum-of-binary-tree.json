@@ -1,0 +1,38 @@
+{
+    "problemName": "zigzag-level-sum-of-binary-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def zigzagLevelSum(self, root: TreeNode | None) -> list[int]:\r\n        q = [root]\r\n        ans = []\r\n        left = True\r\n        while q:\r\n            nq = []\r\n            for node in q:\r\n                if node.left:\r\n                    nq.append(node.left)\r\n                if node.right:\r\n                    nq.append(node.right)\r\n            m = len(q)\r\n            s = 0\r\n            for i in range(m):\r\n                node = q[i] if left else q[m - i - 1]\r\n                child = node.left if left else node.right\r\n                if not child:\r\n                    break\r\n                s += node.val\r\n            ans.append(s)\r\n            left = not left\r\n            q = nq\r\n        return ans",
+    "problemId": 3902,
+    "title": "Zigzag Level Sum of Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/zigzag-level-sum-of-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3902.Zigzag Level Sum of Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3902.Zigzag Level Sum of Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3902.Zigzag Level Sum of Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3902.Zigzag Level Sum of Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3902.Zigzag Level Sum of Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3902.Zigzag Level Sum of Binary Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

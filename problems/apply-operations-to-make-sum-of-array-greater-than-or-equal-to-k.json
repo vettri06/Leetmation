@@ -1,0 +1,43 @@
+{
+    "problemName": "apply-operations-to-make-sum-of-array-greater-than-or-equal-to-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, k: int) -> int:\r\n        ans = k\r\n        for a in range(k):\r\n            x = a + 1\r\n            b = (k + x - 1) // x - 1\r\n            ans = min(ans, a + b)\r\n        return ans",
+    "problemId": 3091,
+    "title": "Apply Operations to Make Sum of Array Greater Than or Equal to k",
+    "problemUrl": "https://leetcode.com/problems/apply-operations-to-make-sum-of-array-greater-than-or-equal-to-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3091.Apply Operations to Make Sum of Array Greater Than or Equal to k/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3091.Apply Operations to Make Sum of Array Greater Than or Equal to k/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3091.Apply Operations to Make Sum of Array Greater Than or Equal to k/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3091.Apply Operations to Make Sum of Array Greater Than or Equal to k/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3091.Apply Operations to Make Sum of Array Greater Than or Equal to k/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3091.Apply Operations to Make Sum of Array Greater Than or Equal to k/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3091.Apply Operations to Make Sum of Array Greater Than or Equal to k/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

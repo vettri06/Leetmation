@@ -1,0 +1,38 @@
+{
+    "problemName": "ambiguous-coordinates",
+    "language": "python3",
+    "code": "class Solution:\r\n    def ambiguousCoordinates(self, s: str) -> List[str]:\r\n        def f(i, j):\r\n            res = []\r\n            for k in range(1, j - i + 1):\r\n                l, r = s[i : i + k], s[i + k : j]\r\n                ok = (l == '0' or not l.startswith('0')) and not r.endswith('0')\r\n                if ok:\r\n                    res.append(l + ('.' if k < j - i else '') + r)\r\n            return res\r\n\r\n        n = len(s)\r\n        return [\r\n            f'({x}, {y})' for i in range(2, n - 1) for x in f(1, i) for y in f(i, n - 1)\r\n        ]",
+    "problemId": 816,
+    "title": "Ambiguous Coordinates",
+    "problemUrl": "https://leetcode.com/problems/ambiguous-coordinates/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0816.Ambiguous Coordinates/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0816.Ambiguous Coordinates/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0816.Ambiguous Coordinates/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0816.Ambiguous Coordinates/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0816.Ambiguous Coordinates/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0816.Ambiguous Coordinates/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

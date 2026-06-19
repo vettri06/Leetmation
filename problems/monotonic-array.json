@@ -1,0 +1,48 @@
+{
+    "problemName": "monotonic-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isMonotonic(self, nums: List[int]) -> bool:\r\n        asc = all(a <= b for a, b in pairwise(nums))\r\n        desc = all(a >= b for a, b in pairwise(nums))\r\n        return asc or desc",
+    "problemId": 896,
+    "title": "Monotonic Array",
+    "problemUrl": "https://leetcode.com/problems/monotonic-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0896.Monotonic Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0896.Monotonic Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0896.Monotonic Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0896.Monotonic Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0896.Monotonic Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0896.Monotonic Array/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0896.Monotonic Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0896.Monotonic Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

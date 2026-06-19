@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-level-of-tree-with-minimum-sum",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def minimumLevel(self, root: Optional[TreeNode]) -> int:\r\n        q = deque([root])\r\n        ans = 0\r\n        level, s = 1, inf\r\n        while q:\r\n            t = 0\r\n            for _ in range(len(q)):\r\n                node = q.popleft()\r\n                t += node.val\r\n                if node.left:\r\n                    q.append(node.left)\r\n                if node.right:\r\n                    q.append(node.right)\r\n            if s > t:\r\n                s = t\r\n                ans = level\r\n            level += 1\r\n        return ans",
+    "problemId": 3157,
+    "title": "Find the Level of Tree with Minimum Sum",
+    "problemUrl": "https://leetcode.com/problems/find-the-level-of-tree-with-minimum-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3157.Find the Level of Tree with Minimum Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3157.Find the Level of Tree with Minimum Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3157.Find the Level of Tree with Minimum Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3157.Find the Level of Tree with Minimum Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3157.Find the Level of Tree with Minimum Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3157.Find the Level of Tree with Minimum Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

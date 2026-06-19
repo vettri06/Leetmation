@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-k-to-sort-a-permutation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sortPermutation(self, nums: List[int]) -> int:\r\n        ans = -1\r\n        for i, x in enumerate(nums):\r\n            if i != x:\r\n                ans &= x\r\n        return max(ans, 0)",
+    "problemId": 3644,
+    "title": "Maximum K to Sort a Permutation",
+    "problemUrl": "https://leetcode.com/problems/maximum-k-to-sort-a-permutation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3644.Maximum K to Sort a Permutation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3644.Maximum K to Sort a Permutation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3644.Maximum K to Sort a Permutation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3644.Maximum K to Sort a Permutation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3644.Maximum K to Sort a Permutation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3644.Maximum K to Sort a Permutation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

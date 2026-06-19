@@ -1,0 +1,48 @@
+{
+    "problemName": "shuffle-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def restoreString(self, s: str, indices: List[int]) -> str:\r\n        ans = [None] * len(s)\r\n        for c, j in zip(s, indices):\r\n            ans[j] = c\r\n        return \"\".join(ans)",
+    "problemId": 1528,
+    "title": "Shuffle String",
+    "problemUrl": "https://leetcode.com/problems/shuffle-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1528.Shuffle String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1528.Shuffle String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1528.Shuffle String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1528.Shuffle String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1528.Shuffle String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1528.Shuffle String/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1528.Shuffle String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1528.Shuffle String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

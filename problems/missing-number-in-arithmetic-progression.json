@@ -1,0 +1,63 @@
+{
+    "problemName": "missing-number-in-arithmetic-progression",
+    "language": "python3",
+    "code": "class Solution:\r\n    def missingNumber(self, arr: List[int]) -> int:\r\n        return (arr[0] + arr[-1]) * (len(arr) + 1) // 2 - sum(arr)",
+    "problemId": 1228,
+    "title": "Missing Number In Arithmetic Progression",
+    "problemUrl": "https://leetcode.com/problems/missing-number-in-arithmetic-progression/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1228.Missing Number In Arithmetic Progression/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1228.Missing Number In Arithmetic Progression/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1228.Missing Number In Arithmetic Progression/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1228.Missing Number In Arithmetic Progression/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1228.Missing Number In Arithmetic Progression/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1228.Missing Number In Arithmetic Progression/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1228.Missing Number In Arithmetic Progression/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1228.Missing Number In Arithmetic Progression/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1228.Missing Number In Arithmetic Progression/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1228.Missing Number In Arithmetic Progression/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1228.Missing Number In Arithmetic Progression/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

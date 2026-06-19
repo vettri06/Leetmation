@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-number-of-removal-queries-that-can-be-processed-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumProcessableQueries(self, nums: List[int], queries: List[int]) -> int:\r\n        n = len(nums)\r\n        f = [[0] * n for _ in range(n)]\r\n        m = len(queries)\r\n        for i in range(n):\r\n            for j in range(n - 1, i - 1, -1):\r\n                if i:\r\n                    f[i][j] = max(\r\n                        f[i][j], f[i - 1][j] + (nums[i - 1] >= queries[f[i - 1][j]])\r\n                    )\r\n                if j + 1 < n:\r\n                    f[i][j] = max(\r\n                        f[i][j], f[i][j + 1] + (nums[j + 1] >= queries[f[i][j + 1]])\r\n                    )\r\n                if f[i][j] == m:\r\n                    return m\r\n        return max(f[i][i] + (nums[i] >= queries[f[i][i]]) for i in range(n))",
+    "problemId": 3018,
+    "title": "Maximum Number of Removal Queries That Can Be Processed I",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-removal-queries-that-can-be-processed-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3018.Maximum Number of Removal Queries That Can Be Processed I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3018.Maximum Number of Removal Queries That Can Be Processed I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3018.Maximum Number of Removal Queries That Can Be Processed I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3018.Maximum Number of Removal Queries That Can Be Processed I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3018.Maximum Number of Removal Queries That Can Be Processed I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3018.Maximum Number of Removal Queries That Can Be Processed I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3018.Maximum Number of Removal Queries That Can Be Processed I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "find-the-maximum-number-of-elements-in-subset",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumLength(self, nums: List[int]) -> int:\r\n        cnt = Counter(nums)\r\n        ans = cnt[1] - (cnt[1] % 2 ^ 1)\r\n        del cnt[1]\r\n        for x in cnt:\r\n            t = 0\r\n            while cnt[x] > 1:\r\n                x = x * x\r\n                t += 2\r\n            t += 1 if cnt[x] else -1\r\n            ans = max(ans, t)\r\n        return ans",
+    "problemId": 3020,
+    "title": "Find the Maximum Number of Elements in Subset",
+    "problemUrl": "https://leetcode.com/problems/find-the-maximum-number-of-elements-in-subset/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3020.Find the Maximum Number of Elements in Subset/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3020.Find the Maximum Number of Elements in Subset/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3020.Find the Maximum Number of Elements in Subset/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3020.Find the Maximum Number of Elements in Subset/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3020.Find the Maximum Number of Elements in Subset/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3020.Find the Maximum Number of Elements in Subset/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3020.Find the Maximum Number of Elements in Subset/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

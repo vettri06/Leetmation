@@ -1,0 +1,43 @@
+{
+    "problemName": "maximal-score-after-applying-k-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxKelements(self, nums: List[int], k: int) -> int:\r\n        h = [-v for v in nums]\r\n        heapify(h)\r\n        ans = 0\r\n        for _ in range(k):\r\n            v = -heappop(h)\r\n            ans += v\r\n            heappush(h, -(ceil(v / 3)))\r\n        return ans",
+    "problemId": 2530,
+    "title": "Maximal Score After Applying K Operations",
+    "problemUrl": "https://leetcode.com/problems/maximal-score-after-applying-k-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2530.Maximal Score After Applying K Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2530.Maximal Score After Applying K Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2530.Maximal Score After Applying K Operations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2530.Maximal Score After Applying K Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2530.Maximal Score After Applying K Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2530.Maximal Score After Applying K Operations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2530.Maximal Score After Applying K Operations/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

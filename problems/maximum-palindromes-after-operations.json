@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-palindromes-after-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxPalindromesAfterOperations(self, words: List[str]) -> int:\r\n        s = mask = 0\r\n        for w in words:\r\n            s += len(w)\r\n            for c in w:\r\n                mask ^= 1 << (ord(c) - ord(\"a\"))\r\n        s -= mask.bit_count()\r\n        words.sort(key=len)\r\n        ans = 0\r\n        for w in words:\r\n            s -= len(w) // 2 * 2\r\n            if s < 0:\r\n                break\r\n            ans += 1\r\n        return ans",
+    "problemId": 3035,
+    "title": "Maximum Palindromes After Operations",
+    "problemUrl": "https://leetcode.com/problems/maximum-palindromes-after-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3035.Maximum Palindromes After Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3035.Maximum Palindromes After Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3035.Maximum Palindromes After Operations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3035.Maximum Palindromes After Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3035.Maximum Palindromes After Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3035.Maximum Palindromes After Operations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

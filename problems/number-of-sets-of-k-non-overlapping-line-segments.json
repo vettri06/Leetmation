@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-sets-of-k-non-overlapping-line-segments",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfSets(self, n: int, k: int) -> int:\r\n        mod = 10**9 + 7\r\n        f = [[0] * (k + 1) for _ in range(n + 1)]\r\n        g = [[0] * (k + 1) for _ in range(n + 1)]\r\n        f[1][0] = 1\r\n        for i in range(2, n + 1):\r\n            for j in range(k + 1):\r\n                f[i][j] = (f[i - 1][j] + g[i - 1][j]) % mod\r\n                g[i][j] = g[i - 1][j]\r\n                if j:\r\n                    g[i][j] += f[i - 1][j - 1]\r\n                    g[i][j] %= mod\r\n                    g[i][j] += g[i - 1][j - 1]\r\n                    g[i][j] %= mod\r\n        return (f[-1][-1] + g[-1][-1]) % mod",
+    "problemId": 1621,
+    "title": "Number of Sets of K Non-Overlapping Line Segments",
+    "problemUrl": "https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1621.Number of Sets of K Non-Overlapping Line Segments/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1621.Number of Sets of K Non-Overlapping Line Segments/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1621.Number of Sets of K Non-Overlapping Line Segments/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1621.Number of Sets of K Non-Overlapping Line Segments/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1621.Number of Sets of K Non-Overlapping Line Segments/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1621.Number of Sets of K Non-Overlapping Line Segments/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

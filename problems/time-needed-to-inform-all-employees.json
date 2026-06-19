@@ -1,0 +1,43 @@
+{
+    "problemName": "time-needed-to-inform-all-employees",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numOfMinutes(\r\n        self, n: int, headID: int, manager: List[int], informTime: List[int]\r\n    ) -> int:\r\n        def dfs(i: int) -> int:\r\n            ans = 0\r\n            for j in g[i]:\r\n                ans = max(ans, dfs(j) + informTime[i])\r\n            return ans\r\n\r\n        g = defaultdict(list)\r\n        for i, x in enumerate(manager):\r\n            g[x].append(i)\r\n        return dfs(headID)",
+    "problemId": 1376,
+    "title": "Time Needed to Inform All Employees",
+    "problemUrl": "https://leetcode.com/problems/time-needed-to-inform-all-employees/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1376.Time Needed to Inform All Employees/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1376.Time Needed to Inform All Employees/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1376.Time Needed to Inform All Employees/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1376.Time Needed to Inform All Employees/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1376.Time Needed to Inform All Employees/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1376.Time Needed to Inform All Employees/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1376.Time Needed to Inform All Employees/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-gap",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumGap(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        if n < 2:\r\n            return 0\r\n        mi, mx = min(nums), max(nums)\r\n        bucket_size = max(1, (mx - mi) // (n - 1))\r\n        bucket_count = (mx - mi) // bucket_size + 1\r\n        buckets = [[inf, -inf] for _ in range(bucket_count)]\r\n        for v in nums:\r\n            i = (v - mi) // bucket_size\r\n            buckets[i][0] = min(buckets[i][0], v)\r\n            buckets[i][1] = max(buckets[i][1], v)\r\n        ans = 0\r\n        prev = inf\r\n        for curmin, curmax in buckets:\r\n            if curmin > curmax:\r\n                continue\r\n            ans = max(ans, curmin - prev)\r\n            prev = curmax\r\n        return ans",
+    "problemId": 164,
+    "title": "Maximum Gap",
+    "problemUrl": "https://leetcode.com/problems/maximum-gap/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0164.Maximum Gap/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0164.Maximum Gap/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0164.Maximum Gap/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0164.Maximum Gap/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0164.Maximum Gap/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0164.Maximum Gap/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

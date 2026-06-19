@@ -1,0 +1,28 @@
+{
+    "problemName": "minimum-cost-to-reach-city-with-discounts",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumCost(self, n: int, highways: List[List[int]], discounts: int) -> int:\r\n        g = defaultdict(list)\r\n        for a, b, c in highways:\r\n            g[a].append((b, c))\r\n            g[b].append((a, c))\r\n        q = [(0, 0, 0)]\r\n        dist = [[inf] * (discounts + 1) for _ in range(n)]\r\n        while q:\r\n            cost, i, k = heappop(q)\r\n            if k > discounts:\r\n                continue\r\n            if i == n - 1:\r\n                return cost\r\n            if dist[i][k] > cost:\r\n                dist[i][k] = cost\r\n                for j, v in g[i]:\r\n                    heappush(q, (cost + v, j, k))\r\n                    heappush(q, (cost + v // 2, j, k + 1))\r\n        return -1",
+    "problemId": 2093,
+    "title": "Minimum Cost to Reach City With Discounts",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-reach-city-with-discounts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2093.Minimum Cost to Reach City With Discounts/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2093.Minimum Cost to Reach City With Discounts/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2093.Minimum Cost to Reach City With Discounts/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2093.Minimum Cost to Reach City With Discounts/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

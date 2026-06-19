@@ -1,0 +1,33 @@
+{
+    "problemName": "minimize-rounding-error-to-meet-target",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimizeError(self, prices: List[str], target: int) -> str:\r\n        mi = 0\r\n        arr = []\r\n        for p in prices:\r\n            p = float(p)\r\n            mi += int(p)\r\n            if d := p - int(p):\r\n                arr.append(d)\r\n        if not mi <= target <= mi + len(arr):\r\n            return \"-1\"\r\n        d = target - mi\r\n        arr.sort(reverse=True)\r\n        ans = d - sum(arr[:d]) + sum(arr[d:])\r\n        return f'{ans:.3f}'",
+    "problemId": 1058,
+    "title": "Minimize Rounding Error to Meet Target",
+    "problemUrl": "https://leetcode.com/problems/minimize-rounding-error-to-meet-target/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1058.Minimize Rounding Error to Meet Target/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1058.Minimize Rounding Error to Meet Target/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1058.Minimize Rounding Error to Meet Target/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1058.Minimize Rounding Error to Meet Target/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1058.Minimize Rounding Error to Meet Target/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

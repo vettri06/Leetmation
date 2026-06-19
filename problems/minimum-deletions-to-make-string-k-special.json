@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-deletions-to-make-string-k-special",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumDeletions(self, word: str, k: int) -> int:\r\n        def f(v: int) -> int:\r\n            ans = 0\r\n            for x in nums:\r\n                if x < v:\r\n                    ans += x\r\n                elif x > v + k:\r\n                    ans += x - v - k\r\n            return ans\r\n\r\n        nums = Counter(word).values()\r\n        return min(f(v) for v in range(len(word) + 1))",
+    "problemId": 3085,
+    "title": "Minimum Deletions to Make String K-Special",
+    "problemUrl": "https://leetcode.com/problems/minimum-deletions-to-make-string-k-special/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3085.Minimum Deletions to Make String K-Special/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3085.Minimum Deletions to Make String K-Special/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3085.Minimum Deletions to Make String K-Special/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3085.Minimum Deletions to Make String K-Special/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3085.Minimum Deletions to Make String K-Special/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3085.Minimum Deletions to Make String K-Special/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3085.Minimum Deletions to Make String K-Special/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

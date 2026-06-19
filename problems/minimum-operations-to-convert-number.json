@@ -1,0 +1,78 @@
+{
+    "problemName": "minimum-operations-to-convert-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumOperations(self, nums: List[int], start: int, goal: int) -> int:\r\n        op1 = lambda x, y: x + y\r\n        op2 = lambda x, y: x - y\r\n        op3 = lambda x, y: x ^ y\r\n        ops = [op1, op2, op3]\r\n        vis = [False] * 1001\r\n        q = deque([(start, 0)])\r\n        while q:\r\n            x, step = q.popleft()\r\n            for num in nums:\r\n                for op in ops:\r\n                    nx = op(x, num)\r\n                    if nx == goal:\r\n                        return step + 1\r\n                    if 0 <= nx <= 1000 and not vis[nx]:\r\n                        q.append((nx, step + 1))\r\n                        vis[nx] = True\r\n        return -1",
+    "problemId": 2059,
+    "title": "Minimum Operations to Convert Number",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-convert-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2059.Minimum Operations to Convert Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2059.Minimum Operations to Convert Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2059.Minimum Operations to Convert Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2059.Minimum Operations to Convert Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2059.Minimum Operations to Convert Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2059.Minimum Operations to Convert Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2059.Minimum Operations to Convert Number/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2059.Minimum Operations to Convert Number/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2059.Minimum Operations to Convert Number/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2059.Minimum Operations to Convert Number/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2059.Minimum Operations to Convert Number/Solution3.py",
+            "sourceFile": "Solution3.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2059.Minimum Operations to Convert Number/Solution3.cpp",
+            "sourceFile": "Solution3.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2059.Minimum Operations to Convert Number/Solution3.java",
+            "sourceFile": "Solution3.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2059.Minimum Operations to Convert Number/Solution3.go",
+            "sourceFile": "Solution3.go"
+        }
+    ]
+}

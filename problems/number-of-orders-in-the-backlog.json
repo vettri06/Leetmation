@@ -1,0 +1,33 @@
+{
+    "problemName": "number-of-orders-in-the-backlog",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getNumberOfBacklogOrders(self, orders: List[List[int]]) -> int:\r\n        buy, sell = [], []\r\n        for p, a, t in orders:\r\n            if t == 0:\r\n                while a and sell and sell[0][0] <= p:\r\n                    x, y = heappop(sell)\r\n                    if a >= y:\r\n                        a -= y\r\n                    else:\r\n                        heappush(sell, (x, y - a))\r\n                        a = 0\r\n                if a:\r\n                    heappush(buy, (-p, a))\r\n            else:\r\n                while a and buy and -buy[0][0] >= p:\r\n                    x, y = heappop(buy)\r\n                    if a >= y:\r\n                        a -= y\r\n                    else:\r\n                        heappush(buy, (x, y - a))\r\n                        a = 0\r\n                if a:\r\n                    heappush(sell, (p, a))\r\n        mod = 10**9 + 7\r\n        return sum(v[1] for v in buy + sell) % mod",
+    "problemId": 1801,
+    "title": "Number of Orders in the Backlog",
+    "problemUrl": "https://leetcode.com/problems/number-of-orders-in-the-backlog/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1801.Number of Orders in the Backlog/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1801.Number of Orders in the Backlog/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1801.Number of Orders in the Backlog/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1801.Number of Orders in the Backlog/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1801.Number of Orders in the Backlog/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

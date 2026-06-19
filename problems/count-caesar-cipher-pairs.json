@@ -1,0 +1,38 @@
+{
+    "problemName": "count-caesar-cipher-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPairs(self, words: List[str]) -> int:\r\n        cnt = defaultdict(int)\r\n        for s in words:\r\n            t = list(s)\r\n            k = ord(\"z\") - ord(t[0])\r\n            for i in range(1, len(t)):\r\n                t[i] = chr((ord(t[i]) - ord(\"a\") + k) % 26 + ord(\"a\"))\r\n            t[0] = \"z\"\r\n            cnt[\"\".join(t)] += 1\r\n        return sum(v * (v - 1) // 2 for v in cnt.values())",
+    "problemId": 3805,
+    "title": "Count Caesar Cipher Pairs",
+    "problemUrl": "https://leetcode.com/problems/count-caesar-cipher-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3805.Count Caesar Cipher Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3805.Count Caesar Cipher Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3805.Count Caesar Cipher Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3805.Count Caesar Cipher Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3805.Count Caesar Cipher Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3805.Count Caesar Cipher Pairs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

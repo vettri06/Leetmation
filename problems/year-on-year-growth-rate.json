@@ -1,0 +1,18 @@
+{
+    "problemName": "year-on-year-growth-rate",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT product_id, YEAR(transaction_date) year, SUM(spend) curr_year_spend\r\n        FROM user_transactions\r\n        GROUP BY 1, 2\r\n    ),\r\n    S AS (\r\n        SELECT t1.year, t1.product_id, t1.curr_year_spend, t2.curr_year_spend prev_year_spend\r\n        FROM\r\n            T t1\r\n            LEFT JOIN T t2 ON t1.product_id = t2.product_id AND t1.year = t2.year + 1\r\n    )\r\nSELECT\r\n    *,\r\n    ROUND((curr_year_spend - prev_year_spend) / prev_year_spend * 100, 2) yoy_rate\r\nFROM S\r\nORDER BY 2, 1;",
+    "problemId": 3214,
+    "title": "Year on Year Growth Rate",
+    "problemUrl": "https://leetcode.com/problems/year-on-year-growth-rate/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3214.Year on Year Growth Rate/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3214.Year on Year Growth Rate/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

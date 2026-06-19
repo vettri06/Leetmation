@@ -1,0 +1,48 @@
+{
+    "problemName": "find-center-of-star-graph",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findCenter(self, edges: List[List[int]]) -> int:\r\n        return edges[0][0] if edges[0][0] in edges[1] else edges[0][1]",
+    "problemId": 1791,
+    "title": "Find Center of Star Graph",
+    "problemUrl": "https://leetcode.com/problems/find-center-of-star-graph/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1791.Find Center of Star Graph/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1791.Find Center of Star Graph/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1791.Find Center of Star Graph/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1791.Find Center of Star Graph/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1791.Find Center of Star Graph/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1791.Find Center of Star Graph/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1791.Find Center of Star Graph/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1791.Find Center of Star Graph/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

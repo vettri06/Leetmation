@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-xor-after-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumXOR(self, nums: List[int]) -> int:\r\n        return reduce(or_, nums)",
+    "problemId": 2317,
+    "title": "Maximum XOR After Operations",
+    "problemUrl": "https://leetcode.com/problems/maximum-xor-after-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2317.Maximum XOR After Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2317.Maximum XOR After Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2317.Maximum XOR After Operations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2317.Maximum XOR After Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2317.Maximum XOR After Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2317.Maximum XOR After Operations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "snakes-and-ladders",
+    "language": "python3",
+    "code": "class Solution:\r\n    def snakesAndLadders(self, board: List[List[int]]) -> int:\r\n        n = len(board)\r\n        q = deque([1])\r\n        vis = {1}\r\n        ans = 0\r\n        m = n * n\r\n        while q:\r\n            for _ in range(len(q)):\r\n                x = q.popleft()\r\n                if x == m:\r\n                    return ans\r\n                for y in range(x + 1, min(x + 6, m) + 1):\r\n                    i, j = divmod(y - 1, n)\r\n                    if i & 1:\r\n                        j = n - j - 1\r\n                    i = n - i - 1\r\n                    z = y if board[i][j] == -1 else board[i][j]\r\n                    if z not in vis:\r\n                        vis.add(z)\r\n                        q.append(z)\r\n            ans += 1\r\n        return -1",
+    "problemId": 909,
+    "title": "Snakes and Ladders",
+    "problemUrl": "https://leetcode.com/problems/snakes-and-ladders/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0909.Snakes and Ladders/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0909.Snakes and Ladders/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0909.Snakes and Ladders/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0909.Snakes and Ladders/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0909.Snakes and Ladders/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0909.Snakes and Ladders/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0909.Snakes and Ladders/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

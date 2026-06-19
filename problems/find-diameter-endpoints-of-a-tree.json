@@ -1,0 +1,43 @@
+{
+    "problemName": "find-diameter-endpoints-of-a-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findSpecialNodes(self, n: int, edges: List[List[int]]) -> str:\r\n        g = [[] for _ in range(n)]\r\n        for a, b in edges:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n\r\n        def bfs(start: int):\r\n            dist = [-1] * n\r\n            dist[start] = 0\r\n            q = deque([start])\r\n            far = start\r\n            while q:\r\n                u = q.popleft()\r\n                if dist[u] > dist[far]:\r\n                    far = u\r\n                for v in g[u]:\r\n                    if dist[v] == -1:\r\n                        dist[v] = dist[u] + 1\r\n                        q.append(v)\r\n            return far, dist\r\n\r\n        a, _ = bfs(0)\r\n        b, dist1 = bfs(a)\r\n        _, dist2 = bfs(b)\r\n        d = dist1[b]\r\n        ans = [\"0\"] * n\r\n        for i in range(n):\r\n            if dist1[i] == d or dist2[i] == d:\r\n                ans[i] = \"1\"\r\n        return \"\".join(ans)",
+    "problemId": 3787,
+    "title": "Find Diameter Endpoints of a Tree",
+    "problemUrl": "https://leetcode.com/problems/find-diameter-endpoints-of-a-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3787.Find Diameter Endpoints of a Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3787.Find Diameter Endpoints of a Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3787.Find Diameter Endpoints of a Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3787.Find Diameter Endpoints of a Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3787.Find Diameter Endpoints of a Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3787.Find Diameter Endpoints of a Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3787.Find Diameter Endpoints of a Tree/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-number-of-operations-to-make-word-k-periodic",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumOperationsToMakeKPeriodic(self, word: str, k: int) -> int:\r\n        n = len(word)\r\n        return n // k - max(Counter(word[i : i + k] for i in range(0, n, k)).values())",
+    "problemId": 3137,
+    "title": "Minimum Number of Operations to Make Word K-Periodic",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-operations-to-make-word-k-periodic/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3137.Minimum Number of Operations to Make Word K-Periodic/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3137.Minimum Number of Operations to Make Word K-Periodic/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3137.Minimum Number of Operations to Make Word K-Periodic/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3137.Minimum Number of Operations to Make Word K-Periodic/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3137.Minimum Number of Operations to Make Word K-Periodic/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3137.Minimum Number of Operations to Make Word K-Periodic/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

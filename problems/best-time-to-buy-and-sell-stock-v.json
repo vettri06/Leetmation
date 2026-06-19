@@ -1,0 +1,48 @@
+{
+    "problemName": "best-time-to-buy-and-sell-stock-v",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumProfit(self, prices: List[int], k: int) -> int:\r\n        n = len(prices)\r\n        f = [[[0] * 3 for _ in range(k + 1)] for _ in range(n)]\r\n        for j in range(1, k + 1):\r\n            f[0][j][1] = -prices[0]\r\n            f[0][j][2] = prices[0]\r\n        for i in range(1, n):\r\n            for j in range(1, k + 1):\r\n                f[i][j][0] = max(\r\n                    f[i - 1][j][0],\r\n                    f[i - 1][j][1] + prices[i],\r\n                    f[i - 1][j][2] - prices[i],\r\n                )\r\n                f[i][j][1] = max(f[i - 1][j][1], f[i - 1][j - 1][0] - prices[i])\r\n                f[i][j][2] = max(f[i - 1][j][2], f[i - 1][j - 1][0] + prices[i])\r\n        return f[n - 1][k][0]",
+    "problemId": 3573,
+    "title": "Best Time to Buy and Sell Stock V",
+    "problemUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-v/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3573.Best Time to Buy and Sell Stock V/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3573.Best Time to Buy and Sell Stock V/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3573.Best Time to Buy and Sell Stock V/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3573.Best Time to Buy and Sell Stock V/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3573.Best Time to Buy and Sell Stock V/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3573.Best Time to Buy and Sell Stock V/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3573.Best Time to Buy and Sell Stock V/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3573.Best Time to Buy and Sell Stock V/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

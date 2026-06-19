@@ -1,0 +1,33 @@
+{
+    "problemName": "groups-of-special-equivalent-strings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numSpecialEquivGroups(self, words: List[str]) -> int:\r\n        s = {''.join(sorted(word[::2]) + sorted(word[1::2])) for word in words}\r\n        return len(s)",
+    "problemId": 893,
+    "title": "Groups of Special-Equivalent Strings",
+    "problemUrl": "https://leetcode.com/problems/groups-of-special-equivalent-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0893.Groups of Special-Equivalent Strings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0893.Groups of Special-Equivalent Strings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0893.Groups of Special-Equivalent Strings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0893.Groups of Special-Equivalent Strings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0893.Groups of Special-Equivalent Strings/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "find-students-who-improved",
+    "language": "mysql",
+    "code": "WITH\r\n    RankedScores AS (\r\n        SELECT\r\n            student_id,\r\n            subject,\r\n            score,\r\n            exam_date,\r\n            ROW_NUMBER() OVER (\r\n                PARTITION BY student_id, subject\r\n                ORDER BY exam_date ASC\r\n            ) AS rn_first,\r\n            ROW_NUMBER() OVER (\r\n                PARTITION BY student_id, subject\r\n                ORDER BY exam_date DESC\r\n            ) AS rn_latest\r\n        FROM Scores\r\n    ),\r\n    FirstAndLatestScores AS (\r\n        SELECT\r\n            f.student_id,\r\n            f.subject,\r\n            f.score AS first_score,\r\n            l.score AS latest_score\r\n        FROM\r\n            RankedScores f\r\n            JOIN RankedScores l ON f.student_id = l.student_id AND f.subject = l.subject\r\n        WHERE f.rn_first = 1 AND l.rn_latest = 1\r\n    )\r\nSELECT\r\n    *\r\nFROM FirstAndLatestScores\r\nWHERE latest_score > first_score\r\nORDER BY 1, 2;",
+    "problemId": 3421,
+    "title": "Find Students Who Improved",
+    "problemUrl": "https://leetcode.com/problems/find-students-who-improved/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3421.Find Students Who Improved/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3421.Find Students Who Improved/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "problemName": "distinct-subsequences-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distinctSubseqII(self, s: str) -> int:\r\n        mod = 10**9 + 7\r\n        n = len(s)\r\n        dp = [[0] * 26 for _ in range(n + 1)]\r\n        for i, c in enumerate(s, 1):\r\n            k = ord(c) - ord('a')\r\n            for j in range(26):\r\n                if j == k:\r\n                    dp[i][j] = sum(dp[i - 1]) % mod + 1\r\n                else:\r\n                    dp[i][j] = dp[i - 1][j]\r\n        return sum(dp[-1]) % mod",
+    "problemId": 940,
+    "title": "Distinct Subsequences II",
+    "problemUrl": "https://leetcode.com/problems/distinct-subsequences-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0940.Distinct Subsequences II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0940.Distinct Subsequences II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0940.Distinct Subsequences II/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0940.Distinct Subsequences II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0940.Distinct Subsequences II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0940.Distinct Subsequences II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0940.Distinct Subsequences II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0940.Distinct Subsequences II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0940.Distinct Subsequences II/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0940.Distinct Subsequences II/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0940.Distinct Subsequences II/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0940.Distinct Subsequences II/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0940.Distinct Subsequences II/Solution3.py",
+            "sourceFile": "Solution3.py"
+        }
+    ]
+}

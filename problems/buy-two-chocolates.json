@@ -1,0 +1,73 @@
+{
+    "problemName": "buy-two-chocolates",
+    "language": "python3",
+    "code": "class Solution:\r\n    def buyChoco(self, prices: List[int], money: int) -> int:\r\n        prices.sort()\r\n        cost = prices[0] + prices[1]\r\n        return money if money < cost else money - cost",
+    "problemId": 2706,
+    "title": "Buy Two Chocolates",
+    "problemUrl": "https://leetcode.com/problems/buy-two-chocolates/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2706.Buy Two Chocolates/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2706.Buy Two Chocolates/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2706.Buy Two Chocolates/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2706.Buy Two Chocolates/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2706.Buy Two Chocolates/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2706.Buy Two Chocolates/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2706.Buy Two Chocolates/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2706.Buy Two Chocolates/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2706.Buy Two Chocolates/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2706.Buy Two Chocolates/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2706.Buy Two Chocolates/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2706.Buy Two Chocolates/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2706.Buy Two Chocolates/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

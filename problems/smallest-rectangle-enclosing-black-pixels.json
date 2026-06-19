@@ -1,0 +1,33 @@
+{
+    "problemName": "smallest-rectangle-enclosing-black-pixels",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minArea(self, image: List[List[str]], x: int, y: int) -> int:\r\n        m, n = len(image), len(image[0])\r\n        left, right = 0, x\r\n        while left < right:\r\n            mid = (left + right) >> 1\r\n            c = 0\r\n            while c < n and image[mid][c] == '0':\r\n                c += 1\r\n            if c < n:\r\n                right = mid\r\n            else:\r\n                left = mid + 1\r\n        u = left\r\n        left, right = x, m - 1\r\n        while left < right:\r\n            mid = (left + right + 1) >> 1\r\n            c = 0\r\n            while c < n and image[mid][c] == '0':\r\n                c += 1\r\n            if c < n:\r\n                left = mid\r\n            else:\r\n                right = mid - 1\r\n        d = left\r\n        left, right = 0, y\r\n        while left < right:\r\n            mid = (left + right) >> 1\r\n            r = 0\r\n            while r < m and image[r][mid] == '0':\r\n                r += 1\r\n            if r < m:\r\n                right = mid\r\n            else:\r\n                left = mid + 1\r\n        l = left\r\n        left, right = y, n - 1\r\n        while left < right:\r\n            mid = (left + right + 1) >> 1\r\n            r = 0\r\n            while r < m and image[r][mid] == '0':\r\n                r += 1\r\n            if r < m:\r\n                left = mid\r\n            else:\r\n                right = mid - 1\r\n        r = left\r\n        return (d - u + 1) * (r - l + 1)",
+    "problemId": 302,
+    "title": "Smallest Rectangle Enclosing Black Pixels",
+    "problemUrl": "https://leetcode.com/problems/smallest-rectangle-enclosing-black-pixels/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0302.Smallest Rectangle Enclosing Black Pixels/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0302.Smallest Rectangle Enclosing Black Pixels/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0302.Smallest Rectangle Enclosing Black Pixels/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0302.Smallest Rectangle Enclosing Black Pixels/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0302.Smallest Rectangle Enclosing Black Pixels/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

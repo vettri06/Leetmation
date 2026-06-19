@@ -1,0 +1,43 @@
+{
+    "problemName": "apply-operations-to-make-two-strings-equal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, s1: str, s2: str, x: int) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int) -> int:\r\n            if i > j:\r\n                return 0\r\n            a = dfs(i + 1, j - 1) + x\r\n            b = dfs(i + 2, j) + idx[i + 1] - idx[i]\r\n            c = dfs(i, j - 2) + idx[j] - idx[j - 1]\r\n            return min(a, b, c)\r\n\r\n        n = len(s1)\r\n        idx = [i for i in range(n) if s1[i] != s2[i]]\r\n        m = len(idx)\r\n        if m & 1:\r\n            return -1\r\n        return dfs(0, m - 1)",
+    "problemId": 2896,
+    "title": "Apply Operations to Make Two Strings Equal",
+    "problemUrl": "https://leetcode.com/problems/apply-operations-to-make-two-strings-equal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2896.Apply Operations to Make Two Strings Equal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2896.Apply Operations to Make Two Strings Equal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2896.Apply Operations to Make Two Strings Equal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2896.Apply Operations to Make Two Strings Equal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2896.Apply Operations to Make Two Strings Equal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2896.Apply Operations to Make Two Strings Equal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2896.Apply Operations to Make Two Strings Equal/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

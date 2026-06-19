@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-subarray-with-equal-products",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxLength(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        ans = 0\r\n        max_p = lcm(*nums) * max(nums)\r\n        for i in range(n):\r\n            p, g, l = 1, 0, 1\r\n            for j in range(i, n):\r\n                p *= nums[j]\r\n                g = gcd(g, nums[j])\r\n                l = lcm(l, nums[j])\r\n                if p == g * l:\r\n                    ans = max(ans, j - i + 1)\r\n                if p > max_p:\r\n                    break\r\n        return ans",
+    "problemId": 3411,
+    "title": "Maximum Subarray With Equal Products",
+    "problemUrl": "https://leetcode.com/problems/maximum-subarray-with-equal-products/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3411.Maximum Subarray With Equal Products/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3411.Maximum Subarray With Equal Products/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3411.Maximum Subarray With Equal Products/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3411.Maximum Subarray With Equal Products/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3411.Maximum Subarray With Equal Products/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

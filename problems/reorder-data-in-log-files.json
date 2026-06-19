@@ -1,0 +1,43 @@
+{
+    "problemName": "reorder-data-in-log-files",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reorderLogFiles(self, logs: List[str]) -> List[str]:\r\n        def f(log: str):\r\n            id_, rest = log.split(\" \", 1)\r\n            return (0, rest, id_) if rest[0].isalpha() else (1,)\r\n\r\n        return sorted(logs, key=f)",
+    "problemId": 937,
+    "title": "Reorder Data in Log Files",
+    "problemUrl": "https://leetcode.com/problems/reorder-data-in-log-files/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0937.Reorder Data in Log Files/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0937.Reorder Data in Log Files/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0937.Reorder Data in Log Files/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0937.Reorder Data in Log Files/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0937.Reorder Data in Log Files/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0937.Reorder Data in Log Files/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0937.Reorder Data in Log Files/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

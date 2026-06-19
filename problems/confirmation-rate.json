@@ -1,0 +1,18 @@
+{
+    "problemName": "confirmation-rate",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    user_id,\r\n    ROUND(IFNULL(SUM(action = 'confirmed') / COUNT(1), 0), 2) AS confirmation_rate\r\nFROM\r\n    SignUps\r\n    LEFT JOIN Confirmations USING (user_id)\r\nGROUP BY 1;",
+    "problemId": 1934,
+    "title": "Confirmation Rate",
+    "problemUrl": "https://leetcode.com/problems/confirmation-rate/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1934.Confirmation Rate/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1934.Confirmation Rate/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

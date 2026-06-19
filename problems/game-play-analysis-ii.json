@@ -1,0 +1,23 @@
+{
+    "problemName": "game-play-analysis-ii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    player_id,\r\n    device_id\r\nFROM Activity\r\nWHERE\r\n    (player_id, event_date) IN (\r\n        SELECT\r\n            player_id,\r\n            MIN(event_date) AS event_date\r\n        FROM Activity\r\n        GROUP BY 1\r\n    );",
+    "problemId": 512,
+    "title": "Game Play Analysis II",
+    "problemUrl": "https://leetcode.com/problems/game-play-analysis-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0512.Game Play Analysis II/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0512.Game Play Analysis II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0512.Game Play Analysis II/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

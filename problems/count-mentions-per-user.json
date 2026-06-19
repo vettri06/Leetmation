@@ -1,0 +1,38 @@
+{
+    "problemName": "count-mentions-per-user",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countMentions(self, numberOfUsers: int, events: List[List[str]]) -> List[int]:\r\n        events.sort(key=lambda e: (int(e[1]), e[0][2]))\r\n        ans = [0] * numberOfUsers\r\n        online_t = [0] * numberOfUsers\r\n        lazy = 0\r\n        for etype, ts, s in events:\r\n            cur = int(ts)\r\n            if etype[0] == \"O\":\r\n                online_t[int(s)] = cur + 60\r\n            elif s[0] == \"A\":\r\n                lazy += 1\r\n            elif s[0] == \"H\":\r\n                for i, t in enumerate(online_t):\r\n                    if t <= cur:\r\n                        ans[i] += 1\r\n            else:\r\n                for a in s.split():\r\n                    ans[int(a[2:])] += 1\r\n        if lazy:\r\n            for i in range(numberOfUsers):\r\n                ans[i] += lazy\r\n        return ans",
+    "problemId": 3433,
+    "title": "Count Mentions Per User",
+    "problemUrl": "https://leetcode.com/problems/count-mentions-per-user/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3433.Count Mentions Per User/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3433.Count Mentions Per User/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3433.Count Mentions Per User/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3433.Count Mentions Per User/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3433.Count Mentions Per User/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3433.Count Mentions Per User/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

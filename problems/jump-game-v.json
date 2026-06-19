@@ -1,0 +1,68 @@
+{
+    "problemName": "jump-game-v",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxJumps(self, arr: List[int], d: int) -> int:\r\n        @cache\r\n        def dfs(i):\r\n            ans = 1\r\n            for j in range(i - 1, -1, -1):\r\n                if i - j > d or arr[j] >= arr[i]:\r\n                    break\r\n                ans = max(ans, 1 + dfs(j))\r\n            for j in range(i + 1, n):\r\n                if j - i > d or arr[j] >= arr[i]:\r\n                    break\r\n                ans = max(ans, 1 + dfs(j))\r\n            return ans\r\n\r\n        n = len(arr)\r\n        return max(dfs(i) for i in range(n))",
+    "problemId": 1340,
+    "title": "Jump Game V",
+    "problemUrl": "https://leetcode.com/problems/jump-game-v/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1340.Jump Game V/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1340.Jump Game V/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1340.Jump Game V/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1340.Jump Game V/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1340.Jump Game V/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1340.Jump Game V/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1340.Jump Game V/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1340.Jump Game V/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1340.Jump Game V/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1340.Jump Game V/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1340.Jump Game V/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1340.Jump Game V/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

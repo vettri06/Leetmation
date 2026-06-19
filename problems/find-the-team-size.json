@@ -1,0 +1,23 @@
+{
+    "problemName": "find-the-team-size",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT team_id, COUNT(1) AS team_size\r\n        FROM Employee\r\n        GROUP BY 1\r\n    )\r\nSELECT employee_id, team_size\r\nFROM\r\n    Employee\r\n    JOIN T USING (team_id);",
+    "problemId": 1303,
+    "title": "Find the Team Size",
+    "problemUrl": "https://leetcode.com/problems/find-the-team-size/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1303.Find the Team Size/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1303.Find the Team Size/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1303.Find the Team Size/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

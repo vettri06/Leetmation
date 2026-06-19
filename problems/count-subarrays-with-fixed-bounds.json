@@ -1,0 +1,48 @@
+{
+    "problemName": "count-subarrays-with-fixed-bounds",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSubarrays(self, nums: List[int], minK: int, maxK: int) -> int:\r\n        j1 = j2 = k = -1\r\n        ans = 0\r\n        for i, v in enumerate(nums):\r\n            if v < minK or v > maxK:\r\n                k = i\r\n            if v == minK:\r\n                j1 = i\r\n            if v == maxK:\r\n                j2 = i\r\n            ans += max(0, min(j1, j2) - k)\r\n        return ans",
+    "problemId": 2444,
+    "title": "Count Subarrays With Fixed Bounds",
+    "problemUrl": "https://leetcode.com/problems/count-subarrays-with-fixed-bounds/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2444.Count Subarrays With Fixed Bounds/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2444.Count Subarrays With Fixed Bounds/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2444.Count Subarrays With Fixed Bounds/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2444.Count Subarrays With Fixed Bounds/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2444.Count Subarrays With Fixed Bounds/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2444.Count Subarrays With Fixed Bounds/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2444.Count Subarrays With Fixed Bounds/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2444.Count Subarrays With Fixed Bounds/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

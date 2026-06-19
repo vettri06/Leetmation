@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-time-to-finish-the-race",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumFinishTime(\r\n        self, tires: List[List[int]], changeTime: int, numLaps: int\r\n    ) -> int:\r\n        cost = [inf] * 18\r\n        for f, r in tires:\r\n            i, s, t = 1, 0, f\r\n            while t <= changeTime + f:\r\n                s += t\r\n                cost[i] = min(cost[i], s)\r\n                t *= r\r\n                i += 1\r\n        f = [inf] * (numLaps + 1)\r\n        f[0] = -changeTime\r\n        for i in range(1, numLaps + 1):\r\n            for j in range(1, min(18, i + 1)):\r\n                f[i] = min(f[i], f[i - j] + cost[j])\r\n            f[i] += changeTime\r\n        return f[numLaps]",
+    "problemId": 2188,
+    "title": "Minimum Time to Finish the Race",
+    "problemUrl": "https://leetcode.com/problems/minimum-time-to-finish-the-race/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2188.Minimum Time to Finish the Race/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2188.Minimum Time to Finish the Race/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2188.Minimum Time to Finish the Race/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2188.Minimum Time to Finish the Race/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2188.Minimum Time to Finish the Race/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2188.Minimum Time to Finish the Race/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

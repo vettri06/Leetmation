@@ -1,0 +1,33 @@
+{
+    "problemName": "verify-preorder-sequence-in-binary-search-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def verifyPreorder(self, preorder: List[int]) -> bool:\r\n        stk = []\r\n        last = -inf\r\n        for x in preorder:\r\n            if x < last:\r\n                return False\r\n            while stk and stk[-1] < x:\r\n                last = stk.pop()\r\n            stk.append(x)\r\n        return True",
+    "problemId": 255,
+    "title": "Verify Preorder Sequence in Binary Search Tree",
+    "problemUrl": "https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0255.Verify Preorder Sequence in Binary Search Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0255.Verify Preorder Sequence in Binary Search Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0255.Verify Preorder Sequence in Binary Search Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0255.Verify Preorder Sequence in Binary Search Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0255.Verify Preorder Sequence in Binary Search Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "problemName": "stone-game-ix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def stoneGameIX(self, stones: List[int]) -> bool:\r\n        def check(cnt: List[int]) -> bool:\r\n            if cnt[1] == 0:\r\n                return False\r\n            cnt[1] -= 1\r\n            r = 1 + min(cnt[1], cnt[2]) * 2 + cnt[0]\r\n            if cnt[1] > cnt[2]:\r\n                cnt[1] -= 1\r\n                r += 1\r\n            return r % 2 == 1 and cnt[1] != cnt[2]\r\n\r\n        c1 = [0] * 3\r\n        for x in stones:\r\n            c1[x % 3] += 1\r\n        c2 = [c1[0], c1[2], c1[1]]\r\n        return check(c1) or check(c2)",
+    "problemId": 2029,
+    "title": "Stone Game IX",
+    "problemUrl": "https://leetcode.com/problems/stone-game-ix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2029.Stone Game IX/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2029.Stone Game IX/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2029.Stone Game IX/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2029.Stone Game IX/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2029.Stone Game IX/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2029.Stone Game IX/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2029.Stone Game IX/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2029.Stone Game IX/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2029.Stone Game IX/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

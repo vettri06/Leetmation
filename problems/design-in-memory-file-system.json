@@ -1,0 +1,28 @@
+{
+    "problemName": "design-in-memory-file-system",
+    "language": "python3",
+    "code": "class Trie:\r\n    def __init__(self):\r\n        self.name = None\r\n        self.isFile = False\r\n        self.content = []\r\n        self.children = {}\r\n\r\n    def insert(self, path, isFile):\r\n        node = self\r\n        ps = path.split('/')\r\n        for p in ps[1:]:\r\n            if p not in node.children:\r\n                node.children[p] = Trie()\r\n            node = node.children[p]\r\n        node.isFile = isFile\r\n        if isFile:\r\n            node.name = ps[-1]\r\n        return node\r\n\r\n    def search(self, path):\r\n        node = self\r\n        if path == '/':\r\n            return node\r\n        ps = path.split('/')\r\n        for p in ps[1:]:\r\n            if p not in node.children:\r\n                return None\r\n            node = node.children[p]\r\n        return node\r\n\r\n\r\nclass FileSystem:\r\n    def __init__(self):\r\n        self.root = Trie()\r\n\r\n    def ls(self, path: str) -> List[str]:\r\n        node = self.root.search(path)\r\n        if node is None:\r\n            return []\r\n        if node.isFile:\r\n            return [node.name]\r\n        return sorted(node.children.keys())\r\n\r\n    def mkdir(self, path: str) -> None:\r\n        self.root.insert(path, False)\r\n\r\n    def addContentToFile(self, filePath: str, content: str) -> None:\r\n        node = self.root.insert(filePath, True)\r\n        node.content.append(content)\r\n\r\n    def readContentFromFile(self, filePath: str) -> str:\r\n        node = self.root.search(filePath)\r\n        return ''.join(node.content)\r\n\r\n\r\n# Your FileSystem object will be instantiated and called as such:\r\n# obj = FileSystem()\r\n# param_1 = obj.ls(path)\r\n# obj.mkdir(path)\r\n# obj.addContentToFile(filePath,content)\r\n# param_4 = obj.readContentFromFile(filePath)",
+    "problemId": 588,
+    "title": "Design In-Memory File System",
+    "problemUrl": "https://leetcode.com/problems/design-in-memory-file-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0588.Design In-Memory File System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0588.Design In-Memory File System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0588.Design In-Memory File System/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0588.Design In-Memory File System/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

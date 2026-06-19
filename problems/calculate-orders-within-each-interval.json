@@ -1,0 +1,23 @@
+{
+    "problemName": "calculate-orders-within-each-interval",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            minute,\r\n            SUM(order_count) OVER (\r\n                ORDER BY minute\r\n                ROWS 5 PRECEDING\r\n            ) AS total_orders\r\n        FROM Orders\r\n    )\r\nSELECT minute / 6 AS interval_no, total_orders\r\nFROM T\r\nWHERE minute % 6 = 0;",
+    "problemId": 2893,
+    "title": "Calculate Orders Within Each Interval",
+    "problemUrl": "https://leetcode.com/problems/calculate-orders-within-each-interval/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2893.Calculate Orders Within Each Interval/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2893.Calculate Orders Within Each Interval/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2893.Calculate Orders Within Each Interval/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

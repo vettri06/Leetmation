@@ -1,0 +1,38 @@
+{
+    "problemName": "count-indices-with-opposite-parity",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countOppositeParity(self, nums: list[int]) -> list[int]:\r\n        cnt = [0, 0]\r\n        for x in nums:\r\n            cnt[x & 1] += 1\r\n        ans = [0] * len(nums)\r\n        for i, x in enumerate(nums):\r\n            cnt[x & 1] -= 1\r\n            ans[i] = cnt[x & 1 ^ 1]\r\n        return ans",
+    "problemId": 3917,
+    "title": "Count Indices With Opposite Parity",
+    "problemUrl": "https://leetcode.com/problems/count-indices-with-opposite-parity/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3917.Count Indices With Opposite Parity/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3917.Count Indices With Opposite Parity/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3917.Count Indices With Opposite Parity/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3917.Count Indices With Opposite Parity/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3917.Count Indices With Opposite Parity/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3917.Count Indices With Opposite Parity/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

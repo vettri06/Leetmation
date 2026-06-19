@@ -1,0 +1,38 @@
+{
+    "problemName": "change-minimum-characters-to-satisfy-one-of-three-conditions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCharacters(self, a: str, b: str) -> int:\r\n        def f(cnt1, cnt2):\r\n            for i in range(1, 26):\r\n                t = sum(cnt1[i:]) + sum(cnt2[:i])\r\n                nonlocal ans\r\n                ans = min(ans, t)\r\n\r\n        m, n = len(a), len(b)\r\n        cnt1 = [0] * 26\r\n        cnt2 = [0] * 26\r\n        for c in a:\r\n            cnt1[ord(c) - ord('a')] += 1\r\n        for c in b:\r\n            cnt2[ord(c) - ord('a')] += 1\r\n        ans = m + n\r\n        for c1, c2 in zip(cnt1, cnt2):\r\n            ans = min(ans, m + n - c1 - c2)\r\n        f(cnt1, cnt2)\r\n        f(cnt2, cnt1)\r\n        return ans",
+    "problemId": 1737,
+    "title": "Change Minimum Characters to Satisfy One of Three Conditions",
+    "problemUrl": "https://leetcode.com/problems/change-minimum-characters-to-satisfy-one-of-three-conditions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1737.Change Minimum Characters to Satisfy One of Three Conditions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1737.Change Minimum Characters to Satisfy One of Three Conditions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1737.Change Minimum Characters to Satisfy One of Three Conditions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1737.Change Minimum Characters to Satisfy One of Three Conditions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1737.Change Minimum Characters to Satisfy One of Three Conditions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1737.Change Minimum Characters to Satisfy One of Three Conditions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

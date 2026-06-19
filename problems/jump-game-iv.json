@@ -1,0 +1,38 @@
+{
+    "problemName": "jump-game-iv",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minJumps(self, arr: List[int]) -> int:\r\n        g = defaultdict(list)\r\n        for i, x in enumerate(arr):\r\n            g[x].append(i)\r\n        q = deque([0])\r\n        vis = {0}\r\n        ans = 0\r\n        while 1:\r\n            for _ in range(len(q)):\r\n                i = q.popleft()\r\n                if i == len(arr) - 1:\r\n                    return ans\r\n                for j in (i + 1, i - 1, *g.pop(arr[i], [])):\r\n                    if 0 <= j < len(arr) and j not in vis:\r\n                        q.append(j)\r\n                        vis.add(j)\r\n            ans += 1",
+    "problemId": 1345,
+    "title": "Jump Game IV",
+    "problemUrl": "https://leetcode.com/problems/jump-game-iv/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1345.Jump Game IV/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1345.Jump Game IV/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1345.Jump Game IV/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1345.Jump Game IV/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1345.Jump Game IV/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1345.Jump Game IV/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

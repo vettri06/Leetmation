@@ -1,0 +1,48 @@
+{
+    "problemName": "plus-one",
+    "language": "python3",
+    "code": "class Solution:\r\n    def plusOne(self, digits: List[int]) -> List[int]:\r\n        n = len(digits)\r\n        for i in range(n - 1, -1, -1):\r\n            digits[i] += 1\r\n            digits[i] %= 10\r\n            if digits[i] != 0:\r\n                return digits\r\n        return [1] + digits",
+    "problemId": 66,
+    "title": "Plus One",
+    "problemUrl": "https://leetcode.com/problems/plus-one/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0066.Plus One/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0066.Plus One/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0066.Plus One/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0066.Plus One/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0066.Plus One/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0066.Plus One/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0066.Plus One/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0066.Plus One/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

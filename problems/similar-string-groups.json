@@ -1,0 +1,38 @@
+{
+    "problemName": "similar-string-groups",
+    "language": "python3",
+    "code": "class UnionFind:\r\n    def __init__(self, n):\r\n        self.p = list(range(n))\r\n        self.size = [1] * n\r\n\r\n    def find(self, x):\r\n        if self.p[x] != x:\r\n            self.p[x] = self.find(self.p[x])\r\n        return self.p[x]\r\n\r\n    def union(self, a, b):\r\n        pa, pb = self.find(a), self.find(b)\r\n        if pa == pb:\r\n            return False\r\n        if self.size[pa] > self.size[pb]:\r\n            self.p[pb] = pa\r\n            self.size[pa] += self.size[pb]\r\n        else:\r\n            self.p[pa] = pb\r\n            self.size[pb] += self.size[pa]\r\n        return True\r\n\r\n\r\nclass Solution:\r\n    def numSimilarGroups(self, strs: List[str]) -> int:\r\n        n, m = len(strs), len(strs[0])\r\n        uf = UnionFind(n)\r\n        for i, s in enumerate(strs):\r\n            for j, t in enumerate(strs[:i]):\r\n                if sum(s[k] != t[k] for k in range(m)) <= 2 and uf.union(i, j):\r\n                    n -= 1\r\n        return n",
+    "problemId": 839,
+    "title": "Similar String Groups",
+    "problemUrl": "https://leetcode.com/problems/similar-string-groups/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0839.Similar String Groups/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0839.Similar String Groups/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0839.Similar String Groups/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0839.Similar String Groups/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0839.Similar String Groups/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0839.Similar String Groups/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

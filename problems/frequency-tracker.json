@@ -1,0 +1,43 @@
+{
+    "problemName": "frequency-tracker",
+    "language": "python3",
+    "code": "class FrequencyTracker:\r\n    def __init__(self):\r\n        self.cnt = defaultdict(int)\r\n        self.freq = defaultdict(int)\r\n\r\n    def add(self, number: int) -> None:\r\n        self.freq[self.cnt[number]] -= 1\r\n        self.cnt[number] += 1\r\n        self.freq[self.cnt[number]] += 1\r\n\r\n    def deleteOne(self, number: int) -> None:\r\n        if self.cnt[number]:\r\n            self.freq[self.cnt[number]] -= 1\r\n            self.cnt[number] -= 1\r\n            self.freq[self.cnt[number]] += 1\r\n\r\n    def hasFrequency(self, frequency: int) -> bool:\r\n        return self.freq[frequency] > 0\r\n\r\n\r\n# Your FrequencyTracker object will be instantiated and called as such:\r\n# obj = FrequencyTracker()\r\n# obj.add(number)\r\n# obj.deleteOne(number)\r\n# param_3 = obj.hasFrequency(frequency)",
+    "problemId": 2671,
+    "title": "Frequency Tracker",
+    "problemUrl": "https://leetcode.com/problems/frequency-tracker/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2671.Frequency Tracker/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2671.Frequency Tracker/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2671.Frequency Tracker/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2671.Frequency Tracker/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2671.Frequency Tracker/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2671.Frequency Tracker/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2671.Frequency Tracker/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

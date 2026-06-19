@@ -1,0 +1,38 @@
+{
+    "problemName": "balance-a-binary-search-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def balanceBST(self, root: TreeNode) -> TreeNode:\r\n        def dfs(root: TreeNode):\r\n            if root is None:\r\n                return\r\n            dfs(root.left)\r\n            nums.append(root.val)\r\n            dfs(root.right)\r\n\r\n        def build(i: int, j: int) -> TreeNode:\r\n            if i > j:\r\n                return None\r\n            mid = (i + j) >> 1\r\n            left = build(i, mid - 1)\r\n            right = build(mid + 1, j)\r\n            return TreeNode(nums[mid], left, right)\r\n\r\n        nums = []\r\n        dfs(root)\r\n        return build(0, len(nums) - 1)",
+    "problemId": 1382,
+    "title": "Balance a Binary Search Tree",
+    "problemUrl": "https://leetcode.com/problems/balance-a-binary-search-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1382.Balance a Binary Search Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1382.Balance a Binary Search Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1382.Balance a Binary Search Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1382.Balance a Binary Search Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1382.Balance a Binary Search Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1382.Balance a Binary Search Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

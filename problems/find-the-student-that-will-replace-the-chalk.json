@@ -1,0 +1,43 @@
+{
+    "problemName": "find-the-student-that-will-replace-the-chalk",
+    "language": "python3",
+    "code": "class Solution:\r\n    def chalkReplacer(self, chalk: List[int], k: int) -> int:\r\n        s = sum(chalk)\r\n        k %= s\r\n        for i, x in enumerate(chalk):\r\n            if k < x:\r\n                return i\r\n            k -= x",
+    "problemId": 1894,
+    "title": "Find the Student that Will Replace the Chalk",
+    "problemUrl": "https://leetcode.com/problems/find-the-student-that-will-replace-the-chalk/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1894.Find the Student that Will Replace the Chalk/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1894.Find the Student that Will Replace the Chalk/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1894.Find the Student that Will Replace the Chalk/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1894.Find the Student that Will Replace the Chalk/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1894.Find the Student that Will Replace the Chalk/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1894.Find the Student that Will Replace the Chalk/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1894.Find the Student that Will Replace the Chalk/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

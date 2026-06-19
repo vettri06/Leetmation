@@ -1,0 +1,58 @@
+{
+    "problemName": "find-the-winner-of-the-circular-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findTheWinner(self, n: int, k: int) -> int:\r\n        if n == 1:\r\n            return 1\r\n        ans = (k + self.findTheWinner(n - 1, k)) % n\r\n        return n if ans == 0 else ans",
+    "problemId": 1823,
+    "title": "Find the Winner of the Circular Game",
+    "problemUrl": "https://leetcode.com/problems/find-the-winner-of-the-circular-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1823.Find the Winner of the Circular Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1823.Find the Winner of the Circular Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1823.Find the Winner of the Circular Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1823.Find the Winner of the Circular Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1823.Find the Winner of the Circular Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1823.Find the Winner of the Circular Game/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1823.Find the Winner of the Circular Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1823.Find the Winner of the Circular Game/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1823.Find the Winner of the Circular Game/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1823.Find the Winner of the Circular Game/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "find-indices-of-stable-mountains",
+    "language": "python3",
+    "code": "class Solution:\r\n    def stableMountains(self, height: List[int], threshold: int) -> List[int]:\r\n        return [i for i in range(1, len(height)) if height[i - 1] > threshold]",
+    "problemId": 3285,
+    "title": "Find Indices of Stable Mountains",
+    "problemUrl": "https://leetcode.com/problems/find-indices-of-stable-mountains/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3285.Find Indices of Stable Mountains/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3285.Find Indices of Stable Mountains/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3285.Find Indices of Stable Mountains/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3285.Find Indices of Stable Mountains/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3285.Find Indices of Stable Mountains/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3285.Find Indices of Stable Mountains/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

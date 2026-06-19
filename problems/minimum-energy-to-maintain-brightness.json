@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-energy-to-maintain-brightness",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minEnergy(self, n: int, brightness: int, intervals: list[list[int]]) -> int:\r\n        intervals.sort()\r\n        merged = [intervals[0]]\r\n        for x in intervals[1:]:\r\n            if merged[-1][1] < x[0]:\r\n                merged.append(x)\r\n            else:\r\n                merged[-1][1] = max(merged[-1][1], x[1])\r\n        ans = 0\r\n        for start, end in merged:\r\n            m = end - start + 1\r\n            ans += (brightness + 2) // 3 * m\r\n        return ans",
+    "problemId": 3951,
+    "title": "Minimum Energy to Maintain Brightness",
+    "problemUrl": "https://leetcode.com/problems/minimum-energy-to-maintain-brightness/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3951.Minimum Energy to Maintain Brightness/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3951.Minimum Energy to Maintain Brightness/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3951.Minimum Energy to Maintain Brightness/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3951.Minimum Energy to Maintain Brightness/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3951.Minimum Energy to Maintain Brightness/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3951.Minimum Energy to Maintain Brightness/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

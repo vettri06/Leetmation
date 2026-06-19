@@ -1,0 +1,73 @@
+{
+    "problemName": "knight-dialer",
+    "language": "python3",
+    "code": "class Solution:\r\n    def knightDialer(self, n: int) -> int:\r\n        f = [1] * 10\r\n        for _ in range(n - 1):\r\n            g = [0] * 10\r\n            g[0] = f[4] + f[6]\r\n            g[1] = f[6] + f[8]\r\n            g[2] = f[7] + f[9]\r\n            g[3] = f[4] + f[8]\r\n            g[4] = f[0] + f[3] + f[9]\r\n            g[6] = f[0] + f[1] + f[7]\r\n            g[7] = f[2] + f[6]\r\n            g[8] = f[1] + f[3]\r\n            g[9] = f[2] + f[4]\r\n            f = g\r\n        return sum(f) % (10**9 + 7)",
+    "problemId": 935,
+    "title": "Knight Dialer",
+    "problemUrl": "https://leetcode.com/problems/knight-dialer/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0935.Knight Dialer/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0935.Knight Dialer/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0935.Knight Dialer/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0935.Knight Dialer/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0935.Knight Dialer/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0935.Knight Dialer/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0935.Knight Dialer/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0935.Knight Dialer/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0935.Knight Dialer/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0935.Knight Dialer/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0935.Knight Dialer/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0935.Knight Dialer/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0935.Knight Dialer/Solution2.cs",
+            "sourceFile": "Solution2.cs"
+        }
+    ]
+}

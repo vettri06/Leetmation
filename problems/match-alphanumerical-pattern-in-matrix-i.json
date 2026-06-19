@@ -1,0 +1,38 @@
+{
+    "problemName": "match-alphanumerical-pattern-in-matrix-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findPattern(self, board: List[List[int]], pattern: List[str]) -> List[int]:\r\n        def check(i: int, j: int) -> bool:\r\n            d1 = {}\r\n            d2 = {}\r\n            for a in range(r):\r\n                for b in range(c):\r\n                    x, y = i + a, j + b\r\n                    if pattern[a][b].isdigit():\r\n                        if int(pattern[a][b]) != board[x][y]:\r\n                            return False\r\n                    else:\r\n                        if pattern[a][b] in d1 and d1[pattern[a][b]] != board[x][y]:\r\n                            return False\r\n                        if board[x][y] in d2 and d2[board[x][y]] != pattern[a][b]:\r\n                            return False\r\n                        d1[pattern[a][b]] = board[x][y]\r\n                        d2[board[x][y]] = pattern[a][b]\r\n            return True\r\n\r\n        m, n = len(board), len(board[0])\r\n        r, c = len(pattern), len(pattern[0])\r\n        for i in range(m - r + 1):\r\n            for j in range(n - c + 1):\r\n                if check(i, j):\r\n                    return [i, j]\r\n        return [-1, -1]",
+    "problemId": 3078,
+    "title": "Match Alphanumerical Pattern in Matrix I",
+    "problemUrl": "https://leetcode.com/problems/match-alphanumerical-pattern-in-matrix-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3078.Match Alphanumerical Pattern in Matrix I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3078.Match Alphanumerical Pattern in Matrix I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3078.Match Alphanumerical Pattern in Matrix I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3078.Match Alphanumerical Pattern in Matrix I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3078.Match Alphanumerical Pattern in Matrix I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3078.Match Alphanumerical Pattern in Matrix I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

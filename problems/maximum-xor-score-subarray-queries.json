@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-xor-score-subarray-queries",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumSubarrayXor(\r\n        self, nums: List[int], queries: List[List[int]]\r\n    ) -> List[int]:\r\n        n = len(nums)\r\n        f = [[0] * n for _ in range(n)]\r\n        g = [[0] * n for _ in range(n)]\r\n        for i in range(n - 1, -1, -1):\r\n            f[i][i] = g[i][i] = nums[i]\r\n            for j in range(i + 1, n):\r\n                f[i][j] = f[i][j - 1] ^ f[i + 1][j]\r\n                g[i][j] = max(f[i][j], g[i][j - 1], g[i + 1][j])\r\n        return [g[l][r] for l, r in queries]",
+    "problemId": 3277,
+    "title": "Maximum XOR Score Subarray Queries",
+    "problemUrl": "https://leetcode.com/problems/maximum-xor-score-subarray-queries/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3277.Maximum XOR Score Subarray Queries/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3277.Maximum XOR Score Subarray Queries/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3277.Maximum XOR Score Subarray Queries/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3277.Maximum XOR Score Subarray Queries/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3277.Maximum XOR Score Subarray Queries/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3277.Maximum XOR Score Subarray Queries/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

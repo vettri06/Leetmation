@@ -1,0 +1,38 @@
+{
+    "problemName": "multi-source-flood-fill",
+    "language": "python3",
+    "code": "class Solution:\r\n    def colorGrid(self, n: int, m: int, sources: list[list[int]]) -> list[list[int]]:\r\n        ans = [[0] * m for _ in range(n)]\r\n        q = sources\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        for r, c, color in q:\r\n            ans[r][c] = color\r\n        while q:\r\n            vis = defaultdict(int)\r\n            for r, c, color in q:\r\n                for a, b in pairwise(dirs):\r\n                    x, y = r + a, c + b\r\n                    if not 0 <= x < n or not 0 <= y < m or ans[x][y]:\r\n                        continue\r\n                    vis[(x, y)] = max(vis[(x, y)], color)\r\n            q.clear()\r\n            for (x, y), color in vis.items():\r\n                q.append((x, y, color))\r\n                ans[x][y] = color\r\n        return ans",
+    "problemId": 3905,
+    "title": "Multi Source Flood Fill",
+    "problemUrl": "https://leetcode.com/problems/multi-source-flood-fill/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3905.Multi Source Flood Fill/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3905.Multi Source Flood Fill/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3905.Multi Source Flood Fill/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3905.Multi Source Flood Fill/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3905.Multi Source Flood Fill/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3905.Multi Source Flood Fill/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

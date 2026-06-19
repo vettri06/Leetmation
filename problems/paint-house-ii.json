@@ -1,0 +1,33 @@
+{
+    "problemName": "paint-house-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCostII(self, costs: List[List[int]]) -> int:\r\n        n, k = len(costs), len(costs[0])\r\n        f = costs[0][:]\r\n        for i in range(1, n):\r\n            g = costs[i][:]\r\n            for j in range(k):\r\n                t = min(f[h] for h in range(k) if h != j)\r\n                g[j] += t\r\n            f = g\r\n        return min(f)",
+    "problemId": 265,
+    "title": "Paint House II",
+    "problemUrl": "https://leetcode.com/problems/paint-house-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0265.Paint House II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0265.Paint House II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0265.Paint House II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0265.Paint House II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0265.Paint House II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "the-maze-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shortestDistance(\r\n        self, maze: List[List[int]], start: List[int], destination: List[int]\r\n    ) -> int:\r\n        m, n = len(maze), len(maze[0])\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        si, sj = start\r\n        di, dj = destination\r\n        q = deque([(si, sj)])\r\n        dist = [[inf] * n for _ in range(m)]\r\n        dist[si][sj] = 0\r\n        while q:\r\n            i, j = q.popleft()\r\n            for a, b in pairwise(dirs):\r\n                x, y, k = i, j, dist[i][j]\r\n                while 0 <= x + a < m and 0 <= y + b < n and maze[x + a][y + b] == 0:\r\n                    x, y, k = x + a, y + b, k + 1\r\n                if k < dist[x][y]:\r\n                    dist[x][y] = k\r\n                    q.append((x, y))\r\n        return -1 if dist[di][dj] == inf else dist[di][dj]",
+    "problemId": 505,
+    "title": "The Maze II",
+    "problemUrl": "https://leetcode.com/problems/the-maze-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0505.The Maze II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0505.The Maze II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0505.The Maze II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0505.The Maze II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0505.The Maze II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0505.The Maze II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

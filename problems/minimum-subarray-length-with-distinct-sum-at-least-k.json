@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-subarray-length-with-distinct-sum-at-least-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minLength(self, nums: List[int], k: int) -> int:\r\n        cnt = defaultdict(int)\r\n        n = len(nums)\r\n        ans = n + 1\r\n        s = l = 0\r\n        for r, x in enumerate(nums):\r\n            cnt[x] += 1\r\n            if cnt[x] == 1:\r\n                s += x\r\n            while s >= k:\r\n                ans = min(ans, r - l + 1)\r\n                cnt[nums[l]] -= 1\r\n                if cnt[nums[l]] == 0:\r\n                    s -= nums[l]\r\n                l += 1\r\n        return -1 if ans > n else ans",
+    "problemId": 3795,
+    "title": "Minimum Subarray Length With Distinct Sum At Least K",
+    "problemUrl": "https://leetcode.com/problems/minimum-subarray-length-with-distinct-sum-at-least-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3795.Minimum Subarray Length With Distinct Sum At Least K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3795.Minimum Subarray Length With Distinct Sum At Least K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3795.Minimum Subarray Length With Distinct Sum At Least K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3795.Minimum Subarray Length With Distinct Sum At Least K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3795.Minimum Subarray Length With Distinct Sum At Least K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3795.Minimum Subarray Length With Distinct Sum At Least K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

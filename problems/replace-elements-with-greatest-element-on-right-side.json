@@ -1,0 +1,38 @@
+{
+    "problemName": "replace-elements-with-greatest-element-on-right-side",
+    "language": "python3",
+    "code": "class Solution:\r\n    def replaceElements(self, arr: List[int]) -> List[int]:\r\n        mx = -1\r\n        for i in reversed(range(len(arr))):\r\n            x = arr[i]\r\n            arr[i] = mx\r\n            mx = max(mx, x)\r\n        return arr",
+    "problemId": 1299,
+    "title": "Replace Elements with Greatest Element on Right Side",
+    "problemUrl": "https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1299.Replace Elements with Greatest Element on Right Side/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1299.Replace Elements with Greatest Element on Right Side/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1299.Replace Elements with Greatest Element on Right Side/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1299.Replace Elements with Greatest Element on Right Side/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1299.Replace Elements with Greatest Element on Right Side/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1299.Replace Elements with Greatest Element on Right Side/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

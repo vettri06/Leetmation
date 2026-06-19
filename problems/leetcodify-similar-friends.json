@@ -1,0 +1,18 @@
+{
+    "problemName": "leetcodify-similar-friends",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT DISTINCT user1_id, user2_id\r\nFROM\r\n    Friendship AS f\r\n    LEFT JOIN Listens AS l1 ON user1_id = l1.user_id\r\n    LEFT JOIN Listens AS l2 ON user2_id = l2.user_id\r\nWHERE l1.song_id = l2.song_id AND l1.day = l2.day\r\nGROUP BY 1, 2, l1.day\r\nHAVING COUNT(DISTINCT l1.song_id) >= 3;",
+    "problemId": 1919,
+    "title": "Leetcodify Similar Friends",
+    "problemUrl": "https://leetcode.com/problems/leetcodify-similar-friends/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1919.Leetcodify Similar Friends/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1919.Leetcodify Similar Friends/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

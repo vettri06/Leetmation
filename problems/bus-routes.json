@@ -1,0 +1,38 @@
+{
+    "problemName": "bus-routes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numBusesToDestination(\r\n        self, routes: List[List[int]], source: int, target: int\r\n    ) -> int:\r\n        if source == target:\r\n            return 0\r\n        g = defaultdict(list)\r\n        for i, route in enumerate(routes):\r\n            for stop in route:\r\n                g[stop].append(i)\r\n        if source not in g or target not in g:\r\n            return -1\r\n        q = [(source, 0)]\r\n        vis_bus = set()\r\n        vis_stop = {source}\r\n        for stop, bus_count in q:\r\n            if stop == target:\r\n                return bus_count\r\n            for bus in g[stop]:\r\n                if bus not in vis_bus:\r\n                    vis_bus.add(bus)\r\n                    for next_stop in routes[bus]:\r\n                        if next_stop not in vis_stop:\r\n                            vis_stop.add(next_stop)\r\n                            q.append((next_stop, bus_count + 1))\r\n        return -1",
+    "problemId": 815,
+    "title": "Bus Routes",
+    "problemUrl": "https://leetcode.com/problems/bus-routes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0815.Bus Routes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0815.Bus Routes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0815.Bus Routes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0815.Bus Routes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0815.Bus Routes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0815.Bus Routes/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

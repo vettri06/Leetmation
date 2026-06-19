@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-cost-of-trip-with-k-highways",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumCost(self, n: int, highways: List[List[int]], k: int) -> int:\r\n        if k >= n:\r\n            return -1\r\n        g = defaultdict(list)\r\n        for a, b, cost in highways:\r\n            g[a].append((b, cost))\r\n            g[b].append((a, cost))\r\n        f = [[-inf] * n for _ in range(1 << n)]\r\n        for i in range(n):\r\n            f[1 << i][i] = 0\r\n        ans = -1\r\n        for i in range(1 << n):\r\n            for j in range(n):\r\n                if i >> j & 1:\r\n                    for h, cost in g[j]:\r\n                        if i >> h & 1:\r\n                            f[i][j] = max(f[i][j], f[i ^ (1 << j)][h] + cost)\r\n                if i.bit_count() == k + 1:\r\n                    ans = max(ans, f[i][j])\r\n        return ans",
+    "problemId": 2247,
+    "title": "Maximum Cost of Trip With K Highways",
+    "problemUrl": "https://leetcode.com/problems/maximum-cost-of-trip-with-k-highways/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2247.Maximum Cost of Trip With K Highways/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2247.Maximum Cost of Trip With K Highways/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2247.Maximum Cost of Trip With K Highways/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2247.Maximum Cost of Trip With K Highways/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2247.Maximum Cost of Trip With K Highways/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2247.Maximum Cost of Trip With K Highways/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

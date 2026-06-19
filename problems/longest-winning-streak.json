@@ -1,0 +1,18 @@
+{
+    "problemName": "longest-winning-streak",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    S AS (\r\n        SELECT\r\n            *,\r\n            ROW_NUMBER() OVER (\r\n                PARTITION BY player_id\r\n                ORDER BY match_day\r\n            ) - ROW_NUMBER() OVER (\r\n                PARTITION BY player_id, result\r\n                ORDER BY match_day\r\n            ) AS rk\r\n        FROM Matches\r\n    ),\r\n    T AS (\r\n        SELECT player_id, SUM(result = 'Win') AS s\r\n        FROM S\r\n        GROUP BY player_id, rk\r\n    )\r\nSELECT player_id, MAX(s) AS longest_streak\r\nFROM T\r\nGROUP BY player_id;",
+    "problemId": 2173,
+    "title": "Longest Winning Streak",
+    "problemUrl": "https://leetcode.com/problems/longest-winning-streak/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2173.Longest Winning Streak/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2173.Longest Winning Streak/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

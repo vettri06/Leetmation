@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-palindrome-by-concatenating-two-letter-words",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestPalindrome(self, words: List[str]) -> int:\r\n        cnt = Counter(words)\r\n        ans = x = 0\r\n        for k, v in cnt.items():\r\n            if k[0] == k[1]:\r\n                x += v & 1\r\n                ans += v // 2 * 2 * 2\r\n            else:\r\n                ans += min(v, cnt[k[::-1]]) * 2\r\n        ans += 2 if x else 0\r\n        return ans",
+    "problemId": 2131,
+    "title": "Longest Palindrome by Concatenating Two Letter Words",
+    "problemUrl": "https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2131.Longest Palindrome by Concatenating Two Letter Words/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2131.Longest Palindrome by Concatenating Two Letter Words/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2131.Longest Palindrome by Concatenating Two Letter Words/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2131.Longest Palindrome by Concatenating Two Letter Words/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2131.Longest Palindrome by Concatenating Two Letter Words/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2131.Longest Palindrome by Concatenating Two Letter Words/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

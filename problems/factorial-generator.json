@@ -1,0 +1,18 @@
+{
+    "problemName": "factorial-generator",
+    "language": "typescript",
+    "code": "function* factorial(n: number): Generator<number> {\r\n    if (n === 0) {\r\n        yield 1;\r\n    }\r\n    let ans = 1;\r\n    for (let i = 1; i <= n; ++i) {\r\n        ans *= i;\r\n        yield ans;\r\n    }\r\n}\r\n\r\n/**\r\n * const gen = factorial(2);\r\n * gen.next().value; // 1\r\n * gen.next().value; // 2\r\n */",
+    "problemId": 2803,
+    "title": "Factorial Generator",
+    "problemUrl": "https://leetcode.com/problems/factorial-generator/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2803.Factorial Generator/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2803.Factorial Generator/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

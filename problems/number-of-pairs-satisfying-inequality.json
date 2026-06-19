@@ -1,0 +1,33 @@
+{
+    "problemName": "number-of-pairs-satisfying-inequality",
+    "language": "python3",
+    "code": "class BinaryIndexedTree:\r\n    def __init__(self, n):\r\n        self.n = n\r\n        self.c = [0] * (n + 1)\r\n\r\n    @staticmethod\r\n    def lowbit(x):\r\n        return x & -x\r\n\r\n    def update(self, x, delta):\r\n        while x <= self.n:\r\n            self.c[x] += delta\r\n            x += BinaryIndexedTree.lowbit(x)\r\n\r\n    def query(self, x):\r\n        s = 0\r\n        while x:\r\n            s += self.c[x]\r\n            x -= BinaryIndexedTree.lowbit(x)\r\n        return s\r\n\r\n\r\nclass Solution:\r\n    def numberOfPairs(self, nums1: List[int], nums2: List[int], diff: int) -> int:\r\n        tree = BinaryIndexedTree(10**5)\r\n        ans = 0\r\n        for a, b in zip(nums1, nums2):\r\n            v = a - b\r\n            ans += tree.query(v + diff + 40000)\r\n            tree.update(v + 40000, 1)\r\n        return ans",
+    "problemId": 2426,
+    "title": "Number of Pairs Satisfying Inequality",
+    "problemUrl": "https://leetcode.com/problems/number-of-pairs-satisfying-inequality/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2426.Number of Pairs Satisfying Inequality/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2426.Number of Pairs Satisfying Inequality/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2426.Number of Pairs Satisfying Inequality/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2426.Number of Pairs Satisfying Inequality/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2426.Number of Pairs Satisfying Inequality/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

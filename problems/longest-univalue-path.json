@@ -1,0 +1,53 @@
+{
+    "problemName": "longest-univalue-path",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def longestUnivaluePath(self, root: Optional[TreeNode]) -> int:\r\n        def dfs(root: Optional[TreeNode]) -> int:\r\n            if root is None:\r\n                return 0\r\n            l, r = dfs(root.left), dfs(root.right)\r\n            l = l + 1 if root.left and root.left.val == root.val else 0\r\n            r = r + 1 if root.right and root.right.val == root.val else 0\r\n            nonlocal ans\r\n            ans = max(ans, l + r)\r\n            return max(l, r)\r\n\r\n        ans = 0\r\n        dfs(root)\r\n        return ans",
+    "problemId": 687,
+    "title": "Longest Univalue Path",
+    "problemUrl": "https://leetcode.com/problems/longest-univalue-path/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0687.Longest Univalue Path/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0687.Longest Univalue Path/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0687.Longest Univalue Path/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0687.Longest Univalue Path/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0687.Longest Univalue Path/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0687.Longest Univalue Path/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0687.Longest Univalue Path/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0687.Longest Univalue Path/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0687.Longest Univalue Path/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "booking-concert-tickets-in-groups",
+    "language": "python3",
+    "code": "class Node:\r\n    __slots__ = \"l\", \"r\", \"s\", \"mx\"\r\n\r\n    def __init__(self):\r\n        self.l = self.r = 0\r\n        self.s = self.mx = 0\r\n\r\n\r\nclass SegmentTree:\r\n    def __init__(self, n, m):\r\n        self.m = m\r\n        self.tr = [Node() for _ in range(n << 2)]\r\n        self.build(1, 1, n)\r\n\r\n    def build(self, u, l, r):\r\n        self.tr[u].l, self.tr[u].r = l, r\r\n        if l == r:\r\n            self.tr[u].s = self.tr[u].mx = self.m\r\n            return\r\n        mid = (l + r) >> 1\r\n        self.build(u << 1, l, mid)\r\n        self.build(u << 1 | 1, mid + 1, r)\r\n        self.pushup(u)\r\n\r\n    def modify(self, u, x, v):\r\n        if self.tr[u].l == x and self.tr[u].r == x:\r\n            self.tr[u].s = self.tr[u].mx = v\r\n            return\r\n        mid = (self.tr[u].l + self.tr[u].r) >> 1\r\n        if x <= mid:\r\n            self.modify(u << 1, x, v)\r\n        else:\r\n            self.modify(u << 1 | 1, x, v)\r\n        self.pushup(u)\r\n\r\n    def query_sum(self, u, l, r):\r\n        if self.tr[u].l >= l and self.tr[u].r <= r:\r\n            return self.tr[u].s\r\n        mid = (self.tr[u].l + self.tr[u].r) >> 1\r\n        v = 0\r\n        if l <= mid:\r\n            v += self.query_sum(u << 1, l, r)\r\n        if r > mid:\r\n            v += self.query_sum(u << 1 | 1, l, r)\r\n        return v\r\n\r\n    def query_idx(self, u, l, r, k):\r\n        if self.tr[u].mx < k:\r\n            return 0\r\n        if self.tr[u].l == self.tr[u].r:\r\n            return self.tr[u].l\r\n        mid = (self.tr[u].l + self.tr[u].r) >> 1\r\n        if self.tr[u << 1].mx >= k:\r\n            return self.query_idx(u << 1, l, r, k)\r\n        if r > mid:\r\n            return self.query_idx(u << 1 | 1, l, r, k)\r\n        return 0\r\n\r\n    def pushup(self, u):\r\n        self.tr[u].s = self.tr[u << 1].s + self.tr[u << 1 | 1].s\r\n        self.tr[u].mx = max(self.tr[u << 1].mx, self.tr[u << 1 | 1].mx)\r\n\r\n\r\nclass BookMyShow:\r\n    def __init__(self, n: int, m: int):\r\n        self.n = n\r\n        self.tree = SegmentTree(n, m)\r\n\r\n    def gather(self, k: int, maxRow: int) -> List[int]:\r\n        maxRow += 1\r\n        i = self.tree.query_idx(1, 1, maxRow, k)\r\n        if i == 0:\r\n            return []\r\n        s = self.tree.query_sum(1, i, i)\r\n        self.tree.modify(1, i, s - k)\r\n        return [i - 1, self.tree.m - s]\r\n\r\n    def scatter(self, k: int, maxRow: int) -> bool:\r\n        maxRow += 1\r\n        if self.tree.query_sum(1, 1, maxRow) < k:\r\n            return False\r\n        i = self.tree.query_idx(1, 1, maxRow, 1)\r\n        for j in range(i, self.n + 1):\r\n            s = self.tree.query_sum(1, j, j)\r\n            if s >= k:\r\n                self.tree.modify(1, j, s - k)\r\n                return True\r\n            k -= s\r\n            self.tree.modify(1, j, 0)\r\n        return True\r\n\r\n\r\n# Your BookMyShow object will be instantiated and called as such:\r\n# obj = BookMyShow(n, m)\r\n# param_1 = obj.gather(k,maxRow)\r\n# param_2 = obj.scatter(k,maxRow)",
+    "problemId": 2286,
+    "title": "Booking Concert Tickets in Groups",
+    "problemUrl": "https://leetcode.com/problems/booking-concert-tickets-in-groups/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2286.Booking Concert Tickets in Groups/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2286.Booking Concert Tickets in Groups/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2286.Booking Concert Tickets in Groups/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2286.Booking Concert Tickets in Groups/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2286.Booking Concert Tickets in Groups/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2286.Booking Concert Tickets in Groups/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "consecutive-transactions-with-increasing-amounts",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            t1.*,\r\n            SUM(\r\n                CASE\r\n                    WHEN t2.customer_id IS NULL THEN 1\r\n                    ELSE 0\r\n                END\r\n            ) OVER (ORDER BY customer_id, transaction_date) AS s\r\n        FROM\r\n            Transactions AS t1\r\n            LEFT JOIN Transactions AS t2\r\n                ON t1.customer_id = t2.customer_id\r\n                AND t1.amount > t2.amount\r\n                AND DATEDIFF(t1.transaction_date, t2.transaction_date) = 1\r\n    )\r\nSELECT\r\n    customer_id,\r\n    MIN(transaction_date) AS consecutive_start,\r\n    MAX(transaction_date) AS consecutive_end\r\nFROM T\r\nGROUP BY customer_id, s\r\nHAVING COUNT(1) >= 3\r\nORDER BY customer_id;",
+    "problemId": 2701,
+    "title": "Consecutive Transactions with Increasing Amounts",
+    "problemUrl": "https://leetcode.com/problems/consecutive-transactions-with-increasing-amounts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2701.Consecutive Transactions with Increasing Amounts/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2701.Consecutive Transactions with Increasing Amounts/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

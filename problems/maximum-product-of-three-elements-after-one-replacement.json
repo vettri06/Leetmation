@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-product-of-three-elements-after-one-replacement",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxProduct(self, nums: List[int]) -> int:\r\n        nums.sort()\r\n        a, b = nums[0], nums[1]\r\n        c, d = nums[-2], nums[-1]\r\n        x = 10**5\r\n        return max(a * b * x, c * d * x, a * d * -x)",
+    "problemId": 3732,
+    "title": "Maximum Product of Three Elements After One Replacement",
+    "problemUrl": "https://leetcode.com/problems/maximum-product-of-three-elements-after-one-replacement/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3732.Maximum Product of Three Elements After One Replacement/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3732.Maximum Product of Three Elements After One Replacement/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3732.Maximum Product of Three Elements After One Replacement/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3732.Maximum Product of Three Elements After One Replacement/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3732.Maximum Product of Three Elements After One Replacement/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3732.Maximum Product of Three Elements After One Replacement/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-capacity-box",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumIndex(self, capacity: list[int], itemSize: int) -> int:\r\n        ans = -1\r\n        for i, x in enumerate(capacity):\r\n            if x >= itemSize and (ans == -1 or x < capacity[ans]):\r\n                ans = i\r\n        return ans",
+    "problemId": 3861,
+    "title": "Minimum Capacity Box",
+    "problemUrl": "https://leetcode.com/problems/minimum-capacity-box/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3861.Minimum Capacity Box/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3861.Minimum Capacity Box/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3861.Minimum Capacity Box/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3861.Minimum Capacity Box/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3861.Minimum Capacity Box/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3861.Minimum Capacity Box/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

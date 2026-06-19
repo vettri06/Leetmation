@@ -1,0 +1,18 @@
+{
+    "problemName": "differences-between-two-objects",
+    "language": "typescript",
+    "code": "function objDiff(obj1: any, obj2: any): any {\r\n    if (type(obj1) !== type(obj2)) return [obj1, obj2];\r\n    if (!isObject(obj1)) return obj1 === obj2 ? {} : [obj1, obj2];\r\n    const diff: Record<string, unknown> = {};\r\n    const sameKeys = Object.keys(obj1).filter(key => key in obj2);\r\n    sameKeys.forEach(key => {\r\n        const subDiff = objDiff(obj1[key], obj2[key]);\r\n        if (Object.keys(subDiff).length) diff[key] = subDiff;\r\n    });\r\n    return diff;\r\n}\r\n\r\nfunction type(obj: unknown): string {\r\n    return Object.prototype.toString.call(obj).slice(8, -1);\r\n}\r\n\r\nfunction isObject(obj: unknown): obj is Record<string, unknown> {\r\n    return typeof obj === 'object' && obj !== null;\r\n}",
+    "problemId": 2700,
+    "title": "Differences Between Two Objects",
+    "problemUrl": "https://leetcode.com/problems/differences-between-two-objects/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2700.Differences Between Two Objects/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2700.Differences Between Two Objects/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

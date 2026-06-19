@@ -1,0 +1,33 @@
+{
+    "problemName": "bricks-falling-when-hit",
+    "language": "python3",
+    "code": "class Solution:\r\n    def hitBricks(self, grid: List[List[int]], hits: List[List[int]]) -> List[int]:\r\n        def find(x):\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        def union(a, b):\r\n            pa, pb = find(a), find(b)\r\n            if pa != pb:\r\n                size[pb] += size[pa]\r\n                p[pa] = pb\r\n\r\n        m, n = len(grid), len(grid[0])\r\n        p = list(range(m * n + 1))\r\n        size = [1] * len(p)\r\n        g = deepcopy(grid)\r\n        for i, j in hits:\r\n            g[i][j] = 0\r\n        for j in range(n):\r\n            if g[0][j] == 1:\r\n                union(j, m * n)\r\n        for i in range(1, m):\r\n            for j in range(n):\r\n                if g[i][j] == 0:\r\n                    continue\r\n                if g[i - 1][j] == 1:\r\n                    union(i * n + j, (i - 1) * n + j)\r\n                if j > 0 and g[i][j - 1] == 1:\r\n                    union(i * n + j, i * n + j - 1)\r\n        ans = []\r\n        for i, j in hits[::-1]:\r\n            if grid[i][j] == 0:\r\n                ans.append(0)\r\n                continue\r\n            g[i][j] = 1\r\n            prev = size[find(m * n)]\r\n            if i == 0:\r\n                union(j, m * n)\r\n            for a, b in [(-1, 0), (1, 0), (0, 1), (0, -1)]:\r\n                x, y = i + a, j + b\r\n                if 0 <= x < m and 0 <= y < n and g[x][y] == 1:\r\n                    union(i * n + j, x * n + y)\r\n            curr = size[find(m * n)]\r\n            ans.append(max(0, curr - prev - 1))\r\n        return ans[::-1]",
+    "problemId": 803,
+    "title": "Bricks Falling When Hit",
+    "problemUrl": "https://leetcode.com/problems/bricks-falling-when-hit/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0803.Bricks Falling When Hit/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0803.Bricks Falling When Hit/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0803.Bricks Falling When Hit/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0803.Bricks Falling When Hit/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0803.Bricks Falling When Hit/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

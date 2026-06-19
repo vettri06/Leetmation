@@ -1,0 +1,73 @@
+{
+    "problemName": "minimum-size-subarray-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSubArrayLen(self, target: int, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        s = list(accumulate(nums, initial=0))\r\n        ans = n + 1\r\n        for i, x in enumerate(s):\r\n            j = bisect_left(s, x + target)\r\n            if j <= n:\r\n                ans = min(ans, j - i)\r\n        return ans if ans <= n else 0",
+    "problemId": 209,
+    "title": "Minimum Size Subarray Sum",
+    "problemUrl": "https://leetcode.com/problems/minimum-size-subarray-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0209.Minimum Size Subarray Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0209.Minimum Size Subarray Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0209.Minimum Size Subarray Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0209.Minimum Size Subarray Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0209.Minimum Size Subarray Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0209.Minimum Size Subarray Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0209.Minimum Size Subarray Sum/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0209.Minimum Size Subarray Sum/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0209.Minimum Size Subarray Sum/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0209.Minimum Size Subarray Sum/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0209.Minimum Size Subarray Sum/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0209.Minimum Size Subarray Sum/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0209.Minimum Size Subarray Sum/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

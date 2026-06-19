@@ -1,0 +1,38 @@
+{
+    "problemName": "distribute-repeating-integers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canDistribute(self, nums: List[int], quantity: List[int]) -> bool:\r\n        m = len(quantity)\r\n        s = [0] * (1 << m)\r\n        for i in range(1, 1 << m):\r\n            for j in range(m):\r\n                if i >> j & 1:\r\n                    s[i] = s[i ^ (1 << j)] + quantity[j]\r\n                    break\r\n        cnt = Counter(nums)\r\n        arr = list(cnt.values())\r\n        n = len(arr)\r\n        f = [[False] * (1 << m) for _ in range(n)]\r\n        for i in range(n):\r\n            f[i][0] = True\r\n        for i, x in enumerate(arr):\r\n            for j in range(1, 1 << m):\r\n                if i and f[i - 1][j]:\r\n                    f[i][j] = True\r\n                    continue\r\n                k = j\r\n                while k:\r\n                    ok1 = j == k if i == 0 else f[i - 1][j ^ k]\r\n                    ok2 = s[k] <= x\r\n                    if ok1 and ok2:\r\n                        f[i][j] = True\r\n                        break\r\n                    k = (k - 1) & j\r\n        return f[-1][-1]",
+    "problemId": 1655,
+    "title": "Distribute Repeating Integers",
+    "problemUrl": "https://leetcode.com/problems/distribute-repeating-integers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1655.Distribute Repeating Integers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1655.Distribute Repeating Integers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1655.Distribute Repeating Integers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1655.Distribute Repeating Integers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1655.Distribute Repeating Integers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1655.Distribute Repeating Integers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

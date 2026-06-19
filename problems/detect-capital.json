@@ -1,0 +1,38 @@
+{
+    "problemName": "detect-capital",
+    "language": "python3",
+    "code": "class Solution:\r\n    def detectCapitalUse(self, word: str) -> bool:\r\n        cnt = sum(c.isupper() for c in word)\r\n        return cnt == 0 or cnt == len(word) or (cnt == 1 and word[0].isupper())",
+    "problemId": 520,
+    "title": "Detect Capital",
+    "problemUrl": "https://leetcode.com/problems/detect-capital/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0520.Detect Capital/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0520.Detect Capital/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0520.Detect Capital/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0520.Detect Capital/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0520.Detect Capital/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0520.Detect Capital/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

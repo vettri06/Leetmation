@@ -1,0 +1,38 @@
+{
+    "problemName": "rotate-non-negative-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def rotateElements(self, nums: List[int], k: int) -> List[int]:\r\n        t = [x for x in nums if x >= 0]\r\n        m = len(t)\r\n        d = [0] * m\r\n        for i, x in enumerate(t):\r\n            d[((i - k) % m + m) % m] = x\r\n        j = 0\r\n        for i, x in enumerate(nums):\r\n            if x >= 0:\r\n                nums[i] = d[j]\r\n                j += 1\r\n        return nums",
+    "problemId": 3819,
+    "title": "Rotate Non Negative Elements",
+    "problemUrl": "https://leetcode.com/problems/rotate-non-negative-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3819.Rotate Non Negative Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3819.Rotate Non Negative Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3819.Rotate Non Negative Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3819.Rotate Non Negative Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3819.Rotate Non Negative Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3819.Rotate Non Negative Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

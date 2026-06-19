@@ -1,0 +1,48 @@
+{
+    "problemName": "lexicographically-minimum-string-after-removing-stars",
+    "language": "python3",
+    "code": "class Solution:\r\n    def clearStars(self, s: str) -> str:\r\n        g = defaultdict(list)\r\n        n = len(s)\r\n        rem = [False] * n\r\n        for i, c in enumerate(s):\r\n            if c == \"*\":\r\n                rem[i] = True\r\n                for a in ascii_lowercase:\r\n                    if g[a]:\r\n                        rem[g[a].pop()] = True\r\n                        break\r\n            else:\r\n                g[c].append(i)\r\n        return \"\".join(c for i, c in enumerate(s) if not rem[i])",
+    "problemId": 3170,
+    "title": "Lexicographically Minimum String After Removing Stars",
+    "problemUrl": "https://leetcode.com/problems/lexicographically-minimum-string-after-removing-stars/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3170.Lexicographically Minimum String After Removing Stars/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3170.Lexicographically Minimum String After Removing Stars/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3170.Lexicographically Minimum String After Removing Stars/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3170.Lexicographically Minimum String After Removing Stars/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3170.Lexicographically Minimum String After Removing Stars/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3170.Lexicographically Minimum String After Removing Stars/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3170.Lexicographically Minimum String After Removing Stars/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3170.Lexicographically Minimum String After Removing Stars/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

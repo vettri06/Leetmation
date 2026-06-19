@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-building-height",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxBuilding(self, n: int, restrictions: List[List[int]]) -> int:\r\n        r = restrictions\r\n        r.append([1, 0])\r\n        r.sort()\r\n        if r[-1][0] != n:\r\n            r.append([n, n - 1])\r\n        m = len(r)\r\n        for i in range(1, m):\r\n            r[i][1] = min(r[i][1], r[i - 1][1] + r[i][0] - r[i - 1][0])\r\n        for i in range(m - 2, 0, -1):\r\n            r[i][1] = min(r[i][1], r[i + 1][1] + r[i + 1][0] - r[i][0])\r\n        ans = 0\r\n        for i in range(m - 1):\r\n            t = (r[i][1] + r[i + 1][1] + r[i + 1][0] - r[i][0]) // 2\r\n            ans = max(ans, t)\r\n        return ans",
+    "problemId": 1840,
+    "title": "Maximum Building Height",
+    "problemUrl": "https://leetcode.com/problems/maximum-building-height/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1840.Maximum Building Height/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1840.Maximum Building Height/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1840.Maximum Building Height/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1840.Maximum Building Height/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1840.Maximum Building Height/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "problemName": "range-sum-query-2d-immutable",
+    "language": "python3",
+    "code": "class NumMatrix:\r\n    def __init__(self, matrix: List[List[int]]):\r\n        m, n = len(matrix), len(matrix[0])\r\n        self.s = [[0] * (n + 1) for _ in range(m + 1)]\r\n        for i, row in enumerate(matrix):\r\n            for j, v in enumerate(row):\r\n                self.s[i + 1][j + 1] = (\r\n                    self.s[i][j + 1] + self.s[i + 1][j] - self.s[i][j] + v\r\n                )\r\n\r\n    def sumRegion(self, row1: int, col1: int, row2: int, col2: int) -> int:\r\n        return (\r\n            self.s[row2 + 1][col2 + 1]\r\n            - self.s[row2 + 1][col1]\r\n            - self.s[row1][col2 + 1]\r\n            + self.s[row1][col1]\r\n        )\r\n\r\n\r\n# Your NumMatrix object will be instantiated and called as such:\r\n# obj = NumMatrix(matrix)\r\n# param_1 = obj.sumRegion(row1,col1,row2,col2)",
+    "problemId": 304,
+    "title": "Range Sum Query 2D - Immutable",
+    "problemUrl": "https://leetcode.com/problems/range-sum-query-2d-immutable/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0304.Range Sum Query 2D - Immutable/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0304.Range Sum Query 2D - Immutable/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0304.Range Sum Query 2D - Immutable/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0304.Range Sum Query 2D - Immutable/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0304.Range Sum Query 2D - Immutable/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0304.Range Sum Query 2D - Immutable/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0304.Range Sum Query 2D - Immutable/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0304.Range Sum Query 2D - Immutable/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "kotlin",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0304.Range Sum Query 2D - Immutable/Solution.kt",
+            "sourceFile": "Solution.kt"
+        }
+    ]
+}

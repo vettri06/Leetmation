@@ -1,0 +1,18 @@
+{
+    "problemName": "array-wrapper",
+    "language": "typescript",
+    "code": "class ArrayWrapper {\r\n    private nums: number[];\r\n    private s: number;\r\n\r\n    constructor(nums: number[]) {\r\n        this.nums = nums;\r\n        this.s = nums.reduce((a, b) => a + b, 0);\r\n    }\r\n\r\n    valueOf() {\r\n        return this.s;\r\n    }\r\n\r\n    toString() {\r\n        return `[${this.nums}]`;\r\n    }\r\n}\r\n\r\n/**\r\n * const obj1 = new ArrayWrapper([1,2]);\r\n * const obj2 = new ArrayWrapper([3,4]);\r\n * obj1 + obj2; // 10\r\n * String(obj1); // \"[1,2]\"\r\n * String(obj2); // \"[3,4]\"\r\n */",
+    "problemId": 2695,
+    "title": "Array Wrapper",
+    "problemUrl": "https://leetcode.com/problems/array-wrapper/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2695.Array Wrapper/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2695.Array Wrapper/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "put-boxes-into-the-warehouse-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxBoxesInWarehouse(self, boxes: List[int], warehouse: List[int]) -> int:\r\n        n = len(warehouse)\r\n        left = [0] * n\r\n        right = [0] * n\r\n        left[0] = right[-1] = inf\r\n        for i in range(1, n):\r\n            left[i] = min(left[i - 1], warehouse[i - 1])\r\n        for i in range(n - 2, -1, -1):\r\n            right[i] = min(right[i + 1], warehouse[i + 1])\r\n        for i in range(n):\r\n            warehouse[i] = min(warehouse[i], max(left[i], right[i]))\r\n        boxes.sort()\r\n        warehouse.sort()\r\n        ans = i = 0\r\n        for x in boxes:\r\n            while i < n and warehouse[i] < x:\r\n                i += 1\r\n            if i == n:\r\n                break\r\n            ans, i = ans + 1, i + 1\r\n        return ans",
+    "problemId": 1580,
+    "title": "Put Boxes Into the Warehouse II",
+    "problemUrl": "https://leetcode.com/problems/put-boxes-into-the-warehouse-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1580.Put Boxes Into the Warehouse II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1580.Put Boxes Into the Warehouse II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1580.Put Boxes Into the Warehouse II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1580.Put Boxes Into the Warehouse II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1580.Put Boxes Into the Warehouse II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

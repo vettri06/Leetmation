@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-value-of-an-ordered-triplet-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumTripletValue(self, nums: List[int]) -> int:\r\n        ans = mx = mx_diff = 0\r\n        for x in nums:\r\n            ans = max(ans, mx_diff * x)\r\n            mx_diff = max(mx_diff, mx - x)\r\n            mx = max(mx, x)\r\n        return ans",
+    "problemId": 2874,
+    "title": "Maximum Value of an Ordered Triplet II",
+    "problemUrl": "https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2874.Maximum Value of an Ordered Triplet II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2874.Maximum Value of an Ordered Triplet II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2874.Maximum Value of an Ordered Triplet II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2874.Maximum Value of an Ordered Triplet II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2874.Maximum Value of an Ordered Triplet II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2874.Maximum Value of an Ordered Triplet II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2874.Maximum Value of an Ordered Triplet II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

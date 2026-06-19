@@ -1,0 +1,18 @@
+{
+    "problemName": "friday-purchases-ii",
+    "language": "mysql",
+    "code": "WITH RECURSIVE\r\n    T AS (\r\n        SELECT '2023-11-01' AS purchase_date\r\n        UNION\r\n        SELECT purchase_date + INTERVAL 1 DAY\r\n        FROM T\r\n        WHERE purchase_date < '2023-11-30'\r\n    )\r\nSELECT\r\n    CEIL(DAYOFMONTH(purchase_date) / 7) AS week_of_month,\r\n    purchase_date,\r\n    IFNULL(SUM(amount_spend), 0) AS total_amount\r\nFROM\r\n    T\r\n    LEFT JOIN Purchases USING (purchase_date)\r\nWHERE DAYOFWEEK(purchase_date) = 6\r\nGROUP BY 2\r\nORDER BY 1;",
+    "problemId": 2994,
+    "title": "Friday Purchases II",
+    "problemUrl": "https://leetcode.com/problems/friday-purchases-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2994.Friday Purchases II/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2994.Friday Purchases II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

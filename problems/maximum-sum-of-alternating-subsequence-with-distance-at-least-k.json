@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-sum-of-alternating-subsequence-with-distance-at-least-k",
+    "language": "python3",
+    "code": "class FenwickTree:\r\n    def __init__(self, n):\r\n        self.n = n\r\n        self.tree = [0] * (n + 1)\r\n\r\n    def update(self, index: int, val: int) -> None:\r\n        while index <= self.n:\r\n            self.tree[index] = max(self.tree[index], val)\r\n            index += index & (-index)  # 往后更新\r\n\r\n    def preSum(self, pos):\r\n        # 按照预期的方式求前缀最大值\r\n        ans = 0\r\n        while pos >= 1:\r\n            ans = max(ans, self.tree[pos])\r\n            pos -= pos & (-pos)\r\n        return ans\r\n\r\n\r\nclass Solution:\r\n    def maxAlternatingSum(self, nums: list[int], k: int) -> int:\r\n        stl = sorted(set(nums))  # 将nums中不同的数字进行排序\r\n        rank = {\r\n            v: i + 1 for i, v in enumerate(stl)\r\n        }  # 将nums中的值快速转换成stl中的索引\r\n        fwt0 = FenwickTree(len(stl))\r\n        fwt1 = FenwickTree(len(stl))\r\n\r\n        n = len(nums)\r\n        dp = [[0, 0] for _ in range(n)]\r\n        res = nums[0]\r\n        for i in range(n):\r\n            dp[i][0] = dp[i][1] = nums[i]\r\n            if i >= k:\r\n                indx = rank[nums[i]]  # 找到nums[i]在stl中的索引\r\n                dp[i][1] = max(\r\n                    dp[i][1], fwt0.preSum(indx - 1) + nums[i]\r\n                )  # indx-1即表示小于nums[i]的部分\r\n                dp[i][0] = max(\r\n                    dp[i][0], fwt1.preSum(len(stl) - indx) + nums[i]\r\n                )  # len(stl)-indx即表示在倒序列表中大于nums[i]的部分\r\n\r\n            if i - k + 1 >= 0:\r\n                indx = rank[nums[i - k + 1]]\r\n                fwt0.update(indx, dp[i - k + 1][0])  # 在正序列表中更新i-k+1位置的值\r\n                fwt1.update(\r\n                    len(stl) - indx + 1, dp[i - k + 1][1]\r\n                )  # 在倒序列表中更新i-k+1位置的值\r\n\r\n            res = max(res, dp[i][0], dp[i][1])  # 更新答案\r\n\r\n        return res",
+    "problemId": 3915,
+    "title": "Maximum Sum of Alternating Subsequence With Distance at Least K",
+    "problemUrl": "https://leetcode.com/problems/maximum-sum-of-alternating-subsequence-with-distance-at-least-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3915.Maximum Sum of Alternating Subsequence With Distance at Least K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3915.Maximum Sum of Alternating Subsequence With Distance at Least K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3915.Maximum Sum of Alternating Subsequence With Distance at Least K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3915.Maximum Sum of Alternating Subsequence With Distance at Least K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3915.Maximum Sum of Alternating Subsequence With Distance at Least K/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

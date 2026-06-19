@@ -1,0 +1,18 @@
+{
+    "problemName": "find-the-subtasks-that-did-not-execute",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH RECURSIVE\r\n    T(task_id, subtask_id) AS (\r\n        SELECT\r\n            task_id,\r\n            subtasks_count\r\n        FROM Tasks\r\n        UNION ALL\r\n        SELECT\r\n            task_id,\r\n            subtask_id - 1\r\n        FROM t\r\n        WHERE subtask_id > 1\r\n    )\r\nSELECT\r\n    T.*\r\nFROM\r\n    T\r\n    LEFT JOIN Executed USING (task_id, subtask_id)\r\nWHERE Executed.subtask_id IS NULL;",
+    "problemId": 1767,
+    "title": "Find the Subtasks That Did Not Execute",
+    "problemUrl": "https://leetcode.com/problems/find-the-subtasks-that-did-not-execute/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1767.Find the Subtasks That Did Not Execute/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1767.Find the Subtasks That Did Not Execute/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

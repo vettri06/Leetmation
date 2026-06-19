@@ -1,0 +1,43 @@
+{
+    "problemName": "count-the-number-of-substrings-with-dominant-ones",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfSubstrings(self, s: str) -> int:\r\n        n = len(s)\r\n        nxt = [n] * (n + 1)\r\n        for i in range(n - 1, -1, -1):\r\n            nxt[i] = nxt[i + 1]\r\n            if s[i] == \"0\":\r\n                nxt[i] = i\r\n        ans = 0\r\n        for i in range(n):\r\n            cnt0 = int(s[i] == \"0\")\r\n            j = i\r\n            while j < n and cnt0 * cnt0 <= n:\r\n                cnt1 = (nxt[j + 1] - i) - cnt0\r\n                if cnt1 >= cnt0 * cnt0:\r\n                    ans += min(nxt[j + 1] - j, cnt1 - cnt0 * cnt0 + 1)\r\n                j = nxt[j + 1]\r\n                cnt0 += 1\r\n        return ans",
+    "problemId": 3234,
+    "title": "Count the Number of Substrings With Dominant Ones",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-substrings-with-dominant-ones/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3234.Count the Number of Substrings With Dominant Ones/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3234.Count the Number of Substrings With Dominant Ones/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3234.Count the Number of Substrings With Dominant Ones/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3234.Count the Number of Substrings With Dominant Ones/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3234.Count the Number of Substrings With Dominant Ones/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3234.Count the Number of Substrings With Dominant Ones/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3234.Count the Number of Substrings With Dominant Ones/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

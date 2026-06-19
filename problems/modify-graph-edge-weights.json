@@ -1,0 +1,38 @@
+{
+    "problemName": "modify-graph-edge-weights",
+    "language": "python3",
+    "code": "class Solution:\r\n    def modifiedGraphEdges(\r\n        self, n: int, edges: List[List[int]], source: int, destination: int, target: int\r\n    ) -> List[List[int]]:\r\n        def dijkstra(edges: List[List[int]]) -> int:\r\n            g = [[inf] * n for _ in range(n)]\r\n            for a, b, w in edges:\r\n                if w == -1:\r\n                    continue\r\n                g[a][b] = g[b][a] = w\r\n            dist = [inf] * n\r\n            dist[source] = 0\r\n            vis = [False] * n\r\n            for _ in range(n):\r\n                k = -1\r\n                for j in range(n):\r\n                    if not vis[j] and (k == -1 or dist[k] > dist[j]):\r\n                        k = j\r\n                vis[k] = True\r\n                for j in range(n):\r\n                    dist[j] = min(dist[j], dist[k] + g[k][j])\r\n            return dist[destination]\r\n\r\n        inf = 2 * 10**9\r\n        d = dijkstra(edges)\r\n        if d < target:\r\n            return []\r\n        ok = d == target\r\n        for e in edges:\r\n            if e[2] > 0:\r\n                continue\r\n            if ok:\r\n                e[2] = inf\r\n                continue\r\n            e[2] = 1\r\n            d = dijkstra(edges)\r\n            if d <= target:\r\n                ok = True\r\n                e[2] += target - d\r\n        return edges if ok else []",
+    "problemId": 2699,
+    "title": "Modify Graph Edge Weights",
+    "problemUrl": "https://leetcode.com/problems/modify-graph-edge-weights/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2699.Modify Graph Edge Weights/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2699.Modify Graph Edge Weights/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2699.Modify Graph Edge Weights/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2699.Modify Graph Edge Weights/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2699.Modify Graph Edge Weights/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2699.Modify Graph Edge Weights/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

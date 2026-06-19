@@ -1,0 +1,18 @@
+{
+    "problemName": "sales-analysis-ii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT buyer_id\r\nFROM\r\n    Sales\r\n    JOIN Product USING (product_id)\r\nGROUP BY 1\r\nHAVING SUM(product_name = 'S8') > 0 AND SUM(product_name = 'iPhone') = 0;",
+    "problemId": 1083,
+    "title": "Sales Analysis II",
+    "problemUrl": "https://leetcode.com/problems/sales-analysis-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1083.Sales Analysis II/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1083.Sales Analysis II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

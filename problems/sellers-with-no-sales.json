@@ -1,0 +1,18 @@
+{
+    "problemName": "sellers-with-no-sales",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT seller_name\r\nFROM\r\n    Seller\r\n    LEFT JOIN Orders USING (seller_id)\r\nGROUP BY seller_id\r\nHAVING IFNULL(SUM(YEAR(sale_date) = 2020), 0) = 0\r\nORDER BY 1;",
+    "problemId": 1607,
+    "title": "Sellers With No Sales",
+    "problemUrl": "https://leetcode.com/problems/sellers-with-no-sales/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1607.Sellers With No Sales/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1607.Sellers With No Sales/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

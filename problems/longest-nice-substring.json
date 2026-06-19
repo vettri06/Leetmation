@@ -1,0 +1,58 @@
+{
+    "problemName": "longest-nice-substring",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestNiceSubstring(self, s: str) -> str:\r\n        n = len(s)\r\n        ans = ''\r\n        for i in range(n):\r\n            ss = set()\r\n            for j in range(i, n):\r\n                ss.add(s[j])\r\n                if (\r\n                    all(c.lower() in ss and c.upper() in ss for c in ss)\r\n                    and len(ans) < j - i + 1\r\n                ):\r\n                    ans = s[i : j + 1]\r\n        return ans",
+    "problemId": 1763,
+    "title": "Longest Nice Substring",
+    "problemUrl": "https://leetcode.com/problems/longest-nice-substring/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1763.Longest Nice Substring/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1763.Longest Nice Substring/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1763.Longest Nice Substring/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1763.Longest Nice Substring/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1763.Longest Nice Substring/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1763.Longest Nice Substring/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1763.Longest Nice Substring/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1763.Longest Nice Substring/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1763.Longest Nice Substring/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1763.Longest Nice Substring/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

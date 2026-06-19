@@ -1,0 +1,73 @@
+{
+    "problemName": "binary-search-tree-iterator",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass BSTIterator:\r\n    def __init__(self, root: TreeNode):\r\n        def inorder(root):\r\n            if root:\r\n                inorder(root.left)\r\n                self.vals.append(root.val)\r\n                inorder(root.right)\r\n\r\n        self.cur = 0\r\n        self.vals = []\r\n        inorder(root)\r\n\r\n    def next(self) -> int:\r\n        res = self.vals[self.cur]\r\n        self.cur += 1\r\n        return res\r\n\r\n    def hasNext(self) -> bool:\r\n        return self.cur < len(self.vals)\r\n\r\n\r\n# Your BSTIterator object will be instantiated and called as such:\r\n# obj = BSTIterator(root)\r\n# param_1 = obj.next()\r\n# param_2 = obj.hasNext()",
+    "problemId": 173,
+    "title": "Binary Search Tree Iterator",
+    "problemUrl": "https://leetcode.com/problems/binary-search-tree-iterator/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0173.Binary Search Tree Iterator/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0173.Binary Search Tree Iterator/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0173.Binary Search Tree Iterator/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0173.Binary Search Tree Iterator/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0173.Binary Search Tree Iterator/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0173.Binary Search Tree Iterator/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0173.Binary Search Tree Iterator/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0173.Binary Search Tree Iterator/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0173.Binary Search Tree Iterator/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0173.Binary Search Tree Iterator/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0173.Binary Search Tree Iterator/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0173.Binary Search Tree Iterator/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0173.Binary Search Tree Iterator/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

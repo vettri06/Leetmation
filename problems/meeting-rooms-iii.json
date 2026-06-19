@@ -1,0 +1,38 @@
+{
+    "problemName": "meeting-rooms-iii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mostBooked(self, n: int, meetings: List[List[int]]) -> int:\r\n        meetings.sort(key=lambda x: x[0])\r\n        busy = []\r\n        idle = list(range(n))\r\n        heapify(idle)\r\n        cnt = [0] * n\r\n        for s, e in meetings:\r\n            while busy and busy[0][0] <= s:\r\n                heappush(idle, heappop(busy)[1])\r\n            i = 0\r\n            if idle:\r\n                i = heappop(idle)\r\n                heappush(busy, (e, i))\r\n            else:\r\n                time_end, i = heappop(busy)\r\n                heappush(busy, (time_end + e - s, i))\r\n            cnt[i] += 1\r\n        ans = 0\r\n        for i in range(n):\r\n            if cnt[ans] < cnt[i]:\r\n                ans = i\r\n        return ans",
+    "problemId": 2402,
+    "title": "Meeting Rooms III",
+    "problemUrl": "https://leetcode.com/problems/meeting-rooms-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2402.Meeting Rooms III/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2402.Meeting Rooms III/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2402.Meeting Rooms III/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2402.Meeting Rooms III/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2402.Meeting Rooms III/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2402.Meeting Rooms III/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

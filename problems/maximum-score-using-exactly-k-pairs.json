@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-score-using-exactly-k-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxScore(self, nums1: List[int], nums2: List[int], K: int) -> int:\r\n        n, m = len(nums1), len(nums2)\r\n        f = [[[-inf] * (K + 1) for _ in range(m + 1)] for _ in range(n + 1)]\r\n        f[0][0][0] = 0\r\n        for i in range(n + 1):\r\n            for j in range(m + 1):\r\n                for k in range(K + 1):\r\n                    if i > 0:\r\n                        f[i][j][k] = max(f[i][j][k], f[i - 1][j][k])\r\n                    if j > 0:\r\n                        f[i][j][k] = max(f[i][j][k], f[i][j - 1][k])\r\n                    if i > 0 and j > 0 and k > 0:\r\n                        f[i][j][k] = max(\r\n                            f[i][j][k],\r\n                            f[i - 1][j - 1][k - 1] + nums1[i - 1] * nums2[j - 1],\r\n                        )\r\n        return f[n][m][K]",
+    "problemId": 3836,
+    "title": "Maximum Score Using Exactly K Pairs",
+    "problemUrl": "https://leetcode.com/problems/maximum-score-using-exactly-k-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3836.Maximum Score Using Exactly K Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3836.Maximum Score Using Exactly K Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3836.Maximum Score Using Exactly K Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3836.Maximum Score Using Exactly K Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3836.Maximum Score Using Exactly K Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3836.Maximum Score Using Exactly K Pairs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

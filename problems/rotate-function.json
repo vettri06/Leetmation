@@ -1,0 +1,43 @@
+{
+    "problemName": "rotate-function",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxRotateFunction(self, nums: List[int]) -> int:\r\n        f = sum(i * v for i, v in enumerate(nums))\r\n        n, s = len(nums), sum(nums)\r\n        ans = f\r\n        for i in range(1, n):\r\n            f = f + s - n * nums[n - i]\r\n            ans = max(ans, f)\r\n        return ans",
+    "problemId": 396,
+    "title": "Rotate Function",
+    "problemUrl": "https://leetcode.com/problems/rotate-function/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0396.Rotate Function/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0396.Rotate Function/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0396.Rotate Function/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0396.Rotate Function/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0396.Rotate Function/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0396.Rotate Function/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0396.Rotate Function/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

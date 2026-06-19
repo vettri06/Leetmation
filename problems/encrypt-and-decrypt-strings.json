@@ -1,0 +1,38 @@
+{
+    "problemName": "encrypt-and-decrypt-strings",
+    "language": "python3",
+    "code": "class Encrypter:\r\n    def __init__(self, keys: List[str], values: List[str], dictionary: List[str]):\r\n        self.mp = dict(zip(keys, values))\r\n        self.cnt = Counter(self.encrypt(v) for v in dictionary)\r\n\r\n    def encrypt(self, word1: str) -> str:\r\n        res = []\r\n        for c in word1:\r\n            if c not in self.mp:\r\n                return ''\r\n            res.append(self.mp[c])\r\n        return ''.join(res)\r\n\r\n    def decrypt(self, word2: str) -> int:\r\n        return self.cnt[word2]\r\n\r\n\r\n# Your Encrypter object will be instantiated and called as such:\r\n# obj = Encrypter(keys, values, dictionary)\r\n# param_1 = obj.encrypt(word1)\r\n# param_2 = obj.decrypt(word2)",
+    "problemId": 2227,
+    "title": "Encrypt and Decrypt Strings",
+    "problemUrl": "https://leetcode.com/problems/encrypt-and-decrypt-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2227.Encrypt and Decrypt Strings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2227.Encrypt and Decrypt Strings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2227.Encrypt and Decrypt Strings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2227.Encrypt and Decrypt Strings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2227.Encrypt and Decrypt Strings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2227.Encrypt and Decrypt Strings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "implement-rand10-using-rand7",
+    "language": "python3",
+    "code": "# The rand7() API is already defined for you.\r\n# def rand7():\r\n# @return a random integer in the range 1 to 7\r\n\r\n\r\nclass Solution:\r\n    def rand10(self):\r\n        \"\"\"\r\n        :rtype: int\r\n        \"\"\"\r\n        while 1:\r\n            i = rand7() - 1\r\n            j = rand7()\r\n            x = i * 7 + j\r\n            if x <= 40:\r\n                return x % 10 + 1",
+    "problemId": 470,
+    "title": "Implement Rand10() Using Rand7()",
+    "problemUrl": "https://leetcode.com/problems/implement-rand10-using-rand7/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0470.Implement Rand10() Using Rand7()/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0470.Implement Rand10() Using Rand7()/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0470.Implement Rand10() Using Rand7()/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0470.Implement Rand10() Using Rand7()/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0470.Implement Rand10() Using Rand7()/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0470.Implement Rand10() Using Rand7()/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0470.Implement Rand10() Using Rand7()/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

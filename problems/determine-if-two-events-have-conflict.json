@@ -1,0 +1,43 @@
+{
+    "problemName": "determine-if-two-events-have-conflict",
+    "language": "python3",
+    "code": "class Solution:\r\n    def haveConflict(self, event1: List[str], event2: List[str]) -> bool:\r\n        return not (event1[0] > event2[1] or event1[1] < event2[0])",
+    "problemId": 2446,
+    "title": "Determine if Two Events Have Conflict",
+    "problemUrl": "https://leetcode.com/problems/determine-if-two-events-have-conflict/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2446.Determine if Two Events Have Conflict/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2446.Determine if Two Events Have Conflict/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2446.Determine if Two Events Have Conflict/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2446.Determine if Two Events Have Conflict/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2446.Determine if Two Events Have Conflict/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2446.Determine if Two Events Have Conflict/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2446.Determine if Two Events Have Conflict/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-winning-player-in-coin-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def losingPlayer(self, x: int, y: int) -> str:\r\n        k = min(x // 2, y // 8)\r\n        x -= k * 2\r\n        y -= k * 8\r\n        return \"Alice\" if x and y >= 4 else \"Bob\"",
+    "problemId": 3222,
+    "title": "Find the Winning Player in Coin Game",
+    "problemUrl": "https://leetcode.com/problems/find-the-winning-player-in-coin-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3222.Find the Winning Player in Coin Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3222.Find the Winning Player in Coin Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3222.Find the Winning Player in Coin Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3222.Find the Winning Player in Coin Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3222.Find the Winning Player in Coin Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3222.Find the Winning Player in Coin Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

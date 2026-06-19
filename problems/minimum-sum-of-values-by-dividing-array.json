@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-sum-of-values-by-dividing-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumValueSum(self, nums: List[int], andValues: List[int]) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int, a: int) -> int:\r\n            if n - i < m - j:\r\n                return inf\r\n            if j == m:\r\n                return 0 if i == n else inf\r\n            a &= nums[i]\r\n            if a < andValues[j]:\r\n                return inf\r\n            ans = dfs(i + 1, j, a)\r\n            if a == andValues[j]:\r\n                ans = min(ans, dfs(i + 1, j + 1, -1) + nums[i])\r\n            return ans\r\n\r\n        n, m = len(nums), len(andValues)\r\n        ans = dfs(0, 0, -1)\r\n        return ans if ans < inf else -1",
+    "problemId": 3117,
+    "title": "Minimum Sum of Values by Dividing Array",
+    "problemUrl": "https://leetcode.com/problems/minimum-sum-of-values-by-dividing-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3117.Minimum Sum of Values by Dividing Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3117.Minimum Sum of Values by Dividing Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3117.Minimum Sum of Values by Dividing Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3117.Minimum Sum of Values by Dividing Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3117.Minimum Sum of Values by Dividing Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

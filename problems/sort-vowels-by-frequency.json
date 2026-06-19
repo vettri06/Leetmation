@@ -1,0 +1,38 @@
+{
+    "problemName": "sort-vowels-by-frequency",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sortVowels(self, s: str) -> str:\r\n        st = set(\"aeiou\")\r\n        vowels = []\r\n        cnt = Counter()\r\n        for c in s:\r\n            if c not in st:\r\n                continue\r\n            if c not in cnt:\r\n                vowels.append(c)\r\n            cnt[c] += 1\r\n        vowels.sort(key=lambda c: -cnt[c])\r\n        ans = list(s)\r\n        i = 0\r\n        for k, c in enumerate(s):\r\n            if c not in st:\r\n                continue\r\n            ans[k] = c = vowels[i]\r\n            cnt[c] -= 1\r\n            if cnt[c] == 0:\r\n                i += 1\r\n        return \"\".join(ans)",
+    "problemId": 3913,
+    "title": "Sort Vowels by Frequency",
+    "problemUrl": "https://leetcode.com/problems/sort-vowels-by-frequency/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3913.Sort Vowels by Frequency/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3913.Sort Vowels by Frequency/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3913.Sort Vowels by Frequency/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3913.Sort Vowels by Frequency/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3913.Sort Vowels by Frequency/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3913.Sort Vowels by Frequency/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

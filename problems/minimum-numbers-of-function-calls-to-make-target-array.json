@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-numbers-of-function-calls-to-make-target-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums: List[int]) -> int:\r\n        return sum(v.bit_count() for v in nums) + max(0, max(nums).bit_length() - 1)",
+    "problemId": 1558,
+    "title": "Minimum Numbers of Function Calls to Make Target Array",
+    "problemUrl": "https://leetcode.com/problems/minimum-numbers-of-function-calls-to-make-target-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1558.Minimum Numbers of Function Calls to Make Target Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1558.Minimum Numbers of Function Calls to Make Target Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1558.Minimum Numbers of Function Calls to Make Target Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1558.Minimum Numbers of Function Calls to Make Target Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1558.Minimum Numbers of Function Calls to Make Target Array/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "most-popular-video-creator",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mostPopularCreator(\r\n        self, creators: List[str], ids: List[str], views: List[int]\r\n    ) -> List[List[str]]:\r\n        cnt = defaultdict(int)\r\n        d = defaultdict(int)\r\n        for k, (c, i, v) in enumerate(zip(creators, ids, views)):\r\n            cnt[c] += v\r\n            if c not in d or views[d[c]] < v or (views[d[c]] == v and ids[d[c]] > i):\r\n                d[c] = k\r\n        mx = max(cnt.values())\r\n        return [[c, ids[d[c]]] for c, x in cnt.items() if x == mx]",
+    "problemId": 2456,
+    "title": "Most Popular Video Creator",
+    "problemUrl": "https://leetcode.com/problems/most-popular-video-creator/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2456.Most Popular Video Creator/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2456.Most Popular Video Creator/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2456.Most Popular Video Creator/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2456.Most Popular Video Creator/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2456.Most Popular Video Creator/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2456.Most Popular Video Creator/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

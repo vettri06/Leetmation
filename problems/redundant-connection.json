@@ -1,0 +1,73 @@
+{
+    "problemName": "redundant-connection",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:\r\n        def find(x: int) -> int:\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        p = list(range(len(edges)))\r\n        for a, b in edges:\r\n            pa, pb = find(a - 1), find(b - 1)\r\n            if pa == pb:\r\n                return [a, b]\r\n            p[pa] = pb",
+    "problemId": 684,
+    "title": "Redundant Connection",
+    "problemUrl": "https://leetcode.com/problems/redundant-connection/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0684.Redundant Connection/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0684.Redundant Connection/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0684.Redundant Connection/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0684.Redundant Connection/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0684.Redundant Connection/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0684.Redundant Connection/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0684.Redundant Connection/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0684.Redundant Connection/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0684.Redundant Connection/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0684.Redundant Connection/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0684.Redundant Connection/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0684.Redundant Connection/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0684.Redundant Connection/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "activity-participants",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    t AS (\r\n        SELECT activity, COUNT(1) AS cnt\r\n        FROM Friends\r\n        GROUP BY activity\r\n    )\r\nSELECT activity\r\nFROM t\r\nWHERE cnt > (SELECT MIN(cnt) FROM t) AND cnt < (SELECT MAX(cnt) FROM t);",
+    "problemId": 1355,
+    "title": "Activity Participants",
+    "problemUrl": "https://leetcode.com/problems/activity-participants/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1355.Activity Participants/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1355.Activity Participants/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

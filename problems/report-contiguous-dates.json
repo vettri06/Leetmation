@@ -1,0 +1,18 @@
+{
+    "problemName": "report-contiguous-dates",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT fail_date AS dt, 'failed' AS st\r\n        FROM Failed\r\n        WHERE YEAR(fail_date) = 2019\r\n        UNION ALL\r\n        SELECT success_date AS dt, 'succeeded' AS st\r\n        FROM Succeeded\r\n        WHERE YEAR(success_date) = 2019\r\n    )\r\nSELECT\r\n    st AS period_state,\r\n    MIN(dt) AS start_date,\r\n    MAX(dt) AS end_date\r\nFROM\r\n    (\r\n        SELECT\r\n            *,\r\n            SUBDATE(\r\n                dt,\r\n                RANK() OVER (\r\n                    PARTITION BY st\r\n                    ORDER BY dt\r\n                )\r\n            ) AS pt\r\n        FROM T\r\n    ) AS t\r\nGROUP BY 1, pt\r\nORDER BY 2;",
+    "problemId": 1225,
+    "title": "Report Contiguous Dates",
+    "problemUrl": "https://leetcode.com/problems/report-contiguous-dates/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1225.Report Contiguous Dates/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1225.Report Contiguous Dates/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "election-results",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT candidate, SUM(vote) AS tot\r\n        FROM\r\n            (\r\n                SELECT\r\n                    candidate,\r\n                    1 / (COUNT(candidate) OVER (PARTITION BY voter)) AS vote\r\n                FROM Votes\r\n                WHERE candidate IS NOT NULL\r\n            ) AS t\r\n        GROUP BY 1\r\n    ),\r\n    P AS (\r\n        SELECT\r\n            candidate,\r\n            RANK() OVER (ORDER BY tot DESC) AS rk\r\n        FROM T\r\n    )\r\nSELECT candidate\r\nFROM P\r\nWHERE rk = 1\r\nORDER BY 1;",
+    "problemId": 2820,
+    "title": "Election Results",
+    "problemUrl": "https://leetcode.com/problems/election-results/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2820.Election Results/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2820.Election Results/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

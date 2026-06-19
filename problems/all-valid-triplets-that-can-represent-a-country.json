@@ -1,0 +1,18 @@
+{
+    "problemName": "all-valid-triplets-that-can-represent-a-country",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    a.student_name AS member_A,\r\n    b.student_name AS member_B,\r\n    c.student_name AS member_C\r\nFROM\r\n    SchoolA AS a,\r\n    SchoolB AS b,\r\n    SchoolC AS c\r\nWHERE\r\n    a.student_name != b.student_name\r\n    AND a.student_name != c.student_name\r\n    AND b.student_name != c.student_name\r\n    AND a.student_id != b.student_id\r\n    AND a.student_id != c.student_id\r\n    AND b.student_id != c.student_id;",
+    "problemId": 1623,
+    "title": "All Valid Triplets That Can Represent a Country",
+    "problemUrl": "https://leetcode.com/problems/all-valid-triplets-that-can-represent-a-country/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1623.All Valid Triplets That Can Represent a Country/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1623.All Valid Triplets That Can Represent a Country/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "form-a-chemical-bond",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT a.symbol AS metal, b.symbol AS nonmetal\r\nFROM\r\n    Elements AS a,\r\n    Elements AS b\r\nWHERE a.type = 'Metal' AND b.type = 'Nonmetal';",
+    "problemId": 2480,
+    "title": "Form a Chemical Bond",
+    "problemUrl": "https://leetcode.com/problems/form-a-chemical-bond/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2480.Form a Chemical Bond/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2480.Form a Chemical Bond/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

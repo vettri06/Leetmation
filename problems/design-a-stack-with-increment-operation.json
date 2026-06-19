@@ -1,0 +1,38 @@
+{
+    "problemName": "design-a-stack-with-increment-operation",
+    "language": "python3",
+    "code": "class CustomStack:\r\n    def __init__(self, maxSize: int):\r\n        self.stk = [0] * maxSize\r\n        self.add = [0] * maxSize\r\n        self.i = 0\r\n\r\n    def push(self, x: int) -> None:\r\n        if self.i < len(self.stk):\r\n            self.stk[self.i] = x\r\n            self.i += 1\r\n\r\n    def pop(self) -> int:\r\n        if self.i <= 0:\r\n            return -1\r\n        self.i -= 1\r\n        ans = self.stk[self.i] + self.add[self.i]\r\n        if self.i > 0:\r\n            self.add[self.i - 1] += self.add[self.i]\r\n        self.add[self.i] = 0\r\n        return ans\r\n\r\n    def increment(self, k: int, val: int) -> None:\r\n        i = min(k, self.i) - 1\r\n        if i >= 0:\r\n            self.add[i] += val\r\n\r\n\r\n# Your CustomStack object will be instantiated and called as such:\r\n# obj = CustomStack(maxSize)\r\n# obj.push(x)\r\n# param_2 = obj.pop()\r\n# obj.increment(k,val)",
+    "problemId": 1381,
+    "title": "Design a Stack With Increment Operation",
+    "problemUrl": "https://leetcode.com/problems/design-a-stack-with-increment-operation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1381.Design a Stack With Increment Operation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1381.Design a Stack With Increment Operation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1381.Design a Stack With Increment Operation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1381.Design a Stack With Increment Operation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1381.Design a Stack With Increment Operation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1381.Design a Stack With Increment Operation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

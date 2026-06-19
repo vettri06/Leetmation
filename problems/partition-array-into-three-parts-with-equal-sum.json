@@ -1,0 +1,43 @@
+{
+    "problemName": "partition-array-into-three-parts-with-equal-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canThreePartsEqualSum(self, arr: List[int]) -> bool:\r\n        s, mod = divmod(sum(arr), 3)\r\n        if mod:\r\n            return False\r\n        cnt = t = 0\r\n        for x in arr:\r\n            t += x\r\n            if t == s:\r\n                cnt += 1\r\n                t = 0\r\n        return cnt >= 3",
+    "problemId": 1013,
+    "title": "Partition Array Into Three Parts With Equal Sum",
+    "problemUrl": "https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1013.Partition Array Into Three Parts With Equal Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1013.Partition Array Into Three Parts With Equal Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1013.Partition Array Into Three Parts With Equal Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1013.Partition Array Into Three Parts With Equal Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1013.Partition Array Into Three Parts With Equal Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1013.Partition Array Into Three Parts With Equal Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1013.Partition Array Into Three Parts With Equal Sum/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

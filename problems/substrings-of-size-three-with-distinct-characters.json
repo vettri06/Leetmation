@@ -1,0 +1,38 @@
+{
+    "problemName": "substrings-of-size-three-with-distinct-characters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countGoodSubstrings(self, s: str) -> int:\r\n        ans = mask = l = 0\r\n        for r, x in enumerate(map(lambda c: ord(c) - 97, s)):\r\n            while mask >> x & 1:\r\n                y = ord(s[l]) - 97\r\n                mask ^= 1 << y\r\n                l += 1\r\n            mask |= 1 << x\r\n            ans += int(r - l + 1 >= 3)\r\n        return ans",
+    "problemId": 1876,
+    "title": "Substrings of Size Three with Distinct Characters",
+    "problemUrl": "https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1876.Substrings of Size Three with Distinct Characters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1876.Substrings of Size Three with Distinct Characters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1876.Substrings of Size Three with Distinct Characters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1876.Substrings of Size Three with Distinct Characters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1876.Substrings of Size Three with Distinct Characters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1876.Substrings of Size Three with Distinct Characters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "surface-area-of-3d-shapes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def surfaceArea(self, grid: List[List[int]]) -> int:\r\n        ans = 0\r\n        for i, row in enumerate(grid):\r\n            for j, v in enumerate(row):\r\n                if v:\r\n                    ans += 2 + v * 4\r\n                    if i:\r\n                        ans -= min(v, grid[i - 1][j]) * 2\r\n                    if j:\r\n                        ans -= min(v, grid[i][j - 1]) * 2\r\n        return ans",
+    "problemId": 892,
+    "title": "Surface Area of 3D Shapes",
+    "problemUrl": "https://leetcode.com/problems/surface-area-of-3d-shapes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0892.Surface Area of 3D Shapes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0892.Surface Area of 3D Shapes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0892.Surface Area of 3D Shapes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0892.Surface Area of 3D Shapes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0892.Surface Area of 3D Shapes/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

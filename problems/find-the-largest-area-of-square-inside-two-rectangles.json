@@ -1,0 +1,43 @@
+{
+    "problemName": "find-the-largest-area-of-square-inside-two-rectangles",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestSquareArea(\r\n        self, bottomLeft: List[List[int]], topRight: List[List[int]]\r\n    ) -> int:\r\n        ans = 0\r\n        for ((x1, y1), (x2, y2)), ((x3, y3), (x4, y4)) in combinations(\r\n            zip(bottomLeft, topRight), 2\r\n        ):\r\n            w = min(x2, x4) - max(x1, x3)\r\n            h = min(y2, y4) - max(y1, y3)\r\n            e = min(w, h)\r\n            if e > 0:\r\n                ans = max(ans, e * e)\r\n        return ans",
+    "problemId": 3047,
+    "title": "Find the Largest Area of Square Inside Two Rectangles",
+    "problemUrl": "https://leetcode.com/problems/find-the-largest-area-of-square-inside-two-rectangles/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3047.Find the Largest Area of Square Inside Two Rectangles/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3047.Find the Largest Area of Square Inside Two Rectangles/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3047.Find the Largest Area of Square Inside Two Rectangles/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3047.Find the Largest Area of Square Inside Two Rectangles/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3047.Find the Largest Area of Square Inside Two Rectangles/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3047.Find the Largest Area of Square Inside Two Rectangles/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3047.Find the Largest Area of Square Inside Two Rectangles/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

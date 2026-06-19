@@ -1,0 +1,43 @@
+{
+    "problemName": "top-k-frequent-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def topKFrequent(self, nums: List[int], k: int) -> List[int]:\r\n        cnt = Counter(nums)\r\n        return [x for x, _ in cnt.most_common(k)]",
+    "problemId": 347,
+    "title": "Top K Frequent Elements",
+    "problemUrl": "https://leetcode.com/problems/top-k-frequent-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0347.Top K Frequent Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0347.Top K Frequent Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0347.Top K Frequent Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0347.Top K Frequent Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0347.Top K Frequent Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0347.Top K Frequent Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0347.Top K Frequent Elements/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

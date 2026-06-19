@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-cost-to-convert-string-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumCost(\r\n        self,\r\n        source: str,\r\n        target: str,\r\n        original: List[str],\r\n        changed: List[str],\r\n        cost: List[int],\r\n    ) -> int:\r\n        g = [[inf] * 26 for _ in range(26)]\r\n        for i in range(26):\r\n            g[i][i] = 0\r\n        for x, y, z in zip(original, changed, cost):\r\n            x = ord(x) - ord('a')\r\n            y = ord(y) - ord('a')\r\n            g[x][y] = min(g[x][y], z)\r\n        for k in range(26):\r\n            for i in range(26):\r\n                for j in range(26):\r\n                    g[i][j] = min(g[i][j], g[i][k] + g[k][j])\r\n        ans = 0\r\n        for a, b in zip(source, target):\r\n            if a != b:\r\n                x, y = ord(a) - ord('a'), ord(b) - ord('a')\r\n                if g[x][y] >= inf:\r\n                    return -1\r\n                ans += g[x][y]\r\n        return ans",
+    "problemId": 2976,
+    "title": "Minimum Cost to Convert String I",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-convert-string-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2976.Minimum Cost to Convert String I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2976.Minimum Cost to Convert String I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2976.Minimum Cost to Convert String I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2976.Minimum Cost to Convert String I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2976.Minimum Cost to Convert String I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2976.Minimum Cost to Convert String I/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2976.Minimum Cost to Convert String I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2976.Minimum Cost to Convert String I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

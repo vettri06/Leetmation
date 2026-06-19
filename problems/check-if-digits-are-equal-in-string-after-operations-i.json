@@ -1,0 +1,38 @@
+{
+    "problemName": "check-if-digits-are-equal-in-string-after-operations-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def hasSameDigits(self, s: str) -> bool:\r\n        t = list(map(int, s))\r\n        n = len(t)\r\n        for k in range(n - 1, 1, -1):\r\n            for i in range(k):\r\n                t[i] = (t[i] + t[i + 1]) % 10\r\n        return t[0] == t[1]",
+    "problemId": 3461,
+    "title": "Check If Digits Are Equal in String After Operations I",
+    "problemUrl": "https://leetcode.com/problems/check-if-digits-are-equal-in-string-after-operations-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3461.Check If Digits Are Equal in String After Operations I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3461.Check If Digits Are Equal in String After Operations I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3461.Check If Digits Are Equal in String After Operations I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3461.Check If Digits Are Equal in String After Operations I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3461.Check If Digits Are Equal in String After Operations I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3461.Check If Digits Are Equal in String After Operations I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

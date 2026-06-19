@@ -1,0 +1,18 @@
+{
+    "problemName": "function-composition",
+    "language": "typescript",
+    "code": "type F = (x: number) => number;\r\n\r\nfunction compose(functions: F[]): F {\r\n    return function (x) {\r\n        return functions.reduceRight((acc, fn) => fn(acc), x);\r\n    };\r\n}\r\n\r\n/**\r\n * const fn = compose([x => x + 1, x => 2 * x])\r\n * fn(4) // 9\r\n */",
+    "problemId": 2629,
+    "title": "Function Composition",
+    "problemUrl": "https://leetcode.com/problems/function-composition/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2629.Function Composition/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2629.Function Composition/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

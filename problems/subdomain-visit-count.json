@@ -1,0 +1,33 @@
+{
+    "problemName": "subdomain-visit-count",
+    "language": "python3",
+    "code": "class Solution:\r\n    def subdomainVisits(self, cpdomains: List[str]) -> List[str]:\r\n        cnt = Counter()\r\n        for s in cpdomains:\r\n            v = int(s[: s.index(' ')])\r\n            for i, c in enumerate(s):\r\n                if c in ' .':\r\n                    cnt[s[i + 1 :]] += v\r\n        return [f'{v} {s}' for s, v in cnt.items()]",
+    "problemId": 811,
+    "title": "Subdomain Visit Count",
+    "problemUrl": "https://leetcode.com/problems/subdomain-visit-count/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0811.Subdomain Visit Count/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0811.Subdomain Visit Count/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0811.Subdomain Visit Count/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0811.Subdomain Visit Count/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0811.Subdomain Visit Count/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

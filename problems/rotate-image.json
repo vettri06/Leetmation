@@ -1,0 +1,53 @@
+{
+    "problemName": "rotate-image",
+    "language": "python3",
+    "code": "class Solution:\r\n    def rotate(self, matrix: List[List[int]]) -> None:\r\n        n = len(matrix)\r\n        for i in range(n >> 1):\r\n            for j in range(n):\r\n                matrix[i][j], matrix[n - i - 1][j] = matrix[n - i - 1][j], matrix[i][j]\r\n        for i in range(n):\r\n            for j in range(i):\r\n                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]",
+    "problemId": 48,
+    "title": "Rotate Image",
+    "problemUrl": "https://leetcode.com/problems/rotate-image/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0048.Rotate Image/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0048.Rotate Image/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0048.Rotate Image/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0048.Rotate Image/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0048.Rotate Image/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0048.Rotate Image/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0048.Rotate Image/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0048.Rotate Image/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0048.Rotate Image/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

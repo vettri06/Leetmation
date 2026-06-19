@@ -1,0 +1,18 @@
+{
+    "problemName": "convert-json-string-to-object",
+    "language": "typescript",
+    "code": "function jsonParse(str: string): any {\r\n    const n = str.length;\r\n    let i = 0;\r\n\r\n    const parseTrue = (): boolean => {\r\n        i += 4;\r\n        return true;\r\n    };\r\n\r\n    const parseFalse = (): boolean => {\r\n        i += 5;\r\n        return false;\r\n    };\r\n\r\n    const parseNull = (): null => {\r\n        i += 4;\r\n        return null;\r\n    };\r\n\r\n    const parseNumber = (): number => {\r\n        let s = '';\r\n        while (i < n) {\r\n            const c = str[i];\r\n            if (c === ',' || c === '}' || c === ']') {\r\n                break;\r\n            }\r\n            s += c;\r\n            i++;\r\n        }\r\n        return Number(s);\r\n    };\r\n\r\n    const parseArray = (): any[] => {\r\n        const arr: any[] = [];\r\n        i++;\r\n        while (i < n) {\r\n            const c = str[i];\r\n            if (c === ']') {\r\n                i++;\r\n                break;\r\n            }\r\n            if (c === ',') {\r\n                i++;\r\n                continue;\r\n            }\r\n            const value = parseValue();\r\n            arr.push(value);\r\n        }\r\n        return arr;\r\n    };\r\n\r\n    const parseString = (): string => {\r\n        let s = '';\r\n        i++;\r\n        while (i < n) {\r\n            const c = str[i];\r\n            if (c === '\"') {\r\n                i++;\r\n                break;\r\n            }\r\n            if (c === '\\\\') {\r\n                i++;\r\n                s += str[i];\r\n            } else {\r\n                s += c;\r\n            }\r\n            i++;\r\n        }\r\n        return s;\r\n    };\r\n\r\n    const parseObject = (): any => {\r\n        const obj: any = {};\r\n        i++;\r\n        while (i < n) {\r\n            const c = str[i];\r\n            if (c === '}') {\r\n                i++;\r\n                break;\r\n            }\r\n            if (c === ',') {\r\n                i++;\r\n                continue;\r\n            }\r\n            const key = parseString();\r\n            i++;\r\n            const value = parseValue();\r\n            obj[key] = value;\r\n        }\r\n        return obj;\r\n    };\r\n    const parseValue = (): any => {\r\n        const c = str[i];\r\n        if (c === '{') {\r\n            return parseObject();\r\n        }\r\n        if (c === '[') {\r\n            return parseArray();\r\n        }\r\n        if (c === '\"') {\r\n            return parseString();\r\n        }\r\n        if (c === 't') {\r\n            return parseTrue();\r\n        }\r\n        if (c === 'f') {\r\n            return parseFalse();\r\n        }\r\n        if (c === 'n') {\r\n            return parseNull();\r\n        }\r\n        return parseNumber();\r\n    };\r\n    return parseValue();\r\n}",
+    "problemId": 2759,
+    "title": "Convert JSON String to Object",
+    "problemUrl": "https://leetcode.com/problems/convert-json-string-to-object/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2759.Convert JSON String to Object/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2759.Convert JSON String to Object/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

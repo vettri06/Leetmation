@@ -1,0 +1,58 @@
+{
+    "problemName": "number-of-ways-to-form-a-target-string-given-a-dictionary",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numWays(self, words: List[str], target: str) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int) -> int:\r\n            if i >= m:\r\n                return 1\r\n            if j >= n:\r\n                return 0\r\n            ans = dfs(i + 1, j + 1) * cnt[j][ord(target[i]) - ord('a')]\r\n            ans = (ans + dfs(i, j + 1)) % mod\r\n            return ans\r\n\r\n        m, n = len(target), len(words[0])\r\n        cnt = [[0] * 26 for _ in range(n)]\r\n        for w in words:\r\n            for j, c in enumerate(w):\r\n                cnt[j][ord(c) - ord('a')] += 1\r\n        mod = 10**9 + 7\r\n        return dfs(0, 0)",
+    "problemId": 1639,
+    "title": "Number of Ways to Form a Target String Given a Dictionary",
+    "problemUrl": "https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1639.Number of Ways to Form a Target String Given a Dictionary/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1639.Number of Ways to Form a Target String Given a Dictionary/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1639.Number of Ways to Form a Target String Given a Dictionary/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1639.Number of Ways to Form a Target String Given a Dictionary/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1639.Number of Ways to Form a Target String Given a Dictionary/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1639.Number of Ways to Form a Target String Given a Dictionary/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1639.Number of Ways to Form a Target String Given a Dictionary/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1639.Number of Ways to Form a Target String Given a Dictionary/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1639.Number of Ways to Form a Target String Given a Dictionary/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1639.Number of Ways to Form a Target String Given a Dictionary/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

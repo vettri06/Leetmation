@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-time-to-collect-all-apples-in-a-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minTime(self, n: int, edges: List[List[int]], hasApple: List[bool]) -> int:\r\n        def dfs(u, cost):\r\n            if vis[u]:\r\n                return 0\r\n            vis[u] = True\r\n            nxt_cost = 0\r\n            for v in g[u]:\r\n                nxt_cost += dfs(v, 2)\r\n            if not hasApple[u] and nxt_cost == 0:\r\n                return 0\r\n            return cost + nxt_cost\r\n\r\n        g = defaultdict(list)\r\n        for u, v in edges:\r\n            g[u].append(v)\r\n            g[v].append(u)\r\n        vis = [False] * n\r\n        return dfs(0, 0)",
+    "problemId": 1443,
+    "title": "Minimum Time to Collect All Apples in a Tree",
+    "problemUrl": "https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1443.Minimum Time to Collect All Apples in a Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1443.Minimum Time to Collect All Apples in a Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1443.Minimum Time to Collect All Apples in a Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1443.Minimum Time to Collect All Apples in a Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1443.Minimum Time to Collect All Apples in a Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

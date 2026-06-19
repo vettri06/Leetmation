@@ -1,0 +1,63 @@
+{
+    "problemName": "latest-time-you-can-obtain-after-replacing-characters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findLatestTime(self, s: str) -> str:\r\n        for h in range(11, -1, -1):\r\n            for m in range(59, -1, -1):\r\n                t = f\"{h:02d}:{m:02d}\"\r\n                if all(a == b for a, b in zip(s, t) if a != \"?\"):\r\n                    return t",
+    "problemId": 3114,
+    "title": "Latest Time You Can Obtain After Replacing Characters",
+    "problemUrl": "https://leetcode.com/problems/latest-time-you-can-obtain-after-replacing-characters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3114.Latest Time You Can Obtain After Replacing Characters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3114.Latest Time You Can Obtain After Replacing Characters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3114.Latest Time You Can Obtain After Replacing Characters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3114.Latest Time You Can Obtain After Replacing Characters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3114.Latest Time You Can Obtain After Replacing Characters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3114.Latest Time You Can Obtain After Replacing Characters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3114.Latest Time You Can Obtain After Replacing Characters/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3114.Latest Time You Can Obtain After Replacing Characters/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3114.Latest Time You Can Obtain After Replacing Characters/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3114.Latest Time You Can Obtain After Replacing Characters/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3114.Latest Time You Can Obtain After Replacing Characters/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

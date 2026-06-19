@@ -1,0 +1,18 @@
+{
+    "problemName": "snail-traversal",
+    "language": "typescript",
+    "code": "declare global {\r\n    interface Array<T> {\r\n        snail(rowsCount: number, colsCount: number): number[][];\r\n    }\r\n}\r\n\r\nArray.prototype.snail = function (rowsCount: number, colsCount: number): number[][] {\r\n    if (rowsCount * colsCount !== this.length) {\r\n        return [];\r\n    }\r\n    const ans: number[][] = Array.from({ length: rowsCount }, () => Array(colsCount));\r\n    for (let h = 0, i = 0, j = 0, k = 1; h < this.length; ++h) {\r\n        ans[i][j] = this[h];\r\n        i += k;\r\n        if (i === rowsCount || i === -1) {\r\n            i -= k;\r\n            k = -k;\r\n            ++j;\r\n        }\r\n    }\r\n    return ans;\r\n};\r\n\r\n/**\r\n * const arr = [1,2,3,4];\r\n * arr.snail(1,4); // [[1,2,3,4]]\r\n */",
+    "problemId": 2624,
+    "title": "Snail Traversal",
+    "problemUrl": "https://leetcode.com/problems/snail-traversal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2624.Snail Traversal/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2624.Snail Traversal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

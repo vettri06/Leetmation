@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-longest-substring-containing-vowels-in-even-counts",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findTheLongestSubstring(self, s: str) -> int:\r\n        d = {0: -1}\r\n        ans = mask = 0\r\n        for i, c in enumerate(s):\r\n            if c in \"aeiou\":\r\n                mask ^= 1 << (ord(c) - ord(\"a\"))\r\n            if mask in d:\r\n                j = d[mask]\r\n                ans = max(ans, i - j)\r\n            else:\r\n                d[mask] = i\r\n        return ans",
+    "problemId": 1371,
+    "title": "Find the Longest Substring Containing Vowels in Even Counts",
+    "problemUrl": "https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1371.Find the Longest Substring Containing Vowels in Even Counts/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1371.Find the Longest Substring Containing Vowels in Even Counts/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1371.Find the Longest Substring Containing Vowels in Even Counts/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1371.Find the Longest Substring Containing Vowels in Even Counts/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1371.Find the Longest Substring Containing Vowels in Even Counts/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1371.Find the Longest Substring Containing Vowels in Even Counts/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

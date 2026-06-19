@@ -1,0 +1,33 @@
+{
+    "problemName": "design-a-food-rating-system",
+    "language": "python3",
+    "code": "class FoodRatings:\r\n    def __init__(self, foods: List[str], cuisines: List[str], ratings: List[int]):\r\n        self.d = defaultdict(SortedList)\r\n        self.g = {}\r\n        for food, cuisine, rating in zip(foods, cuisines, ratings):\r\n            self.d[cuisine].add((-rating, food))\r\n            self.g[food] = (rating, cuisine)\r\n\r\n    def changeRating(self, food: str, newRating: int) -> None:\r\n        oldRating, cuisine = self.g[food]\r\n        self.g[food] = (newRating, cuisine)\r\n        self.d[cuisine].remove((-oldRating, food))\r\n        self.d[cuisine].add((-newRating, food))\r\n\r\n    def highestRated(self, cuisine: str) -> str:\r\n        return self.d[cuisine][0][1]\r\n\r\n\r\n# Your FoodRatings object will be instantiated and called as such:\r\n# obj = FoodRatings(foods, cuisines, ratings)\r\n# obj.changeRating(food,newRating)\r\n# param_2 = obj.highestRated(cuisine)",
+    "problemId": 2353,
+    "title": "Design a Food Rating System",
+    "problemUrl": "https://leetcode.com/problems/design-a-food-rating-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2353.Design a Food Rating System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2353.Design a Food Rating System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2353.Design a Food Rating System/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2353.Design a Food Rating System/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2353.Design a Food Rating System/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

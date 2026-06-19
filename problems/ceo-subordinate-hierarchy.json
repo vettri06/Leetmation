@@ -1,0 +1,18 @@
+{
+    "problemName": "ceo-subordinate-hierarchy",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH RECURSIVE\r\n    T AS (\r\n        SELECT\r\n            employee_id,\r\n            employee_name,\r\n            0 AS hierarchy_level,\r\n            manager_id,\r\n            salary\r\n        FROM Employees\r\n        WHERE manager_id IS NULL\r\n        UNION ALL\r\n        SELECT\r\n            e.employee_id,\r\n            e.employee_name,\r\n            hierarchy_level + 1 AS hierarchy_level,\r\n            e.manager_id,\r\n            e.salary\r\n        FROM\r\n            T t\r\n            JOIN Employees e ON t.employee_id = e.manager_id\r\n    ),\r\n    P AS (\r\n        SELECT salary\r\n        FROM Employees\r\n        WHERE manager_id IS NULL\r\n    )\r\nSELECT\r\n    employee_id subordinate_id,\r\n    employee_name subordinate_name,\r\n    hierarchy_level,\r\n    t.salary - p.salary salary_difference\r\nFROM\r\n    T t\r\n    JOIN P p\r\nWHERE hierarchy_level != 0\r\nORDER BY 3, 1;",
+    "problemId": 3236,
+    "title": "CEO Subordinate Hierarchy",
+    "problemUrl": "https://leetcode.com/problems/ceo-subordinate-hierarchy/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3236.CEO Subordinate Hierarchy/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3236.CEO Subordinate Hierarchy/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

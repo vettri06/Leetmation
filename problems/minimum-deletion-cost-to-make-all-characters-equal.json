@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-deletion-cost-to-make-all-characters-equal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, s: str, cost: List[int]) -> int:\r\n        tot = 0\r\n        g = defaultdict(int)\r\n        for c, v in zip(s, cost):\r\n            tot += v\r\n            g[c] += v\r\n        return min(tot - x for x in g.values())",
+    "problemId": 3784,
+    "title": "Minimum Deletion Cost to Make All Characters Equal",
+    "problemUrl": "https://leetcode.com/problems/minimum-deletion-cost-to-make-all-characters-equal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3784.Minimum Deletion Cost to Make All Characters Equal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3784.Minimum Deletion Cost to Make All Characters Equal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3784.Minimum Deletion Cost to Make All Characters Equal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3784.Minimum Deletion Cost to Make All Characters Equal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3784.Minimum Deletion Cost to Make All Characters Equal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3784.Minimum Deletion Cost to Make All Characters Equal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

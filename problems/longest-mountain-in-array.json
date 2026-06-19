@@ -1,0 +1,63 @@
+{
+    "problemName": "longest-mountain-in-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestMountain(self, arr: List[int]) -> int:\r\n        n = len(arr)\r\n        f = [1] * n\r\n        g = [1] * n\r\n        for i in range(1, n):\r\n            if arr[i] > arr[i - 1]:\r\n                f[i] = f[i - 1] + 1\r\n        ans = 0\r\n        for i in range(n - 2, -1, -1):\r\n            if arr[i] > arr[i + 1]:\r\n                g[i] = g[i + 1] + 1\r\n                if f[i] > 1:\r\n                    ans = max(ans, f[i] + g[i] - 1)\r\n        return ans",
+    "problemId": 845,
+    "title": "Longest Mountain in Array",
+    "problemUrl": "https://leetcode.com/problems/longest-mountain-in-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0845.Longest Mountain in Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0845.Longest Mountain in Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0845.Longest Mountain in Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0845.Longest Mountain in Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0845.Longest Mountain in Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0845.Longest Mountain in Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0845.Longest Mountain in Array/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0845.Longest Mountain in Array/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0845.Longest Mountain in Array/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0845.Longest Mountain in Array/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0845.Longest Mountain in Array/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

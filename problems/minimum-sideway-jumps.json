@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-sideway-jumps",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSideJumps(self, obstacles: List[int]) -> int:\r\n        f = [1, 0, 1]\r\n        for v in obstacles[1:]:\r\n            for j in range(3):\r\n                if v == j + 1:\r\n                    f[j] = inf\r\n                    break\r\n            x = min(f) + 1\r\n            for j in range(3):\r\n                if v != j + 1:\r\n                    f[j] = min(f[j], x)\r\n        return min(f)",
+    "problemId": 1824,
+    "title": "Minimum Sideway Jumps",
+    "problemUrl": "https://leetcode.com/problems/minimum-sideway-jumps/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1824.Minimum Sideway Jumps/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1824.Minimum Sideway Jumps/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1824.Minimum Sideway Jumps/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1824.Minimum Sideway Jumps/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1824.Minimum Sideway Jumps/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1824.Minimum Sideway Jumps/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "finding-mk-average",
+    "language": "python3",
+    "code": "class MKAverage:\r\n    def __init__(self, m: int, k: int):\r\n        self.m = m\r\n        self.k = k\r\n        self.s = 0\r\n        self.q = deque()\r\n        self.lo = SortedList()\r\n        self.mid = SortedList()\r\n        self.hi = SortedList()\r\n\r\n    def addElement(self, num: int) -> None:\r\n        if not self.lo or num <= self.lo[-1]:\r\n            self.lo.add(num)\r\n        elif not self.hi or num >= self.hi[0]:\r\n            self.hi.add(num)\r\n        else:\r\n            self.mid.add(num)\r\n            self.s += num\r\n        self.q.append(num)\r\n        if len(self.q) > self.m:\r\n            x = self.q.popleft()\r\n            if x in self.lo:\r\n                self.lo.remove(x)\r\n            elif x in self.hi:\r\n                self.hi.remove(x)\r\n            else:\r\n                self.mid.remove(x)\r\n                self.s -= x\r\n        while len(self.lo) > self.k:\r\n            x = self.lo.pop()\r\n            self.mid.add(x)\r\n            self.s += x\r\n        while len(self.hi) > self.k:\r\n            x = self.hi.pop(0)\r\n            self.mid.add(x)\r\n            self.s += x\r\n        while len(self.lo) < self.k and self.mid:\r\n            x = self.mid.pop(0)\r\n            self.lo.add(x)\r\n            self.s -= x\r\n        while len(self.hi) < self.k and self.mid:\r\n            x = self.mid.pop()\r\n            self.hi.add(x)\r\n            self.s -= x\r\n\r\n    def calculateMKAverage(self) -> int:\r\n        return -1 if len(self.q) < self.m else self.s // (self.m - 2 * self.k)\r\n\r\n\r\n# Your MKAverage object will be instantiated and called as such:\r\n# obj = MKAverage(m, k)\r\n# obj.addElement(num)\r\n# param_2 = obj.calculateMKAverage()",
+    "problemId": 1825,
+    "title": "Finding MK Average",
+    "problemUrl": "https://leetcode.com/problems/finding-mk-average/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1825.Finding MK Average/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1825.Finding MK Average/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1825.Finding MK Average/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1825.Finding MK Average/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1825.Finding MK Average/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1825.Finding MK Average/Solution2.py",
+            "sourceFile": "Solution2.py"
+        }
+    ]
+}

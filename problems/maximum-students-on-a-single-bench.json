@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-students-on-a-single-bench",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxStudentsOnBench(self, students: List[List[int]]) -> int:\r\n        if not students:\r\n            return 0\r\n        d = defaultdict(set)\r\n        for student_id, bench_id in students:\r\n            d[bench_id].add(student_id)\r\n        return max(map(len, d.values()))",
+    "problemId": 3450,
+    "title": "Maximum Students on a Single Bench",
+    "problemUrl": "https://leetcode.com/problems/maximum-students-on-a-single-bench/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3450.Maximum Students on a Single Bench/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3450.Maximum Students on a Single Bench/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3450.Maximum Students on a Single Bench/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3450.Maximum Students on a Single Bench/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3450.Maximum Students on a Single Bench/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3450.Maximum Students on a Single Bench/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3450.Maximum Students on a Single Bench/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

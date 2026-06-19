@@ -1,0 +1,33 @@
+{
+    "problemName": "the-skyline-problem",
+    "language": "python3",
+    "code": "from queue import PriorityQueue\r\n\r\n\r\nclass Solution:\r\n    def getSkyline(self, buildings: List[List[int]]) -> List[List[int]]:\r\n        skys, lines, pq = [], [], PriorityQueue()\r\n        for build in buildings:\r\n            lines.extend([build[0], build[1]])\r\n        lines.sort()\r\n        city, n = 0, len(buildings)\r\n        for line in lines:\r\n            while city < n and buildings[city][0] <= line:\r\n                pq.put([-buildings[city][2], buildings[city][0], buildings[city][1]])\r\n                city += 1\r\n            while not pq.empty() and pq.queue[0][2] <= line:\r\n                pq.get()\r\n            high = 0\r\n            if not pq.empty():\r\n                high = -pq.queue[0][0]\r\n            if len(skys) > 0 and skys[-1][1] == high:\r\n                continue\r\n            skys.append([line, high])\r\n        return skys",
+    "problemId": 218,
+    "title": "The Skyline Problem",
+    "problemUrl": "https://leetcode.com/problems/the-skyline-problem/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0218.The Skyline Problem/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0218.The Skyline Problem/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0218.The Skyline Problem/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0218.The Skyline Problem/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0218.The Skyline Problem/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

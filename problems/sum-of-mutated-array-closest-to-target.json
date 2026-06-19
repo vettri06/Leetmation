@@ -1,0 +1,33 @@
+{
+    "problemName": "sum-of-mutated-array-closest-to-target",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findBestValue(self, arr: List[int], target: int) -> int:\r\n        arr.sort()\r\n        s = list(accumulate(arr, initial=0))\r\n        ans, diff = 0, inf\r\n        for value in range(max(arr) + 1):\r\n            i = bisect_right(arr, value)\r\n            d = abs(s[i] + (len(arr) - i) * value - target)\r\n            if diff > d:\r\n                diff = d\r\n                ans = value\r\n        return ans",
+    "problemId": 1300,
+    "title": "Sum of Mutated Array Closest to Target",
+    "problemUrl": "https://leetcode.com/problems/sum-of-mutated-array-closest-to-target/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1300.Sum of Mutated Array Closest to Target/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1300.Sum of Mutated Array Closest to Target/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1300.Sum of Mutated Array Closest to Target/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1300.Sum of Mutated Array Closest to Target/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1300.Sum of Mutated Array Closest to Target/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

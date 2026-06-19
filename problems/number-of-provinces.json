@@ -1,0 +1,68 @@
+{
+    "problemName": "number-of-provinces",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findCircleNum(self, isConnected: List[List[int]]) -> int:\r\n        def dfs(i: int):\r\n            vis[i] = True\r\n            for j, x in enumerate(isConnected[i]):\r\n                if not vis[j] and x:\r\n                    dfs(j)\r\n\r\n        n = len(isConnected)\r\n        vis = [False] * n\r\n        ans = 0\r\n        for i in range(n):\r\n            if not vis[i]:\r\n                dfs(i)\r\n                ans += 1\r\n        return ans",
+    "problemId": 547,
+    "title": "Number of Provinces",
+    "problemUrl": "https://leetcode.com/problems/number-of-provinces/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0547.Number of Provinces/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0547.Number of Provinces/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0547.Number of Provinces/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0547.Number of Provinces/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0547.Number of Provinces/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0547.Number of Provinces/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0547.Number of Provinces/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0547.Number of Provinces/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0547.Number of Provinces/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0547.Number of Provinces/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0547.Number of Provinces/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0547.Number of Provinces/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

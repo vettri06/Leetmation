@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-balanced-subarray-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestBalanced(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        ans = 0\r\n        for i in range(n):\r\n            cnt = [0, 0]\r\n            vis = set()\r\n            for j in range(i, n):\r\n                if nums[j] not in vis:\r\n                    cnt[nums[j] & 1] += 1\r\n                    vis.add(nums[j])\r\n                if cnt[0] == cnt[1]:\r\n                    ans = max(ans, j - i + 1)\r\n        return ans",
+    "problemId": 3719,
+    "title": "Longest Balanced Subarray I",
+    "problemUrl": "https://leetcode.com/problems/longest-balanced-subarray-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3719.Longest Balanced Subarray I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3719.Longest Balanced Subarray I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3719.Longest Balanced Subarray I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3719.Longest Balanced Subarray I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3719.Longest Balanced Subarray I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3719.Longest Balanced Subarray I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

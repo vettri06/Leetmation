@@ -1,0 +1,38 @@
+{
+    "problemName": "robot-bounded-in-circle",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isRobotBounded(self, instructions: str) -> bool:\r\n        k = 0\r\n        dist = [0] * 4\r\n        for c in instructions:\r\n            if c == 'L':\r\n                k = (k + 1) % 4\r\n            elif c == 'R':\r\n                k = (k + 3) % 4\r\n            else:\r\n                dist[k] += 1\r\n        return (dist[0] == dist[2] and dist[1] == dist[3]) or k != 0",
+    "problemId": 1041,
+    "title": "Robot Bounded In Circle",
+    "problemUrl": "https://leetcode.com/problems/robot-bounded-in-circle/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1041.Robot Bounded In Circle/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1041.Robot Bounded In Circle/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1041.Robot Bounded In Circle/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1041.Robot Bounded In Circle/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1041.Robot Bounded In Circle/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1041.Robot Bounded In Circle/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

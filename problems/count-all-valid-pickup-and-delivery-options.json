@@ -1,0 +1,38 @@
+{
+    "problemName": "count-all-valid-pickup-and-delivery-options",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countOrders(self, n: int) -> int:\r\n        mod = 10**9 + 7\r\n        f = 1\r\n        for i in range(2, n + 1):\r\n            f = (f * i * (2 * i - 1)) % mod\r\n        return f",
+    "problemId": 1359,
+    "title": "Count All Valid Pickup and Delivery Options",
+    "problemUrl": "https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1359.Count All Valid Pickup and Delivery Options/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1359.Count All Valid Pickup and Delivery Options/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1359.Count All Valid Pickup and Delivery Options/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1359.Count All Valid Pickup and Delivery Options/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1359.Count All Valid Pickup and Delivery Options/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1359.Count All Valid Pickup and Delivery Options/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

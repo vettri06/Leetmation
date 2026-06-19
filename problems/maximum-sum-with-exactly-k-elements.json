@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-sum-with-exactly-k-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximizeSum(self, nums: List[int], k: int) -> int:\r\n        x = max(nums)\r\n        return k * x + k * (k - 1) // 2",
+    "problemId": 2656,
+    "title": "Maximum Sum With Exactly K Elements",
+    "problemUrl": "https://leetcode.com/problems/maximum-sum-with-exactly-k-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2656.Maximum Sum With Exactly K Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2656.Maximum Sum With Exactly K Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2656.Maximum Sum With Exactly K Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2656.Maximum Sum With Exactly K Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2656.Maximum Sum With Exactly K Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2656.Maximum Sum With Exactly K Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2656.Maximum Sum With Exactly K Elements/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2656.Maximum Sum With Exactly K Elements/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

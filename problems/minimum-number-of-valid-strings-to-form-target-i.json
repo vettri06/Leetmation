@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-number-of-valid-strings-to-form-target-i",
+    "language": "python3",
+    "code": "def min(a: int, b: int) -> int:\r\n    return a if a < b else b\r\n\r\n\r\nclass Trie:\r\n    def __init__(self):\r\n        self.children: List[Optional[Trie]] = [None] * 26\r\n\r\n    def insert(self, w: str):\r\n        node = self\r\n        for i in map(lambda c: ord(c) - 97, w):\r\n            if node.children[i] is None:\r\n                node.children[i] = Trie()\r\n            node = node.children[i]\r\n\r\n\r\nclass Solution:\r\n    def minValidStrings(self, words: List[str], target: str) -> int:\r\n        @cache\r\n        def dfs(i: int) -> int:\r\n            if i >= n:\r\n                return 0\r\n            node = trie\r\n            ans = inf\r\n            for j in range(i, n):\r\n                k = ord(target[j]) - 97\r\n                if node.children[k] is None:\r\n                    break\r\n                node = node.children[k]\r\n                ans = min(ans, 1 + dfs(j + 1))\r\n            return ans\r\n\r\n        trie = Trie()\r\n        for w in words:\r\n            trie.insert(w)\r\n        n = len(target)\r\n        ans = dfs(0)\r\n        return ans if ans < inf else -1",
+    "problemId": 3291,
+    "title": "Minimum Number of Valid Strings to Form Target I",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-valid-strings-to-form-target-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3291.Minimum Number of Valid Strings to Form Target I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3291.Minimum Number of Valid Strings to Form Target I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3291.Minimum Number of Valid Strings to Form Target I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3291.Minimum Number of Valid Strings to Form Target I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3291.Minimum Number of Valid Strings to Form Target I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3291.Minimum Number of Valid Strings to Form Target I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

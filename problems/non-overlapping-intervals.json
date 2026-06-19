@@ -1,0 +1,33 @@
+{
+    "problemName": "non-overlapping-intervals",
+    "language": "python3",
+    "code": "class Solution:\r\n    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:\r\n        intervals.sort(key=lambda x: x[1])\r\n        ans = len(intervals)\r\n        pre = -inf\r\n        for l, r in intervals:\r\n            if pre <= l:\r\n                ans -= 1\r\n                pre = r\r\n        return ans",
+    "problemId": 435,
+    "title": "Non-overlapping Intervals",
+    "problemUrl": "https://leetcode.com/problems/non-overlapping-intervals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0435.Non-overlapping Intervals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0435.Non-overlapping Intervals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0435.Non-overlapping Intervals/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0435.Non-overlapping Intervals/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0435.Non-overlapping Intervals/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

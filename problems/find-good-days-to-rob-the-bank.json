@@ -1,0 +1,43 @@
+{
+    "problemName": "find-good-days-to-rob-the-bank",
+    "language": "python3",
+    "code": "class Solution:\r\n    def goodDaysToRobBank(self, security: List[int], time: int) -> List[int]:\r\n        n = len(security)\r\n        if n <= time * 2:\r\n            return []\r\n        left, right = [0] * n, [0] * n\r\n        for i in range(1, n):\r\n            if security[i] <= security[i - 1]:\r\n                left[i] = left[i - 1] + 1\r\n        for i in range(n - 2, -1, -1):\r\n            if security[i] <= security[i + 1]:\r\n                right[i] = right[i + 1] + 1\r\n        return [i for i in range(n) if time <= min(left[i], right[i])]",
+    "problemId": 2100,
+    "title": "Find Good Days to Rob the Bank",
+    "problemUrl": "https://leetcode.com/problems/find-good-days-to-rob-the-bank/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2100.Find Good Days to Rob the Bank/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2100.Find Good Days to Rob the Bank/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2100.Find Good Days to Rob the Bank/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2100.Find Good Days to Rob the Bank/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2100.Find Good Days to Rob the Bank/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2100.Find Good Days to Rob the Bank/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2100.Find Good Days to Rob the Bank/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

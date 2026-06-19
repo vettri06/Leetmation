@@ -1,0 +1,23 @@
+{
+    "problemName": "chunk-array",
+    "language": "javascript",
+    "code": "/**\r\n * @param {Array} arr\r\n * @param {number} size\r\n * @return {Array[]}\r\n */\r\nvar chunk = function (arr, size) {\r\n    const ans = [];\r\n    for (let i = 0, n = arr.length; i < n; i += size) {\r\n        ans.push(arr.slice(i, i + size));\r\n    }\r\n    return ans;\r\n};",
+    "problemId": 2677,
+    "title": "Chunk Array",
+    "problemUrl": "https://leetcode.com/problems/chunk-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2677.Chunk Array/Solution.js",
+    "sourceFile": "Solution.js",
+    "sourceCandidates": [
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2677.Chunk Array/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2677.Chunk Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

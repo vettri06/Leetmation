@@ -1,0 +1,48 @@
+{
+    "problemName": "compare-version-numbers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def compareVersion(self, version1: str, version2: str) -> int:\r\n        m, n = len(version1), len(version2)\r\n        i = j = 0\r\n        while i < m or j < n:\r\n            a = b = 0\r\n            while i < m and version1[i] != '.':\r\n                a = a * 10 + int(version1[i])\r\n                i += 1\r\n            while j < n and version2[j] != '.':\r\n                b = b * 10 + int(version2[j])\r\n                j += 1\r\n            if a != b:\r\n                return -1 if a < b else 1\r\n            i, j = i + 1, j + 1\r\n        return 0",
+    "problemId": 165,
+    "title": "Compare Version Numbers",
+    "problemUrl": "https://leetcode.com/problems/compare-version-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0165.Compare Version Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0165.Compare Version Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0165.Compare Version Numbers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0165.Compare Version Numbers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0165.Compare Version Numbers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0165.Compare Version Numbers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0165.Compare Version Numbers/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0165.Compare Version Numbers/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

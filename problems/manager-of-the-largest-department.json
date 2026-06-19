@@ -1,0 +1,18 @@
+{
+    "problemName": "manager-of-the-largest-department",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT dep_id, COUNT(1) AS cnt\r\n        FROM Employees\r\n        GROUP BY 1\r\n    )\r\nSELECT emp_name AS manager_name, t.dep_id\r\nFROM\r\n    T AS t\r\n    JOIN Employees AS e ON t.dep_id = e.dep_id AND e.position = 'Manager'\r\nWHERE cnt = (SELECT MAX(cnt) FROM T)\r\nORDER BY 2;",
+    "problemId": 2988,
+    "title": "Manager of the Largest Department",
+    "problemUrl": "https://leetcode.com/problems/manager-of-the-largest-department/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2988.Manager of the Largest Department/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2988.Manager of the Largest Department/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

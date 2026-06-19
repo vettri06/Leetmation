@@ -1,0 +1,38 @@
+{
+    "problemName": "construct-smallest-number-from-di-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestNumber(self, pattern: str) -> str:\r\n        def dfs(u):\r\n            nonlocal ans\r\n            if ans:\r\n                return\r\n            if u == len(pattern) + 1:\r\n                ans = ''.join(t)\r\n                return\r\n            for i in range(1, 10):\r\n                if not vis[i]:\r\n                    if u and pattern[u - 1] == 'I' and int(t[-1]) >= i:\r\n                        continue\r\n                    if u and pattern[u - 1] == 'D' and int(t[-1]) <= i:\r\n                        continue\r\n                    vis[i] = True\r\n                    t.append(str(i))\r\n                    dfs(u + 1)\r\n                    vis[i] = False\r\n                    t.pop()\r\n\r\n        vis = [False] * 10\r\n        t = []\r\n        ans = None\r\n        dfs(0)\r\n        return ans",
+    "problemId": 2375,
+    "title": "Construct Smallest Number From DI String",
+    "problemUrl": "https://leetcode.com/problems/construct-smallest-number-from-di-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2375.Construct Smallest Number From DI String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2375.Construct Smallest Number From DI String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2375.Construct Smallest Number From DI String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2375.Construct Smallest Number From DI String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2375.Construct Smallest Number From DI String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2375.Construct Smallest Number From DI String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

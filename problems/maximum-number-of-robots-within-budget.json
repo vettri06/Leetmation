@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-number-of-robots-within-budget",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumRobots(\r\n        self, chargeTimes: List[int], runningCosts: List[int], budget: int\r\n    ) -> int:\r\n        q = deque()\r\n        ans = s = l = 0\r\n        for r, (t, c) in enumerate(zip(chargeTimes, runningCosts)):\r\n            s += c\r\n            while q and chargeTimes[q[-1]] <= t:\r\n                q.pop()\r\n            q.append(r)\r\n            while q and (r - l + 1) * s + chargeTimes[q[0]] > budget:\r\n                if q[0] == l:\r\n                    q.popleft()\r\n                s -= runningCosts[l]\r\n                l += 1\r\n            ans = max(ans, r - l + 1)\r\n        return ans",
+    "problemId": 2398,
+    "title": "Maximum Number of Robots Within Budget",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-robots-within-budget/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2398.Maximum Number of Robots Within Budget/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2398.Maximum Number of Robots Within Budget/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2398.Maximum Number of Robots Within Budget/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2398.Maximum Number of Robots Within Budget/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2398.Maximum Number of Robots Within Budget/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2398.Maximum Number of Robots Within Budget/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-replacements-to-sort-the-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumReplacement(self, nums: List[int]) -> int:\r\n        ans = 0\r\n        n = len(nums)\r\n        mx = nums[-1]\r\n        for i in range(n - 2, -1, -1):\r\n            if nums[i] <= mx:\r\n                mx = nums[i]\r\n                continue\r\n            k = (nums[i] + mx - 1) // mx\r\n            ans += k - 1\r\n            mx = nums[i] // k\r\n        return ans",
+    "problemId": 2366,
+    "title": "Minimum Replacements to Sort the Array",
+    "problemUrl": "https://leetcode.com/problems/minimum-replacements-to-sort-the-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2366.Minimum Replacements to Sort the Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2366.Minimum Replacements to Sort the Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2366.Minimum Replacements to Sort the Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2366.Minimum Replacements to Sort the Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2366.Minimum Replacements to Sort the Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2366.Minimum Replacements to Sort the Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2366.Minimum Replacements to Sort the Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

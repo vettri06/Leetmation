@@ -1,0 +1,33 @@
+{
+    "problemName": "split-concatenated-strings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def splitLoopedString(self, strs: List[str]) -> str:\r\n        strs = [s[::-1] if s[::-1] > s else s for s in strs]\r\n        ans = ''.join(strs)\r\n        for i, s in enumerate(strs):\r\n            t = ''.join(strs[i + 1 :]) + ''.join(strs[:i])\r\n            for j in range(len(s)):\r\n                a = s[j:]\r\n                b = s[:j]\r\n                ans = max(ans, a + t + b)\r\n                ans = max(ans, b[::-1] + t + a[::-1])\r\n        return ans",
+    "problemId": 555,
+    "title": "Split Concatenated Strings",
+    "problemUrl": "https://leetcode.com/problems/split-concatenated-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0555.Split Concatenated Strings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0555.Split Concatenated Strings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0555.Split Concatenated Strings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0555.Split Concatenated Strings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0555.Split Concatenated Strings/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

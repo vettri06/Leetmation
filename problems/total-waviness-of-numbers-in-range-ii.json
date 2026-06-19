@@ -1,0 +1,18 @@
+{
+    "problemName": "total-waviness-of-numbers-in-range-ii",
+    "language": "c",
+    "code": "static int len, digits[20];\r\nstatic long long memoCnt[20][11][11][2];\r\nstatic long long memoSum[20][11][11][2];\r\nstatic char vis[20][11][11][2];\r\nstatic long long cnt, sum;\r\n\r\nstatic void dfs(int pos, int pp, int pr, int st, int ti) {\r\n    if (pos == len) {\r\n        cnt = 1;\r\n        sum = 0;\r\n        return;\r\n    }\r\n    if (!ti && vis[pos][pp][pr][st]) {\r\n        cnt = memoCnt[pos][pp][pr][st];\r\n        sum = memoSum[pos][pp][pr][st];\r\n        return;\r\n    }\r\n    int h = ti ? digits[pos] : 9;\r\n    long long c = 0, s = 0;\r\n    for (int d = 0; d <= h; d++) {\r\n        int ns = st || d;\r\n        long long a = 0;\r\n        int npp, np;\r\n        if (!ns) {\r\n            npp = 10;\r\n            np = 10;\r\n        } else if (!st) {\r\n            npp = 10;\r\n            np = d;\r\n        } else {\r\n            if (pp != 10 && pr != 10 && ((pr > pp && pr > d) || (pr < pp && pr < d)))\r\n                a = 1;\r\n            npp = pr;\r\n            np = d;\r\n        }\r\n        dfs(pos + 1, npp, np, ns, ti && d == h);\r\n        c += cnt;\r\n        s += sum + a * cnt;\r\n    }\r\n    if (!ti) {\r\n        vis[pos][pp][pr][st] = 1;\r\n        memoCnt[pos][pp][pr][st] = c;\r\n        memoSum[pos][pp][pr][st] = s;\r\n    }\r\n    cnt = c;\r\n    sum = s;\r\n}\r\n\r\nstatic long long calc(long long N) {\r\n    if (N < 0) return 0;\r\n    len = 0;\r\n    long long x = N;\r\n    if (!x) {\r\n        digits[len++] = 0;\r\n    } else {\r\n        char buf[20];\r\n        int l = 0;\r\n        while (x) {\r\n            buf[l++] = x % 10;\r\n            x /= 10;\r\n        }\r\n        for (int i = l - 1; i >= 0; i--)\r\n            digits[len++] = buf[i];\r\n    }\r\n    memset(vis, 0, sizeof(vis));\r\n    dfs(0, 10, 10, 0, 1);\r\n    return sum;\r\n}\r\n\r\nlong long totalWaviness(long long a, long long b) {\r\n    return calc(b) - calc(a - 1);\r\n}",
+    "problemId": 3753,
+    "title": "Total Waviness of Numbers in Range II",
+    "problemUrl": "https://leetcode.com/problems/total-waviness-of-numbers-in-range-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3753.Total Waviness of Numbers in Range II/Solution.c",
+    "sourceFile": "Solution.c",
+    "sourceCandidates": [
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3753.Total Waviness of Numbers in Range II/Solution.c",
+            "sourceFile": "Solution.c"
+        }
+    ]
+}

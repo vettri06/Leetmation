@@ -1,0 +1,38 @@
+{
+    "problemName": "the-most-similar-path-in-a-graph",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mostSimilar(\r\n        self, n: int, roads: List[List[int]], names: List[str], targetPath: List[str]\r\n    ) -> List[int]:\r\n        g = [[] for _ in range(n)]\r\n        for a, b in roads:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n        m = len(targetPath)\r\n        f = [[inf] * n for _ in range(m)]\r\n        pre = [[-1] * n for _ in range(m)]\r\n        for j, s in enumerate(names):\r\n            f[0][j] = targetPath[0] != s\r\n        for i in range(1, m):\r\n            for j in range(n):\r\n                for k in g[j]:\r\n                    if (t := f[i - 1][k] + (targetPath[i] != names[j])) < f[i][j]:\r\n                        f[i][j] = t\r\n                        pre[i][j] = k\r\n        k = 0\r\n        mi = inf\r\n        for j in range(n):\r\n            if f[-1][j] < mi:\r\n                mi = f[-1][j]\r\n                k = j\r\n        ans = [0] * m\r\n        for i in range(m - 1, -1, -1):\r\n            ans[i] = k\r\n            k = pre[i][k]\r\n        return ans",
+    "problemId": 1548,
+    "title": "The Most Similar Path in a Graph",
+    "problemUrl": "https://leetcode.com/problems/the-most-similar-path-in-a-graph/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1548.The Most Similar Path in a Graph/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1548.The Most Similar Path in a Graph/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1548.The Most Similar Path in a Graph/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1548.The Most Similar Path in a Graph/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1548.The Most Similar Path in a Graph/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1548.The Most Similar Path in a Graph/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

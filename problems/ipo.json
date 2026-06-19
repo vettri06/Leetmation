@@ -1,0 +1,33 @@
+{
+    "problemName": "ipo",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMaximizedCapital(\r\n        self, k: int, w: int, profits: List[int], capital: List[int]\r\n    ) -> int:\r\n        h1 = [(c, p) for c, p in zip(capital, profits)]\r\n        heapify(h1)\r\n        h2 = []\r\n        while k:\r\n            while h1 and h1[0][0] <= w:\r\n                heappush(h2, -heappop(h1)[1])\r\n            if not h2:\r\n                break\r\n            w -= heappop(h2)\r\n            k -= 1\r\n        return w",
+    "problemId": 502,
+    "title": "IPO",
+    "problemUrl": "https://leetcode.com/problems/ipo/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0502.IPO/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0502.IPO/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0502.IPO/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0502.IPO/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0502.IPO/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

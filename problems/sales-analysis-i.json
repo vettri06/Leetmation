@@ -1,0 +1,23 @@
+{
+    "problemName": "sales-analysis-i",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT seller_id\r\nFROM Sales\r\nGROUP BY seller_id\r\nHAVING\r\n    SUM(price) >= ALL (\r\n        SELECT SUM(price)\r\n        FROM Sales\r\n        GROUP BY seller_id\r\n    );",
+    "problemId": 1082,
+    "title": "Sales Analysis I",
+    "problemUrl": "https://leetcode.com/problems/sales-analysis-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1082.Sales Analysis I/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1082.Sales Analysis I/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1082.Sales Analysis I/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

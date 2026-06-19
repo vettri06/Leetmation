@@ -1,0 +1,23 @@
+{
+    "problemName": "find-category-recommendation-pairs",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_category_recommendation_pairs(\r\n    product_purchases: pd.DataFrame, product_info: pd.DataFrame\r\n) -> pd.DataFrame:\r\n    df = product_purchases[[\"user_id\", \"product_id\"]].merge(\r\n        product_info[[\"product_id\", \"category\"]], on=\"product_id\", how=\"inner\"\r\n    )\r\n    user_category = df.drop_duplicates(subset=[\"user_id\", \"category\"])\r\n    pair_per_user = (\r\n        user_category.merge(user_category, on=\"user_id\")\r\n        .query(\"category_x < category_y\")\r\n        .rename(columns={\"category_x\": \"category1\", \"category_y\": \"category2\"})\r\n    )\r\n    pair_counts = (\r\n        pair_per_user.groupby([\"category1\", \"category2\"])[\"user_id\"]\r\n        .nunique()\r\n        .reset_index(name=\"customer_count\")\r\n    )\r\n    result = (\r\n        pair_counts.query(\"customer_count >= 3\")\r\n        .sort_values(\r\n            [\"customer_count\", \"category1\", \"category2\"], ascending=[False, True, True]\r\n        )\r\n        .reset_index(drop=True)\r\n    )\r\n    return result",
+    "problemId": 3554,
+    "title": "Find Category Recommendation Pairs",
+    "problemUrl": "https://leetcode.com/problems/find-category-recommendation-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3554.Find Category Recommendation Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3554.Find Category Recommendation Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3554.Find Category Recommendation Pairs/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

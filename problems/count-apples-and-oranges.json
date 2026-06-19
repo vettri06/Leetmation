@@ -1,0 +1,23 @@
+{
+    "problemName": "count-apples-and-oranges",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef count_apples_and_oranges(boxes: pd.DataFrame, chests: pd.DataFrame) -> pd.DataFrame:\r\n    merged_df = boxes.merge(\r\n        chests, on=\"chest_id\", how=\"left\", suffixes=(\"_box\", \"_chest\")\r\n    )\r\n    apple_count = (\r\n        merged_df[\"apple_count_box\"].fillna(0)\r\n        + merged_df[\"apple_count_chest\"].fillna(0)\r\n    ).sum()\r\n    orange_count = (\r\n        merged_df[\"orange_count_box\"].fillna(0)\r\n        + merged_df[\"orange_count_chest\"].fillna(0)\r\n    ).sum()\r\n    return pd.DataFrame({\"apple_count\": [apple_count], \"orange_count\": [orange_count]})",
+    "problemId": 1715,
+    "title": "Count Apples and Oranges",
+    "problemUrl": "https://leetcode.com/problems/count-apples-and-oranges/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1715.Count Apples and Oranges/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1715.Count Apples and Oranges/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1715.Count Apples and Oranges/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

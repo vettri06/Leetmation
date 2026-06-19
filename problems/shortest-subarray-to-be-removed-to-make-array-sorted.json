@@ -1,0 +1,63 @@
+{
+    "problemName": "shortest-subarray-to-be-removed-to-make-array-sorted",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findLengthOfShortestSubarray(self, arr: List[int]) -> int:\r\n        n = len(arr)\r\n        i, j = 0, n - 1\r\n        while i + 1 < n and arr[i] <= arr[i + 1]:\r\n            i += 1\r\n        while j - 1 >= 0 and arr[j - 1] <= arr[j]:\r\n            j -= 1\r\n        if i >= j:\r\n            return 0\r\n        ans = min(n - i - 1, j)\r\n        for l in range(i + 1):\r\n            r = bisect_left(arr, arr[l], lo=j)\r\n            ans = min(ans, r - l - 1)\r\n        return ans",
+    "problemId": 1574,
+    "title": "Shortest Subarray to be Removed to Make Array Sorted",
+    "problemUrl": "https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1574.Shortest Subarray to be Removed to Make Array Sorted/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1574.Shortest Subarray to be Removed to Make Array Sorted/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1574.Shortest Subarray to be Removed to Make Array Sorted/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1574.Shortest Subarray to be Removed to Make Array Sorted/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1574.Shortest Subarray to be Removed to Make Array Sorted/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1574.Shortest Subarray to be Removed to Make Array Sorted/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1574.Shortest Subarray to be Removed to Make Array Sorted/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1574.Shortest Subarray to be Removed to Make Array Sorted/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1574.Shortest Subarray to be Removed to Make Array Sorted/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1574.Shortest Subarray to be Removed to Make Array Sorted/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1574.Shortest Subarray to be Removed to Make Array Sorted/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

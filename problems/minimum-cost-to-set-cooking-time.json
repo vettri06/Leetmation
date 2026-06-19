@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-cost-to-set-cooking-time",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCostSetTime(\r\n        self, startAt: int, moveCost: int, pushCost: int, targetSeconds: int\r\n    ) -> int:\r\n        def f(m, s):\r\n            if not 0 <= m < 100 or not 0 <= s < 100:\r\n                return inf\r\n            arr = [m // 10, m % 10, s // 10, s % 10]\r\n            i = 0\r\n            while i < 4 and arr[i] == 0:\r\n                i += 1\r\n            t = 0\r\n            prev = startAt\r\n            for v in arr[i:]:\r\n                if v != prev:\r\n                    t += moveCost\r\n                t += pushCost\r\n                prev = v\r\n            return t\r\n\r\n        m, s = divmod(targetSeconds, 60)\r\n        ans = min(f(m, s), f(m - 1, s + 60))\r\n        return ans",
+    "problemId": 2162,
+    "title": "Minimum Cost to Set Cooking Time",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-set-cooking-time/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2162.Minimum Cost to Set Cooking Time/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2162.Minimum Cost to Set Cooking Time/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2162.Minimum Cost to Set Cooking Time/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2162.Minimum Cost to Set Cooking Time/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2162.Minimum Cost to Set Cooking Time/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

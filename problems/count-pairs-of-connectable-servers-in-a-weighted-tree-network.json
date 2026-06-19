@@ -1,0 +1,38 @@
+{
+    "problemName": "count-pairs-of-connectable-servers-in-a-weighted-tree-network",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPairsOfConnectableServers(\r\n        self, edges: List[List[int]], signalSpeed: int\r\n    ) -> List[int]:\r\n        def dfs(a: int, fa: int, ws: int) -> int:\r\n            cnt = 0 if ws % signalSpeed else 1\r\n            for b, w in g[a]:\r\n                if b != fa:\r\n                    cnt += dfs(b, a, ws + w)\r\n            return cnt\r\n\r\n        n = len(edges) + 1\r\n        g = [[] for _ in range(n)]\r\n        for a, b, w in edges:\r\n            g[a].append((b, w))\r\n            g[b].append((a, w))\r\n        ans = [0] * n\r\n        for a in range(n):\r\n            s = 0\r\n            for b, w in g[a]:\r\n                t = dfs(b, a, w)\r\n                ans[a] += s * t\r\n                s += t\r\n        return ans",
+    "problemId": 3067,
+    "title": "Count Pairs of Connectable Servers in a Weighted Tree Network",
+    "problemUrl": "https://leetcode.com/problems/count-pairs-of-connectable-servers-in-a-weighted-tree-network/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3067.Count Pairs of Connectable Servers in a Weighted Tree Network/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3067.Count Pairs of Connectable Servers in a Weighted Tree Network/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3067.Count Pairs of Connectable Servers in a Weighted Tree Network/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3067.Count Pairs of Connectable Servers in a Weighted Tree Network/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3067.Count Pairs of Connectable Servers in a Weighted Tree Network/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3067.Count Pairs of Connectable Servers in a Weighted Tree Network/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

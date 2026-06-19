@@ -1,0 +1,38 @@
+{
+    "problemName": "count-pairs-whose-sum-is-less-than-target",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPairs(self, nums: List[int], target: int) -> int:\r\n        nums.sort()\r\n        ans = 0\r\n        for j, x in enumerate(nums):\r\n            i = bisect_left(nums, target - x, hi=j)\r\n            ans += i\r\n        return ans",
+    "problemId": 2824,
+    "title": "Count Pairs Whose Sum is Less than Target",
+    "problemUrl": "https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2824.Count Pairs Whose Sum is Less than Target/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2824.Count Pairs Whose Sum is Less than Target/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2824.Count Pairs Whose Sum is Less than Target/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2824.Count Pairs Whose Sum is Less than Target/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2824.Count Pairs Whose Sum is Less than Target/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2824.Count Pairs Whose Sum is Less than Target/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

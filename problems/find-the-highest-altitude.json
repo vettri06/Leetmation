@@ -1,0 +1,48 @@
+{
+    "problemName": "find-the-highest-altitude",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestAltitude(self, gain: List[int]) -> int:\r\n        return max(accumulate(gain, initial=0))",
+    "problemId": 1732,
+    "title": "Find the Highest Altitude",
+    "problemUrl": "https://leetcode.com/problems/find-the-highest-altitude/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1732.Find the Highest Altitude/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1732.Find the Highest Altitude/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1732.Find the Highest Altitude/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1732.Find the Highest Altitude/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1732.Find the Highest Altitude/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1732.Find the Highest Altitude/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1732.Find the Highest Altitude/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1732.Find the Highest Altitude/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

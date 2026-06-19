@@ -1,0 +1,58 @@
+{
+    "problemName": "count-ways-to-group-overlapping-ranges",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countWays(self, ranges: List[List[int]]) -> int:\r\n        ranges.sort()\r\n        cnt, mx = 0, -1\r\n        for start, end in ranges:\r\n            if start > mx:\r\n                cnt += 1\r\n            mx = max(mx, end)\r\n        mod = 10**9 + 7\r\n        return pow(2, cnt, mod)",
+    "problemId": 2580,
+    "title": "Count Ways to Group Overlapping Ranges",
+    "problemUrl": "https://leetcode.com/problems/count-ways-to-group-overlapping-ranges/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2580.Count Ways to Group Overlapping Ranges/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2580.Count Ways to Group Overlapping Ranges/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2580.Count Ways to Group Overlapping Ranges/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2580.Count Ways to Group Overlapping Ranges/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2580.Count Ways to Group Overlapping Ranges/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2580.Count Ways to Group Overlapping Ranges/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2580.Count Ways to Group Overlapping Ranges/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2580.Count Ways to Group Overlapping Ranges/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2580.Count Ways to Group Overlapping Ranges/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2580.Count Ways to Group Overlapping Ranges/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

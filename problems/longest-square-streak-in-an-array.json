@@ -1,0 +1,63 @@
+{
+    "problemName": "longest-square-streak-in-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestSquareStreak(self, nums: List[int]) -> int:\r\n        s = set(nums)\r\n        ans = -1\r\n        for x in nums:\r\n            t = 0\r\n            while x in s:\r\n                x *= x\r\n                t += 1\r\n            if t > 1:\r\n                ans = max(ans, t)\r\n        return ans",
+    "problemId": 2501,
+    "title": "Longest Square Streak in an Array",
+    "problemUrl": "https://leetcode.com/problems/longest-square-streak-in-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2501.Longest Square Streak in an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2501.Longest Square Streak in an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2501.Longest Square Streak in an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2501.Longest Square Streak in an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2501.Longest Square Streak in an Array/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2501.Longest Square Streak in an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2501.Longest Square Streak in an Array/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2501.Longest Square Streak in an Array/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2501.Longest Square Streak in an Array/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2501.Longest Square Streak in an Array/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2501.Longest Square Streak in an Array/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

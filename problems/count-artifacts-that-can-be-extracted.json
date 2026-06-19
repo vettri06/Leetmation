@@ -1,0 +1,43 @@
+{
+    "problemName": "count-artifacts-that-can-be-extracted",
+    "language": "python3",
+    "code": "class Solution:\r\n    def digArtifacts(\r\n        self, n: int, artifacts: List[List[int]], dig: List[List[int]]\r\n    ) -> int:\r\n        def check(a: List[int]) -> bool:\r\n            x1, y1, x2, y2 = a\r\n            return all(\r\n                (x, y) in s for x in range(x1, x2 + 1) for y in range(y1, y2 + 1)\r\n            )\r\n\r\n        s = {(i, j) for i, j in dig}\r\n        return sum(check(a) for a in artifacts)",
+    "problemId": 2201,
+    "title": "Count Artifacts That Can Be Extracted",
+    "problemUrl": "https://leetcode.com/problems/count-artifacts-that-can-be-extracted/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2201.Count Artifacts That Can Be Extracted/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2201.Count Artifacts That Can Be Extracted/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2201.Count Artifacts That Can Be Extracted/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2201.Count Artifacts That Can Be Extracted/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2201.Count Artifacts That Can Be Extracted/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2201.Count Artifacts That Can Be Extracted/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2201.Count Artifacts That Can Be Extracted/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

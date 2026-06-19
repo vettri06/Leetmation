@@ -1,0 +1,63 @@
+{
+    "problemName": "check-if-a-string-contains-all-binary-codes-of-size-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def hasAllCodes(self, s: str, k: int) -> bool:\r\n        n = len(s)\r\n        m = 1 << k\r\n        if n - k + 1 < m:\r\n            return False\r\n        ss = {s[i : i + k] for i in range(n - k + 1)}\r\n        return len(ss) == m",
+    "problemId": 1461,
+    "title": "Check If a String Contains All Binary Codes of Size K",
+    "problemUrl": "https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1461.Check If a String Contains All Binary Codes of Size K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1461.Check If a String Contains All Binary Codes of Size K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1461.Check If a String Contains All Binary Codes of Size K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1461.Check If a String Contains All Binary Codes of Size K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1461.Check If a String Contains All Binary Codes of Size K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1461.Check If a String Contains All Binary Codes of Size K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1461.Check If a String Contains All Binary Codes of Size K/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1461.Check If a String Contains All Binary Codes of Size K/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1461.Check If a String Contains All Binary Codes of Size K/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1461.Check If a String Contains All Binary Codes of Size K/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1461.Check If a String Contains All Binary Codes of Size K/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

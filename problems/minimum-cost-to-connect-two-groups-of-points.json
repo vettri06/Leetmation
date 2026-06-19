@@ -1,0 +1,73 @@
+{
+    "problemName": "minimum-cost-to-connect-two-groups-of-points",
+    "language": "python3",
+    "code": "class Solution:\r\n    def connectTwoGroups(self, cost: List[List[int]]) -> int:\r\n        m, n = len(cost), len(cost[0])\r\n        f = [[inf] * (1 << n) for _ in range(m + 1)]\r\n        f[0][0] = 0\r\n        for i in range(1, m + 1):\r\n            for j in range(1 << n):\r\n                for k in range(n):\r\n                    if (j >> k & 1) == 0:\r\n                        continue\r\n                    c = cost[i - 1][k]\r\n                    x = min(f[i][j ^ (1 << k)], f[i - 1][j], f[i - 1][j ^ (1 << k)]) + c\r\n                    f[i][j] = min(f[i][j], x)\r\n        return f[m][-1]",
+    "problemId": 1595,
+    "title": "Minimum Cost to Connect Two Groups of Points",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-connect-two-groups-of-points/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1595.Minimum Cost to Connect Two Groups of Points/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1595.Minimum Cost to Connect Two Groups of Points/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1595.Minimum Cost to Connect Two Groups of Points/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1595.Minimum Cost to Connect Two Groups of Points/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1595.Minimum Cost to Connect Two Groups of Points/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1595.Minimum Cost to Connect Two Groups of Points/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1595.Minimum Cost to Connect Two Groups of Points/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1595.Minimum Cost to Connect Two Groups of Points/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1595.Minimum Cost to Connect Two Groups of Points/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1595.Minimum Cost to Connect Two Groups of Points/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1595.Minimum Cost to Connect Two Groups of Points/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1595.Minimum Cost to Connect Two Groups of Points/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1595.Minimum Cost to Connect Two Groups of Points/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

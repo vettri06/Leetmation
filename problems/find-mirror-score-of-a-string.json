@@ -1,0 +1,33 @@
+{
+    "problemName": "find-mirror-score-of-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def calculateScore(self, s: str) -> int:\r\n        d = defaultdict(list)\r\n        ans = 0\r\n        for i, x in enumerate(s):\r\n            y = chr(ord(\"a\") + ord(\"z\") - ord(x))\r\n            if d[y]:\r\n                j = d[y].pop()\r\n                ans += i - j\r\n            else:\r\n                d[x].append(i)\r\n        return ans",
+    "problemId": 3412,
+    "title": "Find Mirror Score of a String",
+    "problemUrl": "https://leetcode.com/problems/find-mirror-score-of-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3412.Find Mirror Score of a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3412.Find Mirror Score of a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3412.Find Mirror Score of a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3412.Find Mirror Score of a String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3412.Find Mirror Score of a String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

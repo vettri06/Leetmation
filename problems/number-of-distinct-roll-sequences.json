@@ -1,0 +1,33 @@
+{
+    "problemName": "number-of-distinct-roll-sequences",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distinctSequences(self, n: int) -> int:\r\n        if n == 1:\r\n            return 6\r\n        mod = 10**9 + 7\r\n        dp = [[[0] * 6 for _ in range(6)] for _ in range(n + 1)]\r\n        for i in range(6):\r\n            for j in range(6):\r\n                if gcd(i + 1, j + 1) == 1 and i != j:\r\n                    dp[2][i][j] = 1\r\n        for k in range(3, n + 1):\r\n            for i in range(6):\r\n                for j in range(6):\r\n                    if gcd(i + 1, j + 1) == 1 and i != j:\r\n                        for h in range(6):\r\n                            if gcd(h + 1, i + 1) == 1 and h != i and h != j:\r\n                                dp[k][i][j] += dp[k - 1][h][i]\r\n        ans = 0\r\n        for i in range(6):\r\n            for j in range(6):\r\n                ans += dp[-1][i][j]\r\n        return ans % mod",
+    "problemId": 2318,
+    "title": "Number of Distinct Roll Sequences",
+    "problemUrl": "https://leetcode.com/problems/number-of-distinct-roll-sequences/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2318.Number of Distinct Roll Sequences/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2318.Number of Distinct Roll Sequences/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2318.Number of Distinct Roll Sequences/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2318.Number of Distinct Roll Sequences/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2318.Number of Distinct Roll Sequences/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

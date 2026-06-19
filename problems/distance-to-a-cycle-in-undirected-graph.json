@@ -1,0 +1,38 @@
+{
+    "problemName": "distance-to-a-cycle-in-undirected-graph",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distanceToCycle(self, n: int, edges: List[List[int]]) -> List[int]:\r\n        g = defaultdict(set)\r\n        for a, b in edges:\r\n            g[a].add(b)\r\n            g[b].add(a)\r\n        q = deque(i for i in range(n) if len(g[i]) == 1)\r\n        f = [0] * n\r\n        seq = []\r\n        while q:\r\n            i = q.popleft()\r\n            seq.append(i)\r\n            for j in g[i]:\r\n                g[j].remove(i)\r\n                f[i] = j\r\n                if len(g[j]) == 1:\r\n                    q.append(j)\r\n            g[i].clear()\r\n        ans = [0] * n\r\n        for i in seq[::-1]:\r\n            ans[i] = ans[f[i]] + 1\r\n        return ans",
+    "problemId": 2204,
+    "title": "Distance to a Cycle in Undirected Graph",
+    "problemUrl": "https://leetcode.com/problems/distance-to-a-cycle-in-undirected-graph/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2204.Distance to a Cycle in Undirected Graph/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2204.Distance to a Cycle in Undirected Graph/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2204.Distance to a Cycle in Undirected Graph/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2204.Distance to a Cycle in Undirected Graph/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2204.Distance to a Cycle in Undirected Graph/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2204.Distance to a Cycle in Undirected Graph/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

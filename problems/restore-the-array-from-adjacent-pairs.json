@@ -1,0 +1,58 @@
+{
+    "problemName": "restore-the-array-from-adjacent-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def restoreArray(self, adjacentPairs: List[List[int]]) -> List[int]:\r\n        g = defaultdict(list)\r\n        for a, b in adjacentPairs:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n        n = len(adjacentPairs) + 1\r\n        ans = [0] * n\r\n        for i, v in g.items():\r\n            if len(v) == 1:\r\n                ans[0] = i\r\n                ans[1] = v[0]\r\n                break\r\n        for i in range(2, n):\r\n            v = g[ans[i - 1]]\r\n            ans[i] = v[0] if v[1] == ans[i - 2] else v[1]\r\n        return ans",
+    "problemId": 1743,
+    "title": "Restore the Array From Adjacent Pairs",
+    "problemUrl": "https://leetcode.com/problems/restore-the-array-from-adjacent-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1743.Restore the Array From Adjacent Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1743.Restore the Array From Adjacent Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1743.Restore the Array From Adjacent Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1743.Restore the Array From Adjacent Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1743.Restore the Array From Adjacent Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1743.Restore the Array From Adjacent Pairs/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1743.Restore the Array From Adjacent Pairs/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1743.Restore the Array From Adjacent Pairs/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1743.Restore the Array From Adjacent Pairs/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1743.Restore the Array From Adjacent Pairs/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

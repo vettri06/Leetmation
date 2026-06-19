@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-star-sum-of-a-graph",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxStarSum(self, vals: List[int], edges: List[List[int]], k: int) -> int:\r\n        g = defaultdict(list)\r\n        for a, b in edges:\r\n            if vals[b] > 0:\r\n                g[a].append(vals[b])\r\n            if vals[a] > 0:\r\n                g[b].append(vals[a])\r\n        for bs in g.values():\r\n            bs.sort(reverse=True)\r\n        return max(v + sum(g[i][:k]) for i, v in enumerate(vals))",
+    "problemId": 2497,
+    "title": "Maximum Star Sum of a Graph",
+    "problemUrl": "https://leetcode.com/problems/maximum-star-sum-of-a-graph/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2497.Maximum Star Sum of a Graph/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2497.Maximum Star Sum of a Graph/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2497.Maximum Star Sum of a Graph/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2497.Maximum Star Sum of a Graph/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2497.Maximum Star Sum of a Graph/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

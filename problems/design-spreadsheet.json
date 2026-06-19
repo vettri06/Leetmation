@@ -1,0 +1,48 @@
+{
+    "problemName": "design-spreadsheet",
+    "language": "python3",
+    "code": "class Spreadsheet:\r\n    def __init__(self, rows: int):\r\n        self.d = {}\r\n\r\n    def setCell(self, cell: str, value: int) -> None:\r\n        self.d[cell] = value\r\n\r\n    def resetCell(self, cell: str) -> None:\r\n        self.d.pop(cell, None)\r\n\r\n    def getValue(self, formula: str) -> int:\r\n        ans = 0\r\n        for cell in formula[1:].split(\"+\"):\r\n            ans += int(cell) if cell[0].isdigit() else self.d.get(cell, 0)\r\n        return ans\r\n\r\n\r\n# Your Spreadsheet object will be instantiated and called as such:\r\n# obj = Spreadsheet(rows)\r\n# obj.setCell(cell,value)\r\n# obj.resetCell(cell)\r\n# param_3 = obj.getValue(formula)",
+    "problemId": 3484,
+    "title": "Design Spreadsheet",
+    "problemUrl": "https://leetcode.com/problems/design-spreadsheet/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3484.Design Spreadsheet/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3484.Design Spreadsheet/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3484.Design Spreadsheet/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3484.Design Spreadsheet/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3484.Design Spreadsheet/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3484.Design Spreadsheet/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3484.Design Spreadsheet/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3484.Design Spreadsheet/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

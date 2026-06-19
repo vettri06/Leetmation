@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-difference-between-highest-and-lowest-of-k-scores",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumDifference(self, nums: List[int], k: int) -> int:\r\n        nums.sort()\r\n        return min(nums[i + k - 1] - nums[i] for i in range(len(nums) - k + 1))",
+    "problemId": 1984,
+    "title": "Minimum Difference Between Highest and Lowest of K Scores",
+    "problemUrl": "https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1984.Minimum Difference Between Highest and Lowest of K Scores/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1984.Minimum Difference Between Highest and Lowest of K Scores/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1984.Minimum Difference Between Highest and Lowest of K Scores/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1984.Minimum Difference Between Highest and Lowest of K Scores/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1984.Minimum Difference Between Highest and Lowest of K Scores/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1984.Minimum Difference Between Highest and Lowest of K Scores/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1984.Minimum Difference Between Highest and Lowest of K Scores/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

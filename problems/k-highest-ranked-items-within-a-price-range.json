@@ -1,0 +1,38 @@
+{
+    "problemName": "k-highest-ranked-items-within-a-price-range",
+    "language": "python3",
+    "code": "class Solution:\r\n    def highestRankedKItems(\r\n        self, grid: List[List[int]], pricing: List[int], start: List[int], k: int\r\n    ) -> List[List[int]]:\r\n        m, n = len(grid), len(grid[0])\r\n        row, col = start\r\n        low, high = pricing\r\n        q = deque([(row, col)])\r\n        pq = []\r\n        if low <= grid[row][col] <= high:\r\n            pq.append((0, grid[row][col], row, col))\r\n        grid[row][col] = 0\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        step = 0\r\n        while q:\r\n            step += 1\r\n            for _ in range(len(q)):\r\n                x, y = q.popleft()\r\n                for a, b in pairwise(dirs):\r\n                    nx, ny = x + a, y + b\r\n                    if 0 <= nx < m and 0 <= ny < n and grid[nx][ny] > 0:\r\n                        if low <= grid[nx][ny] <= high:\r\n                            pq.append((step, grid[nx][ny], nx, ny))\r\n                        grid[nx][ny] = 0\r\n                        q.append((nx, ny))\r\n        pq.sort()\r\n        return [list(x[2:]) for x in pq[:k]]",
+    "problemId": 2146,
+    "title": "K Highest Ranked Items Within a Price Range",
+    "problemUrl": "https://leetcode.com/problems/k-highest-ranked-items-within-a-price-range/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2146.K Highest Ranked Items Within a Price Range/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2146.K Highest Ranked Items Within a Price Range/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2146.K Highest Ranked Items Within a Price Range/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2146.K Highest Ranked Items Within a Price Range/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2146.K Highest Ranked Items Within a Price Range/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2146.K Highest Ranked Items Within a Price Range/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

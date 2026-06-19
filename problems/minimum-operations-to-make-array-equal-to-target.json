@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-operations-to-make-array-equal-to-target",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumOperations(self, nums: List[int], target: List[int]) -> int:\r\n        n = len(nums)\r\n        f = abs(target[0] - nums[0])\r\n        for i in range(1, n):\r\n            x = target[i] - nums[i]\r\n            y = target[i - 1] - nums[i - 1]\r\n            if x * y > 0:\r\n                d = abs(x) - abs(y)\r\n                if d > 0:\r\n                    f += d\r\n            else:\r\n                f += abs(x)\r\n        return f",
+    "problemId": 3229,
+    "title": "Minimum Operations to Make Array Equal to Target",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-make-array-equal-to-target/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3229.Minimum Operations to Make Array Equal to Target/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3229.Minimum Operations to Make Array Equal to Target/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3229.Minimum Operations to Make Array Equal to Target/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3229.Minimum Operations to Make Array Equal to Target/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3229.Minimum Operations to Make Array Equal to Target/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3229.Minimum Operations to Make Array Equal to Target/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

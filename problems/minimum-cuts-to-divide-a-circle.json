@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-cuts-to-divide-a-circle",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfCuts(self, n: int) -> int:\r\n        return n if (n > 1 and n & 1) else n >> 1",
+    "problemId": 2481,
+    "title": "Minimum Cuts to Divide a Circle",
+    "problemUrl": "https://leetcode.com/problems/minimum-cuts-to-divide-a-circle/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2481.Minimum Cuts to Divide a Circle/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2481.Minimum Cuts to Divide a Circle/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2481.Minimum Cuts to Divide a Circle/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2481.Minimum Cuts to Divide a Circle/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2481.Minimum Cuts to Divide a Circle/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2481.Minimum Cuts to Divide a Circle/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2481.Minimum Cuts to Divide a Circle/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2481.Minimum Cuts to Divide a Circle/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

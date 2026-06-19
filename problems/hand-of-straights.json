@@ -1,0 +1,53 @@
+{
+    "problemName": "hand-of-straights",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isNStraightHand(self, hand: List[int], groupSize: int) -> bool:\r\n        if len(hand) % groupSize:\r\n            return False\r\n        cnt = Counter(hand)\r\n        for x in sorted(hand):\r\n            if cnt[x]:\r\n                for y in range(x, x + groupSize):\r\n                    if cnt[y] == 0:\r\n                        return False\r\n                    cnt[y] -= 1\r\n        return True",
+    "problemId": 846,
+    "title": "Hand of Straights",
+    "problemUrl": "https://leetcode.com/problems/hand-of-straights/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0846.Hand of Straights/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0846.Hand of Straights/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0846.Hand of Straights/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0846.Hand of Straights/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0846.Hand of Straights/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0846.Hand of Straights/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0846.Hand of Straights/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0846.Hand of Straights/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0846.Hand of Straights/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

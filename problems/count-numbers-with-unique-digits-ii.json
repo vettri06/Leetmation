@@ -1,0 +1,63 @@
+{
+    "problemName": "count-numbers-with-unique-digits-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberCount(self, a: int, b: int) -> int:\r\n        @cache\r\n        def dfs(pos: int, mask: int, limit: bool) -> int:\r\n            if pos >= len(num):\r\n                return 1 if mask else 0\r\n            up = int(num[pos]) if limit else 9\r\n            ans = 0\r\n            for i in range(up + 1):\r\n                if mask >> i & 1:\r\n                    continue\r\n                nxt = 0 if mask == 0 and i == 0 else mask | 1 << i\r\n                ans += dfs(pos + 1, nxt, limit and i == up)\r\n            return ans\r\n\r\n        num = str(a - 1)\r\n        x = dfs(0, 0, True)\r\n        dfs.cache_clear()\r\n        num = str(b)\r\n        y = dfs(0, 0, True)\r\n        return y - x",
+    "problemId": 3032,
+    "title": "Count Numbers With Unique Digits II",
+    "problemUrl": "https://leetcode.com/problems/count-numbers-with-unique-digits-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3032.Count Numbers With Unique Digits II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3032.Count Numbers With Unique Digits II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3032.Count Numbers With Unique Digits II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3032.Count Numbers With Unique Digits II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3032.Count Numbers With Unique Digits II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3032.Count Numbers With Unique Digits II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3032.Count Numbers With Unique Digits II/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3032.Count Numbers With Unique Digits II/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3032.Count Numbers With Unique Digits II/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3032.Count Numbers With Unique Digits II/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3032.Count Numbers With Unique Digits II/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

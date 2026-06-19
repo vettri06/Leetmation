@@ -1,0 +1,58 @@
+{
+    "problemName": "wiggle-sort-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def wiggleSort(self, nums: List[int]) -> None:\r\n        \"\"\"\r\n        Do not return anything, modify nums in-place instead.\r\n        \"\"\"\r\n        arr = sorted(nums)\r\n        n = len(arr)\r\n        i, j = (n - 1) >> 1, n - 1\r\n        for k in range(n):\r\n            if k % 2 == 0:\r\n                nums[k] = arr[i]\r\n                i -= 1\r\n            else:\r\n                nums[k] = arr[j]\r\n                j -= 1",
+    "problemId": 324,
+    "title": "Wiggle Sort II",
+    "problemUrl": "https://leetcode.com/problems/wiggle-sort-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0324.Wiggle Sort II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0324.Wiggle Sort II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0324.Wiggle Sort II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0324.Wiggle Sort II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0324.Wiggle Sort II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0324.Wiggle Sort II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0324.Wiggle Sort II/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0324.Wiggle Sort II/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0324.Wiggle Sort II/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0324.Wiggle Sort II/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

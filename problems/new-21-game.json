@@ -1,0 +1,63 @@
+{
+    "problemName": "new-21-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def new21Game(self, n: int, k: int, maxPts: int) -> float:\r\n        @cache\r\n        def dfs(i: int) -> float:\r\n            if i >= k:\r\n                return int(i <= n)\r\n            if i == k - 1:\r\n                return min(n - k + 1, maxPts) / maxPts\r\n            return dfs(i + 1) + (dfs(i + 1) - dfs(i + maxPts + 1)) / maxPts\r\n\r\n        return dfs(0)",
+    "problemId": 837,
+    "title": "New 21 Game",
+    "problemUrl": "https://leetcode.com/problems/new-21-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0837.New 21 Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0837.New 21 Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0837.New 21 Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0837.New 21 Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0837.New 21 Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0837.New 21 Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0837.New 21 Game/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0837.New 21 Game/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0837.New 21 Game/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0837.New 21 Game/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0837.New 21 Game/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

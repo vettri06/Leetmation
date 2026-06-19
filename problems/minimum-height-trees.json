@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-height-trees",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMinHeightTrees(self, n: int, edges: List[List[int]]) -> List[int]:\r\n        if n == 1:\r\n            return [0]\r\n        g = [[] for _ in range(n)]\r\n        degree = [0] * n\r\n        for a, b in edges:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n            degree[a] += 1\r\n            degree[b] += 1\r\n        q = deque(i for i in range(n) if degree[i] == 1)\r\n        ans = []\r\n        while q:\r\n            ans.clear()\r\n            for _ in range(len(q)):\r\n                a = q.popleft()\r\n                ans.append(a)\r\n                for b in g[a]:\r\n                    degree[b] -= 1\r\n                    if degree[b] == 1:\r\n                        q.append(b)\r\n        return ans",
+    "problemId": 310,
+    "title": "Minimum Height Trees",
+    "problemUrl": "https://leetcode.com/problems/minimum-height-trees/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0310.Minimum Height Trees/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0310.Minimum Height Trees/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0310.Minimum Height Trees/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0310.Minimum Height Trees/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0310.Minimum Height Trees/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0310.Minimum Height Trees/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

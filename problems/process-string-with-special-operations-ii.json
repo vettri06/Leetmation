@@ -1,0 +1,38 @@
+{
+    "problemName": "process-string-with-special-operations-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def processStr(self, s: str, k: int) -> str:\r\n        m = 0\r\n        for c in s:\r\n            if c == \"*\":\r\n                m = max(0, m - 1)\r\n            elif c == \"#\":\r\n                m <<= 1\r\n            elif c != \"%\":\r\n                m += 1\r\n        if k >= m:\r\n            return \".\"\r\n        for c in reversed(s):\r\n            if c == \"*\":\r\n                m += 1\r\n            elif c == \"#\":\r\n                m //= 2\r\n                if k >= m:\r\n                    k -= m\r\n            elif c == \"%\":\r\n                k = m - 1 - k\r\n            else:\r\n                m -= 1\r\n                if k == m:\r\n                    return c",
+    "problemId": 3614,
+    "title": "Process String with Special Operations II",
+    "problemUrl": "https://leetcode.com/problems/process-string-with-special-operations-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3614.Process String with Special Operations II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3614.Process String with Special Operations II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3614.Process String with Special Operations II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3614.Process String with Special Operations II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3614.Process String with Special Operations II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3614.Process String with Special Operations II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

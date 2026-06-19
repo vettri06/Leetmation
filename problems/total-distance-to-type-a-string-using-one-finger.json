@@ -1,0 +1,38 @@
+{
+    "problemName": "total-distance-to-type-a-string-using-one-finger",
+    "language": "python3",
+    "code": "pos = {}\r\nkeys = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm']\r\nfor i, row in enumerate(keys):\r\n    for j, key in enumerate(row):\r\n        pos[key] = (i, j)\r\n\r\n\r\nclass Solution:\r\n    def totalDistance(self, s: str) -> int:\r\n        pre = 'a'\r\n        ans = 0\r\n        for cur in s:\r\n            x1, y1 = pos[pre]\r\n            x2, y2 = pos[cur]\r\n            dist = abs(x1 - x2) + abs(y1 - y2)\r\n            ans += dist\r\n            pre = cur\r\n        return ans",
+    "problemId": 3846,
+    "title": "Total Distance to Type a String Using One Finger",
+    "problemUrl": "https://leetcode.com/problems/total-distance-to-type-a-string-using-one-finger/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3846.Total Distance to Type a String Using One Finger/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3846.Total Distance to Type a String Using One Finger/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3846.Total Distance to Type a String Using One Finger/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3846.Total Distance to Type a String Using One Finger/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3846.Total Distance to Type a String Using One Finger/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3846.Total Distance to Type a String Using One Finger/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

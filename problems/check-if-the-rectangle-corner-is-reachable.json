@@ -1,0 +1,43 @@
+{
+    "problemName": "check-if-the-rectangle-corner-is-reachable",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canReachCorner(\r\n        self, xCorner: int, yCorner: int, circles: List[List[int]]\r\n    ) -> bool:\r\n        def in_circle(x: int, y: int, cx: int, cy: int, r: int) -> int:\r\n            return (x - cx) ** 2 + (y - cy) ** 2 <= r**2\r\n\r\n        def cross_left_top(cx: int, cy: int, r: int) -> bool:\r\n            a = abs(cx) <= r and 0 <= cy <= yCorner\r\n            b = abs(cy - yCorner) <= r and 0 <= cx <= xCorner\r\n            return a or b\r\n\r\n        def cross_right_bottom(cx: int, cy: int, r: int) -> bool:\r\n            a = abs(cx - xCorner) <= r and 0 <= cy <= yCorner\r\n            b = abs(cy) <= r and 0 <= cx <= xCorner\r\n            return a or b\r\n\r\n        def dfs(i: int) -> bool:\r\n            x1, y1, r1 = circles[i]\r\n            if cross_right_bottom(x1, y1, r1):\r\n                return True\r\n            vis[i] = True\r\n            for j, (x2, y2, r2) in enumerate(circles):\r\n                if vis[j] or not ((x1 - x2) ** 2 + (y1 - y2) ** 2 <= (r1 + r2) ** 2):\r\n                    continue\r\n                if (\r\n                    (x1 * r2 + x2 * r1 < (r1 + r2) * xCorner)\r\n                    and (y1 * r2 + y2 * r1 < (r1 + r2) * yCorner)\r\n                    and dfs(j)\r\n                ):\r\n                    return True\r\n            return False\r\n\r\n        vis = [False] * len(circles)\r\n        for i, (x, y, r) in enumerate(circles):\r\n            if in_circle(0, 0, x, y, r) or in_circle(xCorner, yCorner, x, y, r):\r\n                return False\r\n            if (not vis[i]) and cross_left_top(x, y, r) and dfs(i):\r\n                return False\r\n        return True",
+    "problemId": 3235,
+    "title": "Check if the Rectangle Corner Is Reachable",
+    "problemUrl": "https://leetcode.com/problems/check-if-the-rectangle-corner-is-reachable/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3235.Check if the Rectangle Corner Is Reachable/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3235.Check if the Rectangle Corner Is Reachable/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3235.Check if the Rectangle Corner Is Reachable/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3235.Check if the Rectangle Corner Is Reachable/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3235.Check if the Rectangle Corner Is Reachable/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3235.Check if the Rectangle Corner Is Reachable/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3235.Check if the Rectangle Corner Is Reachable/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

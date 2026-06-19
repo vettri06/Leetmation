@@ -1,0 +1,43 @@
+{
+    "problemName": "interval-list-intersections",
+    "language": "python3",
+    "code": "class Solution:\r\n    def intervalIntersection(\r\n        self, firstList: List[List[int]], secondList: List[List[int]]\r\n    ) -> List[List[int]]:\r\n        i = j = 0\r\n        ans = []\r\n        while i < len(firstList) and j < len(secondList):\r\n            s1, e1, s2, e2 = *firstList[i], *secondList[j]\r\n            l, r = max(s1, s2), min(e1, e2)\r\n            if l <= r:\r\n                ans.append([l, r])\r\n            if e1 < e2:\r\n                i += 1\r\n            else:\r\n                j += 1\r\n        return ans",
+    "problemId": 986,
+    "title": "Interval List Intersections",
+    "problemUrl": "https://leetcode.com/problems/interval-list-intersections/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0986.Interval List Intersections/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0986.Interval List Intersections/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0986.Interval List Intersections/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0986.Interval List Intersections/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0986.Interval List Intersections/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0986.Interval List Intersections/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0986.Interval List Intersections/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "index-pairs-of-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def indexPairs(self, text: str, words: List[str]) -> List[List[int]]:\r\n        words = set(words)\r\n        n = len(text)\r\n        return [\r\n            [i, j] for i in range(n) for j in range(i, n) if text[i : j + 1] in words\r\n        ]",
+    "problemId": 1065,
+    "title": "Index Pairs of a String",
+    "problemUrl": "https://leetcode.com/problems/index-pairs-of-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1065.Index Pairs of a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1065.Index Pairs of a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1065.Index Pairs of a String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1065.Index Pairs of a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1065.Index Pairs of a String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1065.Index Pairs of a String/Solution2.py",
+            "sourceFile": "Solution2.py"
+        }
+    ]
+}

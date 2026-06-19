@@ -1,0 +1,38 @@
+{
+    "problemName": "friends-of-appropriate-ages",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numFriendRequests(self, ages: List[int]) -> int:\r\n        cnt = [0] * 121\r\n        for x in ages:\r\n            cnt[x] += 1\r\n        ans = 0\r\n        for ax, x in enumerate(cnt):\r\n            for ay, y in enumerate(cnt):\r\n                if not (ay <= 0.5 * ax + 7 or ay > ax or (ay > 100 and ax < 100)):\r\n                    ans += x * (y - int(ax == ay))\r\n        return ans",
+    "problemId": 825,
+    "title": "Friends Of Appropriate Ages",
+    "problemUrl": "https://leetcode.com/problems/friends-of-appropriate-ages/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0825.Friends Of Appropriate Ages/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0825.Friends Of Appropriate Ages/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0825.Friends Of Appropriate Ages/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0825.Friends Of Appropriate Ages/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0825.Friends Of Appropriate Ages/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0825.Friends Of Appropriate Ages/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

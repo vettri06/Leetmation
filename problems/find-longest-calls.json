@@ -1,0 +1,23 @@
+{
+    "problemName": "find-longest-calls",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_longest_calls(contacts: pd.DataFrame, calls: pd.DataFrame) -> pd.DataFrame:\r\n    merged_data = calls.merge(contacts, left_on=\"contact_id\", right_on=\"id\")\r\n    merged_data[\"duration_formatted\"] = (\r\n        merged_data[\"duration\"] // 3600 * 10000\r\n        + merged_data[\"duration\"] % 3600 // 60 * 100\r\n        + merged_data[\"duration\"] % 60\r\n    ).apply(lambda x: \"{:02}:{:02}:{:02}\".format(x // 10000, x // 100 % 100, x % 100))\r\n\r\n    merged_data[\"rk\"] = merged_data.groupby(\"type\")[\"duration\"].rank(\r\n        method=\"dense\", ascending=False\r\n    )\r\n\r\n    result = merged_data[merged_data[\"rk\"] <= 3][\r\n        [\"first_name\", \"type\", \"duration_formatted\"]\r\n    ]\r\n    result = result.sort_values(\r\n        by=[\"type\", \"duration_formatted\", \"first_name\"], ascending=[True, False, False]\r\n    )\r\n    return result",
+    "problemId": 3124,
+    "title": "Find Longest Calls",
+    "problemUrl": "https://leetcode.com/problems/find-longest-calls/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3124.Find Longest Calls/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3124.Find Longest Calls/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3124.Find Longest Calls/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

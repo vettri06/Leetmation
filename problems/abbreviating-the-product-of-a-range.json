@@ -1,0 +1,33 @@
+{
+    "problemName": "abbreviating-the-product-of-a-range",
+    "language": "python3",
+    "code": "class Solution:\r\n    def abbreviateProduct(self, left: int, right: int) -> str:\r\n        cnt2 = cnt5 = 0\r\n        for x in range(left, right + 1):\r\n            while x % 2 == 0:\r\n                cnt2 += 1\r\n                x //= 2\r\n            while x % 5 == 0:\r\n                cnt5 += 1\r\n                x //= 5\r\n        c = cnt2 = cnt5 = min(cnt2, cnt5)\r\n        pre = suf = 1\r\n        gt = False\r\n        for x in range(left, right + 1):\r\n            suf *= x\r\n            while cnt2 and suf % 2 == 0:\r\n                suf //= 2\r\n                cnt2 -= 1\r\n            while cnt5 and suf % 5 == 0:\r\n                suf //= 5\r\n                cnt5 -= 1\r\n            if suf >= 1e10:\r\n                gt = True\r\n                suf %= int(1e10)\r\n            pre *= x\r\n            while pre > 1e5:\r\n                pre /= 10\r\n        if gt:\r\n            return str(int(pre)) + \"...\" + str(suf % int(1e5)).zfill(5) + \"e\" + str(c)\r\n        return str(suf) + \"e\" + str(c)",
+    "problemId": 2117,
+    "title": "Abbreviating the Product of a Range",
+    "problemUrl": "https://leetcode.com/problems/abbreviating-the-product-of-a-range/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2117.Abbreviating the Product of a Range/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2117.Abbreviating the Product of a Range/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2117.Abbreviating the Product of a Range/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2117.Abbreviating the Product of a Range/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2117.Abbreviating the Product of a Range/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

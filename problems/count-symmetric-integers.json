@@ -1,0 +1,48 @@
+{
+    "problemName": "count-symmetric-integers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSymmetricIntegers(self, low: int, high: int) -> int:\r\n        def f(x: int) -> bool:\r\n            s = str(x)\r\n            if len(s) & 1:\r\n                return False\r\n            n = len(s) // 2\r\n            return sum(map(int, s[:n])) == sum(map(int, s[n:]))\r\n\r\n        return sum(f(x) for x in range(low, high + 1))",
+    "problemId": 2843,
+    "title": "Count Symmetric Integers",
+    "problemUrl": "https://leetcode.com/problems/count-symmetric-integers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2843.Count Symmetric Integers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2843.Count Symmetric Integers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2843.Count Symmetric Integers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2843.Count Symmetric Integers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2843.Count Symmetric Integers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2843.Count Symmetric Integers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2843.Count Symmetric Integers/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2843.Count Symmetric Integers/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

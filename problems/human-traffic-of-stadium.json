@@ -1,0 +1,23 @@
+{
+    "problemName": "human-traffic-of-stadium",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    S AS (\r\n        SELECT\r\n            *,\r\n            id - (ROW_NUMBER() OVER (ORDER BY id)) AS rk\r\n        FROM Stadium\r\n        WHERE people >= 100\r\n    ),\r\n    T AS (SELECT *, COUNT(1) OVER (PARTITION BY rk) AS cnt FROM S)\r\nSELECT id, visit_date, people\r\nFROM T\r\nWHERE cnt >= 3\r\nORDER BY 1;",
+    "problemId": 601,
+    "title": "Human Traffic of Stadium",
+    "problemUrl": "https://leetcode.com/problems/human-traffic-of-stadium/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0601.Human Traffic of Stadium/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0601.Human Traffic of Stadium/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0601.Human Traffic of Stadium/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

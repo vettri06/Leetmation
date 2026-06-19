@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-operations-to-halve-array-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def halveArray(self, nums: List[int]) -> int:\r\n        s = sum(nums) / 2\r\n        pq = []\r\n        for x in nums:\r\n            heappush(pq, -x)\r\n        ans = 0\r\n        while s > 0:\r\n            t = -heappop(pq) / 2\r\n            s -= t\r\n            heappush(pq, -t)\r\n            ans += 1\r\n        return ans",
+    "problemId": 2208,
+    "title": "Minimum Operations to Halve Array Sum",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-halve-array-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2208.Minimum Operations to Halve Array Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2208.Minimum Operations to Halve Array Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2208.Minimum Operations to Halve Array Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2208.Minimum Operations to Halve Array Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2208.Minimum Operations to Halve Array Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2208.Minimum Operations to Halve Array Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2208.Minimum Operations to Halve Array Sum/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

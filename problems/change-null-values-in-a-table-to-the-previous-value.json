@@ -1,0 +1,23 @@
+{
+    "problemName": "change-null-values-in-a-table-to-the-previous-value",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    id,\r\n    CASE\r\n        WHEN drink IS NOT NULL THEN @cur := drink\r\n        ELSE @cur\r\n    END AS drink\r\nFROM CoffeeShop;",
+    "problemId": 2388,
+    "title": "Change Null Values in a Table to the Previous Value",
+    "problemUrl": "https://leetcode.com/problems/change-null-values-in-a-table-to-the-previous-value/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2388.Change Null Values in a Table to the Previous Value/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2388.Change Null Values in a Table to the Previous Value/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2388.Change Null Values in a Table to the Previous Value/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

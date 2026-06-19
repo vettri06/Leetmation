@@ -1,0 +1,18 @@
+{
+    "problemName": "binary-tree-nodes",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT DISTINCT\r\n    t1.N AS N,\r\n    IF(t1.P IS NULL, 'Root', IF(t2.P IS NULL, 'Leaf', 'Inner')) AS Type\r\nFROM\r\n    Tree AS t1\r\n    LEFT JOIN Tree AS t2 ON t1.N = t2.p\r\nORDER BY 1;",
+    "problemId": 3054,
+    "title": "Binary Tree Nodes",
+    "problemUrl": "https://leetcode.com/problems/binary-tree-nodes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3054.Binary Tree Nodes/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3054.Binary Tree Nodes/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

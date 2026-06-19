@@ -1,0 +1,48 @@
+{
+    "problemName": "convert-to-base-2",
+    "language": "python3",
+    "code": "class Solution:\r\n    def baseNeg2(self, n: int) -> str:\r\n        k = 1\r\n        ans = []\r\n        while n:\r\n            if n % 2:\r\n                ans.append('1')\r\n                n -= k\r\n            else:\r\n                ans.append('0')\r\n            n //= 2\r\n            k *= -1\r\n        return ''.join(ans[::-1]) or '0'",
+    "problemId": 1017,
+    "title": "Convert to Base -2",
+    "problemUrl": "https://leetcode.com/problems/convert-to-base-2/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1017.Convert to Base -2/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1017.Convert to Base -2/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1017.Convert to Base -2/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1017.Convert to Base -2/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1017.Convert to Base -2/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1017.Convert to Base -2/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1017.Convert to Base -2/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1017.Convert to Base -2/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

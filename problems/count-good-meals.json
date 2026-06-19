@@ -1,0 +1,53 @@
+{
+    "problemName": "count-good-meals",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPairs(self, deliciousness: List[int]) -> int:\r\n        mod = 10**9 + 7\r\n        mx = max(deliciousness) << 1\r\n        cnt = Counter()\r\n        ans = 0\r\n        for d in deliciousness:\r\n            s = 1\r\n            while s <= mx:\r\n                ans = (ans + cnt[s - d]) % mod\r\n                s <<= 1\r\n            cnt[d] += 1\r\n        return ans",
+    "problemId": 1711,
+    "title": "Count Good Meals",
+    "problemUrl": "https://leetcode.com/problems/count-good-meals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1711.Count Good Meals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1711.Count Good Meals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1711.Count Good Meals/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1711.Count Good Meals/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1711.Count Good Meals/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1711.Count Good Meals/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1711.Count Good Meals/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1711.Count Good Meals/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1711.Count Good Meals/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

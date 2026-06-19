@@ -1,0 +1,38 @@
+{
+    "problemName": "color-the-triangle-red",
+    "language": "python3",
+    "code": "class Solution:\r\n    def colorRed(self, n: int) -> List[List[int]]:\r\n        ans = [[1, 1]]\r\n        k = 0\r\n        for i in range(n, 1, -1):\r\n            if k == 0:\r\n                for j in range(1, i << 1, 2):\r\n                    ans.append([i, j])\r\n            elif k == 1:\r\n                ans.append([i, 2])\r\n            elif k == 2:\r\n                for j in range(3, i << 1, 2):\r\n                    ans.append([i, j])\r\n            else:\r\n                ans.append([i, 1])\r\n            k = (k + 1) % 4\r\n        return ans",
+    "problemId": 2647,
+    "title": "Color the Triangle Red",
+    "problemUrl": "https://leetcode.com/problems/color-the-triangle-red/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2647.Color the Triangle Red/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2647.Color the Triangle Red/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2647.Color the Triangle Red/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2647.Color the Triangle Red/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2647.Color the Triangle Red/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2647.Color the Triangle Red/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

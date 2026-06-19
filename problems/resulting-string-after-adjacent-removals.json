@@ -1,0 +1,38 @@
+{
+    "problemName": "resulting-string-after-adjacent-removals",
+    "language": "python3",
+    "code": "class Solution:\r\n    def resultingString(self, s: str) -> str:\r\n        stk = []\r\n        for c in s:\r\n            if stk and abs(ord(c) - ord(stk[-1])) in (1, 25):\r\n                stk.pop()\r\n            else:\r\n                stk.append(c)\r\n        return \"\".join(stk)",
+    "problemId": 3561,
+    "title": "Resulting String After Adjacent Removals",
+    "problemUrl": "https://leetcode.com/problems/resulting-string-after-adjacent-removals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3561.Resulting String After Adjacent Removals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3561.Resulting String After Adjacent Removals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3561.Resulting String After Adjacent Removals/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3561.Resulting String After Adjacent Removals/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3561.Resulting String After Adjacent Removals/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3561.Resulting String After Adjacent Removals/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

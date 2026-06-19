@@ -1,0 +1,18 @@
+{
+    "problemName": "leetflex-banned-accounts",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT DISTINCT\r\n    a.account_id\r\nFROM\r\n    LogInfo AS a\r\n    JOIN LogInfo AS b\r\n        ON a.account_id = b.account_id\r\n        AND a.ip_address != b.ip_address\r\n        AND a.login BETWEEN b.login AND b.logout;",
+    "problemId": 1747,
+    "title": "Leetflex Banned Accounts",
+    "problemUrl": "https://leetcode.com/problems/leetflex-banned-accounts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1747.Leetflex Banned Accounts/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1747.Leetflex Banned Accounts/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "dynamic-pivoting-of-a-table",
+    "language": "mysql",
+    "code": "CREATE PROCEDURE PivotProducts()\r\nBEGIN\r\n\t# Write your MySQL query statement below.\r\n\tSET group_concat_max_len = 5000;\r\n    SELECT GROUP_CONCAT(DISTINCT 'MAX(CASE WHEN store = \\'',\r\n               store,\r\n               '\\' THEN price ELSE NULL END) AS ',\r\n               store\r\n               ORDER BY store) INTO @sql\r\n    FROM Products;\r\n    SET @sql =  CONCAT('SELECT product_id, ',\r\n                    @sql,\r\n                    ' FROM Products GROUP BY product_id');\r\n    PREPARE stmt FROM @sql;\r\n    EXECUTE stmt;\r\n    DEALLOCATE PREPARE stmt;\r\nEND",
+    "problemId": 2252,
+    "title": "Dynamic Pivoting of a Table",
+    "problemUrl": "https://leetcode.com/problems/dynamic-pivoting-of-a-table/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2252.Dynamic Pivoting of a Table/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2252.Dynamic Pivoting of a Table/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

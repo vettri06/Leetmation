@@ -1,0 +1,33 @@
+{
+    "problemName": "make-the-string-great",
+    "language": "python3",
+    "code": "class Solution:\r\n    def makeGood(self, s: str) -> str:\r\n        stk = []\r\n        for c in s:\r\n            if not stk or abs(ord(stk[-1]) - ord(c)) != 32:\r\n                stk.append(c)\r\n            else:\r\n                stk.pop()\r\n        return \"\".join(stk)",
+    "problemId": 1544,
+    "title": "Make The String Great",
+    "problemUrl": "https://leetcode.com/problems/make-the-string-great/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1544.Make The String Great/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1544.Make The String Great/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1544.Make The String Great/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1544.Make The String Great/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1544.Make The String Great/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

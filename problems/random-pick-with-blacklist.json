@@ -1,0 +1,33 @@
+{
+    "problemName": "random-pick-with-blacklist",
+    "language": "python3",
+    "code": "class Solution:\r\n    def __init__(self, n: int, blacklist: List[int]):\r\n        self.k = n - len(blacklist)\r\n        self.d = {}\r\n        i = self.k\r\n        black = set(blacklist)\r\n        for b in blacklist:\r\n            if b < self.k:\r\n                while i in black:\r\n                    i += 1\r\n                self.d[b] = i\r\n                i += 1\r\n\r\n    def pick(self) -> int:\r\n        x = randrange(self.k)\r\n        return self.d.get(x, x)\r\n\r\n\r\n# Your Solution object will be instantiated and called as such:\r\n# obj = Solution(n, blacklist)\r\n# param_1 = obj.pick()",
+    "problemId": 710,
+    "title": "Random Pick with Blacklist",
+    "problemUrl": "https://leetcode.com/problems/random-pick-with-blacklist/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0710.Random Pick with Blacklist/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0710.Random Pick with Blacklist/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0710.Random Pick with Blacklist/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0710.Random Pick with Blacklist/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0710.Random Pick with Blacklist/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

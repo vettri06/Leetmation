@@ -1,0 +1,48 @@
+{
+    "problemName": "sort-array-by-increasing-frequency",
+    "language": "python3",
+    "code": "class Solution:\r\n    def frequencySort(self, nums: List[int]) -> List[int]:\r\n        cnt = Counter(nums)\r\n        return sorted(nums, key=lambda x: (cnt[x], -x))",
+    "problemId": 1636,
+    "title": "Sort Array by Increasing Frequency",
+    "problemUrl": "https://leetcode.com/problems/sort-array-by-increasing-frequency/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1636.Sort Array by Increasing Frequency/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1636.Sort Array by Increasing Frequency/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1636.Sort Array by Increasing Frequency/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1636.Sort Array by Increasing Frequency/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1636.Sort Array by Increasing Frequency/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1636.Sort Array by Increasing Frequency/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1636.Sort Array by Increasing Frequency/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1636.Sort Array by Increasing Frequency/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "problemName": "game-play-analysis-iii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    player_id,\r\n    event_date,\r\n    SUM(games_played) OVER (\r\n        PARTITION BY player_id\r\n        ORDER BY event_date\r\n    ) AS games_played_so_far\r\nFROM Activity;",
+    "problemId": 534,
+    "title": "Game Play Analysis III",
+    "problemUrl": "https://leetcode.com/problems/game-play-analysis-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0534.Game Play Analysis III/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0534.Game Play Analysis III/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0534.Game Play Analysis III/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0534.Game Play Analysis III/Solution3.sql",
+            "sourceFile": "Solution3.sql"
+        }
+    ]
+}

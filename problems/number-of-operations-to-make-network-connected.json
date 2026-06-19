@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-operations-to-make-network-connected",
+    "language": "python3",
+    "code": "class Solution:\r\n    def makeConnected(self, n: int, connections: List[List[int]]) -> int:\r\n        def find(x: int) -> int:\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        cnt = 0\r\n        p = list(range(n))\r\n        for a, b in connections:\r\n            pa, pb = find(a), find(b)\r\n            if pa == pb:\r\n                cnt += 1\r\n            else:\r\n                p[pa] = pb\r\n                n -= 1\r\n        return -1 if n - 1 > cnt else n - 1",
+    "problemId": 1319,
+    "title": "Number of Operations to Make Network Connected",
+    "problemUrl": "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1319.Number of Operations to Make Network Connected/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1319.Number of Operations to Make Network Connected/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1319.Number of Operations to Make Network Connected/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1319.Number of Operations to Make Network Connected/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1319.Number of Operations to Make Network Connected/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1319.Number of Operations to Make Network Connected/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "parse-lisp-expression",
+    "language": "python3",
+    "code": "class Solution:\r\n    def evaluate(self, expression: str) -> int:\r\n        def parseVar():\r\n            nonlocal i\r\n            j = i\r\n            while i < n and expression[i] not in \" )\":\r\n                i += 1\r\n            return expression[j:i]\r\n\r\n        def parseInt():\r\n            nonlocal i\r\n            sign, v = 1, 0\r\n            if expression[i] == \"-\":\r\n                sign = -1\r\n                i += 1\r\n            while i < n and expression[i].isdigit():\r\n                v = v * 10 + int(expression[i])\r\n                i += 1\r\n            return sign * v\r\n\r\n        def eval():\r\n            nonlocal i\r\n            if expression[i] != \"(\":\r\n                return scope[parseVar()][-1] if expression[i].islower() else parseInt()\r\n            i += 1\r\n            if expression[i] == \"l\":\r\n                i += 4\r\n                vars = []\r\n                while 1:\r\n                    var = parseVar()\r\n                    if expression[i] == \")\":\r\n                        ans = scope[var][-1]\r\n                        break\r\n                    vars.append(var)\r\n                    i += 1\r\n                    scope[var].append(eval())\r\n                    i += 1\r\n                    if not expression[i].islower():\r\n                        ans = eval()\r\n                        break\r\n                for v in vars:\r\n                    scope[v].pop()\r\n            else:\r\n                add = expression[i] == \"a\"\r\n                i += 4 if add else 5\r\n                a = eval()\r\n                i += 1\r\n                b = eval()\r\n                ans = a + b if add else a * b\r\n            i += 1\r\n            return ans\r\n\r\n        i, n = 0, len(expression)\r\n        scope = defaultdict(list)\r\n        return eval()",
+    "problemId": 736,
+    "title": "Parse Lisp Expression",
+    "problemUrl": "https://leetcode.com/problems/parse-lisp-expression/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0736.Parse Lisp Expression/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0736.Parse Lisp Expression/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0736.Parse Lisp Expression/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0736.Parse Lisp Expression/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0736.Parse Lisp Expression/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

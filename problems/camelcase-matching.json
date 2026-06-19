@@ -1,0 +1,38 @@
+{
+    "problemName": "camelcase-matching",
+    "language": "python3",
+    "code": "class Solution:\r\n    def camelMatch(self, queries: List[str], pattern: str) -> List[bool]:\r\n        def check(s, t):\r\n            m, n = len(s), len(t)\r\n            i = j = 0\r\n            while j < n:\r\n                while i < m and s[i] != t[j] and s[i].islower():\r\n                    i += 1\r\n                if i == m or s[i] != t[j]:\r\n                    return False\r\n                i, j = i + 1, j + 1\r\n            while i < m and s[i].islower():\r\n                i += 1\r\n            return i == m\r\n\r\n        return [check(q, pattern) for q in queries]",
+    "problemId": 1023,
+    "title": "Camelcase Matching",
+    "problemUrl": "https://leetcode.com/problems/camelcase-matching/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1023.Camelcase Matching/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1023.Camelcase Matching/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1023.Camelcase Matching/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1023.Camelcase Matching/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1023.Camelcase Matching/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1023.Camelcase Matching/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

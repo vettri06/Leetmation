@@ -1,0 +1,38 @@
+{
+    "problemName": "android-unlock-patterns",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfPatterns(self, m: int, n: int) -> int:\r\n        def dfs(i: int, cnt: int = 1) -> int:\r\n            if cnt > n:\r\n                return 0\r\n            vis[i] = True\r\n            ans = int(cnt >= m)\r\n            for j in range(1, 10):\r\n                x = cross[i][j]\r\n                if not vis[j] and (x == 0 or vis[x]):\r\n                    ans += dfs(j, cnt + 1)\r\n            vis[i] = False\r\n            return ans\r\n\r\n        cross = [[0] * 10 for _ in range(10)]\r\n        cross[1][3] = cross[3][1] = 2\r\n        cross[1][7] = cross[7][1] = 4\r\n        cross[1][9] = cross[9][1] = 5\r\n        cross[2][8] = cross[8][2] = 5\r\n        cross[3][7] = cross[7][3] = 5\r\n        cross[3][9] = cross[9][3] = 6\r\n        cross[4][6] = cross[6][4] = 5\r\n        cross[7][9] = cross[9][7] = 8\r\n        vis = [False] * 10\r\n        return dfs(1) * 4 + dfs(2) * 4 + dfs(5)",
+    "problemId": 351,
+    "title": "Android Unlock Patterns",
+    "problemUrl": "https://leetcode.com/problems/android-unlock-patterns/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0351.Android Unlock Patterns/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0351.Android Unlock Patterns/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0351.Android Unlock Patterns/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0351.Android Unlock Patterns/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0351.Android Unlock Patterns/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0351.Android Unlock Patterns/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

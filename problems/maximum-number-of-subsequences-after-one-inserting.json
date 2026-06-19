@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-number-of-subsequences-after-one-inserting",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numOfSubsequences(self, s: str) -> int:\r\n        def calc(t: str) -> int:\r\n            cnt = a = 0\r\n            for c in s:\r\n                if c == t[1]:\r\n                    cnt += a\r\n                a += int(c == t[0])\r\n            return cnt\r\n\r\n        l, r = 0, s.count(\"T\")\r\n        ans = mx = 0\r\n        for c in s:\r\n            r -= int(c == \"T\")\r\n            if c == \"C\":\r\n                ans += l * r\r\n            l += int(c == \"L\")\r\n            mx = max(mx, l * r)\r\n        mx = max(mx, calc(\"LC\"), calc(\"CT\"))\r\n        ans += mx\r\n        return ans",
+    "problemId": 3628,
+    "title": "Maximum Number of Subsequences After One Inserting",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-subsequences-after-one-inserting/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3628.Maximum Number of Subsequences After One Inserting/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3628.Maximum Number of Subsequences After One Inserting/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3628.Maximum Number of Subsequences After One Inserting/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3628.Maximum Number of Subsequences After One Inserting/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3628.Maximum Number of Subsequences After One Inserting/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3628.Maximum Number of Subsequences After One Inserting/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

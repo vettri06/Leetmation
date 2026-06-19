@@ -1,0 +1,18 @@
+{
+    "problemName": "find-cutoff-score-for-each-school",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT school_id, MIN(IFNULL(score, -1)) AS score\r\nFROM\r\n    Schools AS s\r\n    LEFT JOIN Exam AS e ON s.capacity >= e.student_count\r\nGROUP BY school_id;",
+    "problemId": 1988,
+    "title": "Find Cutoff Score for Each School",
+    "problemUrl": "https://leetcode.com/problems/find-cutoff-score-for-each-school/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1988.Find Cutoff Score for Each School/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1988.Find Cutoff Score for Each School/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

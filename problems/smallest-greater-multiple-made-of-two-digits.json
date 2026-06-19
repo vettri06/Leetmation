@@ -1,0 +1,33 @@
+{
+    "problemName": "smallest-greater-multiple-made-of-two-digits",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findInteger(self, k: int, digit1: int, digit2: int) -> int:\r\n        if digit1 == 0 and digit2 == 0:\r\n            return -1\r\n        if digit1 > digit2:\r\n            return self.findInteger(k, digit2, digit1)\r\n        q = deque([0])\r\n        while 1:\r\n            x = q.popleft()\r\n            if x > 2**31 - 1:\r\n                return -1\r\n            if x > k and x % k == 0:\r\n                return x\r\n            q.append(x * 10 + digit1)\r\n            if digit1 != digit2:\r\n                q.append(x * 10 + digit2)",
+    "problemId": 1999,
+    "title": "Smallest Greater Multiple Made of Two Digits",
+    "problemUrl": "https://leetcode.com/problems/smallest-greater-multiple-made-of-two-digits/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1999.Smallest Greater Multiple Made of Two Digits/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1999.Smallest Greater Multiple Made of Two Digits/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1999.Smallest Greater Multiple Made of Two Digits/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1999.Smallest Greater Multiple Made of Two Digits/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1999.Smallest Greater Multiple Made of Two Digits/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

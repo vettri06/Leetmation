@@ -1,0 +1,78 @@
+{
+    "problemName": "deepest-leaves-sum",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def deepestLeavesSum(self, root: Optional[TreeNode]) -> int:\r\n        q = deque([root])\r\n        while q:\r\n            ans = 0\r\n            for _ in range(len(q)):\r\n                node = q.popleft()\r\n                ans += node.val\r\n                if node.left:\r\n                    q.append(node.left)\r\n                if node.right:\r\n                    q.append(node.right)\r\n        return ans",
+    "problemId": 1302,
+    "title": "Deepest Leaves Sum",
+    "problemUrl": "https://leetcode.com/problems/deepest-leaves-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1302.Deepest Leaves Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1302.Deepest Leaves Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1302.Deepest Leaves Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1302.Deepest Leaves Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1302.Deepest Leaves Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1302.Deepest Leaves Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1302.Deepest Leaves Sum/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1302.Deepest Leaves Sum/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1302.Deepest Leaves Sum/Solution2.c",
+            "sourceFile": "Solution2.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1302.Deepest Leaves Sum/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1302.Deepest Leaves Sum/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1302.Deepest Leaves Sum/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1302.Deepest Leaves Sum/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1302.Deepest Leaves Sum/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

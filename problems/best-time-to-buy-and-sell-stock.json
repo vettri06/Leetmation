@@ -1,0 +1,53 @@
+{
+    "problemName": "best-time-to-buy-and-sell-stock",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxProfit(self, prices: List[int]) -> int:\r\n        ans, mi = 0, inf\r\n        for v in prices:\r\n            ans = max(ans, v - mi)\r\n            mi = min(mi, v)\r\n        return ans",
+    "problemId": 121,
+    "title": "Best Time to Buy and Sell Stock",
+    "problemUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0121.Best Time to Buy and Sell Stock/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0121.Best Time to Buy and Sell Stock/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0121.Best Time to Buy and Sell Stock/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0121.Best Time to Buy and Sell Stock/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0121.Best Time to Buy and Sell Stock/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0121.Best Time to Buy and Sell Stock/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0121.Best Time to Buy and Sell Stock/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0121.Best Time to Buy and Sell Stock/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0121.Best Time to Buy and Sell Stock/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

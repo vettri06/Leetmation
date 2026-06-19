@@ -1,0 +1,23 @@
+{
+    "problemName": "analyze-subscription-conversion",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef analyze_subscription_conversion(user_activity: pd.DataFrame) -> pd.DataFrame:\r\n    df = user_activity[user_activity[\"activity_type\"] != \"cancelled\"]\r\n\r\n    df_grouped = (\r\n        df.groupby([\"user_id\", \"activity_type\"])[\"activity_duration\"]\r\n        .mean()\r\n        .add(0.0001)\r\n        .round(2)\r\n        .reset_index()\r\n    )\r\n\r\n    df_free_trial = (\r\n        df_grouped[df_grouped[\"activity_type\"] == \"free_trial\"]\r\n        .rename(columns={\"activity_duration\": \"trial_avg_duration\"})\r\n        .drop(columns=[\"activity_type\"])\r\n    )\r\n\r\n    df_paid = (\r\n        df_grouped[df_grouped[\"activity_type\"] == \"paid\"]\r\n        .rename(columns={\"activity_duration\": \"paid_avg_duration\"})\r\n        .drop(columns=[\"activity_type\"])\r\n    )\r\n\r\n    result = df_free_trial.merge(df_paid, on=\"user_id\", how=\"inner\").sort_values(\r\n        \"user_id\"\r\n    )\r\n\r\n    return result",
+    "problemId": 3497,
+    "title": "Analyze Subscription Conversion",
+    "problemUrl": "https://leetcode.com/problems/analyze-subscription-conversion/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3497.Analyze Subscription Conversion/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3497.Analyze Subscription Conversion/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3497.Analyze Subscription Conversion/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

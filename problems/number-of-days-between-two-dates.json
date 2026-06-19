@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-days-between-two-dates",
+    "language": "python3",
+    "code": "class Solution:\r\n    def daysBetweenDates(self, date1: str, date2: str) -> int:\r\n        def isLeapYear(year: int) -> bool:\r\n            return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)\r\n\r\n        def daysInMonth(year: int, month: int) -> int:\r\n            days = [\r\n                31,\r\n                28 + int(isLeapYear(year)),\r\n                31,\r\n                30,\r\n                31,\r\n                30,\r\n                31,\r\n                31,\r\n                30,\r\n                31,\r\n                30,\r\n                31,\r\n            ]\r\n            return days[month - 1]\r\n\r\n        def calcDays(date: str) -> int:\r\n            year, month, day = map(int, date.split(\"-\"))\r\n            days = 0\r\n            for y in range(1971, year):\r\n                days += 365 + int(isLeapYear(y))\r\n            for m in range(1, month):\r\n                days += daysInMonth(year, m)\r\n            days += day\r\n            return days\r\n\r\n        return abs(calcDays(date1) - calcDays(date2))",
+    "problemId": 1360,
+    "title": "Number of Days Between Two Dates",
+    "problemUrl": "https://leetcode.com/problems/number-of-days-between-two-dates/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1360.Number of Days Between Two Dates/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1360.Number of Days Between Two Dates/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1360.Number of Days Between Two Dates/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1360.Number of Days Between Two Dates/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1360.Number of Days Between Two Dates/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1360.Number of Days Between Two Dates/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

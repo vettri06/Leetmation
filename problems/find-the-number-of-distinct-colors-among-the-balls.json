@@ -1,0 +1,33 @@
+{
+    "problemName": "find-the-number-of-distinct-colors-among-the-balls",
+    "language": "python3",
+    "code": "class Solution:\r\n    def queryResults(self, limit: int, queries: List[List[int]]) -> List[int]:\r\n        g = {}\r\n        cnt = Counter()\r\n        ans = []\r\n        for x, y in queries:\r\n            cnt[y] += 1\r\n            if x in g:\r\n                cnt[g[x]] -= 1\r\n                if cnt[g[x]] == 0:\r\n                    cnt.pop(g[x])\r\n            g[x] = y\r\n            ans.append(len(cnt))\r\n        return ans",
+    "problemId": 3160,
+    "title": "Find the Number of Distinct Colors Among the Balls",
+    "problemUrl": "https://leetcode.com/problems/find-the-number-of-distinct-colors-among-the-balls/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3160.Find the Number of Distinct Colors Among the Balls/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3160.Find the Number of Distinct Colors Among the Balls/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3160.Find the Number of Distinct Colors Among the Balls/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3160.Find the Number of Distinct Colors Among the Balls/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3160.Find the Number of Distinct Colors Among the Balls/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

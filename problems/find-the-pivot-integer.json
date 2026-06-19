@@ -1,0 +1,68 @@
+{
+    "problemName": "find-the-pivot-integer",
+    "language": "python3",
+    "code": "class Solution:\r\n    def pivotInteger(self, n: int) -> int:\r\n        for x in range(1, n + 1):\r\n            if (1 + x) * x == (x + n) * (n - x + 1):\r\n                return x\r\n        return -1",
+    "problemId": 2485,
+    "title": "Find the Pivot Integer",
+    "problemUrl": "https://leetcode.com/problems/find-the-pivot-integer/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2485.Find the Pivot Integer/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2485.Find the Pivot Integer/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2485.Find the Pivot Integer/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2485.Find the Pivot Integer/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2485.Find the Pivot Integer/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2485.Find the Pivot Integer/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2485.Find the Pivot Integer/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2485.Find the Pivot Integer/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2485.Find the Pivot Integer/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2485.Find the Pivot Integer/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2485.Find the Pivot Integer/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2485.Find the Pivot Integer/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

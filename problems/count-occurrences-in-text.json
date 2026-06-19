@@ -1,0 +1,18 @@
+{
+    "problemName": "count-occurrences-in-text",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT 'bull' AS word, COUNT(*) AS count\r\nFROM Files\r\nWHERE content LIKE '% bull %'\r\nUNION\r\nSELECT 'bear' AS word, COUNT(*) AS count\r\nFROM Files\r\nWHERE content LIKE '% bear %';",
+    "problemId": 2738,
+    "title": "Count Occurrences in Text",
+    "problemUrl": "https://leetcode.com/problems/count-occurrences-in-text/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2738.Count Occurrences in Text/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2738.Count Occurrences in Text/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "split-a-string-in-balanced-strings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def balancedStringSplit(self, s: str) -> int:\r\n        ans = l = 0\r\n        for c in s:\r\n            if c == 'L':\r\n                l += 1\r\n            else:\r\n                l -= 1\r\n            if l == 0:\r\n                ans += 1\r\n        return ans",
+    "problemId": 1221,
+    "title": "Split a String in Balanced Strings",
+    "problemUrl": "https://leetcode.com/problems/split-a-string-in-balanced-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1221.Split a String in Balanced Strings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1221.Split a String in Balanced Strings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1221.Split a String in Balanced Strings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1221.Split a String in Balanced Strings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1221.Split a String in Balanced Strings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1221.Split a String in Balanced Strings/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

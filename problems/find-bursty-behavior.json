@@ -1,0 +1,23 @@
+{
+    "problemName": "find-bursty-behavior",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_bursty_behavior(posts: pd.DataFrame) -> pd.DataFrame:\r\n    # Subquery P\r\n    p1 = pd.merge(posts, posts, on=\"user_id\", suffixes=(\"_1\", \"_2\"))\r\n    p1 = p1[\r\n        p1[\"post_date_2\"].between(\r\n            p1[\"post_date_1\"], p1[\"post_date_1\"] + pd.Timedelta(days=6)\r\n        )\r\n    ]\r\n    p1 = p1.groupby([\"user_id\", \"post_id_1\"]).size().reset_index(name=\"cnt\")\r\n\r\n    # Subquery T\r\n    t = posts[\r\n        (posts[\"post_date\"] >= \"2024-02-01\") & (posts[\"post_date\"] <= \"2024-02-28\")\r\n    ]\r\n    t = t.groupby(\"user_id\").size().div(4).reset_index(name=\"avg_weekly_posts\")\r\n\r\n    # Joining P and T\r\n    merged_df = pd.merge(p1, t, on=\"user_id\", how=\"inner\")\r\n\r\n    # Filtering\r\n    filtered_df = merged_df[merged_df[\"cnt\"] >= merged_df[\"avg_weekly_posts\"] * 2]\r\n\r\n    # Aggregating\r\n    result_df = (\r\n        filtered_df.groupby(\"user_id\")\r\n        .agg({\"cnt\": \"max\", \"avg_weekly_posts\": \"first\"})\r\n        .reset_index()\r\n    )\r\n    result_df.columns = [\"user_id\", \"max_7day_posts\", \"avg_weekly_posts\"]\r\n\r\n    # Sorting\r\n    result_df.sort_values(by=\"user_id\", inplace=True)\r\n\r\n    return result_df",
+    "problemId": 3089,
+    "title": "Find Bursty Behavior",
+    "problemUrl": "https://leetcode.com/problems/find-bursty-behavior/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3089.Find Bursty Behavior/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3089.Find Bursty Behavior/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3089.Find Bursty Behavior/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

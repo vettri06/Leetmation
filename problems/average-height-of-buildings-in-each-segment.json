@@ -1,0 +1,38 @@
+{
+    "problemName": "average-height-of-buildings-in-each-segment",
+    "language": "python3",
+    "code": "class Solution:\r\n    def averageHeightOfBuildings(self, buildings: List[List[int]]) -> List[List[int]]:\r\n        cnt = defaultdict(int)\r\n        d = defaultdict(int)\r\n        for start, end, height in buildings:\r\n            cnt[start] += 1\r\n            cnt[end] -= 1\r\n            d[start] += height\r\n            d[end] -= height\r\n        s = m = 0\r\n        last = -1\r\n        ans = []\r\n        for k, v in sorted(d.items()):\r\n            if m:\r\n                avg = s // m\r\n                if ans and ans[-1][2] == avg and ans[-1][1] == last:\r\n                    ans[-1][1] = k\r\n                else:\r\n                    ans.append([last, k, avg])\r\n            s += v\r\n            m += cnt[k]\r\n            last = k\r\n        return ans",
+    "problemId": 2015,
+    "title": "Average Height of Buildings in Each Segment",
+    "problemUrl": "https://leetcode.com/problems/average-height-of-buildings-in-each-segment/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2015.Average Height of Buildings in Each Segment/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2015.Average Height of Buildings in Each Segment/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2015.Average Height of Buildings in Each Segment/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2015.Average Height of Buildings in Each Segment/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2015.Average Height of Buildings in Each Segment/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2015.Average Height of Buildings in Each Segment/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "bank-account-summary",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    t.user_id,\r\n    user_name,\r\n    SUM(t.credit) AS credit,\r\n    IF(SUM(t.credit) < 0, 'Yes', 'No') AS credit_limit_breached\r\nFROM\r\n    (\r\n        SELECT paid_by AS user_id, -amount AS credit FROM Transactions\r\n        UNION ALL\r\n        SELECT paid_to AS user_id, amount AS credit FROM Transactions\r\n        UNION ALL\r\n        SELECT user_id, credit FROM Users\r\n    ) AS t\r\n    JOIN Users AS u ON t.user_id = u.user_id\r\nGROUP BY t.user_id;",
+    "problemId": 1555,
+    "title": "Bank Account Summary",
+    "problemUrl": "https://leetcode.com/problems/bank-account-summary/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1555.Bank Account Summary/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1555.Bank Account Summary/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

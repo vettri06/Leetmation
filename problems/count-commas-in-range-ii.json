@@ -1,0 +1,38 @@
+{
+    "problemName": "count-commas-in-range-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countCommas(self, n: int) -> int:\r\n        ans = 0\r\n        x = 1000\r\n        while x <= n:\r\n            ans += n - x + 1\r\n            x *= 1000\r\n        return ans",
+    "problemId": 3871,
+    "title": "Count Commas in Range II",
+    "problemUrl": "https://leetcode.com/problems/count-commas-in-range-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3871.Count Commas in Range II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3871.Count Commas in Range II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3871.Count Commas in Range II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3871.Count Commas in Range II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3871.Count Commas in Range II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3871.Count Commas in Range II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

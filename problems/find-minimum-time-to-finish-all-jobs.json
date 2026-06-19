@@ -1,0 +1,33 @@
+{
+    "problemName": "find-minimum-time-to-finish-all-jobs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumTimeRequired(self, jobs: List[int], k: int) -> int:\r\n        def dfs(i):\r\n            nonlocal ans\r\n            if i == len(jobs):\r\n                ans = min(ans, max(cnt))\r\n                return\r\n            for j in range(k):\r\n                if cnt[j] + jobs[i] >= ans:\r\n                    continue\r\n                cnt[j] += jobs[i]\r\n                dfs(i + 1)\r\n                cnt[j] -= jobs[i]\r\n                if cnt[j] == 0:\r\n                    break\r\n\r\n        cnt = [0] * k\r\n        jobs.sort(reverse=True)\r\n        ans = inf\r\n        dfs(0)\r\n        return ans",
+    "problemId": 1723,
+    "title": "Find Minimum Time to Finish All Jobs",
+    "problemUrl": "https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1723.Find Minimum Time to Finish All Jobs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1723.Find Minimum Time to Finish All Jobs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1723.Find Minimum Time to Finish All Jobs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1723.Find Minimum Time to Finish All Jobs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1723.Find Minimum Time to Finish All Jobs/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

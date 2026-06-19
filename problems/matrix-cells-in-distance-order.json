@@ -1,0 +1,33 @@
+{
+    "problemName": "matrix-cells-in-distance-order",
+    "language": "python3",
+    "code": "class Solution:\r\n    def allCellsDistOrder(\r\n        self, rows: int, cols: int, rCenter: int, cCenter: int\r\n    ) -> List[List[int]]:\r\n        q = deque([[rCenter, cCenter]])\r\n        vis = [[False] * cols for _ in range(rows)]\r\n        vis[rCenter][cCenter] = True\r\n        ans = []\r\n        while q:\r\n            for _ in range(len(q)):\r\n                p = q.popleft()\r\n                ans.append(p)\r\n                for a, b in pairwise((-1, 0, 1, 0, -1)):\r\n                    x, y = p[0] + a, p[1] + b\r\n                    if 0 <= x < rows and 0 <= y < cols and not vis[x][y]:\r\n                        vis[x][y] = True\r\n                        q.append([x, y])\r\n        return ans",
+    "problemId": 1030,
+    "title": "Matrix Cells in Distance Order",
+    "problemUrl": "https://leetcode.com/problems/matrix-cells-in-distance-order/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1030.Matrix Cells in Distance Order/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1030.Matrix Cells in Distance Order/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1030.Matrix Cells in Distance Order/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1030.Matrix Cells in Distance Order/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1030.Matrix Cells in Distance Order/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

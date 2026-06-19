@@ -1,0 +1,38 @@
+{
+    "problemName": "throne-inheritance",
+    "language": "python3",
+    "code": "class ThroneInheritance:\r\n\r\n    def __init__(self, kingName: str):\r\n        self.king = kingName\r\n        self.dead = set()\r\n        self.g = defaultdict(list)\r\n\r\n    def birth(self, parentName: str, childName: str) -> None:\r\n        self.g[parentName].append(childName)\r\n\r\n    def death(self, name: str) -> None:\r\n        self.dead.add(name)\r\n\r\n    def getInheritanceOrder(self) -> List[str]:\r\n        def dfs(x: str):\r\n            x not in self.dead and ans.append(x)\r\n            for y in self.g[x]:\r\n                dfs(y)\r\n\r\n        ans = []\r\n        dfs(self.king)\r\n        return ans\r\n\r\n\r\n# Your ThroneInheritance object will be instantiated and called as such:\r\n# obj = ThroneInheritance(kingName)\r\n# obj.birth(parentName,childName)\r\n# obj.death(name)\r\n# param_3 = obj.getInheritanceOrder()",
+    "problemId": 1600,
+    "title": "Throne Inheritance",
+    "problemUrl": "https://leetcode.com/problems/throne-inheritance/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1600.Throne Inheritance/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1600.Throne Inheritance/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1600.Throne Inheritance/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1600.Throne Inheritance/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1600.Throne Inheritance/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1600.Throne Inheritance/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

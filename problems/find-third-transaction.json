@@ -1,0 +1,18 @@
+{
+    "problemName": "find-third-transaction",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            *,\r\n            RANK() OVER (\r\n                PARTITION BY user_id\r\n                ORDER BY transaction_date\r\n            ) AS rk,\r\n            spend > (\r\n                LAG(spend) OVER (\r\n                    PARTITION BY user_id\r\n                    ORDER BY transaction_date\r\n                )\r\n            )\r\n            AND spend > (\r\n                LAG(spend, 2) OVER (\r\n                    PARTITION BY user_id\r\n                    ORDER BY transaction_date\r\n                )\r\n            ) AS st\r\n        FROM Transactions\r\n    )\r\nSELECT user_id, spend AS third_transaction_spend, transaction_date AS third_transaction_date\r\nFROM T\r\nWHERE rk = 3 AND st = 1;",
+    "problemId": 2986,
+    "title": "Find Third Transaction",
+    "problemUrl": "https://leetcode.com/problems/find-third-transaction/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2986.Find Third Transaction/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2986.Find Third Transaction/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

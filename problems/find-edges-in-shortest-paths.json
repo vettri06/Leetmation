@@ -1,0 +1,33 @@
+{
+    "problemName": "find-edges-in-shortest-paths",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findAnswer(self, n: int, edges: List[List[int]]) -> List[bool]:\r\n        g = defaultdict(list)\r\n        for i, (a, b, w) in enumerate(edges):\r\n            g[a].append((b, w, i))\r\n            g[b].append((a, w, i))\r\n        dist = [inf] * n\r\n        dist[0] = 0\r\n        q = [(0, 0)]\r\n        while q:\r\n            da, a = heappop(q)\r\n            if da > dist[a]:\r\n                continue\r\n            for b, w, _ in g[a]:\r\n                if dist[b] > dist[a] + w:\r\n                    dist[b] = dist[a] + w\r\n                    heappush(q, (dist[b], b))\r\n        m = len(edges)\r\n        ans = [False] * m\r\n        if dist[n - 1] == inf:\r\n            return ans\r\n        q = deque([n - 1])\r\n        while q:\r\n            a = q.popleft()\r\n            for b, w, i in g[a]:\r\n                if dist[a] == dist[b] + w:\r\n                    ans[i] = True\r\n                    q.append(b)\r\n        return ans",
+    "problemId": 3123,
+    "title": "Find Edges in Shortest Paths",
+    "problemUrl": "https://leetcode.com/problems/find-edges-in-shortest-paths/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3123.Find Edges in Shortest Paths/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3123.Find Edges in Shortest Paths/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3123.Find Edges in Shortest Paths/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3123.Find Edges in Shortest Paths/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3123.Find Edges in Shortest Paths/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

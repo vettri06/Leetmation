@@ -1,0 +1,83 @@
+{
+    "problemName": "check-if-the-sentence-is-pangram",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkIfPangram(self, sentence: str) -> bool:\r\n        return len(set(sentence)) == 26",
+    "problemId": 1832,
+    "title": "Check if the Sentence Is Pangram",
+    "problemUrl": "https://leetcode.com/problems/check-if-the-sentence-is-pangram/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1832.Check if the Sentence Is Pangram/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1832.Check if the Sentence Is Pangram/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1832.Check if the Sentence Is Pangram/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1832.Check if the Sentence Is Pangram/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1832.Check if the Sentence Is Pangram/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1832.Check if the Sentence Is Pangram/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1832.Check if the Sentence Is Pangram/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1832.Check if the Sentence Is Pangram/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1832.Check if the Sentence Is Pangram/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1832.Check if the Sentence Is Pangram/Solution2.c",
+            "sourceFile": "Solution2.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1832.Check if the Sentence Is Pangram/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1832.Check if the Sentence Is Pangram/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1832.Check if the Sentence Is Pangram/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1832.Check if the Sentence Is Pangram/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1832.Check if the Sentence Is Pangram/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "problemName": "sum-of-beauty-of-all-substrings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def beautySum(self, s: str) -> int:\r\n        ans, n = 0, len(s)\r\n        for i in range(n):\r\n            cnt = Counter()\r\n            for j in range(i, n):\r\n                cnt[s[j]] += 1\r\n                ans += max(cnt.values()) - min(cnt.values())\r\n        return ans",
+    "problemId": 1781,
+    "title": "Sum of Beauty of All Substrings",
+    "problemUrl": "https://leetcode.com/problems/sum-of-beauty-of-all-substrings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1781.Sum of Beauty of All Substrings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1781.Sum of Beauty of All Substrings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1781.Sum of Beauty of All Substrings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1781.Sum of Beauty of All Substrings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1781.Sum of Beauty of All Substrings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1781.Sum of Beauty of All Substrings/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1781.Sum of Beauty of All Substrings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1781.Sum of Beauty of All Substrings/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1781.Sum of Beauty of All Substrings/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1781.Sum of Beauty of All Substrings/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1781.Sum of Beauty of All Substrings/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1781.Sum of Beauty of All Substrings/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1781.Sum of Beauty of All Substrings/Solution2.js",
+            "sourceFile": "Solution2.js"
+        }
+    ]
+}

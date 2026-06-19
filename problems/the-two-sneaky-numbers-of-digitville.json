@@ -1,0 +1,73 @@
+{
+    "problemName": "the-two-sneaky-numbers-of-digitville",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getSneakyNumbers(self, nums: List[int]) -> List[int]:\r\n        cnt = Counter(nums)\r\n        return [x for x, v in cnt.items() if v == 2]",
+    "problemId": 3289,
+    "title": "The Two Sneaky Numbers of Digitville",
+    "problemUrl": "https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3289.The Two Sneaky Numbers of Digitville/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3289.The Two Sneaky Numbers of Digitville/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3289.The Two Sneaky Numbers of Digitville/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3289.The Two Sneaky Numbers of Digitville/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3289.The Two Sneaky Numbers of Digitville/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3289.The Two Sneaky Numbers of Digitville/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3289.The Two Sneaky Numbers of Digitville/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3289.The Two Sneaky Numbers of Digitville/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3289.The Two Sneaky Numbers of Digitville/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3289.The Two Sneaky Numbers of Digitville/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3289.The Two Sneaky Numbers of Digitville/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3289.The Two Sneaky Numbers of Digitville/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3289.The Two Sneaky Numbers of Digitville/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "average-waiting-time",
+    "language": "python3",
+    "code": "class Solution:\r\n    def averageWaitingTime(self, customers: List[List[int]]) -> float:\r\n        tot = t = 0\r\n        for a, b in customers:\r\n            t = max(t, a) + b\r\n            tot += t - a\r\n        return tot / len(customers)",
+    "problemId": 1701,
+    "title": "Average Waiting Time",
+    "problemUrl": "https://leetcode.com/problems/average-waiting-time/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1701.Average Waiting Time/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1701.Average Waiting Time/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1701.Average Waiting Time/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1701.Average Waiting Time/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1701.Average Waiting Time/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1701.Average Waiting Time/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1701.Average Waiting Time/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1701.Average Waiting Time/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

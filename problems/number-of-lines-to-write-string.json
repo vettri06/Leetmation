@@ -1,0 +1,43 @@
+{
+    "problemName": "number-of-lines-to-write-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfLines(self, widths: List[int], s: str) -> List[int]:\r\n        lines, last = 1, 0\r\n        for w in map(lambda c: widths[ord(c) - ord(\"a\")], s):\r\n            if last + w <= 100:\r\n                last += w\r\n            else:\r\n                lines += 1\r\n                last = w\r\n        return [lines, last]",
+    "problemId": 806,
+    "title": "Number of Lines To Write String",
+    "problemUrl": "https://leetcode.com/problems/number-of-lines-to-write-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0806.Number of Lines To Write String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0806.Number of Lines To Write String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0806.Number of Lines To Write String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0806.Number of Lines To Write String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0806.Number of Lines To Write String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0806.Number of Lines To Write String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0806.Number of Lines To Write String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

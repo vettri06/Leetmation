@@ -1,0 +1,53 @@
+{
+    "problemName": "permutations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def permute(self, nums: List[int]) -> List[List[int]]:\r\n        def dfs(i: int):\r\n            if i >= n:\r\n                ans.append(t[:])\r\n                return\r\n            for j, x in enumerate(nums):\r\n                if not vis[j]:\r\n                    vis[j] = True\r\n                    t[i] = x\r\n                    dfs(i + 1)\r\n                    vis[j] = False\r\n\r\n        n = len(nums)\r\n        vis = [False] * n\r\n        t = [0] * n\r\n        ans = []\r\n        dfs(0)\r\n        return ans",
+    "problemId": 46,
+    "title": "Permutations",
+    "problemUrl": "https://leetcode.com/problems/permutations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0046.Permutations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0046.Permutations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0046.Permutations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0046.Permutations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0046.Permutations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0046.Permutations/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0046.Permutations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0046.Permutations/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0046.Permutations/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

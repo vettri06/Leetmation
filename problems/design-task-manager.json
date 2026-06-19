@@ -1,0 +1,38 @@
+{
+    "problemName": "design-task-manager",
+    "language": "python3",
+    "code": "class TaskManager:\r\n    def __init__(self, tasks: List[List[int]]):\r\n        self.d = {}\r\n        self.st = SortedList()\r\n        for task in tasks:\r\n            self.add(*task)\r\n\r\n    def add(self, userId: int, taskId: int, priority: int) -> None:\r\n        self.d[taskId] = (userId, priority)\r\n        self.st.add((-priority, -taskId))\r\n\r\n    def edit(self, taskId: int, newPriority: int) -> None:\r\n        userId, priority = self.d[taskId]\r\n        self.st.discard((-priority, -taskId))\r\n        self.d[taskId] = (userId, newPriority)\r\n        self.st.add((-newPriority, -taskId))\r\n\r\n    def rmv(self, taskId: int) -> None:\r\n        _, priority = self.d[taskId]\r\n        self.d.pop(taskId)\r\n        self.st.remove((-priority, -taskId))\r\n\r\n    def execTop(self) -> int:\r\n        if not self.st:\r\n            return -1\r\n        taskId = -self.st.pop(0)[1]\r\n        userId, _ = self.d[taskId]\r\n        self.d.pop(taskId)\r\n        return userId\r\n\r\n\r\n# Your TaskManager object will be instantiated and called as such:\r\n# obj = TaskManager(tasks)\r\n# obj.add(userId,taskId,priority)\r\n# obj.edit(taskId,newPriority)\r\n# obj.rmv(taskId)\r\n# param_4 = obj.execTop()",
+    "problemId": 3408,
+    "title": "Design Task Manager",
+    "problemUrl": "https://leetcode.com/problems/design-task-manager/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3408.Design Task Manager/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3408.Design Task Manager/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3408.Design Task Manager/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3408.Design Task Manager/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3408.Design Task Manager/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3408.Design Task Manager/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

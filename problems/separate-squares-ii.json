@@ -1,0 +1,38 @@
+{
+    "problemName": "separate-squares-ii",
+    "language": "python3",
+    "code": "class Node:\r\n    __slots__ = (\"l\", \"r\", \"cnt\", \"length\")\r\n\r\n    def __init__(self):\r\n        self.l = self.r = 0\r\n        self.cnt = self.length = 0\r\n\r\n\r\nclass SegmentTree:\r\n    def __init__(self, nums):\r\n        n = len(nums) - 1\r\n        self.nums = nums\r\n        self.tr = [Node() for _ in range(n << 2)]\r\n        self.build(1, 0, n - 1)\r\n\r\n    def build(self, u, l, r):\r\n        self.tr[u].l, self.tr[u].r = l, r\r\n        if l != r:\r\n            mid = (l + r) >> 1\r\n            self.build(u << 1, l, mid)\r\n            self.build(u << 1 | 1, mid + 1, r)\r\n\r\n    def modify(self, u, l, r, k):\r\n        if self.tr[u].l >= l and self.tr[u].r <= r:\r\n            self.tr[u].cnt += k\r\n        else:\r\n            mid = (self.tr[u].l + self.tr[u].r) >> 1\r\n            if l <= mid:\r\n                self.modify(u << 1, l, r, k)\r\n            if r > mid:\r\n                self.modify(u << 1 | 1, l, r, k)\r\n        self.pushup(u)\r\n\r\n    def pushup(self, u):\r\n        if self.tr[u].cnt:\r\n            self.tr[u].length = self.nums[self.tr[u].r + 1] - self.nums[self.tr[u].l]\r\n        elif self.tr[u].l == self.tr[u].r:\r\n            self.tr[u].length = 0\r\n        else:\r\n            self.tr[u].length = self.tr[u << 1].length + self.tr[u << 1 | 1].length\r\n\r\n    @property\r\n    def length(self):\r\n        return self.tr[1].length\r\n\r\n\r\nclass Solution:\r\n    def separateSquares(self, squares: List[List[int]]) -> float:\r\n        xs = set()\r\n        segs = []\r\n        for x1, y1, l in squares:\r\n            x2, y2 = x1 + l, y1 + l\r\n            xs.update([x1, x2])\r\n            segs.append((y1, x1, x2, 1))\r\n            segs.append((y2, x1, x2, -1))\r\n        segs.sort()\r\n        st = sorted(xs)\r\n        tree = SegmentTree(st)\r\n        d = {x: i for i, x in enumerate(st)}\r\n        area = 0\r\n        y0 = 0\r\n        for y, x1, x2, k in segs:\r\n            area += (y - y0) * tree.length\r\n            tree.modify(1, d[x1], d[x2] - 1, k)\r\n            y0 = y\r\n\r\n        target = area / 2\r\n        area = 0\r\n        y0 = 0\r\n        for y, x1, x2, k in segs:\r\n            t = (y - y0) * tree.length\r\n            if area + t >= target:\r\n                return y0 + (target - area) / tree.length\r\n            area += t\r\n            tree.modify(1, d[x1], d[x2] - 1, k)\r\n            y0 = y\r\n        return 0",
+    "problemId": 3454,
+    "title": "Separate Squares II",
+    "problemUrl": "https://leetcode.com/problems/separate-squares-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3454.Separate Squares II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3454.Separate Squares II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3454.Separate Squares II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3454.Separate Squares II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3454.Separate Squares II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3454.Separate Squares II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "problemName": "minimum-number-of-k-consecutive-bit-flips",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minKBitFlips(self, nums: List[int], k: int) -> int:\r\n        n = len(nums)\r\n        d = [0] * (n + 1)\r\n        ans = s = 0\r\n        for i, x in enumerate(nums):\r\n            s += d[i]\r\n            if s % 2 == x:\r\n                if i + k > n:\r\n                    return -1\r\n                d[i] += 1\r\n                d[i + k] -= 1\r\n                s += 1\r\n                ans += 1\r\n        return ans",
+    "problemId": 995,
+    "title": "Minimum Number of K Consecutive Bit Flips",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0995.Minimum Number of K Consecutive Bit Flips/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0995.Minimum Number of K Consecutive Bit Flips/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0995.Minimum Number of K Consecutive Bit Flips/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0995.Minimum Number of K Consecutive Bit Flips/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0995.Minimum Number of K Consecutive Bit Flips/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0995.Minimum Number of K Consecutive Bit Flips/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0995.Minimum Number of K Consecutive Bit Flips/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0995.Minimum Number of K Consecutive Bit Flips/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0995.Minimum Number of K Consecutive Bit Flips/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0995.Minimum Number of K Consecutive Bit Flips/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0995.Minimum Number of K Consecutive Bit Flips/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0995.Minimum Number of K Consecutive Bit Flips/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0995.Minimum Number of K Consecutive Bit Flips/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

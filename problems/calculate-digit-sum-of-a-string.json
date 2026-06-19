@@ -1,0 +1,48 @@
+{
+    "problemName": "calculate-digit-sum-of-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def digitSum(self, s: str, k: int) -> str:\r\n        while len(s) > k:\r\n            t = []\r\n            n = len(s)\r\n            for i in range(0, n, k):\r\n                x = 0\r\n                for j in range(i, min(i + k, n)):\r\n                    x += int(s[j])\r\n                t.append(str(x))\r\n            s = \"\".join(t)\r\n        return s",
+    "problemId": 2243,
+    "title": "Calculate Digit Sum of a String",
+    "problemUrl": "https://leetcode.com/problems/calculate-digit-sum-of-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2243.Calculate Digit Sum of a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2243.Calculate Digit Sum of a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2243.Calculate Digit Sum of a String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2243.Calculate Digit Sum of a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2243.Calculate Digit Sum of a String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2243.Calculate Digit Sum of a String/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2243.Calculate Digit Sum of a String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2243.Calculate Digit Sum of a String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

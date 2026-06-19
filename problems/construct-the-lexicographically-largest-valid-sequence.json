@@ -1,0 +1,33 @@
+{
+    "problemName": "construct-the-lexicographically-largest-valid-sequence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def constructDistancedSequence(self, n: int) -> List[int]:\r\n        def dfs(u):\r\n            if u == n * 2:\r\n                return True\r\n            if path[u]:\r\n                return dfs(u + 1)\r\n            for i in range(n, 1, -1):\r\n                if cnt[i] and u + i < n * 2 and path[u + i] == 0:\r\n                    cnt[i] = 0\r\n                    path[u] = path[u + i] = i\r\n                    if dfs(u + 1):\r\n                        return True\r\n                    path[u] = path[u + i] = 0\r\n                    cnt[i] = 2\r\n            if cnt[1]:\r\n                cnt[1], path[u] = 0, 1\r\n                if dfs(u + 1):\r\n                    return True\r\n                path[u], cnt[1] = 0, 1\r\n            return False\r\n\r\n        path = [0] * (n * 2)\r\n        cnt = [2] * (n * 2)\r\n        cnt[1] = 1\r\n        dfs(1)\r\n        return path[1:]",
+    "problemId": 1718,
+    "title": "Construct the Lexicographically Largest Valid Sequence",
+    "problemUrl": "https://leetcode.com/problems/construct-the-lexicographically-largest-valid-sequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1718.Construct the Lexicographically Largest Valid Sequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1718.Construct the Lexicographically Largest Valid Sequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1718.Construct the Lexicographically Largest Valid Sequence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1718.Construct the Lexicographically Largest Valid Sequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1718.Construct the Lexicographically Largest Valid Sequence/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "total-distance-traveled",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distanceTraveled(self, mainTank: int, additionalTank: int) -> int:\r\n        ans = cur = 0\r\n        while mainTank:\r\n            cur += 1\r\n            ans += 10\r\n            mainTank -= 1\r\n            if cur % 5 == 0 and additionalTank:\r\n                additionalTank -= 1\r\n                mainTank += 1\r\n        return ans",
+    "problemId": 2739,
+    "title": "Total Distance Traveled",
+    "problemUrl": "https://leetcode.com/problems/total-distance-traveled/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2739.Total Distance Traveled/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2739.Total Distance Traveled/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2739.Total Distance Traveled/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2739.Total Distance Traveled/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2739.Total Distance Traveled/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2739.Total Distance Traveled/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2739.Total Distance Traveled/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

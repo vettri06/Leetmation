@@ -1,0 +1,33 @@
+{
+    "problemName": "maximize-value-of-function-in-a-ball-passing-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getMaxFunctionValue(self, receiver: List[int], k: int) -> int:\r\n        n, m = len(receiver), k.bit_length()\r\n        f = [[0] * m for _ in range(n)]\r\n        g = [[0] * m for _ in range(n)]\r\n        for i, x in enumerate(receiver):\r\n            f[i][0] = x\r\n            g[i][0] = i\r\n        for j in range(1, m):\r\n            for i in range(n):\r\n                f[i][j] = f[f[i][j - 1]][j - 1]\r\n                g[i][j] = g[i][j - 1] + g[f[i][j - 1]][j - 1]\r\n        ans = 0\r\n        for i in range(n):\r\n            p, t = i, 0\r\n            for j in range(m):\r\n                if k >> j & 1:\r\n                    t += g[p][j]\r\n                    p = f[p][j]\r\n            ans = max(ans, t + p)\r\n        return ans",
+    "problemId": 2836,
+    "title": "Maximize Value of Function in a Ball Passing Game",
+    "problemUrl": "https://leetcode.com/problems/maximize-value-of-function-in-a-ball-passing-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2836.Maximize Value of Function in a Ball Passing Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2836.Maximize Value of Function in a Ball Passing Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2836.Maximize Value of Function in a Ball Passing Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2836.Maximize Value of Function in a Ball Passing Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2836.Maximize Value of Function in a Ball Passing Game/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

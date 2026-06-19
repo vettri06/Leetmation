@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-unlocked-indices-to-sort-nums",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minUnlockedIndices(self, nums: List[int], locked: List[int]) -> int:\r\n        n = len(nums)\r\n        first2 = first3 = n\r\n        last1 = last2 = -1\r\n        for i, x in enumerate(nums):\r\n            if x == 1:\r\n                last1 = i\r\n            elif x == 2:\r\n                first2 = min(first2, i)\r\n                last2 = i\r\n            else:\r\n                first3 = min(first3, i)\r\n        if first3 < last1:\r\n            return -1\r\n        return sum(\r\n            st and (first2 <= i < last1 or first3 <= i < last2)\r\n            for i, st in enumerate(locked)\r\n        )",
+    "problemId": 3431,
+    "title": "Minimum Unlocked Indices to Sort Nums",
+    "problemUrl": "https://leetcode.com/problems/minimum-unlocked-indices-to-sort-nums/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3431.Minimum Unlocked Indices to Sort Nums/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3431.Minimum Unlocked Indices to Sort Nums/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3431.Minimum Unlocked Indices to Sort Nums/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3431.Minimum Unlocked Indices to Sort Nums/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3431.Minimum Unlocked Indices to Sort Nums/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3431.Minimum Unlocked Indices to Sort Nums/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

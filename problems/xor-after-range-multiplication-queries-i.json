@@ -1,0 +1,43 @@
+{
+    "problemName": "xor-after-range-multiplication-queries-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def xorAfterQueries(self, nums: List[int], queries: List[List[int]]) -> int:\r\n        mod = 10**9 + 7\r\n        for l, r, k, v in queries:\r\n            for idx in range(l, r + 1, k):\r\n                nums[idx] = nums[idx] * v % mod\r\n        return reduce(xor, nums)",
+    "problemId": 3653,
+    "title": "XOR After Range Multiplication Queries I",
+    "problemUrl": "https://leetcode.com/problems/xor-after-range-multiplication-queries-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3653.XOR After Range Multiplication Queries I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3653.XOR After Range Multiplication Queries I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3653.XOR After Range Multiplication Queries I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3653.XOR After Range Multiplication Queries I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3653.XOR After Range Multiplication Queries I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3653.XOR After Range Multiplication Queries I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3653.XOR After Range Multiplication Queries I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

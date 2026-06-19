@@ -1,0 +1,63 @@
+{
+    "problemName": "sparse-matrix-multiplication",
+    "language": "python3",
+    "code": "class Solution:\r\n    def multiply(self, mat1: List[List[int]], mat2: List[List[int]]) -> List[List[int]]:\r\n        m, n = len(mat1), len(mat2[0])\r\n        ans = [[0] * n for _ in range(m)]\r\n        for i in range(m):\r\n            for j in range(n):\r\n                for k in range(len(mat2)):\r\n                    ans[i][j] += mat1[i][k] * mat2[k][j]\r\n        return ans",
+    "problemId": 311,
+    "title": "Sparse Matrix Multiplication",
+    "problemUrl": "https://leetcode.com/problems/sparse-matrix-multiplication/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0311.Sparse Matrix Multiplication/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0311.Sparse Matrix Multiplication/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0311.Sparse Matrix Multiplication/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0311.Sparse Matrix Multiplication/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0311.Sparse Matrix Multiplication/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0311.Sparse Matrix Multiplication/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0311.Sparse Matrix Multiplication/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0311.Sparse Matrix Multiplication/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0311.Sparse Matrix Multiplication/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0311.Sparse Matrix Multiplication/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0311.Sparse Matrix Multiplication/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

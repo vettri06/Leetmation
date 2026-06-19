@@ -1,0 +1,93 @@
+{
+    "problemName": "find-k-closest-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:\r\n        arr.sort(key=lambda v: abs(v - x))\r\n        return sorted(arr[:k])",
+    "problemId": 658,
+    "title": "Find K Closest Elements",
+    "problemUrl": "https://leetcode.com/problems/find-k-closest-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution3.py",
+            "sourceFile": "Solution3.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution3.cpp",
+            "sourceFile": "Solution3.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution3.java",
+            "sourceFile": "Solution3.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0658.Find K Closest Elements/Solution3.go",
+            "sourceFile": "Solution3.go"
+        }
+    ]
+}

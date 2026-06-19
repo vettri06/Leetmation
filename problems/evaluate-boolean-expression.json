@@ -1,0 +1,18 @@
+{
+    "problemName": "evaluate-boolean-expression",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    left_operand,\r\n    operator,\r\n    right_operand,\r\n    CASE\r\n        WHEN (\r\n            (operator = '=' AND v1.value = v2.value)\r\n            OR (operator = '>' AND v1.value > v2.value)\r\n            OR (operator = '<' AND v1.value < v2.value)\r\n        ) THEN 'true'\r\n        ELSE 'false'\r\n    END AS value\r\nFROM\r\n    Expressions AS e\r\n    JOIN Variables AS v1 ON e.left_operand = v1.name\r\n    JOIN Variables AS v2 ON e.right_operand = v2.name;",
+    "problemId": 1440,
+    "title": "Evaluate Boolean Expression",
+    "problemUrl": "https://leetcode.com/problems/evaluate-boolean-expression/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1440.Evaluate Boolean Expression/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1440.Evaluate Boolean Expression/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

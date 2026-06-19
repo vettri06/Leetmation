@@ -1,0 +1,43 @@
+{
+    "problemName": "lowest-common-ancestor-of-deepest-leaves",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def lcaDeepestLeaves(self, root: Optional[TreeNode]) -> Optional[TreeNode]:\r\n        def dfs(root):\r\n            if root is None:\r\n                return None, 0\r\n            l, d1 = dfs(root.left)\r\n            r, d2 = dfs(root.right)\r\n            if d1 > d2:\r\n                return l, d1 + 1\r\n            if d1 < d2:\r\n                return r, d2 + 1\r\n            return root, d1 + 1\r\n\r\n        return dfs(root)[0]",
+    "problemId": 1123,
+    "title": "Lowest Common Ancestor of Deepest Leaves",
+    "problemUrl": "https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1123.Lowest Common Ancestor of Deepest Leaves/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1123.Lowest Common Ancestor of Deepest Leaves/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1123.Lowest Common Ancestor of Deepest Leaves/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1123.Lowest Common Ancestor of Deepest Leaves/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1123.Lowest Common Ancestor of Deepest Leaves/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1123.Lowest Common Ancestor of Deepest Leaves/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1123.Lowest Common Ancestor of Deepest Leaves/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

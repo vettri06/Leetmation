@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-rows-covered-by-columns",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumRows(self, matrix: List[List[int]], numSelect: int) -> int:\r\n        rows = []\r\n        for row in matrix:\r\n            mask = reduce(or_, (1 << j for j, x in enumerate(row) if x), 0)\r\n            rows.append(mask)\r\n\r\n        ans = 0\r\n        for mask in range(1 << len(matrix[0])):\r\n            if mask.bit_count() != numSelect:\r\n                continue\r\n            t = sum((x & mask) == x for x in rows)\r\n            ans = max(ans, t)\r\n        return ans",
+    "problemId": 2397,
+    "title": "Maximum Rows Covered by Columns",
+    "problemUrl": "https://leetcode.com/problems/maximum-rows-covered-by-columns/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2397.Maximum Rows Covered by Columns/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2397.Maximum Rows Covered by Columns/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2397.Maximum Rows Covered by Columns/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2397.Maximum Rows Covered by Columns/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2397.Maximum Rows Covered by Columns/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2397.Maximum Rows Covered by Columns/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

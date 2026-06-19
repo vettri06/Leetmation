@@ -1,0 +1,18 @@
+{
+    "problemName": "customers-with-maximum-number-of-transactions-on-consecutive-days",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    s AS (\r\n        SELECT\r\n            customer_id,\r\n            DATE_SUB(\r\n                transaction_date,\r\n                INTERVAL ROW_NUMBER() OVER (\r\n                    PARTITION BY customer_id\r\n                    ORDER BY transaction_date\r\n                ) DAY\r\n            ) AS transaction_date\r\n        FROM Transactions\r\n    ),\r\n    t AS (\r\n        SELECT customer_id, transaction_date, COUNT(1) AS cnt\r\n        FROM s\r\n        GROUP BY 1, 2\r\n    )\r\nSELECT customer_id\r\nFROM t\r\nWHERE cnt = (SELECT MAX(cnt) FROM t)\r\nORDER BY customer_id;",
+    "problemId": 2752,
+    "title": "Customers with Maximum Number of Transactions on Consecutive Days",
+    "problemUrl": "https://leetcode.com/problems/customers-with-maximum-number-of-transactions-on-consecutive-days/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2752.Customers with Maximum Number of Transactions on Consecutive Days/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2752.Customers with Maximum Number of Transactions on Consecutive Days/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

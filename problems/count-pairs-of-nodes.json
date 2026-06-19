@@ -1,0 +1,38 @@
+{
+    "problemName": "count-pairs-of-nodes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPairs(\r\n        self, n: int, edges: List[List[int]], queries: List[int]\r\n    ) -> List[int]:\r\n        cnt = [0] * n\r\n        g = defaultdict(int)\r\n        for a, b in edges:\r\n            a, b = a - 1, b - 1\r\n            a, b = min(a, b), max(a, b)\r\n            cnt[a] += 1\r\n            cnt[b] += 1\r\n            g[(a, b)] += 1\r\n\r\n        s = sorted(cnt)\r\n        ans = [0] * len(queries)\r\n        for i, t in enumerate(queries):\r\n            for j, x in enumerate(s):\r\n                k = bisect_right(s, t - x, lo=j + 1)\r\n                ans[i] += n - k\r\n            for (a, b), v in g.items():\r\n                if cnt[a] + cnt[b] > t and cnt[a] + cnt[b] - v <= t:\r\n                    ans[i] -= 1\r\n        return ans",
+    "problemId": 1782,
+    "title": "Count Pairs Of Nodes",
+    "problemUrl": "https://leetcode.com/problems/count-pairs-of-nodes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1782.Count Pairs Of Nodes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1782.Count Pairs Of Nodes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1782.Count Pairs Of Nodes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1782.Count Pairs Of Nodes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1782.Count Pairs Of Nodes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1782.Count Pairs Of Nodes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

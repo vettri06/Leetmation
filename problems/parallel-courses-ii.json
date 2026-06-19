@@ -1,0 +1,33 @@
+{
+    "problemName": "parallel-courses-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minNumberOfSemesters(self, n: int, relations: List[List[int]], k: int) -> int:\r\n        d = [0] * (n + 1)\r\n        for x, y in relations:\r\n            d[y] |= 1 << x\r\n        q = deque([(0, 0)])\r\n        vis = {0}\r\n        while q:\r\n            cur, t = q.popleft()\r\n            if cur == (1 << (n + 1)) - 2:\r\n                return t\r\n            nxt = 0\r\n            for i in range(1, n + 1):\r\n                if (cur & d[i]) == d[i]:\r\n                    nxt |= 1 << i\r\n            nxt ^= cur\r\n            if nxt.bit_count() <= k:\r\n                if (nxt | cur) not in vis:\r\n                    vis.add(nxt | cur)\r\n                    q.append((nxt | cur, t + 1))\r\n            else:\r\n                x = nxt\r\n                while nxt:\r\n                    if nxt.bit_count() == k and (nxt | cur) not in vis:\r\n                        vis.add(nxt | cur)\r\n                        q.append((nxt | cur, t + 1))\r\n                    nxt = (nxt - 1) & x",
+    "problemId": 1494,
+    "title": "Parallel Courses II",
+    "problemUrl": "https://leetcode.com/problems/parallel-courses-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1494.Parallel Courses II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1494.Parallel Courses II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1494.Parallel Courses II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1494.Parallel Courses II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1494.Parallel Courses II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

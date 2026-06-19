@@ -1,0 +1,73 @@
+{
+    "problemName": "widest-vertical-area-between-two-points-containing-no-points",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxWidthOfVerticalArea(self, points: List[List[int]]) -> int:\r\n        points.sort()\r\n        return max(b[0] - a[0] for a, b in pairwise(points))",
+    "problemId": 1637,
+    "title": "Widest Vertical Area Between Two Points Containing No Points",
+    "problemUrl": "https://leetcode.com/problems/widest-vertical-area-between-two-points-containing-no-points/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1637.Widest Vertical Area Between Two Points Containing No Points/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1637.Widest Vertical Area Between Two Points Containing No Points/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1637.Widest Vertical Area Between Two Points Containing No Points/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1637.Widest Vertical Area Between Two Points Containing No Points/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1637.Widest Vertical Area Between Two Points Containing No Points/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1637.Widest Vertical Area Between Two Points Containing No Points/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1637.Widest Vertical Area Between Two Points Containing No Points/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1637.Widest Vertical Area Between Two Points Containing No Points/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1637.Widest Vertical Area Between Two Points Containing No Points/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1637.Widest Vertical Area Between Two Points Containing No Points/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1637.Widest Vertical Area Between Two Points Containing No Points/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1637.Widest Vertical Area Between Two Points Containing No Points/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1637.Widest Vertical Area Between Two Points Containing No Points/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

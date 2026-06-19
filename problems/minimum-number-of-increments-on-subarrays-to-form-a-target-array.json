@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-number-of-increments-on-subarrays-to-form-a-target-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minNumberOperations(self, target: List[int]) -> int:\r\n        return target[0] + sum(max(0, b - a) for a, b in pairwise(target))",
+    "problemId": 1526,
+    "title": "Minimum Number of Increments on Subarrays to Form a Target Array",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1526.Minimum Number of Increments on Subarrays to Form a Target Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1526.Minimum Number of Increments on Subarrays to Form a Target Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1526.Minimum Number of Increments on Subarrays to Form a Target Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1526.Minimum Number of Increments on Subarrays to Form a Target Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1526.Minimum Number of Increments on Subarrays to Form a Target Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1526.Minimum Number of Increments on Subarrays to Form a Target Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1526.Minimum Number of Increments on Subarrays to Form a Target Array/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1526.Minimum Number of Increments on Subarrays to Form a Target Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

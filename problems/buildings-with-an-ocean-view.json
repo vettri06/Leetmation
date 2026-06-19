@@ -1,0 +1,43 @@
+{
+    "problemName": "buildings-with-an-ocean-view",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findBuildings(self, heights: List[int]) -> List[int]:\r\n        ans = []\r\n        mx = 0\r\n        for i in range(len(heights) - 1, -1, -1):\r\n            if heights[i] > mx:\r\n                ans.append(i)\r\n                mx = heights[i]\r\n        return ans[::-1]",
+    "problemId": 1762,
+    "title": "Buildings With an Ocean View",
+    "problemUrl": "https://leetcode.com/problems/buildings-with-an-ocean-view/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1762.Buildings With an Ocean View/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1762.Buildings With an Ocean View/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1762.Buildings With an Ocean View/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1762.Buildings With an Ocean View/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1762.Buildings With an Ocean View/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1762.Buildings With an Ocean View/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1762.Buildings With an Ocean View/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

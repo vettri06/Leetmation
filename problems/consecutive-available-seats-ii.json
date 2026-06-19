@@ -1,0 +1,18 @@
+{
+    "problemName": "consecutive-available-seats-ii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            *,\r\n            seat_id - (RANK() OVER (ORDER BY seat_id)) AS gid\r\n        FROM Cinema\r\n        WHERE free = 1\r\n    ),\r\n    P AS (\r\n        SELECT\r\n            MIN(seat_id) AS first_seat_id,\r\n            MAX(seat_id) AS last_seat_id,\r\n            COUNT(1) AS consecutive_seats_len,\r\n            RANK() OVER (ORDER BY COUNT(1) DESC) AS rk\r\n        FROM T\r\n        GROUP BY gid\r\n    )\r\nSELECT first_seat_id, last_seat_id, consecutive_seats_len\r\nFROM P\r\nWHERE rk = 1\r\nORDER BY 1;",
+    "problemId": 3140,
+    "title": "Consecutive Available Seats II",
+    "problemUrl": "https://leetcode.com/problems/consecutive-available-seats-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3140.Consecutive Available Seats II/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3140.Consecutive Available Seats II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

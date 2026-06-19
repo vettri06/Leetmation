@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-number-of-operations-to-make-elements-in-array-distinct",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumOperations(self, nums: List[int]) -> int:\r\n        s = set()\r\n        for i in range(len(nums) - 1, -1, -1):\r\n            if nums[i] in s:\r\n                return i // 3 + 1\r\n            s.add(nums[i])\r\n        return 0",
+    "problemId": 3396,
+    "title": "Minimum Number of Operations to Make Elements in Array Distinct",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-operations-to-make-elements-in-array-distinct/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3396.Minimum Number of Operations to Make Elements in Array Distinct/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3396.Minimum Number of Operations to Make Elements in Array Distinct/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3396.Minimum Number of Operations to Make Elements in Array Distinct/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3396.Minimum Number of Operations to Make Elements in Array Distinct/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3396.Minimum Number of Operations to Make Elements in Array Distinct/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3396.Minimum Number of Operations to Make Elements in Array Distinct/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

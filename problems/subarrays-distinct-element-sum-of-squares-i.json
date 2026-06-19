@@ -1,0 +1,38 @@
+{
+    "problemName": "subarrays-distinct-element-sum-of-squares-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumCounts(self, nums: List[int]) -> int:\r\n        ans, n = 0, len(nums)\r\n        for i in range(n):\r\n            s = set()\r\n            for j in range(i, n):\r\n                s.add(nums[j])\r\n                ans += len(s) * len(s)\r\n        return ans",
+    "problemId": 2913,
+    "title": "Subarrays Distinct Element Sum of Squares I",
+    "problemUrl": "https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2913.Subarrays Distinct Element Sum of Squares I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2913.Subarrays Distinct Element Sum of Squares I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2913.Subarrays Distinct Element Sum of Squares I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2913.Subarrays Distinct Element Sum of Squares I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2913.Subarrays Distinct Element Sum of Squares I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2913.Subarrays Distinct Element Sum of Squares I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

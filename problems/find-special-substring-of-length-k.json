@@ -1,0 +1,38 @@
+{
+    "problemName": "find-special-substring-of-length-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def hasSpecialSubstring(self, s: str, k: int) -> bool:\r\n        l, n = 0, len(s)\r\n        while l < n:\r\n            r = l\r\n            while r < n and s[r] == s[l]:\r\n                r += 1\r\n            if r - l == k:\r\n                return True\r\n            l = r\r\n        return False",
+    "problemId": 3456,
+    "title": "Find Special Substring of Length K",
+    "problemUrl": "https://leetcode.com/problems/find-special-substring-of-length-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3456.Find Special Substring of Length K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3456.Find Special Substring of Length K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3456.Find Special Substring of Length K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3456.Find Special Substring of Length K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3456.Find Special Substring of Length K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3456.Find Special Substring of Length K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

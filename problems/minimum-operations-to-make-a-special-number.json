@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-operations-to-make-a-special-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumOperations(self, num: str) -> int:\r\n        @cache\r\n        def dfs(i: int, k: int) -> int:\r\n            if i == n:\r\n                return 0 if k == 0 else n\r\n            ans = dfs(i + 1, k) + 1\r\n            ans = min(ans, dfs(i + 1, (k * 10 + int(num[i])) % 25))\r\n            return ans\r\n\r\n        n = len(num)\r\n        return dfs(0, 0)",
+    "problemId": 2844,
+    "title": "Minimum Operations to Make a Special Number",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-make-a-special-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2844.Minimum Operations to Make a Special Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2844.Minimum Operations to Make a Special Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2844.Minimum Operations to Make a Special Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2844.Minimum Operations to Make a Special Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2844.Minimum Operations to Make a Special Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2844.Minimum Operations to Make a Special Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

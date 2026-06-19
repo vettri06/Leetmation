@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-candies-you-can-get-from-boxes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxCandies(\r\n        self,\r\n        status: List[int],\r\n        candies: List[int],\r\n        keys: List[List[int]],\r\n        containedBoxes: List[List[int]],\r\n        initialBoxes: List[int],\r\n    ) -> int:\r\n        q = deque()\r\n        has, took = set(initialBoxes), set()\r\n        ans = 0\r\n\r\n        for box in initialBoxes:\r\n            if status[box]:\r\n                q.append(box)\r\n                took.add(box)\r\n                ans += candies[box]\r\n        while q:\r\n            box = q.popleft()\r\n            for k in keys[box]:\r\n                if not status[k]:\r\n                    status[k] = 1\r\n                    if k in has and k not in took:\r\n                        q.append(k)\r\n                        took.add(k)\r\n                        ans += candies[k]\r\n\r\n            for b in containedBoxes[box]:\r\n                has.add(b)\r\n                if status[b] and b not in took:\r\n                    q.append(b)\r\n                    took.add(b)\r\n                    ans += candies[b]\r\n        return ans",
+    "problemId": 1298,
+    "title": "Maximum Candies You Can Get from Boxes",
+    "problemUrl": "https://leetcode.com/problems/maximum-candies-you-can-get-from-boxes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1298.Maximum Candies You Can Get from Boxes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1298.Maximum Candies You Can Get from Boxes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1298.Maximum Candies You Can Get from Boxes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1298.Maximum Candies You Can Get from Boxes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1298.Maximum Candies You Can Get from Boxes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1298.Maximum Candies You Can Get from Boxes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1298.Maximum Candies You Can Get from Boxes/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

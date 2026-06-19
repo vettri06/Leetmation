@@ -1,0 +1,33 @@
+{
+    "problemName": "longest-absolute-file-path",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lengthLongestPath(self, input: str) -> int:\r\n        i, n = 0, len(input)\r\n        ans = 0\r\n        stk = []\r\n        while i < n:\r\n            ident = 0\r\n            while input[i] == '\\t':\r\n                ident += 1\r\n                i += 1\r\n\r\n            cur, isFile = 0, False\r\n            while i < n and input[i] != '\\n':\r\n                cur += 1\r\n                if input[i] == '.':\r\n                    isFile = True\r\n                i += 1\r\n            i += 1\r\n\r\n            # popd\r\n            while len(stk) > 0 and len(stk) > ident:\r\n                stk.pop()\r\n\r\n            if len(stk) > 0:\r\n                cur += stk[-1] + 1\r\n\r\n            # pushd\r\n            if not isFile:\r\n                stk.append(cur)\r\n                continue\r\n\r\n            ans = max(ans, cur)\r\n\r\n        return ans",
+    "problemId": 388,
+    "title": "Longest Absolute File Path",
+    "problemUrl": "https://leetcode.com/problems/longest-absolute-file-path/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0388.Longest Absolute File Path/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0388.Longest Absolute File Path/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0388.Longest Absolute File Path/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0388.Longest Absolute File Path/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0388.Longest Absolute File Path/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

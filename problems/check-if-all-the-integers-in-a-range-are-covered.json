@@ -1,0 +1,43 @@
+{
+    "problemName": "check-if-all-the-integers-in-a-range-are-covered",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isCovered(self, ranges: List[List[int]], left: int, right: int) -> bool:\r\n        diff = [0] * 52\r\n        for l, r in ranges:\r\n            diff[l] += 1\r\n            diff[r + 1] -= 1\r\n        s = 0\r\n        for i, x in enumerate(diff):\r\n            s += x\r\n            if s <= 0 and left <= i <= right:\r\n                return False\r\n        return True",
+    "problemId": 1893,
+    "title": "Check if All the Integers in a Range Are Covered",
+    "problemUrl": "https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1893.Check if All the Integers in a Range Are Covered/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1893.Check if All the Integers in a Range Are Covered/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1893.Check if All the Integers in a Range Are Covered/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1893.Check if All the Integers in a Range Are Covered/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1893.Check if All the Integers in a Range Are Covered/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1893.Check if All the Integers in a Range Are Covered/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1893.Check if All the Integers in a Range Are Covered/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

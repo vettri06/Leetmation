@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-number-of-fish-in-a-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMaxFish(self, grid: List[List[int]]) -> int:\r\n        def dfs(i: int, j: int) -> int:\r\n            cnt = grid[i][j]\r\n            grid[i][j] = 0\r\n            for a, b in pairwise((-1, 0, 1, 0, -1)):\r\n                x, y = i + a, j + b\r\n                if 0 <= x < m and 0 <= y < n and grid[x][y]:\r\n                    cnt += dfs(x, y)\r\n            return cnt\r\n\r\n        m, n = len(grid), len(grid[0])\r\n        ans = 0\r\n        for i in range(m):\r\n            for j in range(n):\r\n                if grid[i][j]:\r\n                    ans = max(ans, dfs(i, j))\r\n        return ans",
+    "problemId": 2658,
+    "title": "Maximum Number of Fish in a Grid",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2658.Maximum Number of Fish in a Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2658.Maximum Number of Fish in a Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2658.Maximum Number of Fish in a Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2658.Maximum Number of Fish in a Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2658.Maximum Number of Fish in a Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2658.Maximum Number of Fish in a Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "groups-of-strings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def groupStrings(self, words: List[str]) -> List[int]:\r\n        def find(x):\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        def union(a, b):\r\n            nonlocal mx, n\r\n            if b not in p:\r\n                return\r\n            pa, pb = find(a), find(b)\r\n            if pa == pb:\r\n                return\r\n            p[pa] = pb\r\n            size[pb] += size[pa]\r\n            mx = max(mx, size[pb])\r\n            n -= 1\r\n\r\n        p = {}\r\n        size = Counter()\r\n        n = len(words)\r\n        mx = 0\r\n        for word in words:\r\n            x = 0\r\n            for c in word:\r\n                x |= 1 << (ord(c) - ord('a'))\r\n            p[x] = x\r\n            size[x] += 1\r\n            mx = max(mx, size[x])\r\n            if size[x] > 1:\r\n                n -= 1\r\n        for x in p.keys():\r\n            for i in range(26):\r\n                union(x, x ^ (1 << i))\r\n                if (x >> i) & 1:\r\n                    for j in range(26):\r\n                        if ((x >> j) & 1) == 0:\r\n                            union(x, x ^ (1 << i) | (1 << j))\r\n        return [n, mx]",
+    "problemId": 2157,
+    "title": "Groups of Strings",
+    "problemUrl": "https://leetcode.com/problems/groups-of-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2157.Groups of Strings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2157.Groups of Strings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2157.Groups of Strings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2157.Groups of Strings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2157.Groups of Strings/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

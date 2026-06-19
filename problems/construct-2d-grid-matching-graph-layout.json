@@ -1,0 +1,38 @@
+{
+    "problemName": "construct-2d-grid-matching-graph-layout",
+    "language": "python3",
+    "code": "class Solution:\r\n    def constructGridLayout(self, n: int, edges: List[List[int]]) -> List[List[int]]:\r\n        g = [[] for _ in range(n)]\r\n        for u, v in edges:\r\n            g[u].append(v)\r\n            g[v].append(u)\r\n        deg = [-1] * 5\r\n        for x, ys in enumerate(g):\r\n            deg[len(ys)] = x\r\n        if deg[1] != -1:\r\n            row = [deg[1]]\r\n        elif deg[4] == -1:\r\n            x = deg[2]\r\n            for y in g[x]:\r\n                if len(g[y]) == 2:\r\n                    row = [x, y]\r\n                    break\r\n        else:\r\n            x = deg[2]\r\n            row = [x]\r\n            pre = x\r\n            x = g[x][0]\r\n            while len(g[x]) > 2:\r\n                row.append(x)\r\n                for y in g[x]:\r\n                    if y != pre and len(g[y]) < 4:\r\n                        pre = x\r\n                        x = y\r\n                        break\r\n            row.append(x)\r\n\r\n        ans = [row]\r\n        vis = [False] * n\r\n        for _ in range(n // len(row) - 1):\r\n            for x in row:\r\n                vis[x] = True\r\n            nxt = []\r\n            for x in row:\r\n                for y in g[x]:\r\n                    if not vis[y]:\r\n                        nxt.append(y)\r\n                        break\r\n            ans.append(nxt)\r\n            row = nxt\r\n        return ans",
+    "problemId": 3311,
+    "title": "Construct 2D Grid Matching Graph Layout",
+    "problemUrl": "https://leetcode.com/problems/construct-2d-grid-matching-graph-layout/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3311.Construct 2D Grid Matching Graph Layout/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3311.Construct 2D Grid Matching Graph Layout/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3311.Construct 2D Grid Matching Graph Layout/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3311.Construct 2D Grid Matching Graph Layout/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3311.Construct 2D Grid Matching Graph Layout/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3311.Construct 2D Grid Matching Graph Layout/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

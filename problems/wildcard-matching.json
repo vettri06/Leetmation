@@ -1,0 +1,68 @@
+{
+    "problemName": "wildcard-matching",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isMatch(self, s: str, p: str) -> bool:\r\n        @cache\r\n        def dfs(i: int, j: int) -> bool:\r\n            if i >= len(s):\r\n                return j >= len(p) or (p[j] == \"*\" and dfs(i, j + 1))\r\n            if j >= len(p):\r\n                return False\r\n            if p[j] == \"*\":\r\n                return dfs(i + 1, j) or dfs(i + 1, j + 1) or dfs(i, j + 1)\r\n            return (p[j] == \"?\" or s[i] == p[j]) and dfs(i + 1, j + 1)\r\n\r\n        return dfs(0, 0)",
+    "problemId": 44,
+    "title": "Wildcard Matching",
+    "problemUrl": "https://leetcode.com/problems/wildcard-matching/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0044.Wildcard Matching/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0044.Wildcard Matching/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0044.Wildcard Matching/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0044.Wildcard Matching/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0044.Wildcard Matching/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0044.Wildcard Matching/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0044.Wildcard Matching/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0044.Wildcard Matching/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0044.Wildcard Matching/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0044.Wildcard Matching/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0044.Wildcard Matching/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0044.Wildcard Matching/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

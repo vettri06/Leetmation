@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-number-of-taps-to-open-to-water-a-garden",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minTaps(self, n: int, ranges: List[int]) -> int:\r\n        last = [0] * (n + 1)\r\n        for i, x in enumerate(ranges):\r\n            l, r = max(0, i - x), i + x\r\n            last[l] = max(last[l], r)\r\n\r\n        ans = mx = pre = 0\r\n        for i in range(n):\r\n            mx = max(mx, last[i])\r\n            if mx <= i:\r\n                return -1\r\n            if pre == i:\r\n                ans += 1\r\n                pre = mx\r\n        return ans",
+    "problemId": 1326,
+    "title": "Minimum Number of Taps to Open to Water a Garden",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1326.Minimum Number of Taps to Open to Water a Garden/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1326.Minimum Number of Taps to Open to Water a Garden/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1326.Minimum Number of Taps to Open to Water a Garden/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1326.Minimum Number of Taps to Open to Water a Garden/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1326.Minimum Number of Taps to Open to Water a Garden/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1326.Minimum Number of Taps to Open to Water a Garden/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1326.Minimum Number of Taps to Open to Water a Garden/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

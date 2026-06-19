@@ -1,0 +1,53 @@
+{
+    "problemName": "divide-array-in-sets-of-k-consecutive-numbers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isPossibleDivide(self, nums: List[int], k: int) -> bool:\r\n        if len(nums) % k:\r\n            return False\r\n        cnt = Counter(nums)\r\n        for x in sorted(nums):\r\n            if cnt[x]:\r\n                for y in range(x, x + k):\r\n                    if cnt[y] == 0:\r\n                        return False\r\n                    cnt[y] -= 1\r\n        return True",
+    "problemId": 1296,
+    "title": "Divide Array in Sets of K Consecutive Numbers",
+    "problemUrl": "https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1296.Divide Array in Sets of K Consecutive Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1296.Divide Array in Sets of K Consecutive Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1296.Divide Array in Sets of K Consecutive Numbers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1296.Divide Array in Sets of K Consecutive Numbers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1296.Divide Array in Sets of K Consecutive Numbers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1296.Divide Array in Sets of K Consecutive Numbers/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1296.Divide Array in Sets of K Consecutive Numbers/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1296.Divide Array in Sets of K Consecutive Numbers/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1296.Divide Array in Sets of K Consecutive Numbers/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "problemName": "find-latest-group-of-size-m",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findLatestStep(self, arr: List[int], m: int) -> int:\r\n        def find(x):\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        def union(a, b):\r\n            pa, pb = find(a), find(b)\r\n            if pa == pb:\r\n                return\r\n            p[pa] = pb\r\n            size[pb] += size[pa]\r\n\r\n        n = len(arr)\r\n        if m == n:\r\n            return n\r\n        vis = [False] * n\r\n        p = list(range(n))\r\n        size = [1] * n\r\n        ans = -1\r\n        for i, v in enumerate(arr):\r\n            v -= 1\r\n            if v and vis[v - 1]:\r\n                if size[find(v - 1)] == m:\r\n                    ans = i\r\n                union(v, v - 1)\r\n            if v < n - 1 and vis[v + 1]:\r\n                if size[find(v + 1)] == m:\r\n                    ans = i\r\n                union(v, v + 1)\r\n            vis[v] = True\r\n        return ans",
+    "problemId": 1562,
+    "title": "Find Latest Group of Size M",
+    "problemUrl": "https://leetcode.com/problems/find-latest-group-of-size-m/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1562.Find Latest Group of Size M/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1562.Find Latest Group of Size M/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1562.Find Latest Group of Size M/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1562.Find Latest Group of Size M/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1562.Find Latest Group of Size M/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1562.Find Latest Group of Size M/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1562.Find Latest Group of Size M/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1562.Find Latest Group of Size M/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1562.Find Latest Group of Size M/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1562.Find Latest Group of Size M/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

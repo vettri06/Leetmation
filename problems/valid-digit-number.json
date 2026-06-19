@@ -1,0 +1,43 @@
+{
+    "problemName": "valid-digit-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def validDigit(self, n: int, x: int) -> bool:\r\n        has_x = False\r\n        while n > 9:\r\n            has_x = has_x or n % 10 == x\r\n            n //= 10\r\n        return has_x and n != x",
+    "problemId": 3908,
+    "title": "Valid Digit Number",
+    "problemUrl": "https://leetcode.com/problems/valid-digit-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3908.Valid Digit Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3908.Valid Digit Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3908.Valid Digit Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3908.Valid Digit Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3908.Valid Digit Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3908.Valid Digit Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3908.Valid Digit Number/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "day-of-the-week",
+    "language": "python3",
+    "code": "class Solution:\r\n    def dayOfTheWeek(self, day: int, month: int, year: int) -> str:\r\n        return datetime.date(year, month, day).strftime('%A')",
+    "problemId": 1185,
+    "title": "Day of the Week",
+    "problemUrl": "https://leetcode.com/problems/day-of-the-week/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1185.Day of the Week/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1185.Day of the Week/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1185.Day of the Week/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1185.Day of the Week/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1185.Day of the Week/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1185.Day of the Week/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1185.Day of the Week/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1185.Day of the Week/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

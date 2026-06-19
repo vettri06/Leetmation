@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-coin-collection",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxCoins(self, lane1: List[int], lane2: List[int]) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int, k: int) -> int:\r\n            if i >= n:\r\n                return 0\r\n            x = lane1[i] if j == 0 else lane2[i]\r\n            ans = max(x, dfs(i + 1, j, k) + x)\r\n            if k > 0:\r\n                ans = max(ans, dfs(i + 1, j ^ 1, k - 1) + x)\r\n                ans = max(ans, dfs(i, j ^ 1, k - 1))\r\n            return ans\r\n\r\n        n = len(lane1)\r\n        ans = -inf\r\n        for i in range(n):\r\n            ans = max(ans, dfs(i, 0, 2))\r\n        return ans",
+    "problemId": 3466,
+    "title": "Maximum Coin Collection",
+    "problemUrl": "https://leetcode.com/problems/maximum-coin-collection/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3466.Maximum Coin Collection/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3466.Maximum Coin Collection/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3466.Maximum Coin Collection/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3466.Maximum Coin Collection/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3466.Maximum Coin Collection/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3466.Maximum Coin Collection/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

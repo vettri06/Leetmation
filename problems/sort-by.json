@@ -1,0 +1,18 @@
+{
+    "problemName": "sort-by",
+    "language": "typescript",
+    "code": "function sortBy(arr: any[], fn: Function): any[] {\r\n    return arr.sort((a, b) => fn(a) - fn(b));\r\n}",
+    "problemId": 2724,
+    "title": "Sort By",
+    "problemUrl": "https://leetcode.com/problems/sort-by/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2724.Sort By/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2724.Sort By/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

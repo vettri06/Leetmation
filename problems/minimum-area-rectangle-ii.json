@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-area-rectangle-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minAreaFreeRect(self, points: List[List[int]]) -> float:\r\n        s = {(x, y) for x, y in points}\r\n        n = len(points)\r\n        ans = inf\r\n        for i in range(n):\r\n            x1, y1 = points[i]\r\n            for j in range(n):\r\n                if j != i:\r\n                    x2, y2 = points[j]\r\n                    for k in range(j + 1, n):\r\n                        if k != i:\r\n                            x3, y3 = points[k]\r\n                            x4 = x2 - x1 + x3\r\n                            y4 = y2 - y1 + y3\r\n                            if (x4, y4) in s:\r\n                                v21 = (x2 - x1, y2 - y1)\r\n                                v31 = (x3 - x1, y3 - y1)\r\n                                if v21[0] * v31[0] + v21[1] * v31[1] == 0:\r\n                                    w = sqrt(v21[0] ** 2 + v21[1] ** 2)\r\n                                    h = sqrt(v31[0] ** 2 + v31[1] ** 2)\r\n                                    ans = min(ans, w * h)\r\n        return 0 if ans == inf else ans",
+    "problemId": 963,
+    "title": "Minimum Area Rectangle II",
+    "problemUrl": "https://leetcode.com/problems/minimum-area-rectangle-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0963.Minimum Area Rectangle II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0963.Minimum Area Rectangle II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0963.Minimum Area Rectangle II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0963.Minimum Area Rectangle II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0963.Minimum Area Rectangle II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0963.Minimum Area Rectangle II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

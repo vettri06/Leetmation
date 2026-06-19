@@ -1,0 +1,43 @@
+{
+    "problemName": "collecting-chocolates",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, nums: List[int], x: int) -> int:\r\n        n = len(nums)\r\n        f = [[0] * n for _ in range(n)]\r\n        for i, v in enumerate(nums):\r\n            f[i][0] = v\r\n            for j in range(1, n):\r\n                f[i][j] = min(f[i][j - 1], nums[(i - j) % n])\r\n        return min(sum(f[i][j] for i in range(n)) + x * j for j in range(n))",
+    "problemId": 2735,
+    "title": "Collecting Chocolates",
+    "problemUrl": "https://leetcode.com/problems/collecting-chocolates/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2735.Collecting Chocolates/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2735.Collecting Chocolates/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2735.Collecting Chocolates/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2735.Collecting Chocolates/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2735.Collecting Chocolates/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2735.Collecting Chocolates/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2735.Collecting Chocolates/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

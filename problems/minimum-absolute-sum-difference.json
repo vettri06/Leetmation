@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-absolute-sum-difference",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minAbsoluteSumDiff(self, nums1: List[int], nums2: List[int]) -> int:\r\n        mod = 10**9 + 7\r\n        nums = sorted(nums1)\r\n        s = sum(abs(a - b) for a, b in zip(nums1, nums2)) % mod\r\n        mx = 0\r\n        for a, b in zip(nums1, nums2):\r\n            d1, d2 = abs(a - b), inf\r\n            i = bisect_left(nums, b)\r\n            if i < len(nums):\r\n                d2 = min(d2, abs(nums[i] - b))\r\n            if i:\r\n                d2 = min(d2, abs(nums[i - 1] - b))\r\n            mx = max(mx, d1 - d2)\r\n        return (s - mx + mod) % mod",
+    "problemId": 1818,
+    "title": "Minimum Absolute Sum Difference",
+    "problemUrl": "https://leetcode.com/problems/minimum-absolute-sum-difference/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1818.Minimum Absolute Sum Difference/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1818.Minimum Absolute Sum Difference/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1818.Minimum Absolute Sum Difference/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1818.Minimum Absolute Sum Difference/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1818.Minimum Absolute Sum Difference/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1818.Minimum Absolute Sum Difference/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1818.Minimum Absolute Sum Difference/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

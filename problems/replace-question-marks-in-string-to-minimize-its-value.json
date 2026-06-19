@@ -1,0 +1,33 @@
+{
+    "problemName": "replace-question-marks-in-string-to-minimize-its-value",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimizeStringValue(self, s: str) -> str:\r\n        cnt = Counter(s)\r\n        pq = [(cnt[c], c) for c in ascii_lowercase]\r\n        heapify(pq)\r\n        t = []\r\n        for _ in range(s.count(\"?\")):\r\n            v, c = pq[0]\r\n            t.append(c)\r\n            heapreplace(pq, (v + 1, c))\r\n        t.sort()\r\n        cs = list(s)\r\n        j = 0\r\n        for i, c in enumerate(s):\r\n            if c == \"?\":\r\n                cs[i] = t[j]\r\n                j += 1\r\n        return \"\".join(cs)",
+    "problemId": 3081,
+    "title": "Replace Question Marks in String to Minimize Its Value",
+    "problemUrl": "https://leetcode.com/problems/replace-question-marks-in-string-to-minimize-its-value/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3081.Replace Question Marks in String to Minimize Its Value/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3081.Replace Question Marks in String to Minimize Its Value/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3081.Replace Question Marks in String to Minimize Its Value/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3081.Replace Question Marks in String to Minimize Its Value/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3081.Replace Question Marks in String to Minimize Its Value/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

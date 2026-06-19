@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-operations-to-make-all-array-elements-equal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums: List[int], queries: List[int]) -> List[int]:\r\n        nums.sort()\r\n        s = list(accumulate(nums, initial=0))\r\n        ans = []\r\n        for x in queries:\r\n            i = bisect_left(nums, x + 1)\r\n            t = s[-1] - s[i] - (len(nums) - i) * x\r\n            i = bisect_left(nums, x)\r\n            t += x * i - s[i]\r\n            ans.append(t)\r\n        return ans",
+    "problemId": 2602,
+    "title": "Minimum Operations to Make All Array Elements Equal",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-make-all-array-elements-equal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2602.Minimum Operations to Make All Array Elements Equal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2602.Minimum Operations to Make All Array Elements Equal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2602.Minimum Operations to Make All Array Elements Equal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2602.Minimum Operations to Make All Array Elements Equal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2602.Minimum Operations to Make All Array Elements Equal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2602.Minimum Operations to Make All Array Elements Equal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

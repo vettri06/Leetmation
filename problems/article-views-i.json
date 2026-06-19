@@ -1,0 +1,18 @@
+{
+    "problemName": "article-views-i",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT DISTINCT author_id AS id\r\nFROM Views\r\nWHERE author_id = viewer_id\r\nORDER BY 1;",
+    "problemId": 1148,
+    "title": "Article Views I",
+    "problemUrl": "https://leetcode.com/problems/article-views-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1148.Article Views I/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1148.Article Views I/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

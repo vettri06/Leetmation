@@ -1,0 +1,28 @@
+{
+    "problemName": "data-stream-as-disjoint-intervals",
+    "language": "python3",
+    "code": "class SummaryRanges:\r\n    def __init__(self):\r\n        self.mp = SortedDict()\r\n\r\n    def addNum(self, val: int) -> None:\r\n        n = len(self.mp)\r\n        ridx = self.mp.bisect_right(val)\r\n        lidx = n if ridx == 0 else ridx - 1\r\n        keys = self.mp.keys()\r\n        values = self.mp.values()\r\n        if (\r\n            lidx != n\r\n            and ridx != n\r\n            and values[lidx][1] + 1 == val\r\n            and values[ridx][0] - 1 == val\r\n        ):\r\n            self.mp[keys[lidx]][1] = self.mp[keys[ridx]][1]\r\n            self.mp.pop(keys[ridx])\r\n        elif lidx != n and val <= values[lidx][1] + 1:\r\n            self.mp[keys[lidx]][1] = max(val, self.mp[keys[lidx]][1])\r\n        elif ridx != n and val >= values[ridx][0] - 1:\r\n            self.mp[keys[ridx]][0] = min(val, self.mp[keys[ridx]][0])\r\n        else:\r\n            self.mp[val] = [val, val]\r\n\r\n    def getIntervals(self) -> List[List[int]]:\r\n        return list(self.mp.values())\r\n\r\n\r\n# # Your SummaryRanges object will be instantiated and called as such:\r\n# # obj = SummaryRanges()\r\n# # obj.addNum(val)\r\n# # param_2 = obj.getIntervals()",
+    "problemId": 352,
+    "title": "Data Stream as Disjoint Intervals",
+    "problemUrl": "https://leetcode.com/problems/data-stream-as-disjoint-intervals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0352.Data Stream as Disjoint Intervals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0352.Data Stream as Disjoint Intervals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0352.Data Stream as Disjoint Intervals/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0352.Data Stream as Disjoint Intervals/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

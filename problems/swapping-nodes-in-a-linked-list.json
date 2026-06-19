@@ -1,0 +1,43 @@
+{
+    "problemName": "swapping-nodes-in-a-linked-list",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def swapNodes(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:\r\n        fast = slow = head\r\n        for _ in range(k - 1):\r\n            fast = fast.next\r\n        p = fast\r\n        while fast.next:\r\n            fast, slow = fast.next, slow.next\r\n        q = slow\r\n        p.val, q.val = q.val, p.val\r\n        return head",
+    "problemId": 1721,
+    "title": "Swapping Nodes in a Linked List",
+    "problemUrl": "https://leetcode.com/problems/swapping-nodes-in-a-linked-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1721.Swapping Nodes in a Linked List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1721.Swapping Nodes in a Linked List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1721.Swapping Nodes in a Linked List/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1721.Swapping Nodes in a Linked List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1721.Swapping Nodes in a Linked List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1721.Swapping Nodes in a Linked List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1721.Swapping Nodes in a Linked List/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-to-split-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, nums: List[int], k: int) -> int:\r\n        @cache\r\n        def dfs(i):\r\n            if i >= n:\r\n                return 0\r\n            cnt = Counter()\r\n            one = 0\r\n            ans = inf\r\n            for j in range(i, n):\r\n                cnt[nums[j]] += 1\r\n                if cnt[nums[j]] == 1:\r\n                    one += 1\r\n                elif cnt[nums[j]] == 2:\r\n                    one -= 1\r\n                ans = min(ans, k + j - i + 1 - one + dfs(j + 1))\r\n            return ans\r\n\r\n        n = len(nums)\r\n        return dfs(0)",
+    "problemId": 2547,
+    "title": "Minimum Cost to Split an Array",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-split-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2547.Minimum Cost to Split an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2547.Minimum Cost to Split an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2547.Minimum Cost to Split an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2547.Minimum Cost to Split an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2547.Minimum Cost to Split an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2547.Minimum Cost to Split an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

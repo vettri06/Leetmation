@@ -1,0 +1,33 @@
+{
+    "problemName": "can-you-eat-your-favorite-candy-on-your-favorite-day",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canEat(self, candiesCount: List[int], queries: List[List[int]]) -> List[bool]:\r\n        s = list(accumulate(candiesCount, initial=0))\r\n        ans = []\r\n        for t, day, mx in queries:\r\n            least, most = day, (day + 1) * mx\r\n            ans.append(least < s[t + 1] and most > s[t])\r\n        return ans",
+    "problemId": 1744,
+    "title": "Can You Eat Your Favorite Candy on Your Favorite Day",
+    "problemUrl": "https://leetcode.com/problems/can-you-eat-your-favorite-candy-on-your-favorite-day/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1744.Can You Eat Your Favorite Candy on Your Favorite Day/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1744.Can You Eat Your Favorite Candy on Your Favorite Day/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1744.Can You Eat Your Favorite Candy on Your Favorite Day/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1744.Can You Eat Your Favorite Candy on Your Favorite Day/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1744.Can You Eat Your Favorite Candy on Your Favorite Day/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

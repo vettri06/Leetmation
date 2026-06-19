@@ -1,0 +1,38 @@
+{
+    "problemName": "find-if-digit-game-can-be-won",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canAliceWin(self, nums: List[int]) -> bool:\r\n        a = sum(x for x in nums if x < 10)\r\n        b = sum(x for x in nums if x > 9)\r\n        return a != b",
+    "problemId": 3232,
+    "title": "Find if Digit Game Can Be Won",
+    "problemUrl": "https://leetcode.com/problems/find-if-digit-game-can-be-won/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3232.Find if Digit Game Can Be Won/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3232.Find if Digit Game Can Be Won/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3232.Find if Digit Game Can Be Won/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3232.Find if Digit Game Can Be Won/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3232.Find if Digit Game Can Be Won/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3232.Find if Digit Game Can Be Won/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "employees-with-missing-information",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT employee_id\r\nFROM Employees\r\nWHERE employee_id NOT IN (SELECT employee_id FROM Salaries)\r\nUNION\r\nSELECT employee_id\r\nFROM Salaries\r\nWHERE employee_id NOT IN (SELECT employee_id FROM Employees)\r\nORDER BY 1;",
+    "problemId": 1965,
+    "title": "Employees With Missing Information",
+    "problemUrl": "https://leetcode.com/problems/employees-with-missing-information/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1965.Employees With Missing Information/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1965.Employees With Missing Information/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

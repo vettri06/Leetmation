@@ -1,0 +1,48 @@
+{
+    "problemName": "decrypt-string-from-alphabet-to-integer-mapping",
+    "language": "python3",
+    "code": "class Solution:\r\n    def freqAlphabets(self, s: str) -> str:\r\n        ans = []\r\n        i, n = 0, len(s)\r\n        while i < n:\r\n            if i + 2 < n and s[i + 2] == \"#\":\r\n                ans.append(chr(int(s[i : i + 2]) + ord(\"a\") - 1))\r\n                i += 3\r\n            else:\r\n                ans.append(chr(int(s[i]) + ord(\"a\") - 1))\r\n                i += 1\r\n        return \"\".join(ans)",
+    "problemId": 1309,
+    "title": "Decrypt String from Alphabet to Integer Mapping",
+    "problemUrl": "https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1309.Decrypt String from Alphabet to Integer Mapping/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1309.Decrypt String from Alphabet to Integer Mapping/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1309.Decrypt String from Alphabet to Integer Mapping/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1309.Decrypt String from Alphabet to Integer Mapping/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1309.Decrypt String from Alphabet to Integer Mapping/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1309.Decrypt String from Alphabet to Integer Mapping/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1309.Decrypt String from Alphabet to Integer Mapping/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1309.Decrypt String from Alphabet to Integer Mapping/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

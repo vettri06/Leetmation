@@ -1,0 +1,18 @@
+{
+    "problemName": "loan-types",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT user_id\r\nFROM Loans\r\nGROUP BY 1\r\nHAVING SUM(loan_type = 'Refinance') > 0 AND SUM(loan_type = 'Mortgage') > 0\r\nORDER BY 1;",
+    "problemId": 2990,
+    "title": "Loan Types",
+    "problemUrl": "https://leetcode.com/problems/loan-types/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2990.Loan Types/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2990.Loan Types/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

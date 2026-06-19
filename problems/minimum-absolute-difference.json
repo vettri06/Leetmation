@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-absolute-difference",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumAbsDifference(self, arr: List[int]) -> List[List[int]]:\r\n        arr.sort()\r\n        mi = min(b - a for a, b in pairwise(arr))\r\n        return [[a, b] for a, b in pairwise(arr) if b - a == mi]",
+    "problemId": 1200,
+    "title": "Minimum Absolute Difference",
+    "problemUrl": "https://leetcode.com/problems/minimum-absolute-difference/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1200.Minimum Absolute Difference/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1200.Minimum Absolute Difference/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1200.Minimum Absolute Difference/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1200.Minimum Absolute Difference/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1200.Minimum Absolute Difference/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1200.Minimum Absolute Difference/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1200.Minimum Absolute Difference/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

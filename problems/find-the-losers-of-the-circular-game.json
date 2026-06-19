@@ -1,0 +1,43 @@
+{
+    "problemName": "find-the-losers-of-the-circular-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def circularGameLosers(self, n: int, k: int) -> List[int]:\r\n        vis = [False] * n\r\n        i, p = 0, 1\r\n        while not vis[i]:\r\n            vis[i] = True\r\n            i = (i + p * k) % n\r\n            p += 1\r\n        return [i + 1 for i in range(n) if not vis[i]]",
+    "problemId": 2682,
+    "title": "Find the Losers of the Circular Game",
+    "problemUrl": "https://leetcode.com/problems/find-the-losers-of-the-circular-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2682.Find the Losers of the Circular Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2682.Find the Losers of the Circular Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2682.Find the Losers of the Circular Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2682.Find the Losers of the Circular Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2682.Find the Losers of the Circular Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2682.Find the Losers of the Circular Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2682.Find the Losers of the Circular Game/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

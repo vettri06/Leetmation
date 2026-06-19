@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-to-separate-sentence-into-rows",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumCost(self, sentence: str, k: int) -> int:\r\n        @cache\r\n        def dfs(i: int) -> int:\r\n            if s[n] - s[i] + n - i - 1 <= k:\r\n                return 0\r\n            ans = inf\r\n            j = i + 1\r\n            while j < n and (m := s[j] - s[i] + j - i - 1) <= k:\r\n                ans = min(ans, dfs(j) + (k - m) ** 2)\r\n                j += 1\r\n            return ans\r\n\r\n        nums = [len(s) for s in sentence.split()]\r\n        n = len(nums)\r\n        s = list(accumulate(nums, initial=0))\r\n        return dfs(0)",
+    "problemId": 2052,
+    "title": "Minimum Cost to Separate Sentence Into Rows",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-separate-sentence-into-rows/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2052.Minimum Cost to Separate Sentence Into Rows/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2052.Minimum Cost to Separate Sentence Into Rows/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2052.Minimum Cost to Separate Sentence Into Rows/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2052.Minimum Cost to Separate Sentence Into Rows/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2052.Minimum Cost to Separate Sentence Into Rows/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2052.Minimum Cost to Separate Sentence Into Rows/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

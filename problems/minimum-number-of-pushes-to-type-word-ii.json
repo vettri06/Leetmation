@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-number-of-pushes-to-type-word-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumPushes(self, word: str) -> int:\r\n        cnt = Counter(word)\r\n        ans = 0\r\n        for i, x in enumerate(sorted(cnt.values(), reverse=True)):\r\n            ans += (i // 8 + 1) * x\r\n        return ans",
+    "problemId": 3016,
+    "title": "Minimum Number of Pushes to Type Word II",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3016.Minimum Number of Pushes to Type Word II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3016.Minimum Number of Pushes to Type Word II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3016.Minimum Number of Pushes to Type Word II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3016.Minimum Number of Pushes to Type Word II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3016.Minimum Number of Pushes to Type Word II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3016.Minimum Number of Pushes to Type Word II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3016.Minimum Number of Pushes to Type Word II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

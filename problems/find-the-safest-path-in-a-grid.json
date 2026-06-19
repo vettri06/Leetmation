@@ -1,0 +1,48 @@
+{
+    "problemName": "find-the-safest-path-in-a-grid",
+    "language": "python3",
+    "code": "class UnionFind:\r\n    def __init__(self, n):\r\n        self.p = list(range(n))\r\n        self.size = [1] * n\r\n\r\n    def find(self, x):\r\n        if self.p[x] != x:\r\n            self.p[x] = self.find(self.p[x])\r\n        return self.p[x]\r\n\r\n    def union(self, a, b):\r\n        pa, pb = self.find(a), self.find(b)\r\n        if pa == pb:\r\n            return False\r\n        if self.size[pa] > self.size[pb]:\r\n            self.p[pb] = pa\r\n            self.size[pa] += self.size[pb]\r\n        else:\r\n            self.p[pa] = pb\r\n            self.size[pb] += self.size[pa]\r\n        return True\r\n\r\n\r\nclass Solution:\r\n    def maximumSafenessFactor(self, grid: List[List[int]]) -> int:\r\n        n = len(grid)\r\n        if grid[0][0] or grid[n - 1][n - 1]:\r\n            return 0\r\n        q = deque()\r\n        dist = [[inf] * n for _ in range(n)]\r\n        for i in range(n):\r\n            for j in range(n):\r\n                if grid[i][j]:\r\n                    q.append((i, j))\r\n                    dist[i][j] = 0\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        while q:\r\n            i, j = q.popleft()\r\n            for a, b in pairwise(dirs):\r\n                x, y = i + a, j + b\r\n                if 0 <= x < n and 0 <= y < n and dist[x][y] == inf:\r\n                    dist[x][y] = dist[i][j] + 1\r\n                    q.append((x, y))\r\n\r\n        q = ((dist[i][j], i, j) for i in range(n) for j in range(n))\r\n        q = sorted(q, reverse=True)\r\n        uf = UnionFind(n * n)\r\n        for d, i, j in q:\r\n            for a, b in pairwise(dirs):\r\n                x, y = i + a, j + b\r\n                if 0 <= x < n and 0 <= y < n and dist[x][y] >= d:\r\n                    uf.union(i * n + j, x * n + y)\r\n            if uf.find(0) == uf.find(n * n - 1):\r\n                return int(d)\r\n        return 0",
+    "problemId": 2812,
+    "title": "Find the Safest Path in a Grid",
+    "problemUrl": "https://leetcode.com/problems/find-the-safest-path-in-a-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2812.Find the Safest Path in a Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2812.Find the Safest Path in a Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2812.Find the Safest Path in a Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2812.Find the Safest Path in a Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2812.Find the Safest Path in a Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2812.Find the Safest Path in a Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2812.Find the Safest Path in a Grid/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2812.Find the Safest Path in a Grid/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

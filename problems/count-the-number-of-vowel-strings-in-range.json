@@ -1,0 +1,43 @@
+{
+    "problemName": "count-the-number-of-vowel-strings-in-range",
+    "language": "python3",
+    "code": "class Solution:\r\n    def vowelStrings(self, words: List[str], left: int, right: int) -> int:\r\n        return sum(\r\n            w[0] in 'aeiou' and w[-1] in 'aeiou' for w in words[left : right + 1]\r\n        )",
+    "problemId": 2586,
+    "title": "Count the Number of Vowel Strings in Range",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-vowel-strings-in-range/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2586.Count the Number of Vowel Strings in Range/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2586.Count the Number of Vowel Strings in Range/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2586.Count the Number of Vowel Strings in Range/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2586.Count the Number of Vowel Strings in Range/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2586.Count the Number of Vowel Strings in Range/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2586.Count the Number of Vowel Strings in Range/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2586.Count the Number of Vowel Strings in Range/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

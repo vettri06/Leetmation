@@ -1,0 +1,63 @@
+{
+    "problemName": "minimum-cost-to-cut-a-stick",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, n: int, cuts: List[int]) -> int:\r\n        cuts.extend([0, n])\r\n        cuts.sort()\r\n        m = len(cuts)\r\n        f = [[0] * m for _ in range(m)]\r\n        for l in range(2, m):\r\n            for i in range(m - l):\r\n                j = i + l\r\n                f[i][j] = inf\r\n                for k in range(i + 1, j):\r\n                    f[i][j] = min(f[i][j], f[i][k] + f[k][j] + cuts[j] - cuts[i])\r\n        return f[0][-1]",
+    "problemId": 1547,
+    "title": "Minimum Cost to Cut a Stick",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-cut-a-stick/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1547.Minimum Cost to Cut a Stick/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1547.Minimum Cost to Cut a Stick/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1547.Minimum Cost to Cut a Stick/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1547.Minimum Cost to Cut a Stick/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1547.Minimum Cost to Cut a Stick/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1547.Minimum Cost to Cut a Stick/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1547.Minimum Cost to Cut a Stick/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1547.Minimum Cost to Cut a Stick/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1547.Minimum Cost to Cut a Stick/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1547.Minimum Cost to Cut a Stick/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1547.Minimum Cost to Cut a Stick/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

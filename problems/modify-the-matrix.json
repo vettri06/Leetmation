@@ -1,0 +1,43 @@
+{
+    "problemName": "modify-the-matrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def modifiedMatrix(self, matrix: List[List[int]]) -> List[List[int]]:\r\n        m, n = len(matrix), len(matrix[0])\r\n        for j in range(n):\r\n            mx = max(matrix[i][j] for i in range(m))\r\n            for i in range(m):\r\n                if matrix[i][j] == -1:\r\n                    matrix[i][j] = mx\r\n        return matrix",
+    "problemId": 3033,
+    "title": "Modify the Matrix",
+    "problemUrl": "https://leetcode.com/problems/modify-the-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3033.Modify the Matrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3033.Modify the Matrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3033.Modify the Matrix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3033.Modify the Matrix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3033.Modify the Matrix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3033.Modify the Matrix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3033.Modify the Matrix/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "count-days-without-meetings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countDays(self, days: int, meetings: List[List[int]]) -> int:\r\n        meetings.sort()\r\n        ans = last = 0\r\n        for st, ed in meetings:\r\n            if last < st:\r\n                ans += st - last - 1\r\n            last = max(last, ed)\r\n        ans += days - last\r\n        return ans",
+    "problemId": 3169,
+    "title": "Count Days Without Meetings",
+    "problemUrl": "https://leetcode.com/problems/count-days-without-meetings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3169.Count Days Without Meetings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3169.Count Days Without Meetings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3169.Count Days Without Meetings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3169.Count Days Without Meetings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3169.Count Days Without Meetings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3169.Count Days Without Meetings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3169.Count Days Without Meetings/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

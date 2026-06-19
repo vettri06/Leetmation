@@ -1,0 +1,43 @@
+{
+    "problemName": "arranging-coins",
+    "language": "python3",
+    "code": "class Solution:\r\n    def arrangeCoins(self, n: int) -> int:\r\n        return int(math.sqrt(2) * math.sqrt(n + 0.125) - 0.5)",
+    "problemId": 441,
+    "title": "Arranging Coins",
+    "problemUrl": "https://leetcode.com/problems/arranging-coins/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0441.Arranging Coins/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0441.Arranging Coins/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0441.Arranging Coins/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0441.Arranging Coins/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0441.Arranging Coins/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0441.Arranging Coins/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0441.Arranging Coins/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

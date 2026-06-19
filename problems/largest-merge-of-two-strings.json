@@ -1,0 +1,48 @@
+{
+    "problemName": "largest-merge-of-two-strings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestMerge(self, word1: str, word2: str) -> str:\r\n        i = j = 0\r\n        ans = []\r\n        while i < len(word1) and j < len(word2):\r\n            if word1[i:] > word2[j:]:\r\n                ans.append(word1[i])\r\n                i += 1\r\n            else:\r\n                ans.append(word2[j])\r\n                j += 1\r\n        ans.append(word1[i:])\r\n        ans.append(word2[j:])\r\n        return \"\".join(ans)",
+    "problemId": 1754,
+    "title": "Largest Merge Of Two Strings",
+    "problemUrl": "https://leetcode.com/problems/largest-merge-of-two-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1754.Largest Merge Of Two Strings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1754.Largest Merge Of Two Strings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1754.Largest Merge Of Two Strings/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1754.Largest Merge Of Two Strings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1754.Largest Merge Of Two Strings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1754.Largest Merge Of Two Strings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1754.Largest Merge Of Two Strings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1754.Largest Merge Of Two Strings/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

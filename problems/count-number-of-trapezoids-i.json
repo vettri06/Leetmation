@@ -1,0 +1,38 @@
+{
+    "problemName": "count-number-of-trapezoids-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countTrapezoids(self, points: List[List[int]]) -> int:\r\n        mod = 10**9 + 7\r\n        cnt = Counter(p[1] for p in points)\r\n        ans = s = 0\r\n        for v in cnt.values():\r\n            t = v * (v - 1) // 2\r\n            ans = (ans + s * t) % mod\r\n            s += t\r\n        return ans",
+    "problemId": 3623,
+    "title": "Count Number of Trapezoids I",
+    "problemUrl": "https://leetcode.com/problems/count-number-of-trapezoids-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3623.Count Number of Trapezoids I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3623.Count Number of Trapezoids I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3623.Count Number of Trapezoids I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3623.Count Number of Trapezoids I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3623.Count Number of Trapezoids I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3623.Count Number of Trapezoids I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "market-analysis-iii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT seller_id, COUNT(DISTINCT item_id) AS num_items\r\n        FROM\r\n            Orders\r\n            JOIN Users USING (seller_id)\r\n            JOIN Items USING (item_id)\r\n        WHERE item_brand != favorite_brand\r\n        GROUP BY 1\r\n    )\r\nSELECT seller_id, num_items\r\nFROM T\r\nWHERE num_items = (SELECT MAX(num_items) FROM T)\r\nORDER BY 1;",
+    "problemId": 2922,
+    "title": "Market Analysis III",
+    "problemUrl": "https://leetcode.com/problems/market-analysis-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2922.Market Analysis III/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2922.Market Analysis III/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

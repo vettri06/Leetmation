@@ -1,0 +1,48 @@
+{
+    "problemName": "shuffle-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def __init__(self, nums: List[int]):\r\n        self.nums = nums\r\n        self.original = nums.copy()\r\n\r\n    def reset(self) -> List[int]:\r\n        self.nums = self.original.copy()\r\n        return self.nums\r\n\r\n    def shuffle(self) -> List[int]:\r\n        for i in range(len(self.nums)):\r\n            j = random.randrange(i, len(self.nums))\r\n            self.nums[i], self.nums[j] = self.nums[j], self.nums[i]\r\n        return self.nums\r\n\r\n\r\n# Your Solution object will be instantiated and called as such:\r\n# obj = Solution(nums)\r\n# param_1 = obj.reset()\r\n# param_2 = obj.shuffle()",
+    "problemId": 384,
+    "title": "Shuffle an Array",
+    "problemUrl": "https://leetcode.com/problems/shuffle-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0384.Shuffle an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0384.Shuffle an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0384.Shuffle an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0384.Shuffle an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0384.Shuffle an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0384.Shuffle an Array/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0384.Shuffle an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0384.Shuffle an Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

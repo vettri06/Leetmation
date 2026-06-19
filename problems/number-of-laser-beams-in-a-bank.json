@@ -1,0 +1,48 @@
+{
+    "problemName": "number-of-laser-beams-in-a-bank",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfBeams(self, bank: List[str]) -> int:\r\n        ans = pre = 0\r\n        for row in bank:\r\n            if (cur := row.count(\"1\")) > 0:\r\n                ans += pre * cur\r\n                pre = cur\r\n        return ans",
+    "problemId": 2125,
+    "title": "Number of Laser Beams in a Bank",
+    "problemUrl": "https://leetcode.com/problems/number-of-laser-beams-in-a-bank/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2125.Number of Laser Beams in a Bank/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2125.Number of Laser Beams in a Bank/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2125.Number of Laser Beams in a Bank/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2125.Number of Laser Beams in a Bank/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2125.Number of Laser Beams in a Bank/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2125.Number of Laser Beams in a Bank/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2125.Number of Laser Beams in a Bank/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2125.Number of Laser Beams in a Bank/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

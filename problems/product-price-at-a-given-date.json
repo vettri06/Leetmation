@@ -1,0 +1,23 @@
+{
+    "problemName": "product-price-at-a-given-date",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (SELECT DISTINCT product_id FROM Products),\r\n    P AS (\r\n        SELECT product_id, new_price AS price\r\n        FROM Products\r\n        WHERE\r\n            (product_id, change_date) IN (\r\n                SELECT product_id, MAX(change_date) AS change_date\r\n                FROM Products\r\n                WHERE change_date <= '2019-08-16'\r\n                GROUP BY 1\r\n            )\r\n    )\r\nSELECT product_id, IFNULL(price, 10) AS price\r\nFROM\r\n    T\r\n    LEFT JOIN P USING (product_id);",
+    "problemId": 1164,
+    "title": "Product Price at a Given Date",
+    "problemUrl": "https://leetcode.com/problems/product-price-at-a-given-date/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1164.Product Price at a Given Date/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1164.Product Price at a Given Date/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1164.Product Price at a Given Date/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

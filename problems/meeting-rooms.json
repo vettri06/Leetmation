@@ -1,0 +1,38 @@
+{
+    "problemName": "meeting-rooms",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canAttendMeetings(self, intervals: List[List[int]]) -> bool:\r\n        intervals.sort()\r\n        return all(a[1] <= b[0] for a, b in pairwise(intervals))",
+    "problemId": 252,
+    "title": "Meeting Rooms",
+    "problemUrl": "https://leetcode.com/problems/meeting-rooms/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0252.Meeting Rooms/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0252.Meeting Rooms/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0252.Meeting Rooms/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0252.Meeting Rooms/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0252.Meeting Rooms/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0252.Meeting Rooms/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

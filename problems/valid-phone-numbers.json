@@ -1,0 +1,18 @@
+{
+    "problemName": "valid-phone-numbers",
+    "language": "bash",
+    "code": "# Read from the file file.txt and output all valid phone numbers to stdout.\r\nawk '/^([0-9]{3}-|\\([0-9]{3}\\) )[0-9]{3}-[0-9]{4}$/' file.txt",
+    "problemId": 193,
+    "title": "Valid Phone Numbers",
+    "problemUrl": "https://leetcode.com/problems/valid-phone-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0193.Valid Phone Numbers/Solution.sh",
+    "sourceFile": "Solution.sh",
+    "sourceCandidates": [
+        {
+            "language": "bash",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0193.Valid Phone Numbers/Solution.sh",
+            "sourceFile": "Solution.sh"
+        }
+    ]
+}

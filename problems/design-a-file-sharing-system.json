@@ -1,0 +1,23 @@
+{
+    "problemName": "design-a-file-sharing-system",
+    "language": "python3",
+    "code": "class FileSharing:\r\n    def __init__(self, m: int):\r\n        self.cur = 0\r\n        self.chunks = m\r\n        self.reused = []\r\n        self.user_chunks = defaultdict(set)\r\n\r\n    def join(self, ownedChunks: List[int]) -> int:\r\n        if self.reused:\r\n            userID = heappop(self.reused)\r\n        else:\r\n            self.cur += 1\r\n            userID = self.cur\r\n        self.user_chunks[userID] = set(ownedChunks)\r\n        return userID\r\n\r\n    def leave(self, userID: int) -> None:\r\n        heappush(self.reused, userID)\r\n        self.user_chunks.pop(userID)\r\n\r\n    def request(self, userID: int, chunkID: int) -> List[int]:\r\n        if chunkID < 1 or chunkID > self.chunks:\r\n            return []\r\n        res = []\r\n        for k, v in self.user_chunks.items():\r\n            if chunkID in v:\r\n                res.append(k)\r\n        if res:\r\n            self.user_chunks[userID].add(chunkID)\r\n        return sorted(res)\r\n\r\n\r\n# Your FileSharing object will be instantiated and called as such:\r\n# obj = FileSharing(m)\r\n# param_1 = obj.join(ownedChunks)\r\n# obj.leave(userID)\r\n# param_3 = obj.request(userID,chunkID)",
+    "problemId": 1500,
+    "title": "Design a File Sharing System",
+    "problemUrl": "https://leetcode.com/problems/design-a-file-sharing-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1500.Design a File Sharing System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1500.Design a File Sharing System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1500.Design a File Sharing System/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

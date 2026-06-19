@@ -1,0 +1,18 @@
+{
+    "problemName": "find-top-performing-driver",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            fuel_type,\r\n            driver_id,\r\n            ROUND(AVG(rating), 2) rating,\r\n            SUM(distance) distance,\r\n            SUM(accidents) accidents\r\n        FROM\r\n            Drivers\r\n            JOIN Vehicles USING (driver_id)\r\n            JOIN Trips USING (vehicle_id)\r\n        GROUP BY fuel_type, driver_id\r\n    ),\r\n    P AS (\r\n        SELECT\r\n            *,\r\n            RANK() OVER (\r\n                PARTITION BY fuel_type\r\n                ORDER BY rating DESC, distance DESC, accidents\r\n            ) rk\r\n        FROM T\r\n    )\r\nSELECT fuel_type, driver_id, rating, distance\r\nFROM P\r\nWHERE rk = 1\r\nORDER BY 1;",
+    "problemId": 3308,
+    "title": "Find Top Performing Driver",
+    "problemUrl": "https://leetcode.com/problems/find-top-performing-driver/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3308.Find Top Performing Driver/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3308.Find Top Performing Driver/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

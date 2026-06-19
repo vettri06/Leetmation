@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-integer-added-to-array-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumAddedInteger(self, nums1: List[int], nums2: List[int]) -> int:\r\n        def f(x: int) -> bool:\r\n            i = j = cnt = 0\r\n            while i < len(nums1) and j < len(nums2):\r\n                if nums2[j] - nums1[i] != x:\r\n                    cnt += 1\r\n                else:\r\n                    j += 1\r\n                i += 1\r\n            return cnt <= 2\r\n\r\n        nums1.sort()\r\n        nums2.sort()\r\n        ans = inf\r\n        for i in range(3):\r\n            x = nums2[0] - nums1[i]\r\n            if f(x):\r\n                ans = min(ans, x)\r\n        return ans",
+    "problemId": 3132,
+    "title": "Find the Integer Added to Array II",
+    "problemUrl": "https://leetcode.com/problems/find-the-integer-added-to-array-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3132.Find the Integer Added to Array II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3132.Find the Integer Added to Array II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3132.Find the Integer Added to Array II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3132.Find the Integer Added to Array II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3132.Find the Integer Added to Array II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3132.Find the Integer Added to Array II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "count-special-integers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSpecialNumbers(self, n: int) -> int:\r\n        @cache\r\n        def dfs(i: int, mask: int, lead: bool, limit: bool) -> int:\r\n            if i >= len(s):\r\n                return int(lead ^ 1)\r\n            up = int(s[i]) if limit else 9\r\n            ans = 0\r\n            for j in range(up + 1):\r\n                if mask >> j & 1:\r\n                    continue\r\n                if lead and j == 0:\r\n                    ans += dfs(i + 1, mask, True, limit and j == up)\r\n                else:\r\n                    ans += dfs(i + 1, mask | 1 << j, False, limit and j == up)\r\n            return ans\r\n\r\n        s = str(n)\r\n        return dfs(0, 0, True, True)",
+    "problemId": 2376,
+    "title": "Count Special Integers",
+    "problemUrl": "https://leetcode.com/problems/count-special-integers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2376.Count Special Integers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2376.Count Special Integers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2376.Count Special Integers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2376.Count Special Integers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2376.Count Special Integers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2376.Count Special Integers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-initial-energy-to-finish-tasks",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumEffort(self, tasks: List[List[int]]) -> int:\r\n        ans = cur = 0\r\n        for a, m in sorted(tasks, key=lambda x: x[0] - x[1]):\r\n            if cur < m:\r\n                ans += m - cur\r\n                cur = m\r\n            cur -= a\r\n        return ans",
+    "problemId": 1665,
+    "title": "Minimum Initial Energy to Finish Tasks",
+    "problemUrl": "https://leetcode.com/problems/minimum-initial-energy-to-finish-tasks/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1665.Minimum Initial Energy to Finish Tasks/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1665.Minimum Initial Energy to Finish Tasks/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1665.Minimum Initial Energy to Finish Tasks/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1665.Minimum Initial Energy to Finish Tasks/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1665.Minimum Initial Energy to Finish Tasks/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1665.Minimum Initial Energy to Finish Tasks/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

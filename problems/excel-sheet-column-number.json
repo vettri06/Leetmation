@@ -1,0 +1,43 @@
+{
+    "problemName": "excel-sheet-column-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def titleToNumber(self, columnTitle: str) -> int:\r\n        ans = 0\r\n        for c in map(ord, columnTitle):\r\n            ans = ans * 26 + c - ord(\"A\") + 1\r\n        return ans",
+    "problemId": 171,
+    "title": "Excel Sheet Column Number",
+    "problemUrl": "https://leetcode.com/problems/excel-sheet-column-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0171.Excel Sheet Column Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0171.Excel Sheet Column Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0171.Excel Sheet Column Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0171.Excel Sheet Column Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0171.Excel Sheet Column Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0171.Excel Sheet Column Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0171.Excel Sheet Column Number/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "count-ways-to-build-good-strings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countGoodStrings(self, low: int, high: int, zero: int, one: int) -> int:\r\n        @cache\r\n        def dfs(i):\r\n            if i > high:\r\n                return 0\r\n            ans = 0\r\n            if low <= i <= high:\r\n                ans += 1\r\n            ans += dfs(i + zero) + dfs(i + one)\r\n            return ans % mod\r\n\r\n        mod = 10**9 + 7\r\n        return dfs(0)",
+    "problemId": 2466,
+    "title": "Count Ways To Build Good Strings",
+    "problemUrl": "https://leetcode.com/problems/count-ways-to-build-good-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2466.Count Ways To Build Good Strings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2466.Count Ways To Build Good Strings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2466.Count Ways To Build Good Strings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2466.Count Ways To Build Good Strings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2466.Count Ways To Build Good Strings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2466.Count Ways To Build Good Strings/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2466.Count Ways To Build Good Strings/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

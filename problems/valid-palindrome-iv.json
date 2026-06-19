@@ -1,0 +1,38 @@
+{
+    "problemName": "valid-palindrome-iv",
+    "language": "python3",
+    "code": "class Solution:\r\n    def makePalindrome(self, s: str) -> bool:\r\n        i, j = 0, len(s) - 1\r\n        cnt = 0\r\n        while i < j:\r\n            cnt += s[i] != s[j]\r\n            i, j = i + 1, j - 1\r\n        return cnt <= 2",
+    "problemId": 2330,
+    "title": "Valid Palindrome IV",
+    "problemUrl": "https://leetcode.com/problems/valid-palindrome-iv/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2330.Valid Palindrome IV/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2330.Valid Palindrome IV/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2330.Valid Palindrome IV/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2330.Valid Palindrome IV/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2330.Valid Palindrome IV/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2330.Valid Palindrome IV/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

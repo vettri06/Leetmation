@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxArea(\r\n        self, h: int, w: int, horizontalCuts: List[int], verticalCuts: List[int]\r\n    ) -> int:\r\n        horizontalCuts.extend([0, h])\r\n        verticalCuts.extend([0, w])\r\n        horizontalCuts.sort()\r\n        verticalCuts.sort()\r\n        x = max(b - a for a, b in pairwise(horizontalCuts))\r\n        y = max(b - a for a, b in pairwise(verticalCuts))\r\n        return (x * y) % (10**9 + 7)",
+    "problemId": 1465,
+    "title": "Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts",
+    "problemUrl": "https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1465.Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1465.Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1465.Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1465.Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1465.Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1465.Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1465.Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

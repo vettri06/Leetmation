@@ -1,0 +1,38 @@
+{
+    "problemName": "count-the-number-of-complete-components",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countCompleteComponents(self, n: int, edges: List[List[int]]) -> int:\r\n        def dfs(i: int) -> (int, int):\r\n            vis[i] = True\r\n            x, y = 1, len(g[i])\r\n            for j in g[i]:\r\n                if not vis[j]:\r\n                    a, b = dfs(j)\r\n                    x += a\r\n                    y += b\r\n            return x, y\r\n\r\n        g = defaultdict(list)\r\n        for a, b in edges:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n        vis = [False] * n\r\n        ans = 0\r\n        for i in range(n):\r\n            if not vis[i]:\r\n                a, b = dfs(i)\r\n                ans += a * (a - 1) == b\r\n        return ans",
+    "problemId": 2685,
+    "title": "Count the Number of Complete Components",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-complete-components/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2685.Count the Number of Complete Components/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2685.Count the Number of Complete Components/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2685.Count the Number of Complete Components/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2685.Count the Number of Complete Components/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2685.Count the Number of Complete Components/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2685.Count the Number of Complete Components/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        }
+    ]
+}

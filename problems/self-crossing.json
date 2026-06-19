@@ -1,0 +1,38 @@
+{
+    "problemName": "self-crossing",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isSelfCrossing(self, distance: List[int]) -> bool:\r\n        d = distance\r\n        for i in range(3, len(d)):\r\n            if d[i] >= d[i - 2] and d[i - 1] <= d[i - 3]:\r\n                return True\r\n            if i >= 4 and d[i - 1] == d[i - 3] and d[i] + d[i - 4] >= d[i - 2]:\r\n                return True\r\n            if (\r\n                i >= 5\r\n                and d[i - 2] >= d[i - 4]\r\n                and d[i - 1] <= d[i - 3]\r\n                and d[i] >= d[i - 2] - d[i - 4]\r\n                and d[i - 1] + d[i - 5] >= d[i - 3]\r\n            ):\r\n                return True\r\n        return False",
+    "problemId": 335,
+    "title": "Self Crossing",
+    "problemUrl": "https://leetcode.com/problems/self-crossing/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0335.Self Crossing/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0335.Self Crossing/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0335.Self Crossing/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0335.Self Crossing/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0335.Self Crossing/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0335.Self Crossing/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

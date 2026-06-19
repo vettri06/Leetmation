@@ -1,0 +1,33 @@
+{
+    "problemName": "walls-and-gates",
+    "language": "python3",
+    "code": "class Solution:\r\n    def wallsAndGates(self, rooms: List[List[int]]) -> None:\r\n        \"\"\"\r\n        Do not return anything, modify rooms in-place instead.\r\n        \"\"\"\r\n        m, n = len(rooms), len(rooms[0])\r\n        inf = 2**31 - 1\r\n        q = deque([(i, j) for i in range(m) for j in range(n) if rooms[i][j] == 0])\r\n        d = 0\r\n        while q:\r\n            d += 1\r\n            for _ in range(len(q)):\r\n                i, j = q.popleft()\r\n                for a, b in [[0, 1], [0, -1], [1, 0], [-1, 0]]:\r\n                    x, y = i + a, j + b\r\n                    if 0 <= x < m and 0 <= y < n and rooms[x][y] == inf:\r\n                        rooms[x][y] = d\r\n                        q.append((x, y))",
+    "problemId": 286,
+    "title": "Walls and Gates",
+    "problemUrl": "https://leetcode.com/problems/walls-and-gates/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0286.Walls and Gates/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0286.Walls and Gates/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0286.Walls and Gates/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0286.Walls and Gates/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0286.Walls and Gates/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

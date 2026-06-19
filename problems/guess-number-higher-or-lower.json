@@ -1,0 +1,48 @@
+{
+    "problemName": "guess-number-higher-or-lower",
+    "language": "python3",
+    "code": "# The guess API is already defined for you.\r\n# @param num, your guess\r\n# @return -1 if num is higher than the picked number\r\n#          1 if num is lower than the picked number\r\n#          otherwise return 0\r\n# def guess(num: int) -> int:\r\n\r\n\r\nclass Solution:\r\n    def guessNumber(self, n: int) -> int:\r\n        return bisect.bisect(range(1, n + 1), 0, key=lambda x: -guess(x))",
+    "problemId": 374,
+    "title": "Guess Number Higher or Lower",
+    "problemUrl": "https://leetcode.com/problems/guess-number-higher-or-lower/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0374.Guess Number Higher or Lower/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0374.Guess Number Higher or Lower/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0374.Guess Number Higher or Lower/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0374.Guess Number Higher or Lower/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0374.Guess Number Higher or Lower/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0374.Guess Number Higher or Lower/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0374.Guess Number Higher or Lower/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0374.Guess Number Higher or Lower/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

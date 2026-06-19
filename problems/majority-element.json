@@ -1,0 +1,53 @@
+{
+    "problemName": "majority-element",
+    "language": "python3",
+    "code": "class Solution:\r\n    def majorityElement(self, nums: List[int]) -> int:\r\n        cnt = m = 0\r\n        for x in nums:\r\n            if cnt == 0:\r\n                m, cnt = x, 1\r\n            else:\r\n                cnt += 1 if m == x else -1\r\n        return m",
+    "problemId": 169,
+    "title": "Majority Element",
+    "problemUrl": "https://leetcode.com/problems/majority-element/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0169.Majority Element/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0169.Majority Element/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0169.Majority Element/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0169.Majority Element/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0169.Majority Element/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0169.Majority Element/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0169.Majority Element/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0169.Majority Element/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0169.Majority Element/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

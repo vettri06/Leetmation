@@ -1,0 +1,43 @@
+{
+    "problemName": "online-stock-span",
+    "language": "python3",
+    "code": "class StockSpanner:\r\n    def __init__(self):\r\n        self.stk = []\r\n\r\n    def next(self, price: int) -> int:\r\n        cnt = 1\r\n        while self.stk and self.stk[-1][0] <= price:\r\n            cnt += self.stk.pop()[1]\r\n        self.stk.append((price, cnt))\r\n        return cnt\r\n\r\n\r\n# Your StockSpanner object will be instantiated and called as such:\r\n# obj = StockSpanner()\r\n# param_1 = obj.next(price)",
+    "problemId": 901,
+    "title": "Online Stock Span",
+    "problemUrl": "https://leetcode.com/problems/online-stock-span/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0901.Online Stock Span/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0901.Online Stock Span/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0901.Online Stock Span/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0901.Online Stock Span/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0901.Online Stock Span/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0901.Online Stock Span/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0901.Online Stock Span/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

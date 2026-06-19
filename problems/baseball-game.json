@@ -1,0 +1,43 @@
+{
+    "problemName": "baseball-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def calPoints(self, operations: List[str]) -> int:\r\n        stk = []\r\n        for op in operations:\r\n            if op == \"+\":\r\n                stk.append(stk[-1] + stk[-2])\r\n            elif op == \"D\":\r\n                stk.append(stk[-1] << 1)\r\n            elif op == \"C\":\r\n                stk.pop()\r\n            else:\r\n                stk.append(int(op))\r\n        return sum(stk)",
+    "problemId": 682,
+    "title": "Baseball Game",
+    "problemUrl": "https://leetcode.com/problems/baseball-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0682.Baseball Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0682.Baseball Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0682.Baseball Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0682.Baseball Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0682.Baseball Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0682.Baseball Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0682.Baseball Game/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

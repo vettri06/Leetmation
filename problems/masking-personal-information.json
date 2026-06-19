@@ -1,0 +1,38 @@
+{
+    "problemName": "masking-personal-information",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maskPII(self, s: str) -> str:\r\n        if s[0].isalpha():\r\n            s = s.lower()\r\n            return s[0] + '*****' + s[s.find('@') - 1 :]\r\n        s = ''.join(c for c in s if c.isdigit())\r\n        cnt = len(s) - 10\r\n        suf = '***-***-' + s[-4:]\r\n        return suf if cnt == 0 else f'+{\"*\" * cnt}-{suf}'",
+    "problemId": 831,
+    "title": "Masking Personal Information",
+    "problemUrl": "https://leetcode.com/problems/masking-personal-information/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0831.Masking Personal Information/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0831.Masking Personal Information/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0831.Masking Personal Information/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0831.Masking Personal Information/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0831.Masking Personal Information/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0831.Masking Personal Information/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

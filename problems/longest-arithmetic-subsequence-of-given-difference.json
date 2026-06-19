@@ -1,0 +1,48 @@
+{
+    "problemName": "longest-arithmetic-subsequence-of-given-difference",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestSubsequence(self, arr: List[int], difference: int) -> int:\r\n        f = defaultdict(int)\r\n        for x in arr:\r\n            f[x] = f[x - difference] + 1\r\n        return max(f.values())",
+    "problemId": 1218,
+    "title": "Longest Arithmetic Subsequence of Given Difference",
+    "problemUrl": "https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1218.Longest Arithmetic Subsequence of Given Difference/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1218.Longest Arithmetic Subsequence of Given Difference/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1218.Longest Arithmetic Subsequence of Given Difference/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1218.Longest Arithmetic Subsequence of Given Difference/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1218.Longest Arithmetic Subsequence of Given Difference/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1218.Longest Arithmetic Subsequence of Given Difference/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1218.Longest Arithmetic Subsequence of Given Difference/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1218.Longest Arithmetic Subsequence of Given Difference/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "problemName": "merge-two-sorted-lists",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def mergeTwoLists(\r\n        self, list1: Optional[ListNode], list2: Optional[ListNode]\r\n    ) -> Optional[ListNode]:\r\n        if list1 is None or list2 is None:\r\n            return list1 or list2\r\n        if list1.val <= list2.val:\r\n            list1.next = self.mergeTwoLists(list1.next, list2)\r\n            return list1\r\n        else:\r\n            list2.next = self.mergeTwoLists(list1, list2.next)\r\n            return list2",
+    "problemId": 21,
+    "title": "Merge Two Sorted Lists",
+    "problemUrl": "https://leetcode.com/problems/merge-two-sorted-lists/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "ruby",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution.rb",
+            "sourceFile": "Solution.rb"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution2.cs",
+            "sourceFile": "Solution2.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        },
+        {
+            "language": "ruby",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0021.Merge Two Sorted Lists/Solution2.rb",
+            "sourceFile": "Solution2.rb"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "design-front-middle-back-queue",
+    "language": "python3",
+    "code": "class FrontMiddleBackQueue:\r\n    def __init__(self):\r\n        self.q1 = deque()\r\n        self.q2 = deque()\r\n\r\n    def pushFront(self, val: int) -> None:\r\n        self.q1.appendleft(val)\r\n        self.rebalance()\r\n\r\n    def pushMiddle(self, val: int) -> None:\r\n        self.q1.append(val)\r\n        self.rebalance()\r\n\r\n    def pushBack(self, val: int) -> None:\r\n        self.q2.append(val)\r\n        self.rebalance()\r\n\r\n    def popFront(self) -> int:\r\n        if not self.q1 and not self.q2:\r\n            return -1\r\n        if self.q1:\r\n            val = self.q1.popleft()\r\n        else:\r\n            val = self.q2.popleft()\r\n        self.rebalance()\r\n        return val\r\n\r\n    def popMiddle(self) -> int:\r\n        if not self.q1 and not self.q2:\r\n            return -1\r\n        if len(self.q1) == len(self.q2):\r\n            val = self.q1.pop()\r\n        else:\r\n            val = self.q2.popleft()\r\n        self.rebalance()\r\n        return val\r\n\r\n    def popBack(self) -> int:\r\n        if not self.q2:\r\n            return -1\r\n        val = self.q2.pop()\r\n        self.rebalance()\r\n        return val\r\n\r\n    def rebalance(self):\r\n        if len(self.q1) > len(self.q2):\r\n            self.q2.appendleft(self.q1.pop())\r\n        if len(self.q2) > len(self.q1) + 1:\r\n            self.q1.append(self.q2.popleft())\r\n\r\n\r\n# Your FrontMiddleBackQueue object will be instantiated and called as such:\r\n# obj = FrontMiddleBackQueue()\r\n# obj.pushFront(val)\r\n# obj.pushMiddle(val)\r\n# obj.pushBack(val)\r\n# param_4 = obj.popFront()\r\n# param_5 = obj.popMiddle()\r\n# param_6 = obj.popBack()",
+    "problemId": 1670,
+    "title": "Design Front Middle Back Queue",
+    "problemUrl": "https://leetcode.com/problems/design-front-middle-back-queue/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1670.Design Front Middle Back Queue/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1670.Design Front Middle Back Queue/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1670.Design Front Middle Back Queue/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1670.Design Front Middle Back Queue/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1670.Design Front Middle Back Queue/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1670.Design Front Middle Back Queue/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1670.Design Front Middle Back Queue/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

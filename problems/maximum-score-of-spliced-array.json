@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-score-of-spliced-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumsSplicedArray(self, nums1: List[int], nums2: List[int]) -> int:\r\n        def f(nums1, nums2):\r\n            d = [a - b for a, b in zip(nums1, nums2)]\r\n            t = mx = d[0]\r\n            for v in d[1:]:\r\n                if t > 0:\r\n                    t += v\r\n                else:\r\n                    t = v\r\n                mx = max(mx, t)\r\n            return mx\r\n\r\n        s1, s2 = sum(nums1), sum(nums2)\r\n        return max(s2 + f(nums1, nums2), s1 + f(nums2, nums1))",
+    "problemId": 2321,
+    "title": "Maximum Score Of Spliced Array",
+    "problemUrl": "https://leetcode.com/problems/maximum-score-of-spliced-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2321.Maximum Score Of Spliced Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2321.Maximum Score Of Spliced Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2321.Maximum Score Of Spliced Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2321.Maximum Score Of Spliced Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2321.Maximum Score Of Spliced Array/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-total-reward-using-operations-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxTotalReward(self, rewardValues: List[int]) -> int:\r\n        nums = sorted(set(rewardValues))\r\n        f = 1\r\n        for v in nums:\r\n            f |= (f & ((1 << v) - 1)) << v\r\n        return f.bit_length() - 1",
+    "problemId": 3181,
+    "title": "Maximum Total Reward Using Operations II",
+    "problemUrl": "https://leetcode.com/problems/maximum-total-reward-using-operations-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3181.Maximum Total Reward Using Operations II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3181.Maximum Total Reward Using Operations II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3181.Maximum Total Reward Using Operations II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3181.Maximum Total Reward Using Operations II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3181.Maximum Total Reward Using Operations II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3181.Maximum Total Reward Using Operations II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "monthly-transactions-i",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    DATE_FORMAT(trans_date, '%Y-%m') AS month,\r\n    country,\r\n    COUNT(1) AS trans_count,\r\n    SUM(state = 'approved') AS approved_count,\r\n    SUM(amount) AS trans_total_amount,\r\n    SUM(IF(state = 'approved', amount, 0)) AS approved_total_amount\r\nFROM Transactions\r\nGROUP BY 1, 2;",
+    "problemId": 1193,
+    "title": "Monthly Transactions I",
+    "problemUrl": "https://leetcode.com/problems/monthly-transactions-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1193.Monthly Transactions I/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1193.Monthly Transactions I/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

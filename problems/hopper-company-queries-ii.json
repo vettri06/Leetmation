@@ -1,0 +1,18 @@
+{
+    "problemName": "hopper-company-queries-ii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH RECURSIVE\r\n    Month AS (\r\n        SELECT 1 AS month\r\n        UNION\r\n        SELECT month + 1\r\n        FROM Month\r\n        WHERE month < 12\r\n    ),\r\n    S AS (\r\n        SELECT month, driver_id, join_date\r\n        FROM\r\n            Month AS m\r\n            LEFT JOIN Drivers AS d\r\n                ON YEAR(d.join_date) < 2020\r\n                OR (YEAR(d.join_date) = 2020 AND MONTH(d.join_date) <= month)\r\n    ),\r\n    T AS (\r\n        SELECT driver_id, requested_at\r\n        FROM\r\n            Rides\r\n            JOIN AcceptedRides USING (ride_id)\r\n        WHERE YEAR(requested_at) = 2020\r\n    )\r\nSELECT\r\n    month,\r\n    IFNULL(\r\n        ROUND(COUNT(DISTINCT t.driver_id) * 100 / COUNT(DISTINCT s.driver_id), 2),\r\n        0\r\n    ) AS working_percentage\r\nFROM\r\n    S AS s\r\n    LEFT JOIN T AS t\r\n        ON s.driver_id = t.driver_id\r\n        AND s.join_date <= t.requested_at\r\n        AND s.month = MONTH(t.requested_at)\r\nGROUP BY 1;",
+    "problemId": 1645,
+    "title": "Hopper Company Queries II",
+    "problemUrl": "https://leetcode.com/problems/hopper-company-queries-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1645.Hopper Company Queries II/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1645.Hopper Company Queries II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

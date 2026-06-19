@@ -1,0 +1,38 @@
+{
+    "problemName": "complex-number-multiplication",
+    "language": "python3",
+    "code": "class Solution:\r\n    def complexNumberMultiply(self, num1: str, num2: str) -> str:\r\n        a1, b1 = map(int, num1[:-1].split(\"+\"))\r\n        a2, b2 = map(int, num2[:-1].split(\"+\"))\r\n        return f\"{a1 * a2 - b1 * b2}+{a1 * b2 + a2 * b1}i\"",
+    "problemId": 537,
+    "title": "Complex Number Multiplication",
+    "problemUrl": "https://leetcode.com/problems/complex-number-multiplication/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0537.Complex Number Multiplication/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0537.Complex Number Multiplication/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0537.Complex Number Multiplication/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0537.Complex Number Multiplication/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0537.Complex Number Multiplication/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0537.Complex Number Multiplication/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

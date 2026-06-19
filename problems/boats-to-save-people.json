@@ -1,0 +1,38 @@
+{
+    "problemName": "boats-to-save-people",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numRescueBoats(self, people: List[int], limit: int) -> int:\r\n        people.sort()\r\n        ans = 0\r\n        i, j = 0, len(people) - 1\r\n        while i <= j:\r\n            if people[i] + people[j] <= limit:\r\n                i += 1\r\n            j -= 1\r\n            ans += 1\r\n        return ans",
+    "problemId": 881,
+    "title": "Boats to Save People",
+    "problemUrl": "https://leetcode.com/problems/boats-to-save-people/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0881.Boats to Save People/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0881.Boats to Save People/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0881.Boats to Save People/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0881.Boats to Save People/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0881.Boats to Save People/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0881.Boats to Save People/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

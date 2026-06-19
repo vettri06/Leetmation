@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-index-sum-of-two-lists",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findRestaurant(self, list1: List[str], list2: List[str]) -> List[str]:\r\n        d = {s: i for i, s in enumerate(list2)}\r\n        ans = []\r\n        mi = inf\r\n        for i, s in enumerate(list1):\r\n            if s in d:\r\n                j = d[s]\r\n                if i + j < mi:\r\n                    mi = i + j\r\n                    ans = [s]\r\n                elif i + j == mi:\r\n                    ans.append(s)\r\n        return ans",
+    "problemId": 599,
+    "title": "Minimum Index Sum of Two Lists",
+    "problemUrl": "https://leetcode.com/problems/minimum-index-sum-of-two-lists/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0599.Minimum Index Sum of Two Lists/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0599.Minimum Index Sum of Two Lists/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0599.Minimum Index Sum of Two Lists/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0599.Minimum Index Sum of Two Lists/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0599.Minimum Index Sum of Two Lists/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0599.Minimum Index Sum of Two Lists/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

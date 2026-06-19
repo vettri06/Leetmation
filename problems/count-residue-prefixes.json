@@ -1,0 +1,38 @@
+{
+    "problemName": "count-residue-prefixes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def residuePrefixes(self, s: str) -> int:\r\n        st = set()\r\n        ans = 0\r\n        for i, c in enumerate(s, 1):\r\n            st.add(c)\r\n            if len(st) == i % 3:\r\n                ans += 1\r\n        return ans",
+    "problemId": 3803,
+    "title": "Count Residue Prefixes",
+    "problemUrl": "https://leetcode.com/problems/count-residue-prefixes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3803.Count Residue Prefixes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3803.Count Residue Prefixes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3803.Count Residue Prefixes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3803.Count Residue Prefixes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3803.Count Residue Prefixes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3803.Count Residue Prefixes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

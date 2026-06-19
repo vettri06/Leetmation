@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-points-tourist-can-earn",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxScore(\r\n        self, n: int, k: int, stayScore: List[List[int]], travelScore: List[List[int]]\r\n    ) -> int:\r\n        f = [[-inf] * n for _ in range(k + 1)]\r\n        f[0] = [0] * n\r\n        for i in range(1, k + 1):\r\n            for j in range(n):\r\n                for h in range(n):\r\n                    f[i][j] = max(\r\n                        f[i][j],\r\n                        f[i - 1][h]\r\n                        + (stayScore[i - 1][j] if j == h else travelScore[h][j]),\r\n                    )\r\n        return max(f[k])",
+    "problemId": 3332,
+    "title": "Maximum Points Tourist Can Earn",
+    "problemUrl": "https://leetcode.com/problems/maximum-points-tourist-can-earn/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3332.Maximum Points Tourist Can Earn/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3332.Maximum Points Tourist Can Earn/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3332.Maximum Points Tourist Can Earn/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3332.Maximum Points Tourist Can Earn/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3332.Maximum Points Tourist Can Earn/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3332.Maximum Points Tourist Can Earn/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

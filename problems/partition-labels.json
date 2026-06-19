@@ -1,0 +1,53 @@
+{
+    "problemName": "partition-labels",
+    "language": "python3",
+    "code": "class Solution:\r\n    def partitionLabels(self, s: str) -> List[int]:\r\n        last = {c: i for i, c in enumerate(s)}\r\n        mx = j = 0\r\n        ans = []\r\n        for i, c in enumerate(s):\r\n            mx = max(mx, last[c])\r\n            if mx == i:\r\n                ans.append(i - j + 1)\r\n                j = i + 1\r\n        return ans",
+    "problemId": 763,
+    "title": "Partition Labels",
+    "problemUrl": "https://leetcode.com/problems/partition-labels/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0763.Partition Labels/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0763.Partition Labels/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0763.Partition Labels/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0763.Partition Labels/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0763.Partition Labels/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0763.Partition Labels/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0763.Partition Labels/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0763.Partition Labels/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0763.Partition Labels/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

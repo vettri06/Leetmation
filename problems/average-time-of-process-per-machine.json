@@ -1,0 +1,23 @@
+{
+    "problemName": "average-time-of-process-per-machine",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    machine_id,\r\n    ROUND(\r\n        AVG(\r\n            CASE\r\n                WHEN activity_type = 'start' THEN -timestamp\r\n                ELSE timestamp\r\n            END\r\n        ) * 2,\r\n        3\r\n    ) AS processing_time\r\nFROM Activity\r\nGROUP BY 1;",
+    "problemId": 1661,
+    "title": "Average Time of Process per Machine",
+    "problemUrl": "https://leetcode.com/problems/average-time-of-process-per-machine/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1661.Average Time of Process per Machine/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1661.Average Time of Process per Machine/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1661.Average Time of Process per Machine/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

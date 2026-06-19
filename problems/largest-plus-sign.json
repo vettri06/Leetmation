@@ -1,0 +1,33 @@
+{
+    "problemName": "largest-plus-sign",
+    "language": "python3",
+    "code": "class Solution:\r\n    def orderOfLargestPlusSign(self, n: int, mines: List[List[int]]) -> int:\r\n        dp = [[n] * n for _ in range(n)]\r\n        for x, y in mines:\r\n            dp[x][y] = 0\r\n        for i in range(n):\r\n            left = right = up = down = 0\r\n            for j, k in zip(range(n), reversed(range(n))):\r\n                left = left + 1 if dp[i][j] else 0\r\n                right = right + 1 if dp[i][k] else 0\r\n                up = up + 1 if dp[j][i] else 0\r\n                down = down + 1 if dp[k][i] else 0\r\n                dp[i][j] = min(dp[i][j], left)\r\n                dp[i][k] = min(dp[i][k], right)\r\n                dp[j][i] = min(dp[j][i], up)\r\n                dp[k][i] = min(dp[k][i], down)\r\n        return max(max(v) for v in dp)",
+    "problemId": 764,
+    "title": "Largest Plus Sign",
+    "problemUrl": "https://leetcode.com/problems/largest-plus-sign/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0764.Largest Plus Sign/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0764.Largest Plus Sign/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0764.Largest Plus Sign/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0764.Largest Plus Sign/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0764.Largest Plus Sign/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

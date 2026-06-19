@@ -1,0 +1,18 @@
+{
+    "problemName": "user-activity-for-the-past-30-days-i",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT activity_date AS day, COUNT(DISTINCT user_id) AS active_users\r\nFROM Activity\r\nWHERE activity_date <= '2019-07-27' AND DATEDIFF('2019-07-27', activity_date) < 30\r\nGROUP BY 1;",
+    "problemId": 1141,
+    "title": "User Activity for the Past 30 Days I",
+    "problemUrl": "https://leetcode.com/problems/user-activity-for-the-past-30-days-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1141.User Activity for the Past 30 Days I/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1141.User Activity for the Past 30 Days I/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

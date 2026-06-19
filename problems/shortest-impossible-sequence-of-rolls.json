@@ -1,0 +1,33 @@
+{
+    "problemName": "shortest-impossible-sequence-of-rolls",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shortestSequence(self, rolls: List[int], k: int) -> int:\r\n        ans = 1\r\n        s = set()\r\n        for v in rolls:\r\n            s.add(v)\r\n            if len(s) == k:\r\n                ans += 1\r\n                s.clear()\r\n        return ans",
+    "problemId": 2350,
+    "title": "Shortest Impossible Sequence of Rolls",
+    "problemUrl": "https://leetcode.com/problems/shortest-impossible-sequence-of-rolls/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2350.Shortest Impossible Sequence of Rolls/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2350.Shortest Impossible Sequence of Rolls/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2350.Shortest Impossible Sequence of Rolls/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2350.Shortest Impossible Sequence of Rolls/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2350.Shortest Impossible Sequence of Rolls/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

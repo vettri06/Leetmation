@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-weight-in-two-bags",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxWeight(self, weights: List[int], w1: int, w2: int) -> int:\r\n        f = [[0] * (w2 + 1) for _ in range(w1 + 1)]\r\n        max = lambda a, b: a if a > b else b\r\n        for x in weights:\r\n            for j in range(w1, -1, -1):\r\n                for k in range(w2, -1, -1):\r\n                    if x <= j:\r\n                        f[j][k] = max(f[j][k], f[j - x][k] + x)\r\n                    if x <= k:\r\n                        f[j][k] = max(f[j][k], f[j][k - x] + x)\r\n        return f[w1][w2]",
+    "problemId": 3647,
+    "title": "Maximum Weight in Two Bags",
+    "problemUrl": "https://leetcode.com/problems/maximum-weight-in-two-bags/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3647.Maximum Weight in Two Bags/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3647.Maximum Weight in Two Bags/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3647.Maximum Weight in Two Bags/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3647.Maximum Weight in Two Bags/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3647.Maximum Weight in Two Bags/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3647.Maximum Weight in Two Bags/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3647.Maximum Weight in Two Bags/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

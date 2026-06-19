@@ -1,0 +1,18 @@
+{
+    "problemName": "movie-rating",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\n(\r\n    SELECT name AS results\r\n    FROM\r\n        Users\r\n        JOIN MovieRating USING (user_id)\r\n    GROUP BY user_id\r\n    ORDER BY COUNT(1) DESC, name\r\n    LIMIT 1\r\n)\r\nUNION ALL\r\n(\r\n    SELECT title\r\n    FROM\r\n        MovieRating\r\n        JOIN Movies USING (movie_id)\r\n    WHERE DATE_FORMAT(created_at, '%Y-%m') = '2020-02'\r\n    GROUP BY movie_id\r\n    ORDER BY AVG(rating) DESC, title\r\n    LIMIT 1\r\n);",
+    "problemId": 1341,
+    "title": "Movie Rating",
+    "problemUrl": "https://leetcode.com/problems/movie-rating/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1341.Movie Rating/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1341.Movie Rating/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

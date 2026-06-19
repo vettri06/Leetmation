@@ -1,0 +1,48 @@
+{
+    "problemName": "spiral-matrix-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def generateMatrix(self, n: int) -> List[List[int]]:\r\n        ans = [[0] * n for _ in range(n)]\r\n        dirs = (0, 1, 0, -1, 0)\r\n        i = j = k = 0\r\n        for v in range(1, n * n + 1):\r\n            ans[i][j] = v\r\n            x, y = i + dirs[k], j + dirs[k + 1]\r\n            if x < 0 or x >= n or y < 0 or y >= n or ans[x][y]:\r\n                k = (k + 1) % 4\r\n            i, j = i + dirs[k], j + dirs[k + 1]\r\n        return ans",
+    "problemId": 59,
+    "title": "Spiral Matrix II",
+    "problemUrl": "https://leetcode.com/problems/spiral-matrix-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0059.Spiral Matrix II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0059.Spiral Matrix II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0059.Spiral Matrix II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0059.Spiral Matrix II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0059.Spiral Matrix II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0059.Spiral Matrix II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0059.Spiral Matrix II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0059.Spiral Matrix II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

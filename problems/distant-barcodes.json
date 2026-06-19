@@ -1,0 +1,38 @@
+{
+    "problemName": "distant-barcodes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:\r\n        cnt = Counter(barcodes)\r\n        barcodes.sort(key=lambda x: (-cnt[x], x))\r\n        n = len(barcodes)\r\n        ans = [0] * len(barcodes)\r\n        ans[::2] = barcodes[: (n + 1) // 2]\r\n        ans[1::2] = barcodes[(n + 1) // 2 :]\r\n        return ans",
+    "problemId": 1054,
+    "title": "Distant Barcodes",
+    "problemUrl": "https://leetcode.com/problems/distant-barcodes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1054.Distant Barcodes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1054.Distant Barcodes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1054.Distant Barcodes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1054.Distant Barcodes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1054.Distant Barcodes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1054.Distant Barcodes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

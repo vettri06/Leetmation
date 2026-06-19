@@ -1,0 +1,38 @@
+{
+    "problemName": "sort-the-students-by-their-kth-score",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sortTheStudents(self, score: List[List[int]], k: int) -> List[List[int]]:\r\n        return sorted(score, key=lambda x: -x[k])",
+    "problemId": 2545,
+    "title": "Sort the Students by Their Kth Score",
+    "problemUrl": "https://leetcode.com/problems/sort-the-students-by-their-kth-score/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2545.Sort the Students by Their Kth Score/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2545.Sort the Students by Their Kth Score/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2545.Sort the Students by Their Kth Score/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2545.Sort the Students by Their Kth Score/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2545.Sort the Students by Their Kth Score/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2545.Sort the Students by Their Kth Score/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

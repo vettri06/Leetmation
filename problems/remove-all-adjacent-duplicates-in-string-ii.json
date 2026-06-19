@@ -1,0 +1,38 @@
+{
+    "problemName": "remove-all-adjacent-duplicates-in-string-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def removeDuplicates(self, s: str, k: int) -> str:\r\n        t = []\r\n        i, n = 0, len(s)\r\n        while i < n:\r\n            j = i\r\n            while j < n and s[j] == s[i]:\r\n                j += 1\r\n            cnt = j - i\r\n            cnt %= k\r\n            if t and t[-1][0] == s[i]:\r\n                t[-1][1] = (t[-1][1] + cnt) % k\r\n                if t[-1][1] == 0:\r\n                    t.pop()\r\n            elif cnt:\r\n                t.append([s[i], cnt])\r\n            i = j\r\n        ans = [c * v for c, v in t]\r\n        return \"\".join(ans)",
+    "problemId": 1209,
+    "title": "Remove All Adjacent Duplicates in String II",
+    "problemUrl": "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1209.Remove All Adjacent Duplicates in String II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1209.Remove All Adjacent Duplicates in String II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1209.Remove All Adjacent Duplicates in String II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1209.Remove All Adjacent Duplicates in String II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1209.Remove All Adjacent Duplicates in String II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1209.Remove All Adjacent Duplicates in String II/Solution2.py",
+            "sourceFile": "Solution2.py"
+        }
+    ]
+}

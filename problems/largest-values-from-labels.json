@@ -1,0 +1,38 @@
+{
+    "problemName": "largest-values-from-labels",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestValsFromLabels(\r\n        self, values: List[int], labels: List[int], numWanted: int, useLimit: int\r\n    ) -> int:\r\n        ans = num = 0\r\n        cnt = Counter()\r\n        for v, l in sorted(zip(values, labels), reverse=True):\r\n            if cnt[l] < useLimit:\r\n                cnt[l] += 1\r\n                num += 1\r\n                ans += v\r\n                if num == numWanted:\r\n                    break\r\n        return ans",
+    "problemId": 1090,
+    "title": "Largest Values From Labels",
+    "problemUrl": "https://leetcode.com/problems/largest-values-from-labels/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1090.Largest Values From Labels/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1090.Largest Values From Labels/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1090.Largest Values From Labels/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1090.Largest Values From Labels/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1090.Largest Values From Labels/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1090.Largest Values From Labels/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

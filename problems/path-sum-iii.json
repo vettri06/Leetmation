@@ -1,0 +1,53 @@
+{
+    "problemName": "path-sum-iii",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def pathSum(self, root: Optional[TreeNode], targetSum: int) -> int:\r\n        def dfs(node, s):\r\n            if node is None:\r\n                return 0\r\n            s += node.val\r\n            ans = cnt[s - targetSum]\r\n            cnt[s] += 1\r\n            ans += dfs(node.left, s)\r\n            ans += dfs(node.right, s)\r\n            cnt[s] -= 1\r\n            return ans\r\n\r\n        cnt = Counter({0: 1})\r\n        return dfs(root, 0)",
+    "problemId": 437,
+    "title": "Path Sum III",
+    "problemUrl": "https://leetcode.com/problems/path-sum-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0437.Path Sum III/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0437.Path Sum III/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0437.Path Sum III/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0437.Path Sum III/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0437.Path Sum III/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0437.Path Sum III/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0437.Path Sum III/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0437.Path Sum III/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0437.Path Sum III/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

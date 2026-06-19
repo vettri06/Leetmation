@@ -1,0 +1,23 @@
+{
+    "problemName": "add-two-promises",
+    "language": "javascript",
+    "code": "var addTwoPromises = async function (promise1, promise2) {\r\n    return (await promise1) + (await promise2);\r\n};",
+    "problemId": 2723,
+    "title": "Add Two Promises",
+    "problemUrl": "https://leetcode.com/problems/add-two-promises/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2723.Add Two Promises/Solution.js",
+    "sourceFile": "Solution.js",
+    "sourceCandidates": [
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2723.Add Two Promises/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2723.Add Two Promises/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

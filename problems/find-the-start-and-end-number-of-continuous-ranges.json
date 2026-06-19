@@ -1,0 +1,23 @@
+{
+    "problemName": "find-the-start-and-end-number-of-continuous-ranges",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            log_id,\r\n            SUM(delta) OVER (ORDER BY log_id) AS pid\r\n        FROM\r\n            (\r\n                SELECT\r\n                    log_id,\r\n                    IF((log_id - LAG(log_id) OVER (ORDER BY log_id)) = 1, 0, 1) AS delta\r\n                FROM Logs\r\n            ) AS t\r\n    )\r\nSELECT MIN(log_id) AS start_id, MAX(log_id) AS end_id\r\nFROM T\r\nGROUP BY pid;",
+    "problemId": 1285,
+    "title": "Find the Start and End Number of Continuous Ranges",
+    "problemUrl": "https://leetcode.com/problems/find-the-start-and-end-number-of-continuous-ranges/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1285.Find the Start and End Number of Continuous Ranges/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1285.Find the Start and End Number of Continuous Ranges/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1285.Find the Start and End Number of Continuous Ranges/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

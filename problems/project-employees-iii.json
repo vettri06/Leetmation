@@ -1,0 +1,18 @@
+{
+    "problemName": "project-employees-iii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            *,\r\n            RANK() OVER (\r\n                PARTITION BY project_id\r\n                ORDER BY experience_years DESC\r\n            ) AS rk\r\n        FROM\r\n            Project\r\n            JOIN Employee USING (employee_id)\r\n    )\r\nSELECT project_id, employee_id\r\nFROM T\r\nWHERE rk = 1;",
+    "problemId": 1077,
+    "title": "Project Employees III",
+    "problemUrl": "https://leetcode.com/problems/project-employees-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1077.Project Employees III/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1077.Project Employees III/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

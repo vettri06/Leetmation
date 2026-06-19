@@ -1,0 +1,33 @@
+{
+    "problemName": "fraction-addition-and-subtraction",
+    "language": "python3",
+    "code": "class Solution:\r\n    def fractionAddition(self, expression: str) -> str:\r\n        x, y = 0, 6 * 7 * 8 * 9 * 10\r\n        if expression[0].isdigit():\r\n            expression = '+' + expression\r\n        i, n = 0, len(expression)\r\n        while i < n:\r\n            sign = -1 if expression[i] == '-' else 1\r\n            i += 1\r\n            j = i\r\n            while j < n and expression[j] not in '+-':\r\n                j += 1\r\n            s = expression[i:j]\r\n            a, b = s.split('/')\r\n            x += sign * int(a) * y // int(b)\r\n            i = j\r\n        z = gcd(x, y)\r\n        x //= z\r\n        y //= z\r\n        return f'{x}/{y}'",
+    "problemId": 592,
+    "title": "Fraction Addition and Subtraction",
+    "problemUrl": "https://leetcode.com/problems/fraction-addition-and-subtraction/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0592.Fraction Addition and Subtraction/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0592.Fraction Addition and Subtraction/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0592.Fraction Addition and Subtraction/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0592.Fraction Addition and Subtraction/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0592.Fraction Addition and Subtraction/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

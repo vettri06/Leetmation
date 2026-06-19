@@ -1,0 +1,18 @@
+{
+    "problemName": "viewers-turned-streamers",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            user_id,\r\n            session_type,\r\n            RANK() OVER (\r\n                PARTITION BY user_id\r\n                ORDER BY session_start\r\n            ) AS rk\r\n        FROM Sessions\r\n    )\r\nSELECT user_id, COUNT(1) AS sessions_count\r\nFROM\r\n    T AS t\r\n    JOIN Sessions AS s USING (user_id)\r\nWHERE rk = 1 AND t.session_type = 'Viewer' AND s.session_type = 'Streamer'\r\nGROUP BY 1\r\nORDER BY 2 DESC, 1 DESC;",
+    "problemId": 2995,
+    "title": "Viewers Turned Streamers",
+    "problemUrl": "https://leetcode.com/problems/viewers-turned-streamers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2995.Viewers Turned Streamers/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2995.Viewers Turned Streamers/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

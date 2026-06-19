@@ -1,0 +1,18 @@
+{
+    "problemName": "find-the-missing-ids",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH RECURSIVE\r\n    t AS (\r\n        SELECT\r\n            1 AS n\r\n        UNION ALL\r\n        SELECT\r\n            n + 1\r\n        FROM t\r\n        WHERE n < 100\r\n    )\r\nSELECT\r\n    n AS ids\r\nFROM t\r\nWHERE\r\n    n < (\r\n        SELECT\r\n            MAX(customer_id)\r\n        FROM Customers\r\n    )\r\n    AND n NOT IN (\r\n        SELECT\r\n            customer_id\r\n        FROM Customers\r\n    );",
+    "problemId": 1613,
+    "title": "Find the Missing IDs",
+    "problemUrl": "https://leetcode.com/problems/find-the-missing-ids/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1613.Find the Missing IDs/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1613.Find the Missing IDs/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

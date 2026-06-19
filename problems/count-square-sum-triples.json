@@ -1,0 +1,38 @@
+{
+    "problemName": "count-square-sum-triples",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countTriples(self, n: int) -> int:\r\n        ans = 0\r\n        for a in range(1, n):\r\n            for b in range(1, n):\r\n                x = a * a + b * b\r\n                c = int(sqrt(x))\r\n                if c <= n and c * c == x:\r\n                    ans += 1\r\n        return ans",
+    "problemId": 1925,
+    "title": "Count Square Sum Triples",
+    "problemUrl": "https://leetcode.com/problems/count-square-sum-triples/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1925.Count Square Sum Triples/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1925.Count Square Sum Triples/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1925.Count Square Sum Triples/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1925.Count Square Sum Triples/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1925.Count Square Sum Triples/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1925.Count Square Sum Triples/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

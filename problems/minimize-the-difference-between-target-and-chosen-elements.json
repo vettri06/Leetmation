@@ -1,0 +1,33 @@
+{
+    "problemName": "minimize-the-difference-between-target-and-chosen-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimizeTheDifference(self, mat: List[List[int]], target: int) -> int:\r\n        f = {0}\r\n        for row in mat:\r\n            f = set(a + b for a in f for b in row)\r\n        return min(abs(v - target) for v in f)",
+    "problemId": 1981,
+    "title": "Minimize the Difference Between Target and Chosen Elements",
+    "problemUrl": "https://leetcode.com/problems/minimize-the-difference-between-target-and-chosen-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1981.Minimize the Difference Between Target and Chosen Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1981.Minimize the Difference Between Target and Chosen Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1981.Minimize the Difference Between Target and Chosen Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1981.Minimize the Difference Between Target and Chosen Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1981.Minimize the Difference Between Target and Chosen Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

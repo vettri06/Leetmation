@@ -1,0 +1,18 @@
+{
+    "problemName": "group-sold-products-by-the-date",
+    "language": "mysql",
+    "code": "SELECT\r\n    sell_date,\r\n    COUNT(DISTINCT product) AS num_sold,\r\n    GROUP_CONCAT(DISTINCT product) AS products\r\nFROM Activities\r\nGROUP BY sell_date\r\nORDER BY sell_date;",
+    "problemId": 1484,
+    "title": "Group Sold Products By The Date",
+    "problemUrl": "https://leetcode.com/problems/group-sold-products-by-the-date/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1484.Group Sold Products By The Date/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1484.Group Sold Products By The Date/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

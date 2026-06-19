@@ -1,0 +1,28 @@
+{
+    "problemName": "print-zero-even-odd",
+    "language": "python3",
+    "code": "from threading import Semaphore\r\n\r\n\r\nclass ZeroEvenOdd:\r\n    def __init__(self, n):\r\n        self.n = n\r\n        self.z = Semaphore(1)\r\n        self.e = Semaphore(0)\r\n        self.o = Semaphore(0)\r\n\r\n    # printNumber(x) outputs \"x\", where x is an integer.\r\n    def zero(self, printNumber: 'Callable[[int], None]') -> None:\r\n        for i in range(self.n):\r\n            self.z.acquire()\r\n            printNumber(0)\r\n            if i % 2 == 0:\r\n                self.o.release()\r\n            else:\r\n                self.e.release()\r\n\r\n    def even(self, printNumber: 'Callable[[int], None]') -> None:\r\n        for i in range(2, self.n + 1, 2):\r\n            self.e.acquire()\r\n            printNumber(i)\r\n            self.z.release()\r\n\r\n    def odd(self, printNumber: 'Callable[[int], None]') -> None:\r\n        for i in range(1, self.n + 1, 2):\r\n            self.o.acquire()\r\n            printNumber(i)\r\n            self.z.release()",
+    "problemId": 1116,
+    "title": "Print Zero Even Odd",
+    "problemUrl": "https://leetcode.com/problems/print-zero-even-odd/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1116.Print Zero Even Odd/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1116.Print Zero Even Odd/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1116.Print Zero Even Odd/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1116.Print Zero Even Odd/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

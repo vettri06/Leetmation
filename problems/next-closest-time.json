@@ -1,0 +1,23 @@
+{
+    "problemName": "next-closest-time",
+    "language": "python3",
+    "code": "class Solution:\r\n    def nextClosestTime(self, time: str) -> str:\r\n        def check(t):\r\n            h, m = int(t[:2]), int(t[2:])\r\n            return 0 <= h < 24 and 0 <= m < 60\r\n\r\n        def dfs(curr):\r\n            if len(curr) == 4:\r\n                if not check(curr):\r\n                    return\r\n                nonlocal ans, d\r\n                p = int(curr[:2]) * 60 + int(curr[2:])\r\n                if t < p < t + d:\r\n                    d = p - t\r\n                    ans = curr[:2] + ':' + curr[2:]\r\n                return\r\n            for c in s:\r\n                dfs(curr + c)\r\n\r\n        s = {c for c in time if c != ':'}\r\n        t = int(time[:2]) * 60 + int(time[3:])\r\n        d = inf\r\n        ans = None\r\n        dfs('')\r\n        if ans is None:\r\n            mi = min(int(c) for c in s)\r\n            ans = f'{mi}{mi}:{mi}{mi}'\r\n        return ans",
+    "problemId": 681,
+    "title": "Next Closest Time",
+    "problemUrl": "https://leetcode.com/problems/next-closest-time/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0681.Next Closest Time/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0681.Next Closest Time/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0681.Next Closest Time/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

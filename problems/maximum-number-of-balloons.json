@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-number-of-balloons",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxNumberOfBalloons(self, text: str) -> int:\r\n        cnt = Counter(text)\r\n        cnt['o'] >>= 1\r\n        cnt['l'] >>= 1\r\n        return min(cnt[c] for c in 'balon')",
+    "problemId": 1189,
+    "title": "Maximum Number of Balloons",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-balloons/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1189.Maximum Number of Balloons/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1189.Maximum Number of Balloons/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1189.Maximum Number of Balloons/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1189.Maximum Number of Balloons/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1189.Maximum Number of Balloons/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1189.Maximum Number of Balloons/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1189.Maximum Number of Balloons/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "problemName": "is-object-empty",
+    "language": "javascript",
+    "code": "/**\r\n * @param {Object | Array} obj\r\n * @return {boolean}\r\n */\r\nvar isEmpty = function (obj) {\r\n    for (const x in obj) {\r\n        return false;\r\n    }\r\n    return true;\r\n};",
+    "problemId": 2727,
+    "title": "Is Object Empty",
+    "problemUrl": "https://leetcode.com/problems/is-object-empty/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2727.Is Object Empty/Solution.js",
+    "sourceFile": "Solution.js",
+    "sourceCandidates": [
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2727.Is Object Empty/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2727.Is Object Empty/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2727.Is Object Empty/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-to-equalize-arrays-using-swaps",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, nums1: list[int], nums2: list[int]) -> int:\r\n        cnt2 = Counter(nums2)\r\n        cnt1 = Counter()\r\n        for x in nums1:\r\n            if cnt2[x]:\r\n                cnt2[x] -= 1\r\n            else:\r\n                cnt1[x] += 1\r\n        ans = 0\r\n        for v in cnt1.values():\r\n            if v % 2 == 1:\r\n                return -1\r\n            ans += v // 2\r\n        for v in cnt2.values():\r\n            if v % 2 == 1:\r\n                return -1\r\n        return ans",
+    "problemId": 3868,
+    "title": "Minimum Cost to Equalize Arrays Using Swaps",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-equalize-arrays-using-swaps/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3868.Minimum Cost to Equalize Arrays Using Swaps/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3868.Minimum Cost to Equalize Arrays Using Swaps/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3868.Minimum Cost to Equalize Arrays Using Swaps/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3868.Minimum Cost to Equalize Arrays Using Swaps/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3868.Minimum Cost to Equalize Arrays Using Swaps/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3868.Minimum Cost to Equalize Arrays Using Swaps/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

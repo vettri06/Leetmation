@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-window-substring",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minWindow(self, s: str, t: str) -> str:\r\n        need = Counter(t)\r\n        window = Counter()\r\n        cnt = l = 0\r\n        k, mi = -1, inf\r\n        for r, c in enumerate(s):\r\n            window[c] += 1\r\n            if need[c] >= window[c]:\r\n                cnt += 1\r\n            while cnt == len(t):\r\n                if r - l + 1 < mi:\r\n                    mi = r - l + 1\r\n                    k = l\r\n                if need[s[l]] >= window[s[l]]:\r\n                    cnt -= 1\r\n                window[s[l]] -= 1\r\n                l += 1\r\n        return \"\" if k < 0 else s[k : k + mi]",
+    "problemId": 76,
+    "title": "Minimum Window Substring",
+    "problemUrl": "https://leetcode.com/problems/minimum-window-substring/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0076.Minimum Window Substring/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0076.Minimum Window Substring/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0076.Minimum Window Substring/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0076.Minimum Window Substring/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0076.Minimum Window Substring/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0076.Minimum Window Substring/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0076.Minimum Window Substring/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0076.Minimum Window Substring/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

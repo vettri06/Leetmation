@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-array-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minArraySum(self, nums: List[int], d: int, op1: int, op2: int) -> int:\r\n        n = len(nums)\r\n        f = [[[inf] * (op2 + 1) for _ in range(op1 + 1)] for _ in range(n + 1)]\r\n        f[0][0][0] = 0\r\n        for i, x in enumerate(nums, 1):\r\n            for j in range(op1 + 1):\r\n                for k in range(op2 + 1):\r\n                    f[i][j][k] = f[i - 1][j][k] + x\r\n                    if j > 0:\r\n                        f[i][j][k] = min(f[i][j][k], f[i - 1][j - 1][k] + (x + 1) // 2)\r\n                    if k > 0 and x >= d:\r\n                        f[i][j][k] = min(f[i][j][k], f[i - 1][j][k - 1] + (x - d))\r\n                    if j > 0 and k > 0:\r\n                        y = (x + 1) // 2\r\n                        if y >= d:\r\n                            f[i][j][k] = min(f[i][j][k], f[i - 1][j - 1][k - 1] + y - d)\r\n                        if x >= d:\r\n                            f[i][j][k] = min(\r\n                                f[i][j][k], f[i - 1][j - 1][k - 1] + (x - d + 1) // 2\r\n                            )\r\n        ans = inf\r\n        for j in range(op1 + 1):\r\n            for k in range(op2 + 1):\r\n                ans = min(ans, f[n][j][k])\r\n        return ans",
+    "problemId": 3366,
+    "title": "Minimum Array Sum",
+    "problemUrl": "https://leetcode.com/problems/minimum-array-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3366.Minimum Array Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3366.Minimum Array Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3366.Minimum Array Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3366.Minimum Array Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3366.Minimum Array Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3366.Minimum Array Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

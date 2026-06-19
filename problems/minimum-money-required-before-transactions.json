@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-money-required-before-transactions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumMoney(self, transactions: List[List[int]]) -> int:\r\n        s = sum(max(0, a - b) for a, b in transactions)\r\n        ans = 0\r\n        for a, b in transactions:\r\n            if a > b:\r\n                ans = max(ans, s + b)\r\n            else:\r\n                ans = max(ans, s + a)\r\n        return ans",
+    "problemId": 2412,
+    "title": "Minimum Money Required Before Transactions",
+    "problemUrl": "https://leetcode.com/problems/minimum-money-required-before-transactions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2412.Minimum Money Required Before Transactions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2412.Minimum Money Required Before Transactions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2412.Minimum Money Required Before Transactions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2412.Minimum Money Required Before Transactions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2412.Minimum Money Required Before Transactions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2412.Minimum Money Required Before Transactions/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2412.Minimum Money Required Before Transactions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2412.Minimum Money Required Before Transactions/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

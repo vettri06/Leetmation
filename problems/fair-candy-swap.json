@@ -1,0 +1,38 @@
+{
+    "problemName": "fair-candy-swap",
+    "language": "python3",
+    "code": "class Solution:\r\n    def fairCandySwap(self, aliceSizes: List[int], bobSizes: List[int]) -> List[int]:\r\n        diff = (sum(aliceSizes) - sum(bobSizes)) >> 1\r\n        s = set(bobSizes)\r\n        for a in aliceSizes:\r\n            if (b := (a - diff)) in s:\r\n                return [a, b]",
+    "problemId": 888,
+    "title": "Fair Candy Swap",
+    "problemUrl": "https://leetcode.com/problems/fair-candy-swap/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0888.Fair Candy Swap/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0888.Fair Candy Swap/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0888.Fair Candy Swap/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0888.Fair Candy Swap/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0888.Fair Candy Swap/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0888.Fair Candy Swap/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

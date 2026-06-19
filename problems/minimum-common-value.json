@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-common-value",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getCommon(self, nums1: List[int], nums2: List[int]) -> int:\r\n        i = j = 0\r\n        m, n = len(nums1), len(nums2)\r\n        while i < m and j < n:\r\n            if nums1[i] == nums2[j]:\r\n                return nums1[i]\r\n            if nums1[i] < nums2[j]:\r\n                i += 1\r\n            else:\r\n                j += 1\r\n        return -1",
+    "problemId": 2540,
+    "title": "Minimum Common Value",
+    "problemUrl": "https://leetcode.com/problems/minimum-common-value/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2540.Minimum Common Value/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2540.Minimum Common Value/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2540.Minimum Common Value/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2540.Minimum Common Value/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2540.Minimum Common Value/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2540.Minimum Common Value/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2540.Minimum Common Value/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2540.Minimum Common Value/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

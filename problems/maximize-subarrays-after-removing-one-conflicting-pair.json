@@ -1,0 +1,43 @@
+{
+    "problemName": "maximize-subarrays-after-removing-one-conflicting-pair",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSubarrays(self, n: int, conflictingPairs: List[List[int]]) -> int:\r\n        g = [[] for _ in range(n + 1)]\r\n        for a, b in conflictingPairs:\r\n            if a > b:\r\n                a, b = b, a\r\n            g[a].append(b)\r\n        cnt = [0] * (n + 2)\r\n        ans = add = 0\r\n        b1 = b2 = n + 1\r\n        for a in range(n, 0, -1):\r\n            for b in g[a]:\r\n                if b < b1:\r\n                    b2, b1 = b1, b\r\n                elif b < b2:\r\n                    b2 = b\r\n            ans += b1 - a\r\n            cnt[b1] += b2 - b1\r\n            add = max(add, cnt[b1])\r\n        ans += add\r\n        return ans",
+    "problemId": 3480,
+    "title": "Maximize Subarrays After Removing One Conflicting Pair",
+    "problemUrl": "https://leetcode.com/problems/maximize-subarrays-after-removing-one-conflicting-pair/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3480.Maximize Subarrays After Removing One Conflicting Pair/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3480.Maximize Subarrays After Removing One Conflicting Pair/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3480.Maximize Subarrays After Removing One Conflicting Pair/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3480.Maximize Subarrays After Removing One Conflicting Pair/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3480.Maximize Subarrays After Removing One Conflicting Pair/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3480.Maximize Subarrays After Removing One Conflicting Pair/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3480.Maximize Subarrays After Removing One Conflicting Pair/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

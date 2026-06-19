@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-average-subarray-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMaxAverage(self, nums: List[int], k: int) -> float:\r\n        ans = s = sum(nums[:k])\r\n        for i in range(k, len(nums)):\r\n            s += nums[i] - nums[i - k]\r\n            ans = max(ans, s)\r\n        return ans / k",
+    "problemId": 643,
+    "title": "Maximum Average Subarray I",
+    "problemUrl": "https://leetcode.com/problems/maximum-average-subarray-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0643.Maximum Average Subarray I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0643.Maximum Average Subarray I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0643.Maximum Average Subarray I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0643.Maximum Average Subarray I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0643.Maximum Average Subarray I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0643.Maximum Average Subarray I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0643.Maximum Average Subarray I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

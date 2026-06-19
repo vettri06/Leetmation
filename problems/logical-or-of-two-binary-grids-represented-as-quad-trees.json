@@ -1,0 +1,33 @@
+{
+    "problemName": "logical-or-of-two-binary-grids-represented-as-quad-trees",
+    "language": "python3",
+    "code": "\"\"\"\r\n# Definition for a QuadTree node.\r\nclass Node:\r\n    def __init__(self, val, isLeaf, topLeft, topRight, bottomLeft, bottomRight):\r\n        self.val = val\r\n        self.isLeaf = isLeaf\r\n        self.topLeft = topLeft\r\n        self.topRight = topRight\r\n        self.bottomLeft = bottomLeft\r\n        self.bottomRight = bottomRight\r\n\"\"\"\r\n\r\n\r\nclass Solution:\r\n    def intersect(self, quadTree1: \"Node\", quadTree2: \"Node\") -> \"Node\":\r\n        def dfs(t1, t2):\r\n            if t1.isLeaf and t2.isLeaf:\r\n                return Node(t1.val or t2.val, True)\r\n            if t1.isLeaf:\r\n                return t1 if t1.val else t2\r\n            if t2.isLeaf:\r\n                return t2 if t2.val else t1\r\n            res = Node()\r\n            res.topLeft = dfs(t1.topLeft, t2.topLeft)\r\n            res.topRight = dfs(t1.topRight, t2.topRight)\r\n            res.bottomLeft = dfs(t1.bottomLeft, t2.bottomLeft)\r\n            res.bottomRight = dfs(t1.bottomRight, t2.bottomRight)\r\n            isLeaf = (\r\n                res.topLeft.isLeaf\r\n                and res.topRight.isLeaf\r\n                and res.bottomLeft.isLeaf\r\n                and res.bottomRight.isLeaf\r\n            )\r\n            sameVal = (\r\n                res.topLeft.val\r\n                == res.topRight.val\r\n                == res.bottomLeft.val\r\n                == res.bottomRight.val\r\n            )\r\n            if isLeaf and sameVal:\r\n                res = res.topLeft\r\n            return res\r\n\r\n        return dfs(quadTree1, quadTree2)",
+    "problemId": 558,
+    "title": "Logical OR of Two Binary Grids Represented as Quad-Trees",
+    "problemUrl": "https://leetcode.com/problems/logical-or-of-two-binary-grids-represented-as-quad-trees/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0558.Logical OR of Two Binary Grids Represented as Quad-Trees/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0558.Logical OR of Two Binary Grids Represented as Quad-Trees/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0558.Logical OR of Two Binary Grids Represented as Quad-Trees/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0558.Logical OR of Two Binary Grids Represented as Quad-Trees/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0558.Logical OR of Two Binary Grids Represented as Quad-Trees/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

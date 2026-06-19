@@ -1,0 +1,43 @@
+{
+    "problemName": "reordered-power-of-2",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reorderedPowerOf2(self, n: int) -> bool:\r\n        def f(x: int) -> List[int]:\r\n            cnt = [0] * 10\r\n            while x:\r\n                x, v = divmod(x, 10)\r\n                cnt[v] += 1\r\n            return cnt\r\n\r\n        target = f(n)\r\n        i = 1\r\n        while i <= 10**9:\r\n            if f(i) == target:\r\n                return True\r\n            i <<= 1\r\n        return False",
+    "problemId": 869,
+    "title": "Reordered Power of 2",
+    "problemUrl": "https://leetcode.com/problems/reordered-power-of-2/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0869.Reordered Power of 2/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0869.Reordered Power of 2/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0869.Reordered Power of 2/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0869.Reordered Power of 2/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0869.Reordered Power of 2/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0869.Reordered Power of 2/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0869.Reordered Power of 2/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

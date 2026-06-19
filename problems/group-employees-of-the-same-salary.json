@@ -1,0 +1,18 @@
+{
+    "problemName": "group-employees-of-the-same-salary",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    S AS (\r\n        SELECT salary\r\n        FROM Employees\r\n        GROUP BY salary\r\n        HAVING COUNT(1) > 1\r\n    ),\r\n    T AS (\r\n        SELECT salary, ROW_NUMBER() OVER (ORDER BY salary) AS team_id\r\n        FROM S\r\n    )\r\nSELECT e.*, t.team_id\r\nFROM\r\n    Employees AS e\r\n    JOIN T AS t ON e.salary = t.salary\r\nORDER BY 4, 1;",
+    "problemId": 1875,
+    "title": "Group Employees of the Same Salary",
+    "problemUrl": "https://leetcode.com/problems/group-employees-of-the-same-salary/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1875.Group Employees of the Same Salary/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1875.Group Employees of the Same Salary/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

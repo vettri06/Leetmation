@@ -1,0 +1,18 @@
+{
+    "problemName": "reshape-data-pivot",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef pivotTable(weather: pd.DataFrame) -> pd.DataFrame:\r\n    return weather.pivot(index='month', columns='city', values='temperature')",
+    "problemId": 2889,
+    "title": "Reshape Data Pivot",
+    "problemUrl": "https://leetcode.com/problems/reshape-data-pivot/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2889.Reshape Data Pivot/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2889.Reshape Data Pivot/Solution.py",
+            "sourceFile": "Solution.py"
+        }
+    ]
+}

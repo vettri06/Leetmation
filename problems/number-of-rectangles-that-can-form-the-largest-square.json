@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-rectangles-that-can-form-the-largest-square",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countGoodRectangles(self, rectangles: List[List[int]]) -> int:\r\n        ans = mx = 0\r\n        for l, w in rectangles:\r\n            x = min(l, w)\r\n            if mx < x:\r\n                ans = 1\r\n                mx = x\r\n            elif mx == x:\r\n                ans += 1\r\n        return ans",
+    "problemId": 1725,
+    "title": "Number Of Rectangles That Can Form The Largest Square",
+    "problemUrl": "https://leetcode.com/problems/number-of-rectangles-that-can-form-the-largest-square/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1725.Number Of Rectangles That Can Form The Largest Square/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1725.Number Of Rectangles That Can Form The Largest Square/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1725.Number Of Rectangles That Can Form The Largest Square/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1725.Number Of Rectangles That Can Form The Largest Square/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1725.Number Of Rectangles That Can Form The Largest Square/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1725.Number Of Rectangles That Can Form The Largest Square/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

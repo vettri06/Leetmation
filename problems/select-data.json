@@ -1,0 +1,18 @@
+{
+    "problemName": "select-data",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef selectData(students: pd.DataFrame) -> pd.DataFrame:\r\n    return students[students['student_id'] == 101][['name', 'age']]",
+    "problemId": 2880,
+    "title": "Select Data",
+    "problemUrl": "https://leetcode.com/problems/select-data/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2880.Select Data/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2880.Select Data/Solution.py",
+            "sourceFile": "Solution.py"
+        }
+    ]
+}

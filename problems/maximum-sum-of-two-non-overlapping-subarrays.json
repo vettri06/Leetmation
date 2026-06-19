@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-sum-of-two-non-overlapping-subarrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSumTwoNoOverlap(self, nums: List[int], firstLen: int, secondLen: int) -> int:\r\n        n = len(nums)\r\n        s = list(accumulate(nums, initial=0))\r\n        ans = t = 0\r\n        i = firstLen\r\n        while i + secondLen - 1 < n:\r\n            t = max(t, s[i] - s[i - firstLen])\r\n            ans = max(ans, t + s[i + secondLen] - s[i])\r\n            i += 1\r\n        t = 0\r\n        i = secondLen\r\n        while i + firstLen - 1 < n:\r\n            t = max(t, s[i] - s[i - secondLen])\r\n            ans = max(ans, t + s[i + firstLen] - s[i])\r\n            i += 1\r\n        return ans",
+    "problemId": 1031,
+    "title": "Maximum Sum of Two Non-Overlapping Subarrays",
+    "problemUrl": "https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1031.Maximum Sum of Two Non-Overlapping Subarrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1031.Maximum Sum of Two Non-Overlapping Subarrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1031.Maximum Sum of Two Non-Overlapping Subarrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1031.Maximum Sum of Two Non-Overlapping Subarrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1031.Maximum Sum of Two Non-Overlapping Subarrays/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

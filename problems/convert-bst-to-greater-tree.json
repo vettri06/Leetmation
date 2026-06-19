@@ -1,0 +1,58 @@
+{
+    "problemName": "convert-bst-to-greater-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def convertBST(self, root: TreeNode) -> TreeNode:\r\n        def dfs(root):\r\n            nonlocal s\r\n            if root is None:\r\n                return\r\n            dfs(root.right)\r\n            s += root.val\r\n            root.val = s\r\n            dfs(root.left)\r\n\r\n        s = 0\r\n        dfs(root)\r\n        return root",
+    "problemId": 538,
+    "title": "Convert BST to Greater Tree",
+    "problemUrl": "https://leetcode.com/problems/convert-bst-to-greater-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0538.Convert BST to Greater Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0538.Convert BST to Greater Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0538.Convert BST to Greater Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0538.Convert BST to Greater Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0538.Convert BST to Greater Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0538.Convert BST to Greater Tree/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0538.Convert BST to Greater Tree/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0538.Convert BST to Greater Tree/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0538.Convert BST to Greater Tree/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0538.Convert BST to Greater Tree/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

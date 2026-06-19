@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-moves-to-clean-the-classroom",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minMoves(self, classroom: List[str], energy: int) -> int:\r\n        m, n = len(classroom), len(classroom[0])\r\n        d = [[0] * n for _ in range(m)]\r\n        x = y = cnt = 0\r\n        for i, row in enumerate(classroom):\r\n            for j, c in enumerate(row):\r\n                if c == \"S\":\r\n                    x, y = i, j\r\n                elif c == \"L\":\r\n                    d[i][j] = cnt\r\n                    cnt += 1\r\n        if cnt == 0:\r\n            return 0\r\n        vis = [\r\n            [[[False] * (1 << cnt) for _ in range(energy + 1)] for _ in range(n)]\r\n            for _ in range(m)\r\n        ]\r\n        q = [(x, y, energy, (1 << cnt) - 1)]\r\n        vis[x][y][energy][(1 << cnt) - 1] = True\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        ans = 0\r\n        while q:\r\n            t = q\r\n            q = []\r\n            for i, j, cur_energy, mask in t:\r\n                if mask == 0:\r\n                    return ans\r\n                if cur_energy <= 0:\r\n                    continue\r\n                for k in range(4):\r\n                    x, y = i + dirs[k], j + dirs[k + 1]\r\n                    if 0 <= x < m and 0 <= y < n and classroom[x][y] != \"X\":\r\n                        nxt_energy = (\r\n                            energy if classroom[x][y] == \"R\" else cur_energy - 1\r\n                        )\r\n                        nxt_mask = mask\r\n                        if classroom[x][y] == \"L\":\r\n                            nxt_mask &= ~(1 << d[x][y])\r\n                        if not vis[x][y][nxt_energy][nxt_mask]:\r\n                            vis[x][y][nxt_energy][nxt_mask] = True\r\n                            q.append((x, y, nxt_energy, nxt_mask))\r\n            ans += 1\r\n        return -1",
+    "problemId": 3568,
+    "title": "Minimum Moves to Clean the Classroom",
+    "problemUrl": "https://leetcode.com/problems/minimum-moves-to-clean-the-classroom/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3568.Minimum Moves to Clean the Classroom/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3568.Minimum Moves to Clean the Classroom/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3568.Minimum Moves to Clean the Classroom/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3568.Minimum Moves to Clean the Classroom/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3568.Minimum Moves to Clean the Classroom/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "problemName": "remove-digit-from-number-to-maximize-result",
+    "language": "python3",
+    "code": "class Solution:\r\n    def removeDigit(self, number: str, digit: str) -> str:\r\n        return max(\r\n            number[:i] + number[i + 1 :] for i, d in enumerate(number) if d == digit\r\n        )",
+    "problemId": 2259,
+    "title": "Remove Digit From Number to Maximize Result",
+    "problemUrl": "https://leetcode.com/problems/remove-digit-from-number-to-maximize-result/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2259.Remove Digit From Number to Maximize Result/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2259.Remove Digit From Number to Maximize Result/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2259.Remove Digit From Number to Maximize Result/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2259.Remove Digit From Number to Maximize Result/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2259.Remove Digit From Number to Maximize Result/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2259.Remove Digit From Number to Maximize Result/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2259.Remove Digit From Number to Maximize Result/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2259.Remove Digit From Number to Maximize Result/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2259.Remove Digit From Number to Maximize Result/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2259.Remove Digit From Number to Maximize Result/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

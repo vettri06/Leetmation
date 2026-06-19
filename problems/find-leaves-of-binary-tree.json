@@ -1,0 +1,43 @@
+{
+    "problemName": "find-leaves-of-binary-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def findLeaves(self, root: Optional[TreeNode]) -> List[List[int]]:\r\n        def dfs(root: Optional[TreeNode]) -> int:\r\n            if root is None:\r\n                return 0\r\n            l, r = dfs(root.left), dfs(root.right)\r\n            h = max(l, r)\r\n            if len(ans) == h:\r\n                ans.append([])\r\n            ans[h].append(root.val)\r\n            return h + 1\r\n\r\n        ans = []\r\n        dfs(root)\r\n        return ans",
+    "problemId": 366,
+    "title": "Find Leaves of Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/find-leaves-of-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0366.Find Leaves of Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0366.Find Leaves of Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0366.Find Leaves of Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0366.Find Leaves of Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0366.Find Leaves of Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0366.Find Leaves of Binary Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0366.Find Leaves of Binary Tree/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

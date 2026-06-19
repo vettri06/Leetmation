@@ -1,0 +1,38 @@
+{
+    "problemName": "encode-string-with-shortest-length",
+    "language": "python3",
+    "code": "class Solution:\r\n    def encode(self, s: str) -> str:\r\n        def g(i: int, j: int) -> str:\r\n            t = s[i : j + 1]\r\n            if len(t) < 5:\r\n                return t\r\n            k = (t + t).index(t, 1)\r\n            if k < len(t):\r\n                cnt = len(t) // k\r\n                return f\"{cnt}[{f[i][i + k - 1]}]\"\r\n            return t\r\n\r\n        n = len(s)\r\n        f = [[None] * n for _ in range(n)]\r\n        for i in range(n - 1, -1, -1):\r\n            for j in range(i, n):\r\n                f[i][j] = g(i, j)\r\n                if j - i + 1 > 4:\r\n                    for k in range(i, j):\r\n                        t = f[i][k] + f[k + 1][j]\r\n                        if len(f[i][j]) > len(t):\r\n                            f[i][j] = t\r\n        return f[0][-1]",
+    "problemId": 471,
+    "title": "Encode String with Shortest Length",
+    "problemUrl": "https://leetcode.com/problems/encode-string-with-shortest-length/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0471.Encode String with Shortest Length/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0471.Encode String with Shortest Length/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0471.Encode String with Shortest Length/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0471.Encode String with Shortest Length/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0471.Encode String with Shortest Length/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0471.Encode String with Shortest Length/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

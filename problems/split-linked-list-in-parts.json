@@ -1,0 +1,38 @@
+{
+    "problemName": "split-linked-list-in-parts",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def splitListToParts(\r\n        self, head: Optional[ListNode], k: int\r\n    ) -> List[Optional[ListNode]]:\r\n        n = 0\r\n        cur = head\r\n        while cur:\r\n            n += 1\r\n            cur = cur.next\r\n        cnt, mod = divmod(n, k)\r\n        ans = [None] * k\r\n        cur = head\r\n        for i in range(k):\r\n            if cur is None:\r\n                break\r\n            ans[i] = cur\r\n            m = cnt + int(i < mod)\r\n            for _ in range(1, m):\r\n                cur = cur.next\r\n            nxt = cur.next\r\n            cur.next = None\r\n            cur = nxt\r\n        return ans",
+    "problemId": 725,
+    "title": "Split Linked List in Parts",
+    "problemUrl": "https://leetcode.com/problems/split-linked-list-in-parts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0725.Split Linked List in Parts/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0725.Split Linked List in Parts/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0725.Split Linked List in Parts/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0725.Split Linked List in Parts/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0725.Split Linked List in Parts/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0725.Split Linked List in Parts/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

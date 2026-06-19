@@ -1,0 +1,18 @@
+{
+    "problemName": "array-of-objects-to-matrix",
+    "language": "typescript",
+    "code": "function jsonToMatrix(arr: any[]): (string | number | boolean | null)[] {\r\n    const dfs = (key: string, obj: any) => {\r\n        if (\r\n            typeof obj === 'number' ||\r\n            typeof obj === 'string' ||\r\n            typeof obj === 'boolean' ||\r\n            obj === null\r\n        ) {\r\n            return { [key]: obj };\r\n        }\r\n        const res: any[] = [];\r\n        for (const [k, v] of Object.entries(obj)) {\r\n            const newKey = key ? `${key}.${k}` : `${k}`;\r\n            res.push(dfs(newKey, v));\r\n        }\r\n        return res.flat();\r\n    };\r\n\r\n    const kv = arr.map(obj => dfs('', obj));\r\n    const keys = [\r\n        ...new Set(\r\n            kv\r\n                .flat()\r\n                .map(obj => Object.keys(obj))\r\n                .flat(),\r\n        ),\r\n    ].sort();\r\n    const ans: any[] = [keys];\r\n    for (const row of kv) {\r\n        const newRow: any[] = [];\r\n        for (const key of keys) {\r\n            const v = row.find(r => r.hasOwnProperty(key))?.[key];\r\n            newRow.push(v === undefined ? '' : v);\r\n        }\r\n        ans.push(newRow);\r\n    }\r\n    return ans;\r\n}",
+    "problemId": 2675,
+    "title": "Array of Objects to Matrix",
+    "problemUrl": "https://leetcode.com/problems/array-of-objects-to-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2675.Array of Objects to Matrix/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2675.Array of Objects to Matrix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

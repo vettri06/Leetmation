@@ -1,0 +1,38 @@
+{
+    "problemName": "two-sum-bsts",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def twoSumBSTs(\r\n        self, root1: Optional[TreeNode], root2: Optional[TreeNode], target: int\r\n    ) -> bool:\r\n        def dfs(root: Optional[TreeNode], i: int):\r\n            if root is None:\r\n                return\r\n            dfs(root.left, i)\r\n            nums[i].append(root.val)\r\n            dfs(root.right, i)\r\n\r\n        nums = [[], []]\r\n        dfs(root1, 0)\r\n        dfs(root2, 1)\r\n        i, j = 0, len(nums[1]) - 1\r\n        while i < len(nums[0]) and ~j:\r\n            x = nums[0][i] + nums[1][j]\r\n            if x == target:\r\n                return True\r\n            if x < target:\r\n                i += 1\r\n            else:\r\n                j -= 1\r\n        return False",
+    "problemId": 1214,
+    "title": "Two Sum BSTs",
+    "problemUrl": "https://leetcode.com/problems/two-sum-bsts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1214.Two Sum BSTs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1214.Two Sum BSTs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1214.Two Sum BSTs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1214.Two Sum BSTs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1214.Two Sum BSTs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1214.Two Sum BSTs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

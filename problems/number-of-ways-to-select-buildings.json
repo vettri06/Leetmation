@@ -1,0 +1,33 @@
+{
+    "problemName": "number-of-ways-to-select-buildings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfWays(self, s: str) -> int:\r\n        l = [0, 0]\r\n        r = [s.count(\"0\"), s.count(\"1\")]\r\n        ans = 0\r\n        for x in map(int, s):\r\n            r[x] -= 1\r\n            ans += l[x ^ 1] * r[x ^ 1]\r\n            l[x] += 1\r\n        return ans",
+    "problemId": 2222,
+    "title": "Number of Ways to Select Buildings",
+    "problemUrl": "https://leetcode.com/problems/number-of-ways-to-select-buildings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2222.Number of Ways to Select Buildings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2222.Number of Ways to Select Buildings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2222.Number of Ways to Select Buildings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2222.Number of Ways to Select Buildings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2222.Number of Ways to Select Buildings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

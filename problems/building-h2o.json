@@ -1,0 +1,28 @@
+{
+    "problemName": "building-h2o",
+    "language": "python3",
+    "code": "from threading import Semaphore\r\n\r\n\r\nclass H2O:\r\n    def __init__(self):\r\n        self.h = Semaphore(2)\r\n        self.o = Semaphore(0)\r\n\r\n    def hydrogen(self, releaseHydrogen: \"Callable[[], None]\") -> None:\r\n        self.h.acquire()\r\n        # releaseHydrogen() outputs \"H\". Do not change or remove this line.\r\n        releaseHydrogen()\r\n        if self.h._value == 0:\r\n            self.o.release()\r\n\r\n    def oxygen(self, releaseOxygen: \"Callable[[], None]\") -> None:\r\n        self.o.acquire()\r\n        # releaseOxygen() outputs \"O\". Do not change or remove this line.\r\n        releaseOxygen()\r\n        self.h.release(2)",
+    "problemId": 1117,
+    "title": "Building H2O",
+    "problemUrl": "https://leetcode.com/problems/building-h2o/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1117.Building H2O/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1117.Building H2O/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1117.Building H2O/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1117.Building H2O/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

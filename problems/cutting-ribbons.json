@@ -1,0 +1,48 @@
+{
+    "problemName": "cutting-ribbons",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxLength(self, ribbons: List[int], k: int) -> int:\r\n        left, right = 0, max(ribbons)\r\n        while left < right:\r\n            mid = (left + right + 1) >> 1\r\n            cnt = sum(x // mid for x in ribbons)\r\n            if cnt >= k:\r\n                left = mid\r\n            else:\r\n                right = mid - 1\r\n        return left",
+    "problemId": 1891,
+    "title": "Cutting Ribbons",
+    "problemUrl": "https://leetcode.com/problems/cutting-ribbons/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1891.Cutting Ribbons/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1891.Cutting Ribbons/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1891.Cutting Ribbons/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1891.Cutting Ribbons/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1891.Cutting Ribbons/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1891.Cutting Ribbons/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1891.Cutting Ribbons/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1891.Cutting Ribbons/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

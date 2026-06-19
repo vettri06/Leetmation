@@ -1,0 +1,38 @@
+{
+    "problemName": "create-target-array-in-the-given-order",
+    "language": "python3",
+    "code": "class Solution:\r\n    def createTargetArray(self, nums: List[int], index: List[int]) -> List[int]:\r\n        target = []\r\n        for x, i in zip(nums, index):\r\n            target.insert(i, x)\r\n        return target",
+    "problemId": 1389,
+    "title": "Create Target Array in the Given Order",
+    "problemUrl": "https://leetcode.com/problems/create-target-array-in-the-given-order/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1389.Create Target Array in the Given Order/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1389.Create Target Array in the Given Order/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1389.Create Target Array in the Given Order/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1389.Create Target Array in the Given Order/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1389.Create Target Array in the Given Order/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1389.Create Target Array in the Given Order/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

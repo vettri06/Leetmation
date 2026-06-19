@@ -1,0 +1,38 @@
+{
+    "problemName": "path-crossing",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isPathCrossing(self, path: str) -> bool:\r\n        i = j = 0\r\n        vis = {(0, 0)}\r\n        for c in path:\r\n            match c:\r\n                case 'N':\r\n                    i -= 1\r\n                case 'S':\r\n                    i += 1\r\n                case 'E':\r\n                    j += 1\r\n                case 'W':\r\n                    j -= 1\r\n            if (i, j) in vis:\r\n                return True\r\n            vis.add((i, j))\r\n        return False",
+    "problemId": 1496,
+    "title": "Path Crossing",
+    "problemUrl": "https://leetcode.com/problems/path-crossing/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1496.Path Crossing/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1496.Path Crossing/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1496.Path Crossing/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1496.Path Crossing/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1496.Path Crossing/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1496.Path Crossing/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

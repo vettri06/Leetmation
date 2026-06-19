@@ -1,0 +1,48 @@
+{
+    "problemName": "water-bottles-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxBottlesDrunk(self, numBottles: int, numExchange: int) -> int:\r\n        ans = numBottles\r\n        while numBottles >= numExchange:\r\n            numBottles -= numExchange\r\n            numExchange += 1\r\n            ans += 1\r\n            numBottles += 1\r\n        return ans",
+    "problemId": 3100,
+    "title": "Water Bottles II",
+    "problemUrl": "https://leetcode.com/problems/water-bottles-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3100.Water Bottles II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3100.Water Bottles II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3100.Water Bottles II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3100.Water Bottles II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3100.Water Bottles II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3100.Water Bottles II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3100.Water Bottles II/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3100.Water Bottles II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

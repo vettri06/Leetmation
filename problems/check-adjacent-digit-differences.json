@@ -1,0 +1,38 @@
+{
+    "problemName": "check-adjacent-digit-differences",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isAdjacentDiffAtMostTwo(self, s: str) -> bool:\r\n        return all(abs(x - y) <= 2 for x, y in pairwise(map(int, list(s))))",
+    "problemId": 3931,
+    "title": "Check Adjacent Digit Differences",
+    "problemUrl": "https://leetcode.com/problems/check-adjacent-digit-differences/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3931.Check Adjacent Digit Differences/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3931.Check Adjacent Digit Differences/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3931.Check Adjacent Digit Differences/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3931.Check Adjacent Digit Differences/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3931.Check Adjacent Digit Differences/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3931.Check Adjacent Digit Differences/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "design-tic-tac-toe",
+    "language": "python3",
+    "code": "class TicTacToe:\r\n\r\n    def __init__(self, n: int):\r\n        self.n = n\r\n        self.cnt = [defaultdict(int), defaultdict(int)]\r\n\r\n    def move(self, row: int, col: int, player: int) -> int:\r\n        cur = self.cnt[player - 1]\r\n        n = self.n\r\n        cur[row] += 1\r\n        cur[n + col] += 1\r\n        if row == col:\r\n            cur[n << 1] += 1\r\n        if row + col == n - 1:\r\n            cur[n << 1 | 1] += 1\r\n        if any(cur[i] == n for i in (row, n + col, n << 1, n << 1 | 1)):\r\n            return player\r\n        return 0\r\n\r\n\r\n# Your TicTacToe object will be instantiated and called as such:\r\n# obj = TicTacToe(n)\r\n# param_1 = obj.move(row,col,player)",
+    "problemId": 348,
+    "title": "Design Tic-Tac-Toe",
+    "problemUrl": "https://leetcode.com/problems/design-tic-tac-toe/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0348.Design Tic-Tac-Toe/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0348.Design Tic-Tac-Toe/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0348.Design Tic-Tac-Toe/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0348.Design Tic-Tac-Toe/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0348.Design Tic-Tac-Toe/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0348.Design Tic-Tac-Toe/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "find-shortest-path-with-k-hops",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shortestPathWithHops(\r\n        self, n: int, edges: List[List[int]], s: int, d: int, k: int\r\n    ) -> int:\r\n        g = [[] for _ in range(n)]\r\n        for u, v, w in edges:\r\n            g[u].append((v, w))\r\n            g[v].append((u, w))\r\n        dist = [[inf] * (k + 1) for _ in range(n)]\r\n        dist[s][0] = 0\r\n        pq = [(0, s, 0)]\r\n        while pq:\r\n            dis, u, t = heappop(pq)\r\n            for v, w in g[u]:\r\n                if t + 1 <= k and dist[v][t + 1] > dis:\r\n                    dist[v][t + 1] = dis\r\n                    heappush(pq, (dis, v, t + 1))\r\n                if dist[v][t] > dis + w:\r\n                    dist[v][t] = dis + w\r\n                    heappush(pq, (dis + w, v, t))\r\n        return int(min(dist[d]))",
+    "problemId": 2714,
+    "title": "Find Shortest Path with K Hops",
+    "problemUrl": "https://leetcode.com/problems/find-shortest-path-with-k-hops/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2714.Find Shortest Path with K Hops/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2714.Find Shortest Path with K Hops/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2714.Find Shortest Path with K Hops/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2714.Find Shortest Path with K Hops/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2714.Find Shortest Path with K Hops/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

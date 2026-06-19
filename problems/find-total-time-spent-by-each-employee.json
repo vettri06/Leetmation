@@ -1,0 +1,18 @@
+{
+    "problemName": "find-total-time-spent-by-each-employee",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT event_day AS day, emp_id, SUM(out_time - in_time) AS total_time\r\nFROM Employees\r\nGROUP BY 1, 2;",
+    "problemId": 1741,
+    "title": "Find Total Time Spent by Each Employee",
+    "problemUrl": "https://leetcode.com/problems/find-total-time-spent-by-each-employee/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1741.Find Total Time Spent by Each Employee/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1741.Find Total Time Spent by Each Employee/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

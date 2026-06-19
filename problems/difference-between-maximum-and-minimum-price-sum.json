@@ -1,0 +1,33 @@
+{
+    "problemName": "difference-between-maximum-and-minimum-price-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxOutput(self, n: int, edges: List[List[int]], price: List[int]) -> int:\r\n        def dfs(i, fa):\r\n            a, b = price[i], 0\r\n            for j in g[i]:\r\n                if j != fa:\r\n                    c, d = dfs(j, i)\r\n                    nonlocal ans\r\n                    ans = max(ans, a + d, b + c)\r\n                    a = max(a, price[i] + c)\r\n                    b = max(b, price[i] + d)\r\n            return a, b\r\n\r\n        g = defaultdict(list)\r\n        for a, b in edges:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n        ans = 0\r\n        dfs(0, -1)\r\n        return ans",
+    "problemId": 2538,
+    "title": "Difference Between Maximum and Minimum Price Sum",
+    "problemUrl": "https://leetcode.com/problems/difference-between-maximum-and-minimum-price-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2538.Difference Between Maximum and Minimum Price Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2538.Difference Between Maximum and Minimum Price Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2538.Difference Between Maximum and Minimum Price Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2538.Difference Between Maximum and Minimum Price Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2538.Difference Between Maximum and Minimum Price Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

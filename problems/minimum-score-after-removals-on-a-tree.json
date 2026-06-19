@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-score-after-removals-on-a-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumScore(self, nums: List[int], edges: List[List[int]]) -> int:\r\n        def dfs(i: int, fa: int) -> int:\r\n            res = nums[i]\r\n            for j in g[i]:\r\n                if j != fa:\r\n                    res ^= dfs(j, i)\r\n            return res\r\n\r\n        def dfs2(i: int, fa: int) -> int:\r\n            nonlocal s, s1, ans\r\n            res = nums[i]\r\n            for j in g[i]:\r\n                if j != fa:\r\n                    s2 = dfs2(j, i)\r\n                    res ^= s2\r\n                    mx = max(s ^ s1, s2, s1 ^ s2)\r\n                    mn = min(s ^ s1, s2, s1 ^ s2)\r\n                    ans = min(ans, mx - mn)\r\n            return res\r\n\r\n        g = defaultdict(list)\r\n        for a, b in edges:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n        s = reduce(lambda x, y: x ^ y, nums)\r\n        n = len(nums)\r\n        ans = inf\r\n        for i in range(n):\r\n            for j in g[i]:\r\n                s1 = dfs(i, j)\r\n                dfs2(i, j)\r\n        return ans",
+    "problemId": 2322,
+    "title": "Minimum Score After Removals on a Tree",
+    "problemUrl": "https://leetcode.com/problems/minimum-score-after-removals-on-a-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2322.Minimum Score After Removals on a Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2322.Minimum Score After Removals on a Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2322.Minimum Score After Removals on a Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2322.Minimum Score After Removals on a Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2322.Minimum Score After Removals on a Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2322.Minimum Score After Removals on a Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2322.Minimum Score After Removals on a Tree/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2322.Minimum Score After Removals on a Tree/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "power-of-heroes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumOfPower(self, nums: List[int]) -> int:\r\n        mod = 10**9 + 7\r\n        nums.sort()\r\n        ans = 0\r\n        p = 0\r\n        for x in nums[::-1]:\r\n            ans = (ans + (x * x % mod) * x) % mod\r\n            ans = (ans + x * p) % mod\r\n            p = (p * 2 + x * x) % mod\r\n        return ans",
+    "problemId": 2681,
+    "title": "Power of Heroes",
+    "problemUrl": "https://leetcode.com/problems/power-of-heroes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2681.Power of Heroes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2681.Power of Heroes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2681.Power of Heroes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2681.Power of Heroes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2681.Power of Heroes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2681.Power of Heroes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

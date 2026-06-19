@@ -1,0 +1,23 @@
+{
+    "problemName": "first-letter-capitalization",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef process_text(user_content: pd.DataFrame) -> pd.DataFrame:\r\n    user_content[\"converted_text\"] = user_content[\"content_text\"].apply(\r\n        lambda text: \" \".join(word.capitalize() for word in text.split(\" \"))\r\n    )\r\n    return user_content[[\"content_id\", \"content_text\", \"converted_text\"]].rename(\r\n        columns={\"content_text\": \"original_text\"}\r\n    )",
+    "problemId": 3368,
+    "title": "First Letter Capitalization",
+    "problemUrl": "https://leetcode.com/problems/first-letter-capitalization/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3368.First Letter Capitalization/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3368.First Letter Capitalization/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3368.First Letter Capitalization/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

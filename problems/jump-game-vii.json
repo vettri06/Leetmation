@@ -1,0 +1,48 @@
+{
+    "problemName": "jump-game-vii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canReach(self, s: str, minJump: int, maxJump: int) -> bool:\r\n        n = len(s)\r\n        pre = [0] * (n + 1)\r\n        pre[1] = 1\r\n        f = [True] + [False] * (n - 1)\r\n        for i in range(1, n):\r\n            if s[i] == \"0\":\r\n                l, r = max(0, i - maxJump), i - minJump\r\n                f[i] = l <= r and pre[r + 1] - pre[l] > 0\r\n            pre[i + 1] = pre[i] + f[i]\r\n        return f[-1]",
+    "problemId": 1871,
+    "title": "Jump Game VII",
+    "problemUrl": "https://leetcode.com/problems/jump-game-vii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1871.Jump Game VII/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1871.Jump Game VII/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1871.Jump Game VII/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1871.Jump Game VII/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1871.Jump Game VII/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1871.Jump Game VII/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1871.Jump Game VII/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1871.Jump Game VII/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

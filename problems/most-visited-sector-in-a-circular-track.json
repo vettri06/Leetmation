@@ -1,0 +1,38 @@
+{
+    "problemName": "most-visited-sector-in-a-circular-track",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mostVisited(self, n: int, rounds: List[int]) -> List[int]:\r\n        if rounds[0] <= rounds[-1]:\r\n            return list(range(rounds[0], rounds[-1] + 1))\r\n        return list(range(1, rounds[-1] + 1)) + list(range(rounds[0], n + 1))",
+    "problemId": 1560,
+    "title": "Most Visited Sector in  a Circular Track",
+    "problemUrl": "https://leetcode.com/problems/most-visited-sector-in-a-circular-track/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1560.Most Visited Sector in  a Circular Track/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1560.Most Visited Sector in  a Circular Track/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1560.Most Visited Sector in  a Circular Track/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1560.Most Visited Sector in  a Circular Track/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1560.Most Visited Sector in  a Circular Track/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1560.Most Visited Sector in  a Circular Track/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

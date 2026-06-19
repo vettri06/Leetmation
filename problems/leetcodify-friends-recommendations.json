@@ -1,0 +1,18 @@
+{
+    "problemName": "leetcodify-friends-recommendations",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT user1_id, user2_id FROM Friendship\r\n        UNION\r\n        SELECT user2_id AS user1_id, user1_id AS user2_id FROM Friendship\r\n    )\r\nSELECT DISTINCT l1.user_id, l2.user_id AS recommended_id\r\nFROM\r\n    Listens AS l1,\r\n    Listens AS l2\r\nWHERE\r\n    l1.day = l2.day\r\n    AND l1.song_id = l2.song_id\r\n    AND l1.user_id != l2.user_id\r\n    AND NOT EXISTS (\r\n        SELECT 1\r\n        FROM T AS t\r\n        WHERE l1.user_id = t.user1_id AND l2.user_id = t.user2_id\r\n    )\r\nGROUP BY l1.day, l1.user_id, l2.user_id\r\nHAVING COUNT(DISTINCT l1.song_id) >= 3;",
+    "problemId": 1917,
+    "title": "Leetcodify Friends Recommendations",
+    "problemUrl": "https://leetcode.com/problems/leetcodify-friends-recommendations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1917.Leetcodify Friends Recommendations/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1917.Leetcodify Friends Recommendations/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

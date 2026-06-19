@@ -1,0 +1,48 @@
+{
+    "problemName": "range-addition-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxCount(self, m: int, n: int, ops: List[List[int]]) -> int:\r\n        for a, b in ops:\r\n            m = min(m, a)\r\n            n = min(n, b)\r\n        return m * n",
+    "problemId": 598,
+    "title": "Range Addition II",
+    "problemUrl": "https://leetcode.com/problems/range-addition-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0598.Range Addition II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0598.Range Addition II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0598.Range Addition II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0598.Range Addition II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0598.Range Addition II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0598.Range Addition II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0598.Range Addition II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0598.Range Addition II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

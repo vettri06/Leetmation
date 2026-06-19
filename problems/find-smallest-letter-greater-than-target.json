@@ -1,0 +1,43 @@
+{
+    "problemName": "find-smallest-letter-greater-than-target",
+    "language": "python3",
+    "code": "class Solution:\r\n    def nextGreatestLetter(self, letters: List[str], target: str) -> str:\r\n        i = bisect_right(letters, ord(target), key=lambda c: ord(c))\r\n        return letters[i % len(letters)]",
+    "problemId": 744,
+    "title": "Find Smallest Letter Greater Than Target",
+    "problemUrl": "https://leetcode.com/problems/find-smallest-letter-greater-than-target/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0744.Find Smallest Letter Greater Than Target/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0744.Find Smallest Letter Greater Than Target/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0744.Find Smallest Letter Greater Than Target/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0744.Find Smallest Letter Greater Than Target/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0744.Find Smallest Letter Greater Than Target/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0744.Find Smallest Letter Greater Than Target/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0744.Find Smallest Letter Greater Than Target/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "count-the-number-of-ideal-arrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def idealArrays(self, n: int, maxValue: int) -> int:\r\n        c = [[0] * 16 for _ in range(n)]\r\n        mod = 10**9 + 7\r\n        for i in range(n):\r\n            for j in range(min(16, i + 1)):\r\n                c[i][j] = 1 if j == 0 else (c[i - 1][j] + c[i - 1][j - 1]) % mod\r\n        f = [[0] * 16 for _ in range(maxValue + 1)]\r\n        for i in range(1, maxValue + 1):\r\n            f[i][1] = 1\r\n        for j in range(1, 15):\r\n            for i in range(1, maxValue + 1):\r\n                k = 2\r\n                while k * i <= maxValue:\r\n                    f[k * i][j + 1] = (f[k * i][j + 1] + f[i][j]) % mod\r\n                    k += 1\r\n        ans = 0\r\n        for i in range(1, maxValue + 1):\r\n            for j in range(1, 16):\r\n                ans = (ans + f[i][j] * c[-1][j - 1]) % mod\r\n        return ans",
+    "problemId": 2338,
+    "title": "Count the Number of Ideal Arrays",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-ideal-arrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2338.Count the Number of Ideal Arrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2338.Count the Number of Ideal Arrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2338.Count the Number of Ideal Arrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2338.Count the Number of Ideal Arrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2338.Count the Number of Ideal Arrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2338.Count the Number of Ideal Arrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "amount-of-time-for-binary-tree-to-be-infected",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def amountOfTime(self, root: Optional[TreeNode], start: int) -> int:\r\n        def dfs(node: Optional[TreeNode], fa: Optional[TreeNode]):\r\n            if node is None:\r\n                return\r\n            if fa:\r\n                g[node.val].append(fa.val)\r\n                g[fa.val].append(node.val)\r\n            dfs(node.left, node)\r\n            dfs(node.right, node)\r\n\r\n        def dfs2(node: int, fa: int) -> int:\r\n            ans = 0\r\n            for nxt in g[node]:\r\n                if nxt != fa:\r\n                    ans = max(ans, 1 + dfs2(nxt, node))\r\n            return ans\r\n\r\n        g = defaultdict(list)\r\n        dfs(root, None)\r\n        return dfs2(start, -1)",
+    "problemId": 2385,
+    "title": "Amount of Time for Binary Tree to Be Infected",
+    "problemUrl": "https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2385.Amount of Time for Binary Tree to Be Infected/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2385.Amount of Time for Binary Tree to Be Infected/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2385.Amount of Time for Binary Tree to Be Infected/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2385.Amount of Time for Binary Tree to Be Infected/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2385.Amount of Time for Binary Tree to Be Infected/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2385.Amount of Time for Binary Tree to Be Infected/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

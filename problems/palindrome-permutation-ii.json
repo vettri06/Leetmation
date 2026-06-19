@@ -1,0 +1,33 @@
+{
+    "problemName": "palindrome-permutation-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def generatePalindromes(self, s: str) -> List[str]:\r\n        def dfs(t):\r\n            if len(t) == len(s):\r\n                ans.append(t)\r\n                return\r\n            for c, v in cnt.items():\r\n                if v > 1:\r\n                    cnt[c] -= 2\r\n                    dfs(c + t + c)\r\n                    cnt[c] += 2\r\n\r\n        cnt = Counter(s)\r\n        mid = ''\r\n        for c, v in cnt.items():\r\n            if v & 1:\r\n                if mid:\r\n                    return []\r\n                mid = c\r\n                cnt[c] -= 1\r\n        ans = []\r\n        dfs(mid)\r\n        return ans",
+    "problemId": 267,
+    "title": "Palindrome Permutation II",
+    "problemUrl": "https://leetcode.com/problems/palindrome-permutation-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0267.Palindrome Permutation II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0267.Palindrome Permutation II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0267.Palindrome Permutation II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0267.Palindrome Permutation II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0267.Palindrome Permutation II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

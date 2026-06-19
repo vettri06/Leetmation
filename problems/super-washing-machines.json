@@ -1,0 +1,38 @@
+{
+    "problemName": "super-washing-machines",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMinMoves(self, machines: List[int]) -> int:\r\n        n = len(machines)\r\n        k, mod = divmod(sum(machines), n)\r\n        if mod:\r\n            return -1\r\n        ans = s = 0\r\n        for x in machines:\r\n            x -= k\r\n            s += x\r\n            ans = max(ans, abs(s), x)\r\n        return ans",
+    "problemId": 517,
+    "title": "Super Washing Machines",
+    "problemUrl": "https://leetcode.com/problems/super-washing-machines/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0517.Super Washing Machines/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0517.Super Washing Machines/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0517.Super Washing Machines/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0517.Super Washing Machines/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0517.Super Washing Machines/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0517.Super Washing Machines/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

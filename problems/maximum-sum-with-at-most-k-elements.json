@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-sum-with-at-most-k-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSum(self, grid: List[List[int]], limits: List[int], k: int) -> int:\r\n        pq = []\r\n        for nums, limit in zip(grid, limits):\r\n            nums.sort()\r\n            for _ in range(limit):\r\n                heappush(pq, nums.pop())\r\n                if len(pq) > k:\r\n                    heappop(pq)\r\n        return sum(pq)",
+    "problemId": 3462,
+    "title": "Maximum Sum With at Most K Elements",
+    "problemUrl": "https://leetcode.com/problems/maximum-sum-with-at-most-k-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3462.Maximum Sum With at Most K Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3462.Maximum Sum With at Most K Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3462.Maximum Sum With at Most K Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3462.Maximum Sum With at Most K Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3462.Maximum Sum With at Most K Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

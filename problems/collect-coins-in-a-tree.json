@@ -1,0 +1,38 @@
+{
+    "problemName": "collect-coins-in-a-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def collectTheCoins(self, coins: List[int], edges: List[List[int]]) -> int:\r\n        g = defaultdict(set)\r\n        for a, b in edges:\r\n            g[a].add(b)\r\n            g[b].add(a)\r\n        n = len(coins)\r\n        q = deque(i for i in range(n) if len(g[i]) == 1 and coins[i] == 0)\r\n        while q:\r\n            i = q.popleft()\r\n            for j in g[i]:\r\n                g[j].remove(i)\r\n                if coins[j] == 0 and len(g[j]) == 1:\r\n                    q.append(j)\r\n            g[i].clear()\r\n        for k in range(2):\r\n            q = [i for i in range(n) if len(g[i]) == 1]\r\n            for i in q:\r\n                for j in g[i]:\r\n                    g[j].remove(i)\r\n                g[i].clear()\r\n        return sum(len(g[a]) > 0 and len(g[b]) > 0 for a, b in edges) * 2",
+    "problemId": 2603,
+    "title": "Collect Coins in a Tree",
+    "problemUrl": "https://leetcode.com/problems/collect-coins-in-a-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2603.Collect Coins in a Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2603.Collect Coins in a Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2603.Collect Coins in a Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2603.Collect Coins in a Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2603.Collect Coins in a Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2603.Collect Coins in a Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

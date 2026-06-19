@@ -1,0 +1,33 @@
+{
+    "problemName": "count-nodes-equal-to-sum-of-descendants",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def equalToDescendants(self, root: Optional[TreeNode]) -> int:\r\n        def dfs(root):\r\n            if root is None:\r\n                return 0\r\n            l, r = dfs(root.left), dfs(root.right)\r\n            if l + r == root.val:\r\n                nonlocal ans\r\n                ans += 1\r\n            return root.val + l + r\r\n\r\n        ans = 0\r\n        dfs(root)\r\n        return ans",
+    "problemId": 1973,
+    "title": "Count Nodes Equal to Sum of Descendants",
+    "problemUrl": "https://leetcode.com/problems/count-nodes-equal-to-sum-of-descendants/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1973.Count Nodes Equal to Sum of Descendants/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1973.Count Nodes Equal to Sum of Descendants/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1973.Count Nodes Equal to Sum of Descendants/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1973.Count Nodes Equal to Sum of Descendants/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1973.Count Nodes Equal to Sum of Descendants/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "problemName": "nth-highest-salary",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:\r\n    if N < 1:\r\n        return pd.DataFrame({\"getNthHighestSalary(\" + str(N) + \")\": [None]})\r\n    unique_salaries = employee.salary.unique()\r\n    if len(unique_salaries) < N:\r\n        return pd.DataFrame([np.NaN], columns=[f\"getNthHighestSalary({N})\"])\r\n    else:\r\n        salary = sorted(unique_salaries, reverse=True)[N - 1]\r\n        return pd.DataFrame([salary], columns=[f\"getNthHighestSalary({N})\"])",
+    "problemId": 177,
+    "title": "Nth Highest Salary",
+    "problemUrl": "https://leetcode.com/problems/nth-highest-salary/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0177.Nth Highest Salary/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0177.Nth Highest Salary/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0177.Nth Highest Salary/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

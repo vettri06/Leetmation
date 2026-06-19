@@ -1,0 +1,33 @@
+{
+    "problemName": "split-array-with-same-average",
+    "language": "python3",
+    "code": "class Solution:\r\n    def splitArraySameAverage(self, nums: List[int]) -> bool:\r\n        n = len(nums)\r\n        if n == 1:\r\n            return False\r\n        s = sum(nums)\r\n        for i, v in enumerate(nums):\r\n            nums[i] = v * n - s\r\n        m = n >> 1\r\n        vis = set()\r\n        for i in range(1, 1 << m):\r\n            t = sum(v for j, v in enumerate(nums[:m]) if i >> j & 1)\r\n            if t == 0:\r\n                return True\r\n            vis.add(t)\r\n        for i in range(1, 1 << (n - m)):\r\n            t = sum(v for j, v in enumerate(nums[m:]) if i >> j & 1)\r\n            if t == 0 or (i != (1 << (n - m)) - 1 and -t in vis):\r\n                return True\r\n        return False",
+    "problemId": 805,
+    "title": "Split Array With Same Average",
+    "problemUrl": "https://leetcode.com/problems/split-array-with-same-average/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0805.Split Array With Same Average/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0805.Split Array With Same Average/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0805.Split Array With Same Average/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0805.Split Array With Same Average/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0805.Split Array With Same Average/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

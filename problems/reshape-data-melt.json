@@ -1,0 +1,18 @@
+{
+    "problemName": "reshape-data-melt",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef meltTable(report: pd.DataFrame) -> pd.DataFrame:\r\n    return pd.melt(report, id_vars=['product'], var_name='quarter', value_name='sales')",
+    "problemId": 2890,
+    "title": "Reshape Data Melt",
+    "problemUrl": "https://leetcode.com/problems/reshape-data-melt/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2890.Reshape Data Melt/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2890.Reshape Data Melt/Solution.py",
+            "sourceFile": "Solution.py"
+        }
+    ]
+}

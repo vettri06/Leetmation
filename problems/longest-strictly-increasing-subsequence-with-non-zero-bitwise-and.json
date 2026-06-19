@@ -1,0 +1,28 @@
+{
+    "problemName": "longest-strictly-increasing-subsequence-with-non-zero-bitwise-and",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestSubsequence(self, nums: List[int]) -> int:\r\n        def lis(arr: List[int]) -> int:\r\n            g = []\r\n            for x in arr:\r\n                j = bisect_left(g, x)\r\n                if j == len(g):\r\n                    g.append(x)\r\n                else:\r\n                    g[j] = x\r\n            return len(g)\r\n\r\n        ans = 0\r\n        m = max(nums).bit_length()\r\n        for i in range(m):\r\n            arr = [x for x in nums if x >> i & 1]\r\n            ans = max(ans, lis(arr))\r\n        return ans",
+    "problemId": 3825,
+    "title": "Longest Strictly Increasing Subsequence With Non-Zero Bitwise AND",
+    "problemUrl": "https://leetcode.com/problems/longest-strictly-increasing-subsequence-with-non-zero-bitwise-and/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3825.Longest Strictly Increasing Subsequence With Non-Zero Bitwise AND/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3825.Longest Strictly Increasing Subsequence With Non-Zero Bitwise AND/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3825.Longest Strictly Increasing Subsequence With Non-Zero Bitwise AND/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3825.Longest Strictly Increasing Subsequence With Non-Zero Bitwise AND/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

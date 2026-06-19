@@ -1,0 +1,68 @@
+{
+    "problemName": "search-insert-position",
+    "language": "python3",
+    "code": "class Solution:\r\n    def searchInsert(self, nums: List[int], target: int) -> int:\r\n        l, r = 0, len(nums)\r\n        while l < r:\r\n            mid = (l + r) >> 1\r\n            if nums[mid] >= target:\r\n                r = mid\r\n            else:\r\n                l = mid + 1\r\n        return l",
+    "problemId": 35,
+    "title": "Search Insert Position",
+    "problemUrl": "https://leetcode.com/problems/search-insert-position/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0035.Search Insert Position/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0035.Search Insert Position/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0035.Search Insert Position/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0035.Search Insert Position/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0035.Search Insert Position/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0035.Search Insert Position/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0035.Search Insert Position/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0035.Search Insert Position/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0035.Search Insert Position/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0035.Search Insert Position/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0035.Search Insert Position/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0035.Search Insert Position/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

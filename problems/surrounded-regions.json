@@ -1,0 +1,73 @@
+{
+    "problemName": "surrounded-regions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def solve(self, board: List[List[str]]) -> None:\r\n        def dfs(i: int, j: int):\r\n            if not (0 <= i < m and 0 <= j < n and board[i][j] == \"O\"):\r\n                return\r\n            board[i][j] = \".\"\r\n            for a, b in pairwise((-1, 0, 1, 0, -1)):\r\n                dfs(i + a, j + b)\r\n\r\n        m, n = len(board), len(board[0])\r\n        for i in range(m):\r\n            dfs(i, 0)\r\n            dfs(i, n - 1)\r\n        for j in range(n):\r\n            dfs(0, j)\r\n            dfs(m - 1, j)\r\n        for i in range(m):\r\n            for j in range(n):\r\n                if board[i][j] == \".\":\r\n                    board[i][j] = \"O\"\r\n                elif board[i][j] == \"O\":\r\n                    board[i][j] = \"X\"",
+    "problemId": 130,
+    "title": "Surrounded Regions",
+    "problemUrl": "https://leetcode.com/problems/surrounded-regions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0130.Surrounded Regions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0130.Surrounded Regions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0130.Surrounded Regions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0130.Surrounded Regions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0130.Surrounded Regions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0130.Surrounded Regions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0130.Surrounded Regions/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0130.Surrounded Regions/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0130.Surrounded Regions/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0130.Surrounded Regions/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0130.Surrounded Regions/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0130.Surrounded Regions/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0130.Surrounded Regions/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

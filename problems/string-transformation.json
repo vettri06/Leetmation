@@ -1,0 +1,28 @@
+{
+    "problemName": "string-transformation",
+    "language": "python3",
+    "code": "\"\"\"\r\nDP, Z-algorithm, Fast mod.\r\nApproach\r\nHow to represent a string?\r\nEach operation is just a rotation. Each result string can be represented by an integer from 0 to n - 1. Namely, it's just the new index of s[0].\r\nHow to find the integer(s) that can represent string t?\r\nCreate a new string s + t + t (length = 3 * n).\r\nUse Z-algorithm (or KMP), for each n <= index < 2 * n, calculate the maximum prefix length that each substring starts from index can match, if the length >= n, then (index - n) is a valid integer representation.\r\nHow to get the result?\r\nIt's a very obvious DP.\r\nIf we use an integer to represent a string, we only need to consider the transition from zero to non-zero and from non-zero to zero. In other words, all the non-zero strings should have the same result.\r\nSo let dp[t][i = 0/1] be the number of ways to get the zero/nonzero string\r\nafter excatly t steps.\r\nThen\r\ndp[t][0] = dp[t - 1][1] * (n - 1).\r\nAll the non zero strings can make it.\r\ndp[t][1] = dp[t - 1][0] + dp[t - 1] * (n - 2).\r\nFor a particular non zero string, all the other non zero strings and zero string can make it.\r\nWe have dp[0][0] = 1 and dp[0][1] = 0\r\nUse matrix multiplication.\r\nHow to calculate dp[k][x = 0, 1] faster?\r\nUse matrix multiplication\r\nvector (dp[t - 1][0], dp[t - 1][1])\r\nmultiplies matrix\r\n[0 1]\r\n[n - 1 n - 2]\r\n== vector (dp[t][0], dp[t - 1][1]).\r\nSo we just need to calculate the kth power of the matrix which can be done by fast power algorith.\r\nComplexity\r\nTime complexity:\r\nO(n + logk)\r\nSpace complexity:\r\nO(n)\r\n\"\"\"\r\n\r\n\r\nclass Solution:\r\n    M: int = 1000000007\r\n\r\n    def add(self, x: int, y: int) -> int:\r\n        x += y\r\n        if x >= self.M:\r\n            x -= self.M\r\n        return x\r\n\r\n    def mul(self, x: int, y: int) -> int:\r\n        return int(x * y % self.M)\r\n\r\n    def getZ(self, s: str) -> List[int]:\r\n        n = len(s)\r\n        z = [0] * n\r\n        left = right = 0\r\n        for i in range(1, n):\r\n            if i <= right and z[i - left] <= right - i:\r\n                z[i] = z[i - left]\r\n            else:\r\n                z_i = max(0, right - i + 1)\r\n                while i + z_i < n and s[i + z_i] == s[z_i]:\r\n                    z_i += 1\r\n                z[i] = z_i\r\n            if i + z[i] - 1 > right:\r\n                left = i\r\n                right = i + z[i] - 1\r\n        return z\r\n\r\n    def matrixMultiply(self, a: List[List[int]], b: List[List[int]]) -> List[List[int]]:\r\n        m = len(a)\r\n        n = len(a[0])\r\n        p = len(b[0])\r\n        r = [[0] * p for _ in range(m)]\r\n        for i in range(m):\r\n            for j in range(p):\r\n                for k in range(n):\r\n                    r[i][j] = self.add(r[i][j], self.mul(a[i][k], b[k][j]))\r\n        return r\r\n\r\n    def matrixPower(self, a: List[List[int]], y: int) -> List[List[int]]:\r\n        n = len(a)\r\n        r = [[0] * n for _ in range(n)]\r\n        for i in range(n):\r\n            r[i][i] = 1\r\n        x = [a[i][:] for i in range(n)]\r\n        while y > 0:\r\n            if y & 1:\r\n                r = self.matrixMultiply(r, x)\r\n            x = self.matrixMultiply(x, x)\r\n            y >>= 1\r\n        return r\r\n\r\n    def numberOfWays(self, s: str, t: str, k: int) -> int:\r\n        n = len(s)\r\n        dp = self.matrixPower([[0, 1], [n - 1, n - 2]], k)[0]\r\n        s += t + t\r\n        z = self.getZ(s)\r\n        m = n + n\r\n        result = 0\r\n        for i in range(n, m):\r\n            if z[i] >= n:\r\n                result = self.add(result, dp[0] if i - n == 0 else dp[1])\r\n        return result",
+    "problemId": 2851,
+    "title": "String Transformation",
+    "problemUrl": "https://leetcode.com/problems/string-transformation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2851.String Transformation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2851.String Transformation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2851.String Transformation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2851.String Transformation/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

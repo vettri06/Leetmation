@@ -1,0 +1,23 @@
+{
+    "problemName": "students-with-invalid-departments",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT id, name\r\nFROM Students\r\nWHERE department_id NOT IN (SELECT id FROM Departments);",
+    "problemId": 1350,
+    "title": "Students With Invalid Departments",
+    "problemUrl": "https://leetcode.com/problems/students-with-invalid-departments/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1350.Students With Invalid Departments/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1350.Students With Invalid Departments/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1350.Students With Invalid Departments/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

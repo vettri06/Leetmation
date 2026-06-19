@@ -1,0 +1,18 @@
+{
+    "problemName": "get-the-size-of-a-dataframe",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef getDataframeSize(players: pd.DataFrame) -> List[int]:\r\n    return list(players.shape)",
+    "problemId": 2878,
+    "title": "Get the Size of a DataFrame",
+    "problemUrl": "https://leetcode.com/problems/get-the-size-of-a-dataframe/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2878.Get the Size of a DataFrame/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2878.Get the Size of a DataFrame/Solution.py",
+            "sourceFile": "Solution.py"
+        }
+    ]
+}

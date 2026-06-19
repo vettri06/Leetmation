@@ -1,0 +1,18 @@
+{
+    "problemName": "products-price-for-each-store",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    product_id,\r\n    SUM(IF(store = 'store1', price, NULL)) AS store1,\r\n    SUM(IF(store = 'store2', price, NULL)) AS store2,\r\n    SUM(IF(store = 'store3', price, NULL)) AS store3\r\nFROM Products\r\nGROUP BY 1;",
+    "problemId": 1777,
+    "title": "Product's Price for Each Store",
+    "problemUrl": "https://leetcode.com/problems/products-price-for-each-store/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1777.Product's Price for Each Store/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1777.Product's Price for Each Store/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

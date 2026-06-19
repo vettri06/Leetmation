@@ -1,0 +1,23 @@
+{
+    "problemName": "find-loyal-customers",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_loyal_customers(customer_transactions: pd.DataFrame) -> pd.DataFrame:\r\n    customer_transactions[\"transaction_date\"] = pd.to_datetime(\r\n        customer_transactions[\"transaction_date\"]\r\n    )\r\n    grouped = customer_transactions.groupby(\"customer_id\")\r\n    agg_df = grouped.agg(\r\n        total_transactions=(\"transaction_type\", \"size\"),\r\n        refund_count=(\"transaction_type\", lambda x: (x == \"refund\").sum()),\r\n        min_date=(\"transaction_date\", \"min\"),\r\n        max_date=(\"transaction_date\", \"max\"),\r\n    ).reset_index()\r\n    agg_df[\"date_diff\"] = (agg_df[\"max_date\"] - agg_df[\"min_date\"]).dt.days\r\n    agg_df[\"refund_ratio\"] = agg_df[\"refund_count\"] / agg_df[\"total_transactions\"]\r\n    result = (\r\n        agg_df[\r\n            (agg_df[\"total_transactions\"] >= 3)\r\n            & (agg_df[\"refund_ratio\"] < 0.2)\r\n            & (agg_df[\"date_diff\"] >= 30)\r\n        ][[\"customer_id\"]]\r\n        .sort_values(\"customer_id\")\r\n        .reset_index(drop=True)\r\n    )\r\n    return result",
+    "problemId": 3657,
+    "title": "Find Loyal Customers",
+    "problemUrl": "https://leetcode.com/problems/find-loyal-customers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3657.Find Loyal Customers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3657.Find Loyal Customers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3657.Find Loyal Customers/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

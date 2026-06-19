@@ -1,0 +1,43 @@
+{
+    "problemName": "number-of-strings-that-appear-as-substrings-in-word",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numOfStrings(self, patterns: List[str], word: str) -> int:\r\n        return sum(p in word for p in patterns)",
+    "problemId": 1967,
+    "title": "Number of Strings That Appear as Substrings in Word",
+    "problemUrl": "https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1967.Number of Strings That Appear as Substrings in Word/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1967.Number of Strings That Appear as Substrings in Word/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1967.Number of Strings That Appear as Substrings in Word/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1967.Number of Strings That Appear as Substrings in Word/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1967.Number of Strings That Appear as Substrings in Word/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1967.Number of Strings That Appear as Substrings in Word/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1967.Number of Strings That Appear as Substrings in Word/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

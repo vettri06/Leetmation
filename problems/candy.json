@@ -1,0 +1,48 @@
+{
+    "problemName": "candy",
+    "language": "python3",
+    "code": "class Solution:\r\n    def candy(self, ratings: List[int]) -> int:\r\n        n = len(ratings)\r\n        left = [1] * n\r\n        right = [1] * n\r\n        for i in range(1, n):\r\n            if ratings[i] > ratings[i - 1]:\r\n                left[i] = left[i - 1] + 1\r\n        for i in range(n - 2, -1, -1):\r\n            if ratings[i] > ratings[i + 1]:\r\n                right[i] = right[i + 1] + 1\r\n        return sum(max(a, b) for a, b in zip(left, right))",
+    "problemId": 135,
+    "title": "Candy",
+    "problemUrl": "https://leetcode.com/problems/candy/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0135.Candy/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0135.Candy/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0135.Candy/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0135.Candy/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0135.Candy/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0135.Candy/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0135.Candy/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0135.Candy/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

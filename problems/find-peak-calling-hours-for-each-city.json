@@ -1,0 +1,18 @@
+{
+    "problemName": "find-peak-calling-hours-for-each-city",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            *,\r\n            RANK() OVER (\r\n                PARTITION BY city\r\n                ORDER BY cnt DESC\r\n            ) AS rk\r\n        FROM\r\n            (\r\n                SELECT\r\n                    city,\r\n                    HOUR(call_time) AS h,\r\n                    COUNT(1) AS cnt\r\n                FROM Calls\r\n                GROUP BY 1, 2\r\n            ) AS t\r\n    )\r\nSELECT city, h AS peak_calling_hour, cnt AS number_of_calls\r\nFROM T\r\nWHERE rk = 1\r\nORDER BY 2 DESC, 1 DESC;",
+    "problemId": 2984,
+    "title": "Find Peak Calling Hours for Each City",
+    "problemUrl": "https://leetcode.com/problems/find-peak-calling-hours-for-each-city/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2984.Find Peak Calling Hours for Each City/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2984.Find Peak Calling Hours for Each City/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

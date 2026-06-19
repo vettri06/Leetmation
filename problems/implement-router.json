@@ -1,0 +1,43 @@
+{
+    "problemName": "implement-router",
+    "language": "python3",
+    "code": "class Router:\r\n\r\n    def __init__(self, memoryLimit: int):\r\n        self.lim = memoryLimit\r\n        self.vis = set()\r\n        self.q = deque()\r\n        self.idx = defaultdict(int)\r\n        self.d = defaultdict(list)\r\n\r\n    def addPacket(self, source: int, destination: int, timestamp: int) -> bool:\r\n        x = self.f(source, destination, timestamp)\r\n        if x in self.vis:\r\n            return False\r\n        self.vis.add(x)\r\n        if len(self.q) >= self.lim:\r\n            self.forwardPacket()\r\n        self.q.append((source, destination, timestamp))\r\n        self.d[destination].append(timestamp)\r\n        return True\r\n\r\n    def forwardPacket(self) -> List[int]:\r\n        if not self.q:\r\n            return []\r\n        s, d, t = self.q.popleft()\r\n        self.vis.remove(self.f(s, d, t))\r\n        self.idx[d] += 1\r\n        return [s, d, t]\r\n\r\n    def f(self, a: int, b: int, c: int) -> int:\r\n        return a << 46 | b << 29 | c\r\n\r\n    def getCount(self, destination: int, startTime: int, endTime: int) -> int:\r\n        ls = self.d[destination]\r\n        k = self.idx[destination]\r\n        i = bisect_left(ls, startTime, k)\r\n        j = bisect_left(ls, endTime + 1, k)\r\n        return j - i\r\n\r\n\r\n# Your Router object will be instantiated and called as such:\r\n# obj = Router(memoryLimit)\r\n# param_1 = obj.addPacket(source,destination,timestamp)\r\n# param_2 = obj.forwardPacket()\r\n# param_3 = obj.getCount(destination,startTime,endTime)",
+    "problemId": 3508,
+    "title": "Implement Router",
+    "problemUrl": "https://leetcode.com/problems/implement-router/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3508.Implement Router/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3508.Implement Router/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3508.Implement Router/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3508.Implement Router/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3508.Implement Router/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3508.Implement Router/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3508.Implement Router/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "count-sequences-to-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSequences(self, nums: List[int], k: int) -> int:\r\n        @cache\r\n        def dfs(i: int, p: int, q: int) -> int:\r\n            if i == n:\r\n                return 1 if p == k and q == 1 else 0\r\n            x = nums[i]\r\n            res = dfs(i + 1, p, q)\r\n            g = gcd(p * x, q)\r\n            res += dfs(i + 1, p * x // g, q // g)\r\n            g = gcd(p, q * x)\r\n            res += dfs(i + 1, p // g, q * x // g)\r\n            return res\r\n\r\n        n = len(nums)\r\n        ans = dfs(0, 1, 1)\r\n        dfs.cache_clear()\r\n        return ans",
+    "problemId": 3850,
+    "title": "Count Sequences to K",
+    "problemUrl": "https://leetcode.com/problems/count-sequences-to-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3850.Count Sequences to K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3850.Count Sequences to K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3850.Count Sequences to K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3850.Count Sequences to K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3850.Count Sequences to K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3850.Count Sequences to K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

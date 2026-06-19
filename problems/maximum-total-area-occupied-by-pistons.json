@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-total-area-occupied-by-pistons",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxArea(self, height: int, positions: List[int], directions: str) -> int:\r\n        delta = defaultdict(int)\r\n        diff = res = 0\r\n        for pos, dir in zip(positions, directions):\r\n            res += pos\r\n            if dir == \"U\":\r\n                diff += 1\r\n                delta[height - pos] -= 2\r\n                delta[height * 2 - pos] += 2\r\n            else:\r\n                diff -= 1\r\n                delta[pos] += 2\r\n                delta[height + pos] -= 2\r\n        ans = res\r\n        pre = 0\r\n        for cur, d in sorted(delta.items()):\r\n            res += (cur - pre) * diff\r\n            pre = cur\r\n            diff += d\r\n            ans = max(ans, res)\r\n        return ans",
+    "problemId": 3279,
+    "title": "Maximum Total Area Occupied by Pistons",
+    "problemUrl": "https://leetcode.com/problems/maximum-total-area-occupied-by-pistons/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3279.Maximum Total Area Occupied by Pistons/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3279.Maximum Total Area Occupied by Pistons/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3279.Maximum Total Area Occupied by Pistons/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3279.Maximum Total Area Occupied by Pistons/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3279.Maximum Total Area Occupied by Pistons/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3279.Maximum Total Area Occupied by Pistons/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

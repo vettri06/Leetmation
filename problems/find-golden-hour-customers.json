@@ -1,0 +1,23 @@
+{
+    "problemName": "find-golden-hour-customers",
+    "language": "python3",
+    "code": "import pandas as pd\r\nimport numpy as np\r\n\r\n\r\ndef find_golden_hour_customers(restaurant_orders: pd.DataFrame) -> pd.DataFrame:\r\n    df = restaurant_orders.copy()\r\n    df[\"order_timestamp\"] = pd.to_datetime(df[\"order_timestamp\"])\r\n    df[\"is_peak_hour\"] = df[\"order_timestamp\"].dt.time.between(\r\n        pd.to_datetime(\"11:00:00\").time(), pd.to_datetime(\"14:00:00\").time()\r\n    ) | df[\"order_timestamp\"].dt.time.between(\r\n        pd.to_datetime(\"18:00:00\").time(), pd.to_datetime(\"21:00:00\").time()\r\n    )\r\n    grouped = (\r\n        df.groupby(\"customer_id\")\r\n        .agg(\r\n            total_orders=(\"order_timestamp\", \"count\"),\r\n            peak_hour_count=(\"is_peak_hour\", \"sum\"),\r\n            average_rating=(\"order_rating\", lambda x: x.dropna().mean()),\r\n            non_null_rating_count=(\"order_rating\", lambda x: x.notna().sum()),\r\n        )\r\n        .reset_index()\r\n    )\r\n    grouped[\"average_rating\"] = grouped[\"average_rating\"].round(2)\r\n    grouped[\"peak_hour_percentage\"] = (\r\n        grouped[\"peak_hour_count\"] / grouped[\"total_orders\"] * 100\r\n    ).round()\r\n    filtered = grouped[\r\n        (grouped[\"total_orders\"] >= 3)\r\n        & (grouped[\"peak_hour_percentage\"] >= 60)\r\n        & (grouped[\"average_rating\"] >= 4.0)\r\n        & (grouped[\"non_null_rating_count\"] / grouped[\"total_orders\"] >= 0.5)\r\n    ]\r\n    filtered = filtered.sort_values(\r\n        by=[\"average_rating\", \"customer_id\"], ascending=[False, False]\r\n    )\r\n    return filtered[\r\n        [\"customer_id\", \"total_orders\", \"peak_hour_percentage\", \"average_rating\"]\r\n    ]",
+    "problemId": 3705,
+    "title": "Find Golden Hour Customers",
+    "problemUrl": "https://leetcode.com/problems/find-golden-hour-customers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3705.Find Golden Hour Customers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3705.Find Golden Hour Customers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3705.Find Golden Hour Customers/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

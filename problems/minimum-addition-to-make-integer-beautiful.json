@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-addition-to-make-integer-beautiful",
+    "language": "python3",
+    "code": "class Solution:\r\n    def makeIntegerBeautiful(self, n: int, target: int) -> int:\r\n        def f(x: int) -> int:\r\n            y = 0\r\n            while x:\r\n                y += x % 10\r\n                x //= 10\r\n            return y\r\n\r\n        x = 0\r\n        while f(n + x) > target:\r\n            y = n + x\r\n            p = 10\r\n            while y % 10 == 0:\r\n                y //= 10\r\n                p *= 10\r\n            x = (y // 10 + 1) * p - n\r\n        return x",
+    "problemId": 2457,
+    "title": "Minimum Addition to Make Integer Beautiful",
+    "problemUrl": "https://leetcode.com/problems/minimum-addition-to-make-integer-beautiful/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2457.Minimum Addition to Make Integer Beautiful/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2457.Minimum Addition to Make Integer Beautiful/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2457.Minimum Addition to Make Integer Beautiful/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2457.Minimum Addition to Make Integer Beautiful/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2457.Minimum Addition to Make Integer Beautiful/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2457.Minimum Addition to Make Integer Beautiful/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

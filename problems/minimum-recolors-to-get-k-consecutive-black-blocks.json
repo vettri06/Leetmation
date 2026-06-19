@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-recolors-to-get-k-consecutive-black-blocks",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumRecolors(self, blocks: str, k: int) -> int:\r\n        ans = cnt = blocks[:k].count('W')\r\n        for i in range(k, len(blocks)):\r\n            cnt += blocks[i] == 'W'\r\n            cnt -= blocks[i - k] == 'W'\r\n            ans = min(ans, cnt)\r\n        return ans",
+    "problemId": 2379,
+    "title": "Minimum Recolors to Get K Consecutive Black Blocks",
+    "problemUrl": "https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2379.Minimum Recolors to Get K Consecutive Black Blocks/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2379.Minimum Recolors to Get K Consecutive Black Blocks/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2379.Minimum Recolors to Get K Consecutive Black Blocks/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2379.Minimum Recolors to Get K Consecutive Black Blocks/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2379.Minimum Recolors to Get K Consecutive Black Blocks/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2379.Minimum Recolors to Get K Consecutive Black Blocks/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2379.Minimum Recolors to Get K Consecutive Black Blocks/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2379.Minimum Recolors to Get K Consecutive Black Blocks/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

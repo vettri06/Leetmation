@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-swaps-to-group-all-1s-together",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSwaps(self, data: List[int]) -> int:\r\n        k = data.count(1)\r\n        mx = t = sum(data[:k])\r\n        for i in range(k, len(data)):\r\n            t += data[i]\r\n            t -= data[i - k]\r\n            mx = max(mx, t)\r\n        return k - mx",
+    "problemId": 1151,
+    "title": "Minimum Swaps to Group All 1's Together",
+    "problemUrl": "https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1151.Minimum Swaps to Group All 1's Together/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1151.Minimum Swaps to Group All 1's Together/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1151.Minimum Swaps to Group All 1's Together/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1151.Minimum Swaps to Group All 1's Together/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1151.Minimum Swaps to Group All 1's Together/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1151.Minimum Swaps to Group All 1's Together/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1151.Minimum Swaps to Group All 1's Together/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

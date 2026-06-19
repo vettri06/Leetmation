@@ -1,0 +1,38 @@
+{
+    "problemName": "sum-of-largest-prime-substrings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumOfLargestPrimes(self, s: str) -> int:\r\n        def is_prime(x: int) -> bool:\r\n            if x < 2:\r\n                return False\r\n            return all(x % i for i in range(2, int(sqrt(x)) + 1))\r\n\r\n        st = set()\r\n        n = len(s)\r\n        for i in range(n):\r\n            x = 0\r\n            for j in range(i, n):\r\n                x = x * 10 + int(s[j])\r\n                if is_prime(x):\r\n                    st.add(x)\r\n        return sum(sorted(st)[-3:])",
+    "problemId": 3556,
+    "title": "Sum of Largest Prime Substrings",
+    "problemUrl": "https://leetcode.com/problems/sum-of-largest-prime-substrings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3556.Sum of Largest Prime Substrings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3556.Sum of Largest Prime Substrings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3556.Sum of Largest Prime Substrings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3556.Sum of Largest Prime Substrings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3556.Sum of Largest Prime Substrings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3556.Sum of Largest Prime Substrings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

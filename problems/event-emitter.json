@@ -1,0 +1,18 @@
+{
+    "problemName": "event-emitter",
+    "language": "typescript",
+    "code": "type Callback = (...args: any[]) => any;\r\ntype Subscription = {\r\n    unsubscribe: () => void;\r\n};\r\n\r\nclass EventEmitter {\r\n    private d: Map<string, Set<Callback>> = new Map();\r\n\r\n    subscribe(eventName: string, callback: Callback): Subscription {\r\n        this.d.set(eventName, (this.d.get(eventName) || new Set()).add(callback));\r\n        return {\r\n            unsubscribe: () => {\r\n                this.d.get(eventName)?.delete(callback);\r\n            },\r\n        };\r\n    }\r\n\r\n    emit(eventName: string, args: any[] = []): any {\r\n        const callbacks = this.d.get(eventName);\r\n        if (!callbacks) {\r\n            return [];\r\n        }\r\n        return [...callbacks].map(callback => callback(...args));\r\n    }\r\n}\r\n\r\n/**\r\n * const emitter = new EventEmitter();\r\n *\r\n * // Subscribe to the onClick event with onClickCallback\r\n * function onClickCallback() { return 99 }\r\n * const sub = emitter.subscribe('onClick', onClickCallback);\r\n *\r\n * emitter.emit('onClick'); // [99]\r\n * sub.unsubscribe(); // undefined\r\n * emitter.emit('onClick'); // []\r\n */",
+    "problemId": 2694,
+    "title": "Event Emitter",
+    "problemUrl": "https://leetcode.com/problems/event-emitter/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2694.Event Emitter/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2694.Event Emitter/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

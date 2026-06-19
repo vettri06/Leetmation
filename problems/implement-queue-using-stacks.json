@@ -1,0 +1,43 @@
+{
+    "problemName": "implement-queue-using-stacks",
+    "language": "python3",
+    "code": "class MyQueue:\r\n    def __init__(self):\r\n        self.stk1 = []\r\n        self.stk2 = []\r\n\r\n    def push(self, x: int) -> None:\r\n        self.stk1.append(x)\r\n\r\n    def pop(self) -> int:\r\n        self.move()\r\n        return self.stk2.pop()\r\n\r\n    def peek(self) -> int:\r\n        self.move()\r\n        return self.stk2[-1]\r\n\r\n    def empty(self) -> bool:\r\n        return not self.stk1 and not self.stk2\r\n\r\n    def move(self):\r\n        if not self.stk2:\r\n            while self.stk1:\r\n                self.stk2.append(self.stk1.pop())\r\n\r\n\r\n# Your MyQueue object will be instantiated and called as such:\r\n# obj = MyQueue()\r\n# obj.push(x)\r\n# param_2 = obj.pop()\r\n# param_3 = obj.peek()\r\n# param_4 = obj.empty()",
+    "problemId": 232,
+    "title": "Implement Queue using Stacks",
+    "problemUrl": "https://leetcode.com/problems/implement-queue-using-stacks/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0232.Implement Queue using Stacks/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0232.Implement Queue using Stacks/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0232.Implement Queue using Stacks/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0232.Implement Queue using Stacks/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0232.Implement Queue using Stacks/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0232.Implement Queue using Stacks/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0232.Implement Queue using Stacks/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

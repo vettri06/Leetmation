@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-number-of-non-overlapping-subarrays-with-sum-equals-target",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxNonOverlapping(self, nums: List[int], target: int) -> int:\r\n        ans = 0\r\n        i, n = 0, len(nums)\r\n        while i < n:\r\n            s = 0\r\n            vis = {0}\r\n            while i < n:\r\n                s += nums[i]\r\n                if s - target in vis:\r\n                    ans += 1\r\n                    break\r\n                i += 1\r\n                vis.add(s)\r\n            i += 1\r\n        return ans",
+    "problemId": 1546,
+    "title": "Maximum Number of Non-Overlapping Subarrays With Sum Equals Target",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-non-overlapping-subarrays-with-sum-equals-target/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1546.Maximum Number of Non-Overlapping Subarrays With Sum Equals Target/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1546.Maximum Number of Non-Overlapping Subarrays With Sum Equals Target/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1546.Maximum Number of Non-Overlapping Subarrays With Sum Equals Target/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1546.Maximum Number of Non-Overlapping Subarrays With Sum Equals Target/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1546.Maximum Number of Non-Overlapping Subarrays With Sum Equals Target/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1546.Maximum Number of Non-Overlapping Subarrays With Sum Equals Target/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "problemName": "countries-you-can-safely-invest-in",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT country\r\nFROM\r\n    (\r\n        SELECT c.name AS country, AVG(duration) AS duration\r\n        FROM\r\n            Person\r\n            JOIN Calls ON id IN (caller_id, callee_id)\r\n            JOIN Country AS c ON LEFT(phone_number, 3) = country_code\r\n        GROUP BY 1\r\n    ) AS t\r\nWHERE duration > (SELECT AVG(duration) FROM Calls);",
+    "problemId": 1501,
+    "title": "Countries You Can Safely Invest In",
+    "problemUrl": "https://leetcode.com/problems/countries-you-can-safely-invest-in/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1501.Countries You Can Safely Invest In/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1501.Countries You Can Safely Invest In/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1501.Countries You Can Safely Invest In/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

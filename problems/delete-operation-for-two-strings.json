@@ -1,0 +1,43 @@
+{
+    "problemName": "delete-operation-for-two-strings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minDistance(self, word1: str, word2: str) -> int:\r\n        m, n = len(word1), len(word2)\r\n        f = [[0] * (n + 1) for _ in range(m + 1)]\r\n        for i in range(1, m + 1):\r\n            f[i][0] = i\r\n        for j in range(1, n + 1):\r\n            f[0][j] = j\r\n        for i, a in enumerate(word1, 1):\r\n            for j, b in enumerate(word2, 1):\r\n                if a == b:\r\n                    f[i][j] = f[i - 1][j - 1]\r\n                else:\r\n                    f[i][j] = min(f[i - 1][j], f[i][j - 1]) + 1\r\n        return f[m][n]",
+    "problemId": 583,
+    "title": "Delete Operation for Two Strings",
+    "problemUrl": "https://leetcode.com/problems/delete-operation-for-two-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0583.Delete Operation for Two Strings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0583.Delete Operation for Two Strings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0583.Delete Operation for Two Strings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0583.Delete Operation for Two Strings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0583.Delete Operation for Two Strings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0583.Delete Operation for Two Strings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0583.Delete Operation for Two Strings/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

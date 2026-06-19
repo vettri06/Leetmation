@@ -1,0 +1,33 @@
+{
+    "problemName": "find-all-groups-of-farmland",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findFarmland(self, land: List[List[int]]) -> List[List[int]]:\r\n        m, n = len(land), len(land[0])\r\n        ans = []\r\n        for i in range(m):\r\n            for j in range(n):\r\n                if (\r\n                    land[i][j] == 0\r\n                    or (j > 0 and land[i][j - 1] == 1)\r\n                    or (i > 0 and land[i - 1][j] == 1)\r\n                ):\r\n                    continue\r\n                x, y = i, j\r\n                while x + 1 < m and land[x + 1][j] == 1:\r\n                    x += 1\r\n                while y + 1 < n and land[x][y + 1] == 1:\r\n                    y += 1\r\n                ans.append([i, j, x, y])\r\n        return ans",
+    "problemId": 1992,
+    "title": "Find All Groups of Farmland",
+    "problemUrl": "https://leetcode.com/problems/find-all-groups-of-farmland/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1992.Find All Groups of Farmland/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1992.Find All Groups of Farmland/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1992.Find All Groups of Farmland/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1992.Find All Groups of Farmland/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1992.Find All Groups of Farmland/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

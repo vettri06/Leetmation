@@ -1,0 +1,33 @@
+{
+    "problemName": "bomb-enemy",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxKilledEnemies(self, grid: List[List[str]]) -> int:\r\n        m, n = len(grid), len(grid[0])\r\n        g = [[0] * n for _ in range(m)]\r\n        for i in range(m):\r\n            t = 0\r\n            for j in range(n):\r\n                if grid[i][j] == 'W':\r\n                    t = 0\r\n                elif grid[i][j] == 'E':\r\n                    t += 1\r\n                g[i][j] += t\r\n            t = 0\r\n            for j in range(n - 1, -1, -1):\r\n                if grid[i][j] == 'W':\r\n                    t = 0\r\n                elif grid[i][j] == 'E':\r\n                    t += 1\r\n                g[i][j] += t\r\n        for j in range(n):\r\n            t = 0\r\n            for i in range(m):\r\n                if grid[i][j] == 'W':\r\n                    t = 0\r\n                elif grid[i][j] == 'E':\r\n                    t += 1\r\n                g[i][j] += t\r\n            t = 0\r\n            for i in range(m - 1, -1, -1):\r\n                if grid[i][j] == 'W':\r\n                    t = 0\r\n                elif grid[i][j] == 'E':\r\n                    t += 1\r\n                g[i][j] += t\r\n        return max(\r\n            [g[i][j] for i in range(m) for j in range(n) if grid[i][j] == '0'],\r\n            default=0,\r\n        )",
+    "problemId": 361,
+    "title": "Bomb Enemy",
+    "problemUrl": "https://leetcode.com/problems/bomb-enemy/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0361.Bomb Enemy/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0361.Bomb Enemy/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0361.Bomb Enemy/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0361.Bomb Enemy/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0361.Bomb Enemy/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

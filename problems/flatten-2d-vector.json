@@ -1,0 +1,38 @@
+{
+    "problemName": "flatten-2d-vector",
+    "language": "python3",
+    "code": "class Vector2D:\r\n    def __init__(self, vec: List[List[int]]):\r\n        self.i = 0\r\n        self.j = 0\r\n        self.vec = vec\r\n\r\n    def next(self) -> int:\r\n        self.forward()\r\n        ans = self.vec[self.i][self.j]\r\n        self.j += 1\r\n        return ans\r\n\r\n    def hasNext(self) -> bool:\r\n        self.forward()\r\n        return self.i < len(self.vec)\r\n\r\n    def forward(self):\r\n        while self.i < len(self.vec) and self.j >= len(self.vec[self.i]):\r\n            self.i += 1\r\n            self.j = 0\r\n\r\n\r\n# Your Vector2D object will be instantiated and called as such:\r\n# obj = Vector2D(vec)\r\n# param_1 = obj.next()\r\n# param_2 = obj.hasNext()",
+    "problemId": 251,
+    "title": "Flatten 2D Vector",
+    "problemUrl": "https://leetcode.com/problems/flatten-2d-vector/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0251.Flatten 2D Vector/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0251.Flatten 2D Vector/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0251.Flatten 2D Vector/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0251.Flatten 2D Vector/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0251.Flatten 2D Vector/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0251.Flatten 2D Vector/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

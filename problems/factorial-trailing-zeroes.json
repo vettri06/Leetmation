@@ -1,0 +1,38 @@
+{
+    "problemName": "factorial-trailing-zeroes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def trailingZeroes(self, n: int) -> int:\r\n        ans = 0\r\n        while n:\r\n            n //= 5\r\n            ans += n\r\n        return ans",
+    "problemId": 172,
+    "title": "Factorial Trailing Zeroes",
+    "problemUrl": "https://leetcode.com/problems/factorial-trailing-zeroes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0172.Factorial Trailing Zeroes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0172.Factorial Trailing Zeroes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0172.Factorial Trailing Zeroes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0172.Factorial Trailing Zeroes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0172.Factorial Trailing Zeroes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0172.Factorial Trailing Zeroes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

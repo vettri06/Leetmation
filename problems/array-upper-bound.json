@@ -1,0 +1,23 @@
+{
+    "problemName": "array-upper-bound",
+    "language": "typescript",
+    "code": "declare global {\r\n    interface Array<T> {\r\n        upperBound(target: number): number;\r\n    }\r\n}\r\n\r\nArray.prototype.upperBound = function (target: number) {\r\n    let left = 0;\r\n    let right = this.length;\r\n    while (left < right) {\r\n        const mid = (left + right) >> 1;\r\n        if (this[mid] > target) {\r\n            right = mid;\r\n        } else {\r\n            left = mid + 1;\r\n        }\r\n    }\r\n    return left > 0 && this[left - 1] == target ? left - 1 : -1;\r\n};\r\n\r\n// [3,4,5].upperBound(5); // 2\r\n// [1,4,5].upperBound(2); // -1\r\n// [3,4,6,6,6,6,7].upperBound(6) // 5",
+    "problemId": 2774,
+    "title": "Array Upper Bound",
+    "problemUrl": "https://leetcode.com/problems/array-upper-bound/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2774.Array Upper Bound/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2774.Array Upper Bound/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2774.Array Upper Bound/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

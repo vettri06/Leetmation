@@ -1,0 +1,48 @@
+{
+    "problemName": "rabbits-in-forest",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numRabbits(self, answers: List[int]) -> int:\r\n        cnt = Counter(answers)\r\n        ans = 0\r\n        for x, v in cnt.items():\r\n            group = x + 1\r\n            ans += (v + group - 1) // group * group\r\n        return ans",
+    "problemId": 781,
+    "title": "Rabbits in Forest",
+    "problemUrl": "https://leetcode.com/problems/rabbits-in-forest/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0781.Rabbits in Forest/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0781.Rabbits in Forest/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0781.Rabbits in Forest/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0781.Rabbits in Forest/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0781.Rabbits in Forest/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0781.Rabbits in Forest/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0781.Rabbits in Forest/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0781.Rabbits in Forest/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

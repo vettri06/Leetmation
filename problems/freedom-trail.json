@@ -1,0 +1,38 @@
+{
+    "problemName": "freedom-trail",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findRotateSteps(self, ring: str, key: str) -> int:\r\n        m, n = len(key), len(ring)\r\n        pos = defaultdict(list)\r\n        for i, c in enumerate(ring):\r\n            pos[c].append(i)\r\n        f = [[inf] * n for _ in range(m)]\r\n        for j in pos[key[0]]:\r\n            f[0][j] = min(j, n - j) + 1\r\n        for i in range(1, m):\r\n            for j in pos[key[i]]:\r\n                for k in pos[key[i - 1]]:\r\n                    f[i][j] = min(\r\n                        f[i][j], f[i - 1][k] + min(abs(j - k), n - abs(j - k)) + 1\r\n                    )\r\n        return min(f[-1][j] for j in pos[key[-1]])",
+    "problemId": 514,
+    "title": "Freedom Trail",
+    "problemUrl": "https://leetcode.com/problems/freedom-trail/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0514.Freedom Trail/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0514.Freedom Trail/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0514.Freedom Trail/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0514.Freedom Trail/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0514.Freedom Trail/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0514.Freedom Trail/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

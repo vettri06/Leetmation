@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-time-to-eat-all-grains",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumTime(self, hens: List[int], grains: List[int]) -> int:\r\n        def check(t):\r\n            j = 0\r\n            for x in hens:\r\n                if j == m:\r\n                    return True\r\n                y = grains[j]\r\n                if y <= x:\r\n                    d = x - y\r\n                    if d > t:\r\n                        return False\r\n                    while j < m and grains[j] <= x:\r\n                        j += 1\r\n                    while j < m and min(d, grains[j] - x) + grains[j] - y <= t:\r\n                        j += 1\r\n                else:\r\n                    while j < m and grains[j] - x <= t:\r\n                        j += 1\r\n            return j == m\r\n\r\n        hens.sort()\r\n        grains.sort()\r\n        m = len(grains)\r\n        r = abs(hens[0] - grains[0]) + grains[-1] - grains[0] + 1\r\n        return bisect_left(range(r), True, key=check)",
+    "problemId": 2604,
+    "title": "Minimum Time to Eat All Grains",
+    "problemUrl": "https://leetcode.com/problems/minimum-time-to-eat-all-grains/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2604.Minimum Time to Eat All Grains/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2604.Minimum Time to Eat All Grains/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2604.Minimum Time to Eat All Grains/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2604.Minimum Time to Eat All Grains/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2604.Minimum Time to Eat All Grains/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2604.Minimum Time to Eat All Grains/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

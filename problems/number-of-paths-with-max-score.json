@@ -1,0 +1,33 @@
+{
+    "problemName": "number-of-paths-with-max-score",
+    "language": "python3",
+    "code": "class Solution:\r\n    def pathsWithMaxScore(self, board: List[str]) -> List[int]:\r\n        def update(i, j, x, y):\r\n            if x >= n or y >= n or f[x][y] == -1 or board[i][j] in \"XS\":\r\n                return\r\n            if f[x][y] > f[i][j]:\r\n                f[i][j] = f[x][y]\r\n                g[i][j] = g[x][y]\r\n            elif f[x][y] == f[i][j]:\r\n                g[i][j] += g[x][y]\r\n\r\n        n = len(board)\r\n        f = [[-1] * n for _ in range(n)]\r\n        g = [[0] * n for _ in range(n)]\r\n        f[-1][-1], g[-1][-1] = 0, 1\r\n        for i in range(n - 1, -1, -1):\r\n            for j in range(n - 1, -1, -1):\r\n                update(i, j, i + 1, j)\r\n                update(i, j, i, j + 1)\r\n                update(i, j, i + 1, j + 1)\r\n                if f[i][j] != -1 and board[i][j].isdigit():\r\n                    f[i][j] += int(board[i][j])\r\n        mod = 10**9 + 7\r\n        return [0, 0] if f[0][0] == -1 else [f[0][0], g[0][0] % mod]",
+    "problemId": 1301,
+    "title": "Number of Paths with Max Score",
+    "problemUrl": "https://leetcode.com/problems/number-of-paths-with-max-score/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1301.Number of Paths with Max Score/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1301.Number of Paths with Max Score/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1301.Number of Paths with Max Score/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1301.Number of Paths with Max Score/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1301.Number of Paths with Max Score/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

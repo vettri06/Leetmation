@@ -1,0 +1,18 @@
+{
+    "problemName": "bind-function-to-context",
+    "language": "typescript",
+    "code": "type Fn = (...args) => any;\r\n\r\ndeclare global {\r\n    interface Function {\r\n        bindPolyfill(obj: Record<any, any>): Fn;\r\n    }\r\n}\r\n\r\nFunction.prototype.bindPolyfill = function (obj) {\r\n    return (...args) => {\r\n        return this.call(obj, ...args);\r\n    };\r\n};",
+    "problemId": 2754,
+    "title": "Bind Function to Context",
+    "problemUrl": "https://leetcode.com/problems/bind-function-to-context/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2754.Bind Function to Context/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2754.Bind Function to Context/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

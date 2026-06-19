@@ -1,0 +1,43 @@
+{
+    "problemName": "count-substrings-that-satisfy-k-constraint-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countKConstraintSubstrings(self, s: str, k: int) -> int:\r\n        cnt = [0, 0]\r\n        ans = l = 0\r\n        for r, x in enumerate(map(int, s)):\r\n            cnt[x] += 1\r\n            while cnt[0] > k and cnt[1] > k:\r\n                cnt[int(s[l])] -= 1\r\n                l += 1\r\n            ans += r - l + 1\r\n        return ans",
+    "problemId": 3258,
+    "title": "Count Substrings That Satisfy K-Constraint I",
+    "problemUrl": "https://leetcode.com/problems/count-substrings-that-satisfy-k-constraint-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3258.Count Substrings That Satisfy K-Constraint I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3258.Count Substrings That Satisfy K-Constraint I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3258.Count Substrings That Satisfy K-Constraint I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3258.Count Substrings That Satisfy K-Constraint I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3258.Count Substrings That Satisfy K-Constraint I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3258.Count Substrings That Satisfy K-Constraint I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3258.Count Substrings That Satisfy K-Constraint I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

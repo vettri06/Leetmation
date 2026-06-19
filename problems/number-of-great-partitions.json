@@ -1,0 +1,33 @@
+{
+    "problemName": "number-of-great-partitions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPartitions(self, nums: List[int], k: int) -> int:\r\n        if sum(nums) < k * 2:\r\n            return 0\r\n        mod = 10**9 + 7\r\n        n = len(nums)\r\n        f = [[0] * k for _ in range(n + 1)]\r\n        f[0][0] = 1\r\n        ans = 1\r\n        for i in range(1, n + 1):\r\n            ans = ans * 2 % mod\r\n            for j in range(k):\r\n                f[i][j] = f[i - 1][j]\r\n                if j >= nums[i - 1]:\r\n                    f[i][j] = (f[i][j] + f[i - 1][j - nums[i - 1]]) % mod\r\n        return (ans - sum(f[-1]) * 2 + mod) % mod",
+    "problemId": 2518,
+    "title": "Number of Great Partitions",
+    "problemUrl": "https://leetcode.com/problems/number-of-great-partitions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2518.Number of Great Partitions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2518.Number of Great Partitions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2518.Number of Great Partitions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2518.Number of Great Partitions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2518.Number of Great Partitions/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

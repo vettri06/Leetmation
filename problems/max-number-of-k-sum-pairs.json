@@ -1,0 +1,68 @@
+{
+    "problemName": "max-number-of-k-sum-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxOperations(self, nums: List[int], k: int) -> int:\r\n        nums.sort()\r\n        l, r, ans = 0, len(nums) - 1, 0\r\n        while l < r:\r\n            s = nums[l] + nums[r]\r\n            if s == k:\r\n                ans += 1\r\n                l, r = l + 1, r - 1\r\n            elif s > k:\r\n                r -= 1\r\n            else:\r\n                l += 1\r\n        return ans",
+    "problemId": 1679,
+    "title": "Max Number of K-Sum Pairs",
+    "problemUrl": "https://leetcode.com/problems/max-number-of-k-sum-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1679.Max Number of K-Sum Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1679.Max Number of K-Sum Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1679.Max Number of K-Sum Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1679.Max Number of K-Sum Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1679.Max Number of K-Sum Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1679.Max Number of K-Sum Pairs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1679.Max Number of K-Sum Pairs/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1679.Max Number of K-Sum Pairs/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1679.Max Number of K-Sum Pairs/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1679.Max Number of K-Sum Pairs/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1679.Max Number of K-Sum Pairs/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1679.Max Number of K-Sum Pairs/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

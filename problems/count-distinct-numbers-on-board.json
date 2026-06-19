@@ -1,0 +1,43 @@
+{
+    "problemName": "count-distinct-numbers-on-board",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distinctIntegers(self, n: int) -> int:\r\n        return max(1, n - 1)",
+    "problemId": 2549,
+    "title": "Count Distinct Numbers on Board",
+    "problemUrl": "https://leetcode.com/problems/count-distinct-numbers-on-board/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2549.Count Distinct Numbers on Board/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2549.Count Distinct Numbers on Board/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2549.Count Distinct Numbers on Board/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2549.Count Distinct Numbers on Board/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2549.Count Distinct Numbers on Board/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2549.Count Distinct Numbers on Board/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2549.Count Distinct Numbers on Board/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

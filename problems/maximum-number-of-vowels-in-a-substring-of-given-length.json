@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-number-of-vowels-in-a-substring-of-given-length",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxVowels(self, s: str, k: int) -> int:\r\n        vowels = set(\"aeiou\")\r\n        ans = cnt = sum(c in vowels for c in s[:k])\r\n        for i in range(k, len(s)):\r\n            cnt += int(s[i] in vowels) - int(s[i - k] in vowels)\r\n            ans = max(ans, cnt)\r\n        return ans",
+    "problemId": 1456,
+    "title": "Maximum Number of Vowels in a Substring of Given Length",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1456.Maximum Number of Vowels in a Substring of Given Length/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1456.Maximum Number of Vowels in a Substring of Given Length/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1456.Maximum Number of Vowels in a Substring of Given Length/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1456.Maximum Number of Vowels in a Substring of Given Length/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1456.Maximum Number of Vowels in a Substring of Given Length/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1456.Maximum Number of Vowels in a Substring of Given Length/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "pyramid-transition-matrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def pyramidTransition(self, bottom: str, allowed: List[str]) -> bool:\r\n        @cache\r\n        def dfs(s: str) -> bool:\r\n            if len(s) == 1:\r\n                return True\r\n            t = []\r\n            for a, b in pairwise(s):\r\n                cs = d[a, b]\r\n                if not cs:\r\n                    return False\r\n                t.append(cs)\r\n            return any(dfs(\"\".join(nxt)) for nxt in product(*t))\r\n\r\n        d = defaultdict(list)\r\n        for a, b, c in allowed:\r\n            d[a, b].append(c)\r\n        return dfs(bottom)",
+    "problemId": 756,
+    "title": "Pyramid Transition Matrix",
+    "problemUrl": "https://leetcode.com/problems/pyramid-transition-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0756.Pyramid Transition Matrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0756.Pyramid Transition Matrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0756.Pyramid Transition Matrix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0756.Pyramid Transition Matrix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0756.Pyramid Transition Matrix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0756.Pyramid Transition Matrix/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

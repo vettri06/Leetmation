@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-minimum-and-maximum-number-of-nodes-between-critical-points",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def nodesBetweenCriticalPoints(self, head: Optional[ListNode]) -> List[int]:\r\n        ans = [inf, -inf]\r\n        first = last = -1\r\n        i = 0\r\n        while head.next.next:\r\n            a, b, c = head.val, head.next.val, head.next.next.val\r\n            if a > b < c or a < b > c:\r\n                if last == -1:\r\n                    first = last = i\r\n                else:\r\n                    ans[0] = min(ans[0], i - last)\r\n                    last = i\r\n                    ans[1] = max(ans[1], last - first)\r\n            i += 1\r\n            head = head.next\r\n        return [-1, -1] if first == last else ans",
+    "problemId": 2058,
+    "title": "Find the Minimum and Maximum Number of Nodes Between Critical Points",
+    "problemUrl": "https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2058.Find the Minimum and Maximum Number of Nodes Between Critical Points/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2058.Find the Minimum and Maximum Number of Nodes Between Critical Points/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2058.Find the Minimum and Maximum Number of Nodes Between Critical Points/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2058.Find the Minimum and Maximum Number of Nodes Between Critical Points/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2058.Find the Minimum and Maximum Number of Nodes Between Critical Points/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2058.Find the Minimum and Maximum Number of Nodes Between Critical Points/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

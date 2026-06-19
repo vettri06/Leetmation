@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-balanced-shipments",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxBalancedShipments(self, weight: List[int]) -> int:\r\n        ans = mx = 0\r\n        for x in weight:\r\n            mx = max(mx, x)\r\n            if x < mx:\r\n                ans += 1\r\n                mx = 0\r\n        return ans",
+    "problemId": 3638,
+    "title": "Maximum Balanced Shipments",
+    "problemUrl": "https://leetcode.com/problems/maximum-balanced-shipments/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3638.Maximum Balanced Shipments/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3638.Maximum Balanced Shipments/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3638.Maximum Balanced Shipments/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3638.Maximum Balanced Shipments/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3638.Maximum Balanced Shipments/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3638.Maximum Balanced Shipments/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "1-bit-and-2-bit-characters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isOneBitCharacter(self, bits: List[int]) -> bool:\r\n        i, n = 0, len(bits)\r\n        while i < n - 1:\r\n            i += bits[i] + 1\r\n        return i == n - 1",
+    "problemId": 717,
+    "title": "1-bit and 2-bit Characters",
+    "problemUrl": "https://leetcode.com/problems/1-bit-and-2-bit-characters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0717.1-bit and 2-bit Characters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0717.1-bit and 2-bit Characters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0717.1-bit and 2-bit Characters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0717.1-bit and 2-bit Characters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0717.1-bit and 2-bit Characters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0717.1-bit and 2-bit Characters/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0717.1-bit and 2-bit Characters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0717.1-bit and 2-bit Characters/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

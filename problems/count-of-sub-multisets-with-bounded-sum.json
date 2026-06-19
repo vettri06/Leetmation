@@ -1,0 +1,38 @@
+{
+    "problemName": "count-of-sub-multisets-with-bounded-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSubMultisets(self, nums: List[int], l: int, r: int) -> int:\r\n        kMod = 1_000_000_007\r\n        # dp[i] := # of submultisets of nums with sum i\r\n        dp = [1] + [0] * r\r\n        count = collections.Counter(nums)\r\n        zeros = count.pop(0, 0)\r\n\r\n        for num, freq in count.items():\r\n            # stride[i] := dp[i] + dp[i - num] + dp[i - 2 * num] + ...\r\n            stride = dp.copy()\r\n            for i in range(num, r + 1):\r\n                stride[i] += stride[i - num]\r\n            for i in range(r, 0, -1):\r\n                if i >= num * (freq + 1):\r\n                    # dp[i] + dp[i - num] + dp[i - freq * num]\r\n                    dp[i] = stride[i] - stride[i - num * (freq + 1)]\r\n                else:\r\n                    dp[i] = stride[i]\r\n\r\n        return (zeros + 1) * sum(dp[l : r + 1]) % kMod",
+    "problemId": 2902,
+    "title": "Count of Sub-Multisets With Bounded Sum",
+    "problemUrl": "https://leetcode.com/problems/count-of-sub-multisets-with-bounded-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2902.Count of Sub-Multisets With Bounded Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2902.Count of Sub-Multisets With Bounded Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2902.Count of Sub-Multisets With Bounded Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2902.Count of Sub-Multisets With Bounded Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2902.Count of Sub-Multisets With Bounded Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2902.Count of Sub-Multisets With Bounded Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

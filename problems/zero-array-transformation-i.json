@@ -1,0 +1,38 @@
+{
+    "problemName": "zero-array-transformation-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isZeroArray(self, nums: List[int], queries: List[List[int]]) -> bool:\r\n        d = [0] * (len(nums) + 1)\r\n        for l, r in queries:\r\n            d[l] += 1\r\n            d[r + 1] -= 1\r\n        s = 0\r\n        for x, y in zip(nums, d):\r\n            s += y\r\n            if x > s:\r\n                return False\r\n        return True",
+    "problemId": 3355,
+    "title": "Zero Array Transformation I",
+    "problemUrl": "https://leetcode.com/problems/zero-array-transformation-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3355.Zero Array Transformation I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3355.Zero Array Transformation I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3355.Zero Array Transformation I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3355.Zero Array Transformation I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3355.Zero Array Transformation I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3355.Zero Array Transformation I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

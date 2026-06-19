@@ -1,0 +1,53 @@
+{
+    "problemName": "remove-duplicates-from-sorted-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def removeDuplicates(self, nums: List[int]) -> int:\r\n        k = 0\r\n        for x in nums:\r\n            if k == 0 or x != nums[k - 1]:\r\n                nums[k] = x\r\n                k += 1\r\n        return k",
+    "problemId": 26,
+    "title": "Remove Duplicates from Sorted Array",
+    "problemUrl": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0026.Remove Duplicates from Sorted Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0026.Remove Duplicates from Sorted Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0026.Remove Duplicates from Sorted Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0026.Remove Duplicates from Sorted Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0026.Remove Duplicates from Sorted Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0026.Remove Duplicates from Sorted Array/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0026.Remove Duplicates from Sorted Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0026.Remove Duplicates from Sorted Array/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0026.Remove Duplicates from Sorted Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "search-suggestions-system",
+    "language": "python3",
+    "code": "class Trie:\r\n    def __init__(self):\r\n        self.children: List[Union[Trie, None]] = [None] * 26\r\n        self.v: List[int] = []\r\n\r\n    def insert(self, w, i):\r\n        node = self\r\n        for c in w:\r\n            idx = ord(c) - ord('a')\r\n            if node.children[idx] is None:\r\n                node.children[idx] = Trie()\r\n            node = node.children[idx]\r\n            if len(node.v) < 3:\r\n                node.v.append(i)\r\n\r\n    def search(self, w):\r\n        node = self\r\n        ans = [[] for _ in range(len(w))]\r\n        for i, c in enumerate(w):\r\n            idx = ord(c) - ord('a')\r\n            if node.children[idx] is None:\r\n                break\r\n            node = node.children[idx]\r\n            ans[i] = node.v\r\n        return ans\r\n\r\n\r\nclass Solution:\r\n    def suggestedProducts(\r\n        self, products: List[str], searchWord: str\r\n    ) -> List[List[str]]:\r\n        products.sort()\r\n        trie = Trie()\r\n        for i, w in enumerate(products):\r\n            trie.insert(w, i)\r\n        return [[products[i] for i in v] for v in trie.search(searchWord)]",
+    "problemId": 1268,
+    "title": "Search Suggestions System",
+    "problemUrl": "https://leetcode.com/problems/search-suggestions-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1268.Search Suggestions System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1268.Search Suggestions System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1268.Search Suggestions System/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1268.Search Suggestions System/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1268.Search Suggestions System/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

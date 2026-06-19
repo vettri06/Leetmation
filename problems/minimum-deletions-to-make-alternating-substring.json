@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-deletions-to-make-alternating-substring",
+    "language": "python3",
+    "code": "class BinaryIndexedTree:\r\n    __slots__ = \"n\", \"c\"\r\n\r\n    def __init__(self, n: int):\r\n        self.n = n\r\n        self.c = [0] * (n + 1)\r\n\r\n    def update(self, x: int, delta: int) -> None:\r\n        while x <= self.n:\r\n            self.c[x] += delta\r\n            x += x & -x\r\n\r\n    def query(self, x: int) -> int:\r\n        s = 0\r\n        while x:\r\n            s += self.c[x]\r\n            x -= x & -x\r\n        return s\r\n\r\n\r\nclass Solution:\r\n    def minDeletions(self, s: str, queries: List[List[int]]) -> List[int]:\r\n        n = len(s)\r\n        nums = [0] * n\r\n        bit = BinaryIndexedTree(n)\r\n        for i in range(1, n):\r\n            nums[i] = int(s[i] == s[i - 1])\r\n            if nums[i]:\r\n                bit.update(i + 1, 1)\r\n        ans = []\r\n        for q in queries:\r\n            if q[0] == 1:\r\n                j = q[1]\r\n                delta = (nums[j] ^ 1) - nums[j]\r\n                nums[j] ^= 1\r\n                bit.update(j + 1, delta)\r\n                if j + 1 < n:\r\n                    delta = (nums[j + 1] ^ 1) - nums[j + 1]\r\n                    nums[j + 1] ^= 1\r\n                    bit.update(j + 2, delta)\r\n            else:\r\n                _, l, r = q\r\n                ans.append(bit.query(r + 1) - bit.query(l + 1))\r\n        return ans",
+    "problemId": 3777,
+    "title": "Minimum Deletions to Make Alternating Substring",
+    "problemUrl": "https://leetcode.com/problems/minimum-deletions-to-make-alternating-substring/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3777.Minimum Deletions to Make Alternating Substring/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3777.Minimum Deletions to Make Alternating Substring/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3777.Minimum Deletions to Make Alternating Substring/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3777.Minimum Deletions to Make Alternating Substring/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3777.Minimum Deletions to Make Alternating Substring/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3777.Minimum Deletions to Make Alternating Substring/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

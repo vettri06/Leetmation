@@ -1,0 +1,33 @@
+{
+    "problemName": "find-all-possible-recipes-from-given-supplies",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findAllRecipes(\r\n        self, recipes: List[str], ingredients: List[List[str]], supplies: List[str]\r\n    ) -> List[str]:\r\n        g = defaultdict(list)\r\n        indeg = defaultdict(int)\r\n        for a, b in zip(recipes, ingredients):\r\n            for v in b:\r\n                g[v].append(a)\r\n            indeg[a] += len(b)\r\n        q = supplies\r\n        ans = []\r\n        for i in q:\r\n            for j in g[i]:\r\n                indeg[j] -= 1\r\n                if indeg[j] == 0:\r\n                    ans.append(j)\r\n                    q.append(j)\r\n        return ans",
+    "problemId": 2115,
+    "title": "Find All Possible Recipes from Given Supplies",
+    "problemUrl": "https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2115.Find All Possible Recipes from Given Supplies/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2115.Find All Possible Recipes from Given Supplies/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2115.Find All Possible Recipes from Given Supplies/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2115.Find All Possible Recipes from Given Supplies/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2115.Find All Possible Recipes from Given Supplies/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "binary-tree-coloring-game",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def btreeGameWinningMove(self, root: Optional[TreeNode], n: int, x: int) -> bool:\r\n        def dfs(root):\r\n            if root is None or root.val == x:\r\n                return root\r\n            return dfs(root.left) or dfs(root.right)\r\n\r\n        def count(root):\r\n            if root is None:\r\n                return 0\r\n            return 1 + count(root.left) + count(root.right)\r\n\r\n        node = dfs(root)\r\n        l, r = count(node.left), count(node.right)\r\n        return max(l, r, n - l - r - 1) > n // 2",
+    "problemId": 1145,
+    "title": "Binary Tree Coloring Game",
+    "problemUrl": "https://leetcode.com/problems/binary-tree-coloring-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1145.Binary Tree Coloring Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1145.Binary Tree Coloring Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1145.Binary Tree Coloring Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1145.Binary Tree Coloring Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1145.Binary Tree Coloring Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1145.Binary Tree Coloring Game/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1145.Binary Tree Coloring Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

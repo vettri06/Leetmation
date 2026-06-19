@@ -1,0 +1,23 @@
+{
+    "problemName": "analyze-organization-hierarchy",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef analyze_organization_hierarchy(employees: pd.DataFrame) -> pd.DataFrame:\r\n    # Copy the input DataFrame to avoid modifying the original\r\n    employees = employees.copy()\r\n    employees[\"level\"] = None\r\n\r\n    # Identify the CEO (level 1)\r\n    ceo_id = employees.loc[employees[\"manager_id\"].isna(), \"employee_id\"].values[0]\r\n    employees.loc[employees[\"employee_id\"] == ceo_id, \"level\"] = 1\r\n\r\n    # Recursively compute employee levels\r\n    def compute_levels(emp_df, level):\r\n        next_level_ids = emp_df[emp_df[\"level\"] == level][\"employee_id\"].tolist()\r\n        if not next_level_ids:\r\n            return\r\n        emp_df.loc[emp_df[\"manager_id\"].isin(next_level_ids), \"level\"] = level + 1\r\n        compute_levels(emp_df, level + 1)\r\n\r\n    compute_levels(employees, 1)\r\n\r\n    # Initialize team size and budget dictionaries\r\n    team_size = {eid: 0 for eid in employees[\"employee_id\"]}\r\n    budget = {\r\n        eid: salary\r\n        for eid, salary in zip(employees[\"employee_id\"], employees[\"salary\"])\r\n    }\r\n\r\n    # Compute team size and budget for each employee\r\n    for eid in sorted(employees[\"employee_id\"], reverse=True):\r\n        manager_id = employees.loc[\r\n            employees[\"employee_id\"] == eid, \"manager_id\"\r\n        ].values[0]\r\n        if pd.notna(manager_id):\r\n            team_size[manager_id] += team_size[eid] + 1\r\n            budget[manager_id] += budget[eid]\r\n\r\n    # Map computed team size and budget to employees DataFrame\r\n    employees[\"team_size\"] = employees[\"employee_id\"].map(team_size)\r\n    employees[\"budget\"] = employees[\"employee_id\"].map(budget)\r\n\r\n    # Sort the final result by level (ascending), budget (descending), and employee name (ascending)\r\n    employees = employees.sort_values(\r\n        by=[\"level\", \"budget\", \"employee_name\"], ascending=[True, False, True]\r\n    )\r\n\r\n    return employees[[\"employee_id\", \"employee_name\", \"level\", \"team_size\", \"budget\"]]",
+    "problemId": 3482,
+    "title": "Analyze Organization Hierarchy",
+    "problemUrl": "https://leetcode.com/problems/analyze-organization-hierarchy/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3482.Analyze Organization Hierarchy/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3482.Analyze Organization Hierarchy/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3482.Analyze Organization Hierarchy/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

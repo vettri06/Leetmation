@@ -1,0 +1,23 @@
+{
+    "problemName": "grand-slam-titles",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT Wimbledon AS player_id\r\n        FROM Championships\r\n        UNION ALL\r\n        SELECT Fr_open AS player_id\r\n        FROM Championships\r\n        UNION ALL\r\n        SELECT US_open AS player_id\r\n        FROM Championships\r\n        UNION ALL\r\n        SELECT Au_open AS player_id\r\n        FROM Championships\r\n    )\r\nSELECT player_id, player_name, COUNT(1) AS grand_slams_count\r\nFROM\r\n    T\r\n    JOIN Players USING (player_id)\r\nGROUP BY 1;",
+    "problemId": 1783,
+    "title": "Grand Slam Titles",
+    "problemUrl": "https://leetcode.com/problems/grand-slam-titles/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1783.Grand Slam Titles/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1783.Grand Slam Titles/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1783.Grand Slam Titles/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "soup-servings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def soupServings(self, n: int) -> float:\r\n        @cache\r\n        def dfs(i: int, j: int) -> float:\r\n            if i <= 0 and j <= 0:\r\n                return 0.5\r\n            if i <= 0:\r\n                return 1\r\n            if j <= 0:\r\n                return 0\r\n            return 0.25 * (\r\n                dfs(i - 4, j)\r\n                + dfs(i - 3, j - 1)\r\n                + dfs(i - 2, j - 2)\r\n                + dfs(i - 1, j - 3)\r\n            )\r\n\r\n        return 1 if n > 4800 else dfs((n + 24) // 25, (n + 24) // 25)",
+    "problemId": 808,
+    "title": "Soup Servings",
+    "problemUrl": "https://leetcode.com/problems/soup-servings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0808.Soup Servings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0808.Soup Servings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0808.Soup Servings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0808.Soup Servings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0808.Soup Servings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0808.Soup Servings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0808.Soup Servings/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0808.Soup Servings/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

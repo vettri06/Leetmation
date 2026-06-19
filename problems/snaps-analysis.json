@@ -1,0 +1,23 @@
+{
+    "problemName": "snaps-analysis",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef snap_analysis(activities: pd.DataFrame, age: pd.DataFrame) -> pd.DataFrame:\r\n    merged_df = pd.merge(activities, age, on=\"user_id\")\r\n    total_time_per_age_activity = (\r\n        merged_df.groupby([\"age_bucket\", \"activity_type\"])[\"time_spent\"]\r\n        .sum()\r\n        .reset_index()\r\n    )\r\n    pivot_df = total_time_per_age_activity.pivot(\r\n        index=\"age_bucket\", columns=\"activity_type\", values=\"time_spent\"\r\n    ).reset_index()\r\n    pivot_df = pivot_df.fillna(0)\r\n    pivot_df[\"send_perc\"] = round(\r\n        100 * pivot_df[\"send\"] / (pivot_df[\"send\"] + pivot_df[\"open\"]), 2\r\n    )\r\n    pivot_df[\"open_perc\"] = round(\r\n        100 * pivot_df[\"open\"] / (pivot_df[\"send\"] + pivot_df[\"open\"]), 2\r\n    )\r\n    return pivot_df[[\"age_bucket\", \"send_perc\", \"open_perc\"]]",
+    "problemId": 3056,
+    "title": "Snaps Analysis",
+    "problemUrl": "https://leetcode.com/problems/snaps-analysis/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3056.Snaps Analysis/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3056.Snaps Analysis/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3056.Snaps Analysis/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

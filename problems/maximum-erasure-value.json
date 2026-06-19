@@ -1,0 +1,68 @@
+{
+    "problemName": "maximum-erasure-value",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumUniqueSubarray(self, nums: List[int]) -> int:\r\n        d = [0] * (max(nums) + 1)\r\n        s = list(accumulate(nums, initial=0))\r\n        ans = j = 0\r\n        for i, v in enumerate(nums, 1):\r\n            j = max(j, d[v])\r\n            ans = max(ans, s[i] - s[j])\r\n            d[v] = i\r\n        return ans",
+    "problemId": 1695,
+    "title": "Maximum Erasure Value",
+    "problemUrl": "https://leetcode.com/problems/maximum-erasure-value/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1695.Maximum Erasure Value/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1695.Maximum Erasure Value/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1695.Maximum Erasure Value/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1695.Maximum Erasure Value/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1695.Maximum Erasure Value/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1695.Maximum Erasure Value/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1695.Maximum Erasure Value/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1695.Maximum Erasure Value/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1695.Maximum Erasure Value/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1695.Maximum Erasure Value/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1695.Maximum Erasure Value/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1695.Maximum Erasure Value/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

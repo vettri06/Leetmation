@@ -1,0 +1,18 @@
+{
+    "problemName": "reshape-data-concatenate",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef concatenateTables(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:\r\n    return pd.concat([df1, df2], ignore_index=True)",
+    "problemId": 2888,
+    "title": "Reshape Data Concatenate",
+    "problemUrl": "https://leetcode.com/problems/reshape-data-concatenate/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2888.Reshape Data Concatenate/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2888.Reshape Data Concatenate/Solution.py",
+            "sourceFile": "Solution.py"
+        }
+    ]
+}

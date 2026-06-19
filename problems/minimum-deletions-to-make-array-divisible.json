@@ -1,0 +1,58 @@
+{
+    "problemName": "minimum-deletions-to-make-array-divisible",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums: List[int], numsDivide: List[int]) -> int:\r\n        x = numsDivide[0]\r\n        for v in numsDivide[1:]:\r\n            x = gcd(x, v)\r\n        nums.sort()\r\n        for i, v in enumerate(nums):\r\n            if x % v == 0:\r\n                return i\r\n        return -1",
+    "problemId": 2344,
+    "title": "Minimum Deletions to Make Array Divisible",
+    "problemUrl": "https://leetcode.com/problems/minimum-deletions-to-make-array-divisible/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2344.Minimum Deletions to Make Array Divisible/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2344.Minimum Deletions to Make Array Divisible/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2344.Minimum Deletions to Make Array Divisible/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2344.Minimum Deletions to Make Array Divisible/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2344.Minimum Deletions to Make Array Divisible/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2344.Minimum Deletions to Make Array Divisible/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2344.Minimum Deletions to Make Array Divisible/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2344.Minimum Deletions to Make Array Divisible/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2344.Minimum Deletions to Make Array Divisible/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2344.Minimum Deletions to Make Array Divisible/Solution3.py",
+            "sourceFile": "Solution3.py"
+        }
+    ]
+}

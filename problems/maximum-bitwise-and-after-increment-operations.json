@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-bitwise-and-after-increment-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumAND(self, nums: List[int], k: int, m: int) -> int:\r\n        mx = (max(nums) + k).bit_length()\r\n        ans = 0\r\n        cost = [0] * len(nums)\r\n        for bit in range(mx - 1, -1, -1):\r\n            target = ans | (1 << bit)\r\n            for i, x in enumerate(nums):\r\n                j = (target & ~x).bit_length()\r\n                mask = (1 << j) - 1\r\n                cost[i] = (target & mask) - (x & mask)\r\n            cost.sort()\r\n            if sum(cost[:m]) <= k:\r\n                ans = target\r\n        return ans",
+    "problemId": 3806,
+    "title": "Maximum Bitwise AND After Increment Operations",
+    "problemUrl": "https://leetcode.com/problems/maximum-bitwise-and-after-increment-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3806.Maximum Bitwise AND After Increment Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3806.Maximum Bitwise AND After Increment Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3806.Maximum Bitwise AND After Increment Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3806.Maximum Bitwise AND After Increment Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3806.Maximum Bitwise AND After Increment Operations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

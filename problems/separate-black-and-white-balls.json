@@ -1,0 +1,38 @@
+{
+    "problemName": "separate-black-and-white-balls",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumSteps(self, s: str) -> int:\r\n        n = len(s)\r\n        ans = cnt = 0\r\n        for i in range(n - 1, -1, -1):\r\n            if s[i] == '1':\r\n                cnt += 1\r\n                ans += n - i - cnt\r\n        return ans",
+    "problemId": 2938,
+    "title": "Separate Black and White Balls",
+    "problemUrl": "https://leetcode.com/problems/separate-black-and-white-balls/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2938.Separate Black and White Balls/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2938.Separate Black and White Balls/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2938.Separate Black and White Balls/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2938.Separate Black and White Balls/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2938.Separate Black and White Balls/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2938.Separate Black and White Balls/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

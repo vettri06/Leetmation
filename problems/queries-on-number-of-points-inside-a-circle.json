@@ -1,0 +1,48 @@
+{
+    "problemName": "queries-on-number-of-points-inside-a-circle",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPoints(\r\n        self, points: List[List[int]], queries: List[List[int]]\r\n    ) -> List[int]:\r\n        ans = []\r\n        for x, y, r in queries:\r\n            cnt = 0\r\n            for i, j in points:\r\n                dx, dy = i - x, j - y\r\n                cnt += dx * dx + dy * dy <= r * r\r\n            ans.append(cnt)\r\n        return ans",
+    "problemId": 1828,
+    "title": "Queries on Number of Points Inside a Circle",
+    "problemUrl": "https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1828.Queries on Number of Points Inside a Circle/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1828.Queries on Number of Points Inside a Circle/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1828.Queries on Number of Points Inside a Circle/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1828.Queries on Number of Points Inside a Circle/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1828.Queries on Number of Points Inside a Circle/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1828.Queries on Number of Points Inside a Circle/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1828.Queries on Number of Points Inside a Circle/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1828.Queries on Number of Points Inside a Circle/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

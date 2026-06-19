@@ -1,0 +1,38 @@
+{
+    "problemName": "check-if-string-is-decomposable-into-value-equal-substrings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isDecomposable(self, s: str) -> bool:\r\n        i, n = 0, len(s)\r\n        cnt2 = 0\r\n        while i < n:\r\n            j = i\r\n            while j < n and s[j] == s[i]:\r\n                j += 1\r\n            if (j - i) % 3 == 1:\r\n                return False\r\n            cnt2 += (j - i) % 3 == 2\r\n            if cnt2 > 1:\r\n                return False\r\n            i = j\r\n        return cnt2 == 1",
+    "problemId": 1933,
+    "title": "Check if String Is Decomposable Into Value-Equal Substrings",
+    "problemUrl": "https://leetcode.com/problems/check-if-string-is-decomposable-into-value-equal-substrings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1933.Check if String Is Decomposable Into Value-Equal Substrings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1933.Check if String Is Decomposable Into Value-Equal Substrings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1933.Check if String Is Decomposable Into Value-Equal Substrings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1933.Check if String Is Decomposable Into Value-Equal Substrings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1933.Check if String Is Decomposable Into Value-Equal Substrings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1933.Check if String Is Decomposable Into Value-Equal Substrings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

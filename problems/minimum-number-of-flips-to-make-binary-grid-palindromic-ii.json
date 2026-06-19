@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-number-of-flips-to-make-binary-grid-palindromic-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minFlips(self, grid: List[List[int]]) -> int:\r\n        m, n = len(grid), len(grid[0])\r\n        ans = 0\r\n        for i in range(m // 2):\r\n            for j in range(n // 2):\r\n                x, y = m - i - 1, n - j - 1\r\n                cnt1 = grid[i][j] + grid[x][j] + grid[i][y] + grid[x][y]\r\n                ans += min(cnt1, 4 - cnt1)\r\n        if m % 2 and n % 2:\r\n            ans += grid[m // 2][n // 2]\r\n        diff = cnt1 = 0\r\n        if m % 2:\r\n            for j in range(n // 2):\r\n                if grid[m // 2][j] == grid[m // 2][n - j - 1]:\r\n                    cnt1 += grid[m // 2][j] * 2\r\n                else:\r\n                    diff += 1\r\n        if n % 2:\r\n            for i in range(m // 2):\r\n                if grid[i][n // 2] == grid[m - i - 1][n // 2]:\r\n                    cnt1 += grid[i][n // 2] * 2\r\n                else:\r\n                    diff += 1\r\n        ans += diff if cnt1 % 4 == 0 or diff else 2\r\n        return ans",
+    "problemId": 3240,
+    "title": "Minimum Number of Flips to Make Binary Grid Palindromic II",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-grid-palindromic-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3240.Minimum Number of Flips to Make Binary Grid Palindromic II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3240.Minimum Number of Flips to Make Binary Grid Palindromic II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3240.Minimum Number of Flips to Make Binary Grid Palindromic II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3240.Minimum Number of Flips to Make Binary Grid Palindromic II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3240.Minimum Number of Flips to Make Binary Grid Palindromic II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3240.Minimum Number of Flips to Make Binary Grid Palindromic II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "check-if-n-and-its-double-exist",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkIfExist(self, arr: List[int]) -> bool:\r\n        s = set()\r\n        for x in arr:\r\n            if x * 2 in s or (x % 2 == 0 and x // 2 in s):\r\n                return True\r\n            s.add(x)\r\n        return False",
+    "problemId": 1346,
+    "title": "Check If N and Its Double Exist",
+    "problemUrl": "https://leetcode.com/problems/check-if-n-and-its-double-exist/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1346.Check If N and Its Double Exist/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1346.Check If N and Its Double Exist/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1346.Check If N and Its Double Exist/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1346.Check If N and Its Double Exist/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1346.Check If N and Its Double Exist/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

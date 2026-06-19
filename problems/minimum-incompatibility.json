@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-incompatibility",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumIncompatibility(self, nums: List[int], k: int) -> int:\r\n        n = len(nums)\r\n        m = n // k\r\n        g = [-1] * (1 << n)\r\n        for i in range(1, 1 << n):\r\n            if i.bit_count() != m:\r\n                continue\r\n            s = set()\r\n            mi, mx = 20, 0\r\n            for j, x in enumerate(nums):\r\n                if i >> j & 1:\r\n                    if x in s:\r\n                        break\r\n                    s.add(x)\r\n                    mi = min(mi, x)\r\n                    mx = max(mx, x)\r\n            if len(s) == m:\r\n                g[i] = mx - mi\r\n        f = [inf] * (1 << n)\r\n        f[0] = 0\r\n        for i in range(1 << n):\r\n            if f[i] == inf:\r\n                continue\r\n            s = set()\r\n            mask = 0\r\n            for j, x in enumerate(nums):\r\n                if (i >> j & 1) == 0 and x not in s:\r\n                    s.add(x)\r\n                    mask |= 1 << j\r\n            if len(s) < m:\r\n                continue\r\n            j = mask\r\n            while j:\r\n                if g[j] != -1:\r\n                    f[i | j] = min(f[i | j], f[i] + g[j])\r\n                j = (j - 1) & mask\r\n        return f[-1] if f[-1] != inf else -1",
+    "problemId": 1681,
+    "title": "Minimum Incompatibility",
+    "problemUrl": "https://leetcode.com/problems/minimum-incompatibility/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1681.Minimum Incompatibility/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1681.Minimum Incompatibility/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1681.Minimum Incompatibility/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1681.Minimum Incompatibility/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1681.Minimum Incompatibility/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1681.Minimum Incompatibility/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1681.Minimum Incompatibility/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

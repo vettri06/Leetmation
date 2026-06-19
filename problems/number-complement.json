@@ -1,0 +1,53 @@
+{
+    "problemName": "number-complement",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findComplement(self, num: int) -> int:\r\n        return num ^ ((1 << num.bit_length()) - 1)",
+    "problemId": 476,
+    "title": "Number Complement",
+    "problemUrl": "https://leetcode.com/problems/number-complement/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0476.Number Complement/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0476.Number Complement/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0476.Number Complement/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0476.Number Complement/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0476.Number Complement/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0476.Number Complement/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0476.Number Complement/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0476.Number Complement/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0476.Number Complement/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

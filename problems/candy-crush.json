@@ -1,0 +1,38 @@
+{
+    "problemName": "candy-crush",
+    "language": "python3",
+    "code": "class Solution:\r\n    def candyCrush(self, board: List[List[int]]) -> List[List[int]]:\r\n        m, n = len(board), len(board[0])\r\n        run = True\r\n        while run:\r\n            run = False\r\n            for i in range(m):\r\n                for j in range(2, n):\r\n                    if board[i][j] and abs(board[i][j]) == abs(board[i][j - 1]) == abs(\r\n                        board[i][j - 2]\r\n                    ):\r\n                        run = True\r\n                        board[i][j] = board[i][j - 1] = board[i][j - 2] = -abs(\r\n                            board[i][j]\r\n                        )\r\n            for j in range(n):\r\n                for i in range(2, m):\r\n                    if board[i][j] and abs(board[i][j]) == abs(board[i - 1][j]) == abs(\r\n                        board[i - 2][j]\r\n                    ):\r\n                        run = True\r\n                        board[i][j] = board[i - 1][j] = board[i - 2][j] = -abs(\r\n                            board[i][j]\r\n                        )\r\n            if run:\r\n                for j in range(n):\r\n                    k = m - 1\r\n                    for i in range(m - 1, -1, -1):\r\n                        if board[i][j] > 0:\r\n                            board[k][j] = board[i][j]\r\n                            k -= 1\r\n                    while k >= 0:\r\n                        board[k][j] = 0\r\n                        k -= 1\r\n        return board",
+    "problemId": 723,
+    "title": "Candy Crush",
+    "problemUrl": "https://leetcode.com/problems/candy-crush/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0723.Candy Crush/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0723.Candy Crush/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0723.Candy Crush/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0723.Candy Crush/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0723.Candy Crush/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0723.Candy Crush/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

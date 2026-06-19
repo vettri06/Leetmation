@@ -1,0 +1,33 @@
+{
+    "problemName": "design-log-storage-system",
+    "language": "python3",
+    "code": "class LogSystem:\r\n    def __init__(self):\r\n        self.logs = []\r\n        self.d = {\r\n            \"Year\": 4,\r\n            \"Month\": 7,\r\n            \"Day\": 10,\r\n            \"Hour\": 13,\r\n            \"Minute\": 16,\r\n            \"Second\": 19,\r\n        }\r\n\r\n    def put(self, id: int, timestamp: str) -> None:\r\n        self.logs.append((id, timestamp))\r\n\r\n    def retrieve(self, start: str, end: str, granularity: str) -> List[int]:\r\n        i = self.d[granularity]\r\n        return [id for id, ts in self.logs if start[:i] <= ts[:i] <= end[:i]]\r\n\r\n\r\n# Your LogSystem object will be instantiated and called as such:\r\n# obj = LogSystem()\r\n# obj.put(id,timestamp)\r\n# param_2 = obj.retrieve(start,end,granularity)",
+    "problemId": 635,
+    "title": "Design Log Storage System",
+    "problemUrl": "https://leetcode.com/problems/design-log-storage-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0635.Design Log Storage System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0635.Design Log Storage System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0635.Design Log Storage System/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0635.Design Log Storage System/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0635.Design Log Storage System/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

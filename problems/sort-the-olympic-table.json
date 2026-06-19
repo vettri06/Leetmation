@@ -1,0 +1,18 @@
+{
+    "problemName": "sort-the-olympic-table",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT *\r\nFROM Olympic\r\nORDER BY 2 DESC, 3 DESC, 4 DESC, 1;",
+    "problemId": 2377,
+    "title": "Sort the Olympic Table",
+    "problemUrl": "https://leetcode.com/problems/sort-the-olympic-table/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2377.Sort the Olympic Table/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2377.Sort the Olympic Table/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

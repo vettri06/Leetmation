@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-absolute-distance-between-mirror-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minMirrorPairDistance(self, nums: List[int]) -> int:\r\n        def reverse(x: int) -> int:\r\n            y = 0\r\n            while x:\r\n                v = x % 10\r\n                y = y * 10 + v\r\n                x //= 10\r\n            return y\r\n\r\n        pos = {}\r\n        ans = inf\r\n        for i, x in enumerate(nums):\r\n            if x in pos:\r\n                ans = min(ans, i - pos[x])\r\n            pos[reverse(x)] = i\r\n        return -1 if ans == inf else ans",
+    "problemId": 3761,
+    "title": "Minimum Absolute Distance Between Mirror Pairs",
+    "problemUrl": "https://leetcode.com/problems/minimum-absolute-distance-between-mirror-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3761.Minimum Absolute Distance Between Mirror Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3761.Minimum Absolute Distance Between Mirror Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3761.Minimum Absolute Distance Between Mirror Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3761.Minimum Absolute Distance Between Mirror Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3761.Minimum Absolute Distance Between Mirror Pairs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3761.Minimum Absolute Distance Between Mirror Pairs/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

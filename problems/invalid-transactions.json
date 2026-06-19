@@ -1,0 +1,33 @@
+{
+    "problemName": "invalid-transactions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def invalidTransactions(self, transactions: List[str]) -> List[str]:\r\n        d = defaultdict(list)\r\n        idx = set()\r\n        for i, x in enumerate(transactions):\r\n            name, time, amount, city = x.split(\",\")\r\n            time, amount = int(time), int(amount)\r\n            d[name].append((time, city, i))\r\n            if amount > 1000:\r\n                idx.add(i)\r\n            for t, c, j in d[name]:\r\n                if c != city and abs(time - t) <= 60:\r\n                    idx.add(i)\r\n                    idx.add(j)\r\n        return [transactions[i] for i in idx]",
+    "problemId": 1169,
+    "title": "Invalid Transactions",
+    "problemUrl": "https://leetcode.com/problems/invalid-transactions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1169.Invalid Transactions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1169.Invalid Transactions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1169.Invalid Transactions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1169.Invalid Transactions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1169.Invalid Transactions/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-sum-of-mountain-triplets-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumSum(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        right = [inf] * (n + 1)\r\n        for i in range(n - 1, -1, -1):\r\n            right[i] = min(right[i + 1], nums[i])\r\n        ans = left = inf\r\n        for i, x in enumerate(nums):\r\n            if left < x and right[i + 1] < x:\r\n                ans = min(ans, left + x + right[i + 1])\r\n            left = min(left, x)\r\n        return -1 if ans == inf else ans",
+    "problemId": 2908,
+    "title": "Minimum Sum of Mountain Triplets I",
+    "problemUrl": "https://leetcode.com/problems/minimum-sum-of-mountain-triplets-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2908.Minimum Sum of Mountain Triplets I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2908.Minimum Sum of Mountain Triplets I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2908.Minimum Sum of Mountain Triplets I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2908.Minimum Sum of Mountain Triplets I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2908.Minimum Sum of Mountain Triplets I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2908.Minimum Sum of Mountain Triplets I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

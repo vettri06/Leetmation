@@ -1,0 +1,43 @@
+{
+    "problemName": "take-gifts-from-the-richest-pile",
+    "language": "python3",
+    "code": "class Solution:\r\n    def pickGifts(self, gifts: List[int], k: int) -> int:\r\n        h = [-v for v in gifts]\r\n        heapify(h)\r\n        for _ in range(k):\r\n            heapreplace(h, -int(sqrt(-h[0])))\r\n        return -sum(h)",
+    "problemId": 2558,
+    "title": "Take Gifts From the Richest Pile",
+    "problemUrl": "https://leetcode.com/problems/take-gifts-from-the-richest-pile/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2558.Take Gifts From the Richest Pile/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2558.Take Gifts From the Richest Pile/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2558.Take Gifts From the Richest Pile/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2558.Take Gifts From the Richest Pile/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2558.Take Gifts From the Richest Pile/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2558.Take Gifts From the Richest Pile/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2558.Take Gifts From the Richest Pile/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

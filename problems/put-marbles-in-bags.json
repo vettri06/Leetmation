@@ -1,0 +1,38 @@
+{
+    "problemName": "put-marbles-in-bags",
+    "language": "python3",
+    "code": "class Solution:\r\n    def putMarbles(self, weights: List[int], k: int) -> int:\r\n        arr = sorted(a + b for a, b in pairwise(weights))\r\n        return sum(arr[len(arr) - k + 1 :]) - sum(arr[: k - 1])",
+    "problemId": 2551,
+    "title": "Put Marbles in Bags",
+    "problemUrl": "https://leetcode.com/problems/put-marbles-in-bags/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2551.Put Marbles in Bags/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2551.Put Marbles in Bags/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2551.Put Marbles in Bags/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2551.Put Marbles in Bags/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2551.Put Marbles in Bags/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2551.Put Marbles in Bags/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

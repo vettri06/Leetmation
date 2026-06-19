@@ -1,0 +1,38 @@
+{
+    "problemName": "check-if-move-is-legal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkMove(\r\n        self, board: List[List[str]], rMove: int, cMove: int, color: str\r\n    ) -> bool:\r\n        for a in range(-1, 2):\r\n            for b in range(-1, 2):\r\n                if a == 0 and b == 0:\r\n                    continue\r\n                i, j = rMove, cMove\r\n                cnt = 0\r\n                while 0 <= i + a < 8 and 0 <= j + b < 8:\r\n                    cnt += 1\r\n                    i, j = i + a, j + b\r\n                    if cnt > 1 and board[i][j] == color:\r\n                        return True\r\n                    if board[i][j] in (color, \".\"):\r\n                        break\r\n        return False",
+    "problemId": 1958,
+    "title": "Check if Move is Legal",
+    "problemUrl": "https://leetcode.com/problems/check-if-move-is-legal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1958.Check if Move is Legal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1958.Check if Move is Legal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1958.Check if Move is Legal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1958.Check if Move is Legal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1958.Check if Move is Legal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1958.Check if Move is Legal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-to-repair-edges-to-traverse-a-graph",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, n: int, edges: List[List[int]], k: int) -> int:\r\n        def check(idx: int) -> bool:\r\n            g = [[] for _ in range(n)]\r\n            for u, v, _ in edges[: idx + 1]:\r\n                g[u].append(v)\r\n                g[v].append(u)\r\n            q = [0]\r\n            dist = 0\r\n            vis = [False] * n\r\n            vis[0] = True\r\n            while q:\r\n                nq = []\r\n                for u in q:\r\n                    if u == n - 1:\r\n                        return dist <= k\r\n                    for v in g[u]:\r\n                        if not vis[v]:\r\n                            vis[v] = True\r\n                            nq.append(v)\r\n                q = nq\r\n                dist += 1\r\n            return False\r\n\r\n        m = len(edges)\r\n        edges.sort(key=lambda x: x[2])\r\n        l, r = 0, m - 1\r\n        while l < r:\r\n            mid = (l + r) >> 1\r\n            if check(mid):\r\n                r = mid\r\n            else:\r\n                l = mid + 1\r\n        return edges[l][2] if check(l) else -1",
+    "problemId": 3807,
+    "title": "Minimum Cost to Repair Edges to Traverse a Graph",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-repair-edges-to-traverse-a-graph/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3807.Minimum Cost to Repair Edges to Traverse a Graph/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3807.Minimum Cost to Repair Edges to Traverse a Graph/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3807.Minimum Cost to Repair Edges to Traverse a Graph/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3807.Minimum Cost to Repair Edges to Traverse a Graph/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3807.Minimum Cost to Repair Edges to Traverse a Graph/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3807.Minimum Cost to Repair Edges to Traverse a Graph/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "path-existence-queries-in-a-graph-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def pathExistenceQueries(\r\n        self, n: int, nums: List[int], maxDiff: int, queries: List[List[int]]\r\n    ) -> List[bool]:\r\n        g = [0] * n\r\n        cnt = 0\r\n        for i in range(1, n):\r\n            if nums[i] - nums[i - 1] > maxDiff:\r\n                cnt += 1\r\n            g[i] = cnt\r\n        return [g[u] == g[v] for u, v in queries]",
+    "problemId": 3532,
+    "title": "Path Existence Queries in a Graph I",
+    "problemUrl": "https://leetcode.com/problems/path-existence-queries-in-a-graph-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3532.Path Existence Queries in a Graph I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3532.Path Existence Queries in a Graph I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3532.Path Existence Queries in a Graph I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3532.Path Existence Queries in a Graph I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3532.Path Existence Queries in a Graph I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3532.Path Existence Queries in a Graph I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

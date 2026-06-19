@@ -1,0 +1,18 @@
+{
+    "problemName": "flight-occupancy-and-waitlist-analysis",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    flight_id,\r\n    LEAST(COUNT(passenger_id), capacity) AS booked_cnt,\r\n    GREATEST(COUNT(passenger_id) - capacity, 0) AS waitlist_cnt\r\nFROM\r\n    Flights\r\n    LEFT JOIN Passengers USING (flight_id)\r\nGROUP BY 1\r\nORDER BY 1;",
+    "problemId": 2783,
+    "title": "Flight Occupancy and Waitlist Analysis",
+    "problemUrl": "https://leetcode.com/problems/flight-occupancy-and-waitlist-analysis/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2783.Flight Occupancy and Waitlist Analysis/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2783.Flight Occupancy and Waitlist Analysis/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

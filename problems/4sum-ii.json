@@ -1,0 +1,43 @@
+{
+    "problemName": "4sum-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def fourSumCount(\r\n        self, nums1: List[int], nums2: List[int], nums3: List[int], nums4: List[int]\r\n    ) -> int:\r\n        cnt = Counter(a + b for a in nums1 for b in nums2)\r\n        return sum(cnt[-(c + d)] for c in nums3 for d in nums4)",
+    "problemId": 454,
+    "title": "4Sum II",
+    "problemUrl": "https://leetcode.com/problems/4sum-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0454.4Sum II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0454.4Sum II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0454.4Sum II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0454.4Sum II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0454.4Sum II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0454.4Sum II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0454.4Sum II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

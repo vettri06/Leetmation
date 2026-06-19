@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-value-to-get-positive-step-by-step-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minStartValue(self, nums: List[int]) -> int:\r\n        s, t = 0, inf\r\n        for num in nums:\r\n            s += num\r\n            t = min(t, s)\r\n        return max(1, 1 - t)",
+    "problemId": 1413,
+    "title": "Minimum Value to Get Positive Step by Step Sum",
+    "problemUrl": "https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1413.Minimum Value to Get Positive Step by Step Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1413.Minimum Value to Get Positive Step by Step Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1413.Minimum Value to Get Positive Step by Step Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1413.Minimum Value to Get Positive Step by Step Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1413.Minimum Value to Get Positive Step by Step Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1413.Minimum Value to Get Positive Step by Step Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1413.Minimum Value to Get Positive Step by Step Sum/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1413.Minimum Value to Get Positive Step by Step Sum/Solution2.py",
+            "sourceFile": "Solution2.py"
+        }
+    ]
+}

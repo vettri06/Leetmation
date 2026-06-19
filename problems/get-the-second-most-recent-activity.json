@@ -1,0 +1,18 @@
+{
+    "problemName": "get-the-second-most-recent-activity",
+    "language": "mysql",
+    "code": "SELECT\r\n    username,\r\n    activity,\r\n    startdate,\r\n    enddate\r\nFROM\r\n    (\r\n        SELECT\r\n            *,\r\n            RANK() OVER (\r\n                PARTITION BY username\r\n                ORDER BY startdate DESC\r\n            ) AS rk,\r\n            COUNT(username) OVER (PARTITION BY username) AS cnt\r\n        FROM UserActivity\r\n    ) AS a\r\nWHERE a.rk = 2 OR a.cnt = 1;",
+    "problemId": 1369,
+    "title": "Get the Second Most Recent Activity",
+    "problemUrl": "https://leetcode.com/problems/get-the-second-most-recent-activity/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1369.Get the Second Most Recent Activity/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1369.Get the Second Most Recent Activity/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "guess-number-higher-or-lower-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getMoneyAmount(self, n: int) -> int:\r\n        f = [[0] * (n + 1) for _ in range(n + 1)]\r\n        for i in range(n - 1, 0, -1):\r\n            for j in range(i + 1, n + 1):\r\n                f[i][j] = j + f[i][j - 1]\r\n                for k in range(i, j):\r\n                    f[i][j] = min(f[i][j], max(f[i][k - 1], f[k + 1][j]) + k)\r\n        return f[1][n]",
+    "problemId": 375,
+    "title": "Guess Number Higher or Lower II",
+    "problemUrl": "https://leetcode.com/problems/guess-number-higher-or-lower-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0375.Guess Number Higher or Lower II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0375.Guess Number Higher or Lower II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0375.Guess Number Higher or Lower II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0375.Guess Number Higher or Lower II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0375.Guess Number Higher or Lower II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0375.Guess Number Higher or Lower II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

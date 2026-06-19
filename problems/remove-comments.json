@@ -1,0 +1,43 @@
+{
+    "problemName": "remove-comments",
+    "language": "python3",
+    "code": "class Solution:\r\n    def removeComments(self, source: List[str]) -> List[str]:\r\n        ans = []\r\n        t = []\r\n        block_comment = False\r\n        for s in source:\r\n            i, m = 0, len(s)\r\n            while i < m:\r\n                if block_comment:\r\n                    if i + 1 < m and s[i : i + 2] == \"*/\":\r\n                        block_comment = False\r\n                        i += 1\r\n                else:\r\n                    if i + 1 < m and s[i : i + 2] == \"/*\":\r\n                        block_comment = True\r\n                        i += 1\r\n                    elif i + 1 < m and s[i : i + 2] == \"//\":\r\n                        break\r\n                    else:\r\n                        t.append(s[i])\r\n                i += 1\r\n            if not block_comment and t:\r\n                ans.append(\"\".join(t))\r\n                t.clear()\r\n        return ans",
+    "problemId": 722,
+    "title": "Remove Comments",
+    "problemUrl": "https://leetcode.com/problems/remove-comments/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0722.Remove Comments/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0722.Remove Comments/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0722.Remove Comments/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0722.Remove Comments/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0722.Remove Comments/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0722.Remove Comments/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0722.Remove Comments/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

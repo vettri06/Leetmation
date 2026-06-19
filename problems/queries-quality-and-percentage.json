@@ -1,0 +1,23 @@
+{
+    "problemName": "queries-quality-and-percentage",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    query_name,\r\n    ROUND(AVG(rating / position), 2) AS quality,\r\n    ROUND(AVG(rating < 3) * 100, 2) AS poor_query_percentage\r\nFROM Queries\r\nWHERE query_name IS NOT NULL\r\nGROUP BY 1;",
+    "problemId": 1211,
+    "title": "Queries Quality and Percentage",
+    "problemUrl": "https://leetcode.com/problems/queries-quality-and-percentage/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1211.Queries Quality and Percentage/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1211.Queries Quality and Percentage/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1211.Queries Quality and Percentage/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

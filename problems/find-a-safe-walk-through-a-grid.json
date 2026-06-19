@@ -1,0 +1,38 @@
+{
+    "problemName": "find-a-safe-walk-through-a-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findSafeWalk(self, grid: List[List[int]], health: int) -> bool:\r\n        m, n = len(grid), len(grid[0])\r\n        dist = [[inf] * n for _ in range(m)]\r\n        dist[0][0] = grid[0][0]\r\n        q = deque([(0, 0)])\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        while q:\r\n            x, y = q.popleft()\r\n            for a, b in pairwise(dirs):\r\n                nx, ny = x + a, y + b\r\n                if (\r\n                    0 <= nx < m\r\n                    and 0 <= ny < n\r\n                    and dist[nx][ny] > dist[x][y] + grid[nx][ny]\r\n                ):\r\n                    dist[nx][ny] = dist[x][y] + grid[nx][ny]\r\n                    q.append((nx, ny))\r\n        return dist[-1][-1] < health",
+    "problemId": 3286,
+    "title": "Find a Safe Walk Through a Grid",
+    "problemUrl": "https://leetcode.com/problems/find-a-safe-walk-through-a-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3286.Find a Safe Walk Through a Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3286.Find a Safe Walk Through a Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3286.Find a Safe Walk Through a Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3286.Find a Safe Walk Through a Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3286.Find a Safe Walk Through a Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3286.Find a Safe Walk Through a Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

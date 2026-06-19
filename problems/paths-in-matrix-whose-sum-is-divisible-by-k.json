@@ -1,0 +1,48 @@
+{
+    "problemName": "paths-in-matrix-whose-sum-is-divisible-by-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfPaths(self, grid: List[List[int]], K: int) -> int:\r\n        mod = 10**9 + 7\r\n        m, n = len(grid), len(grid[0])\r\n        f = [[[0] * K for _ in range(n)] for _ in range(m)]\r\n        f[0][0][grid[0][0] % K] = 1\r\n        for i in range(m):\r\n            for j in range(n):\r\n                for k in range(K):\r\n                    k0 = ((k - grid[i][j] % K) + K) % K\r\n                    if i:\r\n                        f[i][j][k] += f[i - 1][j][k0]\r\n                    if j:\r\n                        f[i][j][k] += f[i][j - 1][k0]\r\n                    f[i][j][k] %= mod\r\n        return f[m - 1][n - 1][0]",
+    "problemId": 2435,
+    "title": "Paths in Matrix Whose Sum Is Divisible by K",
+    "problemUrl": "https://leetcode.com/problems/paths-in-matrix-whose-sum-is-divisible-by-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2435.Paths in Matrix Whose Sum Is Divisible by K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2435.Paths in Matrix Whose Sum Is Divisible by K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2435.Paths in Matrix Whose Sum Is Divisible by K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2435.Paths in Matrix Whose Sum Is Divisible by K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2435.Paths in Matrix Whose Sum Is Divisible by K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2435.Paths in Matrix Whose Sum Is Divisible by K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2435.Paths in Matrix Whose Sum Is Divisible by K/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2435.Paths in Matrix Whose Sum Is Divisible by K/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

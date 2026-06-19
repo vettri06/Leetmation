@@ -1,0 +1,48 @@
+{
+    "problemName": "vertical-order-traversal-of-a-binary-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def verticalTraversal(self, root: Optional[TreeNode]) -> List[List[int]]:\r\n        def dfs(root: Optional[TreeNode], i: int, j: int):\r\n            if root is None:\r\n                return\r\n            nodes.append((j, i, root.val))\r\n            dfs(root.left, i + 1, j - 1)\r\n            dfs(root.right, i + 1, j + 1)\r\n\r\n        nodes = []\r\n        dfs(root, 0, 0)\r\n        nodes.sort()\r\n        ans = []\r\n        prev = -2000\r\n        for j, _, val in nodes:\r\n            if prev != j:\r\n                ans.append([])\r\n                prev = j\r\n            ans[-1].append(val)\r\n        return ans",
+    "problemId": 987,
+    "title": "Vertical Order Traversal of a Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0987.Vertical Order Traversal of a Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0987.Vertical Order Traversal of a Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0987.Vertical Order Traversal of a Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0987.Vertical Order Traversal of a Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0987.Vertical Order Traversal of a Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0987.Vertical Order Traversal of a Binary Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0987.Vertical Order Traversal of a Binary Tree/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0987.Vertical Order Traversal of a Binary Tree/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        }
+    ]
+}

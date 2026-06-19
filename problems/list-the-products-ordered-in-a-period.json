@@ -1,0 +1,18 @@
+{
+    "problemName": "list-the-products-ordered-in-a-period",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT product_name, SUM(unit) AS unit\r\nFROM\r\n    Orders AS o\r\n    JOIN Products AS p ON o.product_id = p.product_id\r\nWHERE DATE_FORMAT(order_date, '%Y-%m') = '2020-02'\r\nGROUP BY o.product_id\r\nHAVING unit >= 100;",
+    "problemId": 1327,
+    "title": "List the Products Ordered in a Period",
+    "problemUrl": "https://leetcode.com/problems/list-the-products-ordered-in-a-period/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1327.List the Products Ordered in a Period/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1327.List the Products Ordered in a Period/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

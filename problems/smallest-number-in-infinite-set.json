@@ -1,0 +1,43 @@
+{
+    "problemName": "smallest-number-in-infinite-set",
+    "language": "python3",
+    "code": "class SmallestInfiniteSet:\r\n    def __init__(self):\r\n        self.s = SortedSet(range(1, 1001))\r\n\r\n    def popSmallest(self) -> int:\r\n        x = self.s[0]\r\n        self.s.remove(x)\r\n        return x\r\n\r\n    def addBack(self, num: int) -> None:\r\n        self.s.add(num)\r\n\r\n\r\n# Your SmallestInfiniteSet object will be instantiated and called as such:\r\n# obj = SmallestInfiniteSet()\r\n# param_1 = obj.popSmallest()\r\n# obj.addBack(num)",
+    "problemId": 2336,
+    "title": "Smallest Number in Infinite Set",
+    "problemUrl": "https://leetcode.com/problems/smallest-number-in-infinite-set/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2336.Smallest Number in Infinite Set/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2336.Smallest Number in Infinite Set/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2336.Smallest Number in Infinite Set/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2336.Smallest Number in Infinite Set/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2336.Smallest Number in Infinite Set/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2336.Smallest Number in Infinite Set/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2336.Smallest Number in Infinite Set/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

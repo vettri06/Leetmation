@@ -1,0 +1,33 @@
+{
+    "problemName": "thousand-separator",
+    "language": "python3",
+    "code": "class Solution:\r\n    def thousandSeparator(self, n: int) -> str:\r\n        cnt = 0\r\n        ans = []\r\n        while 1:\r\n            n, v = divmod(n, 10)\r\n            ans.append(str(v))\r\n            cnt += 1\r\n            if n == 0:\r\n                break\r\n            if cnt == 3:\r\n                ans.append('.')\r\n                cnt = 0\r\n        return ''.join(ans[::-1])",
+    "problemId": 1556,
+    "title": "Thousand Separator",
+    "problemUrl": "https://leetcode.com/problems/thousand-separator/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1556.Thousand Separator/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1556.Thousand Separator/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1556.Thousand Separator/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1556.Thousand Separator/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1556.Thousand Separator/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

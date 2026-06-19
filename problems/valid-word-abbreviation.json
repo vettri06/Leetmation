@@ -1,0 +1,38 @@
+{
+    "problemName": "valid-word-abbreviation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def validWordAbbreviation(self, word: str, abbr: str) -> bool:\r\n        m, n = len(word), len(abbr)\r\n        i = j = x = 0\r\n        while i < m and j < n:\r\n            if abbr[j].isdigit():\r\n                if abbr[j] == \"0\" and x == 0:\r\n                    return False\r\n                x = x * 10 + int(abbr[j])\r\n            else:\r\n                i += x\r\n                x = 0\r\n                if i >= m or word[i] != abbr[j]:\r\n                    return False\r\n                i += 1\r\n            j += 1\r\n        return i + x == m and j == n",
+    "problemId": 408,
+    "title": "Valid Word Abbreviation",
+    "problemUrl": "https://leetcode.com/problems/valid-word-abbreviation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0408.Valid Word Abbreviation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0408.Valid Word Abbreviation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0408.Valid Word Abbreviation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0408.Valid Word Abbreviation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0408.Valid Word Abbreviation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0408.Valid Word Abbreviation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

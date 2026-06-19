@@ -1,0 +1,18 @@
+{
+    "problemName": "product-sales-analysis-v",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT user_id, SUM(quantity * price) AS spending\r\nFROM\r\n    Sales\r\n    JOIN Product USING (product_id)\r\nGROUP BY 1\r\nORDER BY 2 DESC, 1;",
+    "problemId": 2329,
+    "title": "Product Sales Analysis V",
+    "problemUrl": "https://leetcode.com/problems/product-sales-analysis-v/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2329.Product Sales Analysis V/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2329.Product Sales Analysis V/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

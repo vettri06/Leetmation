@@ -1,0 +1,38 @@
+{
+    "problemName": "grid-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def gridGame(self, grid: List[List[int]]) -> int:\r\n        ans = inf\r\n        s1, s2 = sum(grid[0]), 0\r\n        for j, v in enumerate(grid[0]):\r\n            s1 -= v\r\n            ans = min(ans, max(s1, s2))\r\n            s2 += grid[1][j]\r\n        return ans",
+    "problemId": 2017,
+    "title": "Grid Game",
+    "problemUrl": "https://leetcode.com/problems/grid-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2017.Grid Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2017.Grid Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2017.Grid Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2017.Grid Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2017.Grid Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2017.Grid Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

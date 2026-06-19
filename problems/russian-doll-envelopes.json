@@ -1,0 +1,33 @@
+{
+    "problemName": "russian-doll-envelopes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxEnvelopes(self, envelopes: List[List[int]]) -> int:\r\n        envelopes.sort(key=lambda x: (x[0], -x[1]))\r\n        d = [envelopes[0][1]]\r\n        for _, h in envelopes[1:]:\r\n            if h > d[-1]:\r\n                d.append(h)\r\n            else:\r\n                idx = bisect_left(d, h)\r\n                d[idx] = h\r\n        return len(d)",
+    "problemId": 354,
+    "title": "Russian Doll Envelopes",
+    "problemUrl": "https://leetcode.com/problems/russian-doll-envelopes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0354.Russian Doll Envelopes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0354.Russian Doll Envelopes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0354.Russian Doll Envelopes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0354.Russian Doll Envelopes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0354.Russian Doll Envelopes/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

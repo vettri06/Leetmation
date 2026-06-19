@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-value-of-concatenated-binary-segments",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxValue(self, nums1: list[int], nums0: list[int]) -> int:\r\n        MOD = 10**9 + 7\r\n        pairs = list(zip(nums1, nums0))\r\n        b = sum(x + y for x, y in pairs)\r\n\r\n        def key(p: tuple[int, int]) -> tuple[int, int, int]:\r\n            x, y = p\r\n            if y == 0:\r\n                return (0, -x, 0)\r\n            if x > 0:\r\n                return (1, -x, y)\r\n            return (2, y, 0)\r\n\r\n        pairs.sort(key=key)\r\n\r\n        ans = 0\r\n        p = [1] * b\r\n        for i in range(1, b):\r\n            p[i] = p[i - 1] * 2 % MOD\r\n\r\n        b -= 1\r\n        for cnt1, cnt0 in pairs:\r\n            while cnt1:\r\n                ans = (ans + p[b]) % MOD\r\n                b -= 1\r\n                cnt1 -= 1\r\n            b -= cnt0\r\n        return ans",
+    "problemId": 3897,
+    "title": "Maximum Value of Concatenated Binary Segments",
+    "problemUrl": "https://leetcode.com/problems/maximum-value-of-concatenated-binary-segments/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3897.Maximum Value of Concatenated Binary Segments/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3897.Maximum Value of Concatenated Binary Segments/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3897.Maximum Value of Concatenated Binary Segments/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3897.Maximum Value of Concatenated Binary Segments/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3897.Maximum Value of Concatenated Binary Segments/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3897.Maximum Value of Concatenated Binary Segments/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

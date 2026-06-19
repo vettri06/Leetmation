@@ -1,0 +1,78 @@
+{
+    "problemName": "reverse-words-in-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reverseWords(self, s: str) -> str:\r\n        words = []\r\n        i, n = 0, len(s)\r\n        while i < n:\r\n            while i < n and s[i] == \" \":\r\n                i += 1\r\n            if i < n:\r\n                j = i\r\n                while j < n and s[j] != \" \":\r\n                    j += 1\r\n                words.append(s[i:j])\r\n                i = j\r\n        return \" \".join(words[::-1])",
+    "problemId": 151,
+    "title": "Reverse Words in a String",
+    "problemUrl": "https://leetcode.com/problems/reverse-words-in-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0151.Reverse Words in a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0151.Reverse Words in a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0151.Reverse Words in a String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0151.Reverse Words in a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0151.Reverse Words in a String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0151.Reverse Words in a String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0151.Reverse Words in a String/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0151.Reverse Words in a String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0151.Reverse Words in a String/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0151.Reverse Words in a String/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0151.Reverse Words in a String/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0151.Reverse Words in a String/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0151.Reverse Words in a String/Solution2.cs",
+            "sourceFile": "Solution2.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0151.Reverse Words in a String/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

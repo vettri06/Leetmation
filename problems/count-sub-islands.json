@@ -1,0 +1,43 @@
+{
+    "problemName": "count-sub-islands",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSubIslands(self, grid1: List[List[int]], grid2: List[List[int]]) -> int:\r\n        def dfs(i: int, j: int) -> int:\r\n            ok = grid1[i][j]\r\n            grid2[i][j] = 0\r\n            for a, b in pairwise(dirs):\r\n                x, y = i + a, j + b\r\n                if 0 <= x < m and 0 <= y < n and grid2[x][y] and not dfs(x, y):\r\n                    ok = 0\r\n            return ok\r\n\r\n        m, n = len(grid1), len(grid1[0])\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        return sum(dfs(i, j) for i in range(m) for j in range(n) if grid2[i][j])",
+    "problemId": 1905,
+    "title": "Count Sub Islands",
+    "problemUrl": "https://leetcode.com/problems/count-sub-islands/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1905.Count Sub Islands/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1905.Count Sub Islands/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1905.Count Sub Islands/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1905.Count Sub Islands/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1905.Count Sub Islands/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1905.Count Sub Islands/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1905.Count Sub Islands/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

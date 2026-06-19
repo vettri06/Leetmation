@@ -1,0 +1,33 @@
+{
+    "problemName": "maximize-the-topmost-element-after-k-moves",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumTop(self, nums: List[int], k: int) -> int:\r\n        if k == 0:\r\n            return nums[0]\r\n        n = len(nums)\r\n        if n == 1:\r\n            if k % 2:\r\n                return -1\r\n            return nums[0]\r\n        ans = max(nums[: k - 1], default=-1)\r\n        if k < n:\r\n            ans = max(ans, nums[k])\r\n        return ans",
+    "problemId": 2202,
+    "title": "Maximize the Topmost Element After K Moves",
+    "problemUrl": "https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2202.Maximize the Topmost Element After K Moves/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2202.Maximize the Topmost Element After K Moves/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2202.Maximize the Topmost Element After K Moves/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2202.Maximize the Topmost Element After K Moves/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2202.Maximize the Topmost Element After K Moves/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

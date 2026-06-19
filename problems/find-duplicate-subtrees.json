@@ -1,0 +1,43 @@
+{
+    "problemName": "find-duplicate-subtrees",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def findDuplicateSubtrees(\r\n        self, root: Optional[TreeNode]\r\n    ) -> List[Optional[TreeNode]]:\r\n        def dfs(root):\r\n            if root is None:\r\n                return '#'\r\n            v = f'{root.val},{dfs(root.left)},{dfs(root.right)}'\r\n            counter[v] += 1\r\n            if counter[v] == 2:\r\n                ans.append(root)\r\n            return v\r\n\r\n        ans = []\r\n        counter = Counter()\r\n        dfs(root)\r\n        return ans",
+    "problemId": 652,
+    "title": "Find Duplicate Subtrees",
+    "problemUrl": "https://leetcode.com/problems/find-duplicate-subtrees/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0652.Find Duplicate Subtrees/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0652.Find Duplicate Subtrees/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0652.Find Duplicate Subtrees/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0652.Find Duplicate Subtrees/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0652.Find Duplicate Subtrees/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0652.Find Duplicate Subtrees/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0652.Find Duplicate Subtrees/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

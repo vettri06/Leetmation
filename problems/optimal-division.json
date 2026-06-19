@@ -1,0 +1,43 @@
+{
+    "problemName": "optimal-division",
+    "language": "python3",
+    "code": "class Solution:\r\n    def optimalDivision(self, nums: List[int]) -> str:\r\n        n = len(nums)\r\n        if n == 1:\r\n            return str(nums[0])\r\n        if n == 2:\r\n            return f'{nums[0]}/{nums[1]}'\r\n        return f'{nums[0]}/({\"/\".join(map(str, nums[1:]))})'",
+    "problemId": 553,
+    "title": "Optimal Division",
+    "problemUrl": "https://leetcode.com/problems/optimal-division/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0553.Optimal Division/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0553.Optimal Division/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0553.Optimal Division/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0553.Optimal Division/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0553.Optimal Division/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0553.Optimal Division/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0553.Optimal Division/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

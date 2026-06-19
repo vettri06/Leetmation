@@ -1,0 +1,38 @@
+{
+    "problemName": "split-array-with-minimum-difference",
+    "language": "python3",
+    "code": "class Solution:\r\n    def splitArray(self, nums: List[int]) -> int:\r\n        s = list(accumulate(nums))\r\n        n = len(nums)\r\n        f = [True] * n\r\n        for i in range(1, n):\r\n            f[i] = f[i - 1]\r\n            if nums[i] <= nums[i - 1]:\r\n                f[i] = False\r\n        g = [True] * n\r\n        for i in range(n - 2, -1, -1):\r\n            g[i] = g[i + 1]\r\n            if nums[i] <= nums[i + 1]:\r\n                g[i] = False\r\n        ans = inf\r\n        for i in range(n - 1):\r\n            if f[i] and g[i + 1]:\r\n                s1 = s[i]\r\n                s2 = s[n - 1] - s[i]\r\n                ans = min(ans, abs(s1 - s2))\r\n        return ans if ans < inf else -1",
+    "problemId": 3698,
+    "title": "Split Array With Minimum Difference",
+    "problemUrl": "https://leetcode.com/problems/split-array-with-minimum-difference/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3698.Split Array With Minimum Difference/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3698.Split Array With Minimum Difference/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3698.Split Array With Minimum Difference/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3698.Split Array With Minimum Difference/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3698.Split Array With Minimum Difference/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3698.Split Array With Minimum Difference/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

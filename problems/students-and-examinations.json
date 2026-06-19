@@ -1,0 +1,18 @@
+{
+    "problemName": "students-and-examinations",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT student_id, student_name, subject_name, COUNT(e.student_id) AS attended_exams\r\nFROM\r\n    Students\r\n    JOIN Subjects\r\n    LEFT JOIN Examinations AS e USING (student_id, subject_name)\r\nGROUP BY 1, 3\r\nORDER BY 1, 3;",
+    "problemId": 1280,
+    "title": "Students and Examinations",
+    "problemUrl": "https://leetcode.com/problems/students-and-examinations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1280.Students and Examinations/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1280.Students and Examinations/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

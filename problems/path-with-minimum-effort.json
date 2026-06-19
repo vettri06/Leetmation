@@ -1,0 +1,88 @@
+{
+    "problemName": "path-with-minimum-effort",
+    "language": "python3",
+    "code": "class UnionFind:\r\n    def __init__(self, n):\r\n        self.p = list(range(n))\r\n        self.size = [1] * n\r\n\r\n    def find(self, x):\r\n        if self.p[x] != x:\r\n            self.p[x] = self.find(self.p[x])\r\n        return self.p[x]\r\n\r\n    def union(self, a, b):\r\n        pa, pb = self.find(a), self.find(b)\r\n        if pa == pb:\r\n            return False\r\n        if self.size[pa] > self.size[pb]:\r\n            self.p[pb] = pa\r\n            self.size[pa] += self.size[pb]\r\n        else:\r\n            self.p[pa] = pb\r\n            self.size[pb] += self.size[pa]\r\n        return True\r\n\r\n    def connected(self, a, b):\r\n        return self.find(a) == self.find(b)\r\n\r\n\r\nclass Solution:\r\n    def minimumEffortPath(self, heights: List[List[int]]) -> int:\r\n        m, n = len(heights), len(heights[0])\r\n        uf = UnionFind(m * n)\r\n        e = []\r\n        dirs = (0, 1, 0)\r\n        for i in range(m):\r\n            for j in range(n):\r\n                for a, b in pairwise(dirs):\r\n                    x, y = i + a, j + b\r\n                    if 0 <= x < m and 0 <= y < n:\r\n                        e.append(\r\n                            (abs(heights[i][j] - heights[x][y]), i * n + j, x * n + y)\r\n                        )\r\n        e.sort()\r\n        for h, a, b in e:\r\n            uf.union(a, b)\r\n            if uf.connected(0, m * n - 1):\r\n                return h\r\n        return 0",
+    "problemId": 1631,
+    "title": "Path With Minimum Effort",
+    "problemUrl": "https://leetcode.com/problems/path-with-minimum-effort/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution3.py",
+            "sourceFile": "Solution3.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution3.cpp",
+            "sourceFile": "Solution3.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution3.java",
+            "sourceFile": "Solution3.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution3.go",
+            "sourceFile": "Solution3.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1631.Path With Minimum Effort/Solution3.ts",
+            "sourceFile": "Solution3.ts"
+        }
+    ]
+}

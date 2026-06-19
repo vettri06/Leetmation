@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-spending-after-buying-items",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSpending(self, values: List[List[int]]) -> int:\r\n        n = len(values[0])\r\n        pq = [(row[-1], i, n - 1) for i, row in enumerate(values)]\r\n        heapify(pq)\r\n        ans = d = 0\r\n        while pq:\r\n            d += 1\r\n            v, i, j = heappop(pq)\r\n            ans += v * d\r\n            if j:\r\n                heappush(pq, (values[i][j - 1], i, j - 1))\r\n        return ans",
+    "problemId": 2931,
+    "title": "Maximum Spending After Buying Items",
+    "problemUrl": "https://leetcode.com/problems/maximum-spending-after-buying-items/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2931.Maximum Spending After Buying Items/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2931.Maximum Spending After Buying Items/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2931.Maximum Spending After Buying Items/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2931.Maximum Spending After Buying Items/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2931.Maximum Spending After Buying Items/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2931.Maximum Spending After Buying Items/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

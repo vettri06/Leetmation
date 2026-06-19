@@ -1,0 +1,38 @@
+{
+    "problemName": "get-maximum-in-generated-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getMaximumGenerated(self, n: int) -> int:\r\n        if n < 2:\r\n            return n\r\n        nums = [0] * (n + 1)\r\n        nums[1] = 1\r\n        for i in range(2, n + 1):\r\n            nums[i] = nums[i >> 1] if i % 2 == 0 else nums[i >> 1] + nums[(i >> 1) + 1]\r\n        return max(nums)",
+    "problemId": 1646,
+    "title": "Get Maximum in Generated Array",
+    "problemUrl": "https://leetcode.com/problems/get-maximum-in-generated-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1646.Get Maximum in Generated Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1646.Get Maximum in Generated Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1646.Get Maximum in Generated Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1646.Get Maximum in Generated Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1646.Get Maximum in Generated Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1646.Get Maximum in Generated Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

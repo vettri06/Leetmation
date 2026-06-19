@@ -1,0 +1,48 @@
+{
+    "problemName": "find-triangular-sum-of-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def triangularSum(self, nums: List[int]) -> int:\r\n        for k in range(len(nums) - 1, 0, -1):\r\n            for i in range(k):\r\n                nums[i] = (nums[i] + nums[i + 1]) % 10\r\n        return nums[0]",
+    "problemId": 2221,
+    "title": "Find Triangular Sum of an Array",
+    "problemUrl": "https://leetcode.com/problems/find-triangular-sum-of-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2221.Find Triangular Sum of an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2221.Find Triangular Sum of an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2221.Find Triangular Sum of an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2221.Find Triangular Sum of an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2221.Find Triangular Sum of an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2221.Find Triangular Sum of an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2221.Find Triangular Sum of an Array/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2221.Find Triangular Sum of an Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

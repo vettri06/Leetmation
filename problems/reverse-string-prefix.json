@@ -1,0 +1,38 @@
+{
+    "problemName": "reverse-string-prefix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reversePrefix(self, s: str, k: int) -> str:\r\n        return s[:k][::-1] + s[k:]",
+    "problemId": 3794,
+    "title": "Reverse String Prefix",
+    "problemUrl": "https://leetcode.com/problems/reverse-string-prefix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3794.Reverse String Prefix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3794.Reverse String Prefix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3794.Reverse String Prefix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3794.Reverse String Prefix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3794.Reverse String Prefix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3794.Reverse String Prefix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

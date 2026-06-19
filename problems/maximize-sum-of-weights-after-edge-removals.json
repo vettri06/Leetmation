@@ -1,0 +1,33 @@
+{
+    "problemName": "maximize-sum-of-weights-after-edge-removals",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximizeSumOfWeights(self, edges: List[List[int]], k: int) -> int:\r\n        def dfs(u: int, fa: int) -> Tuple[int, int]:\r\n            s = 0\r\n            t = []\r\n            for v, w in g[u]:\r\n                if v == fa:\r\n                    continue\r\n                a, b = dfs(v, u)\r\n                s += a\r\n                if (d := (w + b - a)) > 0:\r\n                    t.append(d)\r\n            t.sort(reverse=True)\r\n            return s + sum(t[:k]), s + sum(t[: k - 1])\r\n\r\n        n = len(edges) + 1\r\n        g: List[List[Tuple[int, int]]] = [[] for _ in range(n)]\r\n        for u, v, w in edges:\r\n            g[u].append((v, w))\r\n            g[v].append((u, w))\r\n        x, y = dfs(0, -1)\r\n        return max(x, y)",
+    "problemId": 3367,
+    "title": "Maximize Sum of Weights after Edge Removals",
+    "problemUrl": "https://leetcode.com/problems/maximize-sum-of-weights-after-edge-removals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3367.Maximize Sum of Weights after Edge Removals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3367.Maximize Sum of Weights after Edge Removals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3367.Maximize Sum of Weights after Edge Removals/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3367.Maximize Sum of Weights after Edge Removals/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3367.Maximize Sum of Weights after Edge Removals/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

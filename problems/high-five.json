@@ -1,0 +1,38 @@
+{
+    "problemName": "high-five",
+    "language": "python3",
+    "code": "class Solution:\r\n    def highFive(self, items: List[List[int]]) -> List[List[int]]:\r\n        d = defaultdict(list)\r\n        m = 0\r\n        for i, x in items:\r\n            d[i].append(x)\r\n            m = max(m, i)\r\n        ans = []\r\n        for i in range(1, m + 1):\r\n            if xs := d[i]:\r\n                avg = sum(nlargest(5, xs)) // 5\r\n                ans.append([i, avg])\r\n        return ans",
+    "problemId": 1086,
+    "title": "High Five",
+    "problemUrl": "https://leetcode.com/problems/high-five/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1086.High Five/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1086.High Five/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1086.High Five/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1086.High Five/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1086.High Five/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1086.High Five/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

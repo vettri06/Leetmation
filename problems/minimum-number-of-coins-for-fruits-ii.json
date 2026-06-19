@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-number-of-coins-for-fruits-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumCoins(self, prices: List[int]) -> int:\r\n        n = len(prices)\r\n        q = deque()\r\n        for i in range(n, 0, -1):\r\n            while q and q[0] > i * 2 + 1:\r\n                q.popleft()\r\n            if i <= (n - 1) // 2:\r\n                prices[i - 1] += prices[q[0] - 1]\r\n            while q and prices[q[-1] - 1] >= prices[i - 1]:\r\n                q.pop()\r\n            q.append(i)\r\n        return prices[0]",
+    "problemId": 2969,
+    "title": "Minimum Number of Coins for Fruits II",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-coins-for-fruits-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2969.Minimum Number of Coins for Fruits II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2969.Minimum Number of Coins for Fruits II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2969.Minimum Number of Coins for Fruits II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2969.Minimum Number of Coins for Fruits II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2969.Minimum Number of Coins for Fruits II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2969.Minimum Number of Coins for Fruits II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

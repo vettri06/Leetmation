@@ -1,0 +1,23 @@
+{
+    "problemName": "managers-with-at-least-5-direct-reports",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_managers(employee: pd.DataFrame) -> pd.DataFrame:\r\n    # Group the employees by managerId and count the number of direct reports\r\n    manager_report_count = (\r\n        employee.groupby(\"managerId\").size().reset_index(name=\"directReports\")\r\n    )\r\n\r\n    # Filter managers with at least five direct reports\r\n    result = manager_report_count[manager_report_count[\"directReports\"] >= 5]\r\n\r\n    # Merge with the Employee table to get the names of these managers\r\n    result = result.merge(\r\n        employee[[\"id\", \"name\"]], left_on=\"managerId\", right_on=\"id\", how=\"inner\"\r\n    )\r\n\r\n    # Select only the 'name' column and drop the 'id' and 'directReports' columns\r\n    result = result[[\"name\"]]\r\n\r\n    return result",
+    "problemId": 570,
+    "title": "Managers with at Least 5 Direct Reports",
+    "problemUrl": "https://leetcode.com/problems/managers-with-at-least-5-direct-reports/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0570.Managers with at Least 5 Direct Reports/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0570.Managers with at Least 5 Direct Reports/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0570.Managers with at Least 5 Direct Reports/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

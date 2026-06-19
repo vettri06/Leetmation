@@ -1,0 +1,18 @@
+{
+    "problemName": "array-prototype-foreach",
+    "language": "typescript",
+    "code": "Array.prototype.forEach = function (callback: Function, context: any): void {\r\n    for (let i = 0; i < this.length; ++i) {\r\n        callback.call(context, this[i], i, this);\r\n    }\r\n};\r\n\r\n/**\r\n *  const arr = [1,2,3];\r\n *  const callback = (val, i, arr) => arr[i] = val * 2;\r\n *  const context = {\"context\":true};\r\n *\r\n *  arr.forEach(callback, context)\r\n *\r\n *  console.log(arr) // [2,4,6]\r\n */",
+    "problemId": 2804,
+    "title": "Array Prototype ForEach",
+    "problemUrl": "https://leetcode.com/problems/array-prototype-foreach/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2804.Array Prototype ForEach/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2804.Array Prototype ForEach/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

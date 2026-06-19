@@ -1,0 +1,63 @@
+{
+    "problemName": "maximum-strong-pair-xor-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumStrongPairXor(self, nums: List[int]) -> int:\r\n        return max(x ^ y for x in nums for y in nums if abs(x - y) <= min(x, y))",
+    "problemId": 2932,
+    "title": "Maximum Strong Pair XOR I",
+    "problemUrl": "https://leetcode.com/problems/maximum-strong-pair-xor-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2932.Maximum Strong Pair XOR I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2932.Maximum Strong Pair XOR I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2932.Maximum Strong Pair XOR I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2932.Maximum Strong Pair XOR I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2932.Maximum Strong Pair XOR I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2932.Maximum Strong Pair XOR I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2932.Maximum Strong Pair XOR I/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2932.Maximum Strong Pair XOR I/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2932.Maximum Strong Pair XOR I/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2932.Maximum Strong Pair XOR I/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2932.Maximum Strong Pair XOR I/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

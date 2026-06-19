@@ -1,0 +1,43 @@
+{
+    "problemName": "find-time-required-to-eliminate-bacterial-strains",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minEliminationTime(self, timeReq: List[int], splitTime: int) -> int:\r\n        heapify(timeReq)\r\n        while len(timeReq) > 1:\r\n            heappop(timeReq)\r\n            heappush(timeReq, heappop(timeReq) + splitTime)\r\n        return timeReq[0]",
+    "problemId": 3506,
+    "title": "Find Time Required to Eliminate Bacterial Strains",
+    "problemUrl": "https://leetcode.com/problems/find-time-required-to-eliminate-bacterial-strains/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3506.Find Time Required to Eliminate Bacterial Strains/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3506.Find Time Required to Eliminate Bacterial Strains/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3506.Find Time Required to Eliminate Bacterial Strains/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3506.Find Time Required to Eliminate Bacterial Strains/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3506.Find Time Required to Eliminate Bacterial Strains/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3506.Find Time Required to Eliminate Bacterial Strains/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3506.Find Time Required to Eliminate Bacterial Strains/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

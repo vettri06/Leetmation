@@ -1,0 +1,48 @@
+{
+    "problemName": "check-if-array-pairs-are-divisible-by-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canArrange(self, arr: List[int], k: int) -> bool:\r\n        cnt = Counter(x % k for x in arr)\r\n        return cnt[0] % 2 == 0 and all(cnt[i] == cnt[k - i] for i in range(1, k))",
+    "problemId": 1497,
+    "title": "Check If Array Pairs Are Divisible by k",
+    "problemUrl": "https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1497.Check If Array Pairs Are Divisible by k/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1497.Check If Array Pairs Are Divisible by k/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1497.Check If Array Pairs Are Divisible by k/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1497.Check If Array Pairs Are Divisible by k/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1497.Check If Array Pairs Are Divisible by k/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1497.Check If Array Pairs Are Divisible by k/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1497.Check If Array Pairs Are Divisible by k/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1497.Check If Array Pairs Are Divisible by k/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

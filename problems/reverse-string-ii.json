@@ -1,0 +1,38 @@
+{
+    "problemName": "reverse-string-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reverseStr(self, s: str, k: int) -> str:\r\n        cs = list(s)\r\n        for i in range(0, len(cs), 2 * k):\r\n            cs[i : i + k] = reversed(cs[i : i + k])\r\n        return \"\".join(cs)",
+    "problemId": 541,
+    "title": "Reverse String II",
+    "problemUrl": "https://leetcode.com/problems/reverse-string-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0541.Reverse String II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0541.Reverse String II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0541.Reverse String II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0541.Reverse String II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0541.Reverse String II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0541.Reverse String II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

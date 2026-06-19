@@ -1,0 +1,73 @@
+{
+    "problemName": "reschedule-meetings-for-maximum-free-time-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxFreeTime(\r\n        self, eventTime: int, k: int, startTime: List[int], endTime: List[int]\r\n    ) -> int:\r\n        nums = [startTime[0]]\r\n        for i in range(1, len(endTime)):\r\n            nums.append(startTime[i] - endTime[i - 1])\r\n        nums.append(eventTime - endTime[-1])\r\n        ans = s = 0\r\n        for i, x in enumerate(nums):\r\n            s += x\r\n            if i >= k:\r\n                ans = max(ans, s)\r\n                s -= nums[i - k]\r\n        return ans",
+    "problemId": 3439,
+    "title": "Reschedule Meetings for Maximum Free Time I",
+    "problemUrl": "https://leetcode.com/problems/reschedule-meetings-for-maximum-free-time-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3439.Reschedule Meetings for Maximum Free Time I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3439.Reschedule Meetings for Maximum Free Time I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3439.Reschedule Meetings for Maximum Free Time I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3439.Reschedule Meetings for Maximum Free Time I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3439.Reschedule Meetings for Maximum Free Time I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3439.Reschedule Meetings for Maximum Free Time I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3439.Reschedule Meetings for Maximum Free Time I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3439.Reschedule Meetings for Maximum Free Time I/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3439.Reschedule Meetings for Maximum Free Time I/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3439.Reschedule Meetings for Maximum Free Time I/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3439.Reschedule Meetings for Maximum Free Time I/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3439.Reschedule Meetings for Maximum Free Time I/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3439.Reschedule Meetings for Maximum Free Time I/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

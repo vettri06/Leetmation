@@ -1,0 +1,23 @@
+{
+    "problemName": "fizz-buzz-multithreaded",
+    "language": "cpp",
+    "code": "class FizzBuzz {\r\nprivate:\r\n    std::mutex mtx;\r\n    atomic<int> index;\r\n    int n;\r\n\r\n    // 这里主要运用到了C++11中的RAII锁(lock_guard)的知识。\r\n    // 需要强调的一点是，在进入循环后，要时刻不忘加入index <= n的逻辑\r\npublic:\r\n    FizzBuzz(int n) {\r\n        this->n = n;\r\n        index = 1;\r\n    }\r\n\r\n    void fizz(function<void()> printFizz) {\r\n        while (index <= n) {\r\n            std::lock_guard<std::mutex> lk(mtx);\r\n            if (0 == index % 3 && 0 != index % 5 && index <= n) {\r\n                printFizz();\r\n                index++;\r\n            }\r\n        }\r\n    }\r\n\r\n    void buzz(function<void()> printBuzz) {\r\n        while (index <= n) {\r\n            std::lock_guard<std::mutex> lk(mtx);\r\n            if (0 == index % 5 && 0 != index % 3 && index <= n) {\r\n                printBuzz();\r\n                index++;\r\n            }\r\n        }\r\n    }\r\n\r\n    void fizzbuzz(function<void()> printFizzBuzz) {\r\n        while (index <= n) {\r\n            std::lock_guard<std::mutex> lk(mtx);\r\n            if (0 == index % 15 && index <= n) {\r\n                printFizzBuzz();\r\n                index++;\r\n            }\r\n        }\r\n    }\r\n\r\n    void number(function<void(int)> printNumber) {\r\n        while (index <= n) {\r\n            std::lock_guard<std::mutex> lk(mtx);\r\n            if (0 != index % 3 && 0 != index % 5 && index <= n) {\r\n                printNumber(index);\r\n                index++;\r\n            }\r\n        }\r\n    }\r\n};",
+    "problemId": 1195,
+    "title": "Fizz Buzz Multithreaded",
+    "problemUrl": "https://leetcode.com/problems/fizz-buzz-multithreaded/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1195.Fizz Buzz Multithreaded/Solution.cpp",
+    "sourceFile": "Solution.cpp",
+    "sourceCandidates": [
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1195.Fizz Buzz Multithreaded/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1195.Fizz Buzz Multithreaded/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

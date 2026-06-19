@@ -1,0 +1,23 @@
+{
+    "problemName": "find-users-with-persistent-behavior-patterns",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_behaviorally_stable_users(activity: pd.DataFrame) -> pd.DataFrame:\r\n    activity['action_date'] = pd.to_datetime(activity['action_date'])\r\n\r\n    # Filter users with only a single action per day\r\n    df = activity.assign(\r\n        cnt=activity.groupby(['user_id', 'action_date'])['action'].transform('count')\r\n    )\r\n    df = df[df['cnt'] == 1].sort_values(['user_id', 'action', 'action_date'])\r\n\r\n    # Identify consecutive intervals\r\n    df['rn'] = df.groupby(['user_id', 'action'])['action_date'].rank(method='first')\r\n    df['grp'] = df['action_date'] - pd.to_timedelta(df['rn'], unit='D')\r\n\r\n    # Aggregate streaks\r\n    streaks = (\r\n        df.groupby(['user_id', 'action', 'grp'])\r\n        .agg(\r\n            streak_length=('action_date', 'count'),\r\n            start_date=('action_date', 'min'),\r\n            end_date=('action_date', 'max'),\r\n        )\r\n        .reset_index()\r\n    )\r\n\r\n    # Filter and get the longest streak for each user\r\n    res = streaks[streaks['streak_length'] >= 5].sort_values(\r\n        ['streak_length', 'user_id'], ascending=[False, True]\r\n    )\r\n\r\n    return res.groupby('user_id').head(1)[\r\n        ['user_id', 'action', 'streak_length', 'start_date', 'end_date']\r\n    ]",
+    "problemId": 3832,
+    "title": "Find Users with Persistent Behavior Patterns",
+    "problemUrl": "https://leetcode.com/problems/find-users-with-persistent-behavior-patterns/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3832.Find Users with Persistent Behavior Patterns/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3832.Find Users with Persistent Behavior Patterns/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3832.Find Users with Persistent Behavior Patterns/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "problemName": "game-play-analysis-iv",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef gameplay_analysis(activity: pd.DataFrame) -> pd.DataFrame:\r\n    activity[\"first\"] = activity.groupby(\"player_id\").event_date.transform(min)\r\n    activity_2nd_day = activity[\r\n        activity[\"first\"] + pd.DateOffset(1) == activity[\"event_date\"]\r\n    ]\r\n\r\n    return pd.DataFrame(\r\n        {\"fraction\": [round(len(activity_2nd_day) / activity.player_id.nunique(), 2)]}\r\n    )",
+    "problemId": 550,
+    "title": "Game Play Analysis IV",
+    "problemUrl": "https://leetcode.com/problems/game-play-analysis-iv/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0550.Game Play Analysis IV/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0550.Game Play Analysis IV/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0550.Game Play Analysis IV/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0550.Game Play Analysis IV/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

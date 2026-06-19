@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-closest-palindrome",
+    "language": "python3",
+    "code": "class Solution:\r\n    def nearestPalindromic(self, n: str) -> str:\r\n        x = int(n)\r\n        l = len(n)\r\n        res = {10 ** (l - 1) - 1, 10**l + 1}\r\n        left = int(n[: (l + 1) >> 1])\r\n        for i in range(left - 1, left + 2):\r\n            j = i if l % 2 == 0 else i // 10\r\n            while j:\r\n                i = i * 10 + j % 10\r\n                j //= 10\r\n            res.add(i)\r\n        res.discard(x)\r\n\r\n        ans = -1\r\n        for t in res:\r\n            if (\r\n                ans == -1\r\n                or abs(t - x) < abs(ans - x)\r\n                or (abs(t - x) == abs(ans - x) and t < ans)\r\n            ):\r\n                ans = t\r\n        return str(ans)",
+    "problemId": 564,
+    "title": "Find the Closest Palindrome",
+    "problemUrl": "https://leetcode.com/problems/find-the-closest-palindrome/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0564.Find the Closest Palindrome/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0564.Find the Closest Palindrome/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0564.Find the Closest Palindrome/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0564.Find the Closest Palindrome/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0564.Find the Closest Palindrome/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0564.Find the Closest Palindrome/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

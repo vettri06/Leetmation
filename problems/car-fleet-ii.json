@@ -1,0 +1,33 @@
+{
+    "problemName": "car-fleet-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getCollisionTimes(self, cars: List[List[int]]) -> List[float]:\r\n        stk = []\r\n        n = len(cars)\r\n        ans = [-1] * n\r\n        for i in range(n - 1, -1, -1):\r\n            while stk:\r\n                j = stk[-1]\r\n                if cars[i][1] > cars[j][1]:\r\n                    t = (cars[j][0] - cars[i][0]) / (cars[i][1] - cars[j][1])\r\n                    if ans[j] == -1 or t <= ans[j]:\r\n                        ans[i] = t\r\n                        break\r\n                stk.pop()\r\n            stk.append(i)\r\n        return ans",
+    "problemId": 1776,
+    "title": "Car Fleet II",
+    "problemUrl": "https://leetcode.com/problems/car-fleet-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1776.Car Fleet II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1776.Car Fleet II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1776.Car Fleet II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1776.Car Fleet II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1776.Car Fleet II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

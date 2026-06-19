@@ -1,0 +1,48 @@
+{
+    "problemName": "sort-colors",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sortColors(self, nums: List[int]) -> None:\r\n        i, j, k = -1, len(nums), 0\r\n        while k < j:\r\n            if nums[k] == 0:\r\n                i += 1\r\n                nums[i], nums[k] = nums[k], nums[i]\r\n                k += 1\r\n            elif nums[k] == 2:\r\n                j -= 1\r\n                nums[j], nums[k] = nums[k], nums[j]\r\n            else:\r\n                k += 1",
+    "problemId": 75,
+    "title": "Sort Colors",
+    "problemUrl": "https://leetcode.com/problems/sort-colors/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0075.Sort Colors/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0075.Sort Colors/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0075.Sort Colors/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0075.Sort Colors/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0075.Sort Colors/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0075.Sort Colors/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0075.Sort Colors/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0075.Sort Colors/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

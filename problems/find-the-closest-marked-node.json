@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-closest-marked-node",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumDistance(\r\n        self, n: int, edges: List[List[int]], s: int, marked: List[int]\r\n    ) -> int:\r\n        g = [[inf] * n for _ in range(n)]\r\n        for u, v, w in edges:\r\n            g[u][v] = min(g[u][v], w)\r\n        dist = [inf] * n\r\n        vis = [False] * n\r\n        dist[s] = 0\r\n        for _ in range(n):\r\n            t = -1\r\n            for j in range(n):\r\n                if not vis[j] and (t == -1 or dist[t] > dist[j]):\r\n                    t = j\r\n            vis[t] = True\r\n            for j in range(n):\r\n                dist[j] = min(dist[j], dist[t] + g[t][j])\r\n        ans = min(dist[i] for i in marked)\r\n        return -1 if ans >= inf else ans",
+    "problemId": 2737,
+    "title": "Find the Closest Marked Node",
+    "problemUrl": "https://leetcode.com/problems/find-the-closest-marked-node/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2737.Find the Closest Marked Node/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2737.Find the Closest Marked Node/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2737.Find the Closest Marked Node/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2737.Find the Closest Marked Node/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2737.Find the Closest Marked Node/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2737.Find the Closest Marked Node/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-length-of-string-after-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumLength(self, s: str) -> int:\r\n        cnt = Counter(s)\r\n        return sum(1 if x & 1 else 2 for x in cnt.values())",
+    "problemId": 3223,
+    "title": "Minimum Length of String After Operations",
+    "problemUrl": "https://leetcode.com/problems/minimum-length-of-string-after-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3223.Minimum Length of String After Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3223.Minimum Length of String After Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3223.Minimum Length of String After Operations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3223.Minimum Length of String After Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3223.Minimum Length of String After Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3223.Minimum Length of String After Operations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

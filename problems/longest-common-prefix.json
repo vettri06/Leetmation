@@ -1,0 +1,63 @@
+{
+    "problemName": "longest-common-prefix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestCommonPrefix(self, strs: List[str]) -> str:\r\n        for i in range(len(strs[0])):\r\n            for s in strs[1:]:\r\n                if len(s) <= i or s[i] != strs[0][i]:\r\n                    return s[:i]\r\n        return strs[0]",
+    "problemId": 14,
+    "title": "Longest Common Prefix",
+    "problemUrl": "https://leetcode.com/problems/longest-common-prefix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0014.Longest Common Prefix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0014.Longest Common Prefix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0014.Longest Common Prefix/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0014.Longest Common Prefix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0014.Longest Common Prefix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0014.Longest Common Prefix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0014.Longest Common Prefix/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0014.Longest Common Prefix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0014.Longest Common Prefix/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0014.Longest Common Prefix/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "ruby",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0014.Longest Common Prefix/Solution.rb",
+            "sourceFile": "Solution.rb"
+        }
+    ]
+}

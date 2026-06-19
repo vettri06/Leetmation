@@ -1,0 +1,73 @@
+{
+    "problemName": "champagne-tower",
+    "language": "python3",
+    "code": "class Solution:\r\n    def champagneTower(self, poured: int, query_row: int, query_glass: int) -> float:\r\n        f = [[0] * 101 for _ in range(101)]\r\n        f[0][0] = poured\r\n        for i in range(query_row + 1):\r\n            for j in range(i + 1):\r\n                if f[i][j] > 1:\r\n                    half = (f[i][j] - 1) / 2\r\n                    f[i][j] = 1\r\n                    f[i + 1][j] += half\r\n                    f[i + 1][j + 1] += half\r\n        return f[query_row][query_glass]",
+    "problemId": 799,
+    "title": "Champagne Tower",
+    "problemUrl": "https://leetcode.com/problems/champagne-tower/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0799.Champagne Tower/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0799.Champagne Tower/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0799.Champagne Tower/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0799.Champagne Tower/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0799.Champagne Tower/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0799.Champagne Tower/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0799.Champagne Tower/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0799.Champagne Tower/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0799.Champagne Tower/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0799.Champagne Tower/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0799.Champagne Tower/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0799.Champagne Tower/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0799.Champagne Tower/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

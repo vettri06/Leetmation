@@ -1,0 +1,38 @@
+{
+    "problemName": "apply-operations-on-array-to-maximize-sum-of-squares",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSum(self, nums: List[int], k: int) -> int:\r\n        mod = 10**9 + 7\r\n        cnt = [0] * 31\r\n        for x in nums:\r\n            for i in range(31):\r\n                if x >> i & 1:\r\n                    cnt[i] += 1\r\n        ans = 0\r\n        for _ in range(k):\r\n            x = 0\r\n            for i in range(31):\r\n                if cnt[i]:\r\n                    x |= 1 << i\r\n                    cnt[i] -= 1\r\n            ans = (ans + x * x) % mod\r\n        return ans",
+    "problemId": 2897,
+    "title": "Apply Operations on Array to Maximize Sum of Squares",
+    "problemUrl": "https://leetcode.com/problems/apply-operations-on-array-to-maximize-sum-of-squares/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2897.Apply Operations on Array to Maximize Sum of Squares/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2897.Apply Operations on Array to Maximize Sum of Squares/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2897.Apply Operations on Array to Maximize Sum of Squares/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2897.Apply Operations on Array to Maximize Sum of Squares/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2897.Apply Operations on Array to Maximize Sum of Squares/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2897.Apply Operations on Array to Maximize Sum of Squares/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

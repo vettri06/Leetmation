@@ -1,0 +1,38 @@
+{
+    "problemName": "count-good-subarrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countGoodSubarrays(self, nums: list[int]) -> int:\r\n        n = len(nums)\r\n        l = [-1] * n\r\n        stk = []\r\n        for i, x in enumerate(nums):\r\n            while stk and nums[stk[-1]] < x and (nums[stk[-1]] | x) == x:\r\n                stk.pop()\r\n            l[i] = stk[-1] if stk else -1\r\n            stk.append(i)\r\n        r = [n] * n\r\n        stk = []\r\n        for i in range(n - 1, -1, -1):\r\n            while stk and (nums[stk[-1]] | nums[i]) == nums[i]:\r\n                stk.pop()\r\n            r[i] = stk[-1] if stk else n\r\n            stk.append(i)\r\n        return sum((i - l[i]) * (r[i] - i) for i in range(n))",
+    "problemId": 3878,
+    "title": "Count Good Subarrays",
+    "problemUrl": "https://leetcode.com/problems/count-good-subarrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3878.Count Good Subarrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3878.Count Good Subarrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3878.Count Good Subarrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3878.Count Good Subarrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3878.Count Good Subarrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3878.Count Good Subarrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "design-circular-deque",
+    "language": "python3",
+    "code": "class MyCircularDeque:\r\n    def __init__(self, k: int):\r\n        \"\"\"\r\n        Initialize your data structure here. Set the size of the deque to be k.\r\n        \"\"\"\r\n        self.q = [0] * k\r\n        self.front = 0\r\n        self.size = 0\r\n        self.capacity = k\r\n\r\n    def insertFront(self, value: int) -> bool:\r\n        \"\"\"\r\n        Adds an item at the front of Deque. Return true if the operation is successful.\r\n        \"\"\"\r\n        if self.isFull():\r\n            return False\r\n        if not self.isEmpty():\r\n            self.front = (self.front - 1 + self.capacity) % self.capacity\r\n        self.q[self.front] = value\r\n        self.size += 1\r\n        return True\r\n\r\n    def insertLast(self, value: int) -> bool:\r\n        \"\"\"\r\n        Adds an item at the rear of Deque. Return true if the operation is successful.\r\n        \"\"\"\r\n        if self.isFull():\r\n            return False\r\n        idx = (self.front + self.size) % self.capacity\r\n        self.q[idx] = value\r\n        self.size += 1\r\n        return True\r\n\r\n    def deleteFront(self) -> bool:\r\n        \"\"\"\r\n        Deletes an item from the front of Deque. Return true if the operation is successful.\r\n        \"\"\"\r\n        if self.isEmpty():\r\n            return False\r\n        self.front = (self.front + 1) % self.capacity\r\n        self.size -= 1\r\n        return True\r\n\r\n    def deleteLast(self) -> bool:\r\n        \"\"\"\r\n        Deletes an item from the rear of Deque. Return true if the operation is successful.\r\n        \"\"\"\r\n        if self.isEmpty():\r\n            return False\r\n        self.size -= 1\r\n        return True\r\n\r\n    def getFront(self) -> int:\r\n        \"\"\"\r\n        Get the front item from the deque.\r\n        \"\"\"\r\n        if self.isEmpty():\r\n            return -1\r\n        return self.q[self.front]\r\n\r\n    def getRear(self) -> int:\r\n        \"\"\"\r\n        Get the last item from the deque.\r\n        \"\"\"\r\n        if self.isEmpty():\r\n            return -1\r\n        idx = (self.front + self.size - 1) % self.capacity\r\n        return self.q[idx]\r\n\r\n    def isEmpty(self) -> bool:\r\n        \"\"\"\r\n        Checks whether the circular deque is empty or not.\r\n        \"\"\"\r\n        return self.size == 0\r\n\r\n    def isFull(self) -> bool:\r\n        \"\"\"\r\n        Checks whether the circular deque is full or not.\r\n        \"\"\"\r\n        return self.size == self.capacity\r\n\r\n\r\n# Your MyCircularDeque object will be instantiated and called as such:\r\n# obj = MyCircularDeque(k)\r\n# param_1 = obj.insertFront(value)\r\n# param_2 = obj.insertLast(value)\r\n# param_3 = obj.deleteFront()\r\n# param_4 = obj.deleteLast()\r\n# param_5 = obj.getFront()\r\n# param_6 = obj.getRear()\r\n# param_7 = obj.isEmpty()\r\n# param_8 = obj.isFull()",
+    "problemId": 641,
+    "title": "Design Circular Deque",
+    "problemUrl": "https://leetcode.com/problems/design-circular-deque/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0641.Design Circular Deque/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0641.Design Circular Deque/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0641.Design Circular Deque/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0641.Design Circular Deque/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0641.Design Circular Deque/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0641.Design Circular Deque/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

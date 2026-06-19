@@ -1,0 +1,43 @@
+{
+    "problemName": "duplicate-zeros",
+    "language": "python3",
+    "code": "class Solution:\r\n    def duplicateZeros(self, arr: List[int]) -> None:\r\n        \"\"\"\r\n        Do not return anything, modify arr in-place instead.\r\n        \"\"\"\r\n        n = len(arr)\r\n        i, k = -1, 0\r\n        while k < n:\r\n            i += 1\r\n            k += 1 if arr[i] else 2\r\n        j = n - 1\r\n        if k == n + 1:\r\n            arr[j] = 0\r\n            i, j = i - 1, j - 1\r\n        while ~j:\r\n            if arr[i] == 0:\r\n                arr[j] = arr[j - 1] = arr[i]\r\n                j -= 1\r\n            else:\r\n                arr[j] = arr[i]\r\n            i, j = i - 1, j - 1",
+    "problemId": 1089,
+    "title": "Duplicate Zeros",
+    "problemUrl": "https://leetcode.com/problems/duplicate-zeros/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1089.Duplicate Zeros/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1089.Duplicate Zeros/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1089.Duplicate Zeros/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1089.Duplicate Zeros/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1089.Duplicate Zeros/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1089.Duplicate Zeros/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1089.Duplicate Zeros/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

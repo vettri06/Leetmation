@@ -1,0 +1,43 @@
+{
+    "problemName": "smallest-range-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestRangeI(self, nums: List[int], k: int) -> int:\r\n        mx, mi = max(nums), min(nums)\r\n        return max(0, mx - mi - k * 2)",
+    "problemId": 908,
+    "title": "Smallest Range I",
+    "problemUrl": "https://leetcode.com/problems/smallest-range-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0908.Smallest Range I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0908.Smallest Range I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0908.Smallest Range I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0908.Smallest Range I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0908.Smallest Range I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0908.Smallest Range I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0908.Smallest Range I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

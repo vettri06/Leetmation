@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-number-of-eaten-apples",
+    "language": "python3",
+    "code": "class Solution:\r\n    def eatenApples(self, apples: List[int], days: List[int]) -> int:\r\n        n = len(days)\r\n        i = ans = 0\r\n        q = []\r\n        while i < n or q:\r\n            if i < n and apples[i]:\r\n                heappush(q, (i + days[i] - 1, apples[i]))\r\n            while q and q[0][0] < i:\r\n                heappop(q)\r\n            if q:\r\n                t, v = heappop(q)\r\n                v -= 1\r\n                ans += 1\r\n                if v and t > i:\r\n                    heappush(q, (t, v))\r\n            i += 1\r\n        return ans",
+    "problemId": 1705,
+    "title": "Maximum Number of Eaten Apples",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-eaten-apples/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1705.Maximum Number of Eaten Apples/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1705.Maximum Number of Eaten Apples/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1705.Maximum Number of Eaten Apples/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1705.Maximum Number of Eaten Apples/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1705.Maximum Number of Eaten Apples/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

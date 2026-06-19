@@ -1,0 +1,38 @@
+{
+    "problemName": "output-contest-matches",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findContestMatch(self, n: int) -> str:\r\n        s = [str(i + 1) for i in range(n)]\r\n        while n > 1:\r\n            for i in range(n >> 1):\r\n                s[i] = f\"({s[i]},{s[n - i - 1]})\"\r\n            n >>= 1\r\n        return s[0]",
+    "problemId": 544,
+    "title": "Output Contest Matches",
+    "problemUrl": "https://leetcode.com/problems/output-contest-matches/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0544.Output Contest Matches/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0544.Output Contest Matches/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0544.Output Contest Matches/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0544.Output Contest Matches/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0544.Output Contest Matches/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0544.Output Contest Matches/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

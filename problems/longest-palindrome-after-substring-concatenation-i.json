@@ -1,0 +1,33 @@
+{
+    "problemName": "longest-palindrome-after-substring-concatenation-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestPalindrome(self, s: str, t: str) -> int:\r\n        def expand(s: str, g: List[int], l: int, r: int):\r\n            while l >= 0 and r < len(s) and s[l] == s[r]:\r\n                g[l] = max(g[l], r - l + 1)\r\n                l, r = l - 1, r + 1\r\n\r\n        def calc(s: str) -> List[int]:\r\n            n = len(s)\r\n            g = [0] * n\r\n            for i in range(n):\r\n                expand(s, g, i, i)\r\n                expand(s, g, i, i + 1)\r\n            return g\r\n\r\n        m, n = len(s), len(t)\r\n        t = t[::-1]\r\n        g1, g2 = calc(s), calc(t)\r\n        ans = max(*g1, *g2)\r\n        f = [[0] * (n + 1) for _ in range(m + 1)]\r\n        for i, a in enumerate(s, 1):\r\n            for j, b in enumerate(t, 1):\r\n                if a == b:\r\n                    f[i][j] = f[i - 1][j - 1] + 1\r\n                    ans = max(ans, f[i][j] * 2 + (0 if i >= m else g1[i]))\r\n                    ans = max(ans, f[i][j] * 2 + (0 if j >= n else g2[j]))\r\n        return ans",
+    "problemId": 3503,
+    "title": "Longest Palindrome After Substring Concatenation I",
+    "problemUrl": "https://leetcode.com/problems/longest-palindrome-after-substring-concatenation-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3503.Longest Palindrome After Substring Concatenation I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3503.Longest Palindrome After Substring Concatenation I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3503.Longest Palindrome After Substring Concatenation I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3503.Longest Palindrome After Substring Concatenation I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3503.Longest Palindrome After Substring Concatenation I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

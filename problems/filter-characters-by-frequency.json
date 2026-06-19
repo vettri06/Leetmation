@@ -1,0 +1,38 @@
+{
+    "problemName": "filter-characters-by-frequency",
+    "language": "python3",
+    "code": "class Solution:\r\n    def filterCharacters(self, s: str, k: int) -> str:\r\n        cnt = Counter(s)\r\n        ans = []\r\n        for c in s:\r\n            if cnt[c] < k:\r\n                ans.append(c)\r\n        return \"\".join(ans)",
+    "problemId": 3662,
+    "title": "Filter Characters by Frequency",
+    "problemUrl": "https://leetcode.com/problems/filter-characters-by-frequency/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3662.Filter Characters by Frequency/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3662.Filter Characters by Frequency/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3662.Filter Characters by Frequency/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3662.Filter Characters by Frequency/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3662.Filter Characters by Frequency/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3662.Filter Characters by Frequency/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "compare-sums-of-bitonic-parts",
+    "language": "python3",
+    "code": "class Solution:\r\n    def compareBitonicSums(self, nums: list[int]) -> int:\r\n        l, r = nums[0], sum(nums)\r\n        for a, b in pairwise(nums):\r\n            if a > b:\r\n                break\r\n            l += b\r\n            r -= a\r\n        if l == r:\r\n            return -1\r\n        return 0 if l > r else 1",
+    "problemId": 3909,
+    "title": "Compare Sums of Bitonic Parts",
+    "problemUrl": "https://leetcode.com/problems/compare-sums-of-bitonic-parts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3909.Compare Sums of Bitonic Parts/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3909.Compare Sums of Bitonic Parts/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3909.Compare Sums of Bitonic Parts/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3909.Compare Sums of Bitonic Parts/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3909.Compare Sums of Bitonic Parts/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3909.Compare Sums of Bitonic Parts/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "max-pair-sum-in-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSum(self, nums: List[int]) -> int:\r\n        ans = -1\r\n        for i, x in enumerate(nums):\r\n            for y in nums[i + 1 :]:\r\n                v = x + y\r\n                if ans < v and max(str(x)) == max(str(y)):\r\n                    ans = v\r\n        return ans",
+    "problemId": 2815,
+    "title": "Max Pair Sum in an Array",
+    "problemUrl": "https://leetcode.com/problems/max-pair-sum-in-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2815.Max Pair Sum in an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2815.Max Pair Sum in an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2815.Max Pair Sum in an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2815.Max Pair Sum in an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2815.Max Pair Sum in an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2815.Max Pair Sum in an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

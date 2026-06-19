@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-number-of-moves-to-seat-everyone",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minMovesToSeat(self, seats: List[int], students: List[int]) -> int:\r\n        seats.sort()\r\n        students.sort()\r\n        return sum(abs(a - b) for a, b in zip(seats, students))",
+    "problemId": 2037,
+    "title": "Minimum Number of Moves to Seat Everyone",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2037.Minimum Number of Moves to Seat Everyone/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2037.Minimum Number of Moves to Seat Everyone/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2037.Minimum Number of Moves to Seat Everyone/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2037.Minimum Number of Moves to Seat Everyone/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2037.Minimum Number of Moves to Seat Everyone/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2037.Minimum Number of Moves to Seat Everyone/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2037.Minimum Number of Moves to Seat Everyone/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2037.Minimum Number of Moves to Seat Everyone/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

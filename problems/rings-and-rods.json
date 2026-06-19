@@ -1,0 +1,53 @@
+{
+    "problemName": "rings-and-rods",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPoints(self, rings: str) -> int:\r\n        mask = [0] * 10\r\n        d = {\"R\": 1, \"G\": 2, \"B\": 4}\r\n        for i in range(0, len(rings), 2):\r\n            c = rings[i]\r\n            j = int(rings[i + 1])\r\n            mask[j] |= d[c]\r\n        return mask.count(7)",
+    "problemId": 2103,
+    "title": "Rings and Rods",
+    "problemUrl": "https://leetcode.com/problems/rings-and-rods/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2103.Rings and Rods/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2103.Rings and Rods/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2103.Rings and Rods/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2103.Rings and Rods/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2103.Rings and Rods/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2103.Rings and Rods/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2103.Rings and Rods/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2103.Rings and Rods/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2103.Rings and Rods/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

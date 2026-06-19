@@ -1,0 +1,23 @@
+{
+    "problemName": "to-be-or-not-to-be",
+    "language": "javascript",
+    "code": "/**\r\n * @param {string} val\r\n * @return {Object}\r\n */\r\nvar expect = function (val) {\r\n    return {\r\n        toBe: function (expected) {\r\n            if (val !== expected) {\r\n                throw new Error('Not Equal');\r\n            }\r\n            return true;\r\n        },\r\n        notToBe: function (expected) {\r\n            if (val === expected) {\r\n                throw new Error('Equal');\r\n            }\r\n            return true;\r\n        },\r\n    };\r\n};\r\n\r\n/**\r\n * expect(5).toBe(5); // true\r\n * expect(5).notToBe(5); // throws \"Equal\"\r\n */",
+    "problemId": 2704,
+    "title": "To Be Or Not To Be",
+    "problemUrl": "https://leetcode.com/problems/to-be-or-not-to-be/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2704.To Be Or Not To Be/Solution.js",
+    "sourceFile": "Solution.js",
+    "sourceCandidates": [
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2704.To Be Or Not To Be/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2704.To Be Or Not To Be/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

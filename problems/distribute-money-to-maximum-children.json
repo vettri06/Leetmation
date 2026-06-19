@@ -1,0 +1,43 @@
+{
+    "problemName": "distribute-money-to-maximum-children",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distMoney(self, money: int, children: int) -> int:\r\n        if money < children:\r\n            return -1\r\n        if money > 8 * children:\r\n            return children - 1\r\n        if money == 8 * children - 4:\r\n            return children - 2\r\n        # money-8x >= children-x, x <= (money-children)/7\r\n        return (money - children) // 7",
+    "problemId": 2591,
+    "title": "Distribute Money to Maximum Children",
+    "problemUrl": "https://leetcode.com/problems/distribute-money-to-maximum-children/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2591.Distribute Money to Maximum Children/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2591.Distribute Money to Maximum Children/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2591.Distribute Money to Maximum Children/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2591.Distribute Money to Maximum Children/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2591.Distribute Money to Maximum Children/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2591.Distribute Money to Maximum Children/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2591.Distribute Money to Maximum Children/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "x-of-a-kind-in-a-deck-of-cards",
+    "language": "python3",
+    "code": "class Solution:\r\n    def hasGroupsSizeX(self, deck: List[int]) -> bool:\r\n        cnt = Counter(deck)\r\n        return reduce(gcd, cnt.values()) >= 2",
+    "problemId": 914,
+    "title": "X of a Kind in a Deck of Cards",
+    "problemUrl": "https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0914.X of a Kind in a Deck of Cards/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0914.X of a Kind in a Deck of Cards/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0914.X of a Kind in a Deck of Cards/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0914.X of a Kind in a Deck of Cards/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0914.X of a Kind in a Deck of Cards/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0914.X of a Kind in a Deck of Cards/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

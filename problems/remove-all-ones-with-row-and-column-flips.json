@@ -1,0 +1,43 @@
+{
+    "problemName": "remove-all-ones-with-row-and-column-flips",
+    "language": "python3",
+    "code": "class Solution:\r\n    def removeOnes(self, grid: List[List[int]]) -> bool:\r\n        s = set()\r\n        for row in grid:\r\n            t = tuple(row) if row[0] == grid[0][0] else tuple(x ^ 1 for x in row)\r\n            s.add(t)\r\n        return len(s) == 1",
+    "problemId": 2128,
+    "title": "Remove All Ones With Row and Column Flips",
+    "problemUrl": "https://leetcode.com/problems/remove-all-ones-with-row-and-column-flips/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2128.Remove All Ones With Row and Column Flips/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2128.Remove All Ones With Row and Column Flips/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2128.Remove All Ones With Row and Column Flips/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2128.Remove All Ones With Row and Column Flips/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2128.Remove All Ones With Row and Column Flips/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2128.Remove All Ones With Row and Column Flips/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2128.Remove All Ones With Row and Column Flips/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

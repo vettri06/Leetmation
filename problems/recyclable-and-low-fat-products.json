@@ -1,0 +1,23 @@
+{
+    "problemName": "recyclable-and-low-fat-products",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_products(products: pd.DataFrame) -> pd.DataFrame:\r\n    rs = products[(products[\"low_fats\"] == \"Y\") & (products[\"recyclable\"] == \"Y\")]\r\n    rs = rs[[\"product_id\"]]\r\n    return rs",
+    "problemId": 1757,
+    "title": "Recyclable and Low Fat Products",
+    "problemUrl": "https://leetcode.com/problems/recyclable-and-low-fat-products/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1757.Recyclable and Low Fat Products/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1757.Recyclable and Low Fat Products/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1757.Recyclable and Low Fat Products/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

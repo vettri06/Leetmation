@@ -1,0 +1,38 @@
+{
+    "problemName": "design-snake-game",
+    "language": "python3",
+    "code": "class SnakeGame:\r\n    def __init__(self, width: int, height: int, food: List[List[int]]):\r\n        self.m = height\r\n        self.n = width\r\n        self.food = food\r\n        self.score = 0\r\n        self.idx = 0\r\n        self.q = deque([(0, 0)])\r\n        self.vis = {(0, 0)}\r\n\r\n    def move(self, direction: str) -> int:\r\n        i, j = self.q[0]\r\n        x, y = i, j\r\n        match direction:\r\n            case \"U\":\r\n                x -= 1\r\n            case \"D\":\r\n                x += 1\r\n            case \"L\":\r\n                y -= 1\r\n            case \"R\":\r\n                y += 1\r\n        if x < 0 or x >= self.m or y < 0 or y >= self.n:\r\n            return -1\r\n        if (\r\n            self.idx < len(self.food)\r\n            and x == self.food[self.idx][0]\r\n            and y == self.food[self.idx][1]\r\n        ):\r\n            self.score += 1\r\n            self.idx += 1\r\n        else:\r\n            self.vis.remove(self.q.pop())\r\n        if (x, y) in self.vis:\r\n            return -1\r\n        self.q.appendleft((x, y))\r\n        self.vis.add((x, y))\r\n        return self.score\r\n\r\n\r\n# Your SnakeGame object will be instantiated and called as such:\r\n# obj = SnakeGame(width, height, food)\r\n# param_1 = obj.move(direction)",
+    "problemId": 353,
+    "title": "Design Snake Game",
+    "problemUrl": "https://leetcode.com/problems/design-snake-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0353.Design Snake Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0353.Design Snake Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0353.Design Snake Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0353.Design Snake Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0353.Design Snake Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0353.Design Snake Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

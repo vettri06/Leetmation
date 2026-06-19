@@ -1,0 +1,53 @@
+{
+    "problemName": "maximum-difference-by-remapping-a-digit",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minMaxDifference(self, num: int) -> int:\r\n        s = str(num)\r\n        mi = int(s.replace(s[0], '0'))\r\n        for c in s:\r\n            if c != '9':\r\n                return int(s.replace(c, '9')) - mi\r\n        return num - mi",
+    "problemId": 2566,
+    "title": "Maximum Difference by Remapping a Digit",
+    "problemUrl": "https://leetcode.com/problems/maximum-difference-by-remapping-a-digit/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2566.Maximum Difference by Remapping a Digit/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2566.Maximum Difference by Remapping a Digit/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2566.Maximum Difference by Remapping a Digit/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2566.Maximum Difference by Remapping a Digit/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2566.Maximum Difference by Remapping a Digit/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2566.Maximum Difference by Remapping a Digit/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2566.Maximum Difference by Remapping a Digit/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2566.Maximum Difference by Remapping a Digit/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2566.Maximum Difference by Remapping a Digit/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

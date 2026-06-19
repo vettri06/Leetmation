@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-cost-for-cutting-cake-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumCost(\r\n        self, m: int, n: int, horizontalCut: List[int], verticalCut: List[int]\r\n    ) -> int:\r\n        horizontalCut.sort(reverse=True)\r\n        verticalCut.sort(reverse=True)\r\n        ans = i = j = 0\r\n        h = v = 1\r\n        while i < m - 1 or j < n - 1:\r\n            if j == n - 1 or (i < m - 1 and horizontalCut[i] > verticalCut[j]):\r\n                ans += horizontalCut[i] * v\r\n                h, i = h + 1, i + 1\r\n            else:\r\n                ans += verticalCut[j] * h\r\n                v, j = v + 1, j + 1\r\n        return ans",
+    "problemId": 3218,
+    "title": "Minimum Cost for Cutting Cake I",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-for-cutting-cake-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3218.Minimum Cost for Cutting Cake I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3218.Minimum Cost for Cutting Cake I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3218.Minimum Cost for Cutting Cake I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3218.Minimum Cost for Cutting Cake I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3218.Minimum Cost for Cutting Cake I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3218.Minimum Cost for Cutting Cake I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3218.Minimum Cost for Cutting Cake I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

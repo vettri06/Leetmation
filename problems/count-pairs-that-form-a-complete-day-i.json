@@ -1,0 +1,38 @@
+{
+    "problemName": "count-pairs-that-form-a-complete-day-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countCompleteDayPairs(self, hours: List[int]) -> int:\r\n        cnt = Counter()\r\n        ans = 0\r\n        for x in hours:\r\n            ans += cnt[(24 - (x % 24)) % 24]\r\n            cnt[x % 24] += 1\r\n        return ans",
+    "problemId": 3184,
+    "title": "Count Pairs That Form a Complete Day I",
+    "problemUrl": "https://leetcode.com/problems/count-pairs-that-form-a-complete-day-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3184.Count Pairs That Form a Complete Day I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3184.Count Pairs That Form a Complete Day I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3184.Count Pairs That Form a Complete Day I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3184.Count Pairs That Form a Complete Day I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3184.Count Pairs That Form a Complete Day I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3184.Count Pairs That Form a Complete Day I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

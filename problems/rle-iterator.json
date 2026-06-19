@@ -1,0 +1,38 @@
+{
+    "problemName": "rle-iterator",
+    "language": "python3",
+    "code": "class RLEIterator:\r\n    def __init__(self, encoding: List[int]):\r\n        self.encoding = encoding\r\n        self.i = 0\r\n        self.j = 0\r\n\r\n    def next(self, n: int) -> int:\r\n        while self.i < len(self.encoding):\r\n            if self.encoding[self.i] - self.j < n:\r\n                n -= self.encoding[self.i] - self.j\r\n                self.i += 2\r\n                self.j = 0\r\n            else:\r\n                self.j += n\r\n                return self.encoding[self.i + 1]\r\n        return -1\r\n\r\n\r\n# Your RLEIterator object will be instantiated and called as such:\r\n# obj = RLEIterator(encoding)\r\n# param_1 = obj.next(n)",
+    "problemId": 900,
+    "title": "RLE Iterator",
+    "problemUrl": "https://leetcode.com/problems/rle-iterator/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0900.RLE Iterator/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0900.RLE Iterator/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0900.RLE Iterator/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0900.RLE Iterator/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0900.RLE Iterator/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0900.RLE Iterator/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

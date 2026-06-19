@@ -1,0 +1,48 @@
+{
+    "problemName": "lucky-numbers-in-a-matrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def luckyNumbers(self, matrix: List[List[int]]) -> List[int]:\r\n        rows = {min(row) for row in matrix}\r\n        cols = {max(col) for col in zip(*matrix)}\r\n        return list(rows & cols)",
+    "problemId": 1380,
+    "title": "Lucky Numbers in a Matrix",
+    "problemUrl": "https://leetcode.com/problems/lucky-numbers-in-a-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1380.Lucky Numbers in a Matrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1380.Lucky Numbers in a Matrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1380.Lucky Numbers in a Matrix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1380.Lucky Numbers in a Matrix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1380.Lucky Numbers in a Matrix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1380.Lucky Numbers in a Matrix/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1380.Lucky Numbers in a Matrix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1380.Lucky Numbers in a Matrix/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "score-validator",
+    "language": "python3",
+    "code": "class Solution:\r\n    def scoreValidator(self, events: list[str]) -> list[int]:\r\n        score = counter = 0\r\n        for event in events:\r\n            if event.isdigit():\r\n                score += int(event)\r\n            elif event == \"W\":\r\n                counter += 1\r\n                if counter == 10:\r\n                    break\r\n            else:\r\n                score += 1\r\n        return [score, counter]",
+    "problemId": 3921,
+    "title": "Score Validator",
+    "problemUrl": "https://leetcode.com/problems/score-validator/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3921.Score Validator/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3921.Score Validator/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3921.Score Validator/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3921.Score Validator/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3921.Score Validator/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3921.Score Validator/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

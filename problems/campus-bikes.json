@@ -1,0 +1,33 @@
+{
+    "problemName": "campus-bikes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def assignBikes(\r\n        self, workers: List[List[int]], bikes: List[List[int]]\r\n    ) -> List[int]:\r\n        n, m = len(workers), len(bikes)\r\n        arr = []\r\n        for i, j in product(range(n), range(m)):\r\n            dist = abs(workers[i][0] - bikes[j][0]) + abs(workers[i][1] - bikes[j][1])\r\n            arr.append((dist, i, j))\r\n        arr.sort()\r\n        vis1 = [False] * n\r\n        vis2 = [False] * m\r\n        ans = [0] * n\r\n        for _, i, j in arr:\r\n            if not vis1[i] and not vis2[j]:\r\n                vis1[i] = vis2[j] = True\r\n                ans[i] = j\r\n        return ans",
+    "problemId": 1057,
+    "title": "Campus Bikes",
+    "problemUrl": "https://leetcode.com/problems/campus-bikes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1057.Campus Bikes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1057.Campus Bikes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1057.Campus Bikes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1057.Campus Bikes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1057.Campus Bikes/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

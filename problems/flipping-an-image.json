@@ -1,0 +1,38 @@
+{
+    "problemName": "flipping-an-image",
+    "language": "python3",
+    "code": "class Solution:\r\n    def flipAndInvertImage(self, image: List[List[int]]) -> List[List[int]]:\r\n        n = len(image)\r\n        for row in image:\r\n            i, j = 0, n - 1\r\n            while i < j:\r\n                if row[i] == row[j]:\r\n                    row[i] ^= 1\r\n                    row[j] ^= 1\r\n                i, j = i + 1, j - 1\r\n            if i == j:\r\n                row[i] ^= 1\r\n        return image",
+    "problemId": 832,
+    "title": "Flipping an Image",
+    "problemUrl": "https://leetcode.com/problems/flipping-an-image/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0832.Flipping an Image/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0832.Flipping an Image/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0832.Flipping an Image/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0832.Flipping an Image/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0832.Flipping an Image/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0832.Flipping an Image/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

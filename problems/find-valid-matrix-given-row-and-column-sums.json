@@ -1,0 +1,43 @@
+{
+    "problemName": "find-valid-matrix-given-row-and-column-sums",
+    "language": "python3",
+    "code": "class Solution:\r\n    def restoreMatrix(self, rowSum: List[int], colSum: List[int]) -> List[List[int]]:\r\n        m, n = len(rowSum), len(colSum)\r\n        ans = [[0] * n for _ in range(m)]\r\n        for i in range(m):\r\n            for j in range(n):\r\n                x = min(rowSum[i], colSum[j])\r\n                ans[i][j] = x\r\n                rowSum[i] -= x\r\n                colSum[j] -= x\r\n        return ans",
+    "problemId": 1605,
+    "title": "Find Valid Matrix Given Row and Column Sums",
+    "problemUrl": "https://leetcode.com/problems/find-valid-matrix-given-row-and-column-sums/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1605.Find Valid Matrix Given Row and Column Sums/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1605.Find Valid Matrix Given Row and Column Sums/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1605.Find Valid Matrix Given Row and Column Sums/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1605.Find Valid Matrix Given Row and Column Sums/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1605.Find Valid Matrix Given Row and Column Sums/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1605.Find Valid Matrix Given Row and Column Sums/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1605.Find Valid Matrix Given Row and Column Sums/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

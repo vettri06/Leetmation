@@ -1,0 +1,18 @@
+{
+    "problemName": "find-active-users",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement\r\nSELECT DISTINCT\r\n    user_id\r\nFROM Users\r\nWHERE\r\n    user_id IN (\r\n        SELECT\r\n            user_id\r\n        FROM\r\n            (\r\n                SELECT\r\n                    user_id,\r\n                    created_at,\r\n                    LAG(created_at, 1) OVER (\r\n                        PARTITION BY user_id\r\n                        ORDER BY created_at\r\n                    ) AS prev_created_at\r\n                FROM Users\r\n            ) AS t\r\n        WHERE DATEDIFF(created_at, prev_created_at) <= 7\r\n    );",
+    "problemId": 2688,
+    "title": "Find Active Users",
+    "problemUrl": "https://leetcode.com/problems/find-active-users/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2688.Find Active Users/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2688.Find Active Users/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

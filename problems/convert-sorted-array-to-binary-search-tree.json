@@ -1,0 +1,53 @@
+{
+    "problemName": "convert-sorted-array-to-binary-search-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:\r\n        def dfs(l: int, r: int) -> Optional[TreeNode]:\r\n            if l > r:\r\n                return None\r\n            mid = (l + r) >> 1\r\n            return TreeNode(nums[mid], dfs(l, mid - 1), dfs(mid + 1, r))\r\n\r\n        return dfs(0, len(nums) - 1)",
+    "problemId": 108,
+    "title": "Convert Sorted Array to Binary Search Tree",
+    "problemUrl": "https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0108.Convert Sorted Array to Binary Search Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0108.Convert Sorted Array to Binary Search Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0108.Convert Sorted Array to Binary Search Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0108.Convert Sorted Array to Binary Search Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0108.Convert Sorted Array to Binary Search Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0108.Convert Sorted Array to Binary Search Tree/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0108.Convert Sorted Array to Binary Search Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0108.Convert Sorted Array to Binary Search Tree/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0108.Convert Sorted Array to Binary Search Tree/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

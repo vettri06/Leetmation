@@ -1,0 +1,43 @@
+{
+    "problemName": "split-two-strings-to-make-palindrome",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkPalindromeFormation(self, a: str, b: str) -> bool:\r\n        def check1(a: str, b: str) -> bool:\r\n            i, j = 0, len(b) - 1\r\n            while i < j and a[i] == b[j]:\r\n                i, j = i + 1, j - 1\r\n            return i >= j or check2(a, i, j) or check2(b, i, j)\r\n\r\n        def check2(a: str, i: int, j: int) -> bool:\r\n            return a[i : j + 1] == a[i : j + 1][::-1]\r\n\r\n        return check1(a, b) or check1(b, a)",
+    "problemId": 1616,
+    "title": "Split Two Strings to Make Palindrome",
+    "problemUrl": "https://leetcode.com/problems/split-two-strings-to-make-palindrome/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1616.Split Two Strings to Make Palindrome/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1616.Split Two Strings to Make Palindrome/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1616.Split Two Strings to Make Palindrome/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1616.Split Two Strings to Make Palindrome/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1616.Split Two Strings to Make Palindrome/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1616.Split Two Strings to Make Palindrome/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1616.Split Two Strings to Make Palindrome/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

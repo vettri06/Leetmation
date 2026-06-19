@@ -1,0 +1,38 @@
+{
+    "problemName": "split-array-by-prime-indices",
+    "language": "python3",
+    "code": "m = 10**5 + 10\r\nprimes = [True] * m\r\nprimes[0] = primes[1] = False\r\nfor i in range(2, m):\r\n    if primes[i]:\r\n        for j in range(i + i, m, i):\r\n            primes[j] = False\r\n\r\n\r\nclass Solution:\r\n    def splitArray(self, nums: List[int]) -> int:\r\n        return abs(sum(x if primes[i] else -x for i, x in enumerate(nums)))",
+    "problemId": 3618,
+    "title": "Split Array by Prime Indices",
+    "problemUrl": "https://leetcode.com/problems/split-array-by-prime-indices/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3618.Split Array by Prime Indices/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3618.Split Array by Prime Indices/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3618.Split Array by Prime Indices/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3618.Split Array by Prime Indices/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3618.Split Array by Prime Indices/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3618.Split Array by Prime Indices/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

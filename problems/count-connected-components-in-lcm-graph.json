@@ -1,0 +1,53 @@
+{
+    "problemName": "count-connected-components-in-lcm-graph",
+    "language": "python3",
+    "code": "class DSU:\r\n    def __init__(self, n):\r\n        self.parent = {i: i for i in range(n)}\r\n        self.rank = {i: 0 for i in range(n)}\r\n\r\n    def make_set(self, v):\r\n        self.parent[v] = v\r\n        self.rank[v] = 1\r\n\r\n    def find(self, x):\r\n        if self.parent[x] != x:\r\n            self.parent[x] = self.find(self.parent[x])\r\n        return self.parent[x]\r\n\r\n    def union_set(self, u, v):\r\n        u = self.find(u)\r\n        v = self.find(v)\r\n        if u != v:\r\n            if self.rank[u] < self.rank[v]:\r\n                u, v = v, u\r\n            self.parent[v] = u\r\n            if self.rank[u] == self.rank[v]:\r\n                self.rank[u] += 1\r\n\r\n\r\nclass Solution:\r\n    def countComponents(self, nums, threshold):\r\n        dsu = DSU(threshold + 1)\r\n\r\n        for num in nums:\r\n            for j in range(num, threshold + 1, num):\r\n                dsu.union_set(num, j)\r\n\r\n        unique_parents = set()\r\n        for num in nums:\r\n            if num > threshold:\r\n                unique_parents.add(num)\r\n            else:\r\n                unique_parents.add(dsu.find(num))\r\n\r\n        return len(unique_parents)",
+    "problemId": 3378,
+    "title": "Count Connected Components in LCM Graph",
+    "problemUrl": "https://leetcode.com/problems/count-connected-components-in-lcm-graph/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3378.Count Connected Components in LCM Graph/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3378.Count Connected Components in LCM Graph/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3378.Count Connected Components in LCM Graph/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3378.Count Connected Components in LCM Graph/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3378.Count Connected Components in LCM Graph/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3378.Count Connected Components in LCM Graph/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3378.Count Connected Components in LCM Graph/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3378.Count Connected Components in LCM Graph/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3378.Count Connected Components in LCM Graph/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "the-number-of-full-rounds-you-have-played",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfRounds(self, loginTime: str, logoutTime: str) -> int:\r\n        def f(s: str) -> int:\r\n            return int(s[:2]) * 60 + int(s[3:])\r\n\r\n        a, b = f(loginTime), f(logoutTime)\r\n        if a > b:\r\n            b += 1440\r\n        a, b = (a + 14) // 15, b // 15\r\n        return max(0, b - a)",
+    "problemId": 1904,
+    "title": "The Number of Full Rounds You Have Played",
+    "problemUrl": "https://leetcode.com/problems/the-number-of-full-rounds-you-have-played/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1904.The Number of Full Rounds You Have Played/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1904.The Number of Full Rounds You Have Played/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1904.The Number of Full Rounds You Have Played/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1904.The Number of Full Rounds You Have Played/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1904.The Number of Full Rounds You Have Played/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1904.The Number of Full Rounds You Have Played/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

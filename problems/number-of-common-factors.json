@@ -1,0 +1,63 @@
+{
+    "problemName": "number-of-common-factors",
+    "language": "python3",
+    "code": "class Solution:\r\n    def commonFactors(self, a: int, b: int) -> int:\r\n        g = gcd(a, b)\r\n        return sum(g % x == 0 for x in range(1, g + 1))",
+    "problemId": 2427,
+    "title": "Number of Common Factors",
+    "problemUrl": "https://leetcode.com/problems/number-of-common-factors/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2427.Number of Common Factors/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2427.Number of Common Factors/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2427.Number of Common Factors/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2427.Number of Common Factors/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2427.Number of Common Factors/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2427.Number of Common Factors/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2427.Number of Common Factors/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2427.Number of Common Factors/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2427.Number of Common Factors/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2427.Number of Common Factors/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2427.Number of Common Factors/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

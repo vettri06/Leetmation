@@ -1,0 +1,38 @@
+{
+    "problemName": "smallest-subarray-to-sort-in-every-sliding-window",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSubarraySort(self, nums: List[int], k: int) -> List[int]:\r\n        def f(i: int, j: int) -> int:\r\n            mi, mx = inf, -inf\r\n            l = r = -1\r\n            for k in range(i, j + 1):\r\n                if mx > nums[k]:\r\n                    r = k\r\n                else:\r\n                    mx = nums[k]\r\n                p = j - k + i\r\n                if mi < nums[p]:\r\n                    l = p\r\n                else:\r\n                    mi = nums[p]\r\n            return 0 if r == -1 else r - l + 1\r\n\r\n        n = len(nums)\r\n        return [f(i, i + k - 1) for i in range(n - k + 1)]",
+    "problemId": 3555,
+    "title": "Smallest Subarray to Sort in Every Sliding Window",
+    "problemUrl": "https://leetcode.com/problems/smallest-subarray-to-sort-in-every-sliding-window/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3555.Smallest Subarray to Sort in Every Sliding Window/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3555.Smallest Subarray to Sort in Every Sliding Window/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3555.Smallest Subarray to Sort in Every Sliding Window/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3555.Smallest Subarray to Sort in Every Sliding Window/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3555.Smallest Subarray to Sort in Every Sliding Window/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3555.Smallest Subarray to Sort in Every Sliding Window/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

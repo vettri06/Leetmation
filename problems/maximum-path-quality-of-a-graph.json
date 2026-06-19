@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-path-quality-of-a-graph",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximalPathQuality(\r\n        self, values: List[int], edges: List[List[int]], maxTime: int\r\n    ) -> int:\r\n        def dfs(u: int, cost: int, value: int):\r\n            if u == 0:\r\n                nonlocal ans\r\n                ans = max(ans, value)\r\n            for v, t in g[u]:\r\n                if cost + t <= maxTime:\r\n                    if vis[v]:\r\n                        dfs(v, cost + t, value)\r\n                    else:\r\n                        vis[v] = True\r\n                        dfs(v, cost + t, value + values[v])\r\n                        vis[v] = False\r\n\r\n        n = len(values)\r\n        g = [[] for _ in range(n)]\r\n        for u, v, t in edges:\r\n            g[u].append((v, t))\r\n            g[v].append((u, t))\r\n        vis = [False] * n\r\n        vis[0] = True\r\n        ans = 0\r\n        dfs(0, 0, values[0])\r\n        return ans",
+    "problemId": 2065,
+    "title": "Maximum Path Quality of a Graph",
+    "problemUrl": "https://leetcode.com/problems/maximum-path-quality-of-a-graph/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2065.Maximum Path Quality of a Graph/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2065.Maximum Path Quality of a Graph/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2065.Maximum Path Quality of a Graph/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2065.Maximum Path Quality of a Graph/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2065.Maximum Path Quality of a Graph/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2065.Maximum Path Quality of a Graph/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

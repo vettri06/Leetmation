@@ -1,0 +1,48 @@
+{
+    "problemName": "merge-triplets-to-form-target-triplet",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mergeTriplets(self, triplets: List[List[int]], target: List[int]) -> bool:\r\n        x, y, z = target\r\n        d = e = f = 0\r\n        for a, b, c in triplets:\r\n            if a <= x and b <= y and c <= z:\r\n                d = max(d, a)\r\n                e = max(e, b)\r\n                f = max(f, c)\r\n        return [d, e, f] == target",
+    "problemId": 1899,
+    "title": "Merge Triplets to Form Target Triplet",
+    "problemUrl": "https://leetcode.com/problems/merge-triplets-to-form-target-triplet/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1899.Merge Triplets to Form Target Triplet/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1899.Merge Triplets to Form Target Triplet/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1899.Merge Triplets to Form Target Triplet/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1899.Merge Triplets to Form Target Triplet/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1899.Merge Triplets to Form Target Triplet/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1899.Merge Triplets to Form Target Triplet/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1899.Merge Triplets to Form Target Triplet/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "scala",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1899.Merge Triplets to Form Target Triplet/Solution.scala",
+            "sourceFile": "Solution.scala"
+        }
+    ]
+}

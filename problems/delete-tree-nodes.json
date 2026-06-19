@@ -1,0 +1,33 @@
+{
+    "problemName": "delete-tree-nodes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def deleteTreeNodes(self, nodes: int, parent: List[int], value: List[int]) -> int:\r\n        def dfs(i):\r\n            s, m = value[i], 1\r\n            for j in g[i]:\r\n                t, n = dfs(j)\r\n                s += t\r\n                m += n\r\n            if s == 0:\r\n                m = 0\r\n            return (s, m)\r\n\r\n        g = defaultdict(list)\r\n        for i in range(1, nodes):\r\n            g[parent[i]].append(i)\r\n        return dfs(0)[1]",
+    "problemId": 1273,
+    "title": "Delete Tree Nodes",
+    "problemUrl": "https://leetcode.com/problems/delete-tree-nodes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1273.Delete Tree Nodes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1273.Delete Tree Nodes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1273.Delete Tree Nodes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1273.Delete Tree Nodes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1273.Delete Tree Nodes/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "unique-binary-search-trees-ii",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def generateTrees(self, n: int) -> List[Optional[TreeNode]]:\r\n        def dfs(i: int, j: int) -> List[Optional[TreeNode]]:\r\n            if i > j:\r\n                return [None]\r\n            ans = []\r\n            for v in range(i, j + 1):\r\n                left = dfs(i, v - 1)\r\n                right = dfs(v + 1, j)\r\n                for l in left:\r\n                    for r in right:\r\n                        ans.append(TreeNode(v, l, r))\r\n            return ans\r\n\r\n        return dfs(1, n)",
+    "problemId": 95,
+    "title": "Unique Binary Search Trees II",
+    "problemUrl": "https://leetcode.com/problems/unique-binary-search-trees-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0095.Unique Binary Search Trees II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0095.Unique Binary Search Trees II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0095.Unique Binary Search Trees II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0095.Unique Binary Search Trees II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0095.Unique Binary Search Trees II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0095.Unique Binary Search Trees II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0095.Unique Binary Search Trees II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

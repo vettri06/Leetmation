@@ -1,0 +1,43 @@
+{
+    "problemName": "spiral-matrix-iii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def spiralMatrixIII(\r\n        self, rows: int, cols: int, rStart: int, cStart: int\r\n    ) -> List[List[int]]:\r\n        ans = [[rStart, cStart]]\r\n        if rows * cols == 1:\r\n            return ans\r\n        k = 1\r\n        while True:\r\n            for dr, dc, dk in [[0, 1, k], [1, 0, k], [0, -1, k + 1], [-1, 0, k + 1]]:\r\n                for _ in range(dk):\r\n                    rStart += dr\r\n                    cStart += dc\r\n                    if 0 <= rStart < rows and 0 <= cStart < cols:\r\n                        ans.append([rStart, cStart])\r\n                        if len(ans) == rows * cols:\r\n                            return ans\r\n            k += 2",
+    "problemId": 885,
+    "title": "Spiral Matrix III",
+    "problemUrl": "https://leetcode.com/problems/spiral-matrix-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0885.Spiral Matrix III/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0885.Spiral Matrix III/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0885.Spiral Matrix III/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0885.Spiral Matrix III/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0885.Spiral Matrix III/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0885.Spiral Matrix III/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0885.Spiral Matrix III/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

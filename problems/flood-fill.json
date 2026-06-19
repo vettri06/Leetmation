@@ -1,0 +1,73 @@
+{
+    "problemName": "flood-fill",
+    "language": "python3",
+    "code": "class Solution:\r\n    def floodFill(\r\n        self, image: List[List[int]], sr: int, sc: int, color: int\r\n    ) -> List[List[int]]:\r\n        def dfs(i: int, j: int):\r\n            image[i][j] = color\r\n            for a, b in pairwise(dirs):\r\n                x, y = i + a, j + b\r\n                if 0 <= x < len(image) and 0 <= y < len(image[0]) and image[x][y] == oc:\r\n                    dfs(x, y)\r\n\r\n        oc = image[sr][sc]\r\n        if oc != color:\r\n            dirs = (-1, 0, 1, 0, -1)\r\n            dfs(sr, sc)\r\n        return image",
+    "problemId": 733,
+    "title": "Flood Fill",
+    "problemUrl": "https://leetcode.com/problems/flood-fill/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0733.Flood Fill/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0733.Flood Fill/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0733.Flood Fill/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0733.Flood Fill/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0733.Flood Fill/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0733.Flood Fill/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0733.Flood Fill/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0733.Flood Fill/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0733.Flood Fill/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0733.Flood Fill/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0733.Flood Fill/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0733.Flood Fill/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0733.Flood Fill/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

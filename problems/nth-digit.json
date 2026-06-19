@@ -1,0 +1,43 @@
+{
+    "problemName": "nth-digit",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findNthDigit(self, n: int) -> int:\r\n        k, cnt = 1, 9\r\n        while k * cnt < n:\r\n            n -= k * cnt\r\n            k += 1\r\n            cnt *= 10\r\n        num = 10 ** (k - 1) + (n - 1) // k\r\n        idx = (n - 1) % k\r\n        return int(str(num)[idx])",
+    "problemId": 400,
+    "title": "Nth Digit",
+    "problemUrl": "https://leetcode.com/problems/nth-digit/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0400.Nth Digit/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0400.Nth Digit/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0400.Nth Digit/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0400.Nth Digit/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0400.Nth Digit/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0400.Nth Digit/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0400.Nth Digit/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

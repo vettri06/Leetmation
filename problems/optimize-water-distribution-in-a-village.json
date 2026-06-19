@@ -1,0 +1,68 @@
+{
+    "problemName": "optimize-water-distribution-in-a-village",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCostToSupplyWater(\r\n        self, n: int, wells: List[int], pipes: List[List[int]]\r\n    ) -> int:\r\n        def find(x: int) -> int:\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        for i, w in enumerate(wells, 1):\r\n            pipes.append([0, i, w])\r\n        pipes.sort(key=lambda x: x[2])\r\n        p = list(range(n + 1))\r\n        ans = 0\r\n        for a, b, c in pipes:\r\n            pa, pb = find(a), find(b)\r\n            if pa != pb:\r\n                p[pa] = pb\r\n                n -= 1\r\n                ans += c\r\n                if n == 0:\r\n                    return ans",
+    "problemId": 1168,
+    "title": "Optimize Water Distribution in a Village",
+    "problemUrl": "https://leetcode.com/problems/optimize-water-distribution-in-a-village/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1168.Optimize Water Distribution in a Village/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1168.Optimize Water Distribution in a Village/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1168.Optimize Water Distribution in a Village/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1168.Optimize Water Distribution in a Village/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1168.Optimize Water Distribution in a Village/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1168.Optimize Water Distribution in a Village/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1168.Optimize Water Distribution in a Village/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1168.Optimize Water Distribution in a Village/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1168.Optimize Water Distribution in a Village/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1168.Optimize Water Distribution in a Village/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1168.Optimize Water Distribution in a Village/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1168.Optimize Water Distribution in a Village/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

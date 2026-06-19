@@ -1,0 +1,53 @@
+{
+    "problemName": "intersection-of-three-sorted-arrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def arraysIntersection(\r\n        self, arr1: List[int], arr2: List[int], arr3: List[int]\r\n    ) -> List[int]:\r\n        cnt = Counter(arr1 + arr2 + arr3)\r\n        return [x for x in arr1 if cnt[x] == 3]",
+    "problemId": 1213,
+    "title": "Intersection of Three Sorted Arrays",
+    "problemUrl": "https://leetcode.com/problems/intersection-of-three-sorted-arrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1213.Intersection of Three Sorted Arrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1213.Intersection of Three Sorted Arrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1213.Intersection of Three Sorted Arrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1213.Intersection of Three Sorted Arrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1213.Intersection of Three Sorted Arrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1213.Intersection of Three Sorted Arrays/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1213.Intersection of Three Sorted Arrays/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1213.Intersection of Three Sorted Arrays/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1213.Intersection of Three Sorted Arrays/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

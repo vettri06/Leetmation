@@ -1,0 +1,38 @@
+{
+    "problemName": "guess-the-majority-in-a-hidden-array",
+    "language": "python3",
+    "code": "# \"\"\"\r\n# This is the ArrayReader's API interface.\r\n# You should not implement it, or speculate about its implementation\r\n# \"\"\"\r\n# class ArrayReader(object):\r\n# \t # Compares 4 different elements in the array\r\n# \t # return 4 if the values of the 4 elements are the same (0 or 1).\r\n# \t # return 2 if three elements have a value equal to 0 and one element has value equal to 1 or vice versa.\r\n# \t # return 0 : if two element have a value equal to 0 and two elements have a value equal to 1.\r\n#    def query(self, a: int, b: int, c: int, d: int) -> int:\r\n#\r\n# \t # Returns the length of the array\r\n#    def length(self) -> int:\r\n#\r\n\r\n\r\nclass Solution:\r\n    def guessMajority(self, reader: \"ArrayReader\") -> int:\r\n        n = reader.length()\r\n        x = reader.query(0, 1, 2, 3)\r\n        a, b = 1, 0\r\n        k = 0\r\n        for i in range(4, n):\r\n            if reader.query(0, 1, 2, i) == x:\r\n                a += 1\r\n            else:\r\n                b += 1\r\n                k = i\r\n\r\n        y = reader.query(0, 1, 2, 4)\r\n        if reader.query(1, 2, 3, 4) == y:\r\n            a += 1\r\n        else:\r\n            b += 1\r\n            k = 0\r\n        if reader.query(0, 2, 3, 4) == y:\r\n            a += 1\r\n        else:\r\n            b += 1\r\n            k = 1\r\n        if reader.query(0, 1, 3, 4) == y:\r\n            a += 1\r\n        else:\r\n            b += 1\r\n            k = 2\r\n\r\n        if a == b:\r\n            return -1\r\n        return 3 if a > b else k",
+    "problemId": 1538,
+    "title": "Guess the Majority in a Hidden Array",
+    "problemUrl": "https://leetcode.com/problems/guess-the-majority-in-a-hidden-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1538.Guess the Majority in a Hidden Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1538.Guess the Majority in a Hidden Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1538.Guess the Majority in a Hidden Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1538.Guess the Majority in a Hidden Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1538.Guess the Majority in a Hidden Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1538.Guess the Majority in a Hidden Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "largest-element-in-an-array-after-merge-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxArrayValue(self, nums: List[int]) -> int:\r\n        for i in range(len(nums) - 2, -1, -1):\r\n            if nums[i] <= nums[i + 1]:\r\n                nums[i] += nums[i + 1]\r\n        return max(nums)",
+    "problemId": 2789,
+    "title": "Largest Element in an Array after Merge Operations",
+    "problemUrl": "https://leetcode.com/problems/largest-element-in-an-array-after-merge-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2789.Largest Element in an Array after Merge Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2789.Largest Element in an Array after Merge Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2789.Largest Element in an Array after Merge Operations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2789.Largest Element in an Array after Merge Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2789.Largest Element in an Array after Merge Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2789.Largest Element in an Array after Merge Operations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

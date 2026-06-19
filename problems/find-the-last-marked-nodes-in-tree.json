@@ -1,0 +1,43 @@
+{
+    "problemName": "find-the-last-marked-nodes-in-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lastMarkedNodes(self, edges: List[List[int]]) -> List[int]:\r\n        def dfs(i: int, fa: int, dist: List[int]):\r\n            for j in g[i]:\r\n                if j != fa:\r\n                    dist[j] = dist[i] + 1\r\n                    dfs(j, i, dist)\r\n\r\n        n = len(edges) + 1\r\n        g = [[] for _ in range(n)]\r\n        for u, v in edges:\r\n            g[u].append(v)\r\n            g[v].append(u)\r\n\r\n        dist1 = [-1] * n\r\n        dist1[0] = 0\r\n        dfs(0, -1, dist1)\r\n        a = dist1.index(max(dist1))\r\n\r\n        dist2 = [-1] * n\r\n        dist2[a] = 0\r\n        dfs(a, -1, dist2)\r\n        b = dist2.index(max(dist2))\r\n\r\n        dist3 = [-1] * n\r\n        dist3[b] = 0\r\n        dfs(b, -1, dist3)\r\n\r\n        return [a if x > y else b for x, y in zip(dist2, dist3)]",
+    "problemId": 3313,
+    "title": "Find the Last Marked Nodes in Tree",
+    "problemUrl": "https://leetcode.com/problems/find-the-last-marked-nodes-in-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3313.Find the Last Marked Nodes in Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3313.Find the Last Marked Nodes in Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3313.Find the Last Marked Nodes in Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3313.Find the Last Marked Nodes in Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3313.Find the Last Marked Nodes in Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3313.Find the Last Marked Nodes in Tree/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3313.Find the Last Marked Nodes in Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

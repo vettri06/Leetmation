@@ -1,0 +1,33 @@
+{
+    "problemName": "choose-edges-to-maximize-score-in-a-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxScore(self, edges: List[List[int]]) -> int:\r\n        def dfs(i):\r\n            a = b = t = 0\r\n            for j, w in g[i]:\r\n                x, y = dfs(j)\r\n                a += y\r\n                b += y\r\n                t = max(t, x - y + w)\r\n            b += t\r\n            return a, b\r\n\r\n        g = defaultdict(list)\r\n        for i, (p, w) in enumerate(edges[1:], 1):\r\n            g[p].append((i, w))\r\n        return dfs(0)[1]",
+    "problemId": 2378,
+    "title": "Choose Edges to Maximize Score in a Tree",
+    "problemUrl": "https://leetcode.com/problems/choose-edges-to-maximize-score-in-a-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2378.Choose Edges to Maximize Score in a Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2378.Choose Edges to Maximize Score in a Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2378.Choose Edges to Maximize Score in a Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2378.Choose Edges to Maximize Score in a Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2378.Choose Edges to Maximize Score in a Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

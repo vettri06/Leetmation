@@ -1,0 +1,38 @@
+{
+    "problemName": "maximal-network-rank",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximalNetworkRank(self, n: int, roads: List[List[int]]) -> int:\r\n        g = defaultdict(set)\r\n        for a, b in roads:\r\n            g[a].add(b)\r\n            g[b].add(a)\r\n        ans = 0\r\n        for a in range(n):\r\n            for b in range(a + 1, n):\r\n                if (t := len(g[a]) + len(g[b]) - (a in g[b])) > ans:\r\n                    ans = t\r\n        return ans",
+    "problemId": 1615,
+    "title": "Maximal Network Rank",
+    "problemUrl": "https://leetcode.com/problems/maximal-network-rank/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1615.Maximal Network Rank/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1615.Maximal Network Rank/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1615.Maximal Network Rank/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1615.Maximal Network Rank/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1615.Maximal Network Rank/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1615.Maximal Network Rank/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

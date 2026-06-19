@@ -1,0 +1,53 @@
+{
+    "problemName": "count-substrings-that-differ-by-one-character",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSubstrings(self, s: str, t: str) -> int:\r\n        ans = 0\r\n        m, n = len(s), len(t)\r\n        for i, a in enumerate(s):\r\n            for j, b in enumerate(t):\r\n                if a != b:\r\n                    l = r = 0\r\n                    while i > l and j > l and s[i - l - 1] == t[j - l - 1]:\r\n                        l += 1\r\n                    while (\r\n                        i + r + 1 < m and j + r + 1 < n and s[i + r + 1] == t[j + r + 1]\r\n                    ):\r\n                        r += 1\r\n                    ans += (l + 1) * (r + 1)\r\n        return ans",
+    "problemId": 1638,
+    "title": "Count Substrings That Differ by One Character",
+    "problemUrl": "https://leetcode.com/problems/count-substrings-that-differ-by-one-character/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1638.Count Substrings That Differ by One Character/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1638.Count Substrings That Differ by One Character/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1638.Count Substrings That Differ by One Character/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1638.Count Substrings That Differ by One Character/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1638.Count Substrings That Differ by One Character/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1638.Count Substrings That Differ by One Character/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1638.Count Substrings That Differ by One Character/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1638.Count Substrings That Differ by One Character/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1638.Count Substrings That Differ by One Character/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-days-in-a-month",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfDays(self, year: int, month: int) -> int:\r\n        leap = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\r\n        days = [0, 31, 29 if leap else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n        return days[month]",
+    "problemId": 1118,
+    "title": "Number of Days in a Month",
+    "problemUrl": "https://leetcode.com/problems/number-of-days-in-a-month/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1118.Number of Days in a Month/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1118.Number of Days in a Month/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1118.Number of Days in a Month/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1118.Number of Days in a Month/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1118.Number of Days in a Month/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1118.Number of Days in a Month/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

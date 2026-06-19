@@ -1,0 +1,38 @@
+{
+    "problemName": "max-increase-to-keep-city-skyline",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxIncreaseKeepingSkyline(self, grid: List[List[int]]) -> int:\r\n        row_max = [max(row) for row in grid]\r\n        col_max = [max(col) for col in zip(*grid)]\r\n        return sum(\r\n            min(row_max[i], col_max[j]) - x\r\n            for i, row in enumerate(grid)\r\n            for j, x in enumerate(row)\r\n        )",
+    "problemId": 807,
+    "title": "Max Increase to Keep City Skyline",
+    "problemUrl": "https://leetcode.com/problems/max-increase-to-keep-city-skyline/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0807.Max Increase to Keep City Skyline/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0807.Max Increase to Keep City Skyline/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0807.Max Increase to Keep City Skyline/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0807.Max Increase to Keep City Skyline/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0807.Max Increase to Keep City Skyline/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0807.Max Increase to Keep City Skyline/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

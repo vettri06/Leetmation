@@ -1,0 +1,33 @@
+{
+    "problemName": "the-maze-iii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findShortestWay(\r\n        self, maze: List[List[int]], ball: List[int], hole: List[int]\r\n    ) -> str:\r\n        m, n = len(maze), len(maze[0])\r\n        r, c = ball\r\n        rh, ch = hole\r\n        q = deque([(r, c)])\r\n        dist = [[inf] * n for _ in range(m)]\r\n        dist[r][c] = 0\r\n        path = [[None] * n for _ in range(m)]\r\n        path[r][c] = ''\r\n        while q:\r\n            i, j = q.popleft()\r\n            for a, b, d in [(-1, 0, 'u'), (1, 0, 'd'), (0, -1, 'l'), (0, 1, 'r')]:\r\n                x, y, step = i, j, dist[i][j]\r\n                while (\r\n                    0 <= x + a < m\r\n                    and 0 <= y + b < n\r\n                    and maze[x + a][y + b] == 0\r\n                    and (x != rh or y != ch)\r\n                ):\r\n                    x, y = x + a, y + b\r\n                    step += 1\r\n                if dist[x][y] > step or (\r\n                    dist[x][y] == step and path[i][j] + d < path[x][y]\r\n                ):\r\n                    dist[x][y] = step\r\n                    path[x][y] = path[i][j] + d\r\n                    if x != rh or y != ch:\r\n                        q.append((x, y))\r\n        return path[rh][ch] or 'impossible'",
+    "problemId": 499,
+    "title": "The Maze III",
+    "problemUrl": "https://leetcode.com/problems/the-maze-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0499.The Maze III/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0499.The Maze III/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0499.The Maze III/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0499.The Maze III/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0499.The Maze III/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "problemName": "check-if-two-expression-trees-are-equivalent",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class Node(object):\r\n#     def __init__(self, val=\" \", left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def checkEquivalence(self, root1: 'Node', root2: 'Node') -> bool:\r\n        def dfs(root, v):\r\n            if root is None:\r\n                return\r\n            if root.val != '+':\r\n                cnt[root.val] += v\r\n            dfs(root.left, v)\r\n            dfs(root.right, v)\r\n\r\n        cnt = Counter()\r\n        dfs(root1, 1)\r\n        dfs(root2, -1)\r\n        return all(x == 0 for x in cnt.values())",
+    "problemId": 1612,
+    "title": "Check If Two Expression Trees are Equivalent",
+    "problemUrl": "https://leetcode.com/problems/check-if-two-expression-trees-are-equivalent/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1612.Check If Two Expression Trees are Equivalent/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1612.Check If Two Expression Trees are Equivalent/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1612.Check If Two Expression Trees are Equivalent/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1612.Check If Two Expression Trees are Equivalent/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1612.Check If Two Expression Trees are Equivalent/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1612.Check If Two Expression Trees are Equivalent/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1612.Check If Two Expression Trees are Equivalent/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1612.Check If Two Expression Trees are Equivalent/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1612.Check If Two Expression Trees are Equivalent/Solution2.js",
+            "sourceFile": "Solution2.js"
+        }
+    ]
+}

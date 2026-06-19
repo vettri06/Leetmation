@@ -1,0 +1,38 @@
+{
+    "problemName": "build-a-matrix-with-conditions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def buildMatrix(\r\n        self, k: int, rowConditions: List[List[int]], colConditions: List[List[int]]\r\n    ) -> List[List[int]]:\r\n        def f(cond):\r\n            g = defaultdict(list)\r\n            indeg = [0] * (k + 1)\r\n            for a, b in cond:\r\n                g[a].append(b)\r\n                indeg[b] += 1\r\n            q = deque([i for i, v in enumerate(indeg[1:], 1) if v == 0])\r\n            res = []\r\n            while q:\r\n                for _ in range(len(q)):\r\n                    i = q.popleft()\r\n                    res.append(i)\r\n                    for j in g[i]:\r\n                        indeg[j] -= 1\r\n                        if indeg[j] == 0:\r\n                            q.append(j)\r\n            return None if len(res) != k else res\r\n\r\n        row = f(rowConditions)\r\n        col = f(colConditions)\r\n        if row is None or col is None:\r\n            return []\r\n        ans = [[0] * k for _ in range(k)]\r\n        m = [0] * (k + 1)\r\n        for i, v in enumerate(col):\r\n            m[v] = i\r\n        for i, v in enumerate(row):\r\n            ans[i][m[v]] = v\r\n        return ans",
+    "problemId": 2392,
+    "title": "Build a Matrix With Conditions",
+    "problemUrl": "https://leetcode.com/problems/build-a-matrix-with-conditions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2392.Build a Matrix With Conditions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2392.Build a Matrix With Conditions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2392.Build a Matrix With Conditions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2392.Build a Matrix With Conditions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2392.Build a Matrix With Conditions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2392.Build a Matrix With Conditions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

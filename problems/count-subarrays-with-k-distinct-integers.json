@@ -1,0 +1,38 @@
+{
+    "problemName": "count-subarrays-with-k-distinct-integers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSubarrays(self, nums: list[int], k: int, m: int) -> int:\r\n        def f(lim: int) -> int:\r\n            cnt = Counter()\r\n            t = 0\r\n            ans = l = 0\r\n            for x in nums:\r\n                cnt[x] += 1\r\n                if cnt[x] == m:\r\n                    t += 1\r\n                while len(cnt) >= lim and t >= k:\r\n                    y = nums[l]\r\n                    cnt[y] -= 1\r\n                    if cnt[y] == m - 1:\r\n                        t -= 1\r\n                    if cnt[y] == 0:\r\n                        cnt.pop(y)\r\n                    l += 1\r\n                ans += l\r\n            return ans\r\n\r\n        return f(k) - f(k + 1)",
+    "problemId": 3859,
+    "title": "Count Subarrays With K Distinct Integers",
+    "problemUrl": "https://leetcode.com/problems/count-subarrays-with-k-distinct-integers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3859.Count Subarrays With K Distinct Integers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3859.Count Subarrays With K Distinct Integers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3859.Count Subarrays With K Distinct Integers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3859.Count Subarrays With K Distinct Integers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3859.Count Subarrays With K Distinct Integers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3859.Count Subarrays With K Distinct Integers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

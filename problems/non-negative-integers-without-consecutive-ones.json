@@ -1,0 +1,38 @@
+{
+    "problemName": "non-negative-integers-without-consecutive-ones",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findIntegers(self, n: int) -> int:\r\n        @cache\r\n        def dfs(i: int, pre: int, limit: bool) -> int:\r\n            if i < 0:\r\n                return 1\r\n            up = (n >> i & 1) if limit else 1\r\n            ans = 0\r\n            for j in range(up + 1):\r\n                if pre and j:\r\n                    continue\r\n                ans += dfs(i - 1, j, limit and j == up)\r\n            return ans\r\n\r\n        return dfs(n.bit_length() - 1, 0, True)",
+    "problemId": 600,
+    "title": "Non-negative Integers without Consecutive Ones",
+    "problemUrl": "https://leetcode.com/problems/non-negative-integers-without-consecutive-ones/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0600.Non-negative Integers without Consecutive Ones/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0600.Non-negative Integers without Consecutive Ones/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0600.Non-negative Integers without Consecutive Ones/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0600.Non-negative Integers without Consecutive Ones/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0600.Non-negative Integers without Consecutive Ones/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0600.Non-negative Integers without Consecutive Ones/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "the-number-of-passengers-in-each-bus-i",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    bus_id,\r\n    COUNT(passenger_id) - LAG(COUNT(passenger_id), 1, 0) OVER (\r\n        ORDER BY b.arrival_time\r\n    ) AS passengers_cnt\r\nFROM\r\n    Buses AS b\r\n    LEFT JOIN Passengers AS p ON p.arrival_time <= b.arrival_time\r\nGROUP BY 1\r\nORDER BY 1;",
+    "problemId": 2142,
+    "title": "The Number of Passengers in Each Bus I",
+    "problemUrl": "https://leetcode.com/problems/the-number-of-passengers-in-each-bus-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2142.The Number of Passengers in Each Bus I/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2142.The Number of Passengers in Each Bus I/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

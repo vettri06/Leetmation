@@ -1,0 +1,48 @@
+{
+    "problemName": "sort-array-by-parity",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sortArrayByParity(self, nums: List[int]) -> List[int]:\r\n        i, j = 0, len(nums) - 1\r\n        while i < j:\r\n            if nums[i] % 2 == 0:\r\n                i += 1\r\n            elif nums[j] % 2 == 1:\r\n                j -= 1\r\n            else:\r\n                nums[i], nums[j] = nums[j], nums[i]\r\n                i, j = i + 1, j - 1\r\n        return nums",
+    "problemId": 905,
+    "title": "Sort Array By Parity",
+    "problemUrl": "https://leetcode.com/problems/sort-array-by-parity/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0905.Sort Array By Parity/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0905.Sort Array By Parity/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0905.Sort Array By Parity/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0905.Sort Array By Parity/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0905.Sort Array By Parity/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0905.Sort Array By Parity/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0905.Sort Array By Parity/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0905.Sort Array By Parity/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

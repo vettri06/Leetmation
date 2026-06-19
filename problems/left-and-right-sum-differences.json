@@ -1,0 +1,48 @@
+{
+    "problemName": "left-and-right-sum-differences",
+    "language": "python3",
+    "code": "class Solution:\r\n    def leftRightDifference(self, nums: List[int]) -> List[int]:\r\n        l, r = 0, sum(nums)\r\n        ans = []\r\n        for x in nums:\r\n            r -= x\r\n            ans.append(abs(l - r))\r\n            l += x\r\n        return ans",
+    "problemId": 2574,
+    "title": "Left and Right Sum Differences",
+    "problemUrl": "https://leetcode.com/problems/left-and-right-sum-differences/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2574.Left and Right Sum Differences/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2574.Left and Right Sum Differences/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2574.Left and Right Sum Differences/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2574.Left and Right Sum Differences/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2574.Left and Right Sum Differences/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2574.Left and Right Sum Differences/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2574.Left and Right Sum Differences/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2574.Left and Right Sum Differences/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "problemName": "max-chunks-to-make-sorted-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxChunksToSorted(self, arr: List[int]) -> int:\r\n        stk = []\r\n        for v in arr:\r\n            if not stk or v >= stk[-1]:\r\n                stk.append(v)\r\n            else:\r\n                mx = stk.pop()\r\n                while stk and stk[-1] > v:\r\n                    stk.pop()\r\n                stk.append(mx)\r\n        return len(stk)",
+    "problemId": 768,
+    "title": "Max Chunks To Make Sorted II",
+    "problemUrl": "https://leetcode.com/problems/max-chunks-to-make-sorted-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0768.Max Chunks To Make Sorted II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0768.Max Chunks To Make Sorted II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0768.Max Chunks To Make Sorted II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0768.Max Chunks To Make Sorted II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0768.Max Chunks To Make Sorted II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0768.Max Chunks To Make Sorted II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0768.Max Chunks To Make Sorted II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0768.Max Chunks To Make Sorted II/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0768.Max Chunks To Make Sorted II/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        }
+    ]
+}

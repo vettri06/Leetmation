@@ -1,0 +1,23 @@
+{
+    "problemName": "zuma-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMinStep(self, board: str, hand: str) -> int:\r\n        def remove(s):\r\n            while len(s):\r\n                next = re.sub(r'B{3,}|G{3,}|R{3,}|W{3,}|Y{3,}', '', s)\r\n                if len(next) == len(s):\r\n                    break\r\n                s = next\r\n            return s\r\n\r\n        visited = set()\r\n        q = deque([(board, hand)])\r\n        while q:\r\n            state, balls = q.popleft()\r\n            if not state:\r\n                return len(hand) - len(balls)\r\n            for ball in set(balls):\r\n                b = balls.replace(ball, '', 1)\r\n                for i in range(1, len(state) + 1):\r\n                    s = state[:i] + ball + state[i:]\r\n                    s = remove(s)\r\n                    if s not in visited:\r\n                        visited.add(s)\r\n                        q.append((s, b))\r\n        return -1",
+    "problemId": 488,
+    "title": "Zuma Game",
+    "problemUrl": "https://leetcode.com/problems/zuma-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0488.Zuma Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0488.Zuma Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0488.Zuma Game/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

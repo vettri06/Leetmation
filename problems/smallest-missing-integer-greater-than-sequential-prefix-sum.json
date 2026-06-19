@@ -1,0 +1,38 @@
+{
+    "problemName": "smallest-missing-integer-greater-than-sequential-prefix-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def missingInteger(self, nums: List[int]) -> int:\r\n        s, j = nums[0], 1\r\n        while j < len(nums) and nums[j] == nums[j - 1] + 1:\r\n            s += nums[j]\r\n            j += 1\r\n        vis = set(nums)\r\n        for x in count(s):\r\n            if x not in vis:\r\n                return x",
+    "problemId": 2996,
+    "title": "Smallest Missing Integer Greater Than Sequential Prefix Sum",
+    "problemUrl": "https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2996.Smallest Missing Integer Greater Than Sequential Prefix Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2996.Smallest Missing Integer Greater Than Sequential Prefix Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2996.Smallest Missing Integer Greater Than Sequential Prefix Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2996.Smallest Missing Integer Greater Than Sequential Prefix Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2996.Smallest Missing Integer Greater Than Sequential Prefix Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2996.Smallest Missing Integer Greater Than Sequential Prefix Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

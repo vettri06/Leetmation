@@ -1,0 +1,33 @@
+{
+    "problemName": "expressive-words",
+    "language": "python3",
+    "code": "class Solution:\r\n    def expressiveWords(self, s: str, words: List[str]) -> int:\r\n        def check(s, t):\r\n            m, n = len(s), len(t)\r\n            if n > m:\r\n                return False\r\n            i = j = 0\r\n            while i < m and j < n:\r\n                if s[i] != t[j]:\r\n                    return False\r\n                k = i\r\n                while k < m and s[k] == s[i]:\r\n                    k += 1\r\n                c1 = k - i\r\n                i, k = k, j\r\n                while k < n and t[k] == t[j]:\r\n                    k += 1\r\n                c2 = k - j\r\n                j = k\r\n                if c1 < c2 or (c1 < 3 and c1 != c2):\r\n                    return False\r\n            return i == m and j == n\r\n\r\n        return sum(check(s, t) for t in words)",
+    "problemId": 809,
+    "title": "Expressive Words",
+    "problemUrl": "https://leetcode.com/problems/expressive-words/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0809.Expressive Words/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0809.Expressive Words/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0809.Expressive Words/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0809.Expressive Words/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0809.Expressive Words/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

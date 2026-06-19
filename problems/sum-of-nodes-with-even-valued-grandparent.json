@@ -1,0 +1,38 @@
+{
+    "problemName": "sum-of-nodes-with-even-valued-grandparent",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def sumEvenGrandparent(self, root: TreeNode) -> int:\r\n        def dfs(root: TreeNode, x: int) -> int:\r\n            if root is None:\r\n                return 0\r\n            ans = dfs(root.left, root.val) + dfs(root.right, root.val)\r\n            if x % 2 == 0:\r\n                if root.left:\r\n                    ans += root.left.val\r\n                if root.right:\r\n                    ans += root.right.val\r\n            return ans\r\n\r\n        return dfs(root, 1)",
+    "problemId": 1315,
+    "title": "Sum of Nodes with Even-Valued Grandparent",
+    "problemUrl": "https://leetcode.com/problems/sum-of-nodes-with-even-valued-grandparent/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1315.Sum of Nodes with Even-Valued Grandparent/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1315.Sum of Nodes with Even-Valued Grandparent/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1315.Sum of Nodes with Even-Valued Grandparent/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1315.Sum of Nodes with Even-Valued Grandparent/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1315.Sum of Nodes with Even-Valued Grandparent/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1315.Sum of Nodes with Even-Valued Grandparent/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

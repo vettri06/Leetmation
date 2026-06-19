@@ -1,0 +1,38 @@
+{
+    "problemName": "distinct-echo-substrings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distinctEchoSubstrings(self, text: str) -> int:\r\n        def get(l, r):\r\n            return (h[r] - h[l - 1] * p[r - l + 1]) % mod\r\n\r\n        n = len(text)\r\n        base = 131\r\n        mod = int(1e9) + 7\r\n        h = [0] * (n + 10)\r\n        p = [1] * (n + 10)\r\n        for i, c in enumerate(text):\r\n            t = ord(c) - ord('a') + 1\r\n            h[i + 1] = (h[i] * base) % mod + t\r\n            p[i + 1] = (p[i] * base) % mod\r\n        vis = set()\r\n        for i in range(n - 1):\r\n            for j in range(i + 1, n, 2):\r\n                k = (i + j) >> 1\r\n                a = get(i + 1, k + 1)\r\n                b = get(k + 2, j + 1)\r\n                if a == b:\r\n                    vis.add(a)\r\n        return len(vis)",
+    "problemId": 1316,
+    "title": "Distinct Echo Substrings",
+    "problemUrl": "https://leetcode.com/problems/distinct-echo-substrings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1316.Distinct Echo Substrings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1316.Distinct Echo Substrings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1316.Distinct Echo Substrings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1316.Distinct Echo Substrings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1316.Distinct Echo Substrings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1316.Distinct Echo Substrings/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

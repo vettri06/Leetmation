@@ -1,0 +1,43 @@
+{
+    "problemName": "break-a-palindrome",
+    "language": "python3",
+    "code": "class Solution:\r\n    def breakPalindrome(self, palindrome: str) -> str:\r\n        n = len(palindrome)\r\n        if n == 1:\r\n            return \"\"\r\n        s = list(palindrome)\r\n        i = 0\r\n        while i < n // 2 and s[i] == \"a\":\r\n            i += 1\r\n        if i == n // 2:\r\n            s[-1] = \"b\"\r\n        else:\r\n            s[i] = \"a\"\r\n        return \"\".join(s)",
+    "problemId": 1328,
+    "title": "Break a Palindrome",
+    "problemUrl": "https://leetcode.com/problems/break-a-palindrome/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1328.Break a Palindrome/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1328.Break a Palindrome/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1328.Break a Palindrome/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1328.Break a Palindrome/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1328.Break a Palindrome/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1328.Break a Palindrome/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1328.Break a Palindrome/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

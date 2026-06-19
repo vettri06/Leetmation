@@ -1,0 +1,18 @@
+{
+    "problemName": "all-the-matches-of-the-league",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT t1.team_name AS home_team, t2.team_name AS away_team\r\nFROM\r\n    Teams AS t1\r\n    JOIN Teams AS t2\r\nWHERE t1.team_name != t2.team_name;",
+    "problemId": 2339,
+    "title": "All the Matches of the League",
+    "problemUrl": "https://leetcode.com/problems/all-the-matches-of-the-league/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2339.All the Matches of the League/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2339.All the Matches of the League/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

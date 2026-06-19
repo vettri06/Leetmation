@@ -1,0 +1,28 @@
+{
+    "problemName": "rising-temperature",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef rising_temperature(weather: pd.DataFrame) -> pd.DataFrame:\r\n    weather.sort_values(by=\"recordDate\", inplace=True)\r\n    return weather[\r\n        (weather.temperature.diff() > 0) & (weather.recordDate.diff().dt.days == 1)\r\n    ][[\"id\"]]",
+    "problemId": 197,
+    "title": "Rising Temperature",
+    "problemUrl": "https://leetcode.com/problems/rising-temperature/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0197.Rising Temperature/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0197.Rising Temperature/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0197.Rising Temperature/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0197.Rising Temperature/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

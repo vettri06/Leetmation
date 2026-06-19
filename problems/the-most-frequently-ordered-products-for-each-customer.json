@@ -1,0 +1,18 @@
+{
+    "problemName": "the-most-frequently-ordered-products-for-each-customer",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            customer_id,\r\n            product_id,\r\n            RANK() OVER (\r\n                PARTITION BY customer_id\r\n                ORDER BY COUNT(1) DESC\r\n            ) AS rk\r\n        FROM Orders\r\n        GROUP BY 1, 2\r\n    )\r\nSELECT customer_id, product_id, product_name\r\nFROM\r\n    T\r\n    JOIN Products USING (product_id)\r\nWHERE rk = 1;",
+    "problemId": 1596,
+    "title": "The Most Frequently Ordered Products for Each Customer",
+    "problemUrl": "https://leetcode.com/problems/the-most-frequently-ordered-products-for-each-customer/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1596.The Most Frequently Ordered Products for Each Customer/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1596.The Most Frequently Ordered Products for Each Customer/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

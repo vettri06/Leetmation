@@ -1,0 +1,33 @@
+{
+    "problemName": "shortest-path-to-get-all-keys",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shortestPathAllKeys(self, grid: List[str]) -> int:\r\n        m, n = len(grid), len(grid[0])\r\n        # 找起点 (si, sj)\r\n        si, sj = next((i, j) for i in range(m) for j in range(n) if grid[i][j] == '@')\r\n        # 统计钥匙数量\r\n        k = sum(v.islower() for row in grid for v in row)\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        q = deque([(si, sj, 0)])\r\n        vis = {(si, sj, 0)}\r\n        ans = 0\r\n        while q:\r\n            for _ in range(len(q)):\r\n                i, j, state = q.popleft()\r\n                # 找到所有钥匙，返回当前步数\r\n                if state == (1 << k) - 1:\r\n                    return ans\r\n\r\n                # 往四个方向搜索\r\n                for a, b in pairwise(dirs):\r\n                    x, y = i + a, j + b\r\n                    nxt = state\r\n                    # 在边界范围内\r\n                    if 0 <= x < m and 0 <= y < n:\r\n                        c = grid[x][y]\r\n                        # 是墙，或者是锁，但此时没有对应的钥匙，无法通过\r\n                        if (\r\n                            c == '#'\r\n                            or c.isupper()\r\n                            and (state & (1 << (ord(c) - ord('A')))) == 0\r\n                        ):\r\n                            continue\r\n                        # 是钥匙\r\n                        if c.islower():\r\n                            # 更新状态\r\n                            nxt |= 1 << (ord(c) - ord('a'))\r\n                        # 此状态未访问过，入队\r\n                        if (x, y, nxt) not in vis:\r\n                            vis.add((x, y, nxt))\r\n                            q.append((x, y, nxt))\r\n            # 步数加一\r\n            ans += 1\r\n        return -1",
+    "problemId": 864,
+    "title": "Shortest Path to Get All Keys",
+    "problemUrl": "https://leetcode.com/problems/shortest-path-to-get-all-keys/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0864.Shortest Path to Get All Keys/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0864.Shortest Path to Get All Keys/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0864.Shortest Path to Get All Keys/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0864.Shortest Path to Get All Keys/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0864.Shortest Path to Get All Keys/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

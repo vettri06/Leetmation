@@ -1,0 +1,33 @@
+{
+    "problemName": "shortest-word-distance-ii",
+    "language": "python3",
+    "code": "class WordDistance:\r\n    def __init__(self, wordsDict: List[str]):\r\n        self.d = defaultdict(list)\r\n        for i, w in enumerate(wordsDict):\r\n            self.d[w].append(i)\r\n\r\n    def shortest(self, word1: str, word2: str) -> int:\r\n        a, b = self.d[word1], self.d[word2]\r\n        ans = inf\r\n        i = j = 0\r\n        while i < len(a) and j < len(b):\r\n            ans = min(ans, abs(a[i] - b[j]))\r\n            if a[i] <= b[j]:\r\n                i += 1\r\n            else:\r\n                j += 1\r\n        return ans\r\n\r\n\r\n# Your WordDistance object will be instantiated and called as such:\r\n# obj = WordDistance(wordsDict)\r\n# param_1 = obj.shortest(word1,word2)",
+    "problemId": 244,
+    "title": "Shortest Word Distance II",
+    "problemUrl": "https://leetcode.com/problems/shortest-word-distance-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0244.Shortest Word Distance II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0244.Shortest Word Distance II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0244.Shortest Word Distance II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0244.Shortest Word Distance II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0244.Shortest Word Distance II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

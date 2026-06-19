@@ -1,0 +1,38 @@
+{
+    "problemName": "painting-a-grid-with-three-different-colors",
+    "language": "python3",
+    "code": "class Solution:\r\n    def colorTheGrid(self, m: int, n: int) -> int:\r\n        def f1(x: int) -> bool:\r\n            last = -1\r\n            for _ in range(m):\r\n                if x % 3 == last:\r\n                    return False\r\n                last = x % 3\r\n                x //= 3\r\n            return True\r\n\r\n        def f2(x: int, y: int) -> bool:\r\n            for _ in range(m):\r\n                if x % 3 == y % 3:\r\n                    return False\r\n                x, y = x // 3, y // 3\r\n            return True\r\n\r\n        mod = 10**9 + 7\r\n        mx = 3**m\r\n        valid = {i for i in range(mx) if f1(i)}\r\n        d = defaultdict(list)\r\n        for x in valid:\r\n            for y in valid:\r\n                if f2(x, y):\r\n                    d[x].append(y)\r\n        f = [int(i in valid) for i in range(mx)]\r\n        for _ in range(n - 1):\r\n            g = [0] * mx\r\n            for i in valid:\r\n                for j in d[i]:\r\n                    g[i] = (g[i] + f[j]) % mod\r\n            f = g\r\n        return sum(f) % mod",
+    "problemId": 1931,
+    "title": "Painting a Grid With Three Different Colors",
+    "problemUrl": "https://leetcode.com/problems/painting-a-grid-with-three-different-colors/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1931.Painting a Grid With Three Different Colors/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1931.Painting a Grid With Three Different Colors/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1931.Painting a Grid With Three Different Colors/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1931.Painting a Grid With Three Different Colors/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1931.Painting a Grid With Three Different Colors/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1931.Painting a Grid With Three Different Colors/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

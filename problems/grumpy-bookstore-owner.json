@@ -1,0 +1,43 @@
+{
+    "problemName": "grumpy-bookstore-owner",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSatisfied(\r\n        self, customers: List[int], grumpy: List[int], minutes: int\r\n    ) -> int:\r\n        mx = cnt = sum(c * g for c, g in zip(customers[:minutes], grumpy))\r\n        for i in range(minutes, len(customers)):\r\n            cnt += customers[i] * grumpy[i]\r\n            cnt -= customers[i - minutes] * grumpy[i - minutes]\r\n            mx = max(mx, cnt)\r\n        return sum(c * (g ^ 1) for c, g in zip(customers, grumpy)) + mx",
+    "problemId": 1052,
+    "title": "Grumpy Bookstore Owner",
+    "problemUrl": "https://leetcode.com/problems/grumpy-bookstore-owner/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1052.Grumpy Bookstore Owner/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1052.Grumpy Bookstore Owner/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1052.Grumpy Bookstore Owner/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1052.Grumpy Bookstore Owner/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1052.Grumpy Bookstore Owner/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1052.Grumpy Bookstore Owner/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1052.Grumpy Bookstore Owner/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

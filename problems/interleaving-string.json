@@ -1,0 +1,108 @@
+{
+    "problemName": "interleaving-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isInterleave(self, s1: str, s2: str, s3: str) -> bool:\r\n        @cache\r\n        def dfs(i: int, j: int) -> bool:\r\n            if i >= m and j >= n:\r\n                return True\r\n            k = i + j\r\n            if i < m and s1[i] == s3[k] and dfs(i + 1, j):\r\n                return True\r\n            if j < n and s2[j] == s3[k] and dfs(i, j + 1):\r\n                return True\r\n            return False\r\n\r\n        m, n = len(s1), len(s2)\r\n        if m + n != len(s3):\r\n            return False\r\n        return dfs(0, 0)",
+    "problemId": 97,
+    "title": "Interleaving String",
+    "problemUrl": "https://leetcode.com/problems/interleaving-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution2.cs",
+            "sourceFile": "Solution2.cs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution3.py",
+            "sourceFile": "Solution3.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution3.cpp",
+            "sourceFile": "Solution3.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution3.java",
+            "sourceFile": "Solution3.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution3.go",
+            "sourceFile": "Solution3.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution3.ts",
+            "sourceFile": "Solution3.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0097.Interleaving String/Solution3.cs",
+            "sourceFile": "Solution3.cs"
+        }
+    ]
+}

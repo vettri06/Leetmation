@@ -1,0 +1,18 @@
+{
+    "problemName": "weather-type-in-each-country",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    country_name,\r\n    CASE\r\n        WHEN AVG(weather_state) <= 15 THEN 'Cold'\r\n        WHEN AVG(weather_state) >= 25 THEN 'Hot'\r\n        ELSE 'Warm'\r\n    END AS weather_type\r\nFROM\r\n    Weather AS w\r\n    JOIN Countries USING (country_id)\r\nWHERE DATE_FORMAT(day, '%Y-%m') = '2019-11'\r\nGROUP BY 1;",
+    "problemId": 1294,
+    "title": "Weather Type in Each Country",
+    "problemUrl": "https://leetcode.com/problems/weather-type-in-each-country/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1294.Weather Type in Each Country/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1294.Weather Type in Each Country/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

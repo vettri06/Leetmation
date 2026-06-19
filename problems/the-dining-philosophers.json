@@ -1,0 +1,18 @@
+{
+    "problemName": "the-dining-philosophers",
+    "language": "cpp",
+    "code": "class DiningPhilosophers {\r\npublic:\r\n    using Act = function<void()>;\r\n\r\n    void wantsToEat(int philosopher, Act pickLeftFork, Act pickRightFork, Act eat, Act putLeftFork, Act putRightFork) {\r\n        /* 这一题实际上是用到了C++17中的scoped_lock知识。\r\n                   作用是传入scoped_lock(mtx1, mtx2)两个锁，然后在作用范围内，依次顺序上锁mtx1和mtx2；然后在作用范围结束时，再反续解锁mtx2和mtx1。\r\n                   从而保证了philosopher1有动作的时候，philosopher2无法操作；但是philosopher3和philosopher4不受影响 */\r\n        std::scoped_lock lock(mutexes_[philosopher], mutexes_[philosopher >= 4 ? 0 : philosopher + 1]);\r\n        pickLeftFork();\r\n        pickRightFork();\r\n        eat();\r\n        putLeftFork();\r\n        putRightFork();\r\n    }\r\n\r\nprivate:\r\n    vector<mutex> mutexes_ = vector<mutex>(5);\r\n};",
+    "problemId": 1226,
+    "title": "The Dining Philosophers",
+    "problemUrl": "https://leetcode.com/problems/the-dining-philosophers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1226.The Dining Philosophers/Solution.cpp",
+    "sourceFile": "Solution.cpp",
+    "sourceCandidates": [
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1226.The Dining Philosophers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        }
+    ]
+}

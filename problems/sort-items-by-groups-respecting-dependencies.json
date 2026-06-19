@@ -1,0 +1,38 @@
+{
+    "problemName": "sort-items-by-groups-respecting-dependencies",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sortItems(\r\n        self, n: int, m: int, group: List[int], beforeItems: List[List[int]]\r\n    ) -> List[int]:\r\n        def topo_sort(degree, graph, items):\r\n            q = deque(i for _, i in enumerate(items) if degree[i] == 0)\r\n            res = []\r\n            while q:\r\n                i = q.popleft()\r\n                res.append(i)\r\n                for j in graph[i]:\r\n                    degree[j] -= 1\r\n                    if degree[j] == 0:\r\n                        q.append(j)\r\n            return res if len(res) == len(items) else []\r\n\r\n        idx = m\r\n        group_items = [[] for _ in range(n + m)]\r\n        for i, g in enumerate(group):\r\n            if g == -1:\r\n                group[i] = idx\r\n                idx += 1\r\n            group_items[group[i]].append(i)\r\n\r\n        item_degree = [0] * n\r\n        group_degree = [0] * (n + m)\r\n        item_graph = [[] for _ in range(n)]\r\n        group_graph = [[] for _ in range(n + m)]\r\n        for i, gi in enumerate(group):\r\n            for j in beforeItems[i]:\r\n                gj = group[j]\r\n                if gi == gj:\r\n                    item_degree[i] += 1\r\n                    item_graph[j].append(i)\r\n                else:\r\n                    group_degree[gi] += 1\r\n                    group_graph[gj].append(gi)\r\n\r\n        group_order = topo_sort(group_degree, group_graph, range(n + m))\r\n        if not group_order:\r\n            return []\r\n        ans = []\r\n        for gi in group_order:\r\n            items = group_items[gi]\r\n            item_order = topo_sort(item_degree, item_graph, items)\r\n            if len(items) != len(item_order):\r\n                return []\r\n            ans.extend(item_order)\r\n        return ans",
+    "problemId": 1203,
+    "title": "Sort Items by Groups Respecting Dependencies",
+    "problemUrl": "https://leetcode.com/problems/sort-items-by-groups-respecting-dependencies/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1203.Sort Items by Groups Respecting Dependencies/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1203.Sort Items by Groups Respecting Dependencies/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1203.Sort Items by Groups Respecting Dependencies/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1203.Sort Items by Groups Respecting Dependencies/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1203.Sort Items by Groups Respecting Dependencies/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1203.Sort Items by Groups Respecting Dependencies/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

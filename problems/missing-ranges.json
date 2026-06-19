@@ -1,0 +1,38 @@
+{
+    "problemName": "missing-ranges",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMissingRanges(\r\n        self, nums: List[int], lower: int, upper: int\r\n    ) -> List[List[int]]:\r\n        n = len(nums)\r\n        if n == 0:\r\n            return [[lower, upper]]\r\n        ans = []\r\n        if nums[0] > lower:\r\n            ans.append([lower, nums[0] - 1])\r\n        for a, b in pairwise(nums):\r\n            if b - a > 1:\r\n                ans.append([a + 1, b - 1])\r\n        if nums[-1] < upper:\r\n            ans.append([nums[-1] + 1, upper])\r\n        return ans",
+    "problemId": 163,
+    "title": "Missing Ranges",
+    "problemUrl": "https://leetcode.com/problems/missing-ranges/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0163.Missing Ranges/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0163.Missing Ranges/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0163.Missing Ranges/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0163.Missing Ranges/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0163.Missing Ranges/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0163.Missing Ranges/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

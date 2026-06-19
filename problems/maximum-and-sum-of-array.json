@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-and-sum-of-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumANDSum(self, nums: List[int], numSlots: int) -> int:\r\n        n = len(nums)\r\n        m = numSlots << 1\r\n        f = [0] * (1 << m)\r\n        for i in range(1 << m):\r\n            cnt = i.bit_count()\r\n            if cnt > n:\r\n                continue\r\n            for j in range(m):\r\n                if i >> j & 1:\r\n                    f[i] = max(f[i], f[i ^ (1 << j)] + (nums[cnt - 1] & (j // 2 + 1)))\r\n        return max(f)",
+    "problemId": 2172,
+    "title": "Maximum AND Sum of Array",
+    "problemUrl": "https://leetcode.com/problems/maximum-and-sum-of-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2172.Maximum AND Sum of Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2172.Maximum AND Sum of Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2172.Maximum AND Sum of Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2172.Maximum AND Sum of Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2172.Maximum AND Sum of Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2172.Maximum AND Sum of Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

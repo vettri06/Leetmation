@@ -1,0 +1,53 @@
+{
+    "problemName": "fruits-into-baskets-iii",
+    "language": "python3",
+    "code": "class SegmentTree:\r\n    __slots__ = [\"nums\", \"tr\"]\r\n\r\n    def __init__(self, nums):\r\n        self.nums = nums\r\n        n = len(nums)\r\n        self.tr = [0] * (n << 2)\r\n        self.build(1, 1, n)\r\n\r\n    def build(self, u, l, r):\r\n        if l == r:\r\n            self.tr[u] = self.nums[l - 1]\r\n            return\r\n        mid = (l + r) >> 1\r\n        self.build(u << 1, l, mid)\r\n        self.build(u << 1 | 1, mid + 1, r)\r\n        self.pushup(u)\r\n\r\n    def modify(self, u, l, r, i, v):\r\n        if l == r:\r\n            self.tr[u] = v\r\n            return\r\n        mid = (l + r) >> 1\r\n        if i <= mid:\r\n            self.modify(u << 1, l, mid, i, v)\r\n        else:\r\n            self.modify(u << 1 | 1, mid + 1, r, i, v)\r\n        self.pushup(u)\r\n\r\n    def query(self, u, l, r, v):\r\n        if self.tr[u] < v:\r\n            return -1\r\n        if l == r:\r\n            return l\r\n        mid = (l + r) >> 1\r\n        if self.tr[u << 1] >= v:\r\n            return self.query(u << 1, l, mid, v)\r\n        return self.query(u << 1 | 1, mid + 1, r, v)\r\n\r\n    def pushup(self, u):\r\n        self.tr[u] = max(self.tr[u << 1], self.tr[u << 1 | 1])\r\n\r\n\r\nclass Solution:\r\n    def numOfUnplacedFruits(self, fruits: List[int], baskets: List[int]) -> int:\r\n        tree = SegmentTree(baskets)\r\n        n = len(baskets)\r\n        ans = 0\r\n        for x in fruits:\r\n            i = tree.query(1, 1, n, x)\r\n            if i < 0:\r\n                ans += 1\r\n            else:\r\n                tree.modify(1, 1, n, i, 0)\r\n        return ans",
+    "problemId": 3479,
+    "title": "Fruits Into Baskets III",
+    "problemUrl": "https://leetcode.com/problems/fruits-into-baskets-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3479.Fruits Into Baskets III/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3479.Fruits Into Baskets III/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3479.Fruits Into Baskets III/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3479.Fruits Into Baskets III/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3479.Fruits Into Baskets III/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3479.Fruits Into Baskets III/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3479.Fruits Into Baskets III/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3479.Fruits Into Baskets III/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "swift",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3479.Fruits Into Baskets III/Solution.swift",
+            "sourceFile": "Solution.swift"
+        }
+    ]
+}

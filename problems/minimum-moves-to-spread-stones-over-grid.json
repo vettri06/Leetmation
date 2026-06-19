@@ -1,0 +1,63 @@
+{
+    "problemName": "minimum-moves-to-spread-stones-over-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumMoves(self, grid: List[List[int]]) -> int:\r\n        q = deque([tuple(tuple(row) for row in grid)])\r\n        vis = set(q)\r\n        ans = 0\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        while 1:\r\n            for _ in range(len(q)):\r\n                cur = q.popleft()\r\n                if all(x for row in cur for x in row):\r\n                    return ans\r\n                for i in range(3):\r\n                    for j in range(3):\r\n                        if cur[i][j] > 1:\r\n                            for a, b in pairwise(dirs):\r\n                                x, y = i + a, j + b\r\n                                if 0 <= x < 3 and 0 <= y < 3 and cur[x][y] < 2:\r\n                                    nxt = [list(row) for row in cur]\r\n                                    nxt[i][j] -= 1\r\n                                    nxt[x][y] += 1\r\n                                    nxt = tuple(tuple(row) for row in nxt)\r\n                                    if nxt not in vis:\r\n                                        vis.add(nxt)\r\n                                        q.append(nxt)\r\n            ans += 1",
+    "problemId": 2850,
+    "title": "Minimum Moves to Spread Stones Over Grid",
+    "problemUrl": "https://leetcode.com/problems/minimum-moves-to-spread-stones-over-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2850.Minimum Moves to Spread Stones Over Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2850.Minimum Moves to Spread Stones Over Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2850.Minimum Moves to Spread Stones Over Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2850.Minimum Moves to Spread Stones Over Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2850.Minimum Moves to Spread Stones Over Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2850.Minimum Moves to Spread Stones Over Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2850.Minimum Moves to Spread Stones Over Grid/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2850.Minimum Moves to Spread Stones Over Grid/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2850.Minimum Moves to Spread Stones Over Grid/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2850.Minimum Moves to Spread Stones Over Grid/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2850.Minimum Moves to Spread Stones Over Grid/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

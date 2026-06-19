@@ -1,0 +1,48 @@
+{
+    "problemName": "binary-tree-level-order-traversal",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:\r\n        ans = []\r\n        if root is None:\r\n            return ans\r\n        q = deque([root])\r\n        while q:\r\n            t = []\r\n            for _ in range(len(q)):\r\n                node = q.popleft()\r\n                t.append(node.val)\r\n                if node.left:\r\n                    q.append(node.left)\r\n                if node.right:\r\n                    q.append(node.right)\r\n            ans.append(t)\r\n        return ans",
+    "problemId": 102,
+    "title": "Binary Tree Level Order Traversal",
+    "problemUrl": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0102.Binary Tree Level Order Traversal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0102.Binary Tree Level Order Traversal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0102.Binary Tree Level Order Traversal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0102.Binary Tree Level Order Traversal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0102.Binary Tree Level Order Traversal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0102.Binary Tree Level Order Traversal/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0102.Binary Tree Level Order Traversal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0102.Binary Tree Level Order Traversal/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

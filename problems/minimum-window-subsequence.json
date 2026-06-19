@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-window-subsequence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minWindow(self, s1: str, s2: str) -> str:\r\n        m, n = len(s1), len(s2)\r\n        f = [[0] * (n + 1) for _ in range(m + 1)]\r\n        for i, a in enumerate(s1, 1):\r\n            for j, b in enumerate(s2, 1):\r\n                if a == b:\r\n                    f[i][j] = i if j == 1 else f[i - 1][j - 1]\r\n                else:\r\n                    f[i][j] = f[i - 1][j]\r\n        p, k = 0, m + 1\r\n        for i, a in enumerate(s1, 1):\r\n            if a == s2[n - 1] and f[i][n]:\r\n                j = f[i][n] - 1\r\n                if i - j < k:\r\n                    k = i - j\r\n                    p = j\r\n        return \"\" if k > m else s1[p : p + k]",
+    "problemId": 727,
+    "title": "Minimum Window Subsequence",
+    "problemUrl": "https://leetcode.com/problems/minimum-window-subsequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0727.Minimum Window Subsequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0727.Minimum Window Subsequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0727.Minimum Window Subsequence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0727.Minimum Window Subsequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0727.Minimum Window Subsequence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0727.Minimum Window Subsequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

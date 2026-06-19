@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-almost-palindromic-substring",
+    "language": "python3",
+    "code": "class Solution:\r\n    def almostPalindromic(self, s: str) -> int:\r\n        def f(l: int, r: int) -> int:\r\n            while l >= 0 and r < n and s[l] == s[r]:\r\n                l -= 1\r\n                r += 1\r\n            l1, r1 = l - 1, r\r\n            l2, r2 = l, r + 1\r\n            while l1 >= 0 and r1 < n and s[l1] == s[r1]:\r\n                l1 -= 1\r\n                r1 += 1\r\n            while l2 >= 0 and r2 < n and s[l2] == s[r2]:\r\n                l2 -= 1\r\n                r2 += 1\r\n            return min(n, max(r1 - l1 - 1, r2 - l2 - 1))\r\n\r\n        n = len(s)\r\n        ans = 0\r\n        for i in range(n):\r\n            a = f(i, i)\r\n            b = f(i, i + 1)\r\n            ans = max(ans, a, b)\r\n        return ans",
+    "problemId": 3844,
+    "title": "Longest Almost-Palindromic Substring",
+    "problemUrl": "https://leetcode.com/problems/longest-almost-palindromic-substring/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3844.Longest Almost-Palindromic Substring/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3844.Longest Almost-Palindromic Substring/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3844.Longest Almost-Palindromic Substring/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3844.Longest Almost-Palindromic Substring/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3844.Longest Almost-Palindromic Substring/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3844.Longest Almost-Palindromic Substring/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "flatten-deeply-nested-array",
+    "language": "typescript",
+    "code": "type MultiDimensionalArray = (number | MultiDimensionalArray)[];\r\n\r\nvar flat = function (arr: MultiDimensionalArray, n: number): MultiDimensionalArray {\r\n    if (!n) {\r\n        return arr;\r\n    }\r\n    const ans: MultiDimensionalArray = [];\r\n    for (const x of arr) {\r\n        if (Array.isArray(x) && n) {\r\n            ans.push(...flat(x, n - 1));\r\n        } else {\r\n            ans.push(x);\r\n        }\r\n    }\r\n    return ans;\r\n};",
+    "problemId": 2625,
+    "title": "Flatten Deeply Nested Array",
+    "problemUrl": "https://leetcode.com/problems/flatten-deeply-nested-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2625.Flatten Deeply Nested Array/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2625.Flatten Deeply Nested Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "string-compression-ii",
+    "language": "java",
+    "code": "class Solution {\r\n    public int getLengthOfOptimalCompression(String s, int k) {\r\n        // dp[i][k] := the length of the optimal compression of s[i..n) with at most\r\n        // k deletion\r\n        dp = new int[s.length()][k + 1];\r\n        Arrays.stream(dp).forEach(A -> Arrays.fill(A, K_MAX));\r\n        return compression(s, 0, k);\r\n    }\r\n\r\n    private static final int K_MAX = 101;\r\n    private int[][] dp;\r\n\r\n    private int compression(final String s, int i, int k) {\r\n        if (k < 0) {\r\n            return K_MAX;\r\n        }\r\n        if (i == s.length() || s.length() - i <= k) {\r\n            return 0;\r\n        }\r\n        if (dp[i][k] != K_MAX) {\r\n            return dp[i][k];\r\n        }\r\n        int maxFreq = 0;\r\n        int[] count = new int[128];\r\n        // Make letters in s[i..j] be the same.\r\n        // Keep the letter that has the maximum frequency in this range and remove\r\n        // the other letters.\r\n        for (int j = i; j < s.length(); ++j) {\r\n            maxFreq = Math.max(maxFreq, ++count[s.charAt(j)]);\r\n            dp[i][k] = Math.min(\r\n                dp[i][k], getLength(maxFreq) + compression(s, j + 1, k - (j - i + 1 - maxFreq)));\r\n        }\r\n        return dp[i][k];\r\n    }\r\n\r\n    // Returns the length to compress `maxFreq`.\r\n    private int getLength(int maxFreq) {\r\n        if (maxFreq == 1) {\r\n            return 1; // c\r\n        }\r\n        if (maxFreq < 10) {\r\n            return 2; // [1-9]c\r\n        }\r\n        if (maxFreq < 100) {\r\n            return 3; // [1-9][0-9]c\r\n        }\r\n        return 4; // [1-9][0-9][0-9]c\r\n    }\r\n}",
+    "problemId": 1531,
+    "title": "String Compression II",
+    "problemUrl": "https://leetcode.com/problems/string-compression-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1531.String Compression II/Solution.java",
+    "sourceFile": "Solution.java",
+    "sourceCandidates": [
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1531.String Compression II/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

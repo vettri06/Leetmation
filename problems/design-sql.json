@@ -1,0 +1,33 @@
+{
+    "problemName": "design-sql",
+    "language": "python3",
+    "code": "class SQL:\r\n    def __init__(self, names: List[str], columns: List[int]):\r\n        self.tables = defaultdict(list)\r\n\r\n    def insertRow(self, name: str, row: List[str]) -> None:\r\n        self.tables[name].append(row)\r\n\r\n    def deleteRow(self, name: str, rowId: int) -> None:\r\n        pass\r\n\r\n    def selectCell(self, name: str, rowId: int, columnId: int) -> str:\r\n        return self.tables[name][rowId - 1][columnId - 1]\r\n\r\n\r\n# Your SQL object will be instantiated and called as such:\r\n# obj = SQL(names, columns)\r\n# obj.insertRow(name,row)\r\n# obj.deleteRow(name,rowId)\r\n# param_3 = obj.selectCell(name,rowId,columnId)",
+    "problemId": 2408,
+    "title": "Design SQL",
+    "problemUrl": "https://leetcode.com/problems/design-sql/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2408.Design SQL/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2408.Design SQL/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2408.Design SQL/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2408.Design SQL/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2408.Design SQL/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

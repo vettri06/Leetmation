@@ -1,0 +1,23 @@
+{
+    "problemName": "seasonal-sales-analysis",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef seasonal_sales_analysis(\r\n    products: pd.DataFrame, sales: pd.DataFrame\r\n) -> pd.DataFrame:\r\n    df = sales.merge(products, on=\"product_id\")\r\n    month_to_season = {\r\n        12: \"Winter\",\r\n        1: \"Winter\",\r\n        2: \"Winter\",\r\n        3: \"Spring\",\r\n        4: \"Spring\",\r\n        5: \"Spring\",\r\n        6: \"Summer\",\r\n        7: \"Summer\",\r\n        8: \"Summer\",\r\n        9: \"Fall\",\r\n        10: \"Fall\",\r\n        11: \"Fall\",\r\n    }\r\n    df[\"season\"] = df[\"sale_date\"].dt.month.map(month_to_season)\r\n    seasonal_sales = df.groupby([\"season\", \"category\"], as_index=False).agg(\r\n        total_quantity=(\"quantity\", \"sum\"),\r\n        total_revenue=(\"quantity\", lambda x: (x * df.loc[x.index, \"price\"]).sum()),\r\n    )\r\n    seasonal_sales[\"rk\"] = (\r\n        seasonal_sales.sort_values(\r\n            [\"season\", \"total_quantity\", \"total_revenue\"],\r\n            ascending=[True, False, False],\r\n        )\r\n        .groupby(\"season\")\r\n        .cumcount()\r\n        + 1\r\n    )\r\n    result = seasonal_sales[seasonal_sales[\"rk\"] == 1].copy()\r\n    return result[\r\n        [\"season\", \"category\", \"total_quantity\", \"total_revenue\"]\r\n    ].sort_values(\"season\")",
+    "problemId": 3564,
+    "title": "Seasonal Sales Analysis",
+    "problemUrl": "https://leetcode.com/problems/seasonal-sales-analysis/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3564.Seasonal Sales Analysis/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3564.Seasonal Sales Analysis/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3564.Seasonal Sales Analysis/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

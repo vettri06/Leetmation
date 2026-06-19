@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-absolute-difference-in-sliding-submatrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minAbsDiff(self, grid: List[List[int]], k: int) -> List[List[int]]:\r\n        m, n = len(grid), len(grid[0])\r\n        ans = [[0] * (n - k + 1) for _ in range(m - k + 1)]\r\n        for i in range(m - k + 1):\r\n            for j in range(n - k + 1):\r\n                nums = []\r\n                for x in range(i, i + k):\r\n                    for y in range(j, j + k):\r\n                        nums.append(grid[x][y])\r\n                nums.sort()\r\n                d = min((abs(a - b) for a, b in pairwise(nums) if a != b), default=0)\r\n                ans[i][j] = d\r\n        return ans",
+    "problemId": 3567,
+    "title": "Minimum Absolute Difference in Sliding Submatrix",
+    "problemUrl": "https://leetcode.com/problems/minimum-absolute-difference-in-sliding-submatrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3567.Minimum Absolute Difference in Sliding Submatrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3567.Minimum Absolute Difference in Sliding Submatrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3567.Minimum Absolute Difference in Sliding Submatrix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3567.Minimum Absolute Difference in Sliding Submatrix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3567.Minimum Absolute Difference in Sliding Submatrix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3567.Minimum Absolute Difference in Sliding Submatrix/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3567.Minimum Absolute Difference in Sliding Submatrix/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "4sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:\r\n        n = len(nums)\r\n        ans = []\r\n        if n < 4:\r\n            return ans\r\n        nums.sort()\r\n        for i in range(n - 3):\r\n            if i and nums[i] == nums[i - 1]:\r\n                continue\r\n            for j in range(i + 1, n - 2):\r\n                if j > i + 1 and nums[j] == nums[j - 1]:\r\n                    continue\r\n                k, l = j + 1, n - 1\r\n                while k < l:\r\n                    x = nums[i] + nums[j] + nums[k] + nums[l]\r\n                    if x < target:\r\n                        k += 1\r\n                    elif x > target:\r\n                        l -= 1\r\n                    else:\r\n                        ans.append([nums[i], nums[j], nums[k], nums[l]])\r\n                        k, l = k + 1, l - 1\r\n                        while k < l and nums[k] == nums[k - 1]:\r\n                            k += 1\r\n                        while k < l and nums[l] == nums[l + 1]:\r\n                            l -= 1\r\n        return ans",
+    "problemId": 18,
+    "title": "4Sum",
+    "problemUrl": "https://leetcode.com/problems/4sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0018.4Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0018.4Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0018.4Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0018.4Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0018.4Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0018.4Sum/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0018.4Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0018.4Sum/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

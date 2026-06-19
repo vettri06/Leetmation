@@ -1,0 +1,38 @@
+{
+    "problemName": "is-array-a-preorder-of-some-binary-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isPreorder(self, nodes: List[List[int]]) -> bool:\r\n        def dfs(i: int) -> int:\r\n            nonlocal k\r\n            if i != nodes[k][0]:\r\n                return False\r\n            k += 1\r\n            return all(dfs(j) for j in g[i])\r\n\r\n        g = defaultdict(list)\r\n        for i, p in nodes:\r\n            g[p].append(i)\r\n        k = 0\r\n        return dfs(nodes[0][0]) and k == len(nodes)",
+    "problemId": 2764,
+    "title": "Is Array a Preorder of Some ‌Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/is-array-a-preorder-of-some-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2764.Is Array a Preorder of Some ‌Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2764.Is Array a Preorder of Some ‌Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2764.Is Array a Preorder of Some ‌Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2764.Is Array a Preorder of Some ‌Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2764.Is Array a Preorder of Some ‌Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2764.Is Array a Preorder of Some ‌Binary Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

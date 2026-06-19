@@ -1,0 +1,38 @@
+{
+    "problemName": "maximize-score-after-pair-deletions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxScore(self, nums: List[int]) -> int:\r\n        s = sum(nums)\r\n        if len(nums) & 1:\r\n            return s - min(nums)\r\n        return s - min(a + b for a, b in pairwise(nums))",
+    "problemId": 3496,
+    "title": "Maximize Score After Pair Deletions",
+    "problemUrl": "https://leetcode.com/problems/maximize-score-after-pair-deletions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3496.Maximize Score After Pair Deletions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3496.Maximize Score After Pair Deletions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3496.Maximize Score After Pair Deletions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3496.Maximize Score After Pair Deletions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3496.Maximize Score After Pair Deletions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3496.Maximize Score After Pair Deletions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

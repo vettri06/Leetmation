@@ -1,0 +1,28 @@
+{
+    "problemName": "word-squares",
+    "language": "python3",
+    "code": "class Trie:\r\n    def __init__(self):\r\n        self.children = [None] * 26\r\n        self.v = []\r\n\r\n    def insert(self, w, i):\r\n        node = self\r\n        for c in w:\r\n            idx = ord(c) - ord('a')\r\n            if node.children[idx] is None:\r\n                node.children[idx] = Trie()\r\n            node = node.children[idx]\r\n            node.v.append(i)\r\n\r\n    def search(self, w):\r\n        node = self\r\n        for c in w:\r\n            idx = ord(c) - ord('a')\r\n            if node.children[idx] is None:\r\n                return []\r\n            node = node.children[idx]\r\n        return node.v\r\n\r\n\r\nclass Solution:\r\n    def wordSquares(self, words: List[str]) -> List[List[str]]:\r\n        def dfs(t):\r\n            if len(t) == len(words[0]):\r\n                ans.append(t[:])\r\n                return\r\n            idx = len(t)\r\n            pref = [v[idx] for v in t]\r\n            indexes = trie.search(''.join(pref))\r\n            for i in indexes:\r\n                t.append(words[i])\r\n                dfs(t)\r\n                t.pop()\r\n\r\n        trie = Trie()\r\n        ans = []\r\n        for i, w in enumerate(words):\r\n            trie.insert(w, i)\r\n        for w in words:\r\n            dfs([w])\r\n        return ans",
+    "problemId": 425,
+    "title": "Word Squares",
+    "problemUrl": "https://leetcode.com/problems/word-squares/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0425.Word Squares/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0425.Word Squares/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0425.Word Squares/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0425.Word Squares/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "decrease-elements-to-make-array-zigzag",
+    "language": "python3",
+    "code": "class Solution:\r\n    def movesToMakeZigzag(self, nums: List[int]) -> int:\r\n        ans = [0, 0]\r\n        n = len(nums)\r\n        for i in range(2):\r\n            for j in range(i, n, 2):\r\n                d = 0\r\n                if j:\r\n                    d = max(d, nums[j] - nums[j - 1] + 1)\r\n                if j < n - 1:\r\n                    d = max(d, nums[j] - nums[j + 1] + 1)\r\n                ans[i] += d\r\n        return min(ans)",
+    "problemId": 1144,
+    "title": "Decrease Elements To Make Array Zigzag",
+    "problemUrl": "https://leetcode.com/problems/decrease-elements-to-make-array-zigzag/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1144.Decrease Elements To Make Array Zigzag/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1144.Decrease Elements To Make Array Zigzag/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1144.Decrease Elements To Make Array Zigzag/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1144.Decrease Elements To Make Array Zigzag/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1144.Decrease Elements To Make Array Zigzag/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1144.Decrease Elements To Make Array Zigzag/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1144.Decrease Elements To Make Array Zigzag/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

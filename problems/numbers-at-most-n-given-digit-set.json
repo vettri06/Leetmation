@@ -1,0 +1,38 @@
+{
+    "problemName": "numbers-at-most-n-given-digit-set",
+    "language": "python3",
+    "code": "class Solution:\r\n    def atMostNGivenDigitSet(self, digits: List[str], n: int) -> int:\r\n        @cache\r\n        def dfs(i: int, lead: int, limit: bool) -> int:\r\n            if i >= len(s):\r\n                return lead ^ 1\r\n\r\n            up = int(s[i]) if limit else 9\r\n            ans = 0\r\n            for j in range(up + 1):\r\n                if j == 0 and lead:\r\n                    ans += dfs(i + 1, 1, limit and j == up)\r\n                elif j in nums:\r\n                    ans += dfs(i + 1, 0, limit and j == up)\r\n            return ans\r\n\r\n        s = str(n)\r\n        nums = {int(x) for x in digits}\r\n        return dfs(0, 1, True)",
+    "problemId": 902,
+    "title": "Numbers At Most N Given Digit Set",
+    "problemUrl": "https://leetcode.com/problems/numbers-at-most-n-given-digit-set/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0902.Numbers At Most N Given Digit Set/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0902.Numbers At Most N Given Digit Set/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0902.Numbers At Most N Given Digit Set/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0902.Numbers At Most N Given Digit Set/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0902.Numbers At Most N Given Digit Set/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0902.Numbers At Most N Given Digit Set/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-subarray-sum-with-one-deletion",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumSum(self, arr: List[int]) -> int:\r\n        n = len(arr)\r\n        left = [0] * n\r\n        right = [0] * n\r\n        s = 0\r\n        for i, x in enumerate(arr):\r\n            s = max(s, 0) + x\r\n            left[i] = s\r\n        s = 0\r\n        for i in range(n - 1, -1, -1):\r\n            s = max(s, 0) + arr[i]\r\n            right[i] = s\r\n        ans = max(left)\r\n        for i in range(1, n - 1):\r\n            ans = max(ans, left[i - 1] + right[i + 1])\r\n        return ans",
+    "problemId": 1186,
+    "title": "Maximum Subarray Sum with One Deletion",
+    "problemUrl": "https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1186.Maximum Subarray Sum with One Deletion/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1186.Maximum Subarray Sum with One Deletion/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1186.Maximum Subarray Sum with One Deletion/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1186.Maximum Subarray Sum with One Deletion/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1186.Maximum Subarray Sum with One Deletion/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1186.Maximum Subarray Sum with One Deletion/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1186.Maximum Subarray Sum with One Deletion/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

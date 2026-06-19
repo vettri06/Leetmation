@@ -1,0 +1,43 @@
+{
+    "problemName": "diagonal-traverse",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findDiagonalOrder(self, mat: List[List[int]]) -> List[int]:\r\n        m, n = len(mat), len(mat[0])\r\n        ans = []\r\n        for k in range(m + n - 1):\r\n            t = []\r\n            i = 0 if k < n else k - n + 1\r\n            j = k if k < n else n - 1\r\n            while i < m and j >= 0:\r\n                t.append(mat[i][j])\r\n                i += 1\r\n                j -= 1\r\n            if k % 2 == 0:\r\n                t = t[::-1]\r\n            ans.extend(t)\r\n        return ans",
+    "problemId": 498,
+    "title": "Diagonal Traverse",
+    "problemUrl": "https://leetcode.com/problems/diagonal-traverse/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0498.Diagonal Traverse/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0498.Diagonal Traverse/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0498.Diagonal Traverse/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0498.Diagonal Traverse/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0498.Diagonal Traverse/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0498.Diagonal Traverse/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0498.Diagonal Traverse/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

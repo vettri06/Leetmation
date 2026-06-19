@@ -1,0 +1,23 @@
+{
+    "problemName": "dna-pattern-recognition",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef analyze_dna_patterns(samples: pd.DataFrame) -> pd.DataFrame:\r\n    samples[\"has_start\"] = samples[\"dna_sequence\"].str.startswith(\"ATG\").astype(int)\r\n    samples[\"has_stop\"] = (\r\n        samples[\"dna_sequence\"].str.endswith((\"TAA\", \"TAG\", \"TGA\")).astype(int)\r\n    )\r\n    samples[\"has_atat\"] = samples[\"dna_sequence\"].str.contains(\"ATAT\").astype(int)\r\n    samples[\"has_ggg\"] = samples[\"dna_sequence\"].str.contains(\"GGG+\").astype(int)\r\n    return samples.sort_values(by=\"sample_id\").reset_index(drop=True)",
+    "problemId": 3475,
+    "title": "DNA Pattern Recognition",
+    "problemUrl": "https://leetcode.com/problems/dna-pattern-recognition/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3475.DNA Pattern Recognition/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3475.DNA Pattern Recognition/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3475.DNA Pattern Recognition/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

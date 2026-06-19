@@ -1,0 +1,38 @@
+{
+    "problemName": "the-k-weakest-rows-in-a-matrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def kWeakestRows(self, mat: List[List[int]], k: int) -> List[int]:\r\n        m, n = len(mat), len(mat[0])\r\n        ans = [n - bisect_right(row[::-1], 0) for row in mat]\r\n        idx = list(range(m))\r\n        idx.sort(key=lambda i: ans[i])\r\n        return idx[:k]",
+    "problemId": 1337,
+    "title": "The K Weakest Rows in a Matrix",
+    "problemUrl": "https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1337.The K Weakest Rows in a Matrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1337.The K Weakest Rows in a Matrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1337.The K Weakest Rows in a Matrix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1337.The K Weakest Rows in a Matrix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1337.The K Weakest Rows in a Matrix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1337.The K Weakest Rows in a Matrix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

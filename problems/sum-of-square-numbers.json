@@ -1,0 +1,68 @@
+{
+    "problemName": "sum-of-square-numbers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def judgeSquareSum(self, c: int) -> bool:\r\n        a, b = 0, int(sqrt(c))\r\n        while a <= b:\r\n            s = a**2 + b**2\r\n            if s == c:\r\n                return True\r\n            if s < c:\r\n                a += 1\r\n            else:\r\n                b -= 1\r\n        return False",
+    "problemId": 633,
+    "title": "Sum of Square Numbers",
+    "problemUrl": "https://leetcode.com/problems/sum-of-square-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0633.Sum of Square Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0633.Sum of Square Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0633.Sum of Square Numbers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0633.Sum of Square Numbers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0633.Sum of Square Numbers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0633.Sum of Square Numbers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0633.Sum of Square Numbers/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0633.Sum of Square Numbers/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0633.Sum of Square Numbers/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0633.Sum of Square Numbers/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0633.Sum of Square Numbers/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0633.Sum of Square Numbers/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

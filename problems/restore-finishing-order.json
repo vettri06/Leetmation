@@ -1,0 +1,38 @@
+{
+    "problemName": "restore-finishing-order",
+    "language": "python3",
+    "code": "class Solution:\r\n    def recoverOrder(self, order: List[int], friends: List[int]) -> List[int]:\r\n        d = {x: i for i, x in enumerate(order)}\r\n        return sorted(friends, key=lambda x: d[x])",
+    "problemId": 3668,
+    "title": "Restore Finishing Order",
+    "problemUrl": "https://leetcode.com/problems/restore-finishing-order/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3668.Restore Finishing Order/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3668.Restore Finishing Order/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3668.Restore Finishing Order/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3668.Restore Finishing Order/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3668.Restore Finishing Order/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3668.Restore Finishing Order/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

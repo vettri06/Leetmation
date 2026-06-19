@@ -1,0 +1,38 @@
+{
+    "problemName": "consecutive-characters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxPower(self, s: str) -> int:\r\n        ans = t = 1\r\n        for a, b in pairwise(s):\r\n            if a == b:\r\n                t += 1\r\n                ans = max(ans, t)\r\n            else:\r\n                t = 1\r\n        return ans",
+    "problemId": 1446,
+    "title": "Consecutive Characters",
+    "problemUrl": "https://leetcode.com/problems/consecutive-characters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1446.Consecutive Characters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1446.Consecutive Characters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1446.Consecutive Characters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1446.Consecutive Characters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1446.Consecutive Characters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1446.Consecutive Characters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

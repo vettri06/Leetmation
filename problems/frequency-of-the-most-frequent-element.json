@@ -1,0 +1,63 @@
+{
+    "problemName": "frequency-of-the-most-frequent-element",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxFrequency(self, nums: List[int], k: int) -> int:\r\n        def check(m: int) -> bool:\r\n            for i in range(m, n + 1):\r\n                if nums[i - 1] * m - (s[i] - s[i - m]) <= k:\r\n                    return True\r\n            return False\r\n\r\n        n = len(nums)\r\n        nums.sort()\r\n        s = list(accumulate(nums, initial=0))\r\n        l, r = 1, n\r\n        while l < r:\r\n            mid = (l + r + 1) >> 1\r\n            if check(mid):\r\n                l = mid\r\n            else:\r\n                r = mid - 1\r\n        return l",
+    "problemId": 1838,
+    "title": "Frequency of the Most Frequent Element",
+    "problemUrl": "https://leetcode.com/problems/frequency-of-the-most-frequent-element/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1838.Frequency of the Most Frequent Element/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1838.Frequency of the Most Frequent Element/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1838.Frequency of the Most Frequent Element/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1838.Frequency of the Most Frequent Element/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1838.Frequency of the Most Frequent Element/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1838.Frequency of the Most Frequent Element/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1838.Frequency of the Most Frequent Element/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1838.Frequency of the Most Frequent Element/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1838.Frequency of the Most Frequent Element/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1838.Frequency of the Most Frequent Element/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1838.Frequency of the Most Frequent Element/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

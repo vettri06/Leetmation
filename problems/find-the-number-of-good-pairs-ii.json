@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-number-of-good-pairs-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfPairs(self, nums1: List[int], nums2: List[int], k: int) -> int:\r\n        cnt1 = Counter(x // k for x in nums1 if x % k == 0)\r\n        if not cnt1:\r\n            return 0\r\n        cnt2 = Counter(nums2)\r\n        ans = 0\r\n        mx = max(cnt1)\r\n        for x, v in cnt2.items():\r\n            s = sum(cnt1[y] for y in range(x, mx + 1, x))\r\n            ans += s * v\r\n        return ans",
+    "problemId": 3164,
+    "title": "Find the Number of Good Pairs II",
+    "problemUrl": "https://leetcode.com/problems/find-the-number-of-good-pairs-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3164.Find the Number of Good Pairs II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3164.Find the Number of Good Pairs II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3164.Find the Number of Good Pairs II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3164.Find the Number of Good Pairs II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3164.Find the Number of Good Pairs II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3164.Find the Number of Good Pairs II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

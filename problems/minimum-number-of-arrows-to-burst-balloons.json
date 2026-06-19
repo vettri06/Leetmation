@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-number-of-arrows-to-burst-balloons",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMinArrowShots(self, points: List[List[int]]) -> int:\r\n        ans, last = 0, -inf\r\n        for a, b in sorted(points, key=lambda x: x[1]):\r\n            if a > last:\r\n                ans += 1\r\n                last = b\r\n        return ans",
+    "problemId": 452,
+    "title": "Minimum Number of Arrows to Burst Balloons",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0452.Minimum Number of Arrows to Burst Balloons/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0452.Minimum Number of Arrows to Burst Balloons/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0452.Minimum Number of Arrows to Burst Balloons/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0452.Minimum Number of Arrows to Burst Balloons/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0452.Minimum Number of Arrows to Burst Balloons/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0452.Minimum Number of Arrows to Burst Balloons/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0452.Minimum Number of Arrows to Burst Balloons/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

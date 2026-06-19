@@ -1,0 +1,43 @@
+{
+    "problemName": "rectangle-area",
+    "language": "python3",
+    "code": "class Solution:\r\n    def computeArea(\r\n        self,\r\n        ax1: int,\r\n        ay1: int,\r\n        ax2: int,\r\n        ay2: int,\r\n        bx1: int,\r\n        by1: int,\r\n        bx2: int,\r\n        by2: int,\r\n    ) -> int:\r\n        a = (ax2 - ax1) * (ay2 - ay1)\r\n        b = (bx2 - bx1) * (by2 - by1)\r\n        width = min(ax2, bx2) - max(ax1, bx1)\r\n        height = min(ay2, by2) - max(ay1, by1)\r\n        return a + b - max(height, 0) * max(width, 0)",
+    "problemId": 223,
+    "title": "Rectangle Area",
+    "problemUrl": "https://leetcode.com/problems/rectangle-area/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0223.Rectangle Area/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0223.Rectangle Area/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0223.Rectangle Area/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0223.Rectangle Area/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0223.Rectangle Area/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0223.Rectangle Area/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0223.Rectangle Area/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

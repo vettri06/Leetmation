@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-unique-categories",
+    "language": "python3",
+    "code": "# Definition for a category handler.\r\n# class CategoryHandler:\r\n#     def haveSameCategory(self, a: int, b: int) -> bool:\r\n#         pass\r\nclass Solution:\r\n    def numberOfCategories(\r\n        self, n: int, categoryHandler: Optional['CategoryHandler']\r\n    ) -> int:\r\n        def find(x: int) -> int:\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        p = list(range(n))\r\n        for a in range(n):\r\n            for b in range(a + 1, n):\r\n                if categoryHandler.haveSameCategory(a, b):\r\n                    p[find(a)] = find(b)\r\n        return sum(i == x for i, x in enumerate(p))",
+    "problemId": 2782,
+    "title": "Number of Unique Categories",
+    "problemUrl": "https://leetcode.com/problems/number-of-unique-categories/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2782.Number of Unique Categories/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2782.Number of Unique Categories/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2782.Number of Unique Categories/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2782.Number of Unique Categories/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2782.Number of Unique Categories/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2782.Number of Unique Categories/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

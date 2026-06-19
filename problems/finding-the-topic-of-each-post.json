@@ -1,0 +1,18 @@
+{
+    "problemName": "finding-the-topic-of-each-post",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    post_id,\r\n    IFNULL(GROUP_CONCAT(DISTINCT topic_id), 'Ambiguous!') AS topic\r\nFROM\r\n    Posts\r\n    LEFT JOIN Keywords ON INSTR(CONCAT(' ', content, ' '), CONCAT(' ', word, ' ')) > 0\r\nGROUP BY post_id;",
+    "problemId": 2199,
+    "title": "Finding the Topic of Each Post",
+    "problemUrl": "https://leetcode.com/problems/finding-the-topic-of-each-post/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2199.Finding the Topic of Each Post/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2199.Finding the Topic of Each Post/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

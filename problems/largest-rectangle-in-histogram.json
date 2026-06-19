@@ -1,0 +1,48 @@
+{
+    "problemName": "largest-rectangle-in-histogram",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestRectangleArea(self, heights: List[int]) -> int:\r\n        n = len(heights)\r\n        stk = []\r\n        left = [-1] * n\r\n        right = [n] * n\r\n        for i, h in enumerate(heights):\r\n            while stk and heights[stk[-1]] >= h:\r\n                right[stk[-1]] = i\r\n                stk.pop()\r\n            if stk:\r\n                left[i] = stk[-1]\r\n            stk.append(i)\r\n        return max(h * (right[i] - left[i] - 1) for i, h in enumerate(heights))",
+    "problemId": 84,
+    "title": "Largest Rectangle in Histogram",
+    "problemUrl": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0084.Largest Rectangle in Histogram/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0084.Largest Rectangle in Histogram/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0084.Largest Rectangle in Histogram/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0084.Largest Rectangle in Histogram/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0084.Largest Rectangle in Histogram/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0084.Largest Rectangle in Histogram/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0084.Largest Rectangle in Histogram/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0084.Largest Rectangle in Histogram/Solution2.py",
+            "sourceFile": "Solution2.py"
+        }
+    ]
+}

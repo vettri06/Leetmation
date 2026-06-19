@@ -1,0 +1,18 @@
+{
+    "problemName": "next-day",
+    "language": "typescript",
+    "code": "declare global {\r\n    interface Date {\r\n        nextDay(): string;\r\n    }\r\n}\r\n\r\nDate.prototype.nextDay = function () {\r\n    const date = new Date(this.valueOf());\r\n    date.setDate(date.getDate() + 1);\r\n    return date.toISOString().slice(0, 10);\r\n};\r\n\r\n/**\r\n * const date = new Date(\"2014-06-20\");\r\n * date.nextDay(); // \"2014-06-21\"\r\n */",
+    "problemId": 2758,
+    "title": "Next Day",
+    "problemUrl": "https://leetcode.com/problems/next-day/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2758.Next Day/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2758.Next Day/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

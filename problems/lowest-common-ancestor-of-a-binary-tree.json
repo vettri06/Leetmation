@@ -1,0 +1,48 @@
+{
+    "problemName": "lowest-common-ancestor-of-a-binary-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, x):\r\n#         self.val = x\r\n#         self.left = None\r\n#         self.right = None\r\n\r\n\r\nclass Solution:\r\n    def lowestCommonAncestor(\r\n        self, root: \"TreeNode\", p: \"TreeNode\", q: \"TreeNode\"\r\n    ) -> \"TreeNode\":\r\n        if root in (None, p, q):\r\n            return root\r\n        left = self.lowestCommonAncestor(root.left, p, q)\r\n        right = self.lowestCommonAncestor(root.right, p, q)\r\n        return root if left and right else (left or right)",
+    "problemId": 236,
+    "title": "Lowest Common Ancestor of a Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0236.Lowest Common Ancestor of a Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0236.Lowest Common Ancestor of a Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0236.Lowest Common Ancestor of a Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0236.Lowest Common Ancestor of a Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0236.Lowest Common Ancestor of a Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0236.Lowest Common Ancestor of a Binary Tree/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0236.Lowest Common Ancestor of a Binary Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0236.Lowest Common Ancestor of a Binary Tree/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

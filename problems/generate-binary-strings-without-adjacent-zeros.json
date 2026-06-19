@@ -1,0 +1,38 @@
+{
+    "problemName": "generate-binary-strings-without-adjacent-zeros",
+    "language": "python3",
+    "code": "class Solution:\r\n    def validStrings(self, n: int) -> List[str]:\r\n        def dfs(i: int):\r\n            if i >= n:\r\n                ans.append(\"\".join(t))\r\n                return\r\n            for j in range(2):\r\n                if (j == 0 and (i == 0 or t[i - 1] == \"1\")) or j == 1:\r\n                    t.append(str(j))\r\n                    dfs(i + 1)\r\n                    t.pop()\r\n\r\n        ans = []\r\n        t = []\r\n        dfs(0)\r\n        return ans",
+    "problemId": 3211,
+    "title": "Generate Binary Strings Without Adjacent Zeros",
+    "problemUrl": "https://leetcode.com/problems/generate-binary-strings-without-adjacent-zeros/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3211.Generate Binary Strings Without Adjacent Zeros/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3211.Generate Binary Strings Without Adjacent Zeros/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3211.Generate Binary Strings Without Adjacent Zeros/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3211.Generate Binary Strings Without Adjacent Zeros/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3211.Generate Binary Strings Without Adjacent Zeros/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3211.Generate Binary Strings Without Adjacent Zeros/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

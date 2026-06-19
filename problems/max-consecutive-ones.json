@@ -1,0 +1,48 @@
+{
+    "problemName": "max-consecutive-ones",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMaxConsecutiveOnes(self, nums: List[int]) -> int:\r\n        ans = cnt = 0\r\n        for x in nums:\r\n            if x:\r\n                cnt += 1\r\n                ans = max(ans, cnt)\r\n            else:\r\n                cnt = 0\r\n        return ans",
+    "problemId": 485,
+    "title": "Max Consecutive Ones",
+    "problemUrl": "https://leetcode.com/problems/max-consecutive-ones/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0485.Max Consecutive Ones/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0485.Max Consecutive Ones/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0485.Max Consecutive Ones/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0485.Max Consecutive Ones/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0485.Max Consecutive Ones/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0485.Max Consecutive Ones/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0485.Max Consecutive Ones/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0485.Max Consecutive Ones/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

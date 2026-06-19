@@ -1,0 +1,33 @@
+{
+    "problemName": "shifting-letters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shiftingLetters(self, s: str, shifts: List[int]) -> str:\r\n        n, t = len(s), 0\r\n        s = list(s)\r\n        for i in range(n - 1, -1, -1):\r\n            t += shifts[i]\r\n            j = (ord(s[i]) - ord(\"a\") + t) % 26\r\n            s[i] = ascii_lowercase[j]\r\n        return \"\".join(s)",
+    "problemId": 848,
+    "title": "Shifting Letters",
+    "problemUrl": "https://leetcode.com/problems/shifting-letters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0848.Shifting Letters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0848.Shifting Letters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0848.Shifting Letters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0848.Shifting Letters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0848.Shifting Letters/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

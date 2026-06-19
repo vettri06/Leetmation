@@ -1,0 +1,38 @@
+{
+    "problemName": "dinner-plate-stacks",
+    "language": "python3",
+    "code": "class DinnerPlates:\r\n    def __init__(self, capacity: int):\r\n        self.capacity = capacity\r\n        self.stacks = []\r\n        self.not_full = SortedSet()\r\n\r\n    def push(self, val: int) -> None:\r\n        if not self.not_full:\r\n            self.stacks.append([val])\r\n            if self.capacity > 1:\r\n                self.not_full.add(len(self.stacks) - 1)\r\n        else:\r\n            index = self.not_full[0]\r\n            self.stacks[index].append(val)\r\n            if len(self.stacks[index]) == self.capacity:\r\n                self.not_full.discard(index)\r\n\r\n    def pop(self) -> int:\r\n        return self.popAtStack(len(self.stacks) - 1)\r\n\r\n    def popAtStack(self, index: int) -> int:\r\n        if index < 0 or index >= len(self.stacks) or not self.stacks[index]:\r\n            return -1\r\n        val = self.stacks[index].pop()\r\n        if index == len(self.stacks) - 1 and not self.stacks[-1]:\r\n            while self.stacks and not self.stacks[-1]:\r\n                self.not_full.discard(len(self.stacks) - 1)\r\n                self.stacks.pop()\r\n        else:\r\n            self.not_full.add(index)\r\n        return val\r\n\r\n\r\n# Your DinnerPlates object will be instantiated and called as such:\r\n# obj = DinnerPlates(capacity)\r\n# obj.push(val)\r\n# param_2 = obj.pop()\r\n# param_3 = obj.popAtStack(index)",
+    "problemId": 1172,
+    "title": "Dinner Plate Stacks",
+    "problemUrl": "https://leetcode.com/problems/dinner-plate-stacks/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1172.Dinner Plate Stacks/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1172.Dinner Plate Stacks/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1172.Dinner Plate Stacks/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1172.Dinner Plate Stacks/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1172.Dinner Plate Stacks/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1172.Dinner Plate Stacks/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

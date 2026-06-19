@@ -1,0 +1,38 @@
+{
+    "problemName": "find-a-value-of-a-mysterious-function-closest-to-target",
+    "language": "python3",
+    "code": "class Solution:\r\n    def closestToTarget(self, arr: List[int], target: int) -> int:\r\n        ans = abs(arr[0] - target)\r\n        s = {arr[0]}\r\n        for x in arr:\r\n            s = {x & y for y in s} | {x}\r\n            ans = min(ans, min(abs(y - target) for y in s))\r\n        return ans",
+    "problemId": 1521,
+    "title": "Find a Value of a Mysterious Function Closest to Target",
+    "problemUrl": "https://leetcode.com/problems/find-a-value-of-a-mysterious-function-closest-to-target/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1521.Find a Value of a Mysterious Function Closest to Target/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1521.Find a Value of a Mysterious Function Closest to Target/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1521.Find a Value of a Mysterious Function Closest to Target/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1521.Find a Value of a Mysterious Function Closest to Target/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1521.Find a Value of a Mysterious Function Closest to Target/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1521.Find a Value of a Mysterious Function Closest to Target/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

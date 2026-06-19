@@ -1,0 +1,18 @@
+{
+    "problemName": "count-artist-occurrences-on-spotify-ranking-list",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    artist,\r\n    COUNT(1) AS occurrences\r\nFROM Spotify\r\nGROUP BY artist\r\nORDER BY occurrences DESC, artist;",
+    "problemId": 2669,
+    "title": "Count Artist Occurrences On Spotify Ranking List",
+    "problemUrl": "https://leetcode.com/problems/count-artist-occurrences-on-spotify-ranking-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2669.Count Artist Occurrences On Spotify Ranking List/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2669.Count Artist Occurrences On Spotify Ranking List/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

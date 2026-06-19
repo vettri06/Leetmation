@@ -1,0 +1,53 @@
+{
+    "problemName": "word-pattern",
+    "language": "python3",
+    "code": "class Solution:\r\n    def wordPattern(self, pattern: str, s: str) -> bool:\r\n        ws = s.split()\r\n        if len(pattern) != len(ws):\r\n            return False\r\n        d1 = {}\r\n        d2 = {}\r\n        for a, b in zip(pattern, ws):\r\n            if (a in d1 and d1[a] != b) or (b in d2 and d2[b] != a):\r\n                return False\r\n            d1[a] = b\r\n            d2[b] = a\r\n        return True",
+    "problemId": 290,
+    "title": "Word Pattern",
+    "problemUrl": "https://leetcode.com/problems/word-pattern/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0290.Word Pattern/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0290.Word Pattern/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0290.Word Pattern/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0290.Word Pattern/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0290.Word Pattern/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0290.Word Pattern/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0290.Word Pattern/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0290.Word Pattern/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0290.Word Pattern/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

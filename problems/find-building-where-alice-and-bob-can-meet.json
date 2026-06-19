@@ -1,0 +1,38 @@
+{
+    "problemName": "find-building-where-alice-and-bob-can-meet",
+    "language": "python3",
+    "code": "class BinaryIndexedTree:\r\n    __slots__ = [\"n\", \"c\"]\r\n\r\n    def __init__(self, n: int):\r\n        self.n = n\r\n        self.c = [inf] * (n + 1)\r\n\r\n    def update(self, x: int, v: int):\r\n        while x <= self.n:\r\n            self.c[x] = min(self.c[x], v)\r\n            x += x & -x\r\n\r\n    def query(self, x: int) -> int:\r\n        mi = inf\r\n        while x:\r\n            mi = min(mi, self.c[x])\r\n            x -= x & -x\r\n        return -1 if mi == inf else mi\r\n\r\n\r\nclass Solution:\r\n    def leftmostBuildingQueries(\r\n        self, heights: List[int], queries: List[List[int]]\r\n    ) -> List[int]:\r\n        n, m = len(heights), len(queries)\r\n        for i in range(m):\r\n            queries[i] = [min(queries[i]), max(queries[i])]\r\n        j = n - 1\r\n        s = sorted(set(heights))\r\n        ans = [-1] * m\r\n        tree = BinaryIndexedTree(n)\r\n        for i in sorted(range(m), key=lambda i: -queries[i][1]):\r\n            l, r = queries[i]\r\n            while j > r:\r\n                k = n - bisect_left(s, heights[j]) + 1\r\n                tree.update(k, j)\r\n                j -= 1\r\n            if l == r or heights[l] < heights[r]:\r\n                ans[i] = r\r\n            else:\r\n                k = n - bisect_left(s, heights[l])\r\n                ans[i] = tree.query(k)\r\n        return ans",
+    "problemId": 2940,
+    "title": "Find Building Where Alice and Bob Can Meet",
+    "problemUrl": "https://leetcode.com/problems/find-building-where-alice-and-bob-can-meet/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2940.Find Building Where Alice and Bob Can Meet/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2940.Find Building Where Alice and Bob Can Meet/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2940.Find Building Where Alice and Bob Can Meet/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2940.Find Building Where Alice and Bob Can Meet/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2940.Find Building Where Alice and Bob Can Meet/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2940.Find Building Where Alice and Bob Can Meet/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

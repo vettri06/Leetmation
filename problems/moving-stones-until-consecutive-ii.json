@@ -1,0 +1,38 @@
+{
+    "problemName": "moving-stones-until-consecutive-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numMovesStonesII(self, stones: List[int]) -> List[int]:\r\n        stones.sort()\r\n        mi = n = len(stones)\r\n        mx = max(stones[-1] - stones[1] + 1, stones[-2] - stones[0] + 1) - (n - 1)\r\n        i = 0\r\n        for j, x in enumerate(stones):\r\n            while x - stones[i] + 1 > n:\r\n                i += 1\r\n            if j - i + 1 == n - 1 and x - stones[i] == n - 2:\r\n                mi = min(mi, 2)\r\n            else:\r\n                mi = min(mi, n - (j - i + 1))\r\n        return [mi, mx]",
+    "problemId": 1040,
+    "title": "Moving Stones Until Consecutive II",
+    "problemUrl": "https://leetcode.com/problems/moving-stones-until-consecutive-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1040.Moving Stones Until Consecutive II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1040.Moving Stones Until Consecutive II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1040.Moving Stones Until Consecutive II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1040.Moving Stones Until Consecutive II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1040.Moving Stones Until Consecutive II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1040.Moving Stones Until Consecutive II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

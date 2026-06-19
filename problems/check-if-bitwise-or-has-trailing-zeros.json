@@ -1,0 +1,38 @@
+{
+    "problemName": "check-if-bitwise-or-has-trailing-zeros",
+    "language": "python3",
+    "code": "class Solution:\r\n    def hasTrailingZeros(self, nums: List[int]) -> bool:\r\n        return sum(x & 1 ^ 1 for x in nums) >= 2",
+    "problemId": 2980,
+    "title": "Check if Bitwise OR Has Trailing Zeros",
+    "problemUrl": "https://leetcode.com/problems/check-if-bitwise-or-has-trailing-zeros/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2980.Check if Bitwise OR Has Trailing Zeros/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2980.Check if Bitwise OR Has Trailing Zeros/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2980.Check if Bitwise OR Has Trailing Zeros/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2980.Check if Bitwise OR Has Trailing Zeros/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2980.Check if Bitwise OR Has Trailing Zeros/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2980.Check if Bitwise OR Has Trailing Zeros/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-total-subarray-value-ii",
+    "language": "python3",
+    "code": "class SparseTableRMQ:\r\n    def __init__(self, data: List[int]):\r\n        self.n = len(data)\r\n        self.max_log = self.n.bit_length() + 1\r\n        self.f_max = [[0] * self.max_log for _ in range(self.n)]\r\n        self.f_min = [[0] * self.max_log for _ in range(self.n)]\r\n\r\n        self.lg = [0] * (self.n + 1)\r\n        for i in range(2, self.n + 1):\r\n            self.lg[i] = self.lg[i >> 1] + 1\r\n\r\n        for i in range(self.n):\r\n            self.f_max[i][0] = data[i]\r\n            self.f_min[i][0] = data[i]\r\n\r\n        for j in range(1, self.max_log):\r\n            for i in range(self.n - (1 << j) + 1):\r\n                self.f_max[i][j] = max(\r\n                    self.f_max[i][j - 1], self.f_max[i + (1 << (j - 1))][j - 1]\r\n                )\r\n                self.f_min[i][j] = min(\r\n                    self.f_min[i][j - 1], self.f_min[i + (1 << (j - 1))][j - 1]\r\n                )\r\n\r\n    def query_max(self, l: int, r: int) -> int:\r\n        k = self.lg[r - l + 1]\r\n        return max(self.f_max[l][k], self.f_max[r - (1 << k) + 1][k])\r\n\r\n    def query_min(self, l: int, r: int) -> int:\r\n        k = self.lg[r - l + 1]\r\n        return min(self.f_min[l][k], self.f_min[r - (1 << k) + 1][k])\r\n\r\n\r\nclass Solution:\r\n    def maxTotalValue(self, nums: List[int], k: int) -> int:\r\n        n = len(nums)\r\n        st = SparseTableRMQ(nums)\r\n        pq = []\r\n        for l in range(n):\r\n            val = st.query_max(l, n - 1) - st.query_min(l, n - 1)\r\n            heappush(pq, (-val, l, n - 1))\r\n\r\n        ans = 0\r\n        for _ in range(k):\r\n            val, l, r = heappop(pq)\r\n            ans += -val\r\n            if r > l:\r\n                val = st.query_max(l, r - 1) - st.query_min(l, r - 1)\r\n                heappush(pq, (-val, l, r - 1))\r\n        return ans",
+    "problemId": 3691,
+    "title": "Maximum Total Subarray Value II",
+    "problemUrl": "https://leetcode.com/problems/maximum-total-subarray-value-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3691.Maximum Total Subarray Value II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3691.Maximum Total Subarray Value II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3691.Maximum Total Subarray Value II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3691.Maximum Total Subarray Value II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3691.Maximum Total Subarray Value II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3691.Maximum Total Subarray Value II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

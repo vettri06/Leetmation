@@ -1,0 +1,58 @@
+{
+    "problemName": "to-lower-case",
+    "language": "python3",
+    "code": "class Solution:\r\n    def toLowerCase(self, s: str) -> str:\r\n        return \"\".join([chr(ord(c) | 32) if c.isupper() else c for c in s])",
+    "problemId": 709,
+    "title": "To Lower Case",
+    "problemUrl": "https://leetcode.com/problems/to-lower-case/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0709.To Lower Case/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0709.To Lower Case/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0709.To Lower Case/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0709.To Lower Case/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0709.To Lower Case/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0709.To Lower Case/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0709.To Lower Case/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0709.To Lower Case/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0709.To Lower Case/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0709.To Lower Case/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "problemName": "minimize-result-by-adding-parentheses-to-expression",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimizeResult(self, expression: str) -> str:\r\n        l, r = expression.split(\"+\")\r\n        m, n = len(l), len(r)\r\n        mi = inf\r\n        ans = None\r\n        for i in range(m):\r\n            for j in range(n):\r\n                c = int(l[i:]) + int(r[: j + 1])\r\n                a = 1 if i == 0 else int(l[:i])\r\n                b = 1 if j == n - 1 else int(r[j + 1 :])\r\n                if (t := a * b * c) < mi:\r\n                    mi = t\r\n                    ans = f\"{l[:i]}({l[i:]}+{r[: j + 1]}){r[j + 1:]}\"\r\n        return ans",
+    "problemId": 2232,
+    "title": "Minimize Result by Adding Parentheses to Expression",
+    "problemUrl": "https://leetcode.com/problems/minimize-result-by-adding-parentheses-to-expression/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2232.Minimize Result by Adding Parentheses to Expression/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2232.Minimize Result by Adding Parentheses to Expression/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2232.Minimize Result by Adding Parentheses to Expression/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2232.Minimize Result by Adding Parentheses to Expression/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

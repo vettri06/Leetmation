@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-operations-to-equalize-binary-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, s: str, k: int) -> int:\r\n        n = len(s)\r\n        ts = [SortedSet() for _ in range(2)]\r\n        for i in range(n + 1):\r\n            ts[i % 2].add(i)\r\n        cnt0 = s.count('0')\r\n        ts[cnt0 % 2].remove(cnt0)\r\n        q = deque([cnt0])\r\n        ans = 0\r\n        while q:\r\n            for _ in range(len(q)):\r\n                cur = q.popleft()\r\n                if cur == 0:\r\n                    return ans\r\n                l = cur + k - 2 * min(cur, k)\r\n                r = cur + k - 2 * max(k - n + cur, 0)\r\n                t = ts[l % 2]\r\n                j = t.bisect_left(l)\r\n                while j < len(t) and t[j] <= r:\r\n                    q.append(t[j])\r\n                    t.remove(t[j])\r\n            ans += 1\r\n        return -1",
+    "problemId": 3666,
+    "title": "Minimum Operations to Equalize Binary String",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-equalize-binary-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3666.Minimum Operations to Equalize Binary String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3666.Minimum Operations to Equalize Binary String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3666.Minimum Operations to Equalize Binary String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3666.Minimum Operations to Equalize Binary String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3666.Minimum Operations to Equalize Binary String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3666.Minimum Operations to Equalize Binary String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3666.Minimum Operations to Equalize Binary String/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3666.Minimum Operations to Equalize Binary String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

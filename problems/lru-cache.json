@@ -1,0 +1,48 @@
+{
+    "problemName": "lru-cache",
+    "language": "python3",
+    "code": "class Node:\r\n    def __init__(self, key: int = 0, val: int = 0):\r\n        self.key = key\r\n        self.val = val\r\n        self.prev = None\r\n        self.next = None\r\n\r\n\r\nclass LRUCache:\r\n    def __init__(self, capacity: int):\r\n        self.size = 0\r\n        self.capacity = capacity\r\n        self.cache = {}\r\n        self.head = Node()\r\n        self.tail = Node()\r\n        self.head.next = self.tail\r\n        self.tail.prev = self.head\r\n\r\n    def get(self, key: int) -> int:\r\n        if key not in self.cache:\r\n            return -1\r\n        node = self.cache[key]\r\n        self.remove_node(node)\r\n        self.add_to_head(node)\r\n        return node.val\r\n\r\n    def put(self, key: int, value: int) -> None:\r\n        if key in self.cache:\r\n            node = self.cache[key]\r\n            self.remove_node(node)\r\n            node.val = value\r\n            self.add_to_head(node)\r\n        else:\r\n            node = Node(key, value)\r\n            self.cache[key] = node\r\n            self.add_to_head(node)\r\n            self.size += 1\r\n            if self.size > self.capacity:\r\n                node = self.tail.prev\r\n                self.cache.pop(node.key)\r\n                self.remove_node(node)\r\n                self.size -= 1\r\n\r\n    def remove_node(self, node):\r\n        node.prev.next = node.next\r\n        node.next.prev = node.prev\r\n\r\n    def add_to_head(self, node):\r\n        node.next = self.head.next\r\n        node.prev = self.head\r\n        self.head.next = node\r\n        node.next.prev = node\r\n\r\n\r\n# Your LRUCache object will be instantiated and called as such:\r\n# obj = LRUCache(capacity)\r\n# param_1 = obj.get(key)\r\n# obj.put(key,value)",
+    "problemId": 146,
+    "title": "LRU Cache",
+    "problemUrl": "https://leetcode.com/problems/lru-cache/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0146.LRU Cache/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0146.LRU Cache/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0146.LRU Cache/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0146.LRU Cache/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0146.LRU Cache/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0146.LRU Cache/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0146.LRU Cache/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0146.LRU Cache/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

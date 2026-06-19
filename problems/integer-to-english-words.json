@@ -1,0 +1,48 @@
+{
+    "problemName": "integer-to-english-words",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberToWords(self, num: int) -> str:\r\n        if num == 0:\r\n            return 'Zero'\r\n\r\n        lt20 = [\r\n            '',\r\n            'One',\r\n            'Two',\r\n            'Three',\r\n            'Four',\r\n            'Five',\r\n            'Six',\r\n            'Seven',\r\n            'Eight',\r\n            'Nine',\r\n            'Ten',\r\n            'Eleven',\r\n            'Twelve',\r\n            'Thirteen',\r\n            'Fourteen',\r\n            'Fifteen',\r\n            'Sixteen',\r\n            'Seventeen',\r\n            'Eighteen',\r\n            'Nineteen',\r\n        ]\r\n        tens = [\r\n            '',\r\n            'Ten',\r\n            'Twenty',\r\n            'Thirty',\r\n            'Forty',\r\n            'Fifty',\r\n            'Sixty',\r\n            'Seventy',\r\n            'Eighty',\r\n            'Ninety',\r\n        ]\r\n        thousands = ['Billion', 'Million', 'Thousand', '']\r\n\r\n        def transfer(num):\r\n            if num == 0:\r\n                return ''\r\n            if num < 20:\r\n                return lt20[num] + ' '\r\n            if num < 100:\r\n                return tens[num // 10] + ' ' + transfer(num % 10)\r\n            return lt20[num // 100] + ' Hundred ' + transfer(num % 100)\r\n\r\n        res = []\r\n        i, j = 1000000000, 0\r\n        while i > 0:\r\n            if num // i != 0:\r\n                res.append(transfer(num // i))\r\n                res.append(thousands[j])\r\n                res.append(' ')\r\n                num %= i\r\n            j += 1\r\n            i //= 1000\r\n        return ''.join(res).strip()",
+    "problemId": 273,
+    "title": "Integer to English Words",
+    "problemUrl": "https://leetcode.com/problems/integer-to-english-words/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0273.Integer to English Words/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0273.Integer to English Words/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0273.Integer to English Words/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0273.Integer to English Words/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0273.Integer to English Words/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0273.Integer to English Words/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0273.Integer to English Words/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0273.Integer to English Words/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

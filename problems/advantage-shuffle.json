@@ -1,0 +1,43 @@
+{
+    "problemName": "advantage-shuffle",
+    "language": "python3",
+    "code": "class Solution:\r\n    def advantageCount(self, nums1: List[int], nums2: List[int]) -> List[int]:\r\n        nums1.sort()\r\n        t = sorted((v, i) for i, v in enumerate(nums2))\r\n        n = len(nums2)\r\n        ans = [0] * n\r\n        i, j = 0, n - 1\r\n        for v in nums1:\r\n            if v <= t[i][0]:\r\n                ans[t[j][1]] = v\r\n                j -= 1\r\n            else:\r\n                ans[t[i][1]] = v\r\n                i += 1\r\n        return ans",
+    "problemId": 870,
+    "title": "Advantage Shuffle",
+    "problemUrl": "https://leetcode.com/problems/advantage-shuffle/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0870.Advantage Shuffle/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0870.Advantage Shuffle/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0870.Advantage Shuffle/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0870.Advantage Shuffle/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0870.Advantage Shuffle/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0870.Advantage Shuffle/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0870.Advantage Shuffle/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

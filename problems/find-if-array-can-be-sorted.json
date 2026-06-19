@@ -1,0 +1,38 @@
+{
+    "problemName": "find-if-array-can-be-sorted",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canSortArray(self, nums: List[int]) -> bool:\r\n        pre_mx = 0\r\n        i, n = 0, len(nums)\r\n        while i < n:\r\n            cnt = nums[i].bit_count()\r\n            j = i + 1\r\n            mi = mx = nums[i]\r\n            while j < n and nums[j].bit_count() == cnt:\r\n                mi = min(mi, nums[j])\r\n                mx = max(mx, nums[j])\r\n                j += 1\r\n            if pre_mx > mi:\r\n                return False\r\n            pre_mx = mx\r\n            i = j\r\n        return True",
+    "problemId": 3011,
+    "title": "Find if Array Can Be Sorted",
+    "problemUrl": "https://leetcode.com/problems/find-if-array-can-be-sorted/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3011.Find if Array Can Be Sorted/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3011.Find if Array Can Be Sorted/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3011.Find if Array Can Be Sorted/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3011.Find if Array Can Be Sorted/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3011.Find if Array Can Be Sorted/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3011.Find if Array Can Be Sorted/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

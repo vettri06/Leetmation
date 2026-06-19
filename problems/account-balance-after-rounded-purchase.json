@@ -1,0 +1,38 @@
+{
+    "problemName": "account-balance-after-rounded-purchase",
+    "language": "python3",
+    "code": "class Solution:\r\n    def accountBalanceAfterPurchase(self, purchaseAmount: int) -> int:\r\n        diff, x = 100, 0\r\n        for y in range(100, -1, -10):\r\n            if (t := abs(y - purchaseAmount)) < diff:\r\n                diff = t\r\n                x = y\r\n        return 100 - x",
+    "problemId": 2806,
+    "title": "Account Balance After Rounded Purchase",
+    "problemUrl": "https://leetcode.com/problems/account-balance-after-rounded-purchase/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2806.Account Balance After Rounded Purchase/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2806.Account Balance After Rounded Purchase/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2806.Account Balance After Rounded Purchase/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2806.Account Balance After Rounded Purchase/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2806.Account Balance After Rounded Purchase/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2806.Account Balance After Rounded Purchase/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

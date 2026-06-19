@@ -1,0 +1,38 @@
+{
+    "problemName": "maximize-number-of-subsequences-in-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumSubsequenceCount(self, text: str, pattern: str) -> int:\r\n        ans = x = y = 0\r\n        for c in text:\r\n            if c == pattern[1]:\r\n                y += 1\r\n                ans += x\r\n            if c == pattern[0]:\r\n                x += 1\r\n        ans += max(x, y)\r\n        return ans",
+    "problemId": 2207,
+    "title": "Maximize Number of Subsequences in a String",
+    "problemUrl": "https://leetcode.com/problems/maximize-number-of-subsequences-in-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2207.Maximize Number of Subsequences in a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2207.Maximize Number of Subsequences in a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2207.Maximize Number of Subsequences in a String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2207.Maximize Number of Subsequences in a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2207.Maximize Number of Subsequences in a String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2207.Maximize Number of Subsequences in a String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

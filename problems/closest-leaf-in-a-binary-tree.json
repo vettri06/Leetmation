@@ -1,0 +1,33 @@
+{
+    "problemName": "closest-leaf-in-a-binary-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def findClosestLeaf(self, root: Optional[TreeNode], k: int) -> int:\r\n        def dfs(root: Optional[TreeNode], fa: Optional[TreeNode]):\r\n            if root:\r\n                g[root].append(fa)\r\n                g[fa].append(root)\r\n                dfs(root.left, root)\r\n                dfs(root.right, root)\r\n\r\n        g = defaultdict(list)\r\n        dfs(root, None)\r\n        q = deque(node for node in g if node and node.val == k)\r\n        vis = set(q)\r\n        while 1:\r\n            node = q.popleft()\r\n            if node:\r\n                if node.left == node.right:\r\n                    return node.val\r\n                for nxt in g[node]:\r\n                    if nxt not in vis:\r\n                        vis.add(nxt)\r\n                        q.append(nxt)",
+    "problemId": 742,
+    "title": "Closest Leaf in a Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/closest-leaf-in-a-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0742.Closest Leaf in a Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0742.Closest Leaf in a Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0742.Closest Leaf in a Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0742.Closest Leaf in a Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0742.Closest Leaf in a Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

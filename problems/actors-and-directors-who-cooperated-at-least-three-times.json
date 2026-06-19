@@ -1,0 +1,18 @@
+{
+    "problemName": "actors-and-directors-who-cooperated-at-least-three-times",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT actor_id, director_id\r\nFROM ActorDirector\r\nGROUP BY 1, 2\r\nHAVING COUNT(1) >= 3;",
+    "problemId": 1050,
+    "title": "Actors and Directors Who Cooperated At Least Three Times",
+    "problemUrl": "https://leetcode.com/problems/actors-and-directors-who-cooperated-at-least-three-times/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1050.Actors and Directors Who Cooperated At Least Three Times/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1050.Actors and Directors Who Cooperated At Least Three Times/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

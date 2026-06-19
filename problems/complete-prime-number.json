@@ -1,0 +1,38 @@
+{
+    "problemName": "complete-prime-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def completePrime(self, num: int) -> bool:\r\n        def is_prime(x: int) -> bool:\r\n            if x < 2:\r\n                return False\r\n            return all(x % i for i in range(2, int(sqrt(x)) + 1))\r\n\r\n        s = str(num)\r\n        x = 0\r\n        for c in s:\r\n            x = x * 10 + int(c)\r\n            if not is_prime(x):\r\n                return False\r\n        x, p = 0, 1\r\n        for c in s[::-1]:\r\n            x = p * int(c) + x\r\n            p *= 10\r\n            if not is_prime(x):\r\n                return False\r\n        return True",
+    "problemId": 3765,
+    "title": "Complete Prime Number",
+    "problemUrl": "https://leetcode.com/problems/complete-prime-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3765.Complete Prime Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3765.Complete Prime Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3765.Complete Prime Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3765.Complete Prime Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3765.Complete Prime Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3765.Complete Prime Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

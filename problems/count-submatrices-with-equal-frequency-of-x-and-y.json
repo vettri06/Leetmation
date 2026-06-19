@@ -1,0 +1,43 @@
+{
+    "problemName": "count-submatrices-with-equal-frequency-of-x-and-y",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfSubmatrices(self, grid: List[List[str]]) -> int:\r\n        m, n = len(grid), len(grid[0])\r\n        s = [[[0] * 2 for _ in range(n + 1)] for _ in range(m + 1)]\r\n        ans = 0\r\n        for i, row in enumerate(grid, 1):\r\n            for j, x in enumerate(row, 1):\r\n                s[i][j][0] = s[i - 1][j][0] + s[i][j - 1][0] - s[i - 1][j - 1][0]\r\n                s[i][j][1] = s[i - 1][j][1] + s[i][j - 1][1] - s[i - 1][j - 1][1]\r\n                if x != \".\":\r\n                    s[i][j][ord(x) & 1] += 1\r\n                if s[i][j][0] > 0 and s[i][j][0] == s[i][j][1]:\r\n                    ans += 1\r\n        return ans",
+    "problemId": 3212,
+    "title": "Count Submatrices With Equal Frequency of X and Y",
+    "problemUrl": "https://leetcode.com/problems/count-submatrices-with-equal-frequency-of-x-and-y/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3212.Count Submatrices With Equal Frequency of X and Y/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3212.Count Submatrices With Equal Frequency of X and Y/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3212.Count Submatrices With Equal Frequency of X and Y/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3212.Count Submatrices With Equal Frequency of X and Y/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3212.Count Submatrices With Equal Frequency of X and Y/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3212.Count Submatrices With Equal Frequency of X and Y/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3212.Count Submatrices With Equal Frequency of X and Y/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

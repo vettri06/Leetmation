@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-score-by-changing-two-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimizeSum(self, nums: List[int]) -> int:\r\n        nums.sort()\r\n        return min(nums[-1] - nums[2], nums[-2] - nums[1], nums[-3] - nums[0])",
+    "problemId": 2567,
+    "title": "Minimum Score by Changing Two Elements",
+    "problemUrl": "https://leetcode.com/problems/minimum-score-by-changing-two-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2567.Minimum Score by Changing Two Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2567.Minimum Score by Changing Two Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2567.Minimum Score by Changing Two Elements/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2567.Minimum Score by Changing Two Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2567.Minimum Score by Changing Two Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2567.Minimum Score by Changing Two Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2567.Minimum Score by Changing Two Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2567.Minimum Score by Changing Two Elements/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

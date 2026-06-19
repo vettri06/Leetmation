@@ -1,0 +1,38 @@
+{
+    "problemName": "find-right-interval",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findRightInterval(self, intervals: List[List[int]]) -> List[int]:\r\n        n = len(intervals)\r\n        ans = [-1] * n\r\n        arr = sorted((st, i) for i, (st, _) in enumerate(intervals))\r\n        for i, (_, ed) in enumerate(intervals):\r\n            j = bisect_left(arr, (ed, -inf))\r\n            if j < n:\r\n                ans[i] = arr[j][1]\r\n        return ans",
+    "problemId": 436,
+    "title": "Find Right Interval",
+    "problemUrl": "https://leetcode.com/problems/find-right-interval/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0436.Find Right Interval/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0436.Find Right Interval/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0436.Find Right Interval/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0436.Find Right Interval/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0436.Find Right Interval/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0436.Find Right Interval/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

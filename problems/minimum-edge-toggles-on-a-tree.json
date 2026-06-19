@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-edge-toggles-on-a-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumFlips(\r\n        self, n: int, edges: List[List[int]], start: str, target: str\r\n    ) -> List[int]:\r\n        g = [[] for _ in range(n)]\r\n        for i, (a, b) in enumerate(edges):\r\n            g[a].append((b, i))\r\n            g[b].append((a, i))\r\n\r\n        ans = []\r\n\r\n        def dfs(a: int, fa: int) -> bool:\r\n            rev = start[a] != target[a]\r\n            for b, i in g[a]:\r\n                if b != fa and dfs(b, a):\r\n                    ans.append(i)\r\n                    rev = not rev\r\n            return rev\r\n\r\n        if dfs(0, -1):\r\n            return [-1]\r\n        ans.sort()\r\n        return ans",
+    "problemId": 3812,
+    "title": "Minimum Edge Toggles on a Tree",
+    "problemUrl": "https://leetcode.com/problems/minimum-edge-toggles-on-a-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3812.Minimum Edge Toggles on a Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3812.Minimum Edge Toggles on a Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3812.Minimum Edge Toggles on a Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3812.Minimum Edge Toggles on a Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3812.Minimum Edge Toggles on a Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

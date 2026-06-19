@@ -1,0 +1,38 @@
+{
+    "problemName": "swap-for-longest-repeated-character-substring",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxRepOpt1(self, text: str) -> int:\r\n        cnt = Counter(text)\r\n        n = len(text)\r\n        ans = i = 0\r\n        while i < n:\r\n            j = i\r\n            while j < n and text[j] == text[i]:\r\n                j += 1\r\n            l = j - i\r\n            k = j + 1\r\n            while k < n and text[k] == text[i]:\r\n                k += 1\r\n            r = k - j - 1\r\n            ans = max(ans, min(l + r + 1, cnt[text[i]]))\r\n            i = j\r\n        return ans",
+    "problemId": 1156,
+    "title": "Swap For Longest Repeated Character Substring",
+    "problemUrl": "https://leetcode.com/problems/swap-for-longest-repeated-character-substring/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1156.Swap For Longest Repeated Character Substring/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1156.Swap For Longest Repeated Character Substring/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1156.Swap For Longest Repeated Character Substring/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1156.Swap For Longest Repeated Character Substring/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1156.Swap For Longest Repeated Character Substring/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1156.Swap For Longest Repeated Character Substring/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

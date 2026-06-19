@@ -1,0 +1,38 @@
+{
+    "problemName": "first-unique-even-element",
+    "language": "python3",
+    "code": "class Solution:\r\n    def firstUniqueEven(self, nums: list[int]) -> int:\r\n        cnt = Counter(nums)\r\n        for x in nums:\r\n            if x % 2 == 0 and cnt[x] == 1:\r\n                return x\r\n        return -1",
+    "problemId": 3866,
+    "title": "First Unique Even Element",
+    "problemUrl": "https://leetcode.com/problems/first-unique-even-element/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3866.First Unique Even Element/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3866.First Unique Even Element/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3866.First Unique Even Element/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3866.First Unique Even Element/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3866.First Unique Even Element/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3866.First Unique Even Element/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

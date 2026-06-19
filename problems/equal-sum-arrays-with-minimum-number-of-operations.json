@@ -1,0 +1,53 @@
+{
+    "problemName": "equal-sum-arrays-with-minimum-number-of-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums1: List[int], nums2: List[int]) -> int:\r\n        s1, s2 = sum(nums1), sum(nums2)\r\n        if s1 == s2:\r\n            return 0\r\n        if s1 > s2:\r\n            return self.minOperations(nums2, nums1)\r\n        arr = [6 - v for v in nums1] + [v - 1 for v in nums2]\r\n        d = s2 - s1\r\n        for i, v in enumerate(sorted(arr, reverse=True), 1):\r\n            d -= v\r\n            if d <= 0:\r\n                return i\r\n        return -1",
+    "problemId": 1775,
+    "title": "Equal Sum Arrays With Minimum Number of Operations",
+    "problemUrl": "https://leetcode.com/problems/equal-sum-arrays-with-minimum-number-of-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1775.Equal Sum Arrays With Minimum Number of Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1775.Equal Sum Arrays With Minimum Number of Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1775.Equal Sum Arrays With Minimum Number of Operations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1775.Equal Sum Arrays With Minimum Number of Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1775.Equal Sum Arrays With Minimum Number of Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1775.Equal Sum Arrays With Minimum Number of Operations/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1775.Equal Sum Arrays With Minimum Number of Operations/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1775.Equal Sum Arrays With Minimum Number of Operations/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1775.Equal Sum Arrays With Minimum Number of Operations/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

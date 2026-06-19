@@ -1,0 +1,38 @@
+{
+    "problemName": "stable-subarrays-with-equal-boundary-and-interior-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countStableSubarrays(self, capacity: List[int]) -> int:\r\n        s = list(accumulate(capacity, initial=0))\r\n        n = len(capacity)\r\n        ans = 0\r\n        cnt = defaultdict(int)\r\n        for r in range(2, n):\r\n            l = r - 2\r\n            cnt[(capacity[l], capacity[l] + s[l + 1])] += 1\r\n            ans += cnt[(capacity[r], s[r])]\r\n        return ans",
+    "problemId": 3728,
+    "title": "Stable Subarrays With Equal Boundary and Interior Sum",
+    "problemUrl": "https://leetcode.com/problems/stable-subarrays-with-equal-boundary-and-interior-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3728.Stable Subarrays With Equal Boundary and Interior Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3728.Stable Subarrays With Equal Boundary and Interior Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3728.Stable Subarrays With Equal Boundary and Interior Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3728.Stable Subarrays With Equal Boundary and Interior Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3728.Stable Subarrays With Equal Boundary and Interior Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3728.Stable Subarrays With Equal Boundary and Interior Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "problemName": "add-strings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def addStrings(self, num1: str, num2: str) -> str:\r\n        i, j = len(num1) - 1, len(num2) - 1\r\n        ans = []\r\n        c = 0\r\n        while i >= 0 or j >= 0 or c:\r\n            a = 0 if i < 0 else int(num1[i])\r\n            b = 0 if j < 0 else int(num2[j])\r\n            c, v = divmod(a + b + c, 10)\r\n            ans.append(str(v))\r\n            i, j = i - 1, j - 1\r\n        return \"\".join(ans[::-1])\r\n\r\n    def subStrings(self, num1: str, num2: str) -> str:\r\n        m, n = len(num1), len(num2)\r\n        neg = m < n or (m == n and num1 < num2)\r\n        if neg:\r\n            num1, num2 = num2, num1\r\n        i, j = len(num1) - 1, len(num2) - 1\r\n        ans = []\r\n        c = 0\r\n        while i >= 0:\r\n            c = int(num1[i]) - c - (0 if j < 0 else int(num2[j]))\r\n            ans.append(str((c + 10) % 10))\r\n            c = 1 if c < 0 else 0\r\n            i, j = i - 1, j - 1\r\n        while len(ans) > 1 and ans[-1] == '0':\r\n            ans.pop()\r\n        if neg:\r\n            ans.append('-')\r\n        return ''.join(ans[::-1])",
+    "problemId": 415,
+    "title": "Add Strings",
+    "problemUrl": "https://leetcode.com/problems/add-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0415.Add Strings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0415.Add Strings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0415.Add Strings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0415.Add Strings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0415.Add Strings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0415.Add Strings/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0415.Add Strings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0415.Add Strings/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "kotlin",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0415.Add Strings/Solution.kt",
+            "sourceFile": "Solution.kt"
+        }
+    ]
+}

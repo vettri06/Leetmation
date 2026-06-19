@@ -1,0 +1,18 @@
+{
+    "problemName": "shortest-distance-in-a-plane",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT ROUND(SQRT(POW(p1.x - p2.x, 2) + POW(p1.y - p2.y, 2)), 2) AS shortest\r\nFROM\r\n    Point2D AS p1\r\n    JOIN Point2D AS p2 ON p1.x != p2.x OR p1.y != p2.y\r\nORDER BY 1\r\nLIMIT 1;",
+    "problemId": 612,
+    "title": "Shortest Distance in a Plane",
+    "problemUrl": "https://leetcode.com/problems/shortest-distance-in-a-plane/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0612.Shortest Distance in a Plane/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0612.Shortest Distance in a Plane/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

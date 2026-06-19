@@ -1,0 +1,63 @@
+{
+    "problemName": "maximum-alternating-subsequence-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxAlternatingSum(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        f = [0] * (n + 1)\r\n        g = [0] * (n + 1)\r\n        for i, x in enumerate(nums, 1):\r\n            f[i] = max(g[i - 1] - x, f[i - 1])\r\n            g[i] = max(f[i - 1] + x, g[i - 1])\r\n        return max(f[n], g[n])",
+    "problemId": 1911,
+    "title": "Maximum Alternating Subsequence Sum",
+    "problemUrl": "https://leetcode.com/problems/maximum-alternating-subsequence-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1911.Maximum Alternating Subsequence Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1911.Maximum Alternating Subsequence Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1911.Maximum Alternating Subsequence Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1911.Maximum Alternating Subsequence Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1911.Maximum Alternating Subsequence Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1911.Maximum Alternating Subsequence Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1911.Maximum Alternating Subsequence Sum/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1911.Maximum Alternating Subsequence Sum/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1911.Maximum Alternating Subsequence Sum/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1911.Maximum Alternating Subsequence Sum/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1911.Maximum Alternating Subsequence Sum/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

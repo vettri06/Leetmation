@@ -1,0 +1,63 @@
+{
+    "problemName": "largest-sum-of-averages",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestSumOfAverages(self, nums: List[int], k: int) -> float:\r\n        @cache\r\n        def dfs(i: int, k: int) -> float:\r\n            if i == n:\r\n                return 0\r\n            if k == 1:\r\n                return (s[n] - s[i]) / (n - i)\r\n            ans = 0\r\n            for j in range(i + 1, n):\r\n                ans = max(ans, (s[j] - s[i]) / (j - i) + dfs(j, k - 1))\r\n            return ans\r\n\r\n        n = len(nums)\r\n        s = list(accumulate(nums, initial=0))\r\n        return dfs(0, k)",
+    "problemId": 813,
+    "title": "Largest Sum of Averages",
+    "problemUrl": "https://leetcode.com/problems/largest-sum-of-averages/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0813.Largest Sum of Averages/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0813.Largest Sum of Averages/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0813.Largest Sum of Averages/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0813.Largest Sum of Averages/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0813.Largest Sum of Averages/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0813.Largest Sum of Averages/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0813.Largest Sum of Averages/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0813.Largest Sum of Averages/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0813.Largest Sum of Averages/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0813.Largest Sum of Averages/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0813.Largest Sum of Averages/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

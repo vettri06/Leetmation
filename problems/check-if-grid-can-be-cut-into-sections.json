@@ -1,0 +1,43 @@
+{
+    "problemName": "check-if-grid-can-be-cut-into-sections",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countLineIntersections(self, coordinates: List[tuple[int, int]]) -> bool:\r\n        lines = 0\r\n        overlap = 0\r\n        for value, marker in coordinates:\r\n            if marker == 0:\r\n                overlap -= 1\r\n            else:\r\n                overlap += 1\r\n\r\n            if overlap == 0:\r\n                lines += 1\r\n\r\n        return lines >= 3\r\n\r\n    def checkValidCuts(self, n: int, rectangles: List[List[int]]) -> bool:\r\n        y_coordinates = []\r\n        x_coordinates = []\r\n\r\n        for rect in rectangles:\r\n            x1, y1, x2, y2 = rect\r\n            y_coordinates.append((y1, 1))  # start\r\n            y_coordinates.append((y2, 0))  # end\r\n\r\n            x_coordinates.append((x1, 1))  # start\r\n            x_coordinates.append((x2, 0))  # end\r\n\r\n        # Sort by coordinate value, and for tie, put end (0) before start (1)\r\n        y_coordinates.sort(key=lambda x: (x[0], x[1]))\r\n        x_coordinates.sort(key=lambda x: (x[0], x[1]))\r\n\r\n        return self.countLineIntersections(\r\n            y_coordinates\r\n        ) or self.countLineIntersections(x_coordinates)",
+    "problemId": 3394,
+    "title": "Check if Grid can be Cut into Sections",
+    "problemUrl": "https://leetcode.com/problems/check-if-grid-can-be-cut-into-sections/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3394.Check if Grid can be Cut into Sections/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3394.Check if Grid can be Cut into Sections/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3394.Check if Grid can be Cut into Sections/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3394.Check if Grid can be Cut into Sections/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3394.Check if Grid can be Cut into Sections/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3394.Check if Grid can be Cut into Sections/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3394.Check if Grid can be Cut into Sections/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

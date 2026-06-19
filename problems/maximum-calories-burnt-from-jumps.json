@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-calories-burnt-from-jumps",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxCaloriesBurnt(self, heights: list[int]) -> int:\r\n        heights.sort()\r\n        pre = 0\r\n        l, r = 0, len(heights) - 1\r\n        ans = 0\r\n        while l < r:\r\n            ans += (heights[r] - pre) ** 2\r\n            ans += (heights[l] - heights[r]) ** 2\r\n            pre = heights[l]\r\n            l, r = l + 1, r - 1\r\n        ans += (heights[r] - pre) ** 2\r\n        return ans",
+    "problemId": 3730,
+    "title": "Maximum Calories Burnt from Jumps",
+    "problemUrl": "https://leetcode.com/problems/maximum-calories-burnt-from-jumps/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3730.Maximum Calories Burnt from Jumps/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3730.Maximum Calories Burnt from Jumps/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3730.Maximum Calories Burnt from Jumps/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3730.Maximum Calories Burnt from Jumps/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3730.Maximum Calories Burnt from Jumps/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

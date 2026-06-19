@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-peaks",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findPeaks(self, mountain: List[int]) -> List[int]:\r\n        return [\r\n            i\r\n            for i in range(1, len(mountain) - 1)\r\n            if mountain[i - 1] < mountain[i] > mountain[i + 1]\r\n        ]",
+    "problemId": 2951,
+    "title": "Find the Peaks",
+    "problemUrl": "https://leetcode.com/problems/find-the-peaks/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2951.Find the Peaks/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2951.Find the Peaks/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2951.Find the Peaks/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2951.Find the Peaks/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2951.Find the Peaks/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2951.Find the Peaks/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

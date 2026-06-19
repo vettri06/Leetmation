@@ -1,0 +1,18 @@
+{
+    "problemName": "triangle-judgement",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    *,\r\n    IF(x + y > z AND x + z > y AND y + z > x, 'Yes', 'No') AS triangle\r\nFROM Triangle;",
+    "problemId": 610,
+    "title": "Triangle Judgement",
+    "problemUrl": "https://leetcode.com/problems/triangle-judgement/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0610.Triangle Judgement/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0610.Triangle Judgement/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

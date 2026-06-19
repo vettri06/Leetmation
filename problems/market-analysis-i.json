@@ -1,0 +1,23 @@
+{
+    "problemName": "market-analysis-i",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    u.user_id AS buyer_id,\r\n    u.join_date,\r\n    COUNT(order_id) AS orders_in_2019\r\nFROM\r\n    Users AS u\r\n    LEFT JOIN Orders AS o ON u.user_id = o.buyer_id AND YEAR(order_date) = 2019\r\nGROUP BY user_id;",
+    "problemId": 1158,
+    "title": "Market Analysis I",
+    "problemUrl": "https://leetcode.com/problems/market-analysis-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1158.Market Analysis I/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1158.Market Analysis I/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1158.Market Analysis I/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

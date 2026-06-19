@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-people-that-can-be-seen-in-a-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def seePeople(self, heights: List[List[int]]) -> List[List[int]]:\r\n        def f(nums: List[int]) -> List[int]:\r\n            n = len(nums)\r\n            stk = []\r\n            ans = [0] * n\r\n            for i in range(n - 1, -1, -1):\r\n                while stk and stk[-1] < nums[i]:\r\n                    ans[i] += 1\r\n                    stk.pop()\r\n                if stk:\r\n                    ans[i] += 1\r\n                while stk and stk[-1] == nums[i]:\r\n                    stk.pop()\r\n                stk.append(nums[i])\r\n            return ans\r\n\r\n        ans = [f(row) for row in heights]\r\n        m, n = len(heights), len(heights[0])\r\n        for j in range(n):\r\n            add = f([heights[i][j] for i in range(m)])\r\n            for i in range(m):\r\n                ans[i][j] += add[i]\r\n        return ans",
+    "problemId": 2282,
+    "title": "Number of People That Can Be Seen in a Grid",
+    "problemUrl": "https://leetcode.com/problems/number-of-people-that-can-be-seen-in-a-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2282.Number of People That Can Be Seen in a Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2282.Number of People That Can Be Seen in a Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2282.Number of People That Can Be Seen in a Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2282.Number of People That Can Be Seen in a Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2282.Number of People That Can Be Seen in a Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2282.Number of People That Can Be Seen in a Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

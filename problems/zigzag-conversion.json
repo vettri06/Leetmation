@@ -1,0 +1,58 @@
+{
+    "problemName": "zigzag-conversion",
+    "language": "python3",
+    "code": "class Solution:\r\n    def convert(self, s: str, numRows: int) -> str:\r\n        if numRows == 1:\r\n            return s\r\n        g = [[] for _ in range(numRows)]\r\n        i, k = 0, -1\r\n        for c in s:\r\n            g[i].append(c)\r\n            if i == 0 or i == numRows - 1:\r\n                k = -k\r\n            i += k\r\n        return ''.join(chain(*g))",
+    "problemId": 6,
+    "title": "Zigzag Conversion",
+    "problemUrl": "https://leetcode.com/problems/zigzag-conversion/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0006.Zigzag Conversion/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0006.Zigzag Conversion/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0006.Zigzag Conversion/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0006.Zigzag Conversion/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0006.Zigzag Conversion/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0006.Zigzag Conversion/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0006.Zigzag Conversion/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0006.Zigzag Conversion/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0006.Zigzag Conversion/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0006.Zigzag Conversion/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

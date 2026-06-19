@@ -1,0 +1,33 @@
+{
+    "problemName": "substring-xor-queries",
+    "language": "python3",
+    "code": "class Solution:\r\n    def substringXorQueries(self, s: str, queries: List[List[int]]) -> List[List[int]]:\r\n        d = {}\r\n        n = len(s)\r\n        for i in range(n):\r\n            x = 0\r\n            for j in range(32):\r\n                if i + j >= n:\r\n                    break\r\n                x = x << 1 | int(s[i + j])\r\n                if x not in d:\r\n                    d[x] = [i, i + j]\r\n                if x == 0:\r\n                    break\r\n        return [d.get(first ^ second, [-1, -1]) for first, second in queries]",
+    "problemId": 2564,
+    "title": "Substring XOR Queries",
+    "problemUrl": "https://leetcode.com/problems/substring-xor-queries/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2564.Substring XOR Queries/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2564.Substring XOR Queries/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2564.Substring XOR Queries/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2564.Substring XOR Queries/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2564.Substring XOR Queries/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

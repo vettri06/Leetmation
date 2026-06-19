@@ -1,0 +1,18 @@
+{
+    "problemName": "hopper-company-queries-iii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH RECURSIVE\r\n    Months AS (\r\n        SELECT 1 AS month\r\n        UNION ALL\r\n        SELECT month + 1\r\n        FROM Months\r\n        WHERE month < 12\r\n    ),\r\n    Ride AS (\r\n        SELECT\r\n            month,\r\n            SUM(IFNULL(ride_distance, 0)) AS ride_distance,\r\n            SUM(IFNULL(ride_duration, 0)) AS ride_duration\r\n        FROM\r\n            Months AS m\r\n            LEFT JOIN Rides AS r ON month = MONTH(requested_at) AND YEAR(requested_at) = 2020\r\n            LEFT JOIN AcceptedRides AS a ON r.ride_id = a.ride_id\r\n        GROUP BY month\r\n    )\r\nSELECT\r\n    month,\r\n    ROUND(\r\n        AVG(ride_distance) OVER (ROWS BETWEEN CURRENT ROW AND 2 FOLLOWING),\r\n        2\r\n    ) AS average_ride_distance,\r\n    ROUND(\r\n        AVG(ride_duration) OVER (ROWS BETWEEN CURRENT ROW AND 2 FOLLOWING),\r\n        2\r\n    ) AS average_ride_duration\r\nFROM Ride\r\nORDER BY month\r\nLIMIT 10;",
+    "problemId": 1651,
+    "title": "Hopper Company Queries III",
+    "problemUrl": "https://leetcode.com/problems/hopper-company-queries-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1651.Hopper Company Queries III/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1651.Hopper Company Queries III/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

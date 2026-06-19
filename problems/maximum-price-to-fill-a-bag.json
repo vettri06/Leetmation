@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-price-to-fill-a-bag",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxPrice(self, items: List[List[int]], capacity: int) -> float:\r\n        ans = 0\r\n        for p, w in sorted(items, key=lambda x: x[1] / x[0]):\r\n            v = min(w, capacity)\r\n            ans += v / w * p\r\n            capacity -= v\r\n        return -1 if capacity else ans",
+    "problemId": 2548,
+    "title": "Maximum Price to Fill a Bag",
+    "problemUrl": "https://leetcode.com/problems/maximum-price-to-fill-a-bag/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2548.Maximum Price to Fill a Bag/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2548.Maximum Price to Fill a Bag/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2548.Maximum Price to Fill a Bag/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2548.Maximum Price to Fill a Bag/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2548.Maximum Price to Fill a Bag/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2548.Maximum Price to Fill a Bag/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

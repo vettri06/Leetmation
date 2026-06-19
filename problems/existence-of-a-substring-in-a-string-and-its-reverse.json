@@ -1,0 +1,38 @@
+{
+    "problemName": "existence-of-a-substring-in-a-string-and-its-reverse",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isSubstringPresent(self, s: str) -> bool:\r\n        st = {(a, b) for a, b in pairwise(s[::-1])}\r\n        return any((a, b) in st for a, b in pairwise(s))",
+    "problemId": 3083,
+    "title": "Existence of a Substring in a String and Its Reverse",
+    "problemUrl": "https://leetcode.com/problems/existence-of-a-substring-in-a-string-and-its-reverse/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3083.Existence of a Substring in a String and Its Reverse/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3083.Existence of a Substring in a String and Its Reverse/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3083.Existence of a Substring in a String and Its Reverse/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3083.Existence of a Substring in a String and Its Reverse/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3083.Existence of a Substring in a String and Its Reverse/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3083.Existence of a Substring in a String and Its Reverse/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

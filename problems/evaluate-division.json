@@ -1,0 +1,43 @@
+{
+    "problemName": "evaluate-division",
+    "language": "python3",
+    "code": "class Solution:\r\n    def calcEquation(\r\n        self, equations: List[List[str]], values: List[float], queries: List[List[str]]\r\n    ) -> List[float]:\r\n        def find(x):\r\n            if p[x] != x:\r\n                origin = p[x]\r\n                p[x] = find(p[x])\r\n                w[x] *= w[origin]\r\n            return p[x]\r\n\r\n        w = defaultdict(lambda: 1)\r\n        p = defaultdict()\r\n        for a, b in equations:\r\n            p[a], p[b] = a, b\r\n        for i, v in enumerate(values):\r\n            a, b = equations[i]\r\n            pa, pb = find(a), find(b)\r\n            if pa == pb:\r\n                continue\r\n            p[pa] = pb\r\n            w[pa] = w[b] * v / w[a]\r\n        return [\r\n            -1 if c not in p or d not in p or find(c) != find(d) else w[c] / w[d]\r\n            for c, d in queries\r\n        ]",
+    "problemId": 399,
+    "title": "Evaluate Division",
+    "problemUrl": "https://leetcode.com/problems/evaluate-division/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0399.Evaluate Division/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0399.Evaluate Division/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0399.Evaluate Division/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0399.Evaluate Division/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0399.Evaluate Division/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0399.Evaluate Division/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0399.Evaluate Division/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

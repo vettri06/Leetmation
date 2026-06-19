@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-operations-to-make-array-elements-zero",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, queries: List[List[int]]) -> int:\r\n        def f(x: int) -> int:\r\n            res = 0\r\n            p = i = 1\r\n            while p <= x:\r\n                cnt = min(p * 4 - 1, x) - p + 1\r\n                res += cnt * i\r\n                i += 1\r\n                p *= 4\r\n            return res\r\n\r\n        ans = 0\r\n        for l, r in queries:\r\n            s = f(r) - f(l - 1)\r\n            mx = f(r) - f(r - 1)\r\n            ans += max((s + 1) // 2, mx)\r\n        return ans",
+    "problemId": 3495,
+    "title": "Minimum Operations to Make Array Elements Zero",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-make-array-elements-zero/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3495.Minimum Operations to Make Array Elements Zero/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3495.Minimum Operations to Make Array Elements Zero/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3495.Minimum Operations to Make Array Elements Zero/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3495.Minimum Operations to Make Array Elements Zero/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3495.Minimum Operations to Make Array Elements Zero/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3495.Minimum Operations to Make Array Elements Zero/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3495.Minimum Operations to Make Array Elements Zero/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

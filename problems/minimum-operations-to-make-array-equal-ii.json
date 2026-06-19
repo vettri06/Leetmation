@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-operations-to-make-array-equal-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums1: List[int], nums2: List[int], k: int) -> int:\r\n        a = b = 0\r\n        for x, y in zip(nums1, nums2):\r\n            if x == y:\r\n                continue\r\n            if k == 0 or (x - y) % k:\r\n                return -1\r\n            t = (x - y) // k\r\n            if t < 0:\r\n                a += -t\r\n            else:\r\n                b += t\r\n        return a if a == b else -1",
+    "problemId": 2541,
+    "title": "Minimum Operations to Make Array Equal II",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-make-array-equal-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2541.Minimum Operations to Make Array Equal II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2541.Minimum Operations to Make Array Equal II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2541.Minimum Operations to Make Array Equal II/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2541.Minimum Operations to Make Array Equal II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2541.Minimum Operations to Make Array Equal II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2541.Minimum Operations to Make Array Equal II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2541.Minimum Operations to Make Array Equal II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2541.Minimum Operations to Make Array Equal II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

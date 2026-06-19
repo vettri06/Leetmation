@@ -1,0 +1,18 @@
+{
+    "problemName": "friendly-movies-streamed-last-month",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT DISTINCT title\r\nFROM\r\n    TVProgram\r\n    JOIN Content USING (content_id)\r\nWHERE\r\n    DATE_FORMAT(program_date, '%Y%m') = '202006'\r\n    AND kids_content = 'Y'\r\n    AND content_type = 'Movies';",
+    "problemId": 1495,
+    "title": "Friendly Movies Streamed Last Month",
+    "problemUrl": "https://leetcode.com/problems/friendly-movies-streamed-last-month/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1495.Friendly Movies Streamed Last Month/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1495.Friendly Movies Streamed Last Month/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

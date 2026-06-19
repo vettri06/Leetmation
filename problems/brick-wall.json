@@ -1,0 +1,42 @@
+{
+    "problemName": "brick-wall",
+    "language": "cpp",
+    "code": "class Solution {\npublic:\n    int leastBricks(vector<vector<int>>& wall) {\n        unordered_map<long long, int> edgeCount;\n        int best = 0;\n\n        for (const auto& row : wall) {\n            long long edge = 0;\n            for (int i = 0; i + 1 < row.size(); i++) {\n                edge += row[i];\n                best = max(best, ++edgeCount[edge]);\n            }\n        }\n\n        return (int)wall.size() - best;\n    }\n};",
+    "problemId": 554,
+    "title": "Brick Wall",
+    "problemUrl": "https://leetcode.com/problems/brick-wall/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0554.Brick Wall/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0554.Brick Wall/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0554.Brick Wall/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0554.Brick Wall/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0554.Brick Wall/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0554.Brick Wall/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ],
+    "rebasePolicy": "protected-local-fix"
+}

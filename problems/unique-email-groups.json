@@ -1,0 +1,38 @@
+{
+    "problemName": "unique-email-groups",
+    "language": "python3",
+    "code": "class Solution:\r\n    def uniqueEmailGroups(self, emails: list[str]) -> int:\r\n        st = set()\r\n        for email in emails:\r\n            local, domain = email.split(\"@\")\r\n            local = local.split(\"+\")[0].replace(\".\", \"\").lower()\r\n            domain = domain.lower()\r\n            normalized = local + domain\r\n            st.add(normalized)\r\n        return len(st)",
+    "problemId": 3860,
+    "title": "Unique Email Groups",
+    "problemUrl": "https://leetcode.com/problems/unique-email-groups/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3860.Unique Email Groups/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3860.Unique Email Groups/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3860.Unique Email Groups/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3860.Unique Email Groups/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3860.Unique Email Groups/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3860.Unique Email Groups/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

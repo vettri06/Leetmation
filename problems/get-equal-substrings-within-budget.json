@@ -1,0 +1,88 @@
+{
+    "problemName": "get-equal-substrings-within-budget",
+    "language": "python3",
+    "code": "class Solution:\r\n    def equalSubstring(self, s: str, t: str, maxCost: int) -> int:\r\n        def check(x):\r\n            for i in range(n):\r\n                j = i + mid - 1\r\n                if j < n and f[j + 1] - f[i] <= maxCost:\r\n                    return True\r\n            return False\r\n\r\n        n = len(s)\r\n        f = list(accumulate((abs(ord(a) - ord(b)) for a, b in zip(s, t)), initial=0))\r\n        l, r = 0, n\r\n        while l < r:\r\n            mid = (l + r + 1) >> 1\r\n            if check(mid):\r\n                l = mid\r\n            else:\r\n                r = mid - 1\r\n        return l",
+    "problemId": 1208,
+    "title": "Get Equal Substrings Within Budget",
+    "problemUrl": "https://leetcode.com/problems/get-equal-substrings-within-budget/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution3.py",
+            "sourceFile": "Solution3.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution3.cpp",
+            "sourceFile": "Solution3.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution3.java",
+            "sourceFile": "Solution3.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution3.go",
+            "sourceFile": "Solution3.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1208.Get Equal Substrings Within Budget/Solution3.ts",
+            "sourceFile": "Solution3.ts"
+        }
+    ]
+}

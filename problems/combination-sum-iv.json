@@ -1,0 +1,48 @@
+{
+    "problemName": "combination-sum-iv",
+    "language": "python3",
+    "code": "class Solution:\r\n    def combinationSum4(self, nums: List[int], target: int) -> int:\r\n        f = [1] + [0] * target\r\n        for i in range(1, target + 1):\r\n            for x in nums:\r\n                if i >= x:\r\n                    f[i] += f[i - x]\r\n        return f[target]",
+    "problemId": 377,
+    "title": "Combination Sum IV",
+    "problemUrl": "https://leetcode.com/problems/combination-sum-iv/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0377.Combination Sum IV/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0377.Combination Sum IV/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0377.Combination Sum IV/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0377.Combination Sum IV/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0377.Combination Sum IV/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0377.Combination Sum IV/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0377.Combination Sum IV/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0377.Combination Sum IV/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

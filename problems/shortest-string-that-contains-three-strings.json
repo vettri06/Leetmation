@@ -1,0 +1,68 @@
+{
+    "problemName": "shortest-string-that-contains-three-strings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumString(self, a: str, b: str, c: str) -> str:\r\n        def f(s: str, t: str) -> str:\r\n            if s in t:\r\n                return t\r\n            if t in s:\r\n                return s\r\n            m, n = len(s), len(t)\r\n            for i in range(min(m, n), 0, -1):\r\n                if s[-i:] == t[:i]:\r\n                    return s + t[i:]\r\n            return s + t\r\n\r\n        ans = \"\"\r\n        for a, b, c in permutations((a, b, c)):\r\n            s = f(f(a, b), c)\r\n            if ans == \"\" or len(s) < len(ans) or (len(s) == len(ans) and s < ans):\r\n                ans = s\r\n        return ans",
+    "problemId": 2800,
+    "title": "Shortest String That Contains Three Strings",
+    "problemUrl": "https://leetcode.com/problems/shortest-string-that-contains-three-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2800.Shortest String That Contains Three Strings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2800.Shortest String That Contains Three Strings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2800.Shortest String That Contains Three Strings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2800.Shortest String That Contains Three Strings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2800.Shortest String That Contains Three Strings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2800.Shortest String That Contains Three Strings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2800.Shortest String That Contains Three Strings/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2800.Shortest String That Contains Three Strings/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2800.Shortest String That Contains Three Strings/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2800.Shortest String That Contains Three Strings/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2800.Shortest String That Contains Three Strings/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2800.Shortest String That Contains Three Strings/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

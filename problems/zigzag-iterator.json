@@ -1,0 +1,33 @@
+{
+    "problemName": "zigzag-iterator",
+    "language": "python3",
+    "code": "class ZigzagIterator:\r\n    def __init__(self, v1: List[int], v2: List[int]):\r\n        self.cur = 0\r\n        self.size = 2\r\n        self.indexes = [0] * self.size\r\n        self.vectors = [v1, v2]\r\n\r\n    def next(self) -> int:\r\n        vector = self.vectors[self.cur]\r\n        index = self.indexes[self.cur]\r\n        res = vector[index]\r\n        self.indexes[self.cur] = index + 1\r\n        self.cur = (self.cur + 1) % self.size\r\n        return res\r\n\r\n    def hasNext(self) -> bool:\r\n        start = self.cur\r\n        while self.indexes[self.cur] == len(self.vectors[self.cur]):\r\n            self.cur = (self.cur + 1) % self.size\r\n            if self.cur == start:\r\n                return False\r\n        return True\r\n\r\n\r\n# Your ZigzagIterator object will be instantiated and called as such:\r\n# i, v = ZigzagIterator(v1, v2), []\r\n# while i.hasNext(): v.append(i.next())",
+    "problemId": 281,
+    "title": "Zigzag Iterator",
+    "problemUrl": "https://leetcode.com/problems/zigzag-iterator/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0281.Zigzag Iterator/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0281.Zigzag Iterator/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0281.Zigzag Iterator/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0281.Zigzag Iterator/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0281.Zigzag Iterator/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

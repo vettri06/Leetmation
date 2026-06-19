@@ -1,0 +1,38 @@
+{
+    "problemName": "mirror-frequency-distance",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mirrorFrequency(self, s: str) -> int:\r\n        freq = Counter(s)\r\n        ans = 0\r\n        vis = set()\r\n        for c, v in freq.items():\r\n            m = (\r\n                chr(ord(\"a\") + 25 - (ord(c) - ord(\"a\")))\r\n                if c.isalpha()\r\n                else str(9 - int(c))\r\n            )\r\n            if m in vis:\r\n                continue\r\n            vis.add(c)\r\n            ans += abs(v - freq[m])\r\n        return ans",
+    "problemId": 3889,
+    "title": "Mirror Frequency Distance",
+    "problemUrl": "https://leetcode.com/problems/mirror-frequency-distance/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3889.Mirror Frequency Distance/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3889.Mirror Frequency Distance/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3889.Mirror Frequency Distance/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3889.Mirror Frequency Distance/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3889.Mirror Frequency Distance/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3889.Mirror Frequency Distance/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

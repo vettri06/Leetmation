@@ -1,0 +1,33 @@
+{
+    "problemName": "design-movie-rental-system",
+    "language": "python3",
+    "code": "class MovieRentingSystem:\r\n\r\n    def __init__(self, n: int, entries: List[List[int]]):\r\n        self.available = defaultdict(lambda: SortedList())\r\n        self.price_map = {}\r\n        for shop, movie, price in entries:\r\n            self.available[movie].add((price, shop))\r\n            self.price_map[self.f(shop, movie)] = price\r\n        self.rented = SortedList()\r\n\r\n    def search(self, movie: int) -> List[int]:\r\n        return [shop for _, shop in self.available[movie][:5]]\r\n\r\n    def rent(self, shop: int, movie: int) -> None:\r\n        price = self.price_map[self.f(shop, movie)]\r\n        self.available[movie].remove((price, shop))\r\n        self.rented.add((price, shop, movie))\r\n\r\n    def drop(self, shop: int, movie: int) -> None:\r\n        price = self.price_map[self.f(shop, movie)]\r\n        self.rented.remove((price, shop, movie))\r\n        self.available[movie].add((price, shop))\r\n\r\n    def report(self) -> List[List[int]]:\r\n        return [[shop, movie] for _, shop, movie in self.rented[:5]]\r\n\r\n    def f(self, shop: int, movie: int) -> int:\r\n        return shop << 30 | movie\r\n\r\n\r\n# Your MovieRentingSystem object will be instantiated and called as such:\r\n# obj = MovieRentingSystem(n, entries)\r\n# param_1 = obj.search(movie)\r\n# obj.rent(shop,movie)\r\n# obj.drop(shop,movie)\r\n# param_4 = obj.report()",
+    "problemId": 1912,
+    "title": "Design Movie Rental System",
+    "problemUrl": "https://leetcode.com/problems/design-movie-rental-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1912.Design Movie Rental System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1912.Design Movie Rental System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1912.Design Movie Rental System/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1912.Design Movie Rental System/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1912.Design Movie Rental System/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

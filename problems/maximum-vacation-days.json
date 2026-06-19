@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-vacation-days",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxVacationDays(self, flights: List[List[int]], days: List[List[int]]) -> int:\r\n        n = len(flights)\r\n        K = len(days[0])\r\n        f = [[-inf] * n for _ in range(K + 1)]\r\n        f[0][0] = 0\r\n        for k in range(1, K + 1):\r\n            for j in range(n):\r\n                f[k][j] = f[k - 1][j]\r\n                for i in range(n):\r\n                    if flights[i][j]:\r\n                        f[k][j] = max(f[k][j], f[k - 1][i])\r\n                f[k][j] += days[j][k - 1]\r\n        return max(f[-1][j] for j in range(n))",
+    "problemId": 568,
+    "title": "Maximum Vacation Days",
+    "problemUrl": "https://leetcode.com/problems/maximum-vacation-days/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0568.Maximum Vacation Days/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0568.Maximum Vacation Days/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0568.Maximum Vacation Days/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0568.Maximum Vacation Days/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0568.Maximum Vacation Days/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0568.Maximum Vacation Days/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0568.Maximum Vacation Days/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

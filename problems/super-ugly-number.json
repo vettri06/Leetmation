@@ -1,0 +1,38 @@
+{
+    "problemName": "super-ugly-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def nthSuperUglyNumber(self, n: int, primes: List[int]) -> int:\r\n        q = [1]\r\n        x = 0\r\n        mx = (1 << 31) - 1\r\n        for _ in range(n):\r\n            x = heappop(q)\r\n            for k in primes:\r\n                if x <= mx // k:\r\n                    heappush(q, k * x)\r\n                if x % k == 0:\r\n                    break\r\n        return x",
+    "problemId": 313,
+    "title": "Super Ugly Number",
+    "problemUrl": "https://leetcode.com/problems/super-ugly-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0313.Super Ugly Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0313.Super Ugly Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0313.Super Ugly Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0313.Super Ugly Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0313.Super Ugly Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0313.Super Ugly Number/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

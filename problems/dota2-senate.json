@@ -1,0 +1,43 @@
+{
+    "problemName": "dota2-senate",
+    "language": "python3",
+    "code": "class Solution:\r\n    def predictPartyVictory(self, senate: str) -> str:\r\n        qr = deque()\r\n        qd = deque()\r\n        for i, c in enumerate(senate):\r\n            if c == \"R\":\r\n                qr.append(i)\r\n            else:\r\n                qd.append(i)\r\n        n = len(senate)\r\n        while qr and qd:\r\n            if qr[0] < qd[0]:\r\n                qr.append(qr[0] + n)\r\n            else:\r\n                qd.append(qd[0] + n)\r\n            qr.popleft()\r\n            qd.popleft()\r\n        return \"Radiant\" if qr else \"Dire\"",
+    "problemId": 649,
+    "title": "Dota2 Senate",
+    "problemUrl": "https://leetcode.com/problems/dota2-senate/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0649.Dota2 Senate/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0649.Dota2 Senate/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0649.Dota2 Senate/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0649.Dota2 Senate/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0649.Dota2 Senate/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0649.Dota2 Senate/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0649.Dota2 Senate/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

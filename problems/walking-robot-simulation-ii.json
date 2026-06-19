@@ -1,0 +1,38 @@
+{
+    "problemName": "walking-robot-simulation-ii",
+    "language": "python3",
+    "code": "class Robot:\r\n\r\n    def __init__(self, width: int, height: int):\r\n        self.mx = width - 1\r\n        self.my = height - 1\r\n        self.p = 2 * self.mx + 2 * self.my\r\n        self.cur = 0\r\n        self.moved = False\r\n\r\n    def step(self, num: int) -> None:\r\n        self.moved = True\r\n        self.cur = (self.cur + num) % self.p\r\n\r\n    def getPos(self) -> List[int]:\r\n        d = self.cur\r\n        mx, my = self.mx, self.my\r\n        if 0 <= d <= mx:\r\n            return [d, 0]\r\n        if mx < d <= mx + my:\r\n            return [mx, d - mx]\r\n        if mx + my < d <= 2 * mx + my:\r\n            return [mx - (d - (mx + my)), my]\r\n        return [0, my - (d - (2 * mx + my))]\r\n\r\n    def getDir(self) -> str:\r\n        d = self.cur\r\n        mx, my = self.mx, self.my\r\n        if not self.moved:\r\n            return \"East\"\r\n        if 1 <= d <= mx:\r\n            return \"East\"\r\n        elif mx < d <= mx + my:\r\n            return \"North\"\r\n        elif mx + my < d <= 2 * mx + my:\r\n            return \"West\"\r\n        return \"South\"\r\n\r\n\r\n# Your Robot object will be instantiated and called as such:\r\n# obj = Robot(width, height)\r\n# obj.step(num)\r\n# param_2 = obj.getPos()\r\n# param_3 = obj.getDir()",
+    "problemId": 2069,
+    "title": "Walking Robot Simulation II",
+    "problemUrl": "https://leetcode.com/problems/walking-robot-simulation-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2069.Walking Robot Simulation II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2069.Walking Robot Simulation II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2069.Walking Robot Simulation II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2069.Walking Robot Simulation II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2069.Walking Robot Simulation II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2069.Walking Robot Simulation II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

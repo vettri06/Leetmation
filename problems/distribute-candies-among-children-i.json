@@ -1,0 +1,38 @@
+{
+    "problemName": "distribute-candies-among-children-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distributeCandies(self, n: int, limit: int) -> int:\r\n        if n > 3 * limit:\r\n            return 0\r\n        ans = comb(n + 2, 2)\r\n        if n > limit:\r\n            ans -= 3 * comb(n - limit + 1, 2)\r\n        if n - 2 >= 2 * limit:\r\n            ans += 3 * comb(n - 2 * limit, 2)\r\n        return ans",
+    "problemId": 2928,
+    "title": "Distribute Candies Among Children I",
+    "problemUrl": "https://leetcode.com/problems/distribute-candies-among-children-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2928.Distribute Candies Among Children I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2928.Distribute Candies Among Children I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2928.Distribute Candies Among Children I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2928.Distribute Candies Among Children I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2928.Distribute Candies Among Children I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2928.Distribute Candies Among Children I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

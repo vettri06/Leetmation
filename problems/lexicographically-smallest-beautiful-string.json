@@ -1,0 +1,38 @@
+{
+    "problemName": "lexicographically-smallest-beautiful-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestBeautifulString(self, s: str, k: int) -> str:\r\n        n = len(s)\r\n        cs = list(s)\r\n        for i in range(n - 1, -1, -1):\r\n            p = ord(cs[i]) - ord('a') + 1\r\n            for j in range(p, k):\r\n                c = chr(ord('a') + j)\r\n                if (i > 0 and cs[i - 1] == c) or (i > 1 and cs[i - 2] == c):\r\n                    continue\r\n                cs[i] = c\r\n                for l in range(i + 1, n):\r\n                    for m in range(k):\r\n                        c = chr(ord('a') + m)\r\n                        if (l > 0 and cs[l - 1] == c) or (l > 1 and cs[l - 2] == c):\r\n                            continue\r\n                        cs[l] = c\r\n                        break\r\n                return ''.join(cs)\r\n        return ''",
+    "problemId": 2663,
+    "title": "Lexicographically Smallest Beautiful String",
+    "problemUrl": "https://leetcode.com/problems/lexicographically-smallest-beautiful-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2663.Lexicographically Smallest Beautiful String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2663.Lexicographically Smallest Beautiful String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2663.Lexicographically Smallest Beautiful String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2663.Lexicographically Smallest Beautiful String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2663.Lexicographically Smallest Beautiful String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2663.Lexicographically Smallest Beautiful String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

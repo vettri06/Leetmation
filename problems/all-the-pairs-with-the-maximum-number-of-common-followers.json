@@ -1,0 +1,18 @@
+{
+    "problemName": "all-the-pairs-with-the-maximum-number-of-common-followers",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    t AS (\r\n        SELECT\r\n            r1.user_id AS user1_id,\r\n            r2.user_id AS user2_id,\r\n            RANK() OVER (ORDER BY COUNT(1) DESC) AS rk\r\n        FROM\r\n            Relations AS r1\r\n            JOIN Relations AS r2 ON r1.follower_id = r2.follower_id AND r1.user_id < r2.user_id\r\n        GROUP BY r1.user_id, r2.user_id\r\n    )\r\nSELECT\r\n    user1_id,\r\n    user2_id\r\nFROM t\r\nWHERE rk = 1;",
+    "problemId": 1951,
+    "title": "All the Pairs With the Maximum Number of Common Followers",
+    "problemUrl": "https://leetcode.com/problems/all-the-pairs-with-the-maximum-number-of-common-followers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1951.All the Pairs With the Maximum Number of Common Followers/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1951.All the Pairs With the Maximum Number of Common Followers/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "max-area-of-island",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:\r\n        def dfs(i: int, j: int) -> int:\r\n            if grid[i][j] == 0:\r\n                return 0\r\n            ans = 1\r\n            grid[i][j] = 0\r\n            dirs = (-1, 0, 1, 0, -1)\r\n            for a, b in pairwise(dirs):\r\n                x, y = i + a, j + b\r\n                if 0 <= x < m and 0 <= y < n:\r\n                    ans += dfs(x, y)\r\n            return ans\r\n\r\n        m, n = len(grid), len(grid[0])\r\n        return max(dfs(i, j) for i in range(m) for j in range(n))",
+    "problemId": 695,
+    "title": "Max Area of Island",
+    "problemUrl": "https://leetcode.com/problems/max-area-of-island/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0695.Max Area of Island/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0695.Max Area of Island/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0695.Max Area of Island/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0695.Max Area of Island/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0695.Max Area of Island/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0695.Max Area of Island/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0695.Max Area of Island/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

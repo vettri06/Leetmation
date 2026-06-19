@@ -1,0 +1,38 @@
+{
+    "problemName": "orderly-queue",
+    "language": "python3",
+    "code": "class Solution:\r\n    def orderlyQueue(self, s: str, k: int) -> str:\r\n        if k == 1:\r\n            ans = s\r\n            for _ in range(len(s) - 1):\r\n                s = s[1:] + s[0]\r\n                ans = min(ans, s)\r\n            return ans\r\n        return \"\".join(sorted(s))",
+    "problemId": 899,
+    "title": "Orderly Queue",
+    "problemUrl": "https://leetcode.com/problems/orderly-queue/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0899.Orderly Queue/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0899.Orderly Queue/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0899.Orderly Queue/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0899.Orderly Queue/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0899.Orderly Queue/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0899.Orderly Queue/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

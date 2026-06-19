@@ -1,0 +1,38 @@
+{
+    "problemName": "count-good-integers-on-a-grid-path",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countGoodIntegersOnPath(self, l: int, r: int, directions: str) -> int:\r\n        key = [False] * 16\r\n        row, col = 0, 0\r\n        key[0] = True\r\n        for c in directions:\r\n            if c == \"D\":\r\n                row += 1\r\n            else:\r\n                col += 1\r\n            key[row * 4 + col] = True\r\n\r\n        s = \"\"\r\n\r\n        @cache\r\n        def dfs(pos, last, lim):\r\n            if pos == 16:\r\n                return 1\r\n\r\n            res = 0\r\n            start = last if key[pos] else 0\r\n            end = int(s[pos]) if lim else 9\r\n\r\n            for i in range(start, end + 1):\r\n                res += dfs(pos + 1, i if key[pos] else last, lim and (i == end))\r\n\r\n            return res\r\n\r\n        def calc(x):\r\n            nonlocal s\r\n            if x < 0:\r\n                return 0\r\n            s = str(x).zfill(16)\r\n            dfs.cache_clear()\r\n            return dfs(0, 0, True)\r\n\r\n        return calc(r) - calc(l - 1)",
+    "problemId": 3906,
+    "title": "Count Good Integers on a Grid Path",
+    "problemUrl": "https://leetcode.com/problems/count-good-integers-on-a-grid-path/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3906.Count Good Integers on a Grid Path/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3906.Count Good Integers on a Grid Path/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3906.Count Good Integers on a Grid Path/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3906.Count Good Integers on a Grid Path/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3906.Count Good Integers on a Grid Path/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3906.Count Good Integers on a Grid Path/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

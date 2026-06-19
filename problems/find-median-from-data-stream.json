@@ -1,0 +1,58 @@
+{
+    "problemName": "find-median-from-data-stream",
+    "language": "python3",
+    "code": "class MedianFinder:\r\n\r\n    def __init__(self):\r\n        self.minq = []\r\n        self.maxq = []\r\n\r\n    def addNum(self, num: int) -> None:\r\n        heappush(self.minq, -heappushpop(self.maxq, -num))\r\n        if len(self.minq) - len(self.maxq) > 1:\r\n            heappush(self.maxq, -heappop(self.minq))\r\n\r\n    def findMedian(self) -> float:\r\n        if len(self.minq) == len(self.maxq):\r\n            return (self.minq[0] - self.maxq[0]) / 2\r\n        return self.minq[0]\r\n\r\n\r\n# Your MedianFinder object will be instantiated and called as such:\r\n# obj = MedianFinder()\r\n# obj.addNum(num)\r\n# param_2 = obj.findMedian()",
+    "problemId": 295,
+    "title": "Find Median from Data Stream",
+    "problemUrl": "https://leetcode.com/problems/find-median-from-data-stream/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0295.Find Median from Data Stream/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0295.Find Median from Data Stream/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0295.Find Median from Data Stream/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0295.Find Median from Data Stream/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0295.Find Median from Data Stream/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0295.Find Median from Data Stream/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0295.Find Median from Data Stream/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0295.Find Median from Data Stream/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0295.Find Median from Data Stream/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "swift",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0295.Find Median from Data Stream/Solution.swift",
+            "sourceFile": "Solution.swift"
+        }
+    ]
+}

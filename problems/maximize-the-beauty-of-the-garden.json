@@ -1,0 +1,43 @@
+{
+    "problemName": "maximize-the-beauty-of-the-garden",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumBeauty(self, flowers: List[int]) -> int:\r\n        s = [0] * (len(flowers) + 1)\r\n        d = {}\r\n        ans = -inf\r\n        for i, v in enumerate(flowers):\r\n            if v in d:\r\n                ans = max(ans, s[i] - s[d[v] + 1] + v * 2)\r\n            else:\r\n                d[v] = i\r\n            s[i + 1] = s[i] + max(v, 0)\r\n        return ans",
+    "problemId": 1788,
+    "title": "Maximize the Beauty of the Garden",
+    "problemUrl": "https://leetcode.com/problems/maximize-the-beauty-of-the-garden/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1788.Maximize the Beauty of the Garden/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1788.Maximize the Beauty of the Garden/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1788.Maximize the Beauty of the Garden/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1788.Maximize the Beauty of the Garden/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1788.Maximize the Beauty of the Garden/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1788.Maximize the Beauty of the Garden/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1788.Maximize the Beauty of the Garden/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "problemName": "minimum-score-of-a-path-between-two-cities",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minScore(self, n: int, roads: List[List[int]]) -> int:\r\n        def dfs(i):\r\n            nonlocal ans\r\n            for j, d in g[i]:\r\n                ans = min(ans, d)\r\n                if not vis[j]:\r\n                    vis[j] = True\r\n                    dfs(j)\r\n\r\n        g = defaultdict(list)\r\n        for a, b, d in roads:\r\n            g[a].append((b, d))\r\n            g[b].append((a, d))\r\n        vis = [False] * (n + 1)\r\n        ans = inf\r\n        dfs(1)\r\n        return ans",
+    "problemId": 2492,
+    "title": "Minimum Score of a Path Between Two Cities",
+    "problemUrl": "https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2492.Minimum Score of a Path Between Two Cities/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2492.Minimum Score of a Path Between Two Cities/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2492.Minimum Score of a Path Between Two Cities/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2492.Minimum Score of a Path Between Two Cities/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2492.Minimum Score of a Path Between Two Cities/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2492.Minimum Score of a Path Between Two Cities/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2492.Minimum Score of a Path Between Two Cities/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2492.Minimum Score of a Path Between Two Cities/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2492.Minimum Score of a Path Between Two Cities/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2492.Minimum Score of a Path Between Two Cities/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2492.Minimum Score of a Path Between Two Cities/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2492.Minimum Score of a Path Between Two Cities/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

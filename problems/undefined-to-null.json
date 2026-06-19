@@ -1,0 +1,18 @@
+{
+    "problemName": "undefined-to-null",
+    "language": "typescript",
+    "code": "function undefinedToNull(obj: Record<any, any>): Record<any, any> {\r\n    for (const key in obj) {\r\n        if (typeof obj[key] === 'object') {\r\n            obj[key] = undefinedToNull(obj[key]);\r\n        }\r\n        if (obj[key] === undefined) {\r\n            obj[key] = null;\r\n        }\r\n    }\r\n    return obj;\r\n}\r\n\r\n/**\r\n * undefinedToNull({\"a\": undefined, \"b\": 3}) // {\"a\": null, \"b\": 3}\r\n * undefinedToNull([undefined, undefined]) // [null, null]\r\n */",
+    "problemId": 2775,
+    "title": "Undefined to Null",
+    "problemUrl": "https://leetcode.com/problems/undefined-to-null/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2775.Undefined to Null/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2775.Undefined to Null/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

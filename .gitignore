@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+
+# Chrome profiles
+UserData
+
+.env
+
+.idea

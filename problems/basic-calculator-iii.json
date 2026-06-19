@@ -1,0 +1,23 @@
+{
+    "problemName": "basic-calculator-iii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def calculate(self, s: str) -> int:\r\n        def dfs(q):\r\n            num, sign, stk = 0, \"+\", []\r\n            while q:\r\n                c = q.popleft()\r\n                if c.isdigit():\r\n                    num = num * 10 + int(c)\r\n                if c == \"(\":\r\n                    num = dfs(q)\r\n                if c in \"+-*/)\" or not q:\r\n                    match sign:\r\n                        case \"+\":\r\n                            stk.append(num)\r\n                        case \"-\":\r\n                            stk.append(-num)\r\n                        case \"*\":\r\n                            stk.append(stk.pop() * num)\r\n                        case \"/\":\r\n                            stk.append(int(stk.pop() / num))\r\n                    num, sign = 0, c\r\n                if c == \")\":\r\n                    break\r\n            return sum(stk)\r\n\r\n        return dfs(deque(s))",
+    "problemId": 772,
+    "title": "Basic Calculator III",
+    "problemUrl": "https://leetcode.com/problems/basic-calculator-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0772.Basic Calculator III/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0772.Basic Calculator III/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0772.Basic Calculator III/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        }
+    ]
+}

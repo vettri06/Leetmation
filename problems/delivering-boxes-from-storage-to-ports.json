@@ -1,0 +1,33 @@
+{
+    "problemName": "delivering-boxes-from-storage-to-ports",
+    "language": "python3",
+    "code": "class Solution:\r\n    def boxDelivering(\r\n        self, boxes: List[List[int]], portsCount: int, maxBoxes: int, maxWeight: int\r\n    ) -> int:\r\n        n = len(boxes)\r\n        ws = list(accumulate((box[1] for box in boxes), initial=0))\r\n        c = [int(a != b) for a, b in pairwise(box[0] for box in boxes)]\r\n        cs = list(accumulate(c, initial=0))\r\n        f = [0] * (n + 1)\r\n        q = deque([0])\r\n        for i in range(1, n + 1):\r\n            while q and (i - q[0] > maxBoxes or ws[i] - ws[q[0]] > maxWeight):\r\n                q.popleft()\r\n            if q:\r\n                f[i] = cs[i - 1] + f[q[0]] - cs[q[0]] + 2\r\n            if i < n:\r\n                while q and f[q[-1]] - cs[q[-1]] >= f[i] - cs[i]:\r\n                    q.pop()\r\n                q.append(i)\r\n        return f[n]",
+    "problemId": 1687,
+    "title": "Delivering Boxes from Storage to Ports",
+    "problemUrl": "https://leetcode.com/problems/delivering-boxes-from-storage-to-ports/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1687.Delivering Boxes from Storage to Ports/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1687.Delivering Boxes from Storage to Ports/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1687.Delivering Boxes from Storage to Ports/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1687.Delivering Boxes from Storage to Ports/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1687.Delivering Boxes from Storage to Ports/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

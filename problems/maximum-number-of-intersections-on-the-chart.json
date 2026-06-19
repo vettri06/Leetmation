@@ -1,0 +1,18 @@
+{
+    "problemName": "maximum-number-of-intersections-on-the-chart",
+    "language": "java",
+    "code": "class Solution {\r\n    public int maxIntersectionCount(int[] y) {\r\n        final int n = y.length;\r\n        int ans = 0;\r\n        int intersectionCount = 0;\r\n        TreeMap<Integer, Integer> line = new TreeMap<>();\r\n\r\n        for (int i = 1; i < n; ++i) {\r\n            final int start = 2 * y[i - 1];\r\n            final int end = 2 * y[i] + (i == n - 1 ? 0 : y[i] > y[i - 1] ? -1 : 1);\r\n            line.merge(Math.min(start, end), 1, Integer::sum);\r\n            line.merge(Math.max(start, end) + 1, -1, Integer::sum);\r\n        }\r\n\r\n        for (final int count : line.values()) {\r\n            intersectionCount += count;\r\n            ans = Math.max(ans, intersectionCount);\r\n        }\r\n\r\n        return ans;\r\n    }\r\n}",
+    "problemId": 3009,
+    "title": "Maximum Number of Intersections on the Chart",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-intersections-on-the-chart/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3009.Maximum Number of Intersections on the Chart/Solution.java",
+    "sourceFile": "Solution.java",
+    "sourceCandidates": [
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3009.Maximum Number of Intersections on the Chart/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

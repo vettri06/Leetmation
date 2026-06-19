@@ -1,0 +1,33 @@
+{
+    "problemName": "linked-list-random-node",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def __init__(self, head: Optional[ListNode]):\r\n        self.head = head\r\n\r\n    def getRandom(self) -> int:\r\n        n = ans = 0\r\n        head = self.head\r\n        while head:\r\n            n += 1\r\n            x = random.randint(1, n)\r\n            if n == x:\r\n                ans = head.val\r\n            head = head.next\r\n        return ans\r\n\r\n\r\n# Your Solution object will be instantiated and called as such:\r\n# obj = Solution(head)\r\n# param_1 = obj.getRandom()",
+    "problemId": 382,
+    "title": "Linked List Random Node",
+    "problemUrl": "https://leetcode.com/problems/linked-list-random-node/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0382.Linked List Random Node/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0382.Linked List Random Node/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0382.Linked List Random Node/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0382.Linked List Random Node/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0382.Linked List Random Node/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

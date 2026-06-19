@@ -1,0 +1,18 @@
+{
+    "problemName": "low-quality-problems",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT problem_id\r\nFROM Problems\r\nWHERE likes / (likes + dislikes) < 0.6\r\nORDER BY problem_id;",
+    "problemId": 2026,
+    "title": "Low-Quality Problems",
+    "problemUrl": "https://leetcode.com/problems/low-quality-problems/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2026.Low-Quality Problems/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2026.Low-Quality Problems/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

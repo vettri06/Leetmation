@@ -1,0 +1,43 @@
+{
+    "problemName": "first-completely-painted-row-or-column",
+    "language": "python3",
+    "code": "class Solution:\r\n    def firstCompleteIndex(self, arr: List[int], mat: List[List[int]]) -> int:\r\n        m, n = len(mat), len(mat[0])\r\n        idx = {}\r\n        for i in range(m):\r\n            for j in range(n):\r\n                idx[mat[i][j]] = (i, j)\r\n        row = [0] * m\r\n        col = [0] * n\r\n        for k in range(len(arr)):\r\n            i, j = idx[arr[k]]\r\n            row[i] += 1\r\n            col[j] += 1\r\n            if row[i] == n or col[j] == m:\r\n                return k",
+    "problemId": 2661,
+    "title": "First Completely Painted Row or Column",
+    "problemUrl": "https://leetcode.com/problems/first-completely-painted-row-or-column/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2661.First Completely Painted Row or Column/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2661.First Completely Painted Row or Column/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2661.First Completely Painted Row or Column/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2661.First Completely Painted Row or Column/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2661.First Completely Painted Row or Column/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2661.First Completely Painted Row or Column/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2661.First Completely Painted Row or Column/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

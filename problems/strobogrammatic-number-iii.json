@@ -1,0 +1,33 @@
+{
+    "problemName": "strobogrammatic-number-iii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def strobogrammaticInRange(self, low: str, high: str) -> int:\r\n        def dfs(u):\r\n            if u == 0:\r\n                return ['']\r\n            if u == 1:\r\n                return ['0', '1', '8']\r\n            ans = []\r\n            for v in dfs(u - 2):\r\n                for l, r in ('11', '88', '69', '96'):\r\n                    ans.append(l + v + r)\r\n                if u != n:\r\n                    ans.append('0' + v + '0')\r\n            return ans\r\n\r\n        a, b = len(low), len(high)\r\n        low, high = int(low), int(high)\r\n        ans = 0\r\n        for n in range(a, b + 1):\r\n            for s in dfs(n):\r\n                if low <= int(s) <= high:\r\n                    ans += 1\r\n        return ans",
+    "problemId": 248,
+    "title": "Strobogrammatic Number III",
+    "problemUrl": "https://leetcode.com/problems/strobogrammatic-number-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0248.Strobogrammatic Number III/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0248.Strobogrammatic Number III/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0248.Strobogrammatic Number III/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0248.Strobogrammatic Number III/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0248.Strobogrammatic Number III/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

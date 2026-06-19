@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-changes-to-make-k-semi-palindromes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumChanges(self, s: str, k: int) -> int:\r\n        n = len(s)\r\n        g = [[inf] * (n + 1) for _ in range(n + 1)]\r\n        for i in range(1, n + 1):\r\n            for j in range(i, n + 1):\r\n                m = j - i + 1\r\n                for d in range(1, m):\r\n                    if m % d == 0:\r\n                        cnt = 0\r\n                        for l in range(m):\r\n                            r = (m // d - 1 - l // d) * d + l % d\r\n                            if l >= r:\r\n                                break\r\n                            if s[i - 1 + l] != s[i - 1 + r]:\r\n                                cnt += 1\r\n                        g[i][j] = min(g[i][j], cnt)\r\n\r\n        f = [[inf] * (k + 1) for _ in range(n + 1)]\r\n        f[0][0] = 0\r\n        for i in range(1, n + 1):\r\n            for j in range(1, k + 1):\r\n                for h in range(i - 1):\r\n                    f[i][j] = min(f[i][j], f[h][j - 1] + g[h + 1][i])\r\n        return f[n][k]",
+    "problemId": 2911,
+    "title": "Minimum Changes to Make K Semi-palindromes",
+    "problemUrl": "https://leetcode.com/problems/minimum-changes-to-make-k-semi-palindromes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2911.Minimum Changes to Make K Semi-palindromes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2911.Minimum Changes to Make K Semi-palindromes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2911.Minimum Changes to Make K Semi-palindromes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2911.Minimum Changes to Make K Semi-palindromes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2911.Minimum Changes to Make K Semi-palindromes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2911.Minimum Changes to Make K Semi-palindromes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2911.Minimum Changes to Make K Semi-palindromes/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

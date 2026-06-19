@@ -1,0 +1,43 @@
+{
+    "problemName": "adding-two-negabinary-numbers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def addNegabinary(self, arr1: List[int], arr2: List[int]) -> List[int]:\r\n        i, j = len(arr1) - 1, len(arr2) - 1\r\n        c = 0\r\n        ans = []\r\n        while i >= 0 or j >= 0 or c:\r\n            a = 0 if i < 0 else arr1[i]\r\n            b = 0 if j < 0 else arr2[j]\r\n            x = a + b + c\r\n            c = 0\r\n            if x >= 2:\r\n                x -= 2\r\n                c -= 1\r\n            elif x == -1:\r\n                x = 1\r\n                c += 1\r\n            ans.append(x)\r\n            i, j = i - 1, j - 1\r\n        while len(ans) > 1 and ans[-1] == 0:\r\n            ans.pop()\r\n        return ans[::-1]",
+    "problemId": 1073,
+    "title": "Adding Two Negabinary Numbers",
+    "problemUrl": "https://leetcode.com/problems/adding-two-negabinary-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1073.Adding Two Negabinary Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1073.Adding Two Negabinary Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1073.Adding Two Negabinary Numbers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1073.Adding Two Negabinary Numbers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1073.Adding Two Negabinary Numbers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1073.Adding Two Negabinary Numbers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1073.Adding Two Negabinary Numbers/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "perfect-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkPerfectNumber(self, num: int) -> bool:\r\n        if num == 1:\r\n            return False\r\n        s, i = 1, 2\r\n        while i <= num // i:\r\n            if num % i == 0:\r\n                s += i\r\n                if i != num // i:\r\n                    s += num // i\r\n            i += 1\r\n        return s == num",
+    "problemId": 507,
+    "title": "Perfect Number",
+    "problemUrl": "https://leetcode.com/problems/perfect-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0507.Perfect Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0507.Perfect Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0507.Perfect Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0507.Perfect Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0507.Perfect Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0507.Perfect Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

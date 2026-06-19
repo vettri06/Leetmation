@@ -1,0 +1,28 @@
+{
+    "problemName": "similar-rgb-color",
+    "language": "python3",
+    "code": "class Solution:\r\n    def similarRGB(self, color: str) -> str:\r\n        def f(x):\r\n            y, z = divmod(int(x, 16), 17)\r\n            if z > 8:\r\n                y += 1\r\n            return '{:02x}'.format(17 * y)\r\n\r\n        a, b, c = color[1:3], color[3:5], color[5:7]\r\n        return f'#{f(a)}{f(b)}{f(c)}'",
+    "problemId": 800,
+    "title": "Similar RGB Color",
+    "problemUrl": "https://leetcode.com/problems/similar-rgb-color/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0800.Similar RGB Color/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0800.Similar RGB Color/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0800.Similar RGB Color/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0800.Similar RGB Color/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

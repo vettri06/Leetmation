@@ -1,0 +1,43 @@
+{
+    "problemName": "distinct-points-reachable-after-substring-removal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distinctPoints(self, s: str, k: int) -> int:\r\n        n = len(s)\r\n        f = [0] * (n + 1)\r\n        g = [0] * (n + 1)\r\n        x = y = 0\r\n        for i, c in enumerate(s, 1):\r\n            if c == \"U\":\r\n                y += 1\r\n            elif c == \"D\":\r\n                y -= 1\r\n            elif c == \"L\":\r\n                x -= 1\r\n            else:\r\n                x += 1\r\n            f[i] = x\r\n            g[i] = y\r\n        st = set()\r\n        for i in range(k, n + 1):\r\n            a = f[n] - (f[i] - f[i - k])\r\n            b = g[n] - (g[i] - g[i - k])\r\n            st.add((a, b))\r\n        return len(st)",
+    "problemId": 3694,
+    "title": "Distinct Points Reachable After Substring Removal",
+    "problemUrl": "https://leetcode.com/problems/distinct-points-reachable-after-substring-removal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3694.Distinct Points Reachable After Substring Removal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3694.Distinct Points Reachable After Substring Removal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3694.Distinct Points Reachable After Substring Removal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3694.Distinct Points Reachable After Substring Removal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3694.Distinct Points Reachable After Substring Removal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3694.Distinct Points Reachable After Substring Removal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3694.Distinct Points Reachable After Substring Removal/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

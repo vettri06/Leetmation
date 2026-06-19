@@ -1,0 +1,33 @@
+{
+    "problemName": "apply-discount-every-n-orders",
+    "language": "python3",
+    "code": "class Cashier:\r\n    def __init__(self, n: int, discount: int, products: List[int], prices: List[int]):\r\n        self.i = 0\r\n        self.n = n\r\n        self.discount = discount\r\n        self.d = {product: price for product, price in zip(products, prices)}\r\n\r\n    def getBill(self, product: List[int], amount: List[int]) -> float:\r\n        self.i += 1\r\n        discount = self.discount if self.i % self.n == 0 else 0\r\n        ans = 0\r\n        for p, a in zip(product, amount):\r\n            x = self.d[p] * a\r\n            ans += x - (discount * x) / 100\r\n        return ans\r\n\r\n\r\n# Your Cashier object will be instantiated and called as such:\r\n# obj = Cashier(n, discount, products, prices)\r\n# param_1 = obj.getBill(product,amount)",
+    "problemId": 1357,
+    "title": "Apply Discount Every n Orders",
+    "problemUrl": "https://leetcode.com/problems/apply-discount-every-n-orders/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1357.Apply Discount Every n Orders/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1357.Apply Discount Every n Orders/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1357.Apply Discount Every n Orders/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1357.Apply Discount Every n Orders/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1357.Apply Discount Every n Orders/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

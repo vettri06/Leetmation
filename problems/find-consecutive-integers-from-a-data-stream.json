@@ -1,0 +1,38 @@
+{
+    "problemName": "find-consecutive-integers-from-a-data-stream",
+    "language": "python3",
+    "code": "class DataStream:\r\n    def __init__(self, value: int, k: int):\r\n        self.val, self.k = value, k\r\n        self.cnt = 0\r\n\r\n    def consec(self, num: int) -> bool:\r\n        self.cnt = 0 if num != self.val else self.cnt + 1\r\n        return self.cnt >= self.k\r\n\r\n\r\n# Your DataStream object will be instantiated and called as such:\r\n# obj = DataStream(value, k)\r\n# param_1 = obj.consec(num)",
+    "problemId": 2526,
+    "title": "Find Consecutive Integers from a Data Stream",
+    "problemUrl": "https://leetcode.com/problems/find-consecutive-integers-from-a-data-stream/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2526.Find Consecutive Integers from a Data Stream/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2526.Find Consecutive Integers from a Data Stream/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2526.Find Consecutive Integers from a Data Stream/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2526.Find Consecutive Integers from a Data Stream/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2526.Find Consecutive Integers from a Data Stream/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2526.Find Consecutive Integers from a Data Stream/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "hash-divided-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def stringHash(self, s: str, k: int) -> str:\r\n        ans = []\r\n        for i in range(0, len(s), k):\r\n            t = 0\r\n            for j in range(i, i + k):\r\n                t += ord(s[j]) - ord(\"a\")\r\n            hashedChar = t % 26\r\n            ans.append(chr(ord(\"a\") + hashedChar))\r\n        return \"\".join(ans)",
+    "problemId": 3271,
+    "title": "Hash Divided String",
+    "problemUrl": "https://leetcode.com/problems/hash-divided-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3271.Hash Divided String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3271.Hash Divided String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3271.Hash Divided String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3271.Hash Divided String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3271.Hash Divided String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3271.Hash Divided String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

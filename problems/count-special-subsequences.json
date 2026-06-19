@@ -1,0 +1,38 @@
+{
+    "problemName": "count-special-subsequences",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfSubsequences(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        cnt = defaultdict(int)\r\n        for r in range(4, n - 2):\r\n            c = nums[r]\r\n            for s in range(r + 2, n):\r\n                d = nums[s]\r\n                g = gcd(c, d)\r\n                cnt[(d // g, c // g)] += 1\r\n        ans = 0\r\n        for q in range(2, n - 4):\r\n            b = nums[q]\r\n            for p in range(q - 1):\r\n                a = nums[p]\r\n                g = gcd(a, b)\r\n                ans += cnt[(a // g, b // g)]\r\n            c = nums[q + 2]\r\n            for s in range(q + 4, n):\r\n                d = nums[s]\r\n                g = gcd(c, d)\r\n                cnt[(d // g, c // g)] -= 1\r\n        return ans",
+    "problemId": 3404,
+    "title": "Count Special Subsequences",
+    "problemUrl": "https://leetcode.com/problems/count-special-subsequences/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3404.Count Special Subsequences/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3404.Count Special Subsequences/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3404.Count Special Subsequences/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3404.Count Special Subsequences/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3404.Count Special Subsequences/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3404.Count Special Subsequences/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

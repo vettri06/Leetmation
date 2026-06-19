@@ -1,0 +1,33 @@
+{
+    "problemName": "find-sum-of-array-product-of-magical-sequences",
+    "language": "python3",
+    "code": "mx = 30\r\nmod = 10**9 + 7\r\nf = [1] + [0] * mx\r\ng = [1] + [0] * mx\r\n\r\nfor i in range(1, mx + 1):\r\n    f[i] = f[i - 1] * i % mod\r\n    g[i] = pow(f[i], mod - 2, mod)\r\n\r\n\r\ndef comb(m: int, n: int) -> int:\r\n    return f[m] * g[n] * g[m - n] % mod\r\n\r\n\r\nclass Solution:\r\n    def magicalSum(self, m: int, k: int, nums: List[int]) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int, k: int, st: int) -> int:\r\n            if k < 0 or (i == len(nums) and j > 0):\r\n                return 0\r\n            if i == len(nums):\r\n                while st:\r\n                    k -= st & 1\r\n                    st >>= 1\r\n                return int(k == 0)\r\n            res = 0\r\n            for t in range(j + 1):\r\n                nt = t + st\r\n                p = pow(nums[i], t, mod)\r\n                nk = k - (nt & 1)\r\n                res += comb(j, t) * p * dfs(i + 1, j - t, nk, nt >> 1)\r\n                res %= mod\r\n            return res\r\n\r\n        ans = dfs(0, m, k, 0)\r\n        dfs.cache_clear()\r\n        return ans",
+    "problemId": 3539,
+    "title": "Find Sum of Array Product of Magical Sequences",
+    "problemUrl": "https://leetcode.com/problems/find-sum-of-array-product-of-magical-sequences/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3539.Find Sum of Array Product of Magical Sequences/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3539.Find Sum of Array Product of Magical Sequences/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3539.Find Sum of Array Product of Magical Sequences/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3539.Find Sum of Array Product of Magical Sequences/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3539.Find Sum of Array Product of Magical Sequences/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "customer-purchasing-behavior-analysis",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT *\r\n        FROM\r\n            Transactions\r\n            JOIN Products USING (product_id)\r\n    ),\r\n    P AS (\r\n        SELECT\r\n            customer_id,\r\n            category,\r\n            COUNT(1) cnt,\r\n            MAX(transaction_date) max_date\r\n        FROM T\r\n        GROUP BY 1, 2\r\n    ),\r\n    R AS (\r\n        SELECT\r\n            customer_id,\r\n            category,\r\n            RANK() OVER (\r\n                PARTITION BY customer_id\r\n                ORDER BY cnt DESC, max_date DESC\r\n            ) rk\r\n        FROM P\r\n    )\r\nSELECT\r\n    t.customer_id,\r\n    ROUND(SUM(amount), 2) total_amount,\r\n    COUNT(1) transaction_count,\r\n    COUNT(DISTINCT t.category) unique_categories,\r\n    ROUND(AVG(amount), 2) avg_transaction_amount,\r\n    r.category top_category,\r\n    ROUND(COUNT(1) * 10 + SUM(amount) / 100, 2) loyalty_score\r\nFROM\r\n    T t\r\n    JOIN R r ON t.customer_id = r.customer_id AND r.rk = 1\r\nGROUP BY 1\r\nORDER BY 7 DESC, 1;",
+    "problemId": 3230,
+    "title": "Customer Purchasing Behavior Analysis",
+    "problemUrl": "https://leetcode.com/problems/customer-purchasing-behavior-analysis/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3230.Customer Purchasing Behavior Analysis/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3230.Customer Purchasing Behavior Analysis/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

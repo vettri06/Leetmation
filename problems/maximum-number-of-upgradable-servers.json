@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-number-of-upgradable-servers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxUpgrades(\r\n        self, count: List[int], upgrade: List[int], sell: List[int], money: List[int]\r\n    ) -> List[int]:\r\n        ans = []\r\n        for cnt, cost, income, cash in zip(count, upgrade, sell, money):\r\n            ans.append(min(cnt, (cnt * income + cash) // (cost + income)))\r\n        return ans",
+    "problemId": 3155,
+    "title": "Maximum Number of Upgradable Servers",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-upgradable-servers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3155.Maximum Number of Upgradable Servers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3155.Maximum Number of Upgradable Servers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3155.Maximum Number of Upgradable Servers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3155.Maximum Number of Upgradable Servers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3155.Maximum Number of Upgradable Servers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3155.Maximum Number of Upgradable Servers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

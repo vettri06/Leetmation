@@ -1,0 +1,48 @@
+{
+    "problemName": "partition-array-according-to-given-pivot",
+    "language": "python3",
+    "code": "class Solution:\r\n    def pivotArray(self, nums: List[int], pivot: int) -> List[int]:\r\n        a, b, c = [], [], []\r\n        for x in nums:\r\n            if x < pivot:\r\n                a.append(x)\r\n            elif x == pivot:\r\n                b.append(x)\r\n            else:\r\n                c.append(x)\r\n        return a + b + c",
+    "problemId": 2161,
+    "title": "Partition Array According to Given Pivot",
+    "problemUrl": "https://leetcode.com/problems/partition-array-according-to-given-pivot/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2161.Partition Array According to Given Pivot/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2161.Partition Array According to Given Pivot/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2161.Partition Array According to Given Pivot/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2161.Partition Array According to Given Pivot/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2161.Partition Array According to Given Pivot/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2161.Partition Array According to Given Pivot/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2161.Partition Array According to Given Pivot/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2161.Partition Array According to Given Pivot/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

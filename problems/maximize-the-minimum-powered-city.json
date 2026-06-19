@@ -1,0 +1,48 @@
+{
+    "problemName": "maximize-the-minimum-powered-city",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxPower(self, stations: List[int], r: int, k: int) -> int:\r\n        def check(x, k):\r\n            d = [0] * (n + 1)\r\n            t = 0\r\n            for i in range(n):\r\n                t += d[i]\r\n                dist = x - (s[i] + t)\r\n                if dist > 0:\r\n                    if k < dist:\r\n                        return False\r\n                    k -= dist\r\n                    j = min(i + r, n - 1)\r\n                    left, right = max(0, j - r), min(j + r, n - 1)\r\n                    d[left] += dist\r\n                    d[right + 1] -= dist\r\n                    t += dist\r\n            return True\r\n\r\n        n = len(stations)\r\n        d = [0] * (n + 1)\r\n        for i, v in enumerate(stations):\r\n            left, right = max(0, i - r), min(i + r, n - 1)\r\n            d[left] += v\r\n            d[right + 1] -= v\r\n        s = list(accumulate(d))\r\n        left, right = 0, 1 << 40\r\n        while left < right:\r\n            mid = (left + right + 1) >> 1\r\n            if check(mid, k):\r\n                left = mid\r\n            else:\r\n                right = mid - 1\r\n        return left",
+    "problemId": 2528,
+    "title": "Maximize the Minimum Powered City",
+    "problemUrl": "https://leetcode.com/problems/maximize-the-minimum-powered-city/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2528.Maximize the Minimum Powered City/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2528.Maximize the Minimum Powered City/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2528.Maximize the Minimum Powered City/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2528.Maximize the Minimum Powered City/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2528.Maximize the Minimum Powered City/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2528.Maximize the Minimum Powered City/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2528.Maximize the Minimum Powered City/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2528.Maximize the Minimum Powered City/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

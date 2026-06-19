@@ -1,0 +1,38 @@
+{
+    "problemName": "divide-nodes-into-the-maximum-number-of-groups",
+    "language": "python3",
+    "code": "class Solution:\r\n    def magnificentSets(self, n: int, edges: List[List[int]]) -> int:\r\n        g = [[] for _ in range(n)]\r\n        for a, b in edges:\r\n            g[a - 1].append(b - 1)\r\n            g[b - 1].append(a - 1)\r\n        d = defaultdict(int)\r\n        for i in range(n):\r\n            q = deque([i])\r\n            dist = [0] * n\r\n            dist[i] = mx = 1\r\n            root = i\r\n            while q:\r\n                a = q.popleft()\r\n                root = min(root, a)\r\n                for b in g[a]:\r\n                    if dist[b] == 0:\r\n                        dist[b] = dist[a] + 1\r\n                        mx = max(mx, dist[b])\r\n                        q.append(b)\r\n                    elif abs(dist[b] - dist[a]) != 1:\r\n                        return -1\r\n            d[root] = max(d[root], mx)\r\n        return sum(d.values())",
+    "problemId": 2493,
+    "title": "Divide Nodes Into the Maximum Number of Groups",
+    "problemUrl": "https://leetcode.com/problems/divide-nodes-into-the-maximum-number-of-groups/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2493.Divide Nodes Into the Maximum Number of Groups/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2493.Divide Nodes Into the Maximum Number of Groups/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2493.Divide Nodes Into the Maximum Number of Groups/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2493.Divide Nodes Into the Maximum Number of Groups/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2493.Divide Nodes Into the Maximum Number of Groups/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2493.Divide Nodes Into the Maximum Number of Groups/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

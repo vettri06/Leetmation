@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-number-of-coins-you-can-get",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxCoins(self, piles: List[int]) -> int:\r\n        piles.sort()\r\n        return sum(piles[len(piles) // 3 :][::2])",
+    "problemId": 1561,
+    "title": "Maximum Number of Coins You Can Get",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-coins-you-can-get/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1561.Maximum Number of Coins You Can Get/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1561.Maximum Number of Coins You Can Get/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1561.Maximum Number of Coins You Can Get/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1561.Maximum Number of Coins You Can Get/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1561.Maximum Number of Coins You Can Get/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1561.Maximum Number of Coins You Can Get/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1561.Maximum Number of Coins You Can Get/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "library-late-fee-calculator",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lateFee(self, daysLate: List[int]) -> int:\r\n        def f(x: int) -> int:\r\n            if x == 1:\r\n                return 1\r\n            if x > 5:\r\n                return 3 * x\r\n            return 2 * x\r\n\r\n        return sum(f(x) for x in daysLate)",
+    "problemId": 3687,
+    "title": "Library Late Fee Calculator",
+    "problemUrl": "https://leetcode.com/problems/library-late-fee-calculator/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3687.Library Late Fee Calculator/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3687.Library Late Fee Calculator/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3687.Library Late Fee Calculator/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3687.Library Late Fee Calculator/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3687.Library Late Fee Calculator/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3687.Library Late Fee Calculator/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

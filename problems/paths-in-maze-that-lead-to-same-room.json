@@ -1,0 +1,33 @@
+{
+    "problemName": "paths-in-maze-that-lead-to-same-room",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfPaths(self, n: int, corridors: List[List[int]]) -> int:\r\n        g = defaultdict(set)\r\n        for a, b in corridors:\r\n            g[a].add(b)\r\n            g[b].add(a)\r\n        ans = 0\r\n        for i in range(1, n + 1):\r\n            for j, k in combinations(g[i], 2):\r\n                if j in g[k]:\r\n                    ans += 1\r\n        return ans // 3",
+    "problemId": 2077,
+    "title": "Paths in Maze That Lead to Same Room",
+    "problemUrl": "https://leetcode.com/problems/paths-in-maze-that-lead-to-same-room/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2077.Paths in Maze That Lead to Same Room/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2077.Paths in Maze That Lead to Same Room/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2077.Paths in Maze That Lead to Same Room/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2077.Paths in Maze That Lead to Same Room/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2077.Paths in Maze That Lead to Same Room/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

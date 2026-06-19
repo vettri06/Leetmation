@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-hours-of-training-to-win-a-competition",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minNumberOfHours(\r\n        self, x: int, y: int, energy: List[int], experience: List[int]\r\n    ) -> int:\r\n        ans = 0\r\n        for dx, dy in zip(energy, experience):\r\n            if x <= dx:\r\n                ans += dx + 1 - x\r\n                x = dx + 1\r\n            if y <= dy:\r\n                ans += dy + 1 - y\r\n                y = dy + 1\r\n            x -= dx\r\n            y += dy\r\n        return ans",
+    "problemId": 2383,
+    "title": "Minimum Hours of Training to Win a Competition",
+    "problemUrl": "https://leetcode.com/problems/minimum-hours-of-training-to-win-a-competition/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2383.Minimum Hours of Training to Win a Competition/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2383.Minimum Hours of Training to Win a Competition/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2383.Minimum Hours of Training to Win a Competition/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2383.Minimum Hours of Training to Win a Competition/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2383.Minimum Hours of Training to Win a Competition/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2383.Minimum Hours of Training to Win a Competition/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2383.Minimum Hours of Training to Win a Competition/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2383.Minimum Hours of Training to Win a Competition/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

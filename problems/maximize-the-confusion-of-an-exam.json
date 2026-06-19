@@ -1,0 +1,43 @@
+{
+    "problemName": "maximize-the-confusion-of-an-exam",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxConsecutiveAnswers(self, answerKey: str, k: int) -> int:\r\n        def f(c: str) -> int:\r\n            cnt = l = 0\r\n            for ch in answerKey:\r\n                cnt += ch == c\r\n                if cnt > k:\r\n                    cnt -= answerKey[l] == c\r\n                    l += 1\r\n            return len(answerKey) - l\r\n\r\n        return max(f(\"T\"), f(\"F\"))",
+    "problemId": 2024,
+    "title": "Maximize the Confusion of an Exam",
+    "problemUrl": "https://leetcode.com/problems/maximize-the-confusion-of-an-exam/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2024.Maximize the Confusion of an Exam/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2024.Maximize the Confusion of an Exam/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2024.Maximize the Confusion of an Exam/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2024.Maximize the Confusion of an Exam/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2024.Maximize the Confusion of an Exam/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2024.Maximize the Confusion of an Exam/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2024.Maximize the Confusion of an Exam/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

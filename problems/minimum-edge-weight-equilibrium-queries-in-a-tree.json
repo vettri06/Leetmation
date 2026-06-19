@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-edge-weight-equilibrium-queries-in-a-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperationsQueries(\r\n        self, n: int, edges: List[List[int]], queries: List[List[int]]\r\n    ) -> List[int]:\r\n        m = n.bit_length()\r\n        g = [[] for _ in range(n)]\r\n        f = [[0] * m for _ in range(n)]\r\n        p = [0] * n\r\n        cnt = [None] * n\r\n        depth = [0] * n\r\n        for u, v, w in edges:\r\n            g[u].append((v, w - 1))\r\n            g[v].append((u, w - 1))\r\n        cnt[0] = [0] * 26\r\n        q = deque([0])\r\n        while q:\r\n            i = q.popleft()\r\n            f[i][0] = p[i]\r\n            for j in range(1, m):\r\n                f[i][j] = f[f[i][j - 1]][j - 1]\r\n            for j, w in g[i]:\r\n                if j != p[i]:\r\n                    p[j] = i\r\n                    cnt[j] = cnt[i][:]\r\n                    cnt[j][w] += 1\r\n                    depth[j] = depth[i] + 1\r\n                    q.append(j)\r\n        ans = []\r\n        for u, v in queries:\r\n            x, y = u, v\r\n            if depth[x] < depth[y]:\r\n                x, y = y, x\r\n            for j in reversed(range(m)):\r\n                if depth[x] - depth[y] >= (1 << j):\r\n                    x = f[x][j]\r\n            for j in reversed(range(m)):\r\n                if f[x][j] != f[y][j]:\r\n                    x, y = f[x][j], f[y][j]\r\n            if x != y:\r\n                x = p[x]\r\n            mx = max(cnt[u][j] + cnt[v][j] - 2 * cnt[x][j] for j in range(26))\r\n            ans.append(depth[u] + depth[v] - 2 * depth[x] - mx)\r\n        return ans",
+    "problemId": 2846,
+    "title": "Minimum Edge Weight Equilibrium Queries in a Tree",
+    "problemUrl": "https://leetcode.com/problems/minimum-edge-weight-equilibrium-queries-in-a-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2846.Minimum Edge Weight Equilibrium Queries in a Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2846.Minimum Edge Weight Equilibrium Queries in a Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2846.Minimum Edge Weight Equilibrium Queries in a Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2846.Minimum Edge Weight Equilibrium Queries in a Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2846.Minimum Edge Weight Equilibrium Queries in a Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

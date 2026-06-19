@@ -1,0 +1,48 @@
+{
+    "problemName": "build-an-array-with-stack-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def buildArray(self, target: List[int], n: int) -> List[str]:\r\n        ans = []\r\n        cur = 1\r\n        for x in target:\r\n            while cur < x:\r\n                ans.extend([\"Push\", \"Pop\"])\r\n                cur += 1\r\n            ans.append(\"Push\")\r\n            cur += 1\r\n        return ans",
+    "problemId": 1441,
+    "title": "Build an Array With Stack Operations",
+    "problemUrl": "https://leetcode.com/problems/build-an-array-with-stack-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1441.Build an Array With Stack Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1441.Build an Array With Stack Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1441.Build an Array With Stack Operations/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1441.Build an Array With Stack Operations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1441.Build an Array With Stack Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1441.Build an Array With Stack Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1441.Build an Array With Stack Operations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1441.Build an Array With Stack Operations/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

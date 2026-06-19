@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-good-subarray-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumSubarraySum(self, nums: List[int], k: int) -> int:\r\n        ans = -inf\r\n        p = {nums[0]: 0}\r\n        s, n = 0, len(nums)\r\n        for i, x in enumerate(nums):\r\n            s += x\r\n            if x - k in p:\r\n                ans = max(ans, s - p[x - k])\r\n            if x + k in p:\r\n                ans = max(ans, s - p[x + k])\r\n            if i + 1 < n and (nums[i + 1] not in p or p[nums[i + 1]] > s):\r\n                p[nums[i + 1]] = s\r\n        return 0 if ans == -inf else ans",
+    "problemId": 3026,
+    "title": "Maximum Good Subarray Sum",
+    "problemUrl": "https://leetcode.com/problems/maximum-good-subarray-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3026.Maximum Good Subarray Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3026.Maximum Good Subarray Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3026.Maximum Good Subarray Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3026.Maximum Good Subarray Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3026.Maximum Good Subarray Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3026.Maximum Good Subarray Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3026.Maximum Good Subarray Sum/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

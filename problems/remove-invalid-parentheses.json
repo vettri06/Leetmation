@@ -1,0 +1,33 @@
+{
+    "problemName": "remove-invalid-parentheses",
+    "language": "python3",
+    "code": "class Solution:\r\n    def removeInvalidParentheses(self, s: str) -> List[str]:\r\n        def dfs(i, l, r, lcnt, rcnt, t):\r\n            if i == n:\r\n                if l == 0 and r == 0:\r\n                    ans.add(t)\r\n                return\r\n            if n - i < l + r or lcnt < rcnt:\r\n                return\r\n            if s[i] == '(' and l:\r\n                dfs(i + 1, l - 1, r, lcnt, rcnt, t)\r\n            elif s[i] == ')' and r:\r\n                dfs(i + 1, l, r - 1, lcnt, rcnt, t)\r\n            dfs(i + 1, l, r, lcnt + (s[i] == '('), rcnt + (s[i] == ')'), t + s[i])\r\n\r\n        l = r = 0\r\n        for c in s:\r\n            if c == '(':\r\n                l += 1\r\n            elif c == ')':\r\n                if l:\r\n                    l -= 1\r\n                else:\r\n                    r += 1\r\n        ans = set()\r\n        n = len(s)\r\n        dfs(0, l, r, 0, 0, '')\r\n        return list(ans)",
+    "problemId": 301,
+    "title": "Remove Invalid Parentheses",
+    "problemUrl": "https://leetcode.com/problems/remove-invalid-parentheses/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0301.Remove Invalid Parentheses/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0301.Remove Invalid Parentheses/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0301.Remove Invalid Parentheses/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0301.Remove Invalid Parentheses/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0301.Remove Invalid Parentheses/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

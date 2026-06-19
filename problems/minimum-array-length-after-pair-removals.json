@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-array-length-after-pair-removals",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minLengthAfterRemovals(self, nums: List[int]) -> int:\r\n        cnt = Counter(nums)\r\n        pq = [-x for x in cnt.values()]\r\n        heapify(pq)\r\n        ans = len(nums)\r\n        while len(pq) > 1:\r\n            x, y = -heappop(pq), -heappop(pq)\r\n            x -= 1\r\n            y -= 1\r\n            if x > 0:\r\n                heappush(pq, -x)\r\n            if y > 0:\r\n                heappush(pq, -y)\r\n            ans -= 2\r\n        return ans",
+    "problemId": 2856,
+    "title": "Minimum Array Length After Pair Removals",
+    "problemUrl": "https://leetcode.com/problems/minimum-array-length-after-pair-removals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2856.Minimum Array Length After Pair Removals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2856.Minimum Array Length After Pair Removals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2856.Minimum Array Length After Pair Removals/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2856.Minimum Array Length After Pair Removals/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2856.Minimum Array Length After Pair Removals/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2856.Minimum Array Length After Pair Removals/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

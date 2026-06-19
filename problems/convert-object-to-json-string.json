@@ -1,0 +1,18 @@
+{
+    "problemName": "convert-object-to-json-string",
+    "language": "typescript",
+    "code": "function jsonStringify(object: any): string {\r\n    if (object === null) {\r\n        return 'null';\r\n    }\r\n    if (typeof object === 'string') {\r\n        return `\"${object}\"`;\r\n    }\r\n    if (typeof object === 'number' || typeof object === 'boolean') {\r\n        return object.toString();\r\n    }\r\n    if (Array.isArray(object)) {\r\n        return `[${object.map(jsonStringify).join(',')}]`;\r\n    }\r\n    if (typeof object === 'object') {\r\n        return `{${Object.entries(object)\r\n            .map(([key, value]) => `${jsonStringify(key)}:${jsonStringify(value)}`)\r\n            .join(',')}}`;\r\n    }\r\n    return '';\r\n}",
+    "problemId": 2633,
+    "title": "Convert Object to JSON String",
+    "problemUrl": "https://leetcode.com/problems/convert-object-to-json-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2633.Convert Object to JSON String/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2633.Convert Object to JSON String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

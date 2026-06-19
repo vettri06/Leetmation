@@ -1,0 +1,43 @@
+{
+    "problemName": "cyclically-rotating-a-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def rotateGrid(self, grid: List[List[int]], k: int) -> List[List[int]]:\r\n        def rotate(p: int, k: int):\r\n            nums = []\r\n            for j in range(p, n - p - 1):\r\n                nums.append(grid[p][j])\r\n            for i in range(p, m - p - 1):\r\n                nums.append(grid[i][n - p - 1])\r\n            for j in range(n - p - 1, p, -1):\r\n                nums.append(grid[m - p - 1][j])\r\n            for i in range(m - p - 1, p, -1):\r\n                nums.append(grid[i][p])\r\n            k %= len(nums)\r\n            if k == 0:\r\n                return\r\n            nums = nums[k:] + nums[:k]\r\n            k = 0\r\n            for j in range(p, n - p - 1):\r\n                grid[p][j] = nums[k]\r\n                k += 1\r\n            for i in range(p, m - p - 1):\r\n                grid[i][n - p - 1] = nums[k]\r\n                k += 1\r\n            for j in range(n - p - 1, p, -1):\r\n                grid[m - p - 1][j] = nums[k]\r\n                k += 1\r\n            for i in range(m - p - 1, p, -1):\r\n                grid[i][p] = nums[k]\r\n                k += 1\r\n\r\n        m, n = len(grid), len(grid[0])\r\n        for p in range(min(m, n) >> 1):\r\n            rotate(p, k)\r\n        return grid",
+    "problemId": 1914,
+    "title": "Cyclically Rotating a Grid",
+    "problemUrl": "https://leetcode.com/problems/cyclically-rotating-a-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1914.Cyclically Rotating a Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1914.Cyclically Rotating a Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1914.Cyclically Rotating a Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1914.Cyclically Rotating a Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1914.Cyclically Rotating a Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1914.Cyclically Rotating a Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1914.Cyclically Rotating a Grid/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

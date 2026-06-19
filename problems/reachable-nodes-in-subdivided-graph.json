@@ -1,0 +1,33 @@
+{
+    "problemName": "reachable-nodes-in-subdivided-graph",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reachableNodes(self, edges: List[List[int]], maxMoves: int, n: int) -> int:\r\n        g = defaultdict(list)\r\n        for u, v, cnt in edges:\r\n            g[u].append((v, cnt + 1))\r\n            g[v].append((u, cnt + 1))\r\n        q = [(0, 0)]\r\n        dist = [0] + [inf] * n\r\n        while q:\r\n            d, u = heappop(q)\r\n            for v, cnt in g[u]:\r\n                if (t := d + cnt) < dist[v]:\r\n                    dist[v] = t\r\n                    q.append((t, v))\r\n        ans = sum(d <= maxMoves for d in dist)\r\n        for u, v, cnt in edges:\r\n            a = min(cnt, max(0, maxMoves - dist[u]))\r\n            b = min(cnt, max(0, maxMoves - dist[v]))\r\n            ans += min(cnt, a + b)\r\n        return ans",
+    "problemId": 882,
+    "title": "Reachable Nodes In Subdivided Graph",
+    "problemUrl": "https://leetcode.com/problems/reachable-nodes-in-subdivided-graph/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0882.Reachable Nodes In Subdivided Graph/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0882.Reachable Nodes In Subdivided Graph/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0882.Reachable Nodes In Subdivided Graph/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0882.Reachable Nodes In Subdivided Graph/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0882.Reachable Nodes In Subdivided Graph/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

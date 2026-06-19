@@ -1,0 +1,43 @@
+{
+    "problemName": "24-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def judgePoint24(self, cards: List[int]) -> bool:\r\n        def dfs(nums: List[float]):\r\n            n = len(nums)\r\n            if n == 1:\r\n                if abs(nums[0] - 24) < 1e-6:\r\n                    return True\r\n                return False\r\n            ok = False\r\n            for i in range(n):\r\n                for j in range(n):\r\n                    if i != j:\r\n                        nxt = [nums[k] for k in range(n) if k != i and k != j]\r\n                        for op in ops:\r\n                            match op:\r\n                                case \"/\":\r\n                                    if nums[j] == 0:\r\n                                        continue\r\n                                    ok |= dfs(nxt + [nums[i] / nums[j]])\r\n                                case \"*\":\r\n                                    ok |= dfs(nxt + [nums[i] * nums[j]])\r\n                                case \"+\":\r\n                                    ok |= dfs(nxt + [nums[i] + nums[j]])\r\n                                case \"-\":\r\n                                    ok |= dfs(nxt + [nums[i] - nums[j]])\r\n                            if ok:\r\n                                return True\r\n            return ok\r\n\r\n        ops = (\"+\", \"-\", \"*\", \"/\")\r\n        nums = [float(x) for x in cards]\r\n        return dfs(nums)",
+    "problemId": 679,
+    "title": "24 Game",
+    "problemUrl": "https://leetcode.com/problems/24-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0679.24 Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0679.24 Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0679.24 Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0679.24 Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0679.24 Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0679.24 Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0679.24 Game/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "where-will-the-ball-fall",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findBall(self, grid: List[List[int]]) -> List[int]:\r\n        def dfs(i: int, j: int) -> int:\r\n            if i == m:\r\n                return j\r\n            if j == 0 and grid[i][j] == -1:\r\n                return -1\r\n            if j == n - 1 and grid[i][j] == 1:\r\n                return -1\r\n            if grid[i][j] == 1 and grid[i][j + 1] == -1:\r\n                return -1\r\n            if grid[i][j] == -1 and grid[i][j - 1] == 1:\r\n                return -1\r\n            return dfs(i + 1, j + 1) if grid[i][j] == 1 else dfs(i + 1, j - 1)\r\n\r\n        m, n = len(grid), len(grid[0])\r\n        return [dfs(0, j) for j in range(n)]",
+    "problemId": 1706,
+    "title": "Where Will the Ball Fall",
+    "problemUrl": "https://leetcode.com/problems/where-will-the-ball-fall/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1706.Where Will the Ball Fall/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1706.Where Will the Ball Fall/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1706.Where Will the Ball Fall/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1706.Where Will the Ball Fall/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1706.Where Will the Ball Fall/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1706.Where Will the Ball Fall/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1706.Where Will the Ball Fall/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1706.Where Will the Ball Fall/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

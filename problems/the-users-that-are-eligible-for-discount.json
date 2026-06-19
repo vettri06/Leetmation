@@ -1,0 +1,18 @@
+{
+    "problemName": "the-users-that-are-eligible-for-discount",
+    "language": "mysql",
+    "code": "CREATE PROCEDURE getUserIDs(startDate DATE, endDate DATE, minAmount INT)\r\nBEGIN\r\n    # Write your MySQL query statement below.\r\n    SELECT DISTINCT user_id\r\n    FROM Purchases\r\n    WHERE amount >= minAmount AND time_stamp BETWEEN startDate AND endDate\r\n    ORDER BY user_id;\r\nEND;",
+    "problemId": 2230,
+    "title": "The Users That Are Eligible for Discount",
+    "problemUrl": "https://leetcode.com/problems/the-users-that-are-eligible-for-discount/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2230.The Users That Are Eligible for Discount/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2230.The Users That Are Eligible for Discount/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

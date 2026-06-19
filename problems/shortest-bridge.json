@@ -1,0 +1,33 @@
+{
+    "problemName": "shortest-bridge",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shortestBridge(self, grid: List[List[int]]) -> int:\r\n        def dfs(i, j):\r\n            q.append((i, j))\r\n            grid[i][j] = 2\r\n            for a, b in pairwise(dirs):\r\n                x, y = i + a, j + b\r\n                if 0 <= x < n and 0 <= y < n and grid[x][y] == 1:\r\n                    dfs(x, y)\r\n\r\n        n = len(grid)\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        q = deque()\r\n        i, j = next((i, j) for i in range(n) for j in range(n) if grid[i][j])\r\n        dfs(i, j)\r\n        ans = 0\r\n        while 1:\r\n            for _ in range(len(q)):\r\n                i, j = q.popleft()\r\n                for a, b in pairwise(dirs):\r\n                    x, y = i + a, j + b\r\n                    if 0 <= x < n and 0 <= y < n:\r\n                        if grid[x][y] == 1:\r\n                            return ans\r\n                        if grid[x][y] == 0:\r\n                            grid[x][y] = 2\r\n                            q.append((x, y))\r\n            ans += 1",
+    "problemId": 934,
+    "title": "Shortest Bridge",
+    "problemUrl": "https://leetcode.com/problems/shortest-bridge/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0934.Shortest Bridge/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0934.Shortest Bridge/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0934.Shortest Bridge/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0934.Shortest Bridge/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0934.Shortest Bridge/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

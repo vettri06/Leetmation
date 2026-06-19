@@ -1,0 +1,43 @@
+{
+    "problemName": "longest-common-subsequence-between-sorted-arrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestCommonSubsequence(self, arrays: List[List[int]]) -> List[int]:\r\n        cnt = [0] * 101\r\n        for row in arrays:\r\n            for x in row:\r\n                cnt[x] += 1\r\n        return [x for x, v in enumerate(cnt) if v == len(arrays)]",
+    "problemId": 1940,
+    "title": "Longest Common Subsequence Between Sorted Arrays",
+    "problemUrl": "https://leetcode.com/problems/longest-common-subsequence-between-sorted-arrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1940.Longest Common Subsequence Between Sorted Arrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1940.Longest Common Subsequence Between Sorted Arrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1940.Longest Common Subsequence Between Sorted Arrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1940.Longest Common Subsequence Between Sorted Arrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1940.Longest Common Subsequence Between Sorted Arrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1940.Longest Common Subsequence Between Sorted Arrays/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1940.Longest Common Subsequence Between Sorted Arrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

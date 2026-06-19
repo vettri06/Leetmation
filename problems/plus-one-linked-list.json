@@ -1,0 +1,38 @@
+{
+    "problemName": "plus-one-linked-list",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def plusOne(self, head: Optional[ListNode]) -> Optional[ListNode]:\r\n        dummy = ListNode(0, head)\r\n        target = dummy\r\n        while head:\r\n            if head.val != 9:\r\n                target = head\r\n            head = head.next\r\n        target.val += 1\r\n        target = target.next\r\n        while target:\r\n            target.val = 0\r\n            target = target.next\r\n        return dummy if dummy.val else dummy.next",
+    "problemId": 369,
+    "title": "Plus One Linked List",
+    "problemUrl": "https://leetcode.com/problems/plus-one-linked-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0369.Plus One Linked List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0369.Plus One Linked List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0369.Plus One Linked List/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0369.Plus One Linked List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0369.Plus One Linked List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0369.Plus One Linked List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

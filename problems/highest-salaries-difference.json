@@ -1,0 +1,18 @@
+{
+    "problemName": "highest-salaries-difference",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT MAX(s) - MIN(s) AS salary_difference\r\nFROM\r\n    (\r\n        SELECT MAX(salary) AS s\r\n        FROM Salaries\r\n        GROUP BY department\r\n    ) AS t;",
+    "problemId": 2853,
+    "title": "Highest Salaries Difference",
+    "problemUrl": "https://leetcode.com/problems/highest-salaries-difference/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2853.Highest Salaries Difference/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2853.Highest Salaries Difference/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

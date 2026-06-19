@@ -1,0 +1,48 @@
+{
+    "problemName": "count-odd-numbers-in-an-interval-range",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countOdds(self, low: int, high: int) -> int:\r\n        return ((high + 1) >> 1) - (low >> 1)",
+    "problemId": 1523,
+    "title": "Count Odd Numbers in an Interval Range",
+    "problemUrl": "https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1523.Count Odd Numbers in an Interval Range/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1523.Count Odd Numbers in an Interval Range/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1523.Count Odd Numbers in an Interval Range/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1523.Count Odd Numbers in an Interval Range/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1523.Count Odd Numbers in an Interval Range/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1523.Count Odd Numbers in an Interval Range/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1523.Count Odd Numbers in an Interval Range/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1523.Count Odd Numbers in an Interval Range/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

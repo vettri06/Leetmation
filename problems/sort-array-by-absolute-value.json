@@ -1,0 +1,43 @@
+{
+    "problemName": "sort-array-by-absolute-value",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sortByAbsoluteValue(self, nums: List[int]) -> List[int]:\r\n        return sorted(nums, key=lambda x: abs(x))",
+    "problemId": 3667,
+    "title": "Sort Array By Absolute Value",
+    "problemUrl": "https://leetcode.com/problems/sort-array-by-absolute-value/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3667.Sort Array By Absolute Value/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3667.Sort Array By Absolute Value/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3667.Sort Array By Absolute Value/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3667.Sort Array By Absolute Value/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3667.Sort Array By Absolute Value/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3667.Sort Array By Absolute Value/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3667.Sort Array By Absolute Value/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

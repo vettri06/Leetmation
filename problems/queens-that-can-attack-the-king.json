@@ -1,0 +1,38 @@
+{
+    "problemName": "queens-that-can-attack-the-king",
+    "language": "python3",
+    "code": "class Solution:\r\n    def queensAttacktheKing(\r\n        self, queens: List[List[int]], king: List[int]\r\n    ) -> List[List[int]]:\r\n        n = 8\r\n        s = {(i, j) for i, j in queens}\r\n        ans = []\r\n        for a in range(-1, 2):\r\n            for b in range(-1, 2):\r\n                if a or b:\r\n                    x, y = king\r\n                    while 0 <= x + a < n and 0 <= y + b < n:\r\n                        x, y = x + a, y + b\r\n                        if (x, y) in s:\r\n                            ans.append([x, y])\r\n                            break\r\n        return ans",
+    "problemId": 1222,
+    "title": "Queens That Can Attack the King",
+    "problemUrl": "https://leetcode.com/problems/queens-that-can-attack-the-king/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1222.Queens That Can Attack the King/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1222.Queens That Can Attack the King/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1222.Queens That Can Attack the King/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1222.Queens That Can Attack the King/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1222.Queens That Can Attack the King/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1222.Queens That Can Attack the King/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

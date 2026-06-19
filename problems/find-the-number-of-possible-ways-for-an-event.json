@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-number-of-possible-ways-for-an-event",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfWays(self, n: int, x: int, y: int) -> int:\r\n        mod = 10**9 + 7\r\n        f = [[0] * (x + 1) for _ in range(n + 1)]\r\n        f[0][0] = 1\r\n        for i in range(1, n + 1):\r\n            for j in range(1, x + 1):\r\n                f[i][j] = (f[i - 1][j] * j + f[i - 1][j - 1] * (x - (j - 1))) % mod\r\n        ans, p = 0, 1\r\n        for j in range(1, x + 1):\r\n            p = p * y % mod\r\n            ans = (ans + f[n][j] * p) % mod\r\n        return ans",
+    "problemId": 3317,
+    "title": "Find the Number of Possible Ways for an Event",
+    "problemUrl": "https://leetcode.com/problems/find-the-number-of-possible-ways-for-an-event/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3317.Find the Number of Possible Ways for an Event/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3317.Find the Number of Possible Ways for an Event/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3317.Find the Number of Possible Ways for an Event/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3317.Find the Number of Possible Ways for an Event/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3317.Find the Number of Possible Ways for an Event/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3317.Find the Number of Possible Ways for an Event/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-population-year",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumPopulation(self, logs: List[List[int]]) -> int:\r\n        d = [0] * 101\r\n        offset = 1950\r\n        for a, b in logs:\r\n            a, b = a - offset, b - offset\r\n            d[a] += 1\r\n            d[b] -= 1\r\n        s = mx = j = 0\r\n        for i, x in enumerate(d):\r\n            s += x\r\n            if mx < s:\r\n                mx, j = s, i\r\n        return j + offset",
+    "problemId": 1854,
+    "title": "Maximum Population Year",
+    "problemUrl": "https://leetcode.com/problems/maximum-population-year/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1854.Maximum Population Year/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1854.Maximum Population Year/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1854.Maximum Population Year/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1854.Maximum Population Year/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1854.Maximum Population Year/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1854.Maximum Population Year/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1854.Maximum Population Year/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

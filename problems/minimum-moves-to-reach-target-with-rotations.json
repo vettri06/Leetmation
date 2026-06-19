@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-moves-to-reach-target-with-rotations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumMoves(self, grid: List[List[int]]) -> int:\r\n        def move(i1, j1, i2, j2):\r\n            if 0 <= i1 < n and 0 <= j1 < n and 0 <= i2 < n and 0 <= j2 < n:\r\n                a, b = i1 * n + j1, i2 * n + j2\r\n                status = 0 if i1 == i2 else 1\r\n                if (a, status) not in vis and grid[i1][j1] == 0 and grid[i2][j2] == 0:\r\n                    q.append((a, b))\r\n                    vis.add((a, status))\r\n\r\n        n = len(grid)\r\n        target = (n * n - 2, n * n - 1)\r\n        q = deque([(0, 1)])\r\n        vis = {(0, 0)}\r\n        ans = 0\r\n        while q:\r\n            for _ in range(len(q)):\r\n                a, b = q.popleft()\r\n                if (a, b) == target:\r\n                    return ans\r\n                i1, j1 = a // n, a % n\r\n                i2, j2 = b // n, b % n\r\n                # 尝试向右平移（保持身体水平/垂直状态）\r\n                move(i1, j1 + 1, i2, j2 + 1)\r\n                # 尝试向下平移（保持身体水平/垂直状态）\r\n                move(i1 + 1, j1, i2 + 1, j2)\r\n                # 当前处于水平状态，且 grid[i1 + 1][j2] 无障碍，尝试顺时针旋转90°\r\n                if i1 == i2 and i1 + 1 < n and grid[i1 + 1][j2] == 0:\r\n                    move(i1, j1, i1 + 1, j1)\r\n                # 当前处于垂直状态，且 grid[i2][j1 + 1] 无障碍，尝试逆时针旋转90°\r\n                if j1 == j2 and j1 + 1 < n and grid[i2][j1 + 1] == 0:\r\n                    move(i1, j1, i1, j1 + 1)\r\n            ans += 1\r\n        return -1",
+    "problemId": 1210,
+    "title": "Minimum Moves to Reach Target with Rotations",
+    "problemUrl": "https://leetcode.com/problems/minimum-moves-to-reach-target-with-rotations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1210.Minimum Moves to Reach Target with Rotations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1210.Minimum Moves to Reach Target with Rotations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1210.Minimum Moves to Reach Target with Rotations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1210.Minimum Moves to Reach Target with Rotations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1210.Minimum Moves to Reach Target with Rotations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1210.Minimum Moves to Reach Target with Rotations/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1210.Minimum Moves to Reach Target with Rotations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

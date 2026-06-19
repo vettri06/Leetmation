@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-difference-between-even-and-odd-frequency-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxDifference(self, S: str, k: int) -> int:\r\n        s = list(map(int, S))\r\n        ans = -inf\r\n        for a in range(5):\r\n            for b in range(5):\r\n                if a == b:\r\n                    continue\r\n                curA = curB = 0\r\n                preA = preB = 0\r\n                t = [[inf, inf], [inf, inf]]\r\n                l = -1\r\n                for r, x in enumerate(s):\r\n                    curA += x == a\r\n                    curB += x == b\r\n                    while r - l >= k and curB - preB >= 2:\r\n                        t[preA & 1][preB & 1] = min(t[preA & 1][preB & 1], preA - preB)\r\n                        l += 1\r\n                        preA += s[l] == a\r\n                        preB += s[l] == b\r\n                    ans = max(ans, curA - curB - t[curA & 1 ^ 1][curB & 1])\r\n        return ans",
+    "problemId": 3445,
+    "title": "Maximum Difference Between Even and Odd Frequency II",
+    "problemUrl": "https://leetcode.com/problems/maximum-difference-between-even-and-odd-frequency-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3445.Maximum Difference Between Even and Odd Frequency II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3445.Maximum Difference Between Even and Odd Frequency II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3445.Maximum Difference Between Even and Odd Frequency II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3445.Maximum Difference Between Even and Odd Frequency II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3445.Maximum Difference Between Even and Odd Frequency II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3445.Maximum Difference Between Even and Odd Frequency II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3445.Maximum Difference Between Even and Odd Frequency II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

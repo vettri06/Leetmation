@@ -1,0 +1,38 @@
+{
+    "problemName": "count-lattice-points-inside-a-circle",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countLatticePoints(self, circles: List[List[int]]) -> int:\r\n        ans = 0\r\n        mx = max(x + r for x, _, r in circles)\r\n        my = max(y + r for _, y, r in circles)\r\n        for i in range(mx + 1):\r\n            for j in range(my + 1):\r\n                for x, y, r in circles:\r\n                    dx, dy = i - x, j - y\r\n                    if dx * dx + dy * dy <= r * r:\r\n                        ans += 1\r\n                        break\r\n        return ans",
+    "problemId": 2249,
+    "title": "Count Lattice Points Inside a Circle",
+    "problemUrl": "https://leetcode.com/problems/count-lattice-points-inside-a-circle/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2249.Count Lattice Points Inside a Circle/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2249.Count Lattice Points Inside a Circle/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2249.Count Lattice Points Inside a Circle/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2249.Count Lattice Points Inside a Circle/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2249.Count Lattice Points Inside a Circle/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2249.Count Lattice Points Inside a Circle/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

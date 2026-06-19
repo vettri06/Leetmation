@@ -1,0 +1,43 @@
+{
+    "problemName": "html-entity-parser",
+    "language": "python3",
+    "code": "class Solution:\r\n    def entityParser(self, text: str) -> str:\r\n        d = {\r\n            '&quot;': '\"',\r\n            '&apos;': \"'\",\r\n            '&amp;': \"&\",\r\n            \"&gt;\": '>',\r\n            \"&lt;\": '<',\r\n            \"&frasl;\": '/',\r\n        }\r\n        i, n = 0, len(text)\r\n        ans = []\r\n        while i < n:\r\n            for l in range(1, 8):\r\n                j = i + l\r\n                if text[i:j] in d:\r\n                    ans.append(d[text[i:j]])\r\n                    i = j\r\n                    break\r\n            else:\r\n                ans.append(text[i])\r\n                i += 1\r\n        return ''.join(ans)",
+    "problemId": 1410,
+    "title": "HTML Entity Parser",
+    "problemUrl": "https://leetcode.com/problems/html-entity-parser/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1410.HTML Entity Parser/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1410.HTML Entity Parser/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1410.HTML Entity Parser/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1410.HTML Entity Parser/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1410.HTML Entity Parser/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1410.HTML Entity Parser/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1410.HTML Entity Parser/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

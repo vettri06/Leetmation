@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-total-damage-with-spell-casting",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumTotalDamage(self, power: List[int]) -> int:\r\n        @cache\r\n        def dfs(i: int) -> int:\r\n            if i >= n:\r\n                return 0\r\n            a = dfs(i + cnt[power[i]])\r\n            b = power[i] * cnt[power[i]] + dfs(nxt[i])\r\n            return max(a, b)\r\n\r\n        n = len(power)\r\n        cnt = Counter(power)\r\n        power.sort()\r\n        nxt = [bisect_right(power, x + 2, lo=i + 1) for i, x in enumerate(power)]\r\n        return dfs(0)",
+    "problemId": 3186,
+    "title": "Maximum Total Damage With Spell Casting",
+    "problemUrl": "https://leetcode.com/problems/maximum-total-damage-with-spell-casting/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3186.Maximum Total Damage With Spell Casting/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3186.Maximum Total Damage With Spell Casting/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3186.Maximum Total Damage With Spell Casting/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3186.Maximum Total Damage With Spell Casting/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3186.Maximum Total Damage With Spell Casting/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3186.Maximum Total Damage With Spell Casting/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3186.Maximum Total Damage With Spell Casting/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

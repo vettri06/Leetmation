@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-of-a-path-with-special-roads",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumCost(\r\n        self, start: List[int], target: List[int], specialRoads: List[List[int]]\r\n    ) -> int:\r\n        def dist(x1: int, y1: int, x2: int, y2: int) -> int:\r\n            return abs(x1 - x2) + abs(y1 - y2)\r\n\r\n        q = [(0, start[0], start[1])]\r\n        vis = set()\r\n        ans = inf\r\n        while q:\r\n            d, x, y = heappop(q)\r\n            if (x, y) in vis:\r\n                continue\r\n            vis.add((x, y))\r\n            ans = min(ans, d + dist(x, y, *target))\r\n            for x1, y1, x2, y2, cost in specialRoads:\r\n                heappush(q, (d + dist(x, y, x1, y1) + cost, x2, y2))\r\n        return ans",
+    "problemId": 2662,
+    "title": "Minimum Cost of a Path With Special Roads",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-of-a-path-with-special-roads/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2662.Minimum Cost of a Path With Special Roads/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2662.Minimum Cost of a Path With Special Roads/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2662.Minimum Cost of a Path With Special Roads/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2662.Minimum Cost of a Path With Special Roads/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2662.Minimum Cost of a Path With Special Roads/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2662.Minimum Cost of a Path With Special Roads/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

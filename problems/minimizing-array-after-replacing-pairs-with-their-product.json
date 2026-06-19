@@ -1,0 +1,38 @@
+{
+    "problemName": "minimizing-array-after-replacing-pairs-with-their-product",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minArrayLength(self, nums: List[int], k: int) -> int:\r\n        ans, y = 1, nums[0]\r\n        for x in nums[1:]:\r\n            if x == 0:\r\n                return 1\r\n            if x * y <= k:\r\n                y *= x\r\n            else:\r\n                y = x\r\n                ans += 1\r\n        return ans",
+    "problemId": 2892,
+    "title": "Minimizing Array After Replacing Pairs With Their Product",
+    "problemUrl": "https://leetcode.com/problems/minimizing-array-after-replacing-pairs-with-their-product/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2892.Minimizing Array After Replacing Pairs With Their Product/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2892.Minimizing Array After Replacing Pairs With Their Product/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2892.Minimizing Array After Replacing Pairs With Their Product/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2892.Minimizing Array After Replacing Pairs With Their Product/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2892.Minimizing Array After Replacing Pairs With Their Product/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2892.Minimizing Array After Replacing Pairs With Their Product/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

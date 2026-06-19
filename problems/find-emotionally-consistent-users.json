@@ -1,0 +1,23 @@
+{
+    "problemName": "find-emotionally-consistent-users",
+    "language": "python3",
+    "code": "import pandas as pd\r\nfrom decimal import Decimal, ROUND_HALF_UP\r\n\r\n\r\ndef find_emotionally_consistent_users(reactions: pd.DataFrame) -> pd.DataFrame:\r\n    t = reactions.groupby([\"user_id\", \"reaction\"]).size().reset_index(name=\"cnt\")\r\n\r\n    s = (\r\n        t.groupby(\"user_id\")\r\n        .agg(mx_cnt=(\"cnt\", \"max\"), total_cnt=(\"cnt\", \"sum\"))\r\n        .reset_index()\r\n    )\r\n\r\n    s[\"reaction_ratio\"] = (\r\n        s[\"mx_cnt\"]\r\n        .div(s[\"total_cnt\"])\r\n        .apply(\r\n            lambda x: float(\r\n                Decimal(str(x)).quantize(Decimal(\"0.00\"), rounding=ROUND_HALF_UP)\r\n            )\r\n        )\r\n    )\r\n\r\n    s = s[(s[\"reaction_ratio\"] >= 0.60) & (s[\"total_cnt\"] >= 5)]\r\n\r\n    merged = pd.merge(\r\n        s[[\"user_id\", \"mx_cnt\", \"reaction_ratio\"]],\r\n        t,\r\n        left_on=[\"user_id\", \"mx_cnt\"],\r\n        right_on=[\"user_id\", \"cnt\"],\r\n    )\r\n\r\n    result = (\r\n        merged[[\"user_id\", \"reaction\", \"reaction_ratio\"]]\r\n        .rename(columns={\"reaction\": \"dominant_reaction\"})\r\n        .sort_values(by=[\"reaction_ratio\", \"user_id\"], ascending=[False, True])\r\n        .reset_index(drop=True)\r\n    )\r\n\r\n    return result",
+    "problemId": 3808,
+    "title": "Find Emotionally Consistent Users",
+    "problemUrl": "https://leetcode.com/problems/find-emotionally-consistent-users/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3808.Find Emotionally Consistent Users/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3808.Find Emotionally Consistent Users/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3808.Find Emotionally Consistent Users/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

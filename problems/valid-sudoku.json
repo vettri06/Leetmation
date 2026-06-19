@@ -1,0 +1,53 @@
+{
+    "problemName": "valid-sudoku",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isValidSudoku(self, board: List[List[str]]) -> bool:\r\n        row = [[False] * 9 for _ in range(9)]\r\n        col = [[False] * 9 for _ in range(9)]\r\n        sub = [[False] * 9 for _ in range(9)]\r\n        for i in range(9):\r\n            for j in range(9):\r\n                c = board[i][j]\r\n                if c == '.':\r\n                    continue\r\n                num = int(c) - 1\r\n                k = i // 3 * 3 + j // 3\r\n                if row[i][num] or col[j][num] or sub[k][num]:\r\n                    return False\r\n                row[i][num] = True\r\n                col[j][num] = True\r\n                sub[k][num] = True\r\n        return True",
+    "problemId": 36,
+    "title": "Valid Sudoku",
+    "problemUrl": "https://leetcode.com/problems/valid-sudoku/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0036.Valid Sudoku/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0036.Valid Sudoku/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0036.Valid Sudoku/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0036.Valid Sudoku/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0036.Valid Sudoku/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0036.Valid Sudoku/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0036.Valid Sudoku/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0036.Valid Sudoku/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0036.Valid Sudoku/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

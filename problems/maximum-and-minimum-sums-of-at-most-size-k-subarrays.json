@@ -1,0 +1,28 @@
+{
+    "problemName": "maximum-and-minimum-sums-of-at-most-size-k-subarrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minMaxSubarraySum(self, nums: list[int], k: int) -> int:\r\n        subarrays_max_min_sum = 0\r\n\r\n        max_stack: deque[list[int]] = deque([])  # Format: [idx, num, shares].\r\n        subarrays_max_sum = 0\r\n\r\n        min_stack: deque[list[int]] = deque([])  # Format: [idx, num, shares].\r\n        subarrays_min_sum = 0\r\n\r\n        for end_idx, num in enumerate(nums):\r\n            start_idx = max(0, end_idx - k + 1)\r\n\r\n            # Window start idx slides by 1: must update stacks' info.\r\n            if start_idx > 0:\r\n                max_stack[0][2] -= 1  # Decrement stack's front num shares.\r\n                subarrays_max_sum -= max_stack[0][1]\r\n\r\n                if max_stack[0][0] < start_idx:  # Front num out of window.\r\n                    max_stack.popleft()\r\n\r\n                min_stack[0][2] -= 1  # Decrement stack's front num shares.\r\n                subarrays_min_sum -= min_stack[0][1]\r\n\r\n                if min_stack[0][0] < start_idx:  # Front num out of window.\r\n                    min_stack.popleft()\r\n\r\n            max_shares = 1  # Base case.\r\n            subarrays_max_sum += num\r\n\r\n            while max_stack and max_stack[-1][1] <= num:\r\n                _, prev_num, prev_shares = max_stack.pop()\r\n\r\n                max_shares += prev_shares  # Max shares transition.\r\n\r\n                # Reflect transition in max sum.\r\n                subarrays_max_sum += (num - prev_num) * prev_shares\r\n\r\n            max_stack.append([end_idx, num, max_shares])\r\n\r\n            min_shares = 1  # Base case.\r\n            subarrays_min_sum += num\r\n\r\n            while min_stack and min_stack[-1][1] >= num:\r\n                _, prev_num, prev_shares = min_stack.pop()\r\n\r\n                min_shares += prev_shares  # Min shares transition.\r\n\r\n                # Reflect transition in min sum.\r\n                subarrays_min_sum += (num - prev_num) * prev_shares\r\n\r\n            min_stack.append([end_idx, num, min_shares])\r\n\r\n            subarrays_max_min_sum += subarrays_max_sum + subarrays_min_sum\r\n\r\n        return subarrays_max_min_sum",
+    "problemId": 3430,
+    "title": "Maximum and Minimum Sums of at Most Size K Subarrays",
+    "problemUrl": "https://leetcode.com/problems/maximum-and-minimum-sums-of-at-most-size-k-subarrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3430.Maximum and Minimum Sums of at Most Size K Subarrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3430.Maximum and Minimum Sums of at Most Size K Subarrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3430.Maximum and Minimum Sums of at Most Size K Subarrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3430.Maximum and Minimum Sums of at Most Size K Subarrays/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "problemName": "big-countries",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT name, population, area\r\nFROM World\r\nWHERE area >= 3000000 OR population >= 25000000;",
+    "problemId": 595,
+    "title": "Big Countries",
+    "problemUrl": "https://leetcode.com/problems/big-countries/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0595.Big Countries/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0595.Big Countries/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0595.Big Countries/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

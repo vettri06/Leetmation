@@ -1,0 +1,43 @@
+{
+    "problemName": "largest-number-at-least-twice-of-others",
+    "language": "python3",
+    "code": "class Solution:\r\n    def dominantIndex(self, nums: List[int]) -> int:\r\n        x, y = nlargest(2, nums)\r\n        return nums.index(x) if x >= 2 * y else -1",
+    "problemId": 747,
+    "title": "Largest Number At Least Twice of Others",
+    "problemUrl": "https://leetcode.com/problems/largest-number-at-least-twice-of-others/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0747.Largest Number At Least Twice of Others/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0747.Largest Number At Least Twice of Others/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0747.Largest Number At Least Twice of Others/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0747.Largest Number At Least Twice of Others/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0747.Largest Number At Least Twice of Others/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0747.Largest Number At Least Twice of Others/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0747.Largest Number At Least Twice of Others/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

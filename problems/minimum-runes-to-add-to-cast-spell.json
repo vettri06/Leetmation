@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-runes-to-add-to-cast-spell",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minRunesToAdd(\r\n        self, n: int, crystals: List[int], flowFrom: List[int], flowTo: List[int]\r\n    ) -> int:\r\n        def bfs(q: Deque[int]):\r\n            while q:\r\n                a = q.popleft()\r\n                for b in g[a]:\r\n                    if vis[b] == 1:\r\n                        continue\r\n                    vis[b] = 1\r\n                    q.append(b)\r\n\r\n        def dfs(a: int):\r\n            vis[a] = 2\r\n            for b in g[a]:\r\n                if vis[b] > 0:\r\n                    continue\r\n                dfs(b)\r\n            seq.append(a)\r\n\r\n        g = [[] for _ in range(n)]\r\n        for a, b in zip(flowFrom, flowTo):\r\n            g[a].append(b)\r\n\r\n        q = deque(crystals)\r\n        vis = [0] * n\r\n        for x in crystals:\r\n            vis[x] = 1\r\n        bfs(q)\r\n\r\n        seq = []\r\n        for i in range(n):\r\n            if vis[i] == 0:\r\n                dfs(i)\r\n        seq.reverse()\r\n        ans = 0\r\n        for i in seq:\r\n            if vis[i] == 2:\r\n                q = deque([i])\r\n                vis[i] = 1\r\n                bfs(q)\r\n                ans += 1\r\n        return ans",
+    "problemId": 3383,
+    "title": "Minimum Runes to Add to Cast Spell",
+    "problemUrl": "https://leetcode.com/problems/minimum-runes-to-add-to-cast-spell/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3383.Minimum Runes to Add to Cast Spell/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3383.Minimum Runes to Add to Cast Spell/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3383.Minimum Runes to Add to Cast Spell/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3383.Minimum Runes to Add to Cast Spell/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3383.Minimum Runes to Add to Cast Spell/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3383.Minimum Runes to Add to Cast Spell/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

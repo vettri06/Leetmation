@@ -1,0 +1,63 @@
+{
+    "problemName": "corporate-flight-bookings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def corpFlightBookings(self, bookings: List[List[int]], n: int) -> List[int]:\r\n        ans = [0] * n\r\n        for first, last, seats in bookings:\r\n            ans[first - 1] += seats\r\n            if last < n:\r\n                ans[last] -= seats\r\n        return list(accumulate(ans))",
+    "problemId": 1109,
+    "title": "Corporate Flight Bookings",
+    "problemUrl": "https://leetcode.com/problems/corporate-flight-bookings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1109.Corporate Flight Bookings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1109.Corporate Flight Bookings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1109.Corporate Flight Bookings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1109.Corporate Flight Bookings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1109.Corporate Flight Bookings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1109.Corporate Flight Bookings/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1109.Corporate Flight Bookings/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1109.Corporate Flight Bookings/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1109.Corporate Flight Bookings/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1109.Corporate Flight Bookings/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1109.Corporate Flight Bookings/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "split-bst",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def splitBST(\r\n        self, root: Optional[TreeNode], target: int\r\n    ) -> List[Optional[TreeNode]]:\r\n        def dfs(root):\r\n            if root is None:\r\n                return [None, None]\r\n            if root.val <= target:\r\n                l, r = dfs(root.right)\r\n                root.right = l\r\n                return [root, r]\r\n            else:\r\n                l, r = dfs(root.left)\r\n                root.left = r\r\n                return [l, root]\r\n\r\n        return dfs(root)",
+    "problemId": 776,
+    "title": "Split BST",
+    "problemUrl": "https://leetcode.com/problems/split-bst/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0776.Split BST/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0776.Split BST/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0776.Split BST/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0776.Split BST/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0776.Split BST/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0776.Split BST/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

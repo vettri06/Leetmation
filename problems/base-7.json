@@ -1,0 +1,43 @@
+{
+    "problemName": "base-7",
+    "language": "python3",
+    "code": "class Solution:\r\n    def convertToBase7(self, num: int) -> str:\r\n        if num == 0:\r\n            return '0'\r\n        if num < 0:\r\n            return '-' + self.convertToBase7(-num)\r\n        ans = []\r\n        while num:\r\n            ans.append(str(num % 7))\r\n            num //= 7\r\n        return ''.join(ans[::-1])",
+    "problemId": 504,
+    "title": "Base 7",
+    "problemUrl": "https://leetcode.com/problems/base-7/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0504.Base 7/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0504.Base 7/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0504.Base 7/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0504.Base 7/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0504.Base 7/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0504.Base 7/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0504.Base 7/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

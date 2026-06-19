@@ -1,0 +1,63 @@
+{
+    "problemName": "minimum-moves-to-reach-target-score",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minMoves(self, target: int, maxDoubles: int) -> int:\r\n        if target == 1:\r\n            return 0\r\n        if maxDoubles == 0:\r\n            return target - 1\r\n        if target % 2 == 0 and maxDoubles:\r\n            return 1 + self.minMoves(target >> 1, maxDoubles - 1)\r\n        return 1 + self.minMoves(target - 1, maxDoubles)",
+    "problemId": 2139,
+    "title": "Minimum Moves to Reach Target Score",
+    "problemUrl": "https://leetcode.com/problems/minimum-moves-to-reach-target-score/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2139.Minimum Moves to Reach Target Score/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2139.Minimum Moves to Reach Target Score/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2139.Minimum Moves to Reach Target Score/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2139.Minimum Moves to Reach Target Score/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2139.Minimum Moves to Reach Target Score/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2139.Minimum Moves to Reach Target Score/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2139.Minimum Moves to Reach Target Score/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2139.Minimum Moves to Reach Target Score/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2139.Minimum Moves to Reach Target Score/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2139.Minimum Moves to Reach Target Score/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2139.Minimum Moves to Reach Target Score/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

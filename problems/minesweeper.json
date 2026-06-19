@@ -1,0 +1,38 @@
+{
+    "problemName": "minesweeper",
+    "language": "python3",
+    "code": "class Solution:\r\n    def updateBoard(self, board: List[List[str]], click: List[int]) -> List[List[str]]:\r\n        def dfs(i: int, j: int):\r\n            cnt = 0\r\n            for x in range(i - 1, i + 2):\r\n                for y in range(j - 1, j + 2):\r\n                    if 0 <= x < m and 0 <= y < n and board[x][y] == \"M\":\r\n                        cnt += 1\r\n            if cnt:\r\n                board[i][j] = str(cnt)\r\n            else:\r\n                board[i][j] = \"B\"\r\n                for x in range(i - 1, i + 2):\r\n                    for y in range(j - 1, j + 2):\r\n                        if 0 <= x < m and 0 <= y < n and board[x][y] == \"E\":\r\n                            dfs(x, y)\r\n\r\n        m, n = len(board), len(board[0])\r\n        i, j = click\r\n        if board[i][j] == \"M\":\r\n            board[i][j] = \"X\"\r\n        else:\r\n            dfs(i, j)\r\n        return board",
+    "problemId": 529,
+    "title": "Minesweeper",
+    "problemUrl": "https://leetcode.com/problems/minesweeper/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0529.Minesweeper/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0529.Minesweeper/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0529.Minesweeper/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0529.Minesweeper/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0529.Minesweeper/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0529.Minesweeper/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

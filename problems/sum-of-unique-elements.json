@@ -1,0 +1,68 @@
+{
+    "problemName": "sum-of-unique-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumOfUnique(self, nums: List[int]) -> int:\r\n        cnt = Counter(nums)\r\n        return sum(x for x, v in cnt.items() if v == 1)",
+    "problemId": 1748,
+    "title": "Sum of Unique Elements",
+    "problemUrl": "https://leetcode.com/problems/sum-of-unique-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1748.Sum of Unique Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1748.Sum of Unique Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1748.Sum of Unique Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1748.Sum of Unique Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1748.Sum of Unique Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1748.Sum of Unique Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1748.Sum of Unique Elements/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1748.Sum of Unique Elements/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1748.Sum of Unique Elements/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1748.Sum of Unique Elements/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1748.Sum of Unique Elements/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1748.Sum of Unique Elements/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

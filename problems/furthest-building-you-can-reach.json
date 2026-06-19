@@ -1,0 +1,33 @@
+{
+    "problemName": "furthest-building-you-can-reach",
+    "language": "python3",
+    "code": "class Solution:\r\n    def furthestBuilding(self, heights: List[int], bricks: int, ladders: int) -> int:\r\n        h = []\r\n        for i, a in enumerate(heights[:-1]):\r\n            b = heights[i + 1]\r\n            d = b - a\r\n            if d > 0:\r\n                heappush(h, d)\r\n                if len(h) > ladders:\r\n                    bricks -= heappop(h)\r\n                    if bricks < 0:\r\n                        return i\r\n        return len(heights) - 1",
+    "problemId": 1642,
+    "title": "Furthest Building You Can Reach",
+    "problemUrl": "https://leetcode.com/problems/furthest-building-you-can-reach/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1642.Furthest Building You Can Reach/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1642.Furthest Building You Can Reach/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1642.Furthest Building You Can Reach/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1642.Furthest Building You Can Reach/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1642.Furthest Building You Can Reach/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

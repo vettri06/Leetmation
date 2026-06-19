@@ -1,0 +1,63 @@
+{
+    "problemName": "points-that-intersect-with-cars",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfPoints(self, nums: List[List[int]]) -> int:\r\n        m = 102\r\n        d = [0] * m\r\n        for start, end in nums:\r\n            d[start] += 1\r\n            d[end + 1] -= 1\r\n        return sum(s > 0 for s in accumulate(d))",
+    "problemId": 2848,
+    "title": "Points That Intersect With Cars",
+    "problemUrl": "https://leetcode.com/problems/points-that-intersect-with-cars/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2848.Points That Intersect With Cars/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2848.Points That Intersect With Cars/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2848.Points That Intersect With Cars/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2848.Points That Intersect With Cars/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2848.Points That Intersect With Cars/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2848.Points That Intersect With Cars/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2848.Points That Intersect With Cars/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2848.Points That Intersect With Cars/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2848.Points That Intersect With Cars/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2848.Points That Intersect With Cars/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2848.Points That Intersect With Cars/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

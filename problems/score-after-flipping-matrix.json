@@ -1,0 +1,43 @@
+{
+    "problemName": "score-after-flipping-matrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def matrixScore(self, grid: List[List[int]]) -> int:\r\n        m, n = len(grid), len(grid[0])\r\n        for i in range(m):\r\n            if grid[i][0] == 0:\r\n                for j in range(n):\r\n                    grid[i][j] ^= 1\r\n        ans = 0\r\n        for j in range(n):\r\n            cnt = sum(grid[i][j] for i in range(m))\r\n            ans += max(cnt, m - cnt) * (1 << (n - j - 1))\r\n        return ans",
+    "problemId": 861,
+    "title": "Score After Flipping Matrix",
+    "problemUrl": "https://leetcode.com/problems/score-after-flipping-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0861.Score After Flipping Matrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0861.Score After Flipping Matrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0861.Score After Flipping Matrix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0861.Score After Flipping Matrix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0861.Score After Flipping Matrix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0861.Score After Flipping Matrix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0861.Score After Flipping Matrix/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

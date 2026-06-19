@@ -1,0 +1,18 @@
+{
+    "problemName": "students-report-by-geography",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            *,\r\n            ROW_NUMBER() OVER (\r\n                PARTITION BY continent\r\n                ORDER BY name\r\n            ) AS rk\r\n        FROM Student\r\n    )\r\nSELECT\r\n    MAX(IF(continent = 'America', name, NULL)) AS 'America',\r\n    MAX(IF(continent = 'Asia', name, NULL)) AS 'Asia',\r\n    MAX(IF(continent = 'Europe', name, NULL)) AS 'Europe'\r\nFROM T\r\nGROUP BY rk;",
+    "problemId": 618,
+    "title": "Students Report By Geography",
+    "problemUrl": "https://leetcode.com/problems/students-report-by-geography/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0618.Students Report By Geography/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0618.Students Report By Geography/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

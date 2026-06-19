@@ -1,0 +1,18 @@
+{
+    "problemName": "delay-the-resolution-of-each-promise",
+    "language": "typescript",
+    "code": "function delayAll(functions: Function[], ms: number): Function[] {\r\n    return functions.map(fn => {\r\n        return async function () {\r\n            await new Promise(resolve => setTimeout(resolve, ms));\r\n            return fn();\r\n        };\r\n    });\r\n}",
+    "problemId": 2821,
+    "title": "Delay the Resolution of Each Promise",
+    "problemUrl": "https://leetcode.com/problems/delay-the-resolution-of-each-promise/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2821.Delay the Resolution of Each Promise/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2821.Delay the Resolution of Each Promise/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

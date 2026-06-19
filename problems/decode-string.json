@@ -1,0 +1,28 @@
+{
+    "problemName": "decode-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def decodeString(self, s: str) -> str:\r\n        s1, s2 = [], []\r\n        num, res = 0, ''\r\n        for c in s:\r\n            if c.isdigit():\r\n                num = num * 10 + int(c)\r\n            elif c == '[':\r\n                s1.append(num)\r\n                s2.append(res)\r\n                num, res = 0, ''\r\n            elif c == ']':\r\n                res = s2.pop() + res * s1.pop()\r\n            else:\r\n                res += c\r\n        return res",
+    "problemId": 394,
+    "title": "Decode String",
+    "problemUrl": "https://leetcode.com/problems/decode-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0394.Decode String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0394.Decode String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0394.Decode String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0394.Decode String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

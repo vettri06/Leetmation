@@ -1,0 +1,63 @@
+{
+    "problemName": "graph-valid-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def validTree(self, n: int, edges: List[List[int]]) -> bool:\r\n        def find(x: int) -> int:\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        p = list(range(n))\r\n        for a, b in edges:\r\n            pa, pb = find(a), find(b)\r\n            if pa == pb:\r\n                return False\r\n            p[pa] = pb\r\n            n -= 1\r\n        return n == 1",
+    "problemId": 261,
+    "title": "Graph Valid Tree",
+    "problemUrl": "https://leetcode.com/problems/graph-valid-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0261.Graph Valid Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0261.Graph Valid Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0261.Graph Valid Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0261.Graph Valid Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0261.Graph Valid Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0261.Graph Valid Tree/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0261.Graph Valid Tree/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0261.Graph Valid Tree/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0261.Graph Valid Tree/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0261.Graph Valid Tree/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0261.Graph Valid Tree/Solution2.js",
+            "sourceFile": "Solution2.js"
+        }
+    ]
+}

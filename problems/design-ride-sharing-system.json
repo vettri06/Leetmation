@@ -1,0 +1,33 @@
+{
+    "problemName": "design-ride-sharing-system",
+    "language": "python3",
+    "code": "class RideSharingSystem:\r\n\r\n    def __init__(self):\r\n        self.t = 0\r\n        self.riders = SortedList()\r\n        self.drivers = SortedList()\r\n        self.d = defaultdict(int)\r\n\r\n    def addRider(self, riderId: int) -> None:\r\n        self.d[riderId] = self.t\r\n        self.riders.add((self.t, riderId))\r\n        self.t += 1\r\n\r\n    def addDriver(self, driverId: int) -> None:\r\n        self.drivers.add((self.t, driverId))\r\n        self.t += 1\r\n\r\n    def matchDriverWithRider(self) -> List[int]:\r\n        if len(self.riders) < 1 or len(self.drivers) < 1:\r\n            return [-1, -1]\r\n        return [self.drivers.pop(0)[1], self.riders.pop(0)[1]]\r\n\r\n    def cancelRider(self, riderId: int) -> None:\r\n        self.riders.discard((self.d[riderId], riderId))\r\n\r\n\r\n# Your RideSharingSystem object will be instantiated and called as such:\r\n# obj = RideSharingSystem()\r\n# obj.addRider(riderId)\r\n# obj.addDriver(driverId)\r\n# param_3 = obj.matchDriverWithRider()\r\n# obj.cancelRider(riderId)",
+    "problemId": 3829,
+    "title": "Design Ride Sharing System",
+    "problemUrl": "https://leetcode.com/problems/design-ride-sharing-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3829.Design Ride Sharing System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3829.Design Ride Sharing System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3829.Design Ride Sharing System/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3829.Design Ride Sharing System/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3829.Design Ride Sharing System/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

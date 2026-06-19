@@ -1,0 +1,48 @@
+{
+    "problemName": "count-the-number-of-computer-unlocking-permutations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPermutations(self, complexity: List[int]) -> int:\r\n        mod = 10**9 + 7\r\n        ans = 1\r\n        for i in range(1, len(complexity)):\r\n            if complexity[i] <= complexity[0]:\r\n                return 0\r\n            ans = ans * i % mod\r\n        return ans",
+    "problemId": 3577,
+    "title": "Count the Number of Computer Unlocking Permutations",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-computer-unlocking-permutations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3577.Count the Number of Computer Unlocking Permutations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3577.Count the Number of Computer Unlocking Permutations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3577.Count the Number of Computer Unlocking Permutations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3577.Count the Number of Computer Unlocking Permutations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3577.Count the Number of Computer Unlocking Permutations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3577.Count the Number of Computer Unlocking Permutations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3577.Count the Number of Computer Unlocking Permutations/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3577.Count the Number of Computer Unlocking Permutations/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "jump-game-viii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, nums: List[int], costs: List[int]) -> int:\r\n        n = len(nums)\r\n        g = defaultdict(list)\r\n        stk = []\r\n        for i in range(n - 1, -1, -1):\r\n            while stk and nums[stk[-1]] < nums[i]:\r\n                stk.pop()\r\n            if stk:\r\n                g[i].append(stk[-1])\r\n            stk.append(i)\r\n\r\n        stk = []\r\n        for i in range(n - 1, -1, -1):\r\n            while stk and nums[stk[-1]] >= nums[i]:\r\n                stk.pop()\r\n            if stk:\r\n                g[i].append(stk[-1])\r\n            stk.append(i)\r\n\r\n        f = [inf] * n\r\n        f[0] = 0\r\n        for i in range(n):\r\n            for j in g[i]:\r\n                f[j] = min(f[j], f[i] + costs[j])\r\n        return f[n - 1]",
+    "problemId": 2297,
+    "title": "Jump Game VIII",
+    "problemUrl": "https://leetcode.com/problems/jump-game-viii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2297.Jump Game VIII/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2297.Jump Game VIII/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2297.Jump Game VIII/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2297.Jump Game VIII/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2297.Jump Game VIII/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2297.Jump Game VIII/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

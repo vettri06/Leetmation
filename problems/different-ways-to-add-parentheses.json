@@ -1,0 +1,38 @@
+{
+    "problemName": "different-ways-to-add-parentheses",
+    "language": "python3",
+    "code": "class Solution:\r\n    def diffWaysToCompute(self, expression: str) -> List[int]:\r\n        @cache\r\n        def dfs(exp):\r\n            if exp.isdigit():\r\n                return [int(exp)]\r\n            ans = []\r\n            for i, c in enumerate(exp):\r\n                if c in '-+*':\r\n                    left, right = dfs(exp[:i]), dfs(exp[i + 1 :])\r\n                    for a in left:\r\n                        for b in right:\r\n                            if c == '-':\r\n                                ans.append(a - b)\r\n                            elif c == '+':\r\n                                ans.append(a + b)\r\n                            else:\r\n                                ans.append(a * b)\r\n            return ans\r\n\r\n        return dfs(expression)",
+    "problemId": 241,
+    "title": "Different Ways to Add Parentheses",
+    "problemUrl": "https://leetcode.com/problems/different-ways-to-add-parentheses/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0241.Different Ways to Add Parentheses/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0241.Different Ways to Add Parentheses/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0241.Different Ways to Add Parentheses/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0241.Different Ways to Add Parentheses/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0241.Different Ways to Add Parentheses/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0241.Different Ways to Add Parentheses/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

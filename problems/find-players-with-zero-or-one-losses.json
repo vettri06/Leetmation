@@ -1,0 +1,38 @@
+{
+    "problemName": "find-players-with-zero-or-one-losses",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findWinners(self, matches: List[List[int]]) -> List[List[int]]:\r\n        cnt = Counter()\r\n        for winner, loser in matches:\r\n            if winner not in cnt:\r\n                cnt[winner] = 0\r\n            cnt[loser] += 1\r\n        ans = [[], []]\r\n        for x, v in sorted(cnt.items()):\r\n            if v < 2:\r\n                ans[v].append(x)\r\n        return ans",
+    "problemId": 2225,
+    "title": "Find Players With Zero or One Losses",
+    "problemUrl": "https://leetcode.com/problems/find-players-with-zero-or-one-losses/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2225.Find Players With Zero or One Losses/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2225.Find Players With Zero or One Losses/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2225.Find Players With Zero or One Losses/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2225.Find Players With Zero or One Losses/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2225.Find Players With Zero or One Losses/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2225.Find Players With Zero or One Losses/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

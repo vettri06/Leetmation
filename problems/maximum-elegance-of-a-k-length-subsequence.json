@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-elegance-of-a-k-length-subsequence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMaximumElegance(self, items: List[List[int]], k: int) -> int:\r\n        items.sort(key=lambda x: -x[0])\r\n        tot = 0\r\n        vis = set()\r\n        dup = []\r\n        for p, c in items[:k]:\r\n            tot += p\r\n            if c not in vis:\r\n                vis.add(c)\r\n            else:\r\n                dup.append(p)\r\n        ans = tot + len(vis) ** 2\r\n        for p, c in items[k:]:\r\n            if c in vis or not dup:\r\n                continue\r\n            vis.add(c)\r\n            tot += p - dup.pop()\r\n            ans = max(ans, tot + len(vis) ** 2)\r\n        return ans",
+    "problemId": 2813,
+    "title": "Maximum Elegance of a K-Length Subsequence",
+    "problemUrl": "https://leetcode.com/problems/maximum-elegance-of-a-k-length-subsequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2813.Maximum Elegance of a K-Length Subsequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2813.Maximum Elegance of a K-Length Subsequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2813.Maximum Elegance of a K-Length Subsequence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2813.Maximum Elegance of a K-Length Subsequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2813.Maximum Elegance of a K-Length Subsequence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2813.Maximum Elegance of a K-Length Subsequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

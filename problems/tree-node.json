@@ -1,0 +1,18 @@
+{
+    "problemName": "tree-node",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    id,\r\n    CASE\r\n        WHEN p_id IS NULL THEN 'Root'\r\n        WHEN id IN (SELECT p_id FROM Tree) THEN 'Inner'\r\n        ELSE 'Leaf'\r\n    END AS type\r\nFROM Tree;",
+    "problemId": 608,
+    "title": "Tree Node",
+    "problemUrl": "https://leetcode.com/problems/tree-node/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0608.Tree Node/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0608.Tree Node/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

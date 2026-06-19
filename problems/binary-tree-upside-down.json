@@ -1,0 +1,33 @@
+{
+    "problemName": "binary-tree-upside-down",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def upsideDownBinaryTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:\r\n        if root is None or root.left is None:\r\n            return root\r\n        new_root = self.upsideDownBinaryTree(root.left)\r\n        root.left.right = root\r\n        root.left.left = root.right\r\n        root.left = None\r\n        root.right = None\r\n        return new_root",
+    "problemId": 156,
+    "title": "Binary Tree Upside Down",
+    "problemUrl": "https://leetcode.com/problems/binary-tree-upside-down/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0156.Binary Tree Upside Down/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0156.Binary Tree Upside Down/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0156.Binary Tree Upside Down/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0156.Binary Tree Upside Down/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0156.Binary Tree Upside Down/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

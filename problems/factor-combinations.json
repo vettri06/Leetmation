@@ -1,0 +1,33 @@
+{
+    "problemName": "factor-combinations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getFactors(self, n: int) -> List[List[int]]:\r\n        def dfs(n, i):\r\n            if t:\r\n                ans.append(t + [n])\r\n            j = i\r\n            while j * j <= n:\r\n                if n % j == 0:\r\n                    t.append(j)\r\n                    dfs(n // j, j)\r\n                    t.pop()\r\n                j += 1\r\n\r\n        t = []\r\n        ans = []\r\n        dfs(n, 2)\r\n        return ans",
+    "problemId": 254,
+    "title": "Factor Combinations",
+    "problemUrl": "https://leetcode.com/problems/factor-combinations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0254.Factor Combinations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0254.Factor Combinations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0254.Factor Combinations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0254.Factor Combinations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0254.Factor Combinations/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

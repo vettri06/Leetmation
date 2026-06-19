@@ -1,0 +1,48 @@
+{
+    "problemName": "find-the-length-of-the-longest-common-prefix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestCommonPrefix(self, arr1: List[int], arr2: List[int]) -> int:\r\n        s = set()\r\n        for x in arr1:\r\n            while x:\r\n                s.add(x)\r\n                x //= 10\r\n        mx = 0\r\n        for x in arr2:\r\n            while x:\r\n                if x in s:\r\n                    mx = max(mx, x)\r\n                    break\r\n                x //= 10\r\n        return len(str(mx)) if mx else 0",
+    "problemId": 3043,
+    "title": "Find the Length of the Longest Common Prefix",
+    "problemUrl": "https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3043.Find the Length of the Longest Common Prefix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3043.Find the Length of the Longest Common Prefix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3043.Find the Length of the Longest Common Prefix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3043.Find the Length of the Longest Common Prefix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3043.Find the Length of the Longest Common Prefix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3043.Find the Length of the Longest Common Prefix/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3043.Find the Length of the Longest Common Prefix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3043.Find the Length of the Longest Common Prefix/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "number-of-unique-subjects-taught-by-each-teacher",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT teacher_id, COUNT(DISTINCT subject_id) AS cnt\r\nFROM Teacher\r\nGROUP BY 1;",
+    "problemId": 2356,
+    "title": "Number of Unique Subjects Taught by Each Teacher",
+    "problemUrl": "https://leetcode.com/problems/number-of-unique-subjects-taught-by-each-teacher/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2356.Number of Unique Subjects Taught by Each Teacher/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2356.Number of Unique Subjects Taught by Each Teacher/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

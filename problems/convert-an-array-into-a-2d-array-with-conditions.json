@@ -1,0 +1,43 @@
+{
+    "problemName": "convert-an-array-into-a-2d-array-with-conditions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMatrix(self, nums: List[int]) -> List[List[int]]:\r\n        cnt = Counter(nums)\r\n        ans = []\r\n        for x, v in cnt.items():\r\n            for i in range(v):\r\n                if len(ans) <= i:\r\n                    ans.append([])\r\n                ans[i].append(x)\r\n        return ans",
+    "problemId": 2610,
+    "title": "Convert an Array Into a 2D Array With Conditions",
+    "problemUrl": "https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2610.Convert an Array Into a 2D Array With Conditions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2610.Convert an Array Into a 2D Array With Conditions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2610.Convert an Array Into a 2D Array With Conditions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2610.Convert an Array Into a 2D Array With Conditions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2610.Convert an Array Into a 2D Array With Conditions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2610.Convert an Array Into a 2D Array With Conditions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2610.Convert an Array Into a 2D Array With Conditions/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

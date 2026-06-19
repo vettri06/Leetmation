@@ -1,0 +1,38 @@
+{
+    "problemName": "house-robber-iv",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCapability(self, nums: List[int], k: int) -> int:\r\n        def f(x):\r\n            cnt, j = 0, -2\r\n            for i, v in enumerate(nums):\r\n                if v > x or i == j + 1:\r\n                    continue\r\n                cnt += 1\r\n                j = i\r\n            return cnt >= k\r\n\r\n        return bisect_left(range(max(nums) + 1), True, key=f)",
+    "problemId": 2560,
+    "title": "House Robber IV",
+    "problemUrl": "https://leetcode.com/problems/house-robber-iv/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2560.House Robber IV/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2560.House Robber IV/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2560.House Robber IV/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2560.House Robber IV/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2560.House Robber IV/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2560.House Robber IV/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

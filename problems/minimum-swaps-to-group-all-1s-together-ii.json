@@ -1,0 +1,63 @@
+{
+    "problemName": "minimum-swaps-to-group-all-1s-together-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSwaps(self, nums: List[int]) -> int:\r\n        k = nums.count(1)\r\n        mx = cnt = sum(nums[:k])\r\n        n = len(nums)\r\n        for i in range(k, n + k):\r\n            cnt += nums[i % n]\r\n            cnt -= nums[(i - k + n) % n]\r\n            mx = max(mx, cnt)\r\n        return k - mx",
+    "problemId": 2134,
+    "title": "Minimum Swaps to Group All 1's Together II",
+    "problemUrl": "https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2134.Minimum Swaps to Group All 1's Together II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2134.Minimum Swaps to Group All 1's Together II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2134.Minimum Swaps to Group All 1's Together II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2134.Minimum Swaps to Group All 1's Together II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2134.Minimum Swaps to Group All 1's Together II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2134.Minimum Swaps to Group All 1's Together II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2134.Minimum Swaps to Group All 1's Together II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2134.Minimum Swaps to Group All 1's Together II/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2134.Minimum Swaps to Group All 1's Together II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2134.Minimum Swaps to Group All 1's Together II/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2134.Minimum Swaps to Group All 1's Together II/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

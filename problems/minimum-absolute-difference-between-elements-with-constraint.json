@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-absolute-difference-between-elements-with-constraint",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minAbsoluteDifference(self, nums: List[int], x: int) -> int:\r\n        sl = SortedList()\r\n        ans = inf\r\n        for i in range(x, len(nums)):\r\n            sl.add(nums[i - x])\r\n            j = bisect_left(sl, nums[i])\r\n            if j < len(sl):\r\n                ans = min(ans, sl[j] - nums[i])\r\n            if j:\r\n                ans = min(ans, nums[i] - sl[j - 1])\r\n        return ans",
+    "problemId": 2817,
+    "title": "Minimum Absolute Difference Between Elements With Constraint",
+    "problemUrl": "https://leetcode.com/problems/minimum-absolute-difference-between-elements-with-constraint/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2817.Minimum Absolute Difference Between Elements With Constraint/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2817.Minimum Absolute Difference Between Elements With Constraint/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2817.Minimum Absolute Difference Between Elements With Constraint/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2817.Minimum Absolute Difference Between Elements With Constraint/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2817.Minimum Absolute Difference Between Elements With Constraint/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2817.Minimum Absolute Difference Between Elements With Constraint/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

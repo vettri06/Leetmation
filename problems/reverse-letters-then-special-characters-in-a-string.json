@@ -1,0 +1,38 @@
+{
+    "problemName": "reverse-letters-then-special-characters-in-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reverseByType(self, s: str) -> str:\r\n        a = []\r\n        b = []\r\n        for c in s:\r\n            if c.isalpha():\r\n                a.append(c)\r\n            else:\r\n                b.append(c)\r\n        return ''.join(a.pop() if c.isalpha() else b.pop() for c in s)",
+    "problemId": 3823,
+    "title": "Reverse Letters Then Special Characters in a String",
+    "problemUrl": "https://leetcode.com/problems/reverse-letters-then-special-characters-in-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3823.Reverse Letters Then Special Characters in a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3823.Reverse Letters Then Special Characters in a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3823.Reverse Letters Then Special Characters in a String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3823.Reverse Letters Then Special Characters in a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3823.Reverse Letters Then Special Characters in a String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3823.Reverse Letters Then Special Characters in a String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

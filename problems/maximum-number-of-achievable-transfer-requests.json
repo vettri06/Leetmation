@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-number-of-achievable-transfer-requests",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumRequests(self, n: int, requests: List[List[int]]) -> int:\r\n        def check(mask: int) -> bool:\r\n            cnt = [0] * n\r\n            for i, (f, t) in enumerate(requests):\r\n                if mask >> i & 1:\r\n                    cnt[f] -= 1\r\n                    cnt[t] += 1\r\n            return all(v == 0 for v in cnt)\r\n\r\n        ans = 0\r\n        for mask in range(1 << len(requests)):\r\n            cnt = mask.bit_count()\r\n            if ans < cnt and check(mask):\r\n                ans = cnt\r\n        return ans",
+    "problemId": 1601,
+    "title": "Maximum Number of Achievable Transfer Requests",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-achievable-transfer-requests/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1601.Maximum Number of Achievable Transfer Requests/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1601.Maximum Number of Achievable Transfer Requests/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1601.Maximum Number of Achievable Transfer Requests/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1601.Maximum Number of Achievable Transfer Requests/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1601.Maximum Number of Achievable Transfer Requests/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1601.Maximum Number of Achievable Transfer Requests/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1601.Maximum Number of Achievable Transfer Requests/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1601.Maximum Number of Achievable Transfer Requests/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

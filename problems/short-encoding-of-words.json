@@ -1,0 +1,53 @@
+{
+    "problemName": "short-encoding-of-words",
+    "language": "python3",
+    "code": "class Trie:\r\n    def __init__(self) -> None:\r\n        self.children = [None] * 26\r\n\r\n\r\nclass Solution:\r\n    def minimumLengthEncoding(self, words: List[str]) -> int:\r\n        root = Trie()\r\n        for w in words:\r\n            cur = root\r\n            for c in w[::-1]:\r\n                idx = ord(c) - ord(\"a\")\r\n                if cur.children[idx] == None:\r\n                    cur.children[idx] = Trie()\r\n                cur = cur.children[idx]\r\n        return self.dfs(root, 1)\r\n\r\n    def dfs(self, cur: Trie, l: int) -> int:\r\n        isLeaf, ans = True, 0\r\n        for i in range(26):\r\n            if cur.children[i] != None:\r\n                isLeaf = False\r\n                ans += self.dfs(cur.children[i], l + 1)\r\n        if isLeaf:\r\n            ans += l\r\n        return ans",
+    "problemId": 820,
+    "title": "Short Encoding of Words",
+    "problemUrl": "https://leetcode.com/problems/short-encoding-of-words/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0820.Short Encoding of Words/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0820.Short Encoding of Words/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0820.Short Encoding of Words/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0820.Short Encoding of Words/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0820.Short Encoding of Words/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0820.Short Encoding of Words/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0820.Short Encoding of Words/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0820.Short Encoding of Words/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0820.Short Encoding of Words/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

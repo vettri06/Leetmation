@@ -1,0 +1,48 @@
+{
+    "problemName": "robot-collisions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def survivedRobotsHealths(self, positions, healths, directions):\r\n        idx = sorted(range(len(positions)), key=lambda i: positions[i])\r\n        stk = []\r\n\r\n        for i in idx:\r\n            if directions[i] == \"R\":\r\n                stk.append(i)\r\n                continue\r\n\r\n            while stk and healths[i]:\r\n                j = stk[-1]\r\n                if healths[j] > healths[i]:\r\n                    healths[j] -= 1\r\n                    healths[i] = 0\r\n                elif healths[j] < healths[i]:\r\n                    healths[i] -= 1\r\n                    healths[j] = 0\r\n                    stk.pop()\r\n                else:\r\n                    healths[i] = healths[j] = 0\r\n                    stk.pop()\r\n                    break\r\n\r\n        return [h for h in healths if h > 0]",
+    "problemId": 2751,
+    "title": "Robot Collisions",
+    "problemUrl": "https://leetcode.com/problems/robot-collisions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2751.Robot Collisions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2751.Robot Collisions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2751.Robot Collisions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2751.Robot Collisions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2751.Robot Collisions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2751.Robot Collisions/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2751.Robot Collisions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2751.Robot Collisions/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

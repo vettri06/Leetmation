@@ -1,0 +1,43 @@
+{
+    "problemName": "get-biggest-three-rhombus-sums-in-a-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getBiggestThree(self, grid: List[List[int]]) -> List[int]:\r\n        m, n = len(grid), len(grid[0])\r\n        s1 = [[0] * (n + 2) for _ in range(m + 1)]\r\n        s2 = [[0] * (n + 2) for _ in range(m + 1)]\r\n        for i, row in enumerate(grid, 1):\r\n            for j, x in enumerate(row, 1):\r\n                s1[i][j] = s1[i - 1][j - 1] + x\r\n                s2[i][j] = s2[i - 1][j + 1] + x\r\n        ss = SortedSet()\r\n        for i, row in enumerate(grid, 1):\r\n            for j, x in enumerate(row, 1):\r\n                l = min(i - 1, m - i, j - 1, n - j)\r\n                ss.add(x)\r\n                for k in range(1, l + 1):\r\n                    a = s1[i + k][j] - s1[i][j - k]\r\n                    b = s1[i][j + k] - s1[i - k][j]\r\n                    c = s2[i][j - k] - s2[i - k][j]\r\n                    d = s2[i + k][j] - s2[i][j + k]\r\n                    ss.add(\r\n                        a + b + c + d - grid[i + k - 1][j - 1] + grid[i - k - 1][j - 1]\r\n                    )\r\n                while len(ss) > 3:\r\n                    ss.remove(ss[0])\r\n        return list(ss)[::-1]",
+    "problemId": 1878,
+    "title": "Get Biggest Three Rhombus Sums in a Grid",
+    "problemUrl": "https://leetcode.com/problems/get-biggest-three-rhombus-sums-in-a-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1878.Get Biggest Three Rhombus Sums in a Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1878.Get Biggest Three Rhombus Sums in a Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1878.Get Biggest Three Rhombus Sums in a Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1878.Get Biggest Three Rhombus Sums in a Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1878.Get Biggest Three Rhombus Sums in a Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1878.Get Biggest Three Rhombus Sums in a Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1878.Get Biggest Three Rhombus Sums in a Grid/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

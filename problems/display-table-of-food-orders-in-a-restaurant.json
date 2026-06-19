@@ -1,0 +1,38 @@
+{
+    "problemName": "display-table-of-food-orders-in-a-restaurant",
+    "language": "python3",
+    "code": "class Solution:\r\n    def displayTable(self, orders: List[List[str]]) -> List[List[str]]:\r\n        tables = defaultdict(list)\r\n        items = set()\r\n        for _, table, foodItem in orders:\r\n            tables[int(table)].append(foodItem)\r\n            items.add(foodItem)\r\n        sorted_items = sorted(items)\r\n        ans = [[\"Table\"] + sorted_items]\r\n        for table in sorted(tables):\r\n            cnt = Counter(tables[table])\r\n            row = [str(table)] + [str(cnt[item]) for item in sorted_items]\r\n            ans.append(row)\r\n        return ans",
+    "problemId": 1418,
+    "title": "Display Table of Food Orders in a Restaurant",
+    "problemUrl": "https://leetcode.com/problems/display-table-of-food-orders-in-a-restaurant/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1418.Display Table of Food Orders in a Restaurant/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1418.Display Table of Food Orders in a Restaurant/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1418.Display Table of Food Orders in a Restaurant/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1418.Display Table of Food Orders in a Restaurant/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1418.Display Table of Food Orders in a Restaurant/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1418.Display Table of Food Orders in a Restaurant/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

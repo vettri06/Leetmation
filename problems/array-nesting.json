@@ -1,0 +1,53 @@
+{
+    "problemName": "array-nesting",
+    "language": "python3",
+    "code": "class Solution:\r\n    def arrayNesting(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        vis = [False] * n\r\n        res = 0\r\n        for i in range(n):\r\n            if vis[i]:\r\n                continue\r\n            cur, m = nums[i], 1\r\n            vis[cur] = True\r\n            while nums[cur] != nums[i]:\r\n                cur = nums[cur]\r\n                m += 1\r\n                vis[cur] = True\r\n            res = max(res, m)\r\n        return res",
+    "problemId": 565,
+    "title": "Array Nesting",
+    "problemUrl": "https://leetcode.com/problems/array-nesting/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0565.Array Nesting/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0565.Array Nesting/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0565.Array Nesting/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0565.Array Nesting/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0565.Array Nesting/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0565.Array Nesting/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0565.Array Nesting/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0565.Array Nesting/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0565.Array Nesting/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "problemName": "product-sales-analysis-iii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    product_id,\r\n    year AS first_year,\r\n    quantity,\r\n    price\r\nFROM Sales\r\nWHERE\r\n    (product_id, year) IN (\r\n        SELECT\r\n            product_id,\r\n            MIN(year) AS year\r\n        FROM Sales\r\n        GROUP BY product_id\r\n    );",
+    "problemId": 1070,
+    "title": "Product Sales Analysis III",
+    "problemUrl": "https://leetcode.com/problems/product-sales-analysis-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1070.Product Sales Analysis III/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1070.Product Sales Analysis III/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1070.Product Sales Analysis III/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

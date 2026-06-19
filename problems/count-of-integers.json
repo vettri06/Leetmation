@@ -1,0 +1,38 @@
+{
+    "problemName": "count-of-integers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def count(self, num1: str, num2: str, min_sum: int, max_sum: int) -> int:\r\n        @cache\r\n        def dfs(pos: int, s: int, limit: bool) -> int:\r\n            if pos >= len(num):\r\n                return int(min_sum <= s <= max_sum)\r\n            up = int(num[pos]) if limit else 9\r\n            return (\r\n                sum(dfs(pos + 1, s + i, limit and i == up) for i in range(up + 1)) % mod\r\n            )\r\n\r\n        mod = 10**9 + 7\r\n        num = num2\r\n        a = dfs(0, 0, True)\r\n        dfs.cache_clear()\r\n        num = str(int(num1) - 1)\r\n        b = dfs(0, 0, True)\r\n        return (a - b) % mod",
+    "problemId": 2719,
+    "title": "Count of Integers",
+    "problemUrl": "https://leetcode.com/problems/count-of-integers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2719.Count of Integers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2719.Count of Integers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2719.Count of Integers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2719.Count of Integers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2719.Count of Integers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2719.Count of Integers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "good-subsequence-queries",
+    "language": "python3",
+    "code": "class Node:\r\n    __slots__ = \"l\", \"r\", \"g\"\r\n\r\n    def __init__(self, l: int, r: int):\r\n        self.l = l\r\n        self.r = r\r\n        self.g = 0\r\n\r\n\r\nclass SegmentTree:\r\n    __slots__ = \"tr\"\r\n\r\n    def __init__(self, n: int):\r\n        self.tr: list[Node | None] = [None] * (n << 2)\r\n        self.build(1, 1, n)\r\n\r\n    def build(self, u: int, l: int, r: int):\r\n        self.tr[u] = Node(l, r)\r\n        if l == r:\r\n            return\r\n        mid = (l + r) >> 1\r\n        self.build(u << 1, l, mid)\r\n        self.build(u << 1 | 1, mid + 1, r)\r\n\r\n    def pushup(self, u: int):\r\n        self.tr[u].g = gcd(self.tr[u << 1].g, self.tr[u << 1 | 1].g)\r\n\r\n    def modify(self, u: int, x: int, v: int):\r\n        if self.tr[u].l == self.tr[u].r:\r\n            self.tr[u].g = v\r\n            return\r\n        mid = (self.tr[u].l + self.tr[u].r) >> 1\r\n        if x <= mid:\r\n            self.modify(u << 1, x, v)\r\n        else:\r\n            self.modify(u << 1 | 1, x, v)\r\n        self.pushup(u)\r\n\r\n    def query(self, u: int, l: int, r: int) -> int:\r\n        if l > r:\r\n            return 0\r\n        if self.tr[u].l >= l and self.tr[u].r <= r:\r\n            return self.tr[u].g\r\n        mid = (self.tr[u].l + self.tr[u].r) >> 1\r\n        if r <= mid:\r\n            return self.query(u << 1, l, r)\r\n        if l > mid:\r\n            return self.query(u << 1 | 1, l, r)\r\n        return gcd(self.query(u << 1, l, mid), self.query(u << 1 | 1, mid + 1, r))\r\n\r\n\r\nclass Solution:\r\n    def countGoodSubseq(self, nums: list[int], p: int, queries: list[list[int]]) -> int:\r\n        n = len(nums)\r\n        tree = SegmentTree(n)\r\n        cnt = 0\r\n\r\n        for i, x in enumerate(nums, 1):\r\n            if x % p == 0:\r\n                tree.modify(1, i, x)\r\n                cnt += 1\r\n\r\n        ans = 0\r\n        for idx, val in queries:\r\n            if nums[idx] % p == 0:\r\n                tree.modify(1, idx + 1, 0)\r\n                cnt -= 1\r\n            if val % p == 0:\r\n                tree.modify(1, idx + 1, val)\r\n                cnt += 1\r\n            nums[idx] = val\r\n\r\n            if tree.tr[1].g != p:\r\n                continue\r\n\r\n            if cnt < n or n > 6:\r\n                ans += 1\r\n                continue\r\n\r\n            for i in range(1, n + 1):\r\n                left_g = tree.query(1, 1, i - 1)\r\n                right_g = tree.query(1, i + 1, n)\r\n                if gcd(left_g, right_g) == p:\r\n                    ans += 1\r\n                    break\r\n\r\n        return ans",
+    "problemId": 3901,
+    "title": "Good Subsequence Queries",
+    "problemUrl": "https://leetcode.com/problems/good-subsequence-queries/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3901.Good Subsequence Queries/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3901.Good Subsequence Queries/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3901.Good Subsequence Queries/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3901.Good Subsequence Queries/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3901.Good Subsequence Queries/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3901.Good Subsequence Queries/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

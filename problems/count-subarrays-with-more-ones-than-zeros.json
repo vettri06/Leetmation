@@ -1,0 +1,43 @@
+{
+    "problemName": "count-subarrays-with-more-ones-than-zeros",
+    "language": "python3",
+    "code": "class BinaryIndexedTree:\r\n    __slots__ = [\"n\", \"c\"]\r\n\r\n    def __init__(self, n: int):\r\n        self.n = n\r\n        self.c = [0] * (n + 1)\r\n\r\n    def update(self, x: int, v: int):\r\n        while x <= self.n:\r\n            self.c[x] += v\r\n            x += x & -x\r\n\r\n    def query(self, x: int) -> int:\r\n        s = 0\r\n        while x:\r\n            s += self.c[x]\r\n            x -= x & -x\r\n        return s\r\n\r\n\r\nclass Solution:\r\n    def subarraysWithMoreZerosThanOnes(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        base = n + 1\r\n        tree = BinaryIndexedTree(n + base)\r\n        tree.update(base, 1)\r\n        mod = 10**9 + 7\r\n        ans = s = 0\r\n        for x in nums:\r\n            s += x or -1\r\n            ans += tree.query(s - 1 + base)\r\n            ans %= mod\r\n            tree.update(s + base, 1)\r\n        return ans",
+    "problemId": 2031,
+    "title": "Count Subarrays With More Ones Than Zeros",
+    "problemUrl": "https://leetcode.com/problems/count-subarrays-with-more-ones-than-zeros/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2031.Count Subarrays With More Ones Than Zeros/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2031.Count Subarrays With More Ones Than Zeros/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2031.Count Subarrays With More Ones Than Zeros/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2031.Count Subarrays With More Ones Than Zeros/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2031.Count Subarrays With More Ones Than Zeros/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2031.Count Subarrays With More Ones Than Zeros/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2031.Count Subarrays With More Ones Than Zeros/Solution2.py",
+            "sourceFile": "Solution2.py"
+        }
+    ]
+}

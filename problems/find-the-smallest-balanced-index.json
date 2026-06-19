@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-smallest-balanced-index",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestBalancedIndex(self, nums: list[int]) -> int:\r\n        s = sum(nums)\r\n        p = 1\r\n        for i in range(len(nums) - 1, -1, -1):\r\n            s -= nums[i]\r\n            if s == p:\r\n                return i\r\n            p *= nums[i]\r\n            if p >= s:\r\n                break\r\n        return -1",
+    "problemId": 3862,
+    "title": "Find the Smallest Balanced Index",
+    "problemUrl": "https://leetcode.com/problems/find-the-smallest-balanced-index/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3862.Find the Smallest Balanced Index/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3862.Find the Smallest Balanced Index/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3862.Find the Smallest Balanced Index/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3862.Find the Smallest Balanced Index/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3862.Find the Smallest Balanced Index/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3862.Find the Smallest Balanced Index/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

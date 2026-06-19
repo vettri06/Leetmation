@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-number-of-operations-with-the-same-score-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxOperations(self, nums: List[int]) -> int:\r\n        s = nums[0] + nums[1]\r\n        ans, n = 0, len(nums)\r\n        for i in range(0, n, 2):\r\n            if i + 1 == n or nums[i] + nums[i + 1] != s:\r\n                break\r\n            ans += 1\r\n        return ans",
+    "problemId": 3038,
+    "title": "Maximum Number of Operations With the Same Score I",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-operations-with-the-same-score-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3038.Maximum Number of Operations With the Same Score I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3038.Maximum Number of Operations With the Same Score I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3038.Maximum Number of Operations With the Same Score I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3038.Maximum Number of Operations With the Same Score I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3038.Maximum Number of Operations With the Same Score I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3038.Maximum Number of Operations With the Same Score I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

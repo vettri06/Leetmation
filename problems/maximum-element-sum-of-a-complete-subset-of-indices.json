@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-element-sum-of-a-complete-subset-of-indices",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumSum(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        ans = 0\r\n        for k in range(1, n + 1):\r\n            t = 0\r\n            j = 1\r\n            while k * j * j <= n:\r\n                t += nums[k * j * j - 1]\r\n                j += 1\r\n            ans = max(ans, t)\r\n        return ans",
+    "problemId": 2862,
+    "title": "Maximum Element-Sum of a Complete Subset of Indices",
+    "problemUrl": "https://leetcode.com/problems/maximum-element-sum-of-a-complete-subset-of-indices/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2862.Maximum Element-Sum of a Complete Subset of Indices/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2862.Maximum Element-Sum of a Complete Subset of Indices/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2862.Maximum Element-Sum of a Complete Subset of Indices/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2862.Maximum Element-Sum of a Complete Subset of Indices/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2862.Maximum Element-Sum of a Complete Subset of Indices/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2862.Maximum Element-Sum of a Complete Subset of Indices/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2862.Maximum Element-Sum of a Complete Subset of Indices/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

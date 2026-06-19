@@ -1,0 +1,38 @@
+{
+    "problemName": "max-sum-of-rectangle-no-larger-than-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSumSubmatrix(self, matrix: List[List[int]], k: int) -> int:\r\n        m, n = len(matrix), len(matrix[0])\r\n        ans = -inf\r\n        for i in range(m):\r\n            nums = [0] * n\r\n            for j in range(i, m):\r\n                for h in range(n):\r\n                    nums[h] += matrix[j][h]\r\n                s = 0\r\n                ts = SortedSet([0])\r\n                for x in nums:\r\n                    s += x\r\n                    p = ts.bisect_left(s - k)\r\n                    if p != len(ts):\r\n                        ans = max(ans, s - ts[p])\r\n                    ts.add(s)\r\n        return ans",
+    "problemId": 363,
+    "title": "Max Sum of Rectangle No Larger Than K",
+    "problemUrl": "https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0363.Max Sum of Rectangle No Larger Than K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0363.Max Sum of Rectangle No Larger Than K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0363.Max Sum of Rectangle No Larger Than K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0363.Max Sum of Rectangle No Larger Than K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0363.Max Sum of Rectangle No Larger Than K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0363.Max Sum of Rectangle No Larger Than K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

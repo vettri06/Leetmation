@@ -1,0 +1,53 @@
+{
+    "problemName": "find-the-array-concatenation-value",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findTheArrayConcVal(self, nums: List[int]) -> int:\r\n        ans = 0\r\n        i, j = 0, len(nums) - 1\r\n        while i < j:\r\n            ans += int(str(nums[i]) + str(nums[j]))\r\n            i, j = i + 1, j - 1\r\n        if i == j:\r\n            ans += nums[i]\r\n        return ans",
+    "problemId": 2562,
+    "title": "Find the Array Concatenation Value",
+    "problemUrl": "https://leetcode.com/problems/find-the-array-concatenation-value/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2562.Find the Array Concatenation Value/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2562.Find the Array Concatenation Value/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2562.Find the Array Concatenation Value/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2562.Find the Array Concatenation Value/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2562.Find the Array Concatenation Value/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2562.Find the Array Concatenation Value/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2562.Find the Array Concatenation Value/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2562.Find the Array Concatenation Value/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2562.Find the Array Concatenation Value/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

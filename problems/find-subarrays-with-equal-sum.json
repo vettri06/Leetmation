@@ -1,0 +1,48 @@
+{
+    "problemName": "find-subarrays-with-equal-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findSubarrays(self, nums: List[int]) -> bool:\r\n        vis = set()\r\n        for a, b in pairwise(nums):\r\n            if (x := a + b) in vis:\r\n                return True\r\n            vis.add(x)\r\n        return False",
+    "problemId": 2395,
+    "title": "Find Subarrays With Equal Sum",
+    "problemUrl": "https://leetcode.com/problems/find-subarrays-with-equal-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2395.Find Subarrays With Equal Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2395.Find Subarrays With Equal Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2395.Find Subarrays With Equal Sum/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2395.Find Subarrays With Equal Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2395.Find Subarrays With Equal Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2395.Find Subarrays With Equal Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2395.Find Subarrays With Equal Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2395.Find Subarrays With Equal Sum/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

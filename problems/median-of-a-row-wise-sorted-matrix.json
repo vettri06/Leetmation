@@ -1,0 +1,33 @@
+{
+    "problemName": "median-of-a-row-wise-sorted-matrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def matrixMedian(self, grid: List[List[int]]) -> int:\r\n        def count(x):\r\n            return sum(bisect_right(row, x) for row in grid)\r\n\r\n        m, n = len(grid), len(grid[0])\r\n        target = (m * n + 1) >> 1\r\n        return bisect_left(range(10**6 + 1), target, key=count)",
+    "problemId": 2387,
+    "title": "Median of a Row Wise Sorted Matrix",
+    "problemUrl": "https://leetcode.com/problems/median-of-a-row-wise-sorted-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2387.Median of a Row Wise Sorted Matrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2387.Median of a Row Wise Sorted Matrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2387.Median of a Row Wise Sorted Matrix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2387.Median of a Row Wise Sorted Matrix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2387.Median of a Row Wise Sorted Matrix/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

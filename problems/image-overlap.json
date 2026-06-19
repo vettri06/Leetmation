@@ -1,0 +1,38 @@
+{
+    "problemName": "image-overlap",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestOverlap(self, img1: List[List[int]], img2: List[List[int]]) -> int:\r\n        n = len(img1)\r\n        cnt = Counter()\r\n        for i in range(n):\r\n            for j in range(n):\r\n                if img1[i][j]:\r\n                    for h in range(n):\r\n                        for k in range(n):\r\n                            if img2[h][k]:\r\n                                cnt[(i - h, j - k)] += 1\r\n        return max(cnt.values()) if cnt else 0",
+    "problemId": 835,
+    "title": "Image Overlap",
+    "problemUrl": "https://leetcode.com/problems/image-overlap/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0835.Image Overlap/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0835.Image Overlap/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0835.Image Overlap/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0835.Image Overlap/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0835.Image Overlap/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0835.Image Overlap/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

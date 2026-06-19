@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-time-to-make-rope-colorful",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, colors: str, neededTime: List[int]) -> int:\r\n        ans = i = 0\r\n        n = len(colors)\r\n        while i < n:\r\n            j = i\r\n            s = mx = 0\r\n            while j < n and colors[j] == colors[i]:\r\n                s += neededTime[j]\r\n                if mx < neededTime[j]:\r\n                    mx = neededTime[j]\r\n                j += 1\r\n            if j - i > 1:\r\n                ans += s - mx\r\n            i = j\r\n        return ans",
+    "problemId": 1578,
+    "title": "Minimum Time to Make Rope Colorful",
+    "problemUrl": "https://leetcode.com/problems/minimum-time-to-make-rope-colorful/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1578.Minimum Time to Make Rope Colorful/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1578.Minimum Time to Make Rope Colorful/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1578.Minimum Time to Make Rope Colorful/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1578.Minimum Time to Make Rope Colorful/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1578.Minimum Time to Make Rope Colorful/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1578.Minimum Time to Make Rope Colorful/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1578.Minimum Time to Make Rope Colorful/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

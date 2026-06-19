@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-number-of-groups-entering-a-competition",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumGroups(self, grades: List[int]) -> int:\r\n        n = len(grades)\r\n        return bisect_right(range(n + 1), n * 2, key=lambda x: x * x + x) - 1",
+    "problemId": 2358,
+    "title": "Maximum Number of Groups Entering a Competition",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-groups-entering-a-competition/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2358.Maximum Number of Groups Entering a Competition/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2358.Maximum Number of Groups Entering a Competition/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2358.Maximum Number of Groups Entering a Competition/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2358.Maximum Number of Groups Entering a Competition/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2358.Maximum Number of Groups Entering a Competition/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2358.Maximum Number of Groups Entering a Competition/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2358.Maximum Number of Groups Entering a Competition/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

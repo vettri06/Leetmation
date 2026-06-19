@@ -1,0 +1,48 @@
+{
+    "problemName": "evaluate-boolean-binary-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def evaluateTree(self, root: Optional[TreeNode]) -> bool:\r\n        if root.left is None:\r\n            return bool(root.val)\r\n        op = or_ if root.val == 2 else and_\r\n        return op(self.evaluateTree(root.left), self.evaluateTree(root.right))",
+    "problemId": 2331,
+    "title": "Evaluate Boolean Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/evaluate-boolean-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2331.Evaluate Boolean Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2331.Evaluate Boolean Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2331.Evaluate Boolean Binary Tree/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2331.Evaluate Boolean Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2331.Evaluate Boolean Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2331.Evaluate Boolean Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2331.Evaluate Boolean Binary Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2331.Evaluate Boolean Binary Tree/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

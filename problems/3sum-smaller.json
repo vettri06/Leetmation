@@ -1,0 +1,38 @@
+{
+    "problemName": "3sum-smaller",
+    "language": "python3",
+    "code": "class Solution:\r\n    def threeSumSmaller(self, nums: List[int], target: int) -> int:\r\n        nums.sort()\r\n        ans, n = 0, len(nums)\r\n        for i in range(n - 2):\r\n            j, k = i + 1, n - 1\r\n            while j < k:\r\n                x = nums[i] + nums[j] + nums[k]\r\n                if x < target:\r\n                    ans += k - j\r\n                    j += 1\r\n                else:\r\n                    k -= 1\r\n        return ans",
+    "problemId": 259,
+    "title": "3Sum Smaller",
+    "problemUrl": "https://leetcode.com/problems/3sum-smaller/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0259.3Sum Smaller/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0259.3Sum Smaller/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0259.3Sum Smaller/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0259.3Sum Smaller/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0259.3Sum Smaller/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0259.3Sum Smaller/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

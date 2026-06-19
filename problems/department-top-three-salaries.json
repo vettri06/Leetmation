@@ -1,0 +1,28 @@
+{
+    "problemName": "department-top-three-salaries",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef top_three_salaries(\r\n    employee: pd.DataFrame, department: pd.DataFrame\r\n) -> pd.DataFrame:\r\n    salary_cutoff = (\r\n        employee.drop_duplicates([\"salary\", \"departmentId\"])\r\n        .groupby(\"departmentId\")[\"salary\"]\r\n        .nlargest(3)\r\n        .groupby(\"departmentId\")\r\n        .min()\r\n    )\r\n    employee[\"Department\"] = department.set_index(\"id\")[\"name\"][\r\n        employee[\"departmentId\"]\r\n    ].values\r\n    employee[\"cutoff\"] = salary_cutoff[employee[\"departmentId\"]].values\r\n    return employee[employee[\"salary\"] >= employee[\"cutoff\"]].rename(\r\n        columns={\"name\": \"Employee\", \"salary\": \"Salary\"}\r\n    )[[\"Department\", \"Employee\", \"Salary\"]]",
+    "problemId": 185,
+    "title": "Department Top Three Salaries",
+    "problemUrl": "https://leetcode.com/problems/department-top-three-salaries/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0185.Department Top Three Salaries/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0185.Department Top Three Salaries/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0185.Department Top Three Salaries/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0185.Department Top Three Salaries/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

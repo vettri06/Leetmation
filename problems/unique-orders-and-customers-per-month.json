@@ -1,0 +1,23 @@
+{
+    "problemName": "unique-orders-and-customers-per-month",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef unique_orders_and_customers(orders: pd.DataFrame) -> pd.DataFrame:\r\n    filtered_orders = orders[orders[\"invoice\"] > 20]\r\n    filtered_orders[\"month\"] = (\r\n        filtered_orders[\"order_date\"].dt.to_period(\"M\").astype(str)\r\n    )\r\n    result = (\r\n        filtered_orders.groupby(\"month\")\r\n        .agg(\r\n            order_count=(\"order_id\", \"count\"), customer_count=(\"customer_id\", \"nunique\")\r\n        )\r\n        .reset_index()\r\n    )\r\n    return result",
+    "problemId": 1565,
+    "title": "Unique Orders and Customers Per Month",
+    "problemUrl": "https://leetcode.com/problems/unique-orders-and-customers-per-month/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1565.Unique Orders and Customers Per Month/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1565.Unique Orders and Customers Per Month/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1565.Unique Orders and Customers Per Month/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

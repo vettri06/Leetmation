@@ -1,0 +1,43 @@
+{
+    "problemName": "binary-string-with-substrings-representing-1-to-n",
+    "language": "python3",
+    "code": "class Solution:\r\n    def queryString(self, s: str, n: int) -> bool:\r\n        if n > 1000:\r\n            return False\r\n        return all(bin(i)[2:] in s for i in range(n, n // 2, -1))",
+    "problemId": 1016,
+    "title": "Binary String With Substrings Representing 1 To N",
+    "problemUrl": "https://leetcode.com/problems/binary-string-with-substrings-representing-1-to-n/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1016.Binary String With Substrings Representing 1 To N/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1016.Binary String With Substrings Representing 1 To N/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1016.Binary String With Substrings Representing 1 To N/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1016.Binary String With Substrings Representing 1 To N/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1016.Binary String With Substrings Representing 1 To N/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1016.Binary String With Substrings Representing 1 To N/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1016.Binary String With Substrings Representing 1 To N/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

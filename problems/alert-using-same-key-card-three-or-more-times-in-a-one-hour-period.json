@@ -1,0 +1,38 @@
+{
+    "problemName": "alert-using-same-key-card-three-or-more-times-in-a-one-hour-period",
+    "language": "python3",
+    "code": "class Solution:\r\n    def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:\r\n        d = defaultdict(list)\r\n        for name, t in zip(keyName, keyTime):\r\n            t = int(t[:2]) * 60 + int(t[3:])\r\n            d[name].append(t)\r\n        ans = []\r\n        for name, ts in d.items():\r\n            if (n := len(ts)) > 2:\r\n                ts.sort()\r\n                for i in range(n - 2):\r\n                    if ts[i + 2] - ts[i] <= 60:\r\n                        ans.append(name)\r\n                        break\r\n        ans.sort()\r\n        return ans",
+    "problemId": 1604,
+    "title": "Alert Using Same Key-Card Three or More Times in a One Hour Period",
+    "problemUrl": "https://leetcode.com/problems/alert-using-same-key-card-three-or-more-times-in-a-one-hour-period/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1604.Alert Using Same Key-Card Three or More Times in a One Hour Period/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1604.Alert Using Same Key-Card Three or More Times in a One Hour Period/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1604.Alert Using Same Key-Card Three or More Times in a One Hour Period/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1604.Alert Using Same Key-Card Three or More Times in a One Hour Period/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1604.Alert Using Same Key-Card Three or More Times in a One Hour Period/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1604.Alert Using Same Key-Card Three or More Times in a One Hour Period/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

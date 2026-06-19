@@ -1,0 +1,38 @@
+{
+    "problemName": "valid-elements-in-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findValidElements(self, nums: list[int]) -> list[int]:\r\n        n = len(nums)\r\n        right = [nums[-1]] * n\r\n        for i in range(n - 2, -1, -1):\r\n            right[i] = max(right[i + 1], nums[i])\r\n        left = 0\r\n        ans = []\r\n        for i, x in enumerate(nums):\r\n            if x > left or i == n - 1 or x > right[i + 1]:\r\n                ans.append(x)\r\n            left = max(left, x)\r\n        return ans",
+    "problemId": 3912,
+    "title": "Valid Elements in an Array",
+    "problemUrl": "https://leetcode.com/problems/valid-elements-in-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3912.Valid Elements in an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3912.Valid Elements in an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3912.Valid Elements in an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3912.Valid Elements in an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3912.Valid Elements in an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3912.Valid Elements in an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

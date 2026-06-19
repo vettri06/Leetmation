@@ -1,0 +1,58 @@
+{
+    "problemName": "number-of-ways-where-square-of-number-is-equal-to-product-of-two-numbers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:\r\n        def count(nums: List[int]) -> Counter:\r\n            cnt = Counter()\r\n            for j in range(len(nums)):\r\n                for k in range(j + 1, len(nums)):\r\n                    cnt[nums[j] * nums[k]] += 1\r\n            return cnt\r\n\r\n        def cal(nums: List[int], cnt: Counter) -> int:\r\n            return sum(cnt[x * x] for x in nums)\r\n\r\n        cnt1 = count(nums1)\r\n        cnt2 = count(nums2)\r\n        return cal(nums1, cnt2) + cal(nums2, cnt1)",
+    "problemId": 1577,
+    "title": "Number of Ways Where Square of Number Is Equal to Product of Two Numbers",
+    "problemUrl": "https://leetcode.com/problems/number-of-ways-where-square-of-number-is-equal-to-product-of-two-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1577.Number of Ways Where Square of Number Is Equal to Product of Two Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1577.Number of Ways Where Square of Number Is Equal to Product of Two Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1577.Number of Ways Where Square of Number Is Equal to Product of Two Numbers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1577.Number of Ways Where Square of Number Is Equal to Product of Two Numbers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1577.Number of Ways Where Square of Number Is Equal to Product of Two Numbers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1577.Number of Ways Where Square of Number Is Equal to Product of Two Numbers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1577.Number of Ways Where Square of Number Is Equal to Product of Two Numbers/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1577.Number of Ways Where Square of Number Is Equal to Product of Two Numbers/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1577.Number of Ways Where Square of Number Is Equal to Product of Two Numbers/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1577.Number of Ways Where Square of Number Is Equal to Product of Two Numbers/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

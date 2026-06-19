@@ -1,0 +1,33 @@
+{
+    "problemName": "missing-element-in-sorted-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def missingElement(self, nums: List[int], k: int) -> int:\r\n        def missing(i: int) -> int:\r\n            return nums[i] - nums[0] - i\r\n\r\n        n = len(nums)\r\n        if k > missing(n - 1):\r\n            return nums[n - 1] + k - missing(n - 1)\r\n        l, r = 0, n - 1\r\n        while l < r:\r\n            mid = (l + r) >> 1\r\n            if missing(mid) >= k:\r\n                r = mid\r\n            else:\r\n                l = mid + 1\r\n        return nums[l - 1] + k - missing(l - 1)",
+    "problemId": 1060,
+    "title": "Missing Element in Sorted Array",
+    "problemUrl": "https://leetcode.com/problems/missing-element-in-sorted-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1060.Missing Element in Sorted Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1060.Missing Element in Sorted Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1060.Missing Element in Sorted Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1060.Missing Element in Sorted Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1060.Missing Element in Sorted Array/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

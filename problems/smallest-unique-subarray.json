@@ -1,0 +1,18 @@
+{
+    "problemName": "smallest-unique-subarray",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestUniqueSubarray(self, nums: list[int]) -> int:\r\n        self.nums = nums\r\n\r\n        self.base = 19\r\n        self.modulo = 10**9 + 7\r\n        self.powers = [1] * (len(nums) + 1)\r\n\r\n        self.hash_values: dict[int, int] = dict()\r\n\r\n        min_possible_len = len(nums)  # Base case.\r\n\r\n        min_len, max_len = 1, len(nums)  # For binary search usage.\r\n\r\n        while min_len <= max_len:\r\n            mid_len = (min_len + max_len) // 2\r\n\r\n            if self._check_uniqueness(mid_len):\r\n                if mid_len < min_possible_len:\r\n                    min_possible_len = mid_len\r\n                max_len = mid_len - 1\r\n\r\n            else:\r\n                min_len = mid_len + 1\r\n\r\n        return min_possible_len\r\n\r\n    def _check_uniqueness(self, subarray_len: int) -> bool:\r\n        # Only need to reset leftmost power to 1 before usage.\r\n        self.powers[0] = 1  # Because powers are calculated by bottom-up.\r\n\r\n        for idx in range(1, len(self.nums) + 1):\r\n            self.powers[idx] = (self.powers[idx - 1] * self.base) % self.modulo\r\n\r\n        current_hash = 0\r\n        for idx in range(subarray_len):\r\n            current_hash *= self.base\r\n            current_hash += self.nums[idx]\r\n            current_hash %= self.modulo\r\n\r\n        self.hash_values.clear()  # Clear before usage.\r\n        self.hash_values[current_hash] = 1\r\n\r\n        for idx in range(1, len(self.nums) - subarray_len + 1):\r\n            # Window shifts: deduct leftmost num's share from hash value.\r\n            current_hash -= self.powers[subarray_len - 1] * self.nums[idx - 1]\r\n\r\n            # Integrate newly added num's share into hash value.\r\n            current_hash *= self.base\r\n            current_hash += self.nums[idx + subarray_len - 1]\r\n            current_hash %= self.modulo\r\n\r\n            if current_hash not in self.hash_values.keys():\r\n                self.hash_values.update({current_hash: 0})\r\n            self.hash_values[current_hash] += 1\r\n\r\n        return 1 in self.hash_values.values()",
+    "problemId": 3934,
+    "title": "Smallest Unique Subarray",
+    "problemUrl": "https://leetcode.com/problems/smallest-unique-subarray/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3934.Smallest Unique Subarray/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3934.Smallest Unique Subarray/Solution.py",
+            "sourceFile": "Solution.py"
+        }
+    ]
+}

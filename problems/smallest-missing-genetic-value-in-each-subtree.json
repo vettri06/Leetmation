@@ -1,0 +1,43 @@
+{
+    "problemName": "smallest-missing-genetic-value-in-each-subtree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestMissingValueSubtree(\r\n        self, parents: List[int], nums: List[int]\r\n    ) -> List[int]:\r\n        def dfs(i: int):\r\n            if vis[i]:\r\n                return\r\n            vis[i] = True\r\n            if nums[i] < len(has):\r\n                has[nums[i]] = True\r\n            for j in g[i]:\r\n                dfs(j)\r\n\r\n        n = len(nums)\r\n        ans = [1] * n\r\n        g = [[] for _ in range(n)]\r\n        idx = -1\r\n        for i, p in enumerate(parents):\r\n            if i:\r\n                g[p].append(i)\r\n            if nums[i] == 1:\r\n                idx = i\r\n        if idx == -1:\r\n            return ans\r\n        vis = [False] * n\r\n        has = [False] * (n + 2)\r\n        i = 2\r\n        while idx != -1:\r\n            dfs(idx)\r\n            while has[i]:\r\n                i += 1\r\n            ans[idx] = i\r\n            idx = parents[idx]\r\n        return ans",
+    "problemId": 2003,
+    "title": "Smallest Missing Genetic Value in Each Subtree",
+    "problemUrl": "https://leetcode.com/problems/smallest-missing-genetic-value-in-each-subtree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2003.Smallest Missing Genetic Value in Each Subtree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2003.Smallest Missing Genetic Value in Each Subtree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2003.Smallest Missing Genetic Value in Each Subtree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2003.Smallest Missing Genetic Value in Each Subtree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2003.Smallest Missing Genetic Value in Each Subtree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2003.Smallest Missing Genetic Value in Each Subtree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2003.Smallest Missing Genetic Value in Each Subtree/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

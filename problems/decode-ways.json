@@ -1,0 +1,73 @@
+{
+    "problemName": "decode-ways",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numDecodings(self, s: str) -> int:\r\n        n = len(s)\r\n        f = [1] + [0] * n\r\n        for i, c in enumerate(s, 1):\r\n            if c != \"0\":\r\n                f[i] = f[i - 1]\r\n            if i > 1 and s[i - 2] != \"0\" and int(s[i - 2 : i]) <= 26:\r\n                f[i] += f[i - 2]\r\n        return f[n]",
+    "problemId": 91,
+    "title": "Decode Ways",
+    "problemUrl": "https://leetcode.com/problems/decode-ways/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0091.Decode Ways/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0091.Decode Ways/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0091.Decode Ways/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0091.Decode Ways/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0091.Decode Ways/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0091.Decode Ways/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0091.Decode Ways/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0091.Decode Ways/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0091.Decode Ways/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0091.Decode Ways/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0091.Decode Ways/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0091.Decode Ways/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0091.Decode Ways/Solution2.cs",
+            "sourceFile": "Solution2.cs"
+        }
+    ]
+}

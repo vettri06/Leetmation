@@ -1,0 +1,63 @@
+{
+    "problemName": "number-of-strings-which-can-be-rearranged-to-contain-substring",
+    "language": "python3",
+    "code": "class Solution:\r\n    def stringCount(self, n: int) -> int:\r\n        @cache\r\n        def dfs(i: int, l: int, e: int, t: int) -> int:\r\n            if i == 0:\r\n                return int(l == 1 and e == 2 and t == 1)\r\n            a = dfs(i - 1, l, e, t) * 23 % mod\r\n            b = dfs(i - 1, min(1, l + 1), e, t)\r\n            c = dfs(i - 1, l, min(2, e + 1), t)\r\n            d = dfs(i - 1, l, e, min(1, t + 1))\r\n            return (a + b + c + d) % mod\r\n\r\n        mod = 10**9 + 7\r\n        return dfs(n, 0, 0, 0)",
+    "problemId": 2930,
+    "title": "Number of Strings Which Can Be Rearranged to Contain Substring",
+    "problemUrl": "https://leetcode.com/problems/number-of-strings-which-can-be-rearranged-to-contain-substring/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2930.Number of Strings Which Can Be Rearranged to Contain Substring/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2930.Number of Strings Which Can Be Rearranged to Contain Substring/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2930.Number of Strings Which Can Be Rearranged to Contain Substring/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2930.Number of Strings Which Can Be Rearranged to Contain Substring/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2930.Number of Strings Which Can Be Rearranged to Contain Substring/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2930.Number of Strings Which Can Be Rearranged to Contain Substring/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2930.Number of Strings Which Can Be Rearranged to Contain Substring/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2930.Number of Strings Which Can Be Rearranged to Contain Substring/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2930.Number of Strings Which Can Be Rearranged to Contain Substring/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2930.Number of Strings Which Can Be Rearranged to Contain Substring/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2930.Number of Strings Which Can Be Rearranged to Contain Substring/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

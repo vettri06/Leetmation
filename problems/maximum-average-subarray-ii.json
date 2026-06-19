@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-average-subarray-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMaxAverage(self, nums: List[int], k: int) -> float:\r\n        def check(v: float) -> bool:\r\n            s = sum(nums[:k]) - k * v\r\n            if s >= 0:\r\n                return True\r\n            t = mi = 0\r\n            for i in range(k, len(nums)):\r\n                s += nums[i] - v\r\n                t += nums[i - k] - v\r\n                mi = min(mi, t)\r\n                if s >= mi:\r\n                    return True\r\n            return False\r\n\r\n        eps = 1e-5\r\n        l, r = min(nums), max(nums)\r\n        while r - l >= eps:\r\n            mid = (l + r) / 2\r\n            if check(mid):\r\n                l = mid\r\n            else:\r\n                r = mid\r\n        return l",
+    "problemId": 644,
+    "title": "Maximum Average Subarray II",
+    "problemUrl": "https://leetcode.com/problems/maximum-average-subarray-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0644.Maximum Average Subarray II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0644.Maximum Average Subarray II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0644.Maximum Average Subarray II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0644.Maximum Average Subarray II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0644.Maximum Average Subarray II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0644.Maximum Average Subarray II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

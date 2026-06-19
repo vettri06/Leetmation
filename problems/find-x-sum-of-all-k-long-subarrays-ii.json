@@ -1,0 +1,28 @@
+{
+    "problemName": "find-x-sum-of-all-k-long-subarrays-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findXSum(self, nums: List[int], k: int, x: int) -> List[int]:\r\n        def add(v: int):\r\n            if cnt[v] == 0:\r\n                return\r\n            p = (cnt[v], v)\r\n            if l and p > l[0]:\r\n                nonlocal s\r\n                s += p[0] * p[1]\r\n                l.add(p)\r\n            else:\r\n                r.add(p)\r\n\r\n        def remove(v: int):\r\n            if cnt[v] == 0:\r\n                return\r\n            p = (cnt[v], v)\r\n            if p in l:\r\n                nonlocal s\r\n                s -= p[0] * p[1]\r\n                l.remove(p)\r\n            else:\r\n                r.remove(p)\r\n\r\n        l = SortedList()\r\n        r = SortedList()\r\n        cnt = Counter()\r\n        s = 0\r\n        n = len(nums)\r\n        ans = [0] * (n - k + 1)\r\n        for i, v in enumerate(nums):\r\n            remove(v)\r\n            cnt[v] += 1\r\n            add(v)\r\n            j = i - k + 1\r\n            if j < 0:\r\n                continue\r\n            while r and len(l) < x:\r\n                p = r.pop()\r\n                l.add(p)\r\n                s += p[0] * p[1]\r\n            while len(l) > x:\r\n                p = l.pop(0)\r\n                s -= p[0] * p[1]\r\n                r.add(p)\r\n            ans[j] = s\r\n\r\n            remove(nums[j])\r\n            cnt[nums[j]] -= 1\r\n            add(nums[j])\r\n        return ans",
+    "problemId": 3321,
+    "title": "Find X-Sum of All K-Long Subarrays II",
+    "problemUrl": "https://leetcode.com/problems/find-x-sum-of-all-k-long-subarrays-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3321.Find X-Sum of All K-Long Subarrays II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3321.Find X-Sum of All K-Long Subarrays II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3321.Find X-Sum of All K-Long Subarrays II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3321.Find X-Sum of All K-Long Subarrays II/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

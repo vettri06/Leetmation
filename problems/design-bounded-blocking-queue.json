@@ -1,0 +1,28 @@
+{
+    "problemName": "design-bounded-blocking-queue",
+    "language": "python3",
+    "code": "from threading import Semaphore\r\n\r\n\r\nclass BoundedBlockingQueue(object):\r\n    def __init__(self, capacity: int):\r\n        self.s1 = Semaphore(capacity)\r\n        self.s2 = Semaphore(0)\r\n        self.q = deque()\r\n\r\n    def enqueue(self, element: int) -> None:\r\n        self.s1.acquire()\r\n        self.q.append(element)\r\n        self.s2.release()\r\n\r\n    def dequeue(self) -> int:\r\n        self.s2.acquire()\r\n        ans = self.q.popleft()\r\n        self.s1.release()\r\n        return ans\r\n\r\n    def size(self) -> int:\r\n        return len(self.q)",
+    "problemId": 1188,
+    "title": "Design Bounded Blocking Queue",
+    "problemUrl": "https://leetcode.com/problems/design-bounded-blocking-queue/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1188.Design Bounded Blocking Queue/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1188.Design Bounded Blocking Queue/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1188.Design Bounded Blocking Queue/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1188.Design Bounded Blocking Queue/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

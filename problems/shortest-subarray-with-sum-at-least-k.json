@@ -1,0 +1,43 @@
+{
+    "problemName": "shortest-subarray-with-sum-at-least-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shortestSubarray(self, nums: List[int], k: int) -> int:\r\n        s = list(accumulate(nums, initial=0))\r\n        q = deque()\r\n        ans = inf\r\n        for i, v in enumerate(s):\r\n            while q and v - s[q[0]] >= k:\r\n                ans = min(ans, i - q.popleft())\r\n            while q and s[q[-1]] >= v:\r\n                q.pop()\r\n            q.append(i)\r\n        return -1 if ans == inf else ans",
+    "problemId": 862,
+    "title": "Shortest Subarray with Sum at Least K",
+    "problemUrl": "https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0862.Shortest Subarray with Sum at Least K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0862.Shortest Subarray with Sum at Least K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0862.Shortest Subarray with Sum at Least K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0862.Shortest Subarray with Sum at Least K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0862.Shortest Subarray with Sum at Least K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0862.Shortest Subarray with Sum at Least K/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0862.Shortest Subarray with Sum at Least K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

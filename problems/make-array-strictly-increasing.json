@@ -1,0 +1,43 @@
+{
+    "problemName": "make-array-strictly-increasing",
+    "language": "python3",
+    "code": "class Solution:\r\n    def makeArrayIncreasing(self, arr1: List[int], arr2: List[int]) -> int:\r\n        arr2.sort()\r\n        m = 0\r\n        for x in arr2:\r\n            if m == 0 or x != arr2[m - 1]:\r\n                arr2[m] = x\r\n                m += 1\r\n        arr2 = arr2[:m]\r\n        arr = [-inf] + arr1 + [inf]\r\n        n = len(arr)\r\n        f = [inf] * n\r\n        f[0] = 0\r\n        for i in range(1, n):\r\n            if arr[i - 1] < arr[i]:\r\n                f[i] = f[i - 1]\r\n            j = bisect_left(arr2, arr[i])\r\n            for k in range(1, min(i - 1, j) + 1):\r\n                if arr[i - k - 1] < arr2[j - k]:\r\n                    f[i] = min(f[i], f[i - k - 1] + k)\r\n        return -1 if f[n - 1] >= inf else f[n - 1]",
+    "problemId": 1187,
+    "title": "Make Array Strictly Increasing",
+    "problemUrl": "https://leetcode.com/problems/make-array-strictly-increasing/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1187.Make Array Strictly Increasing/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1187.Make Array Strictly Increasing/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1187.Make Array Strictly Increasing/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1187.Make Array Strictly Increasing/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1187.Make Array Strictly Increasing/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1187.Make Array Strictly Increasing/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1187.Make Array Strictly Increasing/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "odd-even-jump",
+    "language": "python3",
+    "code": "class Solution:\r\n    def oddEvenJumps(self, arr: List[int]) -> int:\r\n        @cache\r\n        def dfs(i: int, k: int) -> bool:\r\n            if i == n - 1:\r\n                return True\r\n            if g[i][k] == -1:\r\n                return False\r\n            return dfs(g[i][k], k ^ 1)\r\n\r\n        n = len(arr)\r\n        g = [[0] * 2 for _ in range(n)]\r\n        sd = SortedDict()\r\n        for i in range(n - 1, -1, -1):\r\n            j = sd.bisect_left(arr[i])\r\n            g[i][1] = sd.values()[j] if j < len(sd) else -1\r\n            j = sd.bisect_right(arr[i]) - 1\r\n            g[i][0] = sd.values()[j] if j >= 0 else -1\r\n            sd[arr[i]] = i\r\n        return sum(dfs(i, 1) for i in range(n))",
+    "problemId": 975,
+    "title": "Odd Even Jump",
+    "problemUrl": "https://leetcode.com/problems/odd-even-jump/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0975.Odd Even Jump/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0975.Odd Even Jump/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0975.Odd Even Jump/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0975.Odd Even Jump/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0975.Odd Even Jump/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0975.Odd Even Jump/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

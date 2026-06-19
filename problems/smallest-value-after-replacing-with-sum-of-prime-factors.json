@@ -1,0 +1,33 @@
+{
+    "problemName": "smallest-value-after-replacing-with-sum-of-prime-factors",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestValue(self, n: int) -> int:\r\n        while 1:\r\n            t, s, i = n, 0, 2\r\n            while i <= n // i:\r\n                while n % i == 0:\r\n                    n //= i\r\n                    s += i\r\n                i += 1\r\n            if n > 1:\r\n                s += n\r\n            if s == t:\r\n                return t\r\n            n = s",
+    "problemId": 2507,
+    "title": "Smallest Value After Replacing With Sum of Prime Factors",
+    "problemUrl": "https://leetcode.com/problems/smallest-value-after-replacing-with-sum-of-prime-factors/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2507.Smallest Value After Replacing With Sum of Prime Factors/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2507.Smallest Value After Replacing With Sum of Prime Factors/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2507.Smallest Value After Replacing With Sum of Prime Factors/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2507.Smallest Value After Replacing With Sum of Prime Factors/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2507.Smallest Value After Replacing With Sum of Prime Factors/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

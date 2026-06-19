@@ -1,0 +1,33 @@
+{
+    "problemName": "video-stitching",
+    "language": "python3",
+    "code": "class Solution:\r\n    def videoStitching(self, clips: List[List[int]], time: int) -> int:\r\n        last = [0] * time\r\n        for a, b in clips:\r\n            if a < time:\r\n                last[a] = max(last[a], b)\r\n        ans = mx = pre = 0\r\n        for i, v in enumerate(last):\r\n            mx = max(mx, v)\r\n            if mx <= i:\r\n                return -1\r\n            if pre == i:\r\n                ans += 1\r\n                pre = mx\r\n        return ans",
+    "problemId": 1024,
+    "title": "Video Stitching",
+    "problemUrl": "https://leetcode.com/problems/video-stitching/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1024.Video Stitching/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1024.Video Stitching/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1024.Video Stitching/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1024.Video Stitching/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1024.Video Stitching/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "reduction-operations-to-make-the-array-elements-equal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reductionOperations(self, nums: List[int]) -> int:\r\n        nums.sort()\r\n        ans = cnt = 0\r\n        for a, b in pairwise(nums):\r\n            if a != b:\r\n                cnt += 1\r\n            ans += cnt\r\n        return ans",
+    "problemId": 1887,
+    "title": "Reduction Operations to Make the Array Elements Equal",
+    "problemUrl": "https://leetcode.com/problems/reduction-operations-to-make-the-array-elements-equal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1887.Reduction Operations to Make the Array Elements Equal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1887.Reduction Operations to Make the Array Elements Equal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1887.Reduction Operations to Make the Array Elements Equal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1887.Reduction Operations to Make the Array Elements Equal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1887.Reduction Operations to Make the Array Elements Equal/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1887.Reduction Operations to Make the Array Elements Equal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1887.Reduction Operations to Make the Array Elements Equal/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "lexicographically-smallest-generated-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def generateString(self, s: str, t: str) -> str:\r\n        n, m = len(s), len(t)\r\n        ans = [\"a\"] * (n + m - 1)\r\n        fixed = [False] * (n + m - 1)\r\n\r\n        for i, b in enumerate(s):\r\n            if b != \"T\":\r\n                continue\r\n            for j, c in enumerate(t):\r\n                k = i + j\r\n                if fixed[k] and ans[k] != c:\r\n                    return \"\"\r\n                ans[k] = c\r\n                fixed[k] = True\r\n\r\n        for i, b in enumerate(s):\r\n            if b != \"F\":\r\n                continue\r\n            if \"\".join(ans[i : i + m]) != t:\r\n                continue\r\n            for j in range(i + m - 1, i - 1, -1):\r\n                if not fixed[j]:\r\n                    ans[j] = \"b\"\r\n                    break\r\n            else:\r\n                return \"\"\r\n\r\n        return \"\".join(ans)",
+    "problemId": 3474,
+    "title": "Lexicographically Smallest Generated String",
+    "problemUrl": "https://leetcode.com/problems/lexicographically-smallest-generated-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3474.Lexicographically Smallest Generated String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3474.Lexicographically Smallest Generated String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3474.Lexicographically Smallest Generated String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3474.Lexicographically Smallest Generated String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3474.Lexicographically Smallest Generated String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3474.Lexicographically Smallest Generated String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

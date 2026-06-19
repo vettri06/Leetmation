@@ -1,0 +1,43 @@
+{
+    "problemName": "airplane-seat-assignment-probability",
+    "language": "python3",
+    "code": "class Solution:\r\n    def nthPersonGetsNthSeat(self, n: int) -> float:\r\n        return 1 if n == 1 else 0.5",
+    "problemId": 1227,
+    "title": "Airplane Seat Assignment Probability",
+    "problemUrl": "https://leetcode.com/problems/airplane-seat-assignment-probability/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1227.Airplane Seat Assignment Probability/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1227.Airplane Seat Assignment Probability/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1227.Airplane Seat Assignment Probability/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1227.Airplane Seat Assignment Probability/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1227.Airplane Seat Assignment Probability/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1227.Airplane Seat Assignment Probability/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1227.Airplane Seat Assignment Probability/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

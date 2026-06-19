@@ -1,0 +1,38 @@
+{
+    "problemName": "one-edit-distance",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isOneEditDistance(self, s: str, t: str) -> bool:\r\n        if len(s) < len(t):\r\n            return self.isOneEditDistance(t, s)\r\n        m, n = len(s), len(t)\r\n        if m - n > 1:\r\n            return False\r\n        for i, c in enumerate(t):\r\n            if c != s[i]:\r\n                return s[i + 1 :] == t[i + 1 :] if m == n else s[i + 1 :] == t[i:]\r\n        return m == n + 1",
+    "problemId": 161,
+    "title": "One Edit Distance",
+    "problemUrl": "https://leetcode.com/problems/one-edit-distance/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0161.One Edit Distance/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0161.One Edit Distance/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0161.One Edit Distance/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0161.One Edit Distance/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0161.One Edit Distance/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0161.One Edit Distance/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

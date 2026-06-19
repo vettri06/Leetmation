@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-fruits-harvested-after-at-most-k-steps",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxTotalFruits(self, fruits: List[List[int]], startPos: int, k: int) -> int:\r\n        ans = i = s = 0\r\n        for j, (pj, fj) in enumerate(fruits):\r\n            s += fj\r\n            while (\r\n                i <= j\r\n                and pj\r\n                - fruits[i][0]\r\n                + min(abs(startPos - fruits[i][0]), abs(startPos - fruits[j][0]))\r\n                > k\r\n            ):\r\n                s -= fruits[i][1]\r\n                i += 1\r\n            ans = max(ans, s)\r\n        return ans",
+    "problemId": 2106,
+    "title": "Maximum Fruits Harvested After at Most K Steps",
+    "problemUrl": "https://leetcode.com/problems/maximum-fruits-harvested-after-at-most-k-steps/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2106.Maximum Fruits Harvested After at Most K Steps/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2106.Maximum Fruits Harvested After at Most K Steps/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2106.Maximum Fruits Harvested After at Most K Steps/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2106.Maximum Fruits Harvested After at Most K Steps/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2106.Maximum Fruits Harvested After at Most K Steps/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2106.Maximum Fruits Harvested After at Most K Steps/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2106.Maximum Fruits Harvested After at Most K Steps/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

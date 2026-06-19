@@ -1,0 +1,48 @@
+{
+    "problemName": "sign-of-the-product-of-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def arraySign(self, nums: List[int]) -> int:\r\n        ans = 1\r\n        for v in nums:\r\n            if v == 0:\r\n                return 0\r\n            if v < 0:\r\n                ans *= -1\r\n        return ans",
+    "problemId": 1822,
+    "title": "Sign of the Product of an Array",
+    "problemUrl": "https://leetcode.com/problems/sign-of-the-product-of-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1822.Sign of the Product of an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1822.Sign of the Product of an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1822.Sign of the Product of an Array/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1822.Sign of the Product of an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1822.Sign of the Product of an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1822.Sign of the Product of an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1822.Sign of the Product of an Array/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1822.Sign of the Product of an Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

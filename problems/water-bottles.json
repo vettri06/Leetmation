@@ -1,0 +1,43 @@
+{
+    "problemName": "water-bottles",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numWaterBottles(self, numBottles: int, numExchange: int) -> int:\r\n        ans = numBottles\r\n        while numBottles >= numExchange:\r\n            numBottles -= numExchange - 1\r\n            ans += 1\r\n        return ans",
+    "problemId": 1518,
+    "title": "Water Bottles",
+    "problemUrl": "https://leetcode.com/problems/water-bottles/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1518.Water Bottles/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1518.Water Bottles/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1518.Water Bottles/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1518.Water Bottles/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1518.Water Bottles/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1518.Water Bottles/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1518.Water Bottles/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

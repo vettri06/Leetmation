@@ -1,0 +1,38 @@
+{
+    "problemName": "ways-to-make-a-fair-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def waysToMakeFair(self, nums: List[int]) -> int:\r\n        s1, s2 = sum(nums[::2]), sum(nums[1::2])\r\n        ans = t1 = t2 = 0\r\n        for i, v in enumerate(nums):\r\n            ans += i % 2 == 0 and t2 + s1 - t1 - v == t1 + s2 - t2\r\n            ans += i % 2 == 1 and t2 + s1 - t1 == t1 + s2 - t2 - v\r\n            t1 += v if i % 2 == 0 else 0\r\n            t2 += v if i % 2 == 1 else 0\r\n        return ans",
+    "problemId": 1664,
+    "title": "Ways to Make a Fair Array",
+    "problemUrl": "https://leetcode.com/problems/ways-to-make-a-fair-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1664.Ways to Make a Fair Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1664.Ways to Make a Fair Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1664.Ways to Make a Fair Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1664.Ways to Make a Fair Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1664.Ways to Make a Fair Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1664.Ways to Make a Fair Array/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "first-and-last-call-on-the-same-day",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    s AS (\r\n        SELECT\r\n            *\r\n        FROM Calls\r\n        UNION ALL\r\n        SELECT\r\n            recipient_id,\r\n            caller_id,\r\n            call_time\r\n        FROM Calls\r\n    ),\r\n    t AS (\r\n        SELECT\r\n            caller_id AS user_id,\r\n            FIRST_VALUE(recipient_id) OVER (\r\n                PARTITION BY DATE_FORMAT(call_time, '%Y-%m-%d'), caller_id\r\n                ORDER BY call_time ASC\r\n            ) AS first,\r\n            FIRST_VALUE(recipient_id) OVER (\r\n                PARTITION BY DATE_FORMAT(call_time, '%Y-%m-%d'), caller_id\r\n                ORDER BY call_time DESC\r\n            ) AS last\r\n        FROM s\r\n    )\r\nSELECT DISTINCT\r\n    user_id\r\nFROM t\r\nWHERE first = last;",
+    "problemId": 1972,
+    "title": "First and Last Call On the Same Day",
+    "problemUrl": "https://leetcode.com/problems/first-and-last-call-on-the-same-day/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1972.First and Last Call On the Same Day/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1972.First and Last Call On the Same Day/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

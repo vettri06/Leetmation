@@ -1,0 +1,33 @@
+{
+    "problemName": "print-words-vertically",
+    "language": "python3",
+    "code": "class Solution:\r\n    def printVertically(self, s: str) -> List[str]:\r\n        words = s.split()\r\n        n = max(len(w) for w in words)\r\n        ans = []\r\n        for j in range(n):\r\n            t = [w[j] if j < len(w) else ' ' for w in words]\r\n            while t[-1] == ' ':\r\n                t.pop()\r\n            ans.append(''.join(t))\r\n        return ans",
+    "problemId": 1324,
+    "title": "Print Words Vertically",
+    "problemUrl": "https://leetcode.com/problems/print-words-vertically/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1324.Print Words Vertically/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1324.Print Words Vertically/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1324.Print Words Vertically/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1324.Print Words Vertically/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1324.Print Words Vertically/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

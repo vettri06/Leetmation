@@ -1,0 +1,18 @@
+{
+    "problemName": "swap-sex-of-employees",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nUPDATE Salary\r\nSET sex = IF(sex = 'f', 'm', 'f');",
+    "problemId": 627,
+    "title": "Swap Sex of Employees",
+    "problemUrl": "https://leetcode.com/problems/swap-sex-of-employees/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0627.Swap Sex of Employees/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0627.Swap Sex of Employees/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

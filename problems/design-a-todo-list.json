@@ -1,0 +1,28 @@
+{
+    "problemName": "design-a-todo-list",
+    "language": "python3",
+    "code": "class TodoList:\r\n    def __init__(self):\r\n        self.i = 1\r\n        self.tasks = defaultdict(SortedList)\r\n\r\n    def addTask(\r\n        self, userId: int, taskDescription: str, dueDate: int, tags: List[str]\r\n    ) -> int:\r\n        taskId = self.i\r\n        self.i += 1\r\n        self.tasks[userId].add([dueDate, taskDescription, set(tags), taskId, False])\r\n        return taskId\r\n\r\n    def getAllTasks(self, userId: int) -> List[str]:\r\n        return [x[1] for x in self.tasks[userId] if not x[4]]\r\n\r\n    def getTasksForTag(self, userId: int, tag: str) -> List[str]:\r\n        return [x[1] for x in self.tasks[userId] if not x[4] and tag in x[2]]\r\n\r\n    def completeTask(self, userId: int, taskId: int) -> None:\r\n        for task in self.tasks[userId]:\r\n            if task[3] == taskId:\r\n                task[4] = True\r\n                break\r\n\r\n\r\n# Your TodoList object will be instantiated and called as such:\r\n# obj = TodoList()\r\n# param_1 = obj.addTask(userId,taskDescription,dueDate,tags)\r\n# param_2 = obj.getAllTasks(userId)\r\n# param_3 = obj.getTasksForTag(userId,tag)\r\n# obj.completeTask(userId,taskId)",
+    "problemId": 2590,
+    "title": "Design a Todo List",
+    "problemUrl": "https://leetcode.com/problems/design-a-todo-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2590.Design a Todo List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2590.Design a Todo List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2590.Design a Todo List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2590.Design a Todo List/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

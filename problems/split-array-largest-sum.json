@@ -1,0 +1,43 @@
+{
+    "problemName": "split-array-largest-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def splitArray(self, nums: List[int], k: int) -> int:\r\n        def check(mx):\r\n            s, cnt = inf, 0\r\n            for x in nums:\r\n                s += x\r\n                if s > mx:\r\n                    s = x\r\n                    cnt += 1\r\n            return cnt <= k\r\n\r\n        left, right = max(nums), sum(nums)\r\n        return left + bisect_left(range(left, right + 1), True, key=check)",
+    "problemId": 410,
+    "title": "Split Array Largest Sum",
+    "problemUrl": "https://leetcode.com/problems/split-array-largest-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0410.Split Array Largest Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0410.Split Array Largest Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0410.Split Array Largest Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0410.Split Array Largest Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0410.Split Array Largest Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0410.Split Array Largest Sum/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0410.Split Array Largest Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

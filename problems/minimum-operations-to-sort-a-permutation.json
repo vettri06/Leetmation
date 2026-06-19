@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-operations-to-sort-a-permutation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n\r\n        zero = nums.index(0)\r\n\r\n        def check(step: int) -> bool:\r\n            for i in range(1, n):\r\n                prev = (zero + (i - 1) * step) % n\r\n                curr = (zero + i * step) % n\r\n\r\n                if nums[prev] > nums[curr]:\r\n                    return False\r\n\r\n            return True\r\n\r\n        ans = inf\r\n\r\n        if check(1):\r\n            ans = min(ans, zero)\r\n            ans = min(ans, n - zero + 2)\r\n\r\n        if check(-1):\r\n            ans = min(ans, zero + 2)\r\n            ans = min(ans, n - zero)\r\n\r\n        return -1 if ans == inf else ans",
+    "problemId": 3942,
+    "title": "Minimum Operations to Sort a Permutation",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-sort-a-permutation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3942.Minimum Operations to Sort a Permutation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3942.Minimum Operations to Sort a Permutation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3942.Minimum Operations to Sort a Permutation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3942.Minimum Operations to Sort a Permutation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3942.Minimum Operations to Sort a Permutation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

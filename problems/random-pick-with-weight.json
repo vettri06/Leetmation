@@ -1,0 +1,43 @@
+{
+    "problemName": "random-pick-with-weight",
+    "language": "python3",
+    "code": "class Solution:\r\n    def __init__(self, w: List[int]):\r\n        self.s = [0]\r\n        for c in w:\r\n            self.s.append(self.s[-1] + c)\r\n\r\n    def pickIndex(self) -> int:\r\n        x = random.randint(1, self.s[-1])\r\n        left, right = 1, len(self.s) - 1\r\n        while left < right:\r\n            mid = (left + right) >> 1\r\n            if self.s[mid] >= x:\r\n                right = mid\r\n            else:\r\n                left = mid + 1\r\n        return left - 1\r\n\r\n\r\n# Your Solution object will be instantiated and called as such:\r\n# obj = Solution(w)\r\n# param_1 = obj.pickIndex()",
+    "problemId": 528,
+    "title": "Random Pick with Weight",
+    "problemUrl": "https://leetcode.com/problems/random-pick-with-weight/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0528.Random Pick with Weight/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0528.Random Pick with Weight/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0528.Random Pick with Weight/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0528.Random Pick with Weight/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0528.Random Pick with Weight/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0528.Random Pick with Weight/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0528.Random Pick with Weight/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

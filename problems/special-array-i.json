@@ -1,0 +1,38 @@
+{
+    "problemName": "special-array-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isArraySpecial(self, nums: List[int]) -> bool:\r\n        return all(a % 2 != b % 2 for a, b in pairwise(nums))",
+    "problemId": 3151,
+    "title": "Special Array I",
+    "problemUrl": "https://leetcode.com/problems/special-array-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3151.Special Array I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3151.Special Array I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3151.Special Array I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3151.Special Array I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3151.Special Array I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3151.Special Array I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

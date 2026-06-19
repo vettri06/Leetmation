@@ -1,0 +1,38 @@
+{
+    "problemName": "maximize-points-after-choosing-k-tasks",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxPoints(self, technique1: List[int], technique2: List[int], k: int) -> int:\r\n        n = len(technique1)\r\n        idx = sorted(range(n), key=lambda i: -(technique1[i] - technique2[i]))\r\n        ans = sum(technique2)\r\n        for i in idx[:k]:\r\n            ans -= technique2[i]\r\n            ans += technique1[i]\r\n        for i in idx[k:]:\r\n            if technique1[i] >= technique2[i]:\r\n                ans -= technique2[i]\r\n                ans += technique1[i]\r\n        return ans",
+    "problemId": 3767,
+    "title": "Maximize Points After Choosing K Tasks",
+    "problemUrl": "https://leetcode.com/problems/maximize-points-after-choosing-k-tasks/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3767.Maximize Points After Choosing K Tasks/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3767.Maximize Points After Choosing K Tasks/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3767.Maximize Points After Choosing K Tasks/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3767.Maximize Points After Choosing K Tasks/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3767.Maximize Points After Choosing K Tasks/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3767.Maximize Points After Choosing K Tasks/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

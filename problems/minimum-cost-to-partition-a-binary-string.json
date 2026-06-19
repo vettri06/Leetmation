@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-to-partition-a-binary-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, s: str, encCost: int, flatCost: int) -> int:\r\n        def dfs(l: int, r: int) -> int:\r\n            x = pre[r] - pre[l]\r\n            res = (r - l) * x * encCost if x else flatCost\r\n            if (r - l) % 2 == 0:\r\n                m = (l + r) // 2\r\n                res = min(res, dfs(l, m) + dfs(m, r))\r\n            return res\r\n\r\n        n = len(s)\r\n        pre = [0] * (n + 1)\r\n        for i, c in enumerate(s, 1):\r\n            pre[i] = pre[i - 1] + int(c)\r\n        return dfs(0, n)",
+    "problemId": 3864,
+    "title": "Minimum Cost to Partition a Binary String",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-partition-a-binary-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3864.Minimum Cost to Partition a Binary String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3864.Minimum Cost to Partition a Binary String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3864.Minimum Cost to Partition a Binary String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3864.Minimum Cost to Partition a Binary String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3864.Minimum Cost to Partition a Binary String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3864.Minimum Cost to Partition a Binary String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

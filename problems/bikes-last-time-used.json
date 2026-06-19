@@ -1,0 +1,18 @@
+{
+    "problemName": "bikes-last-time-used",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    bike_number,\r\n    MAX(end_time) AS end_time\r\nFROM Bikes\r\nGROUP BY bike_number\r\nORDER BY end_time DESC;",
+    "problemId": 2687,
+    "title": "Bikes Last Time Used",
+    "problemUrl": "https://leetcode.com/problems/bikes-last-time-used/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2687.Bikes Last Time Used/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2687.Bikes Last Time Used/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

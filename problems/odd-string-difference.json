@@ -1,0 +1,48 @@
+{
+    "problemName": "odd-string-difference",
+    "language": "python3",
+    "code": "class Solution:\r\n    def oddString(self, words: List[str]) -> str:\r\n        d = defaultdict(list)\r\n        for s in words:\r\n            t = tuple(ord(b) - ord(a) for a, b in pairwise(s))\r\n            d[t].append(s)\r\n        return next(ss[0] for ss in d.values() if len(ss) == 1)",
+    "problemId": 2451,
+    "title": "Odd String Difference",
+    "problemUrl": "https://leetcode.com/problems/odd-string-difference/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2451.Odd String Difference/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2451.Odd String Difference/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2451.Odd String Difference/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2451.Odd String Difference/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2451.Odd String Difference/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2451.Odd String Difference/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2451.Odd String Difference/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2451.Odd String Difference/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

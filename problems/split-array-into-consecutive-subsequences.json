@@ -1,0 +1,33 @@
+{
+    "problemName": "split-array-into-consecutive-subsequences",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isPossible(self, nums: List[int]) -> bool:\r\n        d = defaultdict(list)\r\n        for v in nums:\r\n            if h := d[v - 1]:\r\n                heappush(d[v], heappop(h) + 1)\r\n            else:\r\n                heappush(d[v], 1)\r\n        return all(not v or v and v[0] > 2 for v in d.values())",
+    "problemId": 659,
+    "title": "Split Array into Consecutive Subsequences",
+    "problemUrl": "https://leetcode.com/problems/split-array-into-consecutive-subsequences/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0659.Split Array into Consecutive Subsequences/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0659.Split Array into Consecutive Subsequences/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0659.Split Array into Consecutive Subsequences/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0659.Split Array into Consecutive Subsequences/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0659.Split Array into Consecutive Subsequences/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

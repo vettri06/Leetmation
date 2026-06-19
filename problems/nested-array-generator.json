@@ -1,0 +1,18 @@
+{
+    "problemName": "nested-array-generator",
+    "language": "typescript",
+    "code": "type MultidimensionalArray = (MultidimensionalArray | number)[];\r\n\r\nfunction* inorderTraversal(arr: MultidimensionalArray): Generator<number, void, unknown> {\r\n    for (const e of arr) {\r\n        if (Array.isArray(e)) {\r\n            yield* inorderTraversal(e);\r\n        } else {\r\n            yield e;\r\n        }\r\n    }\r\n}\r\n\r\n/**\r\n * const gen = inorderTraversal([1, [2, 3]]);\r\n * gen.next().value; // 1\r\n * gen.next().value; // 2\r\n * gen.next().value; // 3\r\n */",
+    "problemId": 2649,
+    "title": "Nested Array Generator",
+    "problemUrl": "https://leetcode.com/problems/nested-array-generator/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2649.Nested Array Generator/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2649.Nested Array Generator/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

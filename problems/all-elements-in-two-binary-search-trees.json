@@ -1,0 +1,43 @@
+{
+    "problemName": "all-elements-in-two-binary-search-trees",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def getAllElements(\r\n        self, root1: Optional[TreeNode], root2: Optional[TreeNode]\r\n    ) -> List[int]:\r\n        def dfs(root: Optional[TreeNode], nums: List[int]) -> int:\r\n            if root is None:\r\n                return\r\n            dfs(root.left, nums)\r\n            nums.append(root.val)\r\n            dfs(root.right, nums)\r\n\r\n        a, b = [], []\r\n        dfs(root1, a)\r\n        dfs(root2, b)\r\n        m, n = len(a), len(b)\r\n        i = j = 0\r\n        ans = []\r\n        while i < m and j < n:\r\n            if a[i] <= b[j]:\r\n                ans.append(a[i])\r\n                i += 1\r\n            else:\r\n                ans.append(b[j])\r\n                j += 1\r\n        while i < m:\r\n            ans.append(a[i])\r\n            i += 1\r\n        while j < n:\r\n            ans.append(b[j])\r\n            j += 1\r\n        return ans",
+    "problemId": 1305,
+    "title": "All Elements in Two Binary Search Trees",
+    "problemUrl": "https://leetcode.com/problems/all-elements-in-two-binary-search-trees/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1305.All Elements in Two Binary Search Trees/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1305.All Elements in Two Binary Search Trees/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1305.All Elements in Two Binary Search Trees/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1305.All Elements in Two Binary Search Trees/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1305.All Elements in Two Binary Search Trees/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1305.All Elements in Two Binary Search Trees/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1305.All Elements in Two Binary Search Trees/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

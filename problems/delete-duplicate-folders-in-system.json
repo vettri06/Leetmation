@@ -1,0 +1,33 @@
+{
+    "problemName": "delete-duplicate-folders-in-system",
+    "language": "python3",
+    "code": "class Trie:\r\n    def __init__(self):\r\n        self.children: Dict[str, \"Trie\"] = defaultdict(Trie)\r\n        self.deleted: bool = False\r\n\r\n\r\nclass Solution:\r\n    def deleteDuplicateFolder(self, paths: List[List[str]]) -> List[List[str]]:\r\n        root = Trie()\r\n        for path in paths:\r\n            cur = root\r\n            for name in path:\r\n                if cur.children[name] is None:\r\n                    cur.children[name] = Trie()\r\n                cur = cur.children[name]\r\n\r\n        g: Dict[str, Trie] = {}\r\n\r\n        def dfs(node: Trie) -> str:\r\n            if not node.children:\r\n                return \"\"\r\n            subs: List[str] = []\r\n            for name, child in node.children.items():\r\n                subs.append(f\"{name}({dfs(child)})\")\r\n            s = \"\".join(sorted(subs))\r\n            if s in g:\r\n                node.deleted = g[s].deleted = True\r\n            else:\r\n                g[s] = node\r\n            return s\r\n\r\n        def dfs2(node: Trie) -> None:\r\n            if node.deleted:\r\n                return\r\n            if path:\r\n                ans.append(path[:])\r\n            for name, child in node.children.items():\r\n                path.append(name)\r\n                dfs2(child)\r\n                path.pop()\r\n\r\n        dfs(root)\r\n        ans: List[List[str]] = []\r\n        path: List[str] = []\r\n        dfs2(root)\r\n        return ans",
+    "problemId": 1948,
+    "title": "Delete Duplicate Folders in System",
+    "problemUrl": "https://leetcode.com/problems/delete-duplicate-folders-in-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1948.Delete Duplicate Folders in System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1948.Delete Duplicate Folders in System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1948.Delete Duplicate Folders in System/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1948.Delete Duplicate Folders in System/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1948.Delete Duplicate Folders in System/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

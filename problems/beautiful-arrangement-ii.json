@@ -1,0 +1,38 @@
+{
+    "problemName": "beautiful-arrangement-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def constructArray(self, n: int, k: int) -> List[int]:\r\n        l, r = 1, n\r\n        ans = []\r\n        for i in range(k):\r\n            if i % 2 == 0:\r\n                ans.append(l)\r\n                l += 1\r\n            else:\r\n                ans.append(r)\r\n                r -= 1\r\n        for i in range(k, n):\r\n            if k % 2 == 0:\r\n                ans.append(r)\r\n                r -= 1\r\n            else:\r\n                ans.append(l)\r\n                l += 1\r\n        return ans",
+    "problemId": 667,
+    "title": "Beautiful Arrangement II",
+    "problemUrl": "https://leetcode.com/problems/beautiful-arrangement-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0667.Beautiful Arrangement II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0667.Beautiful Arrangement II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0667.Beautiful Arrangement II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0667.Beautiful Arrangement II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0667.Beautiful Arrangement II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0667.Beautiful Arrangement II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

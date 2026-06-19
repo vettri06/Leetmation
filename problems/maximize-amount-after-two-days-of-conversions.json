@@ -1,0 +1,38 @@
+{
+    "problemName": "maximize-amount-after-two-days-of-conversions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxAmount(\r\n        self,\r\n        initialCurrency: str,\r\n        pairs1: List[List[str]],\r\n        rates1: List[float],\r\n        pairs2: List[List[str]],\r\n        rates2: List[float],\r\n    ) -> float:\r\n        d1 = self.build(pairs1, rates1, initialCurrency)\r\n        d2 = self.build(pairs2, rates2, initialCurrency)\r\n        return max(d1.get(a, 0) / r2 for a, r2 in d2.items())\r\n\r\n    def build(\r\n        self, pairs: List[List[str]], rates: List[float], init: str\r\n    ) -> Dict[str, float]:\r\n        def dfs(a: str, v: float):\r\n            d[a] = v\r\n            for b, r in g[a]:\r\n                if b not in d:\r\n                    dfs(b, v * r)\r\n\r\n        g = defaultdict(list)\r\n        for (a, b), r in zip(pairs, rates):\r\n            g[a].append((b, r))\r\n            g[b].append((a, 1 / r))\r\n        d = {}\r\n        dfs(init, 1)\r\n        return d",
+    "problemId": 3387,
+    "title": "Maximize Amount After Two Days of Conversions",
+    "problemUrl": "https://leetcode.com/problems/maximize-amount-after-two-days-of-conversions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3387.Maximize Amount After Two Days of Conversions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3387.Maximize Amount After Two Days of Conversions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3387.Maximize Amount After Two Days of Conversions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3387.Maximize Amount After Two Days of Conversions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3387.Maximize Amount After Two Days of Conversions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3387.Maximize Amount After Two Days of Conversions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

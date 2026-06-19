@@ -1,0 +1,38 @@
+{
+    "problemName": "reverse-subarray-to-maximize-array-value",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxValueAfterReverse(self, nums: List[int]) -> int:\r\n        ans = s = sum(abs(x - y) for x, y in pairwise(nums))\r\n        for x, y in pairwise(nums):\r\n            ans = max(ans, s + abs(nums[0] - y) - abs(x - y))\r\n            ans = max(ans, s + abs(nums[-1] - x) - abs(x - y))\r\n        for k1, k2 in pairwise((1, -1, -1, 1, 1)):\r\n            mx, mi = -inf, inf\r\n            for x, y in pairwise(nums):\r\n                a = k1 * x + k2 * y\r\n                b = abs(x - y)\r\n                mx = max(mx, a - b)\r\n                mi = min(mi, a + b)\r\n            ans = max(ans, s + max(mx - mi, 0))\r\n        return ans",
+    "problemId": 1330,
+    "title": "Reverse Subarray To Maximize Array Value",
+    "problemUrl": "https://leetcode.com/problems/reverse-subarray-to-maximize-array-value/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1330.Reverse Subarray To Maximize Array Value/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1330.Reverse Subarray To Maximize Array Value/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1330.Reverse Subarray To Maximize Array Value/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1330.Reverse Subarray To Maximize Array Value/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1330.Reverse Subarray To Maximize Array Value/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1330.Reverse Subarray To Maximize Array Value/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

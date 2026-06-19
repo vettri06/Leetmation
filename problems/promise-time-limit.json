@@ -1,0 +1,18 @@
+{
+    "problemName": "promise-time-limit",
+    "language": "typescript",
+    "code": "type Fn = (...params: any[]) => Promise<any>;\r\n\r\nfunction timeLimit(fn: Fn, t: number): Fn {\r\n    return async function (...args) {\r\n        return Promise.race([\r\n            fn(...args),\r\n            new Promise((_, reject) => setTimeout(() => reject('Time Limit Exceeded'), t)),\r\n        ]);\r\n    };\r\n}\r\n\r\n/**\r\n * const limited = timeLimit((t) => new Promise(res => setTimeout(res, t)), 100);\r\n * limited(150).catch(console.log) // \"Time Limit Exceeded\" at t=100ms\r\n */",
+    "problemId": 2637,
+    "title": "Promise Time Limit",
+    "problemUrl": "https://leetcode.com/problems/promise-time-limit/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2637.Promise Time Limit/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2637.Promise Time Limit/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

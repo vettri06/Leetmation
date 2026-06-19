@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-operations-to-make-the-array-alternating",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumOperations(self, nums: List[int]) -> int:\r\n        def f(i: int) -> Tuple[int, int, int, int]:\r\n            k1 = k2 = 0\r\n            cnt = Counter(nums[i::2])\r\n            for k, v in cnt.items():\r\n                if cnt[k1] < v:\r\n                    k2, k1 = k1, k\r\n                elif cnt[k2] < v:\r\n                    k2 = k\r\n            return k1, cnt[k1], k2, cnt[k2]\r\n\r\n        a, b = f(0), f(1)\r\n        n = len(nums)\r\n        if a[0] != b[0]:\r\n            return n - (a[1] + b[1])\r\n        return n - max(a[1] + b[3], a[3] + b[1])",
+    "problemId": 2170,
+    "title": "Minimum Operations to Make the Array Alternating",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-make-the-array-alternating/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2170.Minimum Operations to Make the Array Alternating/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2170.Minimum Operations to Make the Array Alternating/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2170.Minimum Operations to Make the Array Alternating/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2170.Minimum Operations to Make the Array Alternating/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2170.Minimum Operations to Make the Array Alternating/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2170.Minimum Operations to Make the Array Alternating/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

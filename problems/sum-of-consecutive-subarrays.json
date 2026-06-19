@@ -1,0 +1,38 @@
+{
+    "problemName": "sum-of-consecutive-subarrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getSum(self, nums: List[int]) -> int:\r\n        mod = 10**9 + 7\r\n        f = g = 1\r\n        s = t = nums[0]\r\n        ans = nums[0]\r\n        for x, y in pairwise(nums):\r\n            if y - x == 1:\r\n                f += 1\r\n                s += f * y\r\n                ans = (ans + s) % mod\r\n            else:\r\n                f = 1\r\n                s = y\r\n            if y - x == -1:\r\n                g += 1\r\n                t += g * y\r\n                ans = (ans + t) % mod\r\n            else:\r\n                g = 1\r\n                t = y\r\n            if abs(y - x) != 1:\r\n                ans = (ans + y) % mod\r\n        return ans",
+    "problemId": 3284,
+    "title": "Sum of Consecutive Subarrays",
+    "problemUrl": "https://leetcode.com/problems/sum-of-consecutive-subarrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3284.Sum of Consecutive Subarrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3284.Sum of Consecutive Subarrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3284.Sum of Consecutive Subarrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3284.Sum of Consecutive Subarrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3284.Sum of Consecutive Subarrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3284.Sum of Consecutive Subarrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

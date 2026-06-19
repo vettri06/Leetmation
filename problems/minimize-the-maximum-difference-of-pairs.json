@@ -1,0 +1,53 @@
+{
+    "problemName": "minimize-the-maximum-difference-of-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimizeMax(self, nums: List[int], p: int) -> int:\r\n        def check(diff: int) -> bool:\r\n            cnt = i = 0\r\n            while i < len(nums) - 1:\r\n                if nums[i + 1] - nums[i] <= diff:\r\n                    cnt += 1\r\n                    i += 2\r\n                else:\r\n                    i += 1\r\n            return cnt >= p\r\n\r\n        nums.sort()\r\n        return bisect_left(range(nums[-1] - nums[0] + 1), True, key=check)",
+    "problemId": 2616,
+    "title": "Minimize the Maximum Difference of Pairs",
+    "problemUrl": "https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2616.Minimize the Maximum Difference of Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2616.Minimize the Maximum Difference of Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2616.Minimize the Maximum Difference of Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2616.Minimize the Maximum Difference of Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2616.Minimize the Maximum Difference of Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2616.Minimize the Maximum Difference of Pairs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2616.Minimize the Maximum Difference of Pairs/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2616.Minimize the Maximum Difference of Pairs/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "swift",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2616.Minimize the Maximum Difference of Pairs/Solution.swift",
+            "sourceFile": "Solution.swift"
+        }
+    ]
+}

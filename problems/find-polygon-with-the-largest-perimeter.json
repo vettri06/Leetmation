@@ -1,0 +1,38 @@
+{
+    "problemName": "find-polygon-with-the-largest-perimeter",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestPerimeter(self, nums: List[int]) -> int:\r\n        nums.sort()\r\n        s = list(accumulate(nums, initial=0))\r\n        ans = -1\r\n        for k in range(3, len(nums) + 1):\r\n            if s[k - 1] > nums[k - 1]:\r\n                ans = max(ans, s[k])\r\n        return ans",
+    "problemId": 2971,
+    "title": "Find Polygon With the Largest Perimeter",
+    "problemUrl": "https://leetcode.com/problems/find-polygon-with-the-largest-perimeter/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2971.Find Polygon With the Largest Perimeter/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2971.Find Polygon With the Largest Perimeter/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2971.Find Polygon With the Largest Perimeter/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2971.Find Polygon With the Largest Perimeter/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2971.Find Polygon With the Largest Perimeter/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2971.Find Polygon With the Largest Perimeter/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

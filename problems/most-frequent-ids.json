@@ -1,0 +1,33 @@
+{
+    "problemName": "most-frequent-ids",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mostFrequentIDs(self, nums: List[int], freq: List[int]) -> List[int]:\r\n        cnt = Counter()\r\n        lazy = Counter()\r\n        ans = []\r\n        pq = []\r\n        for x, f in zip(nums, freq):\r\n            lazy[cnt[x]] += 1\r\n            cnt[x] += f\r\n            heappush(pq, -cnt[x])\r\n            while pq and lazy[-pq[0]] > 0:\r\n                lazy[-pq[0]] -= 1\r\n                heappop(pq)\r\n            ans.append(0 if not pq else -pq[0])\r\n        return ans",
+    "problemId": 3092,
+    "title": "Most Frequent IDs",
+    "problemUrl": "https://leetcode.com/problems/most-frequent-ids/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3092.Most Frequent IDs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3092.Most Frequent IDs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3092.Most Frequent IDs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3092.Most Frequent IDs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3092.Most Frequent IDs/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "connecting-cities-with-minimum-cost",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumCost(self, n: int, connections: List[List[int]]) -> int:\r\n        def find(x):\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        connections.sort(key=lambda x: x[2])\r\n        p = list(range(n))\r\n        ans = 0\r\n        for x, y, cost in connections:\r\n            x, y = x - 1, y - 1\r\n            if find(x) == find(y):\r\n                continue\r\n            p[find(x)] = find(y)\r\n            ans += cost\r\n            n -= 1\r\n            if n == 1:\r\n                return ans\r\n        return -1",
+    "problemId": 1135,
+    "title": "Connecting Cities With Minimum Cost",
+    "problemUrl": "https://leetcode.com/problems/connecting-cities-with-minimum-cost/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1135.Connecting Cities With Minimum Cost/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1135.Connecting Cities With Minimum Cost/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1135.Connecting Cities With Minimum Cost/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1135.Connecting Cities With Minimum Cost/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1135.Connecting Cities With Minimum Cost/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1135.Connecting Cities With Minimum Cost/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

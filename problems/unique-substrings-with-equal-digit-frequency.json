@@ -1,0 +1,28 @@
+{
+    "problemName": "unique-substrings-with-equal-digit-frequency",
+    "language": "python3",
+    "code": "class Solution:\r\n    def equalDigitFrequency(self, s: str) -> int:\r\n        def check(i, j):\r\n            v = set()\r\n            for k in range(10):\r\n                cnt = presum[j + 1][k] - presum[i][k]\r\n                if cnt > 0:\r\n                    v.add(cnt)\r\n                if len(v) > 1:\r\n                    return False\r\n            return True\r\n\r\n        n = len(s)\r\n        presum = [[0] * 10 for _ in range(n + 1)]\r\n        for i, c in enumerate(s):\r\n            presum[i + 1][int(c)] += 1\r\n            for j in range(10):\r\n                presum[i + 1][j] += presum[i][j]\r\n        vis = set(s[i : j + 1] for i in range(n) for j in range(i, n) if check(i, j))\r\n        return len(vis)",
+    "problemId": 2168,
+    "title": "Unique Substrings With Equal Digit Frequency",
+    "problemUrl": "https://leetcode.com/problems/unique-substrings-with-equal-digit-frequency/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2168.Unique Substrings With Equal Digit Frequency/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2168.Unique Substrings With Equal Digit Frequency/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2168.Unique Substrings With Equal Digit Frequency/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2168.Unique Substrings With Equal Digit Frequency/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

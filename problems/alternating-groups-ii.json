@@ -1,0 +1,38 @@
+{
+    "problemName": "alternating-groups-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfAlternatingGroups(self, colors: List[int], k: int) -> int:\r\n        n = len(colors)\r\n        ans = cnt = 0\r\n        for i in range(n << 1):\r\n            if i and colors[i % n] == colors[(i - 1) % n]:\r\n                cnt = 1\r\n            else:\r\n                cnt += 1\r\n            ans += i >= n and cnt >= k\r\n        return ans",
+    "problemId": 3208,
+    "title": "Alternating Groups II",
+    "problemUrl": "https://leetcode.com/problems/alternating-groups-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3208.Alternating Groups II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3208.Alternating Groups II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3208.Alternating Groups II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3208.Alternating Groups II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3208.Alternating Groups II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3208.Alternating Groups II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

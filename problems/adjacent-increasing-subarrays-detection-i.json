@@ -1,0 +1,48 @@
+{
+    "problemName": "adjacent-increasing-subarrays-detection-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def hasIncreasingSubarrays(self, nums: List[int], k: int) -> bool:\r\n        mx = pre = cur = 0\r\n        for i, x in enumerate(nums):\r\n            cur += 1\r\n            if i == len(nums) - 1 or x >= nums[i + 1]:\r\n                mx = max(mx, cur // 2, min(pre, cur))\r\n                pre, cur = cur, 0\r\n        return mx >= k",
+    "problemId": 3349,
+    "title": "Adjacent Increasing Subarrays Detection I",
+    "problemUrl": "https://leetcode.com/problems/adjacent-increasing-subarrays-detection-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3349.Adjacent Increasing Subarrays Detection I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3349.Adjacent Increasing Subarrays Detection I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3349.Adjacent Increasing Subarrays Detection I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3349.Adjacent Increasing Subarrays Detection I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3349.Adjacent Increasing Subarrays Detection I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3349.Adjacent Increasing Subarrays Detection I/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3349.Adjacent Increasing Subarrays Detection I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3349.Adjacent Increasing Subarrays Detection I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

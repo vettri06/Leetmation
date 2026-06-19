@@ -1,0 +1,38 @@
+{
+    "problemName": "coin-path",
+    "language": "python3",
+    "code": "class Solution:\r\n    def cheapestJump(self, coins: List[int], maxJump: int) -> List[int]:\r\n        if coins[-1] == -1:\r\n            return []\r\n        n = len(coins)\r\n        f = [inf] * n\r\n        f[-1] = coins[-1]\r\n        for i in range(n - 2, -1, -1):\r\n            if coins[i] != -1:\r\n                for j in range(i + 1, min(n, i + maxJump + 1)):\r\n                    if f[i] > f[j] + coins[i]:\r\n                        f[i] = f[j] + coins[i]\r\n        if f[0] == inf:\r\n            return []\r\n        ans = []\r\n        s = f[0]\r\n        for i in range(n):\r\n            if f[i] == s:\r\n                s -= coins[i]\r\n                ans.append(i + 1)\r\n        return ans",
+    "problemId": 656,
+    "title": "Coin Path",
+    "problemUrl": "https://leetcode.com/problems/coin-path/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0656.Coin Path/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0656.Coin Path/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0656.Coin Path/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0656.Coin Path/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0656.Coin Path/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0656.Coin Path/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

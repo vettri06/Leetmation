@@ -1,0 +1,18 @@
+{
+    "problemName": "transpose-file",
+    "language": "bash",
+    "code": "# Read from the file file.txt and print its transposed content to stdout.\r\nawk '\r\n{\r\n  for (i=1; i<=NF; i++) {\r\n    if(NR == 1) {\r\n      res[i] = re$i\r\n    } else {\r\n      res[i] = res[i]\" \"$i\r\n    }\r\n  }\r\n}END {\r\n  for (i=1;i<=NF;i++) {\r\n    print res[i]\r\n  }\r\n}\r\n' file.txt",
+    "problemId": 194,
+    "title": "Transpose File",
+    "problemUrl": "https://leetcode.com/problems/transpose-file/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0194.Transpose File/Solution.sh",
+    "sourceFile": "Solution.sh",
+    "sourceCandidates": [
+        {
+            "language": "bash",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0194.Transpose File/Solution.sh",
+            "sourceFile": "Solution.sh"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "capitalize-the-title",
+    "language": "python3",
+    "code": "class Solution:\r\n    def capitalizeTitle(self, title: str) -> str:\r\n        words = [w.lower() if len(w) < 3 else w.capitalize() for w in title.split()]\r\n        return \" \".join(words)",
+    "problemId": 2129,
+    "title": "Capitalize the Title",
+    "problemUrl": "https://leetcode.com/problems/capitalize-the-title/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2129.Capitalize the Title/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2129.Capitalize the Title/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2129.Capitalize the Title/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2129.Capitalize the Title/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2129.Capitalize the Title/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2129.Capitalize the Title/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2129.Capitalize the Title/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

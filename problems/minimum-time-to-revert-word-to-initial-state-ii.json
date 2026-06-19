@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-time-to-revert-word-to-initial-state-ii",
+    "language": "python3",
+    "code": "class Hashing:\r\n    __slots__ = [\"mod\", \"h\", \"p\"]\r\n\r\n    def __init__(self, s: str, base: int, mod: int):\r\n        self.mod = mod\r\n        self.h = [0] * (len(s) + 1)\r\n        self.p = [1] * (len(s) + 1)\r\n        for i in range(1, len(s) + 1):\r\n            self.h[i] = (self.h[i - 1] * base + ord(s[i - 1])) % mod\r\n            self.p[i] = (self.p[i - 1] * base) % mod\r\n\r\n    def query(self, l: int, r: int) -> int:\r\n        return (self.h[r] - self.h[l - 1] * self.p[r - l + 1]) % self.mod\r\n\r\n\r\nclass Solution:\r\n    def minimumTimeToInitialState(self, word: str, k: int) -> int:\r\n        hashing = Hashing(word, 13331, 998244353)\r\n        n = len(word)\r\n        for i in range(k, n, k):\r\n            if hashing.query(1, n - i) == hashing.query(i + 1, n):\r\n                return i // k\r\n        return (n + k - 1) // k",
+    "problemId": 3031,
+    "title": "Minimum Time to Revert Word to Initial State II",
+    "problemUrl": "https://leetcode.com/problems/minimum-time-to-revert-word-to-initial-state-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3031.Minimum Time to Revert Word to Initial State II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3031.Minimum Time to Revert Word to Initial State II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3031.Minimum Time to Revert Word to Initial State II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3031.Minimum Time to Revert Word to Initial State II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3031.Minimum Time to Revert Word to Initial State II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

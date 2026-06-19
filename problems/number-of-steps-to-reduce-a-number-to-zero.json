@@ -1,0 +1,68 @@
+{
+    "problemName": "number-of-steps-to-reduce-a-number-to-zero",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfSteps(self, num: int) -> int:\r\n        ans = 0\r\n        while num:\r\n            if num & 1:\r\n                num -= 1\r\n            else:\r\n                num >>= 1\r\n            ans += 1\r\n        return ans",
+    "problemId": 1342,
+    "title": "Number of Steps to Reduce a Number to Zero",
+    "problemUrl": "https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1342.Number of Steps to Reduce a Number to Zero/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1342.Number of Steps to Reduce a Number to Zero/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1342.Number of Steps to Reduce a Number to Zero/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1342.Number of Steps to Reduce a Number to Zero/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1342.Number of Steps to Reduce a Number to Zero/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1342.Number of Steps to Reduce a Number to Zero/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1342.Number of Steps to Reduce a Number to Zero/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1342.Number of Steps to Reduce a Number to Zero/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1342.Number of Steps to Reduce a Number to Zero/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1342.Number of Steps to Reduce a Number to Zero/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1342.Number of Steps to Reduce a Number to Zero/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1342.Number of Steps to Reduce a Number to Zero/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

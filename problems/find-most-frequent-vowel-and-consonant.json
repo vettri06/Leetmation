@@ -1,0 +1,48 @@
+{
+    "problemName": "find-most-frequent-vowel-and-consonant",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxFreqSum(self, s: str) -> int:\r\n        cnt = Counter(s)\r\n        a = b = 0\r\n        for c, v in cnt.items():\r\n            if c in \"aeiou\":\r\n                a = max(a, v)\r\n            else:\r\n                b = max(b, v)\r\n        return a + b",
+    "problemId": 3541,
+    "title": "Find Most Frequent Vowel and Consonant",
+    "problemUrl": "https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3541.Find Most Frequent Vowel and Consonant/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3541.Find Most Frequent Vowel and Consonant/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3541.Find Most Frequent Vowel and Consonant/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3541.Find Most Frequent Vowel and Consonant/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3541.Find Most Frequent Vowel and Consonant/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3541.Find Most Frequent Vowel and Consonant/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3541.Find Most Frequent Vowel and Consonant/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3541.Find Most Frequent Vowel and Consonant/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

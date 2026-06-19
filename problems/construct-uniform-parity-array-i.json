@@ -1,0 +1,38 @@
+{
+    "problemName": "construct-uniform-parity-array-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def uniformArray(self, nums1: list[int]) -> bool:\r\n        return True",
+    "problemId": 3875,
+    "title": "Construct Uniform Parity Array I",
+    "problemUrl": "https://leetcode.com/problems/construct-uniform-parity-array-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3875.Construct Uniform Parity Array I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3875.Construct Uniform Parity Array I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3875.Construct Uniform Parity Array I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3875.Construct Uniform Parity Array I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3875.Construct Uniform Parity Array I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3875.Construct Uniform Parity Array I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

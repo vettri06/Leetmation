@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-operations-to-make-numbers-non-positive",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums: List[int], x: int, y: int) -> int:\r\n        def check(t: int) -> bool:\r\n            cnt = 0\r\n            for v in nums:\r\n                if v > t * y:\r\n                    cnt += ceil((v - t * y) / (x - y))\r\n            return cnt <= t\r\n\r\n        l, r = 0, max(nums)\r\n        while l < r:\r\n            mid = (l + r) >> 1\r\n            if check(mid):\r\n                r = mid\r\n            else:\r\n                l = mid + 1\r\n        return l",
+    "problemId": 2702,
+    "title": "Minimum Operations to Make Numbers Non-positive",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-make-numbers-non-positive/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2702.Minimum Operations to Make Numbers Non-positive/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2702.Minimum Operations to Make Numbers Non-positive/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2702.Minimum Operations to Make Numbers Non-positive/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2702.Minimum Operations to Make Numbers Non-positive/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2702.Minimum Operations to Make Numbers Non-positive/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2702.Minimum Operations to Make Numbers Non-positive/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

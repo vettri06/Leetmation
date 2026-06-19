@@ -1,0 +1,33 @@
+{
+    "problemName": "find-number-of-ways-to-reach-the-k-th-stair",
+    "language": "python3",
+    "code": "class Solution:\r\n    def waysToReachStair(self, k: int) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int, jump: int) -> int:\r\n            if i > k + 1:\r\n                return 0\r\n            ans = int(i == k)\r\n            if i > 0 and j == 0:\r\n                ans += dfs(i - 1, 1, jump)\r\n            ans += dfs(i + (1 << jump), 0, jump + 1)\r\n            return ans\r\n\r\n        return dfs(1, 0, 0)",
+    "problemId": 3154,
+    "title": "Find Number of Ways to Reach the K-th Stair",
+    "problemUrl": "https://leetcode.com/problems/find-number-of-ways-to-reach-the-k-th-stair/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3154.Find Number of Ways to Reach the K-th Stair/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3154.Find Number of Ways to Reach the K-th Stair/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3154.Find Number of Ways to Reach the K-th Stair/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3154.Find Number of Ways to Reach the K-th Stair/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3154.Find Number of Ways to Reach the K-th Stair/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

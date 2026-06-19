@@ -1,0 +1,63 @@
+{
+    "problemName": "the-number-of-ways-to-make-the-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfWays(self, n: int) -> int:\r\n        mod = 10**9 + 7\r\n        coins = [1, 2, 6]\r\n        f = [0] * (n + 1)\r\n        f[0] = 1\r\n        for x in coins:\r\n            for j in range(x, n + 1):\r\n                f[j] = (f[j] + f[j - x]) % mod\r\n        ans = f[n]\r\n        if n >= 4:\r\n            ans = (ans + f[n - 4]) % mod\r\n        if n >= 8:\r\n            ans = (ans + f[n - 8]) % mod\r\n        return ans",
+    "problemId": 3183,
+    "title": "The Number of Ways to Make the Sum",
+    "problemUrl": "https://leetcode.com/problems/the-number-of-ways-to-make-the-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3183.The Number of Ways to Make the Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3183.The Number of Ways to Make the Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3183.The Number of Ways to Make the Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3183.The Number of Ways to Make the Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3183.The Number of Ways to Make the Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3183.The Number of Ways to Make the Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3183.The Number of Ways to Make the Sum/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3183.The Number of Ways to Make the Sum/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3183.The Number of Ways to Make the Sum/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3183.The Number of Ways to Make the Sum/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3183.The Number of Ways to Make the Sum/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

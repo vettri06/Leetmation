@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-distance-value-between-two-arrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:\r\n        arr2.sort()\r\n        ans = 0\r\n        for x in arr1:\r\n            i = bisect_left(arr2, x - d)\r\n            ans += i == len(arr2) or arr2[i] > x + d\r\n        return ans",
+    "problemId": 1385,
+    "title": "Find the Distance Value Between Two Arrays",
+    "problemUrl": "https://leetcode.com/problems/find-the-distance-value-between-two-arrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1385.Find the Distance Value Between Two Arrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1385.Find the Distance Value Between Two Arrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1385.Find the Distance Value Between Two Arrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1385.Find the Distance Value Between Two Arrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1385.Find the Distance Value Between Two Arrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1385.Find the Distance Value Between Two Arrays/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

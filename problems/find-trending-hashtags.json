@@ -1,0 +1,23 @@
+{
+    "problemName": "find-trending-hashtags",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_trending_hashtags(tweets: pd.DataFrame) -> pd.DataFrame:\r\n    tweets = tweets[tweets[\"tweet_date\"].dt.strftime(\"%Y%m\") == \"202402\"]\r\n    tweets[\"hashtag\"] = \"#\" + tweets[\"tweet\"].str.extract(r\"#(\\w+)\")\r\n    hashtag_counts = tweets[\"hashtag\"].value_counts().reset_index()\r\n    hashtag_counts.columns = [\"hashtag\", \"hashtag_count\"]\r\n    hashtag_counts = hashtag_counts.sort_values(\r\n        by=[\"hashtag_count\", \"hashtag\"], ascending=[False, False]\r\n    )\r\n    top_3_hashtags = hashtag_counts.head(3)\r\n    return top_3_hashtags",
+    "problemId": 3087,
+    "title": "Find Trending Hashtags",
+    "problemUrl": "https://leetcode.com/problems/find-trending-hashtags/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3087.Find Trending Hashtags/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3087.Find Trending Hashtags/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3087.Find Trending Hashtags/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

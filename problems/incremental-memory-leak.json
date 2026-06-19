@@ -1,0 +1,43 @@
+{
+    "problemName": "incremental-memory-leak",
+    "language": "python3",
+    "code": "class Solution:\r\n    def memLeak(self, memory1: int, memory2: int) -> List[int]:\r\n        i = 1\r\n        while i <= max(memory1, memory2):\r\n            if memory1 >= memory2:\r\n                memory1 -= i\r\n            else:\r\n                memory2 -= i\r\n            i += 1\r\n        return [i, memory1, memory2]",
+    "problemId": 1860,
+    "title": "Incremental Memory Leak",
+    "problemUrl": "https://leetcode.com/problems/incremental-memory-leak/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1860.Incremental Memory Leak/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1860.Incremental Memory Leak/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1860.Incremental Memory Leak/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1860.Incremental Memory Leak/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1860.Incremental Memory Leak/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1860.Incremental Memory Leak/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1860.Incremental Memory Leak/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

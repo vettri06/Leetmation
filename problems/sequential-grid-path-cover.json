@@ -1,0 +1,38 @@
+{
+    "problemName": "sequential-grid-path-cover",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findPath(self, grid: List[List[int]], k: int) -> List[List[int]]:\r\n        def f(i: int, j: int) -> int:\r\n            return i * n + j\r\n\r\n        def dfs(i: int, j: int, v: int):\r\n            nonlocal st\r\n            path.append([i, j])\r\n            if len(path) == m * n:\r\n                return True\r\n            st |= 1 << f(i, j)\r\n            if grid[i][j] == v:\r\n                v += 1\r\n            for a, b in pairwise(dirs):\r\n                x, y = i + a, j + b\r\n                if (\r\n                    0 <= x < m\r\n                    and 0 <= y < n\r\n                    and (st & 1 << f(x, y)) == 0\r\n                    and grid[x][y] in (0, v)\r\n                ):\r\n                    if dfs(x, y, v):\r\n                        return True\r\n            path.pop()\r\n            st ^= 1 << f(i, j)\r\n            return False\r\n\r\n        m, n = len(grid), len(grid[0])\r\n        st = 0\r\n        path = []\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        for i in range(m):\r\n            for j in range(n):\r\n                if grid[i][j] in (0, 1):\r\n                    if dfs(i, j, 1):\r\n                        return path\r\n                    path.clear()\r\n                    st = 0\r\n        return []",
+    "problemId": 3565,
+    "title": "Sequential Grid Path Cover",
+    "problemUrl": "https://leetcode.com/problems/sequential-grid-path-cover/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3565.Sequential Grid Path Cover/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3565.Sequential Grid Path Cover/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3565.Sequential Grid Path Cover/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3565.Sequential Grid Path Cover/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3565.Sequential Grid Path Cover/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3565.Sequential Grid Path Cover/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

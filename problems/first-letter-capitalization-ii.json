@@ -1,0 +1,18 @@
+{
+    "problemName": "first-letter-capitalization-ii",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef capitalize_content(user_content: pd.DataFrame) -> pd.DataFrame:\r\n    def convert_text(text: str) -> str:\r\n        return \" \".join(\r\n            (\r\n                \"-\".join([part.capitalize() for part in word.split(\"-\")])\r\n                if \"-\" in word\r\n                else word.capitalize()\r\n            )\r\n            for word in text.split(\" \")\r\n        )\r\n\r\n    user_content[\"converted_text\"] = user_content[\"content_text\"].apply(convert_text)\r\n    return user_content.rename(columns={\"content_text\": \"original_text\"})[\r\n        [\"content_id\", \"original_text\", \"converted_text\"]\r\n    ]",
+    "problemId": 3374,
+    "title": "First Letter Capitalization II",
+    "problemUrl": "https://leetcode.com/problems/first-letter-capitalization-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3374.First Letter Capitalization II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3374.First Letter Capitalization II/Solution.py",
+            "sourceFile": "Solution.py"
+        }
+    ]
+}

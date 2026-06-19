@@ -1,0 +1,38 @@
+{
+    "problemName": "jump-game-vi",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxResult(self, nums: List[int], k: int) -> int:\r\n        n = len(nums)\r\n        f = [0] * n\r\n        q = deque([0])\r\n        for i in range(n):\r\n            if i - q[0] > k:\r\n                q.popleft()\r\n            f[i] = nums[i] + f[q[0]]\r\n            while q and f[q[-1]] <= f[i]:\r\n                q.pop()\r\n            q.append(i)\r\n        return f[-1]",
+    "problemId": 1696,
+    "title": "Jump Game VI",
+    "problemUrl": "https://leetcode.com/problems/jump-game-vi/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1696.Jump Game VI/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1696.Jump Game VI/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1696.Jump Game VI/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1696.Jump Game VI/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1696.Jump Game VI/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1696.Jump Game VI/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

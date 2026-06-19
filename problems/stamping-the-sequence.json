@@ -1,0 +1,43 @@
+{
+    "problemName": "stamping-the-sequence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def movesToStamp(self, stamp: str, target: str) -> List[int]:\r\n        m, n = len(stamp), len(target)\r\n        indeg = [m] * (n - m + 1)\r\n        q = deque()\r\n        g = [[] for _ in range(n)]\r\n        for i in range(n - m + 1):\r\n            for j, c in enumerate(stamp):\r\n                if target[i + j] == c:\r\n                    indeg[i] -= 1\r\n                    if indeg[i] == 0:\r\n                        q.append(i)\r\n                else:\r\n                    g[i + j].append(i)\r\n        ans = []\r\n        vis = [False] * n\r\n        while q:\r\n            i = q.popleft()\r\n            ans.append(i)\r\n            for j in range(m):\r\n                if not vis[i + j]:\r\n                    vis[i + j] = True\r\n                    for k in g[i + j]:\r\n                        indeg[k] -= 1\r\n                        if indeg[k] == 0:\r\n                            q.append(k)\r\n        return ans[::-1] if all(vis) else []",
+    "problemId": 936,
+    "title": "Stamping The Sequence",
+    "problemUrl": "https://leetcode.com/problems/stamping-the-sequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0936.Stamping The Sequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0936.Stamping The Sequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0936.Stamping The Sequence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0936.Stamping The Sequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0936.Stamping The Sequence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0936.Stamping The Sequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0936.Stamping The Sequence/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "construct-uniform-parity-array-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def uniformArray(self, nums1: list[int]) -> bool:\r\n        mn = inf\r\n        for x in nums1:\r\n            if x % 2:\r\n                mn = min(mn, x)\r\n        for x in nums1:\r\n            if x % 2 == 0 and mn != inf and x < mn:\r\n                return False\r\n        return True",
+    "problemId": 3876,
+    "title": "Construct Uniform Parity Array II",
+    "problemUrl": "https://leetcode.com/problems/construct-uniform-parity-array-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3876.Construct Uniform Parity Array II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3876.Construct Uniform Parity Array II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3876.Construct Uniform Parity Array II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3876.Construct Uniform Parity Array II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3876.Construct Uniform Parity Array II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3876.Construct Uniform Parity Array II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

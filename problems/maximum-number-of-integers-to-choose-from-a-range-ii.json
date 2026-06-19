@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-number-of-integers-to-choose-from-a-range-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxCount(self, banned: List[int], n: int, maxSum: int) -> int:\r\n        banned.extend([0, n + 1])\r\n        ban = sorted(set(banned))\r\n        ans = 0\r\n        for i, j in pairwise(ban):\r\n            left, right = 0, j - i - 1\r\n            while left < right:\r\n                mid = (left + right + 1) >> 1\r\n                if (i + 1 + i + mid) * mid // 2 <= maxSum:\r\n                    left = mid\r\n                else:\r\n                    right = mid - 1\r\n            ans += left\r\n            maxSum -= (i + 1 + i + left) * left // 2\r\n            if maxSum <= 0:\r\n                break\r\n        return ans",
+    "problemId": 2557,
+    "title": "Maximum Number of Integers to Choose From a Range II",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2557.Maximum Number of Integers to Choose From a Range II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2557.Maximum Number of Integers to Choose From a Range II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2557.Maximum Number of Integers to Choose From a Range II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2557.Maximum Number of Integers to Choose From a Range II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2557.Maximum Number of Integers to Choose From a Range II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

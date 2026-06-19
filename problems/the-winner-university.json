@@ -1,0 +1,18 @@
+{
+    "problemName": "the-winner-university",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    CASE\r\n        WHEN n1.cnt > n2.cnt THEN 'New York University'\r\n        WHEN n1.cnt < n2.cnt THEN 'California University'\r\n        ELSE 'No Winner'\r\n    END AS winner\r\nFROM\r\n    (SELECT COUNT(1) AS cnt FROM NewYork WHERE score >= 90) AS n1,\r\n    (SELECT COUNT(1) AS cnt FROM California WHERE score >= 90) AS n2;",
+    "problemId": 2072,
+    "title": "The Winner University",
+    "problemUrl": "https://leetcode.com/problems/the-winner-university/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2072.The Winner University/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2072.The Winner University/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

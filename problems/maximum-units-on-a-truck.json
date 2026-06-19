@@ -1,0 +1,68 @@
+{
+    "problemName": "maximum-units-on-a-truck",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumUnits(self, boxTypes: List[List[int]], truckSize: int) -> int:\r\n        ans = 0\r\n        for a, b in sorted(boxTypes, key=lambda x: -x[1]):\r\n            ans += b * min(truckSize, a)\r\n            truckSize -= a\r\n            if truckSize <= 0:\r\n                break\r\n        return ans",
+    "problemId": 1710,
+    "title": "Maximum Units on a Truck",
+    "problemUrl": "https://leetcode.com/problems/maximum-units-on-a-truck/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1710.Maximum Units on a Truck/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1710.Maximum Units on a Truck/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1710.Maximum Units on a Truck/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1710.Maximum Units on a Truck/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1710.Maximum Units on a Truck/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1710.Maximum Units on a Truck/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1710.Maximum Units on a Truck/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1710.Maximum Units on a Truck/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1710.Maximum Units on a Truck/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1710.Maximum Units on a Truck/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1710.Maximum Units on a Truck/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1710.Maximum Units on a Truck/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

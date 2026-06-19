@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-shortest-superstring-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shortestSuperstring(self, s1: str, s2: str) -> str:\r\n        m, n = len(s1), len(s2)\r\n        if m > n:\r\n            return self.shortestSuperstring(s2, s1)\r\n        if s1 in s2:\r\n            return s2\r\n        for i in range(m):\r\n            if s2.startswith(s1[i:]):\r\n                return s1[:i] + s2\r\n            if s2.endswith(s1[: m - i]):\r\n                return s2 + s1[m - i :]\r\n        return s1 + s2",
+    "problemId": 3571,
+    "title": "Find the Shortest Superstring II",
+    "problemUrl": "https://leetcode.com/problems/find-the-shortest-superstring-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3571.Find the Shortest Superstring II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3571.Find the Shortest Superstring II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3571.Find the Shortest Superstring II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3571.Find the Shortest Superstring II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3571.Find the Shortest Superstring II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3571.Find the Shortest Superstring II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

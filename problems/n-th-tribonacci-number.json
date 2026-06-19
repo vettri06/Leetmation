@@ -1,0 +1,73 @@
+{
+    "problemName": "n-th-tribonacci-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def tribonacci(self, n: int) -> int:\r\n        a, b, c = 0, 1, 1\r\n        for _ in range(n):\r\n            a, b, c = b, c, a + b + c\r\n        return a",
+    "problemId": 1137,
+    "title": "N-th Tribonacci Number",
+    "problemUrl": "https://leetcode.com/problems/n-th-tribonacci-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1137.N-th Tribonacci Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1137.N-th Tribonacci Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1137.N-th Tribonacci Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1137.N-th Tribonacci Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1137.N-th Tribonacci Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1137.N-th Tribonacci Number/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1137.N-th Tribonacci Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1137.N-th Tribonacci Number/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1137.N-th Tribonacci Number/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1137.N-th Tribonacci Number/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1137.N-th Tribonacci Number/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1137.N-th Tribonacci Number/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1137.N-th Tribonacci Number/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

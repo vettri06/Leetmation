@@ -1,0 +1,33 @@
+{
+    "problemName": "finding-the-number-of-visible-mountains",
+    "language": "python3",
+    "code": "class Solution:\r\n    def visibleMountains(self, peaks: List[List[int]]) -> int:\r\n        arr = [(x - y, x + y) for x, y in peaks]\r\n        cnt = Counter(arr)\r\n        arr.sort(key=lambda x: (x[0], -x[1]))\r\n        ans, cur = 0, -inf\r\n        for l, r in arr:\r\n            if r <= cur:\r\n                continue\r\n            cur = r\r\n            if cnt[(l, r)] == 1:\r\n                ans += 1\r\n        return ans",
+    "problemId": 2345,
+    "title": "Finding the Number of Visible Mountains",
+    "problemUrl": "https://leetcode.com/problems/finding-the-number-of-visible-mountains/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2345.Finding the Number of Visible Mountains/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2345.Finding the Number of Visible Mountains/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2345.Finding the Number of Visible Mountains/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2345.Finding the Number of Visible Mountains/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2345.Finding the Number of Visible Mountains/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "counter-ii",
+    "language": "typescript",
+    "code": "type ReturnObj = {\r\n    increment: () => number;\r\n    decrement: () => number;\r\n    reset: () => number;\r\n};\r\n\r\nfunction createCounter(init: number): ReturnObj {\r\n    let val = init;\r\n    return {\r\n        increment() {\r\n            return ++val;\r\n        },\r\n        decrement() {\r\n            return --val;\r\n        },\r\n        reset() {\r\n            return (val = init);\r\n        },\r\n    };\r\n}\r\n\r\n/**\r\n * const counter = createCounter(5)\r\n * counter.increment(); // 6\r\n * counter.reset(); // 5\r\n * counter.decrement(); // 4\r\n */",
+    "problemId": 2665,
+    "title": "Counter II",
+    "problemUrl": "https://leetcode.com/problems/counter-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2665.Counter II/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2665.Counter II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

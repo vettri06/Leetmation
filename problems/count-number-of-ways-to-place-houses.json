@@ -1,0 +1,43 @@
+{
+    "problemName": "count-number-of-ways-to-place-houses",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countHousePlacements(self, n: int) -> int:\r\n        mod = 10**9 + 7\r\n        f = [1] * n\r\n        g = [1] * n\r\n        for i in range(1, n):\r\n            f[i] = g[i - 1]\r\n            g[i] = (f[i - 1] + g[i - 1]) % mod\r\n        v = f[-1] + g[-1]\r\n        return v * v % mod",
+    "problemId": 2320,
+    "title": "Count Number of Ways to Place Houses",
+    "problemUrl": "https://leetcode.com/problems/count-number-of-ways-to-place-houses/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2320.Count Number of Ways to Place Houses/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2320.Count Number of Ways to Place Houses/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2320.Count Number of Ways to Place Houses/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2320.Count Number of Ways to Place Houses/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2320.Count Number of Ways to Place Houses/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2320.Count Number of Ways to Place Houses/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2320.Count Number of Ways to Place Houses/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "divide-an-array-into-subarrays-with-minimum-cost-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumCost(self, nums: List[int], k: int, dist: int) -> int:\r\n        def l2r():\r\n            nonlocal s\r\n            x = l.pop()\r\n            s -= x\r\n            r.add(x)\r\n\r\n        def r2l():\r\n            nonlocal s\r\n            x = r.pop(0)\r\n            l.add(x)\r\n            s += x\r\n\r\n        k -= 1\r\n        s = sum(nums[: dist + 2])\r\n        l = SortedList(nums[1 : dist + 2])\r\n        r = SortedList()\r\n        while len(l) > k:\r\n            l2r()\r\n        ans = s\r\n        for i in range(dist + 2, len(nums)):\r\n            x = nums[i - dist - 1]\r\n            if x in l:\r\n                l.remove(x)\r\n                s -= x\r\n            else:\r\n                r.remove(x)\r\n            y = nums[i]\r\n            if y < l[-1]:\r\n                l.add(y)\r\n                s += y\r\n            else:\r\n                r.add(y)\r\n            while len(l) < k:\r\n                r2l()\r\n            while len(l) > k:\r\n                l2r()\r\n            ans = min(ans, s)\r\n        return ans",
+    "problemId": 3013,
+    "title": "Divide an Array Into Subarrays With Minimum Cost II",
+    "problemUrl": "https://leetcode.com/problems/divide-an-array-into-subarrays-with-minimum-cost-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3013.Divide an Array Into Subarrays With Minimum Cost II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3013.Divide an Array Into Subarrays With Minimum Cost II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3013.Divide an Array Into Subarrays With Minimum Cost II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3013.Divide an Array Into Subarrays With Minimum Cost II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3013.Divide an Array Into Subarrays With Minimum Cost II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3013.Divide an Array Into Subarrays With Minimum Cost II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3013.Divide an Array Into Subarrays With Minimum Cost II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

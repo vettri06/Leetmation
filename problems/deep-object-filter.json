@@ -1,0 +1,18 @@
+{
+    "problemName": "deep-object-filter",
+    "language": "typescript",
+    "code": "function deepFilter(obj: Record<string, any>, fn: Function): Record<string, any> | undefined {\r\n    const dfs = (data: any): any => {\r\n        if (Array.isArray(data)) {\r\n            const res = data.map(dfs).filter((item: any) => item !== undefined);\r\n            return res.length > 0 ? res : undefined;\r\n        }\r\n        if (typeof data === 'object' && data !== null) {\r\n            const res: Record<string, any> = {};\r\n            for (const key in data) {\r\n                if (data.hasOwnProperty(key)) {\r\n                    const filteredValue = dfs(data[key]);\r\n                    if (filteredValue !== undefined) {\r\n                        res[key] = filteredValue;\r\n                    }\r\n                }\r\n            }\r\n            return Object.keys(res).length > 0 ? res : undefined;\r\n        }\r\n        return fn(data) ? data : undefined;\r\n    };\r\n\r\n    return dfs(obj);\r\n}",
+    "problemId": 2823,
+    "title": "Deep Object Filter",
+    "problemUrl": "https://leetcode.com/problems/deep-object-filter/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2823.Deep Object Filter/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2823.Deep Object Filter/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

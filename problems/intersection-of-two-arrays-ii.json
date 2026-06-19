@@ -1,0 +1,53 @@
+{
+    "problemName": "intersection-of-two-arrays-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:\r\n        cnt = Counter(nums1)\r\n        ans = []\r\n        for x in nums2:\r\n            if cnt[x]:\r\n                ans.append(x)\r\n                cnt[x] -= 1\r\n        return ans",
+    "problemId": 350,
+    "title": "Intersection of Two Arrays II",
+    "problemUrl": "https://leetcode.com/problems/intersection-of-two-arrays-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0350.Intersection of Two Arrays II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0350.Intersection of Two Arrays II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0350.Intersection of Two Arrays II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0350.Intersection of Two Arrays II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0350.Intersection of Two Arrays II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0350.Intersection of Two Arrays II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0350.Intersection of Two Arrays II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0350.Intersection of Two Arrays II/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0350.Intersection of Two Arrays II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

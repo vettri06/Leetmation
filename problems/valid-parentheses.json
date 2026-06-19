@@ -1,0 +1,58 @@
+{
+    "problemName": "valid-parentheses",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isValid(self, s: str) -> bool:\r\n        stk = []\r\n        d = {'()', '[]', '{}'}\r\n        for c in s:\r\n            if c in '({[':\r\n                stk.append(c)\r\n            elif not stk or stk.pop() + c not in d:\r\n                return False\r\n        return not stk",
+    "problemId": 20,
+    "title": "Valid Parentheses",
+    "problemUrl": "https://leetcode.com/problems/valid-parentheses/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0020.Valid Parentheses/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0020.Valid Parentheses/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0020.Valid Parentheses/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0020.Valid Parentheses/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0020.Valid Parentheses/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0020.Valid Parentheses/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0020.Valid Parentheses/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0020.Valid Parentheses/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0020.Valid Parentheses/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "ruby",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0020.Valid Parentheses/Solution.rb",
+            "sourceFile": "Solution.rb"
+        }
+    ]
+}

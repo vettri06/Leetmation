@@ -1,0 +1,18 @@
+{
+    "problemName": "user-purchase-platform",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    P AS (\r\n        SELECT DISTINCT spend_date, 'desktop' AS platform FROM Spending\r\n        UNION\r\n        SELECT DISTINCT spend_date, 'mobile' FROM Spending\r\n        UNION\r\n        SELECT DISTINCT spend_date, 'both' FROM Spending\r\n    ),\r\n    T AS (\r\n        SELECT\r\n            user_id,\r\n            spend_date,\r\n            SUM(amount) AS amount,\r\n            IF(COUNT(platform) = 1, platform, 'both') AS platform\r\n        FROM Spending\r\n        GROUP BY 1, 2\r\n    )\r\nSELECT\r\n    p.*,\r\n    IFNULL(SUM(amount), 0) AS total_amount,\r\n    COUNT(t.user_id) AS total_users\r\nFROM\r\n    P AS p\r\n    LEFT JOIN T AS t USING (spend_date, platform)\r\nGROUP BY 1, 2;",
+    "problemId": 1127,
+    "title": "User Purchase Platform",
+    "problemUrl": "https://leetcode.com/problems/user-purchase-platform/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1127.User Purchase Platform/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1127.User Purchase Platform/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "find-subtree-sizes-after-changes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findSubtreeSizes(self, parent: List[int], s: str) -> List[int]:\r\n        def dfs(i: int, fa: int):\r\n            ans[i] = 1\r\n            d[s[i]].append(i)\r\n            for j in g[i]:\r\n                dfs(j, i)\r\n            k = fa\r\n            if len(d[s[i]]) > 1:\r\n                k = d[s[i]][-2]\r\n            if k != -1:\r\n                ans[k] += ans[i]\r\n            d[s[i]].pop()\r\n\r\n        n = len(s)\r\n        g = [[] for _ in range(n)]\r\n        for i in range(1, n):\r\n            g[parent[i]].append(i)\r\n        d = defaultdict(list)\r\n        ans = [0] * n\r\n        dfs(0, -1)\r\n        return ans",
+    "problemId": 3331,
+    "title": "Find Subtree Sizes After Changes",
+    "problemUrl": "https://leetcode.com/problems/find-subtree-sizes-after-changes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3331.Find Subtree Sizes After Changes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3331.Find Subtree Sizes After Changes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3331.Find Subtree Sizes After Changes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3331.Find Subtree Sizes After Changes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3331.Find Subtree Sizes After Changes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3331.Find Subtree Sizes After Changes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

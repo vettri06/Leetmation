@@ -1,0 +1,38 @@
+{
+    "problemName": "bulb-switcher",
+    "language": "python3",
+    "code": "class Solution:\r\n    def bulbSwitch(self, n: int) -> int:\r\n        return int(sqrt(n))",
+    "problemId": 319,
+    "title": "Bulb Switcher",
+    "problemUrl": "https://leetcode.com/problems/bulb-switcher/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0319.Bulb Switcher/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0319.Bulb Switcher/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0319.Bulb Switcher/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0319.Bulb Switcher/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0319.Bulb Switcher/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0319.Bulb Switcher/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

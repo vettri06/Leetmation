@@ -1,0 +1,18 @@
+{
+    "problemName": "the-airport-with-the-most-traffic",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT * FROM Flights\r\n        UNION\r\n        SELECT arrival_airport, departure_airport, flights_count FROM Flights\r\n    ),\r\n    P AS (\r\n        SELECT departure_airport, SUM(flights_count) AS cnt\r\n        FROM T\r\n        GROUP BY 1\r\n    )\r\nSELECT departure_airport AS airport_id\r\nFROM P\r\nWHERE cnt = (SELECT MAX(cnt) FROM P);",
+    "problemId": 2112,
+    "title": "The Airport With the Most Traffic",
+    "problemUrl": "https://leetcode.com/problems/the-airport-with-the-most-traffic/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2112.The Airport With the Most Traffic/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2112.The Airport With the Most Traffic/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

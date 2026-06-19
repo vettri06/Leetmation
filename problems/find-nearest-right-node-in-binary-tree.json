@@ -1,0 +1,63 @@
+{
+    "problemName": "find-nearest-right-node-in-binary-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def findNearestRightNode(self, root: TreeNode, u: TreeNode) -> Optional[TreeNode]:\r\n        q = deque([root])\r\n        while q:\r\n            for i in range(len(q) - 1, -1, -1):\r\n                root = q.popleft()\r\n                if root == u:\r\n                    return q[0] if i else None\r\n                if root.left:\r\n                    q.append(root.left)\r\n                if root.right:\r\n                    q.append(root.right)",
+    "problemId": 1602,
+    "title": "Find Nearest Right Node in Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/find-nearest-right-node-in-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1602.Find Nearest Right Node in Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1602.Find Nearest Right Node in Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1602.Find Nearest Right Node in Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1602.Find Nearest Right Node in Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1602.Find Nearest Right Node in Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1602.Find Nearest Right Node in Binary Tree/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1602.Find Nearest Right Node in Binary Tree/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1602.Find Nearest Right Node in Binary Tree/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1602.Find Nearest Right Node in Binary Tree/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1602.Find Nearest Right Node in Binary Tree/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1602.Find Nearest Right Node in Binary Tree/Solution2.js",
+            "sourceFile": "Solution2.js"
+        }
+    ]
+}

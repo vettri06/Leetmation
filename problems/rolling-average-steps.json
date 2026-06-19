@@ -1,0 +1,18 @@
+{
+    "problemName": "rolling-average-steps",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            user_id,\r\n            steps_date,\r\n            ROUND(\r\n                AVG(steps_count) OVER (\r\n                    PARTITION BY user_id\r\n                    ORDER BY steps_date\r\n                    ROWS 2 PRECEDING\r\n                ),\r\n                2\r\n            ) AS rolling_average,\r\n            DATEDIFF(\r\n                steps_date,\r\n                LAG(steps_date, 2) OVER (\r\n                    PARTITION BY user_id\r\n                    ORDER BY steps_date\r\n                )\r\n            ) = 2 AS st\r\n        FROM Steps\r\n    )\r\nSELECT\r\n    user_id,\r\n    steps_date,\r\n    rolling_average\r\nFROM T\r\nWHERE st = 1\r\nORDER BY 1, 2;",
+    "problemId": 2854,
+    "title": "Rolling Average Steps",
+    "problemUrl": "https://leetcode.com/problems/rolling-average-steps/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2854.Rolling Average Steps/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2854.Rolling Average Steps/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "problemName": "trips-and-users",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef trips_and_users(trips: pd.DataFrame, users: pd.DataFrame) -> pd.DataFrame:\r\n    # 1) temporal filtering\r\n    trips = trips[trips[\"request_at\"].between(\"2013-10-01\", \"2013-10-03\")].rename(\r\n        columns={\"request_at\": \"Day\"}\r\n    )\r\n\r\n    # 2) filtering based not banned\r\n    # 2.1) mappning the column 'banned' to `client_id` and `driver_id`\r\n    df_client = (\r\n        pd.merge(trips, users, left_on=\"client_id\", right_on=\"users_id\", how=\"left\")\r\n        .drop([\"users_id\", \"role\"], axis=1)\r\n        .rename(columns={\"banned\": \"banned_client\"})\r\n    )\r\n    df_driver = (\r\n        pd.merge(trips, users, left_on=\"driver_id\", right_on=\"users_id\", how=\"left\")\r\n        .drop([\"users_id\", \"role\"], axis=1)\r\n        .rename(columns={\"banned\": \"banned_driver\"})\r\n    )\r\n    df = pd.merge(\r\n        df_client,\r\n        df_driver,\r\n        left_on=[\"id\", \"driver_id\", \"client_id\", \"city_id\", \"status\", \"Day\"],\r\n        right_on=[\"id\", \"driver_id\", \"client_id\", \"city_id\", \"status\", \"Day\"],\r\n        how=\"left\",\r\n    )\r\n    # 2.2) filtering based on not banned\r\n    df = df[(df[\"banned_client\"] == \"No\") & (df[\"banned_driver\"] == \"No\")]\r\n\r\n    # 3) counting the cancelled and total trips per day\r\n    df[\"status_cancelled\"] = df[\"status\"].str.contains(\"cancelled\")\r\n    df = df[[\"Day\", \"status_cancelled\"]]\r\n    df = df.groupby(\"Day\").agg(\r\n        {\"status_cancelled\": [(\"total_cancelled\", \"sum\"), (\"total\", \"count\")]}\r\n    )\r\n    df.columns = df.columns.droplevel()\r\n    df = df.reset_index()\r\n\r\n    # 4) calculating the ratio\r\n    df[\"Cancellation Rate\"] = (df[\"total_cancelled\"] / df[\"total\"]).round(2)\r\n    return df[[\"Day\", \"Cancellation Rate\"]]",
+    "problemId": 262,
+    "title": "Trips and Users",
+    "problemUrl": "https://leetcode.com/problems/trips-and-users/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0262.Trips and Users/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0262.Trips and Users/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0262.Trips and Users/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

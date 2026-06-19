@@ -1,0 +1,18 @@
+{
+    "problemName": "merge-overlapping-events-in-the-same-hall",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    S AS (\r\n        SELECT\r\n            hall_id,\r\n            start_day,\r\n            end_day,\r\n            MAX(end_day) OVER (\r\n                PARTITION BY hall_id\r\n                ORDER BY start_day\r\n            ) AS cur_max_end_day\r\n        FROM HallEvents\r\n    ),\r\n    T AS (\r\n        SELECT\r\n            *,\r\n            IF(\r\n                start_day <= LAG(cur_max_end_day) OVER (\r\n                    PARTITION BY hall_id\r\n                    ORDER BY start_day\r\n                ),\r\n                0,\r\n                1\r\n            ) AS start\r\n        FROM S\r\n    ),\r\n    P AS (\r\n        SELECT\r\n            *,\r\n            SUM(start) OVER (\r\n                PARTITION BY hall_id\r\n                ORDER BY start_day\r\n            ) AS gid\r\n        FROM T\r\n    )\r\nSELECT hall_id, MIN(start_day) AS start_day, MAX(end_day) AS end_day\r\nFROM P\r\nGROUP BY hall_id, gid;",
+    "problemId": 2494,
+    "title": "Merge Overlapping Events in the Same Hall",
+    "problemUrl": "https://leetcode.com/problems/merge-overlapping-events-in-the-same-hall/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2494.Merge Overlapping Events in the Same Hall/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2494.Merge Overlapping Events in the Same Hall/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

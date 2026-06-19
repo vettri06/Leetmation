@@ -1,0 +1,33 @@
+{
+    "problemName": "third-maximum-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def thirdMax(self, nums: List[int]) -> int:\r\n        m1 = m2 = m3 = -inf\r\n        for num in nums:\r\n            if num in [m1, m2, m3]:\r\n                continue\r\n            if num > m1:\r\n                m3, m2, m1 = m2, m1, num\r\n            elif num > m2:\r\n                m3, m2 = m2, num\r\n            elif num > m3:\r\n                m3 = num\r\n        return m3 if m3 != -inf else m1",
+    "problemId": 414,
+    "title": "Third Maximum Number",
+    "problemUrl": "https://leetcode.com/problems/third-maximum-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0414.Third Maximum Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0414.Third Maximum Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0414.Third Maximum Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0414.Third Maximum Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0414.Third Maximum Number/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

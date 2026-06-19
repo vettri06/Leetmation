@@ -1,0 +1,38 @@
+{
+    "problemName": "check-if-a-parentheses-string-can-be-valid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canBeValid(self, s: str, locked: str) -> bool:\r\n        n = len(s)\r\n        if n & 1:\r\n            return False\r\n        x = 0\r\n        for i in range(n):\r\n            if s[i] == '(' or locked[i] == '0':\r\n                x += 1\r\n            elif x:\r\n                x -= 1\r\n            else:\r\n                return False\r\n        x = 0\r\n        for i in range(n - 1, -1, -1):\r\n            if s[i] == ')' or locked[i] == '0':\r\n                x += 1\r\n            elif x:\r\n                x -= 1\r\n            else:\r\n                return False\r\n        return True",
+    "problemId": 2116,
+    "title": "Check if a Parentheses String Can Be Valid",
+    "problemUrl": "https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2116.Check if a Parentheses String Can Be Valid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2116.Check if a Parentheses String Can Be Valid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2116.Check if a Parentheses String Can Be Valid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2116.Check if a Parentheses String Can Be Valid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2116.Check if a Parentheses String Can Be Valid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2116.Check if a Parentheses String Can Be Valid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

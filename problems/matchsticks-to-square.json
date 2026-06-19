@@ -1,0 +1,43 @@
+{
+    "problemName": "matchsticks-to-square",
+    "language": "python3",
+    "code": "class Solution:\r\n    def makesquare(self, matchsticks: List[int]) -> bool:\r\n        def dfs(u):\r\n            if u == len(matchsticks):\r\n                return True\r\n            for i in range(4):\r\n                if i > 0 and edges[i - 1] == edges[i]:\r\n                    continue\r\n                edges[i] += matchsticks[u]\r\n                if edges[i] <= x and dfs(u + 1):\r\n                    return True\r\n                edges[i] -= matchsticks[u]\r\n            return False\r\n\r\n        x, mod = divmod(sum(matchsticks), 4)\r\n        if mod or x < max(matchsticks):\r\n            return False\r\n        edges = [0] * 4\r\n        matchsticks.sort(reverse=True)\r\n        return dfs(0)",
+    "problemId": 473,
+    "title": "Matchsticks to Square",
+    "problemUrl": "https://leetcode.com/problems/matchsticks-to-square/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0473.Matchsticks to Square/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0473.Matchsticks to Square/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0473.Matchsticks to Square/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0473.Matchsticks to Square/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0473.Matchsticks to Square/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0473.Matchsticks to Square/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0473.Matchsticks to Square/Solution2.py",
+            "sourceFile": "Solution2.py"
+        }
+    ]
+}

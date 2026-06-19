@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-operations-to-make-the-array-k-increasing",
+    "language": "python3",
+    "code": "class Solution:\r\n    def kIncreasing(self, arr: List[int], k: int) -> int:\r\n        def lis(arr):\r\n            t = []\r\n            for x in arr:\r\n                idx = bisect_right(t, x)\r\n                if idx == len(t):\r\n                    t.append(x)\r\n                else:\r\n                    t[idx] = x\r\n            return len(arr) - len(t)\r\n\r\n        return sum(lis(arr[i::k]) for i in range(k))",
+    "problemId": 2111,
+    "title": "Minimum Operations to Make the Array K-Increasing",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-make-the-array-k-increasing/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2111.Minimum Operations to Make the Array K-Increasing/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2111.Minimum Operations to Make the Array K-Increasing/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2111.Minimum Operations to Make the Array K-Increasing/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2111.Minimum Operations to Make the Array K-Increasing/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2111.Minimum Operations to Make the Array K-Increasing/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

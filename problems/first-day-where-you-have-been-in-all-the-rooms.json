@@ -1,0 +1,43 @@
+{
+    "problemName": "first-day-where-you-have-been-in-all-the-rooms",
+    "language": "python3",
+    "code": "class Solution:\r\n    def firstDayBeenInAllRooms(self, nextVisit: List[int]) -> int:\r\n        n = len(nextVisit)\r\n        f = [0] * n\r\n        mod = 10**9 + 7\r\n        for i in range(1, n):\r\n            f[i] = (f[i - 1] + 1 + f[i - 1] - f[nextVisit[i - 1]] + 1) % mod\r\n        return f[-1]",
+    "problemId": 1997,
+    "title": "First Day Where You Have Been in All the Rooms",
+    "problemUrl": "https://leetcode.com/problems/first-day-where-you-have-been-in-all-the-rooms/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1997.First Day Where You Have Been in All the Rooms/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1997.First Day Where You Have Been in All the Rooms/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1997.First Day Where You Have Been in All the Rooms/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1997.First Day Where You Have Been in All the Rooms/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1997.First Day Where You Have Been in All the Rooms/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1997.First Day Where You Have Been in All the Rooms/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1997.First Day Where You Have Been in All the Rooms/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

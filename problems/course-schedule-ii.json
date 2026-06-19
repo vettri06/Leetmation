@@ -1,0 +1,48 @@
+{
+    "problemName": "course-schedule-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:\r\n        g = defaultdict(list)\r\n        indeg = [0] * numCourses\r\n        for a, b in prerequisites:\r\n            g[b].append(a)\r\n            indeg[a] += 1\r\n        ans = []\r\n        q = deque(i for i, x in enumerate(indeg) if x == 0)\r\n        while q:\r\n            i = q.popleft()\r\n            ans.append(i)\r\n            for j in g[i]:\r\n                indeg[j] -= 1\r\n                if indeg[j] == 0:\r\n                    q.append(j)\r\n        return ans if len(ans) == numCourses else []",
+    "problemId": 210,
+    "title": "Course Schedule II",
+    "problemUrl": "https://leetcode.com/problems/course-schedule-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0210.Course Schedule II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0210.Course Schedule II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0210.Course Schedule II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0210.Course Schedule II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0210.Course Schedule II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0210.Course Schedule II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0210.Course Schedule II/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0210.Course Schedule II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

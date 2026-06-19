@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-subarrays-with-and-value-of-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSubarrays(self, nums: List[int], k: int) -> int:\r\n        ans = 0\r\n        pre = Counter()\r\n        for x in nums:\r\n            cur = Counter()\r\n            for y, v in pre.items():\r\n                cur[x & y] += v\r\n            cur[x] += 1\r\n            ans += cur[k]\r\n            pre = cur\r\n        return ans",
+    "problemId": 3209,
+    "title": "Number of Subarrays With AND Value of K",
+    "problemUrl": "https://leetcode.com/problems/number-of-subarrays-with-and-value-of-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3209.Number of Subarrays With AND Value of K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3209.Number of Subarrays With AND Value of K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3209.Number of Subarrays With AND Value of K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3209.Number of Subarrays With AND Value of K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3209.Number of Subarrays With AND Value of K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3209.Number of Subarrays With AND Value of K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

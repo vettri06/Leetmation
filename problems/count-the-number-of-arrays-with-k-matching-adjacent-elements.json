@@ -1,0 +1,43 @@
+{
+    "problemName": "count-the-number-of-arrays-with-k-matching-adjacent-elements",
+    "language": "python3",
+    "code": "mx = 10**5 + 10\r\nmod = 10**9 + 7\r\nf = [1] + [0] * mx\r\ng = [1] + [0] * mx\r\n\r\nfor i in range(1, mx):\r\n    f[i] = f[i - 1] * i % mod\r\n    g[i] = pow(f[i], mod - 2, mod)\r\n\r\n\r\ndef comb(m: int, n: int) -> int:\r\n    return f[m] * g[n] * g[m - n] % mod\r\n\r\n\r\nclass Solution:\r\n    def countGoodArrays(self, n: int, m: int, k: int) -> int:\r\n        return comb(n - 1, k) * m * pow(m - 1, n - k - 1, mod) % mod",
+    "problemId": 3405,
+    "title": "Count the Number of Arrays with K Matching Adjacent Elements",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-arrays-with-k-matching-adjacent-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3405.Count the Number of Arrays with K Matching Adjacent Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3405.Count the Number of Arrays with K Matching Adjacent Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3405.Count the Number of Arrays with K Matching Adjacent Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3405.Count the Number of Arrays with K Matching Adjacent Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3405.Count the Number of Arrays with K Matching Adjacent Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3405.Count the Number of Arrays with K Matching Adjacent Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3405.Count the Number of Arrays with K Matching Adjacent Elements/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

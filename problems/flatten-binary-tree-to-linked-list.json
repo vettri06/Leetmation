@@ -1,0 +1,53 @@
+{
+    "problemName": "flatten-binary-tree-to-linked-list",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def flatten(self, root: Optional[TreeNode]) -> None:\r\n        \"\"\"\r\n        Do not return anything, modify root in-place instead.\r\n        \"\"\"\r\n        while root:\r\n            if root.left:\r\n                pre = root.left\r\n                while pre.right:\r\n                    pre = pre.right\r\n                pre.right = root.right\r\n                root.right = root.left\r\n                root.left = None\r\n            root = root.right",
+    "problemId": 114,
+    "title": "Flatten Binary Tree to Linked List",
+    "problemUrl": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0114.Flatten Binary Tree to Linked List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0114.Flatten Binary Tree to Linked List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0114.Flatten Binary Tree to Linked List/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0114.Flatten Binary Tree to Linked List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0114.Flatten Binary Tree to Linked List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0114.Flatten Binary Tree to Linked List/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0114.Flatten Binary Tree to Linked List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0114.Flatten Binary Tree to Linked List/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0114.Flatten Binary Tree to Linked List/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

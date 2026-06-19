@@ -1,0 +1,18 @@
+{
+    "problemName": "calculate-the-influence-of-each-salesperson",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT sp.salesperson_id, name, IFNULL(SUM(price), 0) AS total\r\nFROM\r\n    Salesperson AS sp\r\n    LEFT JOIN Customer AS c ON sp.salesperson_id = c.salesperson_id\r\n    LEFT JOIN Sales AS s ON s.customer_id = c.customer_id\r\nGROUP BY 1;",
+    "problemId": 2372,
+    "title": "Calculate the Influence of Each Salesperson",
+    "problemUrl": "https://leetcode.com/problems/calculate-the-influence-of-each-salesperson/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2372.Calculate the Influence of Each Salesperson/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2372.Calculate the Influence of Each Salesperson/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

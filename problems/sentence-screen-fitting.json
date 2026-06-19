@@ -1,0 +1,38 @@
+{
+    "problemName": "sentence-screen-fitting",
+    "language": "python3",
+    "code": "class Solution:\r\n    def wordsTyping(self, sentence: List[str], rows: int, cols: int) -> int:\r\n        s = \" \".join(sentence) + \" \"\r\n        m = len(s)\r\n        cur = 0\r\n        for _ in range(rows):\r\n            cur += cols\r\n            if s[cur % m] == \" \":\r\n                cur += 1\r\n            while cur and s[(cur - 1) % m] != \" \":\r\n                cur -= 1\r\n        return cur // m",
+    "problemId": 418,
+    "title": "Sentence Screen Fitting",
+    "problemUrl": "https://leetcode.com/problems/sentence-screen-fitting/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0418.Sentence Screen Fitting/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0418.Sentence Screen Fitting/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0418.Sentence Screen Fitting/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0418.Sentence Screen Fitting/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0418.Sentence Screen Fitting/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0418.Sentence Screen Fitting/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+{
+    "problemName": "binary-tree-preorder-traversal",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:\r\n        def dfs(root):\r\n            if root is None:\r\n                return\r\n            ans.append(root.val)\r\n            dfs(root.left)\r\n            dfs(root.right)\r\n\r\n        ans = []\r\n        dfs(root)\r\n        return ans",
+    "problemId": 144,
+    "title": "Binary Tree Preorder Traversal",
+    "problemUrl": "https://leetcode.com/problems/binary-tree-preorder-traversal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution3.py",
+            "sourceFile": "Solution3.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution3.cpp",
+            "sourceFile": "Solution3.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution3.java",
+            "sourceFile": "Solution3.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution3.go",
+            "sourceFile": "Solution3.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0144.Binary Tree Preorder Traversal/Solution3.ts",
+            "sourceFile": "Solution3.ts"
+        }
+    ]
+}

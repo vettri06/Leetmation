@@ -1,0 +1,48 @@
+{
+    "problemName": "largest-substring-between-two-equal-characters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxLengthBetweenEqualCharacters(self, s: str) -> int:\r\n        d = {}\r\n        ans = -1\r\n        for i, c in enumerate(s):\r\n            if c in d:\r\n                ans = max(ans, i - d[c] - 1)\r\n            else:\r\n                d[c] = i\r\n        return ans",
+    "problemId": 1624,
+    "title": "Largest Substring Between Two Equal Characters",
+    "problemUrl": "https://leetcode.com/problems/largest-substring-between-two-equal-characters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1624.Largest Substring Between Two Equal Characters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1624.Largest Substring Between Two Equal Characters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1624.Largest Substring Between Two Equal Characters/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1624.Largest Substring Between Two Equal Characters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1624.Largest Substring Between Two Equal Characters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1624.Largest Substring Between Two Equal Characters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1624.Largest Substring Between Two Equal Characters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1624.Largest Substring Between Two Equal Characters/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

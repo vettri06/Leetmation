@@ -1,0 +1,38 @@
+{
+    "problemName": "count-pairs-of-equal-substrings-with-minimum-difference",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countQuadruples(self, firstString: str, secondString: str) -> int:\r\n        last = {c: i for i, c in enumerate(secondString)}\r\n        ans, mi = 0, inf\r\n        for i, c in enumerate(firstString):\r\n            if c in last:\r\n                t = i - last[c]\r\n                if mi > t:\r\n                    mi = t\r\n                    ans = 1\r\n                elif mi == t:\r\n                    ans += 1\r\n        return ans",
+    "problemId": 1794,
+    "title": "Count Pairs of Equal Substrings With Minimum Difference",
+    "problemUrl": "https://leetcode.com/problems/count-pairs-of-equal-substrings-with-minimum-difference/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1794.Count Pairs of Equal Substrings With Minimum Difference/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1794.Count Pairs of Equal Substrings With Minimum Difference/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1794.Count Pairs of Equal Substrings With Minimum Difference/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1794.Count Pairs of Equal Substrings With Minimum Difference/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1794.Count Pairs of Equal Substrings With Minimum Difference/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1794.Count Pairs of Equal Substrings With Minimum Difference/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

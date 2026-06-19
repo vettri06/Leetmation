@@ -1,0 +1,38 @@
+{
+    "problemName": "critical-connections-in-a-network",
+    "language": "python3",
+    "code": "class Solution:\r\n    def criticalConnections(\r\n        self, n: int, connections: List[List[int]]\r\n    ) -> List[List[int]]:\r\n        def tarjan(a: int, fa: int):\r\n            nonlocal now\r\n            now += 1\r\n            dfn[a] = low[a] = now\r\n            for b in g[a]:\r\n                if b == fa:\r\n                    continue\r\n                if not dfn[b]:\r\n                    tarjan(b, a)\r\n                    low[a] = min(low[a], low[b])\r\n                    if low[b] > dfn[a]:\r\n                        ans.append([a, b])\r\n                else:\r\n                    low[a] = min(low[a], dfn[b])\r\n\r\n        g = [[] for _ in range(n)]\r\n        for a, b in connections:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n\r\n        dfn = [0] * n\r\n        low = [0] * n\r\n        now = 0\r\n        ans = []\r\n        tarjan(0, -1)\r\n        return ans",
+    "problemId": 1192,
+    "title": "Critical Connections in a Network",
+    "problemUrl": "https://leetcode.com/problems/critical-connections-in-a-network/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1192.Critical Connections in a Network/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1192.Critical Connections in a Network/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1192.Critical Connections in a Network/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1192.Critical Connections in a Network/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1192.Critical Connections in a Network/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1192.Critical Connections in a Network/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

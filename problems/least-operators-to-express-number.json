@@ -1,0 +1,38 @@
+{
+    "problemName": "least-operators-to-express-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def leastOpsExpressTarget(self, x: int, target: int) -> int:\r\n        @cache\r\n        def dfs(v: int) -> int:\r\n            if x >= v:\r\n                return min(v * 2 - 1, 2 * (x - v))\r\n            k = 2\r\n            while x**k < v:\r\n                k += 1\r\n            if x**k - v < v:\r\n                return min(k + dfs(x**k - v), k - 1 + dfs(v - x ** (k - 1)))\r\n            return k - 1 + dfs(v - x ** (k - 1))\r\n\r\n        return dfs(target)",
+    "problemId": 964,
+    "title": "Least Operators to Express Number",
+    "problemUrl": "https://leetcode.com/problems/least-operators-to-express-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0964.Least Operators to Express Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0964.Least Operators to Express Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0964.Least Operators to Express Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0964.Least Operators to Express Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0964.Least Operators to Express Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0964.Least Operators to Express Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-ice-cream-bars",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxIceCream(self, costs: List[int], coins: int) -> int:\r\n        costs.sort()\r\n        for i, c in enumerate(costs):\r\n            if coins < c:\r\n                return i\r\n            coins -= c\r\n        return len(costs)",
+    "problemId": 1833,
+    "title": "Maximum Ice Cream Bars",
+    "problemUrl": "https://leetcode.com/problems/maximum-ice-cream-bars/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1833.Maximum Ice Cream Bars/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1833.Maximum Ice Cream Bars/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1833.Maximum Ice Cream Bars/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1833.Maximum Ice Cream Bars/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1833.Maximum Ice Cream Bars/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1833.Maximum Ice Cream Bars/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1833.Maximum Ice Cream Bars/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

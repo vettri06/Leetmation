@@ -1,0 +1,38 @@
+{
+    "problemName": "lexicographically-smallest-string-after-deleting-duplicate-characters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lexSmallestAfterDeletion(self, s: str) -> str:\r\n        cnt = Counter(s)\r\n        stk = []\r\n        for c in s:\r\n            while stk and stk[-1] > c and cnt[stk[-1]] > 1:\r\n                cnt[stk.pop()] -= 1\r\n            stk.append(c)\r\n        while stk and cnt[stk[-1]] > 1:\r\n            cnt[stk.pop()] -= 1\r\n        return \"\".join(stk)",
+    "problemId": 3816,
+    "title": "Lexicographically Smallest String After Deleting Duplicate Characters",
+    "problemUrl": "https://leetcode.com/problems/lexicographically-smallest-string-after-deleting-duplicate-characters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3816.Lexicographically Smallest String After Deleting Duplicate Characters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3816.Lexicographically Smallest String After Deleting Duplicate Characters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3816.Lexicographically Smallest String After Deleting Duplicate Characters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3816.Lexicographically Smallest String After Deleting Duplicate Characters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3816.Lexicographically Smallest String After Deleting Duplicate Characters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3816.Lexicographically Smallest String After Deleting Duplicate Characters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

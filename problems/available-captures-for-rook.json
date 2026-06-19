@@ -1,0 +1,43 @@
+{
+    "problemName": "available-captures-for-rook",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numRookCaptures(self, board: List[List[str]]) -> int:\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        n = len(board)\r\n        for i in range(n):\r\n            for j in range(n):\r\n                if board[i][j] == \"R\":\r\n                    ans = 0\r\n                    for a, b in pairwise(dirs):\r\n                        x, y = i + a, j + b\r\n                        while 0 <= x < n and 0 <= y < n and board[x][y] != \"B\":\r\n                            if board[x][y] == \"p\":\r\n                                ans += 1\r\n                                break\r\n                            x, y = x + a, y + b\r\n                    return ans",
+    "problemId": 999,
+    "title": "Available Captures for Rook",
+    "problemUrl": "https://leetcode.com/problems/available-captures-for-rook/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0999.Available Captures for Rook/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0999.Available Captures for Rook/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0999.Available Captures for Rook/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0999.Available Captures for Rook/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0999.Available Captures for Rook/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0999.Available Captures for Rook/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0999.Available Captures for Rook/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

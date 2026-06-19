@@ -1,0 +1,53 @@
+{
+    "problemName": "maximum-number-of-balls-in-a-box",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countBalls(self, lowLimit: int, highLimit: int) -> int:\r\n        cnt = [0] * 50\r\n        for x in range(lowLimit, highLimit + 1):\r\n            y = 0\r\n            while x:\r\n                y += x % 10\r\n                x //= 10\r\n            cnt[y] += 1\r\n        return max(cnt)",
+    "problemId": 1742,
+    "title": "Maximum Number of Balls in a Box",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-balls-in-a-box/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1742.Maximum Number of Balls in a Box/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1742.Maximum Number of Balls in a Box/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1742.Maximum Number of Balls in a Box/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1742.Maximum Number of Balls in a Box/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1742.Maximum Number of Balls in a Box/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1742.Maximum Number of Balls in a Box/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1742.Maximum Number of Balls in a Box/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1742.Maximum Number of Balls in a Box/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1742.Maximum Number of Balls in a Box/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

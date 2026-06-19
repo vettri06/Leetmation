@@ -1,0 +1,68 @@
+{
+    "problemName": "minimum-operations-to-reduce-x-to-zero",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums: List[int], x: int) -> int:\r\n        s = sum(nums) - x\r\n        vis = {0: -1}\r\n        mx, t = -1, 0\r\n        for i, v in enumerate(nums):\r\n            t += v\r\n            if t not in vis:\r\n                vis[t] = i\r\n            if t - s in vis:\r\n                mx = max(mx, i - vis[t - s])\r\n        return -1 if mx == -1 else len(nums) - mx",
+    "problemId": 1658,
+    "title": "Minimum Operations to Reduce X to Zero",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1658.Minimum Operations to Reduce X to Zero/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1658.Minimum Operations to Reduce X to Zero/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1658.Minimum Operations to Reduce X to Zero/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1658.Minimum Operations to Reduce X to Zero/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1658.Minimum Operations to Reduce X to Zero/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1658.Minimum Operations to Reduce X to Zero/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1658.Minimum Operations to Reduce X to Zero/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1658.Minimum Operations to Reduce X to Zero/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1658.Minimum Operations to Reduce X to Zero/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1658.Minimum Operations to Reduce X to Zero/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1658.Minimum Operations to Reduce X to Zero/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1658.Minimum Operations to Reduce X to Zero/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

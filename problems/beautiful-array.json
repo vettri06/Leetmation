@@ -1,0 +1,33 @@
+{
+    "problemName": "beautiful-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def beautifulArray(self, n: int) -> List[int]:\r\n        if n == 1:\r\n            return [1]\r\n        left = self.beautifulArray((n + 1) >> 1)\r\n        right = self.beautifulArray(n >> 1)\r\n        left = [x * 2 - 1 for x in left]\r\n        right = [x * 2 for x in right]\r\n        return left + right",
+    "problemId": 932,
+    "title": "Beautiful Array",
+    "problemUrl": "https://leetcode.com/problems/beautiful-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0932.Beautiful Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0932.Beautiful Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0932.Beautiful Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0932.Beautiful Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0932.Beautiful Array/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "problemName": "map-sum-pairs",
+    "language": "python3",
+    "code": "class Trie:\r\n    def __init__(self):\r\n        self.children: List[Trie | None] = [None] * 26\r\n        self.val: int = 0\r\n\r\n    def insert(self, w: str, x: int):\r\n        node = self\r\n        for c in w:\r\n            idx = ord(c) - ord('a')\r\n            if node.children[idx] is None:\r\n                node.children[idx] = Trie()\r\n            node = node.children[idx]\r\n            node.val += x\r\n\r\n    def search(self, w: str) -> int:\r\n        node = self\r\n        for c in w:\r\n            idx = ord(c) - ord('a')\r\n            if node.children[idx] is None:\r\n                return 0\r\n            node = node.children[idx]\r\n        return node.val\r\n\r\n\r\nclass MapSum:\r\n    def __init__(self):\r\n        self.d = defaultdict(int)\r\n        self.tree = Trie()\r\n\r\n    def insert(self, key: str, val: int) -> None:\r\n        x = val - self.d[key]\r\n        self.d[key] = val\r\n        self.tree.insert(key, x)\r\n\r\n    def sum(self, prefix: str) -> int:\r\n        return self.tree.search(prefix)\r\n\r\n\r\n# Your MapSum object will be instantiated and called as such:\r\n# obj = MapSum()\r\n# obj.insert(key,val)\r\n# param_2 = obj.sum(prefix)",
+    "problemId": 677,
+    "title": "Map Sum Pairs",
+    "problemUrl": "https://leetcode.com/problems/map-sum-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0677.Map Sum Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0677.Map Sum Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0677.Map Sum Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0677.Map Sum Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0677.Map Sum Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0677.Map Sum Pairs/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0677.Map Sum Pairs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0677.Map Sum Pairs/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0677.Map Sum Pairs/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

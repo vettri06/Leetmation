@@ -1,0 +1,43 @@
+{
+    "problemName": "house-robber-v",
+    "language": "python3",
+    "code": "class Solution:\r\n    def rob(self, nums: List[int], colors: List[int]) -> int:\r\n        n = len(nums)\r\n        f, g = 0, nums[0]\r\n        for i in range(1, n):\r\n            if colors[i - 1] == colors[i]:\r\n                f, g = max(f, g), f + nums[i]\r\n            else:\r\n                f, g = max(f, g), max(f, g) + nums[i]\r\n        return max(f, g)",
+    "problemId": 3840,
+    "title": "House Robber V",
+    "problemUrl": "https://leetcode.com/problems/house-robber-v/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3840.House Robber V/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3840.House Robber V/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3840.House Robber V/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3840.House Robber V/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3840.House Robber V/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3840.House Robber V/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3840.House Robber V/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

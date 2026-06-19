@@ -1,0 +1,43 @@
+{
+    "problemName": "count-the-number-of-good-subarrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countGood(self, nums: List[int], k: int) -> int:\r\n        cnt = Counter()\r\n        ans = cur = 0\r\n        i = 0\r\n        for x in nums:\r\n            cur += cnt[x]\r\n            cnt[x] += 1\r\n            while cur - cnt[nums[i]] + 1 >= k:\r\n                cnt[nums[i]] -= 1\r\n                cur -= cnt[nums[i]]\r\n                i += 1\r\n            if cur >= k:\r\n                ans += i + 1\r\n        return ans",
+    "problemId": 2537,
+    "title": "Count the Number of Good Subarrays",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-good-subarrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2537.Count the Number of Good Subarrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2537.Count the Number of Good Subarrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2537.Count the Number of Good Subarrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2537.Count the Number of Good Subarrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2537.Count the Number of Good Subarrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2537.Count the Number of Good Subarrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2537.Count the Number of Good Subarrays/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

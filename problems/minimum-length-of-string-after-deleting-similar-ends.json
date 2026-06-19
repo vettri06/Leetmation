@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-length-of-string-after-deleting-similar-ends",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumLength(self, s: str) -> int:\r\n        i, j = 0, len(s) - 1\r\n        while i < j and s[i] == s[j]:\r\n            while i + 1 < j and s[i] == s[i + 1]:\r\n                i += 1\r\n            while i < j - 1 and s[j - 1] == s[j]:\r\n                j -= 1\r\n            i, j = i + 1, j - 1\r\n        return max(0, j - i + 1)",
+    "problemId": 1750,
+    "title": "Minimum Length of String After Deleting Similar Ends",
+    "problemUrl": "https://leetcode.com/problems/minimum-length-of-string-after-deleting-similar-ends/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1750.Minimum Length of String After Deleting Similar Ends/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1750.Minimum Length of String After Deleting Similar Ends/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1750.Minimum Length of String After Deleting Similar Ends/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1750.Minimum Length of String After Deleting Similar Ends/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1750.Minimum Length of String After Deleting Similar Ends/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1750.Minimum Length of String After Deleting Similar Ends/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1750.Minimum Length of String After Deleting Similar Ends/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1750.Minimum Length of String After Deleting Similar Ends/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

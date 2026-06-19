@@ -1,0 +1,18 @@
+{
+    "problemName": "execute-asynchronous-functions-in-parallel",
+    "language": "typescript",
+    "code": "async function promiseAll<T>(functions: (() => Promise<T>)[]): Promise<T[]> {\r\n    return new Promise<T[]>((resolve, reject) => {\r\n        let cnt = 0;\r\n        const ans = new Array(functions.length);\r\n        for (let i = 0; i < functions.length; ++i) {\r\n            const f = functions[i];\r\n            f()\r\n                .then(res => {\r\n                    ans[i] = res;\r\n                    cnt++;\r\n                    if (cnt === functions.length) {\r\n                        resolve(ans);\r\n                    }\r\n                })\r\n                .catch(err => {\r\n                    reject(err);\r\n                });\r\n        }\r\n    });\r\n}\r\n\r\n/**\r\n * const promise = promiseAll([() => new Promise(res => res(42))])\r\n * promise.then(console.log); // [42]\r\n */",
+    "problemId": 2721,
+    "title": "Execute Asynchronous Functions in Parallel",
+    "problemUrl": "https://leetcode.com/problems/execute-asynchronous-functions-in-parallel/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2721.Execute Asynchronous Functions in Parallel/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2721.Execute Asynchronous Functions in Parallel/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

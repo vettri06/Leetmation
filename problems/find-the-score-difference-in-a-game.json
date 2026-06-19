@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-score-difference-in-a-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def scoreDifference(self, nums: List[int]) -> int:\r\n        ans, k = 0, 1\r\n        for i, x in enumerate(nums):\r\n            if x % 2:\r\n                k *= -1\r\n            if i % 6 == 5:\r\n                k *= -1\r\n            ans += k * x\r\n        return ans",
+    "problemId": 3847,
+    "title": "Find the Score Difference in a Game",
+    "problemUrl": "https://leetcode.com/problems/find-the-score-difference-in-a-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3847.Find the Score Difference in a Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3847.Find the Score Difference in a Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3847.Find the Score Difference in a Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3847.Find the Score Difference in a Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3847.Find the Score Difference in a Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3847.Find the Score Difference in a Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "count-substrings-starting-and-ending-with-given-character",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSubstrings(self, s: str, c: str) -> int:\r\n        cnt = s.count(c)\r\n        return cnt + cnt * (cnt - 1) // 2",
+    "problemId": 3084,
+    "title": "Count Substrings Starting and Ending with Given Character",
+    "problemUrl": "https://leetcode.com/problems/count-substrings-starting-and-ending-with-given-character/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3084.Count Substrings Starting and Ending with Given Character/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3084.Count Substrings Starting and Ending with Given Character/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3084.Count Substrings Starting and Ending with Given Character/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3084.Count Substrings Starting and Ending with Given Character/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3084.Count Substrings Starting and Ending with Given Character/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

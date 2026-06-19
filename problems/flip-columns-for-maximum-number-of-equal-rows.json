@@ -1,0 +1,38 @@
+{
+    "problemName": "flip-columns-for-maximum-number-of-equal-rows",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:\r\n        cnt = Counter()\r\n        for row in matrix:\r\n            t = tuple(row) if row[0] == 0 else tuple(x ^ 1 for x in row)\r\n            cnt[t] += 1\r\n        return max(cnt.values())",
+    "problemId": 1072,
+    "title": "Flip Columns For Maximum Number of Equal Rows",
+    "problemUrl": "https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1072.Flip Columns For Maximum Number of Equal Rows/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1072.Flip Columns For Maximum Number of Equal Rows/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1072.Flip Columns For Maximum Number of Equal Rows/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1072.Flip Columns For Maximum Number of Equal Rows/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1072.Flip Columns For Maximum Number of Equal Rows/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1072.Flip Columns For Maximum Number of Equal Rows/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

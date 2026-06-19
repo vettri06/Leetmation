@@ -1,0 +1,43 @@
+{
+    "problemName": "word-subsets",
+    "language": "python3",
+    "code": "class Solution:\r\n    def wordSubsets(self, words1: List[str], words2: List[str]) -> List[str]:\r\n        cnt = Counter()\r\n        for b in words2:\r\n            t = Counter(b)\r\n            for c, v in t.items():\r\n                cnt[c] = max(cnt[c], v)\r\n        ans = []\r\n        for a in words1:\r\n            t = Counter(a)\r\n            if all(v <= t[c] for c, v in cnt.items()):\r\n                ans.append(a)\r\n        return ans",
+    "problemId": 916,
+    "title": "Word Subsets",
+    "problemUrl": "https://leetcode.com/problems/word-subsets/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0916.Word Subsets/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0916.Word Subsets/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0916.Word Subsets/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0916.Word Subsets/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0916.Word Subsets/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0916.Word Subsets/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0916.Word Subsets/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

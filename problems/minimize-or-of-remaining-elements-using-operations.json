@@ -1,0 +1,33 @@
+{
+    "problemName": "minimize-or-of-remaining-elements-using-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOrAfterOperations(self, nums: List[int], k: int) -> int:\r\n        ans = 0\r\n        rans = 0\r\n        for i in range(29, -1, -1):\r\n            test = ans + (1 << i)\r\n            cnt = 0\r\n            val = 0\r\n            for num in nums:\r\n                if val == 0:\r\n                    val = test & num\r\n                else:\r\n                    val &= test & num\r\n                if val:\r\n                    cnt += 1\r\n            if cnt > k:\r\n                rans += 1 << i\r\n            else:\r\n                ans += 1 << i\r\n        return rans",
+    "problemId": 3022,
+    "title": "Minimize OR of Remaining Elements Using Operations",
+    "problemUrl": "https://leetcode.com/problems/minimize-or-of-remaining-elements-using-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3022.Minimize OR of Remaining Elements Using Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3022.Minimize OR of Remaining Elements Using Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3022.Minimize OR of Remaining Elements Using Operations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3022.Minimize OR of Remaining Elements Using Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3022.Minimize OR of Remaining Elements Using Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

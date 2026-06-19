@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-sum-of-three-numbers-divisible-by-three",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumSum(self, nums: List[int]) -> int:\r\n        nums.sort()\r\n        g = [[] for _ in range(3)]\r\n        for x in nums:\r\n            g[x % 3].append(x)\r\n        ans = 0\r\n        for a in range(3):\r\n            if g[a]:\r\n                x = g[a].pop()\r\n                for b in range(3):\r\n                    if g[b]:\r\n                        y = g[b].pop()\r\n                        c = (3 - (a + b) % 3) % 3\r\n                        if g[c]:\r\n                            z = g[c][-1]\r\n                            ans = max(ans, x + y + z)\r\n                        g[b].append(y)\r\n                g[a].append(x)\r\n        return ans",
+    "problemId": 3780,
+    "title": "Maximum Sum of Three Numbers Divisible by Three",
+    "problemUrl": "https://leetcode.com/problems/maximum-sum-of-three-numbers-divisible-by-three/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3780.Maximum Sum of Three Numbers Divisible by Three/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3780.Maximum Sum of Three Numbers Divisible by Three/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3780.Maximum Sum of Three Numbers Divisible by Three/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3780.Maximum Sum of Three Numbers Divisible by Three/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3780.Maximum Sum of Three Numbers Divisible by Three/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3780.Maximum Sum of Three Numbers Divisible by Three/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

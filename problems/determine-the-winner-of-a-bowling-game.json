@@ -1,0 +1,43 @@
+{
+    "problemName": "determine-the-winner-of-a-bowling-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isWinner(self, player1: List[int], player2: List[int]) -> int:\r\n        def f(arr: List[int]) -> int:\r\n            s = 0\r\n            for i, x in enumerate(arr):\r\n                k = 2 if (i and arr[i - 1] == 10) or (i > 1 and arr[i - 2] == 10) else 1\r\n                s += k * x\r\n            return s\r\n\r\n        a, b = f(player1), f(player2)\r\n        return 1 if a > b else (2 if b > a else 0)",
+    "problemId": 2660,
+    "title": "Determine the Winner of a Bowling Game",
+    "problemUrl": "https://leetcode.com/problems/determine-the-winner-of-a-bowling-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2660.Determine the Winner of a Bowling Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2660.Determine the Winner of a Bowling Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2660.Determine the Winner of a Bowling Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2660.Determine the Winner of a Bowling Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2660.Determine the Winner of a Bowling Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2660.Determine the Winner of a Bowling Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2660.Determine the Winner of a Bowling Game/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "handshakes-that-dont-cross",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfWays(self, numPeople: int) -> int:\r\n        @cache\r\n        def dfs(i: int) -> int:\r\n            if i < 2:\r\n                return 1\r\n            ans = 0\r\n            for l in range(0, i, 2):\r\n                r = i - l - 2\r\n                ans += dfs(l) * dfs(r)\r\n                ans %= mod\r\n            return ans\r\n\r\n        mod = 10**9 + 7\r\n        return dfs(numPeople)",
+    "problemId": 1259,
+    "title": "Handshakes That Don't Cross",
+    "problemUrl": "https://leetcode.com/problems/handshakes-that-dont-cross/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1259.Handshakes That Don't Cross/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1259.Handshakes That Don't Cross/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1259.Handshakes That Don't Cross/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1259.Handshakes That Don't Cross/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1259.Handshakes That Don't Cross/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1259.Handshakes That Don't Cross/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

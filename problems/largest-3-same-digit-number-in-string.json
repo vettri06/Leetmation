@@ -1,0 +1,38 @@
+{
+    "problemName": "largest-3-same-digit-number-in-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestGoodInteger(self, num: str) -> str:\r\n        for i in range(9, -1, -1):\r\n            if (s := str(i) * 3) in num:\r\n                return s\r\n        return \"\"",
+    "problemId": 2264,
+    "title": "Largest 3-Same-Digit Number in String",
+    "problemUrl": "https://leetcode.com/problems/largest-3-same-digit-number-in-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2264.Largest 3-Same-Digit Number in String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2264.Largest 3-Same-Digit Number in String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2264.Largest 3-Same-Digit Number in String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2264.Largest 3-Same-Digit Number in String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2264.Largest 3-Same-Digit Number in String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2264.Largest 3-Same-Digit Number in String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

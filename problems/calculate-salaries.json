@@ -1,0 +1,18 @@
+{
+    "problemName": "calculate-salaries",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    s.company_id,\r\n    employee_id,\r\n    employee_name,\r\n    ROUND(\r\n        CASE\r\n            WHEN top < 1000 THEN salary\r\n            WHEN top >= 1000\r\n            AND top <= 10000 THEN salary * 0.76\r\n            ELSE salary * 0.51\r\n        END\r\n    ) AS salary\r\nFROM\r\n    Salaries AS s\r\n    JOIN (\r\n        SELECT company_id, MAX(salary) AS top\r\n        FROM Salaries\r\n        GROUP BY company_id\r\n    ) AS t\r\n        ON s.company_id = t.company_id;",
+    "problemId": 1468,
+    "title": "Calculate Salaries",
+    "problemUrl": "https://leetcode.com/problems/calculate-salaries/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1468.Calculate Salaries/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1468.Calculate Salaries/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

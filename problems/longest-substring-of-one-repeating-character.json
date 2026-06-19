@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-substring-of-one-repeating-character",
+    "language": "python3",
+    "code": "def max(a: int, b: int) -> int:\r\n    return a if a > b else b\r\n\r\n\r\nclass Node:\r\n    __slots__ = \"l\", \"r\", \"lmx\", \"rmx\", \"mx\"\r\n\r\n    def __init__(self, l: int, r: int):\r\n        self.l = l\r\n        self.r = r\r\n        self.lmx = self.rmx = self.mx = 1\r\n\r\n\r\nclass SegmentTree:\r\n    __slots__ = \"s\", \"tr\"\r\n\r\n    def __init__(self, s: str):\r\n        self.s = list(s)\r\n        n = len(s)\r\n        self.tr: List[Node | None] = [None] * (n * 4)\r\n        self.build(1, 1, n)\r\n\r\n    def build(self, u: int, l: int, r: int):\r\n        self.tr[u] = Node(l, r)\r\n        if l == r:\r\n            return\r\n        mid = (l + r) // 2\r\n        self.build(u << 1, l, mid)\r\n        self.build(u << 1 | 1, mid + 1, r)\r\n        self.pushup(u)\r\n\r\n    def query(self, u: int, l: int, r: int) -> int:\r\n        if self.tr[u].l >= l and self.tr[u].r <= r:\r\n            return self.tr[u].mx\r\n        mid = (self.tr[u].l + self.tr[u].r) // 2\r\n        ans = 0\r\n        if r <= mid:\r\n            ans = self.query(u << 1, l, r)\r\n        if l > mid:\r\n            ans = max(ans, self.query(u << 1 | 1, l, r))\r\n        return ans\r\n\r\n    def modify(self, u: int, x: int, v: str):\r\n        if self.tr[u].l == self.tr[u].r:\r\n            self.s[x - 1] = v\r\n            return\r\n        mid = (self.tr[u].l + self.tr[u].r) // 2\r\n        if x <= mid:\r\n            self.modify(u << 1, x, v)\r\n        else:\r\n            self.modify(u << 1 | 1, x, v)\r\n        self.pushup(u)\r\n\r\n    def pushup(self, u: int):\r\n        root, left, right = self.tr[u], self.tr[u << 1], self.tr[u << 1 | 1]\r\n        root.lmx = left.lmx\r\n        root.rmx = right.rmx\r\n        root.mx = max(left.mx, right.mx)\r\n        a, b = left.r - left.l + 1, right.r - right.l + 1\r\n        if self.s[left.r - 1] == self.s[right.l - 1]:\r\n            if left.lmx == a:\r\n                root.lmx += right.lmx\r\n            if right.rmx == b:\r\n                root.rmx += left.rmx\r\n            root.mx = max(root.mx, left.rmx + right.lmx)\r\n\r\n\r\nclass Solution:\r\n    def longestRepeating(\r\n        self, s: str, queryCharacters: str, queryIndices: List[int]\r\n    ) -> List[int]:\r\n        tree = SegmentTree(s)\r\n        ans = []\r\n        for x, v in zip(queryIndices, queryCharacters):\r\n            tree.modify(1, x + 1, v)\r\n            ans.append(tree.query(1, 1, len(s)))\r\n        return ans",
+    "problemId": 2213,
+    "title": "Longest Substring of One Repeating Character",
+    "problemUrl": "https://leetcode.com/problems/longest-substring-of-one-repeating-character/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2213.Longest Substring of One Repeating Character/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2213.Longest Substring of One Repeating Character/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2213.Longest Substring of One Repeating Character/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2213.Longest Substring of One Repeating Character/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2213.Longest Substring of One Repeating Character/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2213.Longest Substring of One Repeating Character/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "sum-in-a-matrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def matrixSum(self, nums: List[List[int]]) -> int:\r\n        for row in nums:\r\n            row.sort()\r\n        return sum(map(max, zip(*nums)))",
+    "problemId": 2679,
+    "title": "Sum in a Matrix",
+    "problemUrl": "https://leetcode.com/problems/sum-in-a-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2679.Sum in a Matrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2679.Sum in a Matrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2679.Sum in a Matrix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2679.Sum in a Matrix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2679.Sum in a Matrix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2679.Sum in a Matrix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2679.Sum in a Matrix/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

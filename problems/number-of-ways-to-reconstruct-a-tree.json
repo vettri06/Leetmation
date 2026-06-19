@@ -1,0 +1,33 @@
+{
+    "problemName": "number-of-ways-to-reconstruct-a-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkWays(self, pairs: List[List[int]]) -> int:\r\n        g = [[False] * 510 for _ in range(510)]\r\n        v = defaultdict(list)\r\n        for x, y in pairs:\r\n            g[x][y] = g[y][x] = True\r\n            v[x].append(y)\r\n            v[y].append(x)\r\n        nodes = []\r\n        for i in range(510):\r\n            if v[i]:\r\n                nodes.append(i)\r\n                g[i][i] = True\r\n        nodes.sort(key=lambda x: len(v[x]))\r\n        equal = False\r\n        root = 0\r\n        for i, x in enumerate(nodes):\r\n            j = i + 1\r\n            while j < len(nodes) and not g[x][nodes[j]]:\r\n                j += 1\r\n            if j < len(nodes):\r\n                y = nodes[j]\r\n                if len(v[x]) == len(v[y]):\r\n                    equal = True\r\n                for z in v[x]:\r\n                    if not g[y][z]:\r\n                        return 0\r\n            else:\r\n                root += 1\r\n        if root > 1:\r\n            return 0\r\n        return 2 if equal else 1",
+    "problemId": 1719,
+    "title": "Number Of Ways To Reconstruct A Tree",
+    "problemUrl": "https://leetcode.com/problems/number-of-ways-to-reconstruct-a-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1719.Number Of Ways To Reconstruct A Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1719.Number Of Ways To Reconstruct A Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1719.Number Of Ways To Reconstruct A Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1719.Number Of Ways To Reconstruct A Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1719.Number Of Ways To Reconstruct A Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

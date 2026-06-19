@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-distinct-path-sum-in-a-binary-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def maxSum(self, root: Optional[TreeNode]) -> int:\r\n        def dfs(node, p):\r\n            if node is None:\r\n                return\r\n            g[node].append(p)\r\n            g[node].append(node.left)\r\n            g[node].append(node.right)\r\n            dfs(node.left, node)\r\n            dfs(node.right, node)\r\n\r\n        def dfs2(node):\r\n            if node is None or node.val in vis:\r\n                return 0\r\n            vis.add(node.val)\r\n            res = node.val\r\n            best = 0\r\n            for nxt in g[node]:\r\n                best = max(best, dfs2(nxt))\r\n            vis.remove(node.val)\r\n            res += best\r\n            return res\r\n\r\n        g = defaultdict(list)\r\n        dfs(root, None)\r\n        vis = set()\r\n        ans = -inf\r\n        for node in g:\r\n            ans = max(ans, dfs2(node))\r\n            vis.clear()\r\n        return ans",
+    "problemId": 3879,
+    "title": "Maximum Distinct Path Sum in a Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/maximum-distinct-path-sum-in-a-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3879.Maximum Distinct Path Sum in a Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3879.Maximum Distinct Path Sum in a Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3879.Maximum Distinct Path Sum in a Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3879.Maximum Distinct Path Sum in a Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3879.Maximum Distinct Path Sum in a Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3879.Maximum Distinct Path Sum in a Binary Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

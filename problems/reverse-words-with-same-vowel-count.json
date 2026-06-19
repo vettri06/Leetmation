@@ -1,0 +1,38 @@
+{
+    "problemName": "reverse-words-with-same-vowel-count",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reverseWords(self, s: str) -> str:\r\n        def calc(w: str) -> int:\r\n            return sum(c in \"aeiou\" for c in w)\r\n\r\n        words = s.split()\r\n        cnt = calc(words[0])\r\n        ans = [words[0]]\r\n        for w in words[1:]:\r\n            if calc(w) == cnt:\r\n                ans.append(w[::-1])\r\n            else:\r\n                ans.append(w)\r\n        return \" \".join(ans)",
+    "problemId": 3775,
+    "title": "Reverse Words With Same Vowel Count",
+    "problemUrl": "https://leetcode.com/problems/reverse-words-with-same-vowel-count/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3775.Reverse Words With Same Vowel Count/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3775.Reverse Words With Same Vowel Count/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3775.Reverse Words With Same Vowel Count/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3775.Reverse Words With Same Vowel Count/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3775.Reverse Words With Same Vowel Count/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3775.Reverse Words With Same Vowel Count/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

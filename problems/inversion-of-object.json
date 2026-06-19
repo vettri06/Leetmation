@@ -1,0 +1,18 @@
+{
+    "problemName": "inversion-of-object",
+    "language": "typescript",
+    "code": "function invertObject(obj: Record<any, any>): Record<any, any> {\r\n    const ans: Record<any, any> = {};\r\n    for (const key in obj) {\r\n        if (ans.hasOwnProperty(obj[key])) {\r\n            if (Array.isArray(ans[obj[key]])) {\r\n                ans[obj[key]].push(key);\r\n            } else {\r\n                ans[obj[key]] = [ans[obj[key]], key];\r\n            }\r\n        } else {\r\n            ans[obj[key]] = key;\r\n        }\r\n    }\r\n    return ans;\r\n}",
+    "problemId": 2822,
+    "title": "Inversion of Object",
+    "problemUrl": "https://leetcode.com/problems/inversion-of-object/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2822.Inversion of Object/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2822.Inversion of Object/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

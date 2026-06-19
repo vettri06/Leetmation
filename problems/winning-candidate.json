@@ -1,0 +1,23 @@
+{
+    "problemName": "winning-candidate",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    Name\r\nFROM\r\n    (\r\n        SELECT\r\n            CandidateId AS id\r\n        FROM Vote\r\n        GROUP BY CandidateId\r\n        ORDER BY COUNT(id) DESC\r\n        LIMIT 1\r\n    ) AS t\r\n    INNER JOIN Candidate AS c ON t.id = c.id;",
+    "problemId": 574,
+    "title": "Winning Candidate",
+    "problemUrl": "https://leetcode.com/problems/winning-candidate/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0574.Winning Candidate/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0574.Winning Candidate/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0574.Winning Candidate/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-operations-to-sort-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, s: str) -> int:\r\n        if all(a <= b for a, b in pairwise(s)):\r\n            return 0\r\n        if len(s) == 2:\r\n            return -1\r\n        mn, mx = min(s), max(s)\r\n        if s[0] == mn or s[-1] == mx:\r\n            return 1\r\n        if any(c in [mn, mx] for c in s[1:-1]):\r\n            return 2\r\n        return 3",
+    "problemId": 3863,
+    "title": "Minimum Operations to Sort a String",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-sort-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3863.Minimum Operations to Sort a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3863.Minimum Operations to Sort a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3863.Minimum Operations to Sort a String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3863.Minimum Operations to Sort a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3863.Minimum Operations to Sort a String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3863.Minimum Operations to Sort a String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

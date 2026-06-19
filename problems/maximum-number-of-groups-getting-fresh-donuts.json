@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-number-of-groups-getting-fresh-donuts",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxHappyGroups(self, batchSize: int, groups: List[int]) -> int:\r\n        @cache\r\n        def dfs(state, mod):\r\n            res = 0\r\n            x = int(mod == 0)\r\n            for i in range(1, batchSize):\r\n                if state >> (i * 5) & 31:\r\n                    t = dfs(state - (1 << (i * 5)), (mod + i) % batchSize)\r\n                    res = max(res, t + x)\r\n            return res\r\n\r\n        state = ans = 0\r\n        for v in groups:\r\n            i = v % batchSize\r\n            ans += i == 0\r\n            if i:\r\n                state += 1 << (i * 5)\r\n        ans += dfs(state, 0)\r\n        return ans",
+    "problemId": 1815,
+    "title": "Maximum Number of Groups Getting Fresh Donuts",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-groups-getting-fresh-donuts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1815.Maximum Number of Groups Getting Fresh Donuts/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1815.Maximum Number of Groups Getting Fresh Donuts/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1815.Maximum Number of Groups Getting Fresh Donuts/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1815.Maximum Number of Groups Getting Fresh Donuts/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1815.Maximum Number of Groups Getting Fresh Donuts/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1815.Maximum Number of Groups Getting Fresh Donuts/Solution2.py",
+            "sourceFile": "Solution2.py"
+        }
+    ]
+}

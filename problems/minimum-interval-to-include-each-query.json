@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-interval-to-include-each-query",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minInterval(self, intervals: List[List[int]], queries: List[int]) -> List[int]:\r\n        n, m = len(intervals), len(queries)\r\n        intervals.sort()\r\n        queries = sorted((x, i) for i, x in enumerate(queries))\r\n        ans = [-1] * m\r\n        pq = []\r\n        i = 0\r\n        for x, j in queries:\r\n            while i < n and intervals[i][0] <= x:\r\n                a, b = intervals[i]\r\n                heappush(pq, (b - a + 1, b))\r\n                i += 1\r\n            while pq and pq[0][1] < x:\r\n                heappop(pq)\r\n            if pq:\r\n                ans[j] = pq[0][0]\r\n        return ans",
+    "problemId": 1851,
+    "title": "Minimum Interval to Include Each Query",
+    "problemUrl": "https://leetcode.com/problems/minimum-interval-to-include-each-query/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1851.Minimum Interval to Include Each Query/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1851.Minimum Interval to Include Each Query/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1851.Minimum Interval to Include Each Query/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1851.Minimum Interval to Include Each Query/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1851.Minimum Interval to Include Each Query/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1851.Minimum Interval to Include Each Query/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1851.Minimum Interval to Include Each Query/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

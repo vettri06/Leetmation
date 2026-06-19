@@ -1,0 +1,48 @@
+{
+    "problemName": "binary-tree-pruning",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def pruneTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:\r\n        if root is None:\r\n            return root\r\n        root.left = self.pruneTree(root.left)\r\n        root.right = self.pruneTree(root.right)\r\n        if root.val == 0 and root.left == root.right:\r\n            return None\r\n        return root",
+    "problemId": 814,
+    "title": "Binary Tree Pruning",
+    "problemUrl": "https://leetcode.com/problems/binary-tree-pruning/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0814.Binary Tree Pruning/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0814.Binary Tree Pruning/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0814.Binary Tree Pruning/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0814.Binary Tree Pruning/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0814.Binary Tree Pruning/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0814.Binary Tree Pruning/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0814.Binary Tree Pruning/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0814.Binary Tree Pruning/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

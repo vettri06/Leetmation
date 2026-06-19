@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-skips-to-arrive-at-meeting-on-time",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSkips(self, dist: List[int], speed: int, hoursBefore: int) -> int:\r\n        n = len(dist)\r\n        f = [[inf] * (n + 1) for _ in range(n + 1)]\r\n        f[0][0] = 0\r\n        eps = 1e-8\r\n        for i, x in enumerate(dist, 1):\r\n            for j in range(i + 1):\r\n                if j < i:\r\n                    f[i][j] = min(f[i][j], ceil(f[i - 1][j] + x / speed - eps))\r\n                if j:\r\n                    f[i][j] = min(f[i][j], f[i - 1][j - 1] + x / speed)\r\n        for j in range(n + 1):\r\n            if f[n][j] <= hoursBefore + eps:\r\n                return j\r\n        return -1",
+    "problemId": 1883,
+    "title": "Minimum Skips to Arrive at Meeting On Time",
+    "problemUrl": "https://leetcode.com/problems/minimum-skips-to-arrive-at-meeting-on-time/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1883.Minimum Skips to Arrive at Meeting On Time/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1883.Minimum Skips to Arrive at Meeting On Time/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1883.Minimum Skips to Arrive at Meeting On Time/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1883.Minimum Skips to Arrive at Meeting On Time/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1883.Minimum Skips to Arrive at Meeting On Time/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1883.Minimum Skips to Arrive at Meeting On Time/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "problemName": "minimum-deletions-to-make-character-frequencies-unique",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minDeletions(self, s: str) -> int:\r\n        cnt = Counter(s)\r\n        ans, pre = 0, inf\r\n        for v in sorted(cnt.values(), reverse=True):\r\n            if pre == 0:\r\n                ans += v\r\n            elif v >= pre:\r\n                ans += v - pre + 1\r\n                pre -= 1\r\n            else:\r\n                pre = v\r\n        return ans",
+    "problemId": 1647,
+    "title": "Minimum Deletions to Make Character Frequencies Unique",
+    "problemUrl": "https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1647.Minimum Deletions to Make Character Frequencies Unique/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1647.Minimum Deletions to Make Character Frequencies Unique/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1647.Minimum Deletions to Make Character Frequencies Unique/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1647.Minimum Deletions to Make Character Frequencies Unique/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1647.Minimum Deletions to Make Character Frequencies Unique/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1647.Minimum Deletions to Make Character Frequencies Unique/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1647.Minimum Deletions to Make Character Frequencies Unique/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1647.Minimum Deletions to Make Character Frequencies Unique/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1647.Minimum Deletions to Make Character Frequencies Unique/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1647.Minimum Deletions to Make Character Frequencies Unique/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1647.Minimum Deletions to Make Character Frequencies Unique/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

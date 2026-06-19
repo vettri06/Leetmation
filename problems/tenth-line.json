@@ -1,0 +1,18 @@
+{
+    "problemName": "tenth-line",
+    "language": "bash",
+    "code": "# Read from the file file.txt and output the tenth line to stdout.\r\nsed -n 10p file.txt",
+    "problemId": 195,
+    "title": "Tenth Line",
+    "problemUrl": "https://leetcode.com/problems/tenth-line/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0195.Tenth Line/Solution.sh",
+    "sourceFile": "Solution.sh",
+    "sourceCandidates": [
+        {
+            "language": "bash",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0195.Tenth Line/Solution.sh",
+            "sourceFile": "Solution.sh"
+        }
+    ]
+}

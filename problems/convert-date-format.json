@@ -1,0 +1,18 @@
+{
+    "problemName": "convert-date-format",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT DATE_FORMAT(day, '%W, %M %e, %Y') AS day FROM Days;",
+    "problemId": 1853,
+    "title": "Convert Date Format",
+    "problemUrl": "https://leetcode.com/problems/convert-date-format/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1853.Convert Date Format/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1853.Convert Date Format/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

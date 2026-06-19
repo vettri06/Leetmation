@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-minimum-cost-array-permutation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findPermutation(self, nums: List[int]) -> List[int]:\r\n        @cache\r\n        def dfs(mask: int, pre: int) -> int:\r\n            if mask == (1 << n) - 1:\r\n                return abs(pre - nums[0])\r\n            res = inf\r\n            for cur in range(1, n):\r\n                if mask >> cur & 1 ^ 1:\r\n                    res = min(res, abs(pre - nums[cur]) + dfs(mask | 1 << cur, cur))\r\n            return res\r\n\r\n        def g(mask: int, pre: int):\r\n            ans.append(pre)\r\n            if mask == (1 << n) - 1:\r\n                return\r\n            res = dfs(mask, pre)\r\n            for cur in range(1, n):\r\n                if mask >> cur & 1 ^ 1:\r\n                    if abs(pre - nums[cur]) + dfs(mask | 1 << cur, cur) == res:\r\n                        g(mask | 1 << cur, cur)\r\n                        break\r\n\r\n        n = len(nums)\r\n        ans = []\r\n        g(1, 0)\r\n        return ans",
+    "problemId": 3149,
+    "title": "Find the Minimum Cost Array Permutation",
+    "problemUrl": "https://leetcode.com/problems/find-the-minimum-cost-array-permutation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3149.Find the Minimum Cost Array Permutation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3149.Find the Minimum Cost Array Permutation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3149.Find the Minimum Cost Array Permutation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3149.Find the Minimum Cost Array Permutation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3149.Find the Minimum Cost Array Permutation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3149.Find the Minimum Cost Array Permutation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

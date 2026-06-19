@@ -1,0 +1,38 @@
+{
+    "problemName": "ugly-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isUgly(self, n: int) -> bool:\r\n        if n < 1:\r\n            return False\r\n        for x in [2, 3, 5]:\r\n            while n % x == 0:\r\n                n //= x\r\n        return n == 1",
+    "problemId": 263,
+    "title": "Ugly Number",
+    "problemUrl": "https://leetcode.com/problems/ugly-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0263.Ugly Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0263.Ugly Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0263.Ugly Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0263.Ugly Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0263.Ugly Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0263.Ugly Number/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

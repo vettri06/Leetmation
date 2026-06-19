@@ -1,0 +1,33 @@
+{
+    "problemName": "queue-reconstruction-by-height",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reconstructQueue(self, people: List[List[int]]) -> List[List[int]]:\r\n        people.sort(key=lambda x: (-x[0], x[1]))\r\n        ans = []\r\n        for p in people:\r\n            ans.insert(p[1], p)\r\n        return ans",
+    "problemId": 406,
+    "title": "Queue Reconstruction by Height",
+    "problemUrl": "https://leetcode.com/problems/queue-reconstruction-by-height/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0406.Queue Reconstruction by Height/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0406.Queue Reconstruction by Height/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0406.Queue Reconstruction by Height/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0406.Queue Reconstruction by Height/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0406.Queue Reconstruction by Height/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

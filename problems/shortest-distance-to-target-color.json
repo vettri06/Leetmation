@@ -1,0 +1,38 @@
+{
+    "problemName": "shortest-distance-to-target-color",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shortestDistanceColor(\r\n        self, colors: List[int], queries: List[List[int]]\r\n    ) -> List[int]:\r\n        n = len(colors)\r\n        right = [[inf] * 3 for _ in range(n + 1)]\r\n        for i in range(n - 1, -1, -1):\r\n            for j in range(3):\r\n                right[i][j] = right[i + 1][j]\r\n            right[i][colors[i] - 1] = i\r\n        left = [[-inf] * 3 for _ in range(n + 1)]\r\n        for i, c in enumerate(colors, 1):\r\n            for j in range(3):\r\n                left[i][j] = left[i - 1][j]\r\n            left[i][c - 1] = i - 1\r\n        ans = []\r\n        for i, c in queries:\r\n            d = min(i - left[i + 1][c - 1], right[i][c - 1] - i)\r\n            ans.append(-1 if d > n else d)\r\n        return ans",
+    "problemId": 1182,
+    "title": "Shortest Distance to Target Color",
+    "problemUrl": "https://leetcode.com/problems/shortest-distance-to-target-color/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1182.Shortest Distance to Target Color/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1182.Shortest Distance to Target Color/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1182.Shortest Distance to Target Color/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1182.Shortest Distance to Target Color/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1182.Shortest Distance to Target Color/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1182.Shortest Distance to Target Color/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

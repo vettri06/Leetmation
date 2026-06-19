@@ -1,0 +1,83 @@
+{
+    "problemName": "combination-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:\r\n        def dfs(i: int, s: int):\r\n            if s == 0:\r\n                ans.append(t[:])\r\n                return\r\n            if s < candidates[i]:\r\n                return\r\n            for j in range(i, len(candidates)):\r\n                t.append(candidates[j])\r\n                dfs(j, s - candidates[j])\r\n                t.pop()\r\n\r\n        candidates.sort()\r\n        t = []\r\n        ans = []\r\n        dfs(0, target)\r\n        return ans",
+    "problemId": 39,
+    "title": "Combination Sum",
+    "problemUrl": "https://leetcode.com/problems/combination-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0039.Combination Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0039.Combination Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0039.Combination Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0039.Combination Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0039.Combination Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0039.Combination Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0039.Combination Sum/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0039.Combination Sum/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0039.Combination Sum/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0039.Combination Sum/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0039.Combination Sum/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0039.Combination Sum/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0039.Combination Sum/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0039.Combination Sum/Solution2.cs",
+            "sourceFile": "Solution2.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0039.Combination Sum/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

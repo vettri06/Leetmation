@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-obstacle-removal-to-reach-corner",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumObstacles(self, grid: List[List[int]]) -> int:\r\n        m, n = len(grid), len(grid[0])\r\n        q = deque([(0, 0, 0)])\r\n        vis = set()\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        while 1:\r\n            i, j, k = q.popleft()\r\n            if i == m - 1 and j == n - 1:\r\n                return k\r\n            if (i, j) in vis:\r\n                continue\r\n            vis.add((i, j))\r\n            for a, b in pairwise(dirs):\r\n                x, y = i + a, j + b\r\n                if 0 <= x < m and 0 <= y < n:\r\n                    if grid[x][y] == 0:\r\n                        q.appendleft((x, y, k))\r\n                    else:\r\n                        q.append((x, y, k + 1))",
+    "problemId": 2290,
+    "title": "Minimum Obstacle Removal to Reach Corner",
+    "problemUrl": "https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2290.Minimum Obstacle Removal to Reach Corner/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2290.Minimum Obstacle Removal to Reach Corner/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2290.Minimum Obstacle Removal to Reach Corner/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2290.Minimum Obstacle Removal to Reach Corner/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2290.Minimum Obstacle Removal to Reach Corner/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2290.Minimum Obstacle Removal to Reach Corner/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

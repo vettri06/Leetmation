@@ -1,0 +1,33 @@
+{
+    "problemName": "closest-divisors",
+    "language": "python3",
+    "code": "class Solution:\r\n    def closestDivisors(self, num: int) -> List[int]:\r\n        def f(x):\r\n            for i in range(int(sqrt(x)), 0, -1):\r\n                if x % i == 0:\r\n                    return [i, x // i]\r\n\r\n        a = f(num + 1)\r\n        b = f(num + 2)\r\n        return a if abs(a[0] - a[1]) < abs(b[0] - b[1]) else b",
+    "problemId": 1362,
+    "title": "Closest Divisors",
+    "problemUrl": "https://leetcode.com/problems/closest-divisors/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1362.Closest Divisors/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1362.Closest Divisors/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1362.Closest Divisors/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1362.Closest Divisors/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1362.Closest Divisors/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

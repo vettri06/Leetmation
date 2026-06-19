@@ -1,0 +1,43 @@
+{
+    "problemName": "smallest-string-with-swaps",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:\r\n        def find(x: int) -> int:\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        n = len(s)\r\n        p = list(range(n))\r\n        for a, b in pairs:\r\n            p[find(a)] = find(b)\r\n        d = defaultdict(list)\r\n        for i, c in enumerate(s):\r\n            d[find(i)].append(c)\r\n        for i in d.keys():\r\n            d[i].sort(reverse=True)\r\n        return \"\".join(d[find(i)].pop() for i in range(n))",
+    "problemId": 1202,
+    "title": "Smallest String With Swaps",
+    "problemUrl": "https://leetcode.com/problems/smallest-string-with-swaps/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1202.Smallest String With Swaps/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1202.Smallest String With Swaps/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1202.Smallest String With Swaps/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1202.Smallest String With Swaps/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1202.Smallest String With Swaps/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1202.Smallest String With Swaps/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1202.Smallest String With Swaps/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

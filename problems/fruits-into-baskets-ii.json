@@ -1,0 +1,38 @@
+{
+    "problemName": "fruits-into-baskets-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numOfUnplacedFruits(self, fruits: List[int], baskets: List[int]) -> int:\r\n        n = len(fruits)\r\n        vis = [False] * n\r\n        ans = n\r\n        for x in fruits:\r\n            for i, y in enumerate(baskets):\r\n                if y >= x and not vis[i]:\r\n                    vis[i] = True\r\n                    ans -= 1\r\n                    break\r\n        return ans",
+    "problemId": 3477,
+    "title": "Fruits Into Baskets II",
+    "problemUrl": "https://leetcode.com/problems/fruits-into-baskets-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3477.Fruits Into Baskets II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3477.Fruits Into Baskets II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3477.Fruits Into Baskets II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3477.Fruits Into Baskets II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3477.Fruits Into Baskets II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3477.Fruits Into Baskets II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

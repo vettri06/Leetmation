@@ -1,0 +1,33 @@
+{
+    "problemName": "sum-of-subsequence-widths",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumSubseqWidths(self, nums: List[int]) -> int:\r\n        mod = 10**9 + 7\r\n        nums.sort()\r\n        ans, p = 0, 1\r\n        for i, v in enumerate(nums):\r\n            ans = (ans + (v - nums[-i - 1]) * p) % mod\r\n            p = (p << 1) % mod\r\n        return ans",
+    "problemId": 891,
+    "title": "Sum of Subsequence Widths",
+    "problemUrl": "https://leetcode.com/problems/sum-of-subsequence-widths/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0891.Sum of Subsequence Widths/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0891.Sum of Subsequence Widths/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0891.Sum of Subsequence Widths/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0891.Sum of Subsequence Widths/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0891.Sum of Subsequence Widths/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

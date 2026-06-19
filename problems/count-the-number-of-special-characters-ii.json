@@ -1,0 +1,43 @@
+{
+    "problemName": "count-the-number-of-special-characters-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfSpecialChars(self, word: str) -> int:\r\n        first, last = {}, {}\r\n        for i, c in enumerate(word):\r\n            if c not in first:\r\n                first[c] = i\r\n            last[c] = i\r\n        return sum(\r\n            a in last and b in first and last[a] < first[b]\r\n            for a, b in zip(ascii_lowercase, ascii_uppercase)\r\n        )",
+    "problemId": 3121,
+    "title": "Count the Number of Special Characters II",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-special-characters-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3121.Count the Number of Special Characters II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3121.Count the Number of Special Characters II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3121.Count the Number of Special Characters II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3121.Count the Number of Special Characters II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3121.Count the Number of Special Characters II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3121.Count the Number of Special Characters II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3121.Count the Number of Special Characters II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

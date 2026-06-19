@@ -1,0 +1,38 @@
+{
+    "problemName": "better-compression-of-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def betterCompression(self, compressed: str) -> str:\r\n        cnt = Counter()\r\n        i, n = 0, len(compressed)\r\n        while i < n:\r\n            j = i + 1\r\n            x = 0\r\n            while j < n and compressed[j].isdigit():\r\n                x = x * 10 + int(compressed[j])\r\n                j += 1\r\n            cnt[compressed[i]] += x\r\n            i = j\r\n        return \"\".join(sorted(f\"{k}{v}\" for k, v in cnt.items()))",
+    "problemId": 3167,
+    "title": "Better Compression of String",
+    "problemUrl": "https://leetcode.com/problems/better-compression-of-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3167.Better Compression of String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3167.Better Compression of String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3167.Better Compression of String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3167.Better Compression of String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3167.Better Compression of String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3167.Better Compression of String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

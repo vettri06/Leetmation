@@ -1,0 +1,43 @@
+{
+    "problemName": "most-frequent-even-element",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mostFrequentEven(self, nums: List[int]) -> int:\r\n        cnt = Counter(x for x in nums if x % 2 == 0)\r\n        ans, mx = -1, 0\r\n        for x, v in cnt.items():\r\n            if v > mx or (v == mx and ans > x):\r\n                ans, mx = x, v\r\n        return ans",
+    "problemId": 2404,
+    "title": "Most Frequent Even Element",
+    "problemUrl": "https://leetcode.com/problems/most-frequent-even-element/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2404.Most Frequent Even Element/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2404.Most Frequent Even Element/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2404.Most Frequent Even Element/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2404.Most Frequent Even Element/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2404.Most Frequent Even Element/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2404.Most Frequent Even Element/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2404.Most Frequent Even Element/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

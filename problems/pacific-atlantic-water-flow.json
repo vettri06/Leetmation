@@ -1,0 +1,43 @@
+{
+    "problemName": "pacific-atlantic-water-flow",
+    "language": "python3",
+    "code": "class Solution:\r\n    def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:\r\n        def bfs(q: Deque[Tuple[int, int]], vis: List[List[bool]]) -> None:\r\n            while q:\r\n                x, y = q.popleft()\r\n                for dx, dy in pairwise(dirs):\r\n                    nx, ny = x + dx, y + dy\r\n                    if (\r\n                        0 <= nx < m\r\n                        and 0 <= ny < n\r\n                        and not vis[nx][ny]\r\n                        and heights[nx][ny] >= heights[x][y]\r\n                    ):\r\n                        vis[nx][ny] = True\r\n                        q.append((nx, ny))\r\n\r\n        m, n = len(heights), len(heights[0])\r\n        vis1 = [[False] * n for _ in range(m)]\r\n        vis2 = [[False] * n for _ in range(m)]\r\n        q1: Deque[Tuple[int, int]] = deque()\r\n        q2: Deque[Tuple[int, int]] = deque()\r\n        dirs = (-1, 0, 1, 0, -1)\r\n\r\n        for i in range(m):\r\n            q1.append((i, 0))\r\n            vis1[i][0] = True\r\n            q2.append((i, n - 1))\r\n            vis2[i][n - 1] = True\r\n\r\n        for j in range(n):\r\n            q1.append((0, j))\r\n            vis1[0][j] = True\r\n            q2.append((m - 1, j))\r\n            vis2[m - 1][j] = True\r\n\r\n        bfs(q1, vis1)\r\n        bfs(q2, vis2)\r\n\r\n        return [(i, j) for i in range(m) for j in range(n) if vis1[i][j] and vis2[i][j]]",
+    "problemId": 417,
+    "title": "Pacific Atlantic Water Flow",
+    "problemUrl": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0417.Pacific Atlantic Water Flow/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0417.Pacific Atlantic Water Flow/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0417.Pacific Atlantic Water Flow/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0417.Pacific Atlantic Water Flow/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0417.Pacific Atlantic Water Flow/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0417.Pacific Atlantic Water Flow/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0417.Pacific Atlantic Water Flow/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

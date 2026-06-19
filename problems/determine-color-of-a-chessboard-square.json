@@ -1,0 +1,53 @@
+{
+    "problemName": "determine-color-of-a-chessboard-square",
+    "language": "python3",
+    "code": "class Solution:\r\n    def squareIsWhite(self, coordinates: str) -> bool:\r\n        return (ord(coordinates[0]) + ord(coordinates[1])) % 2 == 1",
+    "problemId": 1812,
+    "title": "Determine Color of a Chessboard Square",
+    "problemUrl": "https://leetcode.com/problems/determine-color-of-a-chessboard-square/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1812.Determine Color of a Chessboard Square/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1812.Determine Color of a Chessboard Square/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1812.Determine Color of a Chessboard Square/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1812.Determine Color of a Chessboard Square/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1812.Determine Color of a Chessboard Square/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1812.Determine Color of a Chessboard Square/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1812.Determine Color of a Chessboard Square/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1812.Determine Color of a Chessboard Square/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1812.Determine Color of a Chessboard Square/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "the-change-in-global-rankings",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    P AS (\r\n        SELECT team_id, SUM(points_change) AS delta\r\n        FROM PointsChange\r\n        GROUP BY team_id\r\n    )\r\nSELECT\r\n    team_id,\r\n    name,\r\n    CAST(RANK() OVER (ORDER BY points DESC, name) AS SIGNED) - CAST(\r\n        RANK() OVER (ORDER BY (points + delta) DESC, name) AS SIGNED\r\n    ) AS 'rank_diff'\r\nFROM\r\n    TeamPoints\r\n    JOIN P USING (team_id);",
+    "problemId": 2175,
+    "title": "The Change in Global Rankings",
+    "problemUrl": "https://leetcode.com/problems/the-change-in-global-rankings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2175.The Change in Global Rankings/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2175.The Change in Global Rankings/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

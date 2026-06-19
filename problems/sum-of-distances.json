@@ -1,0 +1,43 @@
+{
+    "problemName": "sum-of-distances",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distance(self, nums: List[int]) -> List[int]:\r\n        d = defaultdict(list)\r\n        for i, x in enumerate(nums):\r\n            d[x].append(i)\r\n        ans = [0] * len(nums)\r\n        for idx in d.values():\r\n            left, right = 0, sum(idx) - len(idx) * idx[0]\r\n            for i in range(len(idx)):\r\n                ans[idx[i]] = left + right\r\n                if i + 1 < len(idx):\r\n                    left += (idx[i + 1] - idx[i]) * (i + 1)\r\n                    right -= (idx[i + 1] - idx[i]) * (len(idx) - i - 1)\r\n        return ans",
+    "problemId": 2615,
+    "title": "Sum of Distances",
+    "problemUrl": "https://leetcode.com/problems/sum-of-distances/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2615.Sum of Distances/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2615.Sum of Distances/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2615.Sum of Distances/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2615.Sum of Distances/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2615.Sum of Distances/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2615.Sum of Distances/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2615.Sum of Distances/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

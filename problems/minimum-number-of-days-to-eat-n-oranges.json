@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-number-of-days-to-eat-n-oranges",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minDays(self, n: int) -> int:\r\n        @cache\r\n        def dfs(n: int) -> int:\r\n            if n < 2:\r\n                return n\r\n            return 1 + min(n % 2 + dfs(n // 2), n % 3 + dfs(n // 3))\r\n\r\n        return dfs(n)",
+    "problemId": 1553,
+    "title": "Minimum Number of Days to Eat N Oranges",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-days-to-eat-n-oranges/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1553.Minimum Number of Days to Eat N Oranges/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1553.Minimum Number of Days to Eat N Oranges/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1553.Minimum Number of Days to Eat N Oranges/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1553.Minimum Number of Days to Eat N Oranges/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1553.Minimum Number of Days to Eat N Oranges/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1553.Minimum Number of Days to Eat N Oranges/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

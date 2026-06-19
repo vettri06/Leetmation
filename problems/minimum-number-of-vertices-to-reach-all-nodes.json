@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-number-of-vertices-to-reach-all-nodes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findSmallestSetOfVertices(self, n: int, edges: List[List[int]]) -> List[int]:\r\n        cnt = Counter(t for _, t in edges)\r\n        return [i for i in range(n) if cnt[i] == 0]",
+    "problemId": 1557,
+    "title": "Minimum Number of Vertices to Reach All Nodes",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1557.Minimum Number of Vertices to Reach All Nodes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1557.Minimum Number of Vertices to Reach All Nodes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1557.Minimum Number of Vertices to Reach All Nodes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1557.Minimum Number of Vertices to Reach All Nodes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1557.Minimum Number of Vertices to Reach All Nodes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1557.Minimum Number of Vertices to Reach All Nodes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1557.Minimum Number of Vertices to Reach All Nodes/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

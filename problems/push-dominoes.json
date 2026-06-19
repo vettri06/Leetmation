@@ -1,0 +1,38 @@
+{
+    "problemName": "push-dominoes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def pushDominoes(self, dominoes: str) -> str:\r\n        n = len(dominoes)\r\n        q = deque()\r\n        time = [-1] * n\r\n        force = defaultdict(list)\r\n        for i, f in enumerate(dominoes):\r\n            if f != '.':\r\n                q.append(i)\r\n                time[i] = 0\r\n                force[i].append(f)\r\n        ans = ['.'] * n\r\n        while q:\r\n            i = q.popleft()\r\n            if len(force[i]) == 1:\r\n                ans[i] = f = force[i][0]\r\n                j = i - 1 if f == 'L' else i + 1\r\n                if 0 <= j < n:\r\n                    t = time[i]\r\n                    if time[j] == -1:\r\n                        q.append(j)\r\n                        time[j] = t + 1\r\n                        force[j].append(f)\r\n                    elif time[j] == t + 1:\r\n                        force[j].append(f)\r\n        return ''.join(ans)",
+    "problemId": 838,
+    "title": "Push Dominoes",
+    "problemUrl": "https://leetcode.com/problems/push-dominoes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0838.Push Dominoes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0838.Push Dominoes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0838.Push Dominoes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0838.Push Dominoes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0838.Push Dominoes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0838.Push Dominoes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

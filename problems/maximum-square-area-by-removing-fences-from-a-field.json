@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-square-area-by-removing-fences-from-a-field",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximizeSquareArea(\r\n        self, m: int, n: int, hFences: List[int], vFences: List[int]\r\n    ) -> int:\r\n        def f(nums: List[int], k: int) -> Set[int]:\r\n            nums.extend([1, k])\r\n            nums.sort()\r\n            return {b - a for a, b in combinations(nums, 2)}\r\n\r\n        mod = 10**9 + 7\r\n        hs = f(hFences, m)\r\n        vs = f(vFences, n)\r\n        ans = max(hs & vs, default=0)\r\n        return ans**2 % mod if ans else -1",
+    "problemId": 2975,
+    "title": "Maximum Square Area by Removing Fences From a Field",
+    "problemUrl": "https://leetcode.com/problems/maximum-square-area-by-removing-fences-from-a-field/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2975.Maximum Square Area by Removing Fences From a Field/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2975.Maximum Square Area by Removing Fences From a Field/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2975.Maximum Square Area by Removing Fences From a Field/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2975.Maximum Square Area by Removing Fences From a Field/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2975.Maximum Square Area by Removing Fences From a Field/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2975.Maximum Square Area by Removing Fences From a Field/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2975.Maximum Square Area by Removing Fences From a Field/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

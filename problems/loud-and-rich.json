@@ -1,0 +1,38 @@
+{
+    "problemName": "loud-and-rich",
+    "language": "python3",
+    "code": "class Solution:\r\n    def loudAndRich(self, richer: List[List[int]], quiet: List[int]) -> List[int]:\r\n        def dfs(i: int):\r\n            if ans[i] != -1:\r\n                return\r\n            ans[i] = i\r\n            for j in g[i]:\r\n                dfs(j)\r\n                if quiet[ans[j]] < quiet[ans[i]]:\r\n                    ans[i] = ans[j]\r\n\r\n        g = defaultdict(list)\r\n        for a, b in richer:\r\n            g[b].append(a)\r\n        n = len(quiet)\r\n        ans = [-1] * n\r\n        for i in range(n):\r\n            dfs(i)\r\n        return ans",
+    "problemId": 851,
+    "title": "Loud and Rich",
+    "problemUrl": "https://leetcode.com/problems/loud-and-rich/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0851.Loud and Rich/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0851.Loud and Rich/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0851.Loud and Rich/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0851.Loud and Rich/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0851.Loud and Rich/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0851.Loud and Rich/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

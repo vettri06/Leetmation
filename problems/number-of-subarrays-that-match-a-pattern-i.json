@@ -1,0 +1,43 @@
+{
+    "problemName": "number-of-subarrays-that-match-a-pattern-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countMatchingSubarrays(self, nums: List[int], pattern: List[int]) -> int:\r\n        def f(a: int, b: int) -> int:\r\n            return 0 if a == b else (1 if a < b else -1)\r\n\r\n        ans = 0\r\n        for i in range(len(nums) - len(pattern)):\r\n            ans += all(\r\n                f(nums[i + k], nums[i + k + 1]) == p for k, p in enumerate(pattern)\r\n            )\r\n        return ans",
+    "problemId": 3034,
+    "title": "Number of Subarrays That Match a Pattern I",
+    "problemUrl": "https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3034.Number of Subarrays That Match a Pattern I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3034.Number of Subarrays That Match a Pattern I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3034.Number of Subarrays That Match a Pattern I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3034.Number of Subarrays That Match a Pattern I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3034.Number of Subarrays That Match a Pattern I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3034.Number of Subarrays That Match a Pattern I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3034.Number of Subarrays That Match a Pattern I/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

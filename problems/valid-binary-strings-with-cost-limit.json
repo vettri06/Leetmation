@@ -1,0 +1,38 @@
+{
+    "problemName": "valid-binary-strings-with-cost-limit",
+    "language": "python3",
+    "code": "class Solution:\r\n    def generateValidStrings(self, n: int, k: int) -> list[str]:\r\n        def dfs(i: int, tot: int):\r\n            if i >= n:\r\n                ans.append(\"\".join(path))\r\n                return\r\n            path.append(\"0\")\r\n            dfs(i + 1, tot)\r\n            path.pop()\r\n            if (not path or path[-1] == \"0\") and tot + i <= k:\r\n                path.append(\"1\")\r\n                dfs(i + 1, tot + i)\r\n                path.pop()\r\n\r\n        ans = []\r\n        path = []\r\n        dfs(0, 0)\r\n        return ans",
+    "problemId": 3955,
+    "title": "Valid Binary Strings With Cost Limit",
+    "problemUrl": "https://leetcode.com/problems/valid-binary-strings-with-cost-limit/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3955.Valid Binary Strings With Cost Limit/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3955.Valid Binary Strings With Cost Limit/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3955.Valid Binary Strings With Cost Limit/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3955.Valid Binary Strings With Cost Limit/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3955.Valid Binary Strings With Cost Limit/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3955.Valid Binary Strings With Cost Limit/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "word-frequency",
+    "language": "bash",
+    "code": "# Read from the file words.txt and output the word frequency list to stdout.\r\ncat words.txt | tr -s ' ' '\\n' | sort | uniq -c | sort -nr | awk '{print $2, $1}'",
+    "problemId": 192,
+    "title": "Word Frequency",
+    "problemUrl": "https://leetcode.com/problems/word-frequency/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0192.Word Frequency/Solution.sh",
+    "sourceFile": "Solution.sh",
+    "sourceCandidates": [
+        {
+            "language": "bash",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0192.Word Frequency/Solution.sh",
+            "sourceFile": "Solution.sh"
+        }
+    ]
+}

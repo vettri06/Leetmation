@@ -1,0 +1,18 @@
+{
+    "problemName": "order-two-columns-independently",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    S AS (\r\n        SELECT\r\n            first_col,\r\n            ROW_NUMBER() OVER (ORDER BY first_col) AS rk\r\n        FROM Data\r\n    ),\r\n    T AS (\r\n        SELECT\r\n            second_col,\r\n            ROW_NUMBER() OVER (ORDER BY second_col DESC) AS rk\r\n        FROM Data\r\n    )\r\nSELECT first_col, second_col\r\nFROM\r\n    S\r\n    JOIN T USING (rk);",
+    "problemId": 2159,
+    "title": "Order Two Columns Independently",
+    "problemUrl": "https://leetcode.com/problems/order-two-columns-independently/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2159.Order Two Columns Independently/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2159.Order Two Columns Independently/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

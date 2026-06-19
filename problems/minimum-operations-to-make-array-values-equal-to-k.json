@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-operations-to-make-array-values-equal-to-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums: List[int], k: int) -> int:\r\n        s = set()\r\n        mi = inf\r\n        for x in nums:\r\n            if x < k:\r\n                return -1\r\n            mi = min(mi, x)\r\n            s.add(x)\r\n        return len(s) - int(k == mi)",
+    "problemId": 3375,
+    "title": "Minimum Operations to Make Array Values Equal to K",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3375.Minimum Operations to Make Array Values Equal to K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3375.Minimum Operations to Make Array Values Equal to K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3375.Minimum Operations to Make Array Values Equal to K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3375.Minimum Operations to Make Array Values Equal to K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3375.Minimum Operations to Make Array Values Equal to K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3375.Minimum Operations to Make Array Values Equal to K/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3375.Minimum Operations to Make Array Values Equal to K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3375.Minimum Operations to Make Array Values Equal to K/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

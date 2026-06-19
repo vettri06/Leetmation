@@ -1,0 +1,23 @@
+{
+    "problemName": "partial-function-with-placeholders",
+    "language": "javascript",
+    "code": "/**\r\n * @param {Function} fn\r\n * @param {Array} args\r\n * @return {Function}\r\n */\r\nvar partial = function (fn, args) {\r\n    return function (...restArgs) {\r\n        let i = 0;\r\n        for (let j = 0; j < args.length; ++j) {\r\n            if (args[j] === '_') {\r\n                args[j] = restArgs[i++];\r\n            }\r\n        }\r\n        while (i < restArgs.length) {\r\n            args.push(restArgs[i++]);\r\n        }\r\n        return fn.apply(this, args);\r\n    };\r\n};",
+    "problemId": 2797,
+    "title": "Partial Function with Placeholders",
+    "problemUrl": "https://leetcode.com/problems/partial-function-with-placeholders/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2797.Partial Function with Placeholders/Solution.js",
+    "sourceFile": "Solution.js",
+    "sourceCandidates": [
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2797.Partial Function with Placeholders/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2797.Partial Function with Placeholders/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

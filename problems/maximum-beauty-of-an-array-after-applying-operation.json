@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-beauty-of-an-array-after-applying-operation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumBeauty(self, nums: List[int], k: int) -> int:\r\n        m = max(nums) + k * 2 + 2\r\n        d = [0] * m\r\n        for x in nums:\r\n            d[x] += 1\r\n            d[x + k * 2 + 1] -= 1\r\n        return max(accumulate(d))",
+    "problemId": 2779,
+    "title": "Maximum Beauty of an Array After Applying Operation",
+    "problemUrl": "https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2779.Maximum Beauty of an Array After Applying Operation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2779.Maximum Beauty of an Array After Applying Operation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2779.Maximum Beauty of an Array After Applying Operation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2779.Maximum Beauty of an Array After Applying Operation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2779.Maximum Beauty of an Array After Applying Operation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2779.Maximum Beauty of an Array After Applying Operation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

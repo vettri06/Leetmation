@@ -1,0 +1,38 @@
+{
+    "problemName": "count-alternating-subarrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countAlternatingSubarrays(self, nums: List[int]) -> int:\r\n        ans = s = 1\r\n        for a, b in pairwise(nums):\r\n            s = s + 1 if a != b else 1\r\n            ans += s\r\n        return ans",
+    "problemId": 3101,
+    "title": "Count Alternating Subarrays",
+    "problemUrl": "https://leetcode.com/problems/count-alternating-subarrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3101.Count Alternating Subarrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3101.Count Alternating Subarrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3101.Count Alternating Subarrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3101.Count Alternating Subarrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3101.Count Alternating Subarrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3101.Count Alternating Subarrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

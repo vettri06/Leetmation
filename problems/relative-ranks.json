@@ -1,0 +1,38 @@
+{
+    "problemName": "relative-ranks",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findRelativeRanks(self, score: List[int]) -> List[str]:\r\n        n = len(score)\r\n        idx = list(range(n))\r\n        idx.sort(key=lambda x: -score[x])\r\n        top3 = [\"Gold Medal\", \"Silver Medal\", \"Bronze Medal\"]\r\n        ans = [None] * n\r\n        for i, j in enumerate(idx):\r\n            ans[j] = top3[i] if i < 3 else str(i + 1)\r\n        return ans",
+    "problemId": 506,
+    "title": "Relative Ranks",
+    "problemUrl": "https://leetcode.com/problems/relative-ranks/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0506.Relative Ranks/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0506.Relative Ranks/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0506.Relative Ranks/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0506.Relative Ranks/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0506.Relative Ranks/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0506.Relative Ranks/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

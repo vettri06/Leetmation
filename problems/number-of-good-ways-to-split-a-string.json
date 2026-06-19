@@ -1,0 +1,33 @@
+{
+    "problemName": "number-of-good-ways-to-split-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numSplits(self, s: str) -> int:\r\n        cnt = Counter(s)\r\n        vis = set()\r\n        ans = 0\r\n        for c in s:\r\n            vis.add(c)\r\n            cnt[c] -= 1\r\n            if cnt[c] == 0:\r\n                cnt.pop(c)\r\n            ans += len(vis) == len(cnt)\r\n        return ans",
+    "problemId": 1525,
+    "title": "Number of Good Ways to Split a String",
+    "problemUrl": "https://leetcode.com/problems/number-of-good-ways-to-split-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1525.Number of Good Ways to Split a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1525.Number of Good Ways to Split a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1525.Number of Good Ways to Split a String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1525.Number of Good Ways to Split a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1525.Number of Good Ways to Split a String/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

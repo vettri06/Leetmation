@@ -1,0 +1,53 @@
+{
+    "problemName": "maximum-product-subarray",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxProduct(self, nums: List[int]) -> int:\r\n        ans = f = g = nums[0]\r\n        for x in nums[1:]:\r\n            ff, gg = f, g\r\n            f = max(x, ff * x, gg * x)\r\n            g = min(x, ff * x, gg * x)\r\n            ans = max(ans, f)\r\n        return ans",
+    "problemId": 152,
+    "title": "Maximum Product Subarray",
+    "problemUrl": "https://leetcode.com/problems/maximum-product-subarray/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0152.Maximum Product Subarray/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0152.Maximum Product Subarray/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0152.Maximum Product Subarray/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0152.Maximum Product Subarray/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0152.Maximum Product Subarray/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0152.Maximum Product Subarray/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0152.Maximum Product Subarray/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0152.Maximum Product Subarray/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0152.Maximum Product Subarray/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

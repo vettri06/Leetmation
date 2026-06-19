@@ -1,0 +1,18 @@
+{
+    "problemName": "count-student-number-in-departments",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT dept_name, COUNT(student_id) AS student_number\r\nFROM\r\n    Department\r\n    LEFT JOIN Student USING (dept_id)\r\nGROUP BY dept_id\r\nORDER BY 2 DESC, 1;",
+    "problemId": 580,
+    "title": "Count Student Number in Departments",
+    "problemUrl": "https://leetcode.com/problems/count-student-number-in-departments/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0580.Count Student Number in Departments/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0580.Count Student Number in Departments/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

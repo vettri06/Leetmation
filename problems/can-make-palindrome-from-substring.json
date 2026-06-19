@@ -1,0 +1,38 @@
+{
+    "problemName": "can-make-palindrome-from-substring",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canMakePaliQueries(self, s: str, queries: List[List[int]]) -> List[bool]:\r\n        n = len(s)\r\n        ss = [[0] * 26 for _ in range(n + 1)]\r\n        for i, c in enumerate(s, 1):\r\n            ss[i] = ss[i - 1][:]\r\n            ss[i][ord(c) - ord(\"a\")] += 1\r\n        ans = []\r\n        for l, r, k in queries:\r\n            cnt = sum((ss[r + 1][j] - ss[l][j]) & 1 for j in range(26))\r\n            ans.append(cnt // 2 <= k)\r\n        return ans",
+    "problemId": 1177,
+    "title": "Can Make Palindrome from Substring",
+    "problemUrl": "https://leetcode.com/problems/can-make-palindrome-from-substring/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1177.Can Make Palindrome from Substring/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1177.Can Make Palindrome from Substring/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1177.Can Make Palindrome from Substring/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1177.Can Make Palindrome from Substring/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1177.Can Make Palindrome from Substring/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1177.Can Make Palindrome from Substring/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

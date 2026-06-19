@@ -1,0 +1,43 @@
+{
+    "problemName": "number-of-ways-to-buy-pens-and-pencils",
+    "language": "python3",
+    "code": "class Solution:\r\n    def waysToBuyPensPencils(self, total: int, cost1: int, cost2: int) -> int:\r\n        ans = 0\r\n        for x in range(total // cost1 + 1):\r\n            y = (total - (x * cost1)) // cost2 + 1\r\n            ans += y\r\n        return ans",
+    "problemId": 2240,
+    "title": "Number of Ways to Buy Pens and Pencils",
+    "problemUrl": "https://leetcode.com/problems/number-of-ways-to-buy-pens-and-pencils/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2240.Number of Ways to Buy Pens and Pencils/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2240.Number of Ways to Buy Pens and Pencils/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2240.Number of Ways to Buy Pens and Pencils/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2240.Number of Ways to Buy Pens and Pencils/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2240.Number of Ways to Buy Pens and Pencils/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2240.Number of Ways to Buy Pens and Pencils/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2240.Number of Ways to Buy Pens and Pencils/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-manhattan-distance-after-k-changes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxDistance(self, s: str, k: int) -> int:\r\n        def calc(a: str, b: str) -> int:\r\n            ans = mx = cnt = 0\r\n            for c in s:\r\n                if c == a or c == b:\r\n                    mx += 1\r\n                elif cnt < k:\r\n                    cnt += 1\r\n                    mx += 1\r\n                else:\r\n                    mx -= 1\r\n                ans = max(ans, mx)\r\n            return ans\r\n\r\n        a = calc(\"S\", \"E\")\r\n        b = calc(\"S\", \"W\")\r\n        c = calc(\"N\", \"E\")\r\n        d = calc(\"N\", \"W\")\r\n        return max(a, b, c, d)",
+    "problemId": 3443,
+    "title": "Maximum Manhattan Distance After K Changes",
+    "problemUrl": "https://leetcode.com/problems/maximum-manhattan-distance-after-k-changes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3443.Maximum Manhattan Distance After K Changes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3443.Maximum Manhattan Distance After K Changes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3443.Maximum Manhattan Distance After K Changes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3443.Maximum Manhattan Distance After K Changes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3443.Maximum Manhattan Distance After K Changes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3443.Maximum Manhattan Distance After K Changes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3443.Maximum Manhattan Distance After K Changes/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

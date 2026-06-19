@@ -1,0 +1,53 @@
+{
+    "problemName": "maximum-size-subarray-sum-equals-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSubArrayLen(self, nums: List[int], k: int) -> int:\r\n        d = {0: -1}\r\n        ans = s = 0\r\n        for i, x in enumerate(nums):\r\n            s += x\r\n            if s - k in d:\r\n                ans = max(ans, i - d[s - k])\r\n            if s not in d:\r\n                d[s] = i\r\n        return ans",
+    "problemId": 325,
+    "title": "Maximum Size Subarray Sum Equals k",
+    "problemUrl": "https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0325.Maximum Size Subarray Sum Equals k/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0325.Maximum Size Subarray Sum Equals k/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0325.Maximum Size Subarray Sum Equals k/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0325.Maximum Size Subarray Sum Equals k/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0325.Maximum Size Subarray Sum Equals k/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0325.Maximum Size Subarray Sum Equals k/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0325.Maximum Size Subarray Sum Equals k/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0325.Maximum Size Subarray Sum Equals k/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0325.Maximum Size Subarray Sum Equals k/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

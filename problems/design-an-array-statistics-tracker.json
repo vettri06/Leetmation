@@ -1,0 +1,28 @@
+{
+    "problemName": "design-an-array-statistics-tracker",
+    "language": "python3",
+    "code": "class StatisticsTracker:\r\n    def __init__(self):\r\n        self.q = deque()\r\n        self.s = 0\r\n        self.cnt = defaultdict(int)\r\n        self.sl = SortedList()\r\n        self.sl2 = SortedList(key=lambda x: (-x[1], x[0]))\r\n\r\n    def addNumber(self, number: int) -> None:\r\n        self.q.append(number)\r\n        self.sl.add(number)\r\n        self.sl2.discard((number, self.cnt[number]))\r\n        self.cnt[number] += 1\r\n        self.sl2.add((number, self.cnt[number]))\r\n        self.s += number\r\n\r\n    def removeFirstAddedNumber(self) -> None:\r\n        number = self.q.popleft()\r\n        self.sl.remove(number)\r\n        self.sl2.discard((number, self.cnt[number]))\r\n        self.cnt[number] -= 1\r\n        self.sl2.add((number, self.cnt[number]))\r\n        self.s -= number\r\n\r\n    def getMean(self) -> int:\r\n        return self.s // len(self.q)\r\n\r\n    def getMedian(self) -> int:\r\n        return self.sl[len(self.q) // 2]\r\n\r\n    def getMode(self) -> int:\r\n        return self.sl2[0][0]\r\n\r\n\r\n# Your StatisticsTracker object will be instantiated and called as such:\r\n# obj = StatisticsTracker()\r\n# obj.addNumber(number)\r\n# obj.removeFirstAddedNumber()\r\n# param_3 = obj.getMean()\r\n# param_4 = obj.getMedian()\r\n# param_5 = obj.getMode()",
+    "problemId": 3369,
+    "title": "Design an Array Statistics Tracker",
+    "problemUrl": "https://leetcode.com/problems/design-an-array-statistics-tracker/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3369.Design an Array Statistics Tracker/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3369.Design an Array Statistics Tracker/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3369.Design an Array Statistics Tracker/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3369.Design an Array Statistics Tracker/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

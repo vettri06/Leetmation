@@ -1,0 +1,23 @@
+{
+    "problemName": "find-zombie-sessions",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_zombie_sessions(app_events: pd.DataFrame) -> pd.DataFrame:\r\n    if not pd.api.types.is_datetime64_any_dtype(app_events[\"event_timestamp\"]):\r\n        app_events[\"event_timestamp\"] = pd.to_datetime(app_events[\"event_timestamp\"])\r\n\r\n    grouped = app_events.groupby([\"session_id\", \"user_id\"])\r\n\r\n    result = grouped.agg(\r\n        session_duration_minutes=(\r\n            \"event_timestamp\",\r\n            lambda x: (x.max() - x.min()).total_seconds() // 60,\r\n        ),\r\n        scroll_count=(\"event_type\", lambda x: (x == \"scroll\").sum()),\r\n        click_count=(\"event_type\", lambda x: (x == \"click\").sum()),\r\n        purchase_count=(\"event_type\", lambda x: (x == \"purchase\").sum()),\r\n    ).reset_index()\r\n\r\n    result = result[\r\n        (result[\"session_duration_minutes\"] >= 30)\r\n        & (result[\"click_count\"] / result[\"scroll_count\"] < 0.2)\r\n        & (result[\"purchase_count\"] == 0)\r\n        & (result[\"scroll_count\"] >= 5)\r\n    ]\r\n\r\n    result = result.sort_values(\r\n        by=[\"scroll_count\", \"session_id\"], ascending=[False, True]\r\n    ).reset_index(drop=True)\r\n\r\n    return result[[\"session_id\", \"user_id\", \"session_duration_minutes\", \"scroll_count\"]]",
+    "problemId": 3673,
+    "title": "Find Zombie Sessions",
+    "problemUrl": "https://leetcode.com/problems/find-zombie-sessions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3673.Find Zombie Sessions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3673.Find Zombie Sessions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3673.Find Zombie Sessions/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

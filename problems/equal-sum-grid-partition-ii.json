@@ -1,0 +1,38 @@
+{
+    "problemName": "equal-sum-grid-partition-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canPartitionGrid(self, grid: List[List[int]]) -> bool:\r\n        def check(g: List[List[int]]) -> bool:\r\n            m, n = len(g), len(g[0])\r\n            s1 = s2 = 0\r\n            cnt1 = defaultdict(int)\r\n            cnt2 = defaultdict(int)\r\n            for i, row in enumerate(g):\r\n                for j, x in enumerate(row):\r\n                    s2 += x\r\n                    cnt2[x] += 1\r\n            for i, row in enumerate(g[: m - 1]):\r\n                for x in row:\r\n                    s1 += x\r\n                    s2 -= x\r\n                    cnt1[x] += 1\r\n                    cnt2[x] -= 1\r\n                if s1 == s2:\r\n                    return True\r\n                if s1 < s2:\r\n                    diff = s2 - s1\r\n                    if cnt2[diff]:\r\n                        if (\r\n                            (m - i - 1 > 1 and n > 1)\r\n                            or (\r\n                                i == m - 2\r\n                                and (g[i + 1][0] == diff or g[i + 1][-1] == diff)\r\n                            )\r\n                            or (n == 1 and (g[i + 1][0] == diff or g[-1][0] == diff))\r\n                        ):\r\n                            return True\r\n                else:\r\n                    diff = s1 - s2\r\n                    if cnt1[diff]:\r\n                        if (\r\n                            (i + 1 > 1 and n > 1)\r\n                            or (i == 0 and (g[0][0] == diff or g[0][-1] == diff))\r\n                            or (n == 1 and (g[0][0] == diff or g[i][0] == diff))\r\n                        ):\r\n                            return True\r\n            return False\r\n\r\n        return check(grid) or check(list(zip(*grid)))",
+    "problemId": 3548,
+    "title": "Equal Sum Grid Partition II",
+    "problemUrl": "https://leetcode.com/problems/equal-sum-grid-partition-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3548.Equal Sum Grid Partition II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3548.Equal Sum Grid Partition II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3548.Equal Sum Grid Partition II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3548.Equal Sum Grid Partition II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3548.Equal Sum Grid Partition II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3548.Equal Sum Grid Partition II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

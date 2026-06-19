@@ -1,0 +1,38 @@
+{
+    "problemName": "total-appeal-of-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def appealSum(self, s: str) -> int:\r\n        ans = t = 0\r\n        pos = [-1] * 26\r\n        for i, c in enumerate(s):\r\n            c = ord(c) - ord('a')\r\n            t += i - pos[c]\r\n            ans += t\r\n            pos[c] = i\r\n        return ans",
+    "problemId": 2262,
+    "title": "Total Appeal of A String",
+    "problemUrl": "https://leetcode.com/problems/total-appeal-of-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2262.Total Appeal of A String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2262.Total Appeal of A String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2262.Total Appeal of A String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2262.Total Appeal of A String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2262.Total Appeal of A String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2262.Total Appeal of A String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

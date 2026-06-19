@@ -1,0 +1,48 @@
+{
+    "problemName": "find-the-count-of-good-integers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countGoodIntegers(self, n: int, k: int) -> int:\r\n        fac = [factorial(i) for i in range(n + 1)]\r\n        ans = 0\r\n        vis = set()\r\n        base = 10 ** ((n - 1) // 2)\r\n        for i in range(base, base * 10):\r\n            s = str(i)\r\n            s += s[::-1][n % 2 :]\r\n            if int(s) % k:\r\n                continue\r\n            t = \"\".join(sorted(s))\r\n            if t in vis:\r\n                continue\r\n            vis.add(t)\r\n            cnt = Counter(t)\r\n            res = (n - cnt[\"0\"]) * fac[n - 1]\r\n            for x in cnt.values():\r\n                res //= fac[x]\r\n            ans += res\r\n        return ans",
+    "problemId": 3272,
+    "title": "Find the Count of Good Integers",
+    "problemUrl": "https://leetcode.com/problems/find-the-count-of-good-integers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3272.Find the Count of Good Integers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3272.Find the Count of Good Integers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3272.Find the Count of Good Integers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3272.Find the Count of Good Integers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3272.Find the Count of Good Integers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3272.Find the Count of Good Integers/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3272.Find the Count of Good Integers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3272.Find the Count of Good Integers/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

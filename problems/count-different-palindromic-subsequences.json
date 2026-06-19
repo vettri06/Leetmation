@@ -1,0 +1,33 @@
+{
+    "problemName": "count-different-palindromic-subsequences",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPalindromicSubsequences(self, s: str) -> int:\r\n        mod = 10**9 + 7\r\n        n = len(s)\r\n        dp = [[[0] * 4 for _ in range(n)] for _ in range(n)]\r\n        for i, c in enumerate(s):\r\n            dp[i][i][ord(c) - ord('a')] = 1\r\n        for l in range(2, n + 1):\r\n            for i in range(n - l + 1):\r\n                j = i + l - 1\r\n                for c in 'abcd':\r\n                    k = ord(c) - ord('a')\r\n                    if s[i] == s[j] == c:\r\n                        dp[i][j][k] = 2 + sum(dp[i + 1][j - 1])\r\n                    elif s[i] == c:\r\n                        dp[i][j][k] = dp[i][j - 1][k]\r\n                    elif s[j] == c:\r\n                        dp[i][j][k] = dp[i + 1][j][k]\r\n                    else:\r\n                        dp[i][j][k] = dp[i + 1][j - 1][k]\r\n        return sum(dp[0][-1]) % mod",
+    "problemId": 730,
+    "title": "Count Different Palindromic Subsequences",
+    "problemUrl": "https://leetcode.com/problems/count-different-palindromic-subsequences/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0730.Count Different Palindromic Subsequences/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0730.Count Different Palindromic Subsequences/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0730.Count Different Palindromic Subsequences/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0730.Count Different Palindromic Subsequences/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0730.Count Different Palindromic Subsequences/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

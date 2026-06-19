@@ -1,0 +1,43 @@
+{
+    "problemName": "the-latest-time-to-catch-a-bus",
+    "language": "python3",
+    "code": "class Solution:\r\n    def latestTimeCatchTheBus(\r\n        self, buses: List[int], passengers: List[int], capacity: int\r\n    ) -> int:\r\n        buses.sort()\r\n        passengers.sort()\r\n        j = 0\r\n        for t in buses:\r\n            c = capacity\r\n            while c and j < len(passengers) and passengers[j] <= t:\r\n                c, j = c - 1, j + 1\r\n        j -= 1\r\n        ans = buses[-1] if c else passengers[j]\r\n        while ~j and passengers[j] == ans:\r\n            ans, j = ans - 1, j - 1\r\n        return ans",
+    "problemId": 2332,
+    "title": "The Latest Time to Catch a Bus",
+    "problemUrl": "https://leetcode.com/problems/the-latest-time-to-catch-a-bus/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2332.The Latest Time to Catch a Bus/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2332.The Latest Time to Catch a Bus/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2332.The Latest Time to Catch a Bus/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2332.The Latest Time to Catch a Bus/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2332.The Latest Time to Catch a Bus/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2332.The Latest Time to Catch a Bus/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2332.The Latest Time to Catch a Bus/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

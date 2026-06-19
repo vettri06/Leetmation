@@ -1,0 +1,23 @@
+{
+    "problemName": "find-cumulative-salary-of-an-employee",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    id,\r\n    month,\r\n    SUM(salary) OVER (\r\n        PARTITION BY id\r\n        ORDER BY month\r\n        RANGE 2 PRECEDING\r\n    ) AS Salary\r\nFROM employee\r\nWHERE\r\n    (id, month) NOT IN (\r\n        SELECT\r\n            id,\r\n            MAX(month)\r\n        FROM Employee\r\n        GROUP BY id\r\n    )\r\nORDER BY id, month DESC;",
+    "problemId": 579,
+    "title": "Find Cumulative Salary of an Employee",
+    "problemUrl": "https://leetcode.com/problems/find-cumulative-salary-of-an-employee/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0579.Find Cumulative Salary of an Employee/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0579.Find Cumulative Salary of an Employee/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0579.Find Cumulative Salary of an Employee/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

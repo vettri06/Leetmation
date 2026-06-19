@@ -1,0 +1,23 @@
+{
+    "problemName": "shortest-distance-in-a-line",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT MIN(p2.x - p1.x) AS shortest\r\nFROM\r\n    Point AS p1\r\n    JOIN Point AS p2 ON p1.x < p2.x;",
+    "problemId": 613,
+    "title": "Shortest Distance in a Line",
+    "problemUrl": "https://leetcode.com/problems/shortest-distance-in-a-line/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0613.Shortest Distance in a Line/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0613.Shortest Distance in a Line/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0613.Shortest Distance in a Line/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

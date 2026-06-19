@@ -1,0 +1,18 @@
+{
+    "problemName": "build-the-equation",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            power,\r\n            CASE power\r\n                WHEN 0 THEN IF(factor > 0, CONCAT('+', factor), factor)\r\n                WHEN 1 THEN CONCAT(\r\n                    IF(factor > 0, CONCAT('+', factor), factor),\r\n                    'X'\r\n                )\r\n                ELSE CONCAT(\r\n                    IF(factor > 0, CONCAT('+', factor), factor),\r\n                    'X^',\r\n                    power\r\n                )\r\n            END AS it\r\n        FROM Terms\r\n    )\r\nSELECT\r\n    CONCAT(GROUP_CONCAT(it ORDER BY power DESC SEPARATOR \"\"), '=0') AS equation\r\nFROM T;",
+    "problemId": 2118,
+    "title": "Build the Equation",
+    "problemUrl": "https://leetcode.com/problems/build-the-equation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2118.Build the Equation/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2118.Build the Equation/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

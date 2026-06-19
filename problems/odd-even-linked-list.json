@@ -1,0 +1,38 @@
+{
+    "problemName": "odd-even-linked-list",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:\r\n        if head is None:\r\n            return None\r\n        a = head\r\n        b = c = head.next\r\n        while b and b.next:\r\n            a.next = b.next\r\n            a = a.next\r\n            b.next = a.next\r\n            b = b.next\r\n        a.next = c\r\n        return head",
+    "problemId": 328,
+    "title": "Odd Even Linked List",
+    "problemUrl": "https://leetcode.com/problems/odd-even-linked-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0328.Odd Even Linked List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0328.Odd Even Linked List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0328.Odd Even Linked List/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0328.Odd Even Linked List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0328.Odd Even Linked List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0328.Odd Even Linked List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-balanced-subarray-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestBalanced(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n\r\n        class Node:\r\n            __slots__ = (\"l\", \"r\", \"mn\", \"mx\", \"lazy\")\r\n\r\n            def __init__(self):\r\n                self.l = self.r = 0\r\n                self.mn = self.mx = 0\r\n                self.lazy = 0\r\n\r\n        tr = [Node() for _ in range((n + 1) * 4)]\r\n\r\n        def build(u: int, l: int, r: int):\r\n            tr[u].l, tr[u].r = l, r\r\n            tr[u].mn = tr[u].mx = tr[u].lazy = 0\r\n            if l == r:\r\n                return\r\n            mid = (l + r) >> 1\r\n            build(u << 1, l, mid)\r\n            build(u << 1 | 1, mid + 1, r)\r\n\r\n        def apply(u: int, v: int):\r\n            tr[u].mn += v\r\n            tr[u].mx += v\r\n            tr[u].lazy += v\r\n\r\n        def pushdown(u: int):\r\n            if tr[u].lazy:\r\n                apply(u << 1, tr[u].lazy)\r\n                apply(u << 1 | 1, tr[u].lazy)\r\n                tr[u].lazy = 0\r\n\r\n        def pushup(u: int):\r\n            tr[u].mn = min(tr[u << 1].mn, tr[u << 1 | 1].mn)\r\n            tr[u].mx = max(tr[u << 1].mx, tr[u << 1 | 1].mx)\r\n\r\n        def modify(u: int, l: int, r: int, v: int):\r\n            if tr[u].l >= l and tr[u].r <= r:\r\n                apply(u, v)\r\n                return\r\n            pushdown(u)\r\n            mid = (tr[u].l + tr[u].r) >> 1\r\n            if l <= mid:\r\n                modify(u << 1, l, r, v)\r\n            if r > mid:\r\n                modify(u << 1 | 1, l, r, v)\r\n            pushup(u)\r\n\r\n        def query(u: int, target: int) -> int:\r\n            if tr[u].l == tr[u].r:\r\n                return tr[u].l\r\n            pushdown(u)\r\n            if tr[u << 1].mn <= target <= tr[u << 1].mx:\r\n                return query(u << 1, target)\r\n            return query(u << 1 | 1, target)\r\n\r\n        build(1, 0, n)\r\n\r\n        last = {}\r\n        now = ans = 0\r\n\r\n        for i, x in enumerate(nums, start=1):\r\n            det = 1 if (x & 1) else -1\r\n            if x in last:\r\n                modify(1, last[x], n, -det)\r\n                now -= det\r\n            last[x] = i\r\n            modify(1, i, n, det)\r\n            now += det\r\n            pos = query(1, now)\r\n            ans = max(ans, i - pos)\r\n\r\n        return ans",
+    "problemId": 3721,
+    "title": "Longest Balanced Subarray II",
+    "problemUrl": "https://leetcode.com/problems/longest-balanced-subarray-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3721.Longest Balanced Subarray II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3721.Longest Balanced Subarray II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3721.Longest Balanced Subarray II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3721.Longest Balanced Subarray II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3721.Longest Balanced Subarray II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3721.Longest Balanced Subarray II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

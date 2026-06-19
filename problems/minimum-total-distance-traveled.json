@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-total-distance-traveled",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumTotalDistance(self, robot: List[int], factory: List[List[int]]) -> int:\r\n        @cache\r\n        def dfs(i, j):\r\n            if i == len(robot):\r\n                return 0\r\n            if j == len(factory):\r\n                return inf\r\n            ans = dfs(i, j + 1)\r\n            t = 0\r\n            for k in range(factory[j][1]):\r\n                if i + k == len(robot):\r\n                    break\r\n                t += abs(robot[i + k] - factory[j][0])\r\n                ans = min(ans, t + dfs(i + k + 1, j + 1))\r\n            return ans\r\n\r\n        robot.sort()\r\n        factory.sort()\r\n        ans = dfs(0, 0)\r\n        dfs.cache_clear()\r\n        return ans",
+    "problemId": 2463,
+    "title": "Minimum Total Distance Traveled",
+    "problemUrl": "https://leetcode.com/problems/minimum-total-distance-traveled/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2463.Minimum Total Distance Traveled/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2463.Minimum Total Distance Traveled/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2463.Minimum Total Distance Traveled/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2463.Minimum Total Distance Traveled/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2463.Minimum Total Distance Traveled/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

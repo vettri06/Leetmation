@@ -1,0 +1,23 @@
+{
+    "problemName": "find-overlapping-shifts",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_overlapping_shifts(employee_shifts: pd.DataFrame) -> pd.DataFrame:\r\n    merged_shifts = employee_shifts.merge(\r\n        employee_shifts, on=\"employee_id\", suffixes=(\"_t1\", \"_t2\")\r\n    )\r\n    overlapping_shifts = merged_shifts[\r\n        (merged_shifts[\"start_time_t1\"] < merged_shifts[\"start_time_t2\"])\r\n        & (merged_shifts[\"end_time_t1\"] > merged_shifts[\"start_time_t2\"])\r\n    ]\r\n    result = (\r\n        overlapping_shifts.groupby(\"employee_id\")\r\n        .size()\r\n        .reset_index(name=\"overlapping_shifts\")\r\n    )\r\n    result = result[result[\"overlapping_shifts\"] > 0]\r\n    result = result.sort_values(\"employee_id\").reset_index(drop=True)\r\n    return result",
+    "problemId": 3262,
+    "title": "Find Overlapping Shifts",
+    "problemUrl": "https://leetcode.com/problems/find-overlapping-shifts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3262.Find Overlapping Shifts/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3262.Find Overlapping Shifts/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3262.Find Overlapping Shifts/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

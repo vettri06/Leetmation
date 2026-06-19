@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-score-words-formed-by-letters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxScoreWords(\r\n        self, words: List[str], letters: List[str], score: List[int]\r\n    ) -> int:\r\n        cnt = Counter(letters)\r\n        n = len(words)\r\n        ans = 0\r\n        for i in range(1 << n):\r\n            cur = Counter(''.join([words[j] for j in range(n) if i >> j & 1]))\r\n            if all(v <= cnt[c] for c, v in cur.items()):\r\n                t = sum(v * score[ord(c) - ord('a')] for c, v in cur.items())\r\n                ans = max(ans, t)\r\n        return ans",
+    "problemId": 1255,
+    "title": "Maximum Score Words Formed by Letters",
+    "problemUrl": "https://leetcode.com/problems/maximum-score-words-formed-by-letters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1255.Maximum Score Words Formed by Letters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1255.Maximum Score Words Formed by Letters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1255.Maximum Score Words Formed by Letters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1255.Maximum Score Words Formed by Letters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1255.Maximum Score Words Formed by Letters/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

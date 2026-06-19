@@ -1,0 +1,18 @@
+{
+    "problemName": "ads-performance",
+    "language": "mysql",
+    "code": "SELECT\r\n    ad_id,\r\n    ROUND(IFNULL(SUM(action = 'Clicked') / SUM(action IN ('Clicked', 'Viewed')) * 100, 0), 2) AS ctr\r\nFROM Ads\r\nGROUP BY 1\r\nORDER BY 2 DESC, 1;",
+    "problemId": 1322,
+    "title": "Ads Performance",
+    "problemUrl": "https://leetcode.com/problems/ads-performance/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1322.Ads Performance/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1322.Ads Performance/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

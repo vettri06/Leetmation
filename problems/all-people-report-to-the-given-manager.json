@@ -1,0 +1,18 @@
+{
+    "problemName": "all-people-report-to-the-given-manager",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT e1.employee_id\r\nFROM\r\n    Employees AS e1\r\n    JOIN Employees AS e2 ON e1.manager_id = e2.employee_id\r\n    JOIN Employees AS e3 ON e2.manager_id = e3.employee_id\r\nWHERE e1.employee_id != 1 AND e3.manager_id = 1;",
+    "problemId": 1270,
+    "title": "All People Report to the Given Manager",
+    "problemUrl": "https://leetcode.com/problems/all-people-report-to-the-given-manager/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1270.All People Report to the Given Manager/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1270.All People Report to the Given Manager/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

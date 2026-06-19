@@ -1,0 +1,58 @@
+{
+    "problemName": "generalized-abbreviation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def generateAbbreviations(self, word: str) -> List[str]:\r\n        def dfs(i: int) -> List[str]:\r\n            if i >= n:\r\n                return [\"\"]\r\n            ans = [word[i] + s for s in dfs(i + 1)]\r\n            for j in range(i + 1, n + 1):\r\n                for s in dfs(j + 1):\r\n                    ans.append(str(j - i) + (word[j] if j < n else \"\") + s)\r\n            return ans\r\n\r\n        n = len(word)\r\n        return dfs(0)",
+    "problemId": 320,
+    "title": "Generalized Abbreviation",
+    "problemUrl": "https://leetcode.com/problems/generalized-abbreviation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0320.Generalized Abbreviation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0320.Generalized Abbreviation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0320.Generalized Abbreviation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0320.Generalized Abbreviation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0320.Generalized Abbreviation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0320.Generalized Abbreviation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0320.Generalized Abbreviation/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0320.Generalized Abbreviation/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0320.Generalized Abbreviation/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0320.Generalized Abbreviation/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

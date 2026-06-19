@@ -1,0 +1,43 @@
+{
+    "problemName": "maximize-subarray-gcd-score",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxGCDScore(self, nums: List[int], k: int) -> int:\r\n        n = len(nums)\r\n        cnt = [0] * n\r\n        for i, x in enumerate(nums):\r\n            while x % 2 == 0:\r\n                cnt[i] += 1\r\n                x //= 2\r\n        ans = 0\r\n        for l in range(n):\r\n            g = 0\r\n            mi = inf\r\n            t = 0\r\n            for r in range(l, n):\r\n                g = gcd(g, nums[r])\r\n                if cnt[r] < mi:\r\n                    mi = cnt[r]\r\n                    t = 1\r\n                elif cnt[r] == mi:\r\n                    t += 1\r\n                ans = max(ans, (g if t > k else g * 2) * (r - l + 1))\r\n        return ans",
+    "problemId": 3574,
+    "title": "Maximize Subarray GCD Score",
+    "problemUrl": "https://leetcode.com/problems/maximize-subarray-gcd-score/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3574.Maximize Subarray GCD Score/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3574.Maximize Subarray GCD Score/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3574.Maximize Subarray GCD Score/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3574.Maximize Subarray GCD Score/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3574.Maximize Subarray GCD Score/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3574.Maximize Subarray GCD Score/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3574.Maximize Subarray GCD Score/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "problemName": "circular-permutation-in-binary-representation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def circularPermutation(self, n: int, start: int) -> List[int]:\r\n        g = [i ^ (i >> 1) for i in range(1 << n)]\r\n        j = g.index(start)\r\n        return g[j:] + g[:j]",
+    "problemId": 1238,
+    "title": "Circular Permutation in Binary Representation",
+    "problemUrl": "https://leetcode.com/problems/circular-permutation-in-binary-representation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1238.Circular Permutation in Binary Representation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1238.Circular Permutation in Binary Representation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1238.Circular Permutation in Binary Representation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1238.Circular Permutation in Binary Representation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1238.Circular Permutation in Binary Representation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1238.Circular Permutation in Binary Representation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1238.Circular Permutation in Binary Representation/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1238.Circular Permutation in Binary Representation/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1238.Circular Permutation in Binary Representation/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1238.Circular Permutation in Binary Representation/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

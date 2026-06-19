@@ -1,0 +1,43 @@
+{
+    "problemName": "check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isPrefixOfWord(self, sentence: str, searchWord: str) -> int:\r\n        for i, s in enumerate(sentence.split(), 1):\r\n            if s.startswith(searchWord):\r\n                return i\r\n        return -1",
+    "problemId": 1455,
+    "title": "Check If a Word Occurs As a Prefix of Any Word in a Sentence",
+    "problemUrl": "https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1455.Check If a Word Occurs As a Prefix of Any Word in a Sentence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1455.Check If a Word Occurs As a Prefix of Any Word in a Sentence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1455.Check If a Word Occurs As a Prefix of Any Word in a Sentence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1455.Check If a Word Occurs As a Prefix of Any Word in a Sentence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1455.Check If a Word Occurs As a Prefix of Any Word in a Sentence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1455.Check If a Word Occurs As a Prefix of Any Word in a Sentence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1455.Check If a Word Occurs As a Prefix of Any Word in a Sentence/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

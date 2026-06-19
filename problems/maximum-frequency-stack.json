@@ -1,0 +1,53 @@
+{
+    "problemName": "maximum-frequency-stack",
+    "language": "python3",
+    "code": "class FreqStack:\r\n    def __init__(self):\r\n        self.cnt = defaultdict(int)\r\n        self.q = []\r\n        self.ts = 0\r\n\r\n    def push(self, val: int) -> None:\r\n        self.ts += 1\r\n        self.cnt[val] += 1\r\n        heappush(self.q, (-self.cnt[val], -self.ts, val))\r\n\r\n    def pop(self) -> int:\r\n        val = heappop(self.q)[2]\r\n        self.cnt[val] -= 1\r\n        return val\r\n\r\n\r\n# Your FreqStack object will be instantiated and called as such:\r\n# obj = FreqStack()\r\n# obj.push(val)\r\n# param_2 = obj.pop()",
+    "problemId": 895,
+    "title": "Maximum Frequency Stack",
+    "problemUrl": "https://leetcode.com/problems/maximum-frequency-stack/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0895.Maximum Frequency Stack/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0895.Maximum Frequency Stack/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0895.Maximum Frequency Stack/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0895.Maximum Frequency Stack/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0895.Maximum Frequency Stack/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0895.Maximum Frequency Stack/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0895.Maximum Frequency Stack/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0895.Maximum Frequency Stack/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0895.Maximum Frequency Stack/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

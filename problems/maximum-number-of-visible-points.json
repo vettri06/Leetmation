@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-number-of-visible-points",
+    "language": "python3",
+    "code": "class Solution:\r\n    def visiblePoints(\r\n        self, points: List[List[int]], angle: int, location: List[int]\r\n    ) -> int:\r\n        v = []\r\n        x, y = location\r\n        same = 0\r\n        for xi, yi in points:\r\n            if xi == x and yi == y:\r\n                same += 1\r\n            else:\r\n                v.append(atan2(yi - y, xi - x))\r\n        v.sort()\r\n        n = len(v)\r\n        v += [deg + 2 * pi for deg in v]\r\n        t = angle * pi / 180\r\n        mx = max((bisect_right(v, v[i] + t) - i for i in range(n)), default=0)\r\n        return mx + same",
+    "problemId": 1610,
+    "title": "Maximum Number of Visible Points",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-visible-points/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1610.Maximum Number of Visible Points/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1610.Maximum Number of Visible Points/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1610.Maximum Number of Visible Points/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1610.Maximum Number of Visible Points/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1610.Maximum Number of Visible Points/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

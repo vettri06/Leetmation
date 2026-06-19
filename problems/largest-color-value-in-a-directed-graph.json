@@ -1,0 +1,38 @@
+{
+    "problemName": "largest-color-value-in-a-directed-graph",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestPathValue(self, colors: str, edges: List[List[int]]) -> int:\r\n        n = len(colors)\r\n        indeg = [0] * n\r\n        g = defaultdict(list)\r\n        for a, b in edges:\r\n            g[a].append(b)\r\n            indeg[b] += 1\r\n        q = deque()\r\n        dp = [[0] * 26 for _ in range(n)]\r\n        for i, v in enumerate(indeg):\r\n            if v == 0:\r\n                q.append(i)\r\n                c = ord(colors[i]) - ord('a')\r\n                dp[i][c] += 1\r\n        cnt = 0\r\n        ans = 1\r\n        while q:\r\n            i = q.popleft()\r\n            cnt += 1\r\n            for j in g[i]:\r\n                indeg[j] -= 1\r\n                if indeg[j] == 0:\r\n                    q.append(j)\r\n                c = ord(colors[j]) - ord('a')\r\n                for k in range(26):\r\n                    dp[j][k] = max(dp[j][k], dp[i][k] + (c == k))\r\n                    ans = max(ans, dp[j][k])\r\n        return -1 if cnt < n else ans",
+    "problemId": 1857,
+    "title": "Largest Color Value in a Directed Graph",
+    "problemUrl": "https://leetcode.com/problems/largest-color-value-in-a-directed-graph/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1857.Largest Color Value in a Directed Graph/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1857.Largest Color Value in a Directed Graph/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1857.Largest Color Value in a Directed Graph/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1857.Largest Color Value in a Directed Graph/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1857.Largest Color Value in a Directed Graph/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1857.Largest Color Value in a Directed Graph/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-encrypted-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getEncryptedString(self, s: str, k: int) -> str:\r\n        cs = list(s)\r\n        n = len(s)\r\n        for i in range(n):\r\n            cs[i] = s[(i + k) % n]\r\n        return \"\".join(cs)",
+    "problemId": 3210,
+    "title": "Find the Encrypted String",
+    "problemUrl": "https://leetcode.com/problems/find-the-encrypted-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3210.Find the Encrypted String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3210.Find the Encrypted String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3210.Find the Encrypted String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3210.Find the Encrypted String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3210.Find the Encrypted String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3210.Find the Encrypted String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

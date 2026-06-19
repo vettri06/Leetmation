@@ -1,0 +1,38 @@
+{
+    "problemName": "difference-of-number-of-distinct-values-on-diagonals",
+    "language": "python3",
+    "code": "class Solution:\r\n    def differenceOfDistinctValues(self, grid: List[List[int]]) -> List[List[int]]:\r\n        m, n = len(grid), len(grid[0])\r\n        ans = [[0] * n for _ in range(m)]\r\n        for i in range(m):\r\n            for j in range(n):\r\n                x, y = i, j\r\n                s = set()\r\n                while x and y:\r\n                    x, y = x - 1, y - 1\r\n                    s.add(grid[x][y])\r\n                tl = len(s)\r\n                x, y = i, j\r\n                s = set()\r\n                while x + 1 < m and y + 1 < n:\r\n                    x, y = x + 1, y + 1\r\n                    s.add(grid[x][y])\r\n                br = len(s)\r\n                ans[i][j] = abs(tl - br)\r\n        return ans",
+    "problemId": 2711,
+    "title": "Difference of Number of Distinct Values on Diagonals",
+    "problemUrl": "https://leetcode.com/problems/difference-of-number-of-distinct-values-on-diagonals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2711.Difference of Number of Distinct Values on Diagonals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2711.Difference of Number of Distinct Values on Diagonals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2711.Difference of Number of Distinct Values on Diagonals/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2711.Difference of Number of Distinct Values on Diagonals/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2711.Difference of Number of Distinct Values on Diagonals/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2711.Difference of Number of Distinct Values on Diagonals/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

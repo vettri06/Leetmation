@@ -1,0 +1,38 @@
+{
+    "problemName": "checking-existence-of-edge-length-limited-paths-ii",
+    "language": "python3",
+    "code": "class PersistentUnionFind:\r\n    def __init__(self, n):\r\n        self.rank = [0] * n\r\n        self.p = list(range(n))\r\n        self.version = [inf] * n\r\n\r\n    def find(self, x, t=inf):\r\n        if self.p[x] == x or self.version[x] >= t:\r\n            return x\r\n        return self.find(self.p[x], t)\r\n\r\n    def union(self, a, b, t):\r\n        pa, pb = self.find(a), self.find(b)\r\n        if pa == pb:\r\n            return False\r\n        if self.rank[pa] > self.rank[pb]:\r\n            self.version[pb] = t\r\n            self.p[pb] = pa\r\n        else:\r\n            self.version[pa] = t\r\n            self.p[pa] = pb\r\n            if self.rank[pa] == self.rank[pb]:\r\n                self.rank[pb] += 1\r\n        return True\r\n\r\n\r\nclass DistanceLimitedPathsExist:\r\n    def __init__(self, n: int, edgeList: List[List[int]]):\r\n        self.puf = PersistentUnionFind(n)\r\n        edgeList.sort(key=lambda x: x[2])\r\n        for u, v, dis in edgeList:\r\n            self.puf.union(u, v, dis)\r\n\r\n    def query(self, p: int, q: int, limit: int) -> bool:\r\n        return self.puf.find(p, limit) == self.puf.find(q, limit)",
+    "problemId": 1724,
+    "title": "Checking Existence of Edge Length Limited Paths II",
+    "problemUrl": "https://leetcode.com/problems/checking-existence-of-edge-length-limited-paths-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1724.Checking Existence of Edge Length Limited Paths II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1724.Checking Existence of Edge Length Limited Paths II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1724.Checking Existence of Edge Length Limited Paths II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1724.Checking Existence of Edge Length Limited Paths II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1724.Checking Existence of Edge Length Limited Paths II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1724.Checking Existence of Edge Length Limited Paths II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

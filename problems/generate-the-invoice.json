@@ -1,0 +1,18 @@
+{
+    "problemName": "generate-the-invoice",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    P AS (\r\n        SELECT *\r\n        FROM\r\n            Purchases\r\n            JOIN Products USING (product_id)\r\n    ),\r\n    T AS (\r\n        SELECT invoice_id, SUM(price * quantity) AS amount\r\n        FROM P\r\n        GROUP BY invoice_id\r\n        ORDER BY 2 DESC, 1\r\n        LIMIT 1\r\n    )\r\nSELECT product_id, quantity, (quantity * price) AS price\r\nFROM\r\n    P\r\n    JOIN T USING (invoice_id);",
+    "problemId": 2362,
+    "title": "Generate the Invoice",
+    "problemUrl": "https://leetcode.com/problems/generate-the-invoice/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2362.Generate the Invoice/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2362.Generate the Invoice/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

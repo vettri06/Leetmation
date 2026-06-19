@@ -1,0 +1,38 @@
+{
+    "problemName": "binary-prefix-divisible-by-5",
+    "language": "python3",
+    "code": "class Solution:\r\n    def prefixesDivBy5(self, nums: List[int]) -> List[bool]:\r\n        ans = []\r\n        x = 0\r\n        for v in nums:\r\n            x = (x << 1 | v) % 5\r\n            ans.append(x == 0)\r\n        return ans",
+    "problemId": 1018,
+    "title": "Binary Prefix Divisible By 5",
+    "problemUrl": "https://leetcode.com/problems/binary-prefix-divisible-by-5/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1018.Binary Prefix Divisible By 5/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1018.Binary Prefix Divisible By 5/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1018.Binary Prefix Divisible By 5/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1018.Binary Prefix Divisible By 5/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1018.Binary Prefix Divisible By 5/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1018.Binary Prefix Divisible By 5/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

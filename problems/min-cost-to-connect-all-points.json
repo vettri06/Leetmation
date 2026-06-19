@@ -1,0 +1,58 @@
+{
+    "problemName": "min-cost-to-connect-all-points",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCostConnectPoints(self, points: List[List[int]]) -> int:\r\n        n = len(points)\r\n        g = [[0] * n for _ in range(n)]\r\n        dist = [inf] * n\r\n        vis = [False] * n\r\n        for i, (x1, y1) in enumerate(points):\r\n            for j in range(i + 1, n):\r\n                x2, y2 = points[j]\r\n                t = abs(x1 - x2) + abs(y1 - y2)\r\n                g[i][j] = g[j][i] = t\r\n        dist[0] = 0\r\n        ans = 0\r\n        for _ in range(n):\r\n            i = -1\r\n            for j in range(n):\r\n                if not vis[j] and (i == -1 or dist[j] < dist[i]):\r\n                    i = j\r\n            vis[i] = True\r\n            ans += dist[i]\r\n            for j in range(n):\r\n                if not vis[j]:\r\n                    dist[j] = min(dist[j], g[i][j])\r\n        return ans",
+    "problemId": 1584,
+    "title": "Min Cost to Connect All Points",
+    "problemUrl": "https://leetcode.com/problems/min-cost-to-connect-all-points/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1584.Min Cost to Connect All Points/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1584.Min Cost to Connect All Points/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1584.Min Cost to Connect All Points/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1584.Min Cost to Connect All Points/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1584.Min Cost to Connect All Points/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1584.Min Cost to Connect All Points/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1584.Min Cost to Connect All Points/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1584.Min Cost to Connect All Points/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1584.Min Cost to Connect All Points/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1584.Min Cost to Connect All Points/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

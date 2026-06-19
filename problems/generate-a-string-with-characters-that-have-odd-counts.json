@@ -1,0 +1,38 @@
+{
+    "problemName": "generate-a-string-with-characters-that-have-odd-counts",
+    "language": "python3",
+    "code": "class Solution:\r\n    def generateTheString(self, n: int) -> str:\r\n        return 'a' * n if n & 1 else 'a' * (n - 1) + 'b'",
+    "problemId": 1374,
+    "title": "Generate a String With Characters That Have Odd Counts",
+    "problemUrl": "https://leetcode.com/problems/generate-a-string-with-characters-that-have-odd-counts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1374.Generate a String With Characters That Have Odd Counts/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1374.Generate a String With Characters That Have Odd Counts/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1374.Generate a String With Characters That Have Odd Counts/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1374.Generate a String With Characters That Have Odd Counts/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1374.Generate a String With Characters That Have Odd Counts/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1374.Generate a String With Characters That Have Odd Counts/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

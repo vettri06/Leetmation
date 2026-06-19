@@ -1,0 +1,43 @@
+{
+    "problemName": "count-unhappy-friends",
+    "language": "python3",
+    "code": "class Solution:\r\n    def unhappyFriends(\r\n        self, n: int, preferences: List[List[int]], pairs: List[List[int]]\r\n    ) -> int:\r\n        d = [{x: j for j, x in enumerate(p)} for p in preferences]\r\n        p = {}\r\n        for x, y in pairs:\r\n            p[x] = y\r\n            p[y] = x\r\n        ans = 0\r\n        for x in range(n):\r\n            y = p[x]\r\n            for i in range(d[x][y]):\r\n                u = preferences[x][i]\r\n                v = p[u]\r\n                if d[u][x] < d[u][v]:\r\n                    ans += 1\r\n                    break\r\n        return ans",
+    "problemId": 1583,
+    "title": "Count Unhappy Friends",
+    "problemUrl": "https://leetcode.com/problems/count-unhappy-friends/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1583.Count Unhappy Friends/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1583.Count Unhappy Friends/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1583.Count Unhappy Friends/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1583.Count Unhappy Friends/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1583.Count Unhappy Friends/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1583.Count Unhappy Friends/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1583.Count Unhappy Friends/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

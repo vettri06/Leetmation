@@ -1,0 +1,53 @@
+{
+    "problemName": "diameter-of-n-ary-tree",
+    "language": "python3",
+    "code": "\"\"\"\r\n# Definition for a Node.\r\nclass Node:\r\n    def __init__(self, val=None, children=None):\r\n        self.val = val\r\n        self.children = children if children is not None else []\r\n\"\"\"\r\n\r\n\r\nclass Solution:\r\n    def diameter(self, root: 'Node') -> int:\r\n        \"\"\"\r\n        :type root: 'Node'\r\n        :rtype: int\r\n        \"\"\"\r\n\r\n        def dfs(root):\r\n            if root is None:\r\n                return 0\r\n            nonlocal ans\r\n            m1 = m2 = 0\r\n            for child in root.children:\r\n                t = dfs(child)\r\n                if t > m1:\r\n                    m2, m1 = m1, t\r\n                elif t > m2:\r\n                    m2 = t\r\n            ans = max(ans, m1 + m2)\r\n            return 1 + m1\r\n\r\n        ans = 0\r\n        dfs(root)\r\n        return ans",
+    "problemId": 1522,
+    "title": "Diameter of N-Ary Tree",
+    "problemUrl": "https://leetcode.com/problems/diameter-of-n-ary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1522.Diameter of N-Ary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1522.Diameter of N-Ary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1522.Diameter of N-Ary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1522.Diameter of N-Ary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1522.Diameter of N-Ary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1522.Diameter of N-Ary Tree/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1522.Diameter of N-Ary Tree/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1522.Diameter of N-Ary Tree/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1522.Diameter of N-Ary Tree/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

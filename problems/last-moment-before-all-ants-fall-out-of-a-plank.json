@@ -1,0 +1,38 @@
+{
+    "problemName": "last-moment-before-all-ants-fall-out-of-a-plank",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getLastMoment(self, n: int, left: List[int], right: List[int]) -> int:\r\n        ans = 0\r\n        for x in left:\r\n            ans = max(ans, x)\r\n        for x in right:\r\n            ans = max(ans, n - x)\r\n        return ans",
+    "problemId": 1503,
+    "title": "Last Moment Before All Ants Fall Out of a Plank",
+    "problemUrl": "https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1503.Last Moment Before All Ants Fall Out of a Plank/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1503.Last Moment Before All Ants Fall Out of a Plank/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1503.Last Moment Before All Ants Fall Out of a Plank/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1503.Last Moment Before All Ants Fall Out of a Plank/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1503.Last Moment Before All Ants Fall Out of a Plank/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1503.Last Moment Before All Ants Fall Out of a Plank/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "maximize-y-sum-by-picking-a-triplet-of-distinct-x-values",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSumDistinctTriplet(self, x: List[int], y: List[int]) -> int:\r\n        arr = [(a, b) for a, b in zip(x, y)]\r\n        arr.sort(key=lambda x: -x[1])\r\n        vis = set()\r\n        ans = 0\r\n        for a, b in arr:\r\n            if a in vis:\r\n                continue\r\n            vis.add(a)\r\n            ans += b\r\n            if len(vis) == 3:\r\n                return ans\r\n        return -1",
+    "problemId": 3572,
+    "title": "Maximize Y‑Sum by Picking a Triplet of Distinct X‑Values",
+    "problemUrl": "https://leetcode.com/problems/maximize-y-sum-by-picking-a-triplet-of-distinct-x-values/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3572.Maximize Y‑Sum by Picking a Triplet of Distinct X‑Values/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3572.Maximize Y‑Sum by Picking a Triplet of Distinct X‑Values/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3572.Maximize Y‑Sum by Picking a Triplet of Distinct X‑Values/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3572.Maximize Y‑Sum by Picking a Triplet of Distinct X‑Values/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3572.Maximize Y‑Sum by Picking a Triplet of Distinct X‑Values/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3572.Maximize Y‑Sum by Picking a Triplet of Distinct X‑Values/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-remove-to-make-valid-parentheses",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minRemoveToMakeValid(self, s: str) -> str:\r\n        stk = []\r\n        x = 0\r\n        for c in s:\r\n            if c == ')' and x == 0:\r\n                continue\r\n            if c == '(':\r\n                x += 1\r\n            elif c == ')':\r\n                x -= 1\r\n            stk.append(c)\r\n        x = 0\r\n        ans = []\r\n        for c in stk[::-1]:\r\n            if c == '(' and x == 0:\r\n                continue\r\n            if c == ')':\r\n                x += 1\r\n            elif c == '(':\r\n                x -= 1\r\n            ans.append(c)\r\n        return ''.join(ans[::-1])",
+    "problemId": 1249,
+    "title": "Minimum Remove to Make Valid Parentheses",
+    "problemUrl": "https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1249.Minimum Remove to Make Valid Parentheses/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1249.Minimum Remove to Make Valid Parentheses/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1249.Minimum Remove to Make Valid Parentheses/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1249.Minimum Remove to Make Valid Parentheses/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1249.Minimum Remove to Make Valid Parentheses/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1249.Minimum Remove to Make Valid Parentheses/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1249.Minimum Remove to Make Valid Parentheses/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

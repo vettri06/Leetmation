@@ -1,0 +1,43 @@
+{
+    "problemName": "find-words-containing-character",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findWordsContaining(self, words: List[str], x: str) -> List[int]:\r\n        return [i for i, w in enumerate(words) if x in w]",
+    "problemId": 2942,
+    "title": "Find Words Containing Character",
+    "problemUrl": "https://leetcode.com/problems/find-words-containing-character/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2942.Find Words Containing Character/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2942.Find Words Containing Character/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2942.Find Words Containing Character/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2942.Find Words Containing Character/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2942.Find Words Containing Character/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2942.Find Words Containing Character/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2942.Find Words Containing Character/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

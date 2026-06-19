@@ -1,0 +1,43 @@
+{
+    "problemName": "swim-in-rising-water",
+    "language": "python3",
+    "code": "class Solution:\r\n    def swimInWater(self, grid: List[List[int]]) -> int:\r\n        def find(x: int) -> int:\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        n = len(grid)\r\n        m = n * n\r\n        p = list(range(m))\r\n        hi = [0] * m\r\n        for i, row in enumerate(grid):\r\n            for j, h in enumerate(row):\r\n                hi[h] = i * n + j\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        for t in range(m):\r\n            x, y = divmod(hi[t], n)\r\n            for dx, dy in pairwise(dirs):\r\n                nx, ny = x + dx, y + dy\r\n                if 0 <= nx < n and 0 <= ny < n and grid[nx][ny] <= t:\r\n                    p[find(x * n + y)] = find(nx * n + ny)\r\n            if find(0) == find(m - 1):\r\n                return t\r\n        return 0",
+    "problemId": 778,
+    "title": "Swim in Rising Water",
+    "problemUrl": "https://leetcode.com/problems/swim-in-rising-water/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0778.Swim in Rising Water/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0778.Swim in Rising Water/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0778.Swim in Rising Water/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0778.Swim in Rising Water/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0778.Swim in Rising Water/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0778.Swim in Rising Water/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0778.Swim in Rising Water/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

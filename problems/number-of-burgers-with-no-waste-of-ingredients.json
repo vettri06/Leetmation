@@ -1,0 +1,43 @@
+{
+    "problemName": "number-of-burgers-with-no-waste-of-ingredients",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numOfBurgers(self, tomatoSlices: int, cheeseSlices: int) -> List[int]:\r\n        k = 4 * cheeseSlices - tomatoSlices\r\n        y = k // 2\r\n        x = cheeseSlices - y\r\n        return [] if k % 2 or y < 0 or x < 0 else [x, y]",
+    "problemId": 1276,
+    "title": "Number of Burgers with No Waste of Ingredients",
+    "problemUrl": "https://leetcode.com/problems/number-of-burgers-with-no-waste-of-ingredients/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1276.Number of Burgers with No Waste of Ingredients/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1276.Number of Burgers with No Waste of Ingredients/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1276.Number of Burgers with No Waste of Ingredients/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1276.Number of Burgers with No Waste of Ingredients/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1276.Number of Burgers with No Waste of Ingredients/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1276.Number of Burgers with No Waste of Ingredients/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1276.Number of Burgers with No Waste of Ingredients/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

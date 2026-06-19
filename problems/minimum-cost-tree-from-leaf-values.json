@@ -1,0 +1,68 @@
+{
+    "problemName": "minimum-cost-tree-from-leaf-values",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mctFromLeafValues(self, arr: List[int]) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int) -> Tuple:\r\n            if i == j:\r\n                return 0, arr[i]\r\n            s, mx = inf, -1\r\n            for k in range(i, j):\r\n                s1, mx1 = dfs(i, k)\r\n                s2, mx2 = dfs(k + 1, j)\r\n                t = s1 + s2 + mx1 * mx2\r\n                if s > t:\r\n                    s = t\r\n                    mx = max(mx1, mx2)\r\n            return s, mx\r\n\r\n        return dfs(0, len(arr) - 1)[0]",
+    "problemId": 1130,
+    "title": "Minimum Cost Tree From Leaf Values",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1130.Minimum Cost Tree From Leaf Values/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1130.Minimum Cost Tree From Leaf Values/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1130.Minimum Cost Tree From Leaf Values/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1130.Minimum Cost Tree From Leaf Values/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1130.Minimum Cost Tree From Leaf Values/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1130.Minimum Cost Tree From Leaf Values/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1130.Minimum Cost Tree From Leaf Values/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1130.Minimum Cost Tree From Leaf Values/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1130.Minimum Cost Tree From Leaf Values/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1130.Minimum Cost Tree From Leaf Values/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1130.Minimum Cost Tree From Leaf Values/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1130.Minimum Cost Tree From Leaf Values/Solution3.py",
+            "sourceFile": "Solution3.py"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-moves-to-balance-circular-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minMoves(self, balance: List[int]) -> int:\r\n        if sum(balance) < 0:\r\n            return -1\r\n        mn = min(balance)\r\n        if mn >= 0:\r\n            return 0\r\n        need = -mn\r\n        i = balance.index(mn)\r\n        n = len(balance)\r\n        ans = 0\r\n        for j in range(1, n):\r\n            a = balance[(i - j + n) % n]\r\n            b = balance[(i + j - n) % n]\r\n            c1 = min(a, need)\r\n            need -= c1\r\n            ans += c1 * j\r\n            c2 = min(b, need)\r\n            need -= c2\r\n            ans += c2 * j\r\n        return ans",
+    "problemId": 3776,
+    "title": "Minimum Moves to Balance Circular Array",
+    "problemUrl": "https://leetcode.com/problems/minimum-moves-to-balance-circular-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3776.Minimum Moves to Balance Circular Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3776.Minimum Moves to Balance Circular Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3776.Minimum Moves to Balance Circular Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3776.Minimum Moves to Balance Circular Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3776.Minimum Moves to Balance Circular Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3776.Minimum Moves to Balance Circular Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

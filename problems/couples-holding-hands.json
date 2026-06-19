@@ -1,0 +1,43 @@
+{
+    "problemName": "couples-holding-hands",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSwapsCouples(self, row: List[int]) -> int:\r\n        def find(x: int) -> int:\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        n = len(row) >> 1\r\n        p = list(range(n))\r\n        for i in range(0, len(row), 2):\r\n            a, b = row[i] >> 1, row[i + 1] >> 1\r\n            p[find(a)] = find(b)\r\n        return n - sum(i == find(i) for i in range(n))",
+    "problemId": 765,
+    "title": "Couples Holding Hands",
+    "problemUrl": "https://leetcode.com/problems/couples-holding-hands/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0765.Couples Holding Hands/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0765.Couples Holding Hands/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0765.Couples Holding Hands/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0765.Couples Holding Hands/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0765.Couples Holding Hands/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0765.Couples Holding Hands/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0765.Couples Holding Hands/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

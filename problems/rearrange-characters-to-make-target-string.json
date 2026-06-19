@@ -1,0 +1,48 @@
+{
+    "problemName": "rearrange-characters-to-make-target-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def rearrangeCharacters(self, s: str, target: str) -> int:\r\n        cnt1 = Counter(s)\r\n        cnt2 = Counter(target)\r\n        return min(cnt1[c] // v for c, v in cnt2.items())",
+    "problemId": 2287,
+    "title": "Rearrange Characters to Make Target String",
+    "problemUrl": "https://leetcode.com/problems/rearrange-characters-to-make-target-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2287.Rearrange Characters to Make Target String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2287.Rearrange Characters to Make Target String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2287.Rearrange Characters to Make Target String/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2287.Rearrange Characters to Make Target String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2287.Rearrange Characters to Make Target String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2287.Rearrange Characters to Make Target String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2287.Rearrange Characters to Make Target String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2287.Rearrange Characters to Make Target String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

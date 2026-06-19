@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-distance-in-arrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxDistance(self, arrays: List[List[int]]) -> int:\r\n        ans = 0\r\n        mi, mx = arrays[0][0], arrays[0][-1]\r\n        for arr in arrays[1:]:\r\n            a, b = abs(arr[0] - mx), abs(arr[-1] - mi)\r\n            ans = max(ans, a, b)\r\n            mi = min(mi, arr[0])\r\n            mx = max(mx, arr[-1])\r\n        return ans",
+    "problemId": 624,
+    "title": "Maximum Distance in Arrays",
+    "problemUrl": "https://leetcode.com/problems/maximum-distance-in-arrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0624.Maximum Distance in Arrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0624.Maximum Distance in Arrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0624.Maximum Distance in Arrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0624.Maximum Distance in Arrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0624.Maximum Distance in Arrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0624.Maximum Distance in Arrays/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0624.Maximum Distance in Arrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0624.Maximum Distance in Arrays/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

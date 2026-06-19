@@ -1,0 +1,38 @@
+{
+    "problemName": "maximize-the-number-of-partitions-after-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxPartitionsAfterOperations(self, s: str, k: int) -> int:\r\n        @cache\r\n        def dfs(i: int, cur: int, t: int) -> int:\r\n            if i >= n:\r\n                return 1\r\n            v = 1 << (ord(s[i]) - ord(\"a\"))\r\n            nxt = cur | v\r\n            if nxt.bit_count() > k:\r\n                ans = dfs(i + 1, v, t) + 1\r\n            else:\r\n                ans = dfs(i + 1, nxt, t)\r\n            if t:\r\n                for j in range(26):\r\n                    nxt = cur | (1 << j)\r\n                    if nxt.bit_count() > k:\r\n                        ans = max(ans, dfs(i + 1, 1 << j, 0) + 1)\r\n                    else:\r\n                        ans = max(ans, dfs(i + 1, nxt, 0))\r\n            return ans\r\n\r\n        n = len(s)\r\n        return dfs(0, 0, 1)",
+    "problemId": 3003,
+    "title": "Maximize the Number of Partitions After Operations",
+    "problemUrl": "https://leetcode.com/problems/maximize-the-number-of-partitions-after-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3003.Maximize the Number of Partitions After Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3003.Maximize the Number of Partitions After Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3003.Maximize the Number of Partitions After Operations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3003.Maximize the Number of Partitions After Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3003.Maximize the Number of Partitions After Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3003.Maximize the Number of Partitions After Operations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

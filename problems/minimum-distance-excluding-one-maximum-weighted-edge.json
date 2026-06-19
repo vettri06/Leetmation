@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-distance-excluding-one-maximum-weighted-edge",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCostExcludingMax(self, n: int, edges: List[List[int]]) -> int:\r\n        g = [[] for _ in range(n)]\r\n        for u, v, w in edges:\r\n            g[u].append((v, w))\r\n            g[v].append((u, w))\r\n        dist = [[inf] * 2 for _ in range(n)]\r\n        dist[0][0] = 0\r\n        pq = [(0, 0, 0)]\r\n        while pq:\r\n            cur, u, used = heappop(pq)\r\n            if cur > dist[u][used]:\r\n                continue\r\n            if u == n - 1 and used:\r\n                return cur\r\n            for v, w in g[u]:\r\n                nxt = cur + w\r\n                if nxt < dist[v][used]:\r\n                    dist[v][used] = nxt\r\n                    heappush(pq, (nxt, v, used))\r\n                if used == 0:\r\n                    nxt = cur\r\n                    if nxt < dist[v][1]:\r\n                        dist[v][1] = nxt\r\n                        heappush(pq, (nxt, v, 1))\r\n        return dist[n - 1][1]",
+    "problemId": 3778,
+    "title": "Minimum Distance Excluding One Maximum Weighted Edge",
+    "problemUrl": "https://leetcode.com/problems/minimum-distance-excluding-one-maximum-weighted-edge/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3778.Minimum Distance Excluding One Maximum Weighted Edge/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3778.Minimum Distance Excluding One Maximum Weighted Edge/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3778.Minimum Distance Excluding One Maximum Weighted Edge/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3778.Minimum Distance Excluding One Maximum Weighted Edge/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3778.Minimum Distance Excluding One Maximum Weighted Edge/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3778.Minimum Distance Excluding One Maximum Weighted Edge/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3778.Minimum Distance Excluding One Maximum Weighted Edge/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

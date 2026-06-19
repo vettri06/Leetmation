@@ -1,0 +1,33 @@
+{
+    "problemName": "second-highest-salary",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef second_highest_salary(employee: pd.DataFrame) -> pd.DataFrame:\r\n    # Drop any duplicate salary values to avoid counting duplicates as separate salary ranks\r\n    unique_salaries = employee[\"salary\"].drop_duplicates()\r\n\r\n    # Sort the unique salaries in descending order and get the second highest salary\r\n    second_highest = (\r\n        unique_salaries.nlargest(2).iloc[-1] if len(unique_salaries) >= 2 else None\r\n    )\r\n\r\n    # If the second highest salary doesn't exist (e.g., there are fewer than two unique salaries), return None\r\n    if second_highest is None:\r\n        return pd.DataFrame({\"SecondHighestSalary\": [None]})\r\n\r\n    # Create a DataFrame with the second highest salary\r\n    result_df = pd.DataFrame({\"SecondHighestSalary\": [second_highest]})\r\n\r\n    return result_df",
+    "problemId": 176,
+    "title": "Second Highest Salary",
+    "problemUrl": "https://leetcode.com/problems/second-highest-salary/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0176.Second Highest Salary/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0176.Second Highest Salary/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0176.Second Highest Salary/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0176.Second Highest Salary/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0176.Second Highest Salary/Solution3.sql",
+            "sourceFile": "Solution3.sql"
+        }
+    ]
+}

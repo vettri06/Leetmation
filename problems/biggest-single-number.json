@@ -1,0 +1,23 @@
+{
+    "problemName": "biggest-single-number",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT MAX(num) AS num\r\nFROM\r\n    (\r\n        SELECT num\r\n        FROM MyNumbers\r\n        GROUP BY 1\r\n        HAVING COUNT(1) = 1\r\n    ) AS t;",
+    "problemId": 619,
+    "title": "Biggest Single Number",
+    "problemUrl": "https://leetcode.com/problems/biggest-single-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0619.Biggest Single Number/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0619.Biggest Single Number/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0619.Biggest Single Number/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

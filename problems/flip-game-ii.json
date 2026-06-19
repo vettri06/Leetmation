@@ -1,0 +1,53 @@
+{
+    "problemName": "flip-game-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canWin(self, currentState: str) -> bool:\r\n        @cache\r\n        def dfs(mask):\r\n            for i in range(n - 1):\r\n                if (mask & (1 << i)) == 0 or (mask & (1 << (i + 1)) == 0):\r\n                    continue\r\n                if dfs(mask ^ (1 << i) ^ (1 << (i + 1))):\r\n                    continue\r\n                return True\r\n            return False\r\n\r\n        mask, n = 0, len(currentState)\r\n        for i, c in enumerate(currentState):\r\n            if c == '+':\r\n                mask |= 1 << i\r\n        return dfs(mask)",
+    "problemId": 294,
+    "title": "Flip Game II",
+    "problemUrl": "https://leetcode.com/problems/flip-game-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0294.Flip Game II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0294.Flip Game II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0294.Flip Game II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0294.Flip Game II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0294.Flip Game II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0294.Flip Game II/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0294.Flip Game II/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0294.Flip Game II/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0294.Flip Game II/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

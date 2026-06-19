@@ -1,0 +1,38 @@
+{
+    "problemName": "make-a-positive-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def makeArrayPositive(self, nums: List[int]) -> int:\r\n        l = -1\r\n        ans = pre_mx = s = 0\r\n        for r, x in enumerate(nums):\r\n            s += x\r\n            if r - l > 2 and s <= pre_mx:\r\n                ans += 1\r\n                l = r\r\n                pre_mx = s = 0\r\n            elif r - l >= 2:\r\n                pre_mx = max(pre_mx, s - x - nums[r - 1])\r\n        return ans",
+    "problemId": 3511,
+    "title": "Make a Positive Array",
+    "problemUrl": "https://leetcode.com/problems/make-a-positive-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3511.Make a Positive Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3511.Make a Positive Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3511.Make a Positive Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3511.Make a Positive Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3511.Make a Positive Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3511.Make a Positive Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

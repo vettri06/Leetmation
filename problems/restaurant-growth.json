@@ -1,0 +1,23 @@
+{
+    "problemName": "restaurant-growth",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    t AS (\r\n        SELECT\r\n            visited_on,\r\n            SUM(amount) OVER (\r\n                ORDER BY visited_on\r\n                ROWS 6 PRECEDING\r\n            ) AS amount,\r\n            RANK() OVER (\r\n                ORDER BY visited_on\r\n                ROWS 6 PRECEDING\r\n            ) AS rk\r\n        FROM\r\n            (\r\n                SELECT visited_on, SUM(amount) AS amount\r\n                FROM Customer\r\n                GROUP BY visited_on\r\n            ) AS tt\r\n    )\r\nSELECT visited_on, amount, ROUND(amount / 7, 2) AS average_amount\r\nFROM t\r\nWHERE rk > 6;",
+    "problemId": 1321,
+    "title": "Restaurant Growth",
+    "problemUrl": "https://leetcode.com/problems/restaurant-growth/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1321.Restaurant Growth/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1321.Restaurant Growth/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1321.Restaurant Growth/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

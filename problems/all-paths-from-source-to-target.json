@@ -1,0 +1,58 @@
+{
+    "problemName": "all-paths-from-source-to-target",
+    "language": "python3",
+    "code": "class Solution:\r\n    def allPathsSourceTarget(self, graph: List[List[int]]) -> List[List[int]]:\r\n        n = len(graph)\r\n        q = deque([[0]])\r\n        ans = []\r\n        while q:\r\n            path = q.popleft()\r\n            u = path[-1]\r\n            if u == n - 1:\r\n                ans.append(path)\r\n                continue\r\n            for v in graph[u]:\r\n                q.append(path + [v])\r\n        return ans",
+    "problemId": 797,
+    "title": "All Paths From Source to Target",
+    "problemUrl": "https://leetcode.com/problems/all-paths-from-source-to-target/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0797.All Paths From Source to Target/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0797.All Paths From Source to Target/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0797.All Paths From Source to Target/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0797.All Paths From Source to Target/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0797.All Paths From Source to Target/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0797.All Paths From Source to Target/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0797.All Paths From Source to Target/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0797.All Paths From Source to Target/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0797.All Paths From Source to Target/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0797.All Paths From Source to Target/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

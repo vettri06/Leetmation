@@ -1,0 +1,48 @@
+{
+    "problemName": "summary-ranges",
+    "language": "python3",
+    "code": "class Solution:\r\n    def summaryRanges(self, nums: List[int]) -> List[str]:\r\n        def f(i: int, j: int) -> str:\r\n            return str(nums[i]) if i == j else f'{nums[i]}->{nums[j]}'\r\n\r\n        i = 0\r\n        n = len(nums)\r\n        ans = []\r\n        while i < n:\r\n            j = i\r\n            while j + 1 < n and nums[j + 1] == nums[j] + 1:\r\n                j += 1\r\n            ans.append(f(i, j))\r\n            i = j + 1\r\n        return ans",
+    "problemId": 228,
+    "title": "Summary Ranges",
+    "problemUrl": "https://leetcode.com/problems/summary-ranges/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0228.Summary Ranges/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0228.Summary Ranges/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0228.Summary Ranges/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0228.Summary Ranges/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0228.Summary Ranges/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0228.Summary Ranges/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0228.Summary Ranges/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0228.Summary Ranges/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

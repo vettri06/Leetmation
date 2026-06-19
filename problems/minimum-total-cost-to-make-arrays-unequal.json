@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-total-cost-to-make-arrays-unequal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumTotalCost(self, nums1: List[int], nums2: List[int]) -> int:\r\n        ans = same = 0\r\n        cnt = Counter()\r\n        for i, (a, b) in enumerate(zip(nums1, nums2)):\r\n            if a == b:\r\n                same += 1\r\n                ans += i\r\n                cnt[a] += 1\r\n\r\n        m = lead = 0\r\n        for k, v in cnt.items():\r\n            if v * 2 > same:\r\n                m = v * 2 - same\r\n                lead = k\r\n                break\r\n        for i, (a, b) in enumerate(zip(nums1, nums2)):\r\n            if m and a != b and a != lead and b != lead:\r\n                ans += i\r\n                m -= 1\r\n        return -1 if m else ans",
+    "problemId": 2499,
+    "title": "Minimum Total Cost to Make Arrays Unequal",
+    "problemUrl": "https://leetcode.com/problems/minimum-total-cost-to-make-arrays-unequal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2499.Minimum Total Cost to Make Arrays Unequal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2499.Minimum Total Cost to Make Arrays Unequal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2499.Minimum Total Cost to Make Arrays Unequal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2499.Minimum Total Cost to Make Arrays Unequal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2499.Minimum Total Cost to Make Arrays Unequal/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

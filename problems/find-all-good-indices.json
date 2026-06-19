@@ -1,0 +1,33 @@
+{
+    "problemName": "find-all-good-indices",
+    "language": "python3",
+    "code": "class Solution:\r\n    def goodIndices(self, nums: List[int], k: int) -> List[int]:\r\n        n = len(nums)\r\n        decr = [1] * (n + 1)\r\n        incr = [1] * (n + 1)\r\n        for i in range(2, n - 1):\r\n            if nums[i - 1] <= nums[i - 2]:\r\n                decr[i] = decr[i - 1] + 1\r\n        for i in range(n - 3, -1, -1):\r\n            if nums[i + 1] <= nums[i + 2]:\r\n                incr[i] = incr[i + 1] + 1\r\n        return [i for i in range(k, n - k) if decr[i] >= k and incr[i] >= k]",
+    "problemId": 2420,
+    "title": "Find All Good Indices",
+    "problemUrl": "https://leetcode.com/problems/find-all-good-indices/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2420.Find All Good Indices/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2420.Find All Good Indices/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2420.Find All Good Indices/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2420.Find All Good Indices/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2420.Find All Good Indices/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

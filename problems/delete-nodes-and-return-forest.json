@@ -1,0 +1,53 @@
+{
+    "problemName": "delete-nodes-and-return-forest",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def delNodes(\r\n        self, root: Optional[TreeNode], to_delete: List[int]\r\n    ) -> List[TreeNode]:\r\n        def dfs(root: Optional[TreeNode]) -> Optional[TreeNode]:\r\n            if root is None:\r\n                return None\r\n            root.left, root.right = dfs(root.left), dfs(root.right)\r\n            if root.val not in s:\r\n                return root\r\n            if root.left:\r\n                ans.append(root.left)\r\n            if root.right:\r\n                ans.append(root.right)\r\n            return None\r\n\r\n        s = set(to_delete)\r\n        ans = []\r\n        if dfs(root):\r\n            ans.append(root)\r\n        return ans",
+    "problemId": 1110,
+    "title": "Delete Nodes And Return Forest",
+    "problemUrl": "https://leetcode.com/problems/delete-nodes-and-return-forest/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1110.Delete Nodes And Return Forest/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1110.Delete Nodes And Return Forest/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1110.Delete Nodes And Return Forest/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1110.Delete Nodes And Return Forest/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1110.Delete Nodes And Return Forest/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1110.Delete Nodes And Return Forest/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1110.Delete Nodes And Return Forest/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1110.Delete Nodes And Return Forest/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1110.Delete Nodes And Return Forest/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

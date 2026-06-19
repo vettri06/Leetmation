@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-subsequence-repeated-k-times",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestSubsequenceRepeatedK(self, s: str, k: int) -> str:\r\n        def check(t: str, k: int) -> bool:\r\n            i = 0\r\n            for c in s:\r\n                if c == t[i]:\r\n                    i += 1\r\n                    if i == len(t):\r\n                        k -= 1\r\n                        if k == 0:\r\n                            return True\r\n                        i = 0\r\n            return False\r\n\r\n        cnt = Counter(s)\r\n        cs = [c for c in ascii_lowercase if cnt[c] >= k]\r\n        q = deque([\"\"])\r\n        ans = \"\"\r\n        while q:\r\n            cur = q.popleft()\r\n            for c in cs:\r\n                nxt = cur + c\r\n                if check(nxt, k):\r\n                    ans = nxt\r\n                    q.append(nxt)\r\n        return ans",
+    "problemId": 2014,
+    "title": "Longest Subsequence Repeated k Times",
+    "problemUrl": "https://leetcode.com/problems/longest-subsequence-repeated-k-times/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2014.Longest Subsequence Repeated k Times/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2014.Longest Subsequence Repeated k Times/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2014.Longest Subsequence Repeated k Times/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2014.Longest Subsequence Repeated k Times/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2014.Longest Subsequence Repeated k Times/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2014.Longest Subsequence Repeated k Times/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

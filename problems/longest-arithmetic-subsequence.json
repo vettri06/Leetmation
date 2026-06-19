@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-arithmetic-subsequence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestArithSeqLength(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        f = [[1] * 1001 for _ in range(n)]\r\n        ans = 0\r\n        for i in range(1, n):\r\n            for k in range(i):\r\n                j = nums[i] - nums[k] + 500\r\n                f[i][j] = max(f[i][j], f[k][j] + 1)\r\n                ans = max(ans, f[i][j])\r\n        return ans",
+    "problemId": 1027,
+    "title": "Longest Arithmetic Subsequence",
+    "problemUrl": "https://leetcode.com/problems/longest-arithmetic-subsequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1027.Longest Arithmetic Subsequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1027.Longest Arithmetic Subsequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1027.Longest Arithmetic Subsequence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1027.Longest Arithmetic Subsequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1027.Longest Arithmetic Subsequence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1027.Longest Arithmetic Subsequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

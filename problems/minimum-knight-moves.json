@@ -1,0 +1,63 @@
+{
+    "problemName": "minimum-knight-moves",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minKnightMoves(self, x: int, y: int) -> int:\r\n        q = deque([(0, 0)])\r\n        ans = 0\r\n        vis = {(0, 0)}\r\n        dirs = ((-2, 1), (-1, 2), (1, 2), (2, 1), (2, -1), (1, -2), (-1, -2), (-2, -1))\r\n        while q:\r\n            for _ in range(len(q)):\r\n                i, j = q.popleft()\r\n                if (i, j) == (x, y):\r\n                    return ans\r\n                for a, b in dirs:\r\n                    c, d = i + a, j + b\r\n                    if (c, d) not in vis:\r\n                        vis.add((c, d))\r\n                        q.append((c, d))\r\n            ans += 1\r\n        return -1",
+    "problemId": 1197,
+    "title": "Minimum Knight Moves",
+    "problemUrl": "https://leetcode.com/problems/minimum-knight-moves/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1197.Minimum Knight Moves/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1197.Minimum Knight Moves/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1197.Minimum Knight Moves/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1197.Minimum Knight Moves/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1197.Minimum Knight Moves/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1197.Minimum Knight Moves/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1197.Minimum Knight Moves/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1197.Minimum Knight Moves/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1197.Minimum Knight Moves/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1197.Minimum Knight Moves/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1197.Minimum Knight Moves/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

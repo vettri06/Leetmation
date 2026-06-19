@@ -1,0 +1,38 @@
+{
+    "problemName": "transform-array-by-parity",
+    "language": "python3",
+    "code": "class Solution:\r\n    def transformArray(self, nums: List[int]) -> List[int]:\r\n        even = sum(x % 2 == 0 for x in nums)\r\n        for i in range(even):\r\n            nums[i] = 0\r\n        for i in range(even, len(nums)):\r\n            nums[i] = 1\r\n        return nums",
+    "problemId": 3467,
+    "title": "Transform Array by Parity",
+    "problemUrl": "https://leetcode.com/problems/transform-array-by-parity/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3467.Transform Array by Parity/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3467.Transform Array by Parity/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3467.Transform Array by Parity/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3467.Transform Array by Parity/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3467.Transform Array by Parity/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3467.Transform Array by Parity/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

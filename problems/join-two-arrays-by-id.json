@@ -1,0 +1,18 @@
+{
+    "problemName": "join-two-arrays-by-id",
+    "language": "typescript",
+    "code": "function join(arr1: ArrayType[], arr2: ArrayType[]): ArrayType[] {\r\n    const r = (acc: Obj, x: ArrayType): Obj => ((acc[x.id] = x), acc);\r\n    const d = arr1.reduce(r, {});\r\n\r\n    arr2.forEach(x => {\r\n        if (d[x.id]) {\r\n            Object.assign(d[x.id], x);\r\n        } else {\r\n            d[x.id] = x;\r\n        }\r\n    });\r\n    return Object.values(d);\r\n}\r\n\r\ntype JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };\r\ntype ArrayType = { id: number } & Record<string, JSONValue>;\r\n\r\ntype Obj = Record<number, ArrayType>;",
+    "problemId": 2722,
+    "title": "Join Two Arrays by ID",
+    "problemUrl": "https://leetcode.com/problems/join-two-arrays-by-id/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2722.Join Two Arrays by ID/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2722.Join Two Arrays by ID/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

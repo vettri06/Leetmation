@@ -1,0 +1,43 @@
+{
+    "problemName": "power-update-after-k-th-largest-insertion-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def powerUpdate(\r\n        self, nums: list[int], p: int, queries: list[list[int]]\r\n    ) -> list[int]:\r\n        l = SortedList()\r\n        r = SortedList(nums)\r\n        ans = []\r\n        mod = 10**9 + 7\r\n        for val, k in queries:\r\n            r.add(val)\r\n            l.add(r.pop(0))\r\n            while len(r) < k:\r\n                r.add(l.pop())\r\n            while len(r) > k:\r\n                l.add(r.pop(0))\r\n            x = r[0]\r\n            p = pow(p, x, mod)\r\n            ans.append(p)\r\n        return ans",
+    "problemId": 3935,
+    "title": "Power Update After K-th Largest Insertion I",
+    "problemUrl": "https://leetcode.com/problems/power-update-after-k-th-largest-insertion-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3935.Power Update After K-th Largest Insertion I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3935.Power Update After K-th Largest Insertion I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3935.Power Update After K-th Largest Insertion I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3935.Power Update After K-th Largest Insertion I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3935.Power Update After K-th Largest Insertion I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3935.Power Update After K-th Largest Insertion I/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3935.Power Update After K-th Largest Insertion I/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        }
+    ]
+}

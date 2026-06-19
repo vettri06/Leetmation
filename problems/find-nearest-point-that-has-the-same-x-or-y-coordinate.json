@@ -1,0 +1,48 @@
+{
+    "problemName": "find-nearest-point-that-has-the-same-x-or-y-coordinate",
+    "language": "python3",
+    "code": "class Solution:\r\n    def nearestValidPoint(self, x: int, y: int, points: List[List[int]]) -> int:\r\n        ans, mi = -1, inf\r\n        for i, (a, b) in enumerate(points):\r\n            if a == x or b == y:\r\n                d = abs(a - x) + abs(b - y)\r\n                if mi > d:\r\n                    ans, mi = i, d\r\n        return ans",
+    "problemId": 1779,
+    "title": "Find Nearest Point That Has the Same X or Y Coordinate",
+    "problemUrl": "https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1779.Find Nearest Point That Has the Same X or Y Coordinate/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1779.Find Nearest Point That Has the Same X or Y Coordinate/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1779.Find Nearest Point That Has the Same X or Y Coordinate/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1779.Find Nearest Point That Has the Same X or Y Coordinate/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1779.Find Nearest Point That Has the Same X or Y Coordinate/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1779.Find Nearest Point That Has the Same X or Y Coordinate/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1779.Find Nearest Point That Has the Same X or Y Coordinate/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1779.Find Nearest Point That Has the Same X or Y Coordinate/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

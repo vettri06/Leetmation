@@ -1,0 +1,38 @@
+{
+    "problemName": "make-string-a-subsequence-using-cyclic-increments",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canMakeSubsequence(self, str1: str, str2: str) -> bool:\r\n        i = 0\r\n        for c in str1:\r\n            d = \"a\" if c == \"z\" else chr(ord(c) + 1)\r\n            if i < len(str2) and str2[i] in (c, d):\r\n                i += 1\r\n        return i == len(str2)",
+    "problemId": 2825,
+    "title": "Make String a Subsequence Using Cyclic Increments",
+    "problemUrl": "https://leetcode.com/problems/make-string-a-subsequence-using-cyclic-increments/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2825.Make String a Subsequence Using Cyclic Increments/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2825.Make String a Subsequence Using Cyclic Increments/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2825.Make String a Subsequence Using Cyclic Increments/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2825.Make String a Subsequence Using Cyclic Increments/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2825.Make String a Subsequence Using Cyclic Increments/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2825.Make String a Subsequence Using Cyclic Increments/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

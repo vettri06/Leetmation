@@ -1,0 +1,38 @@
+{
+    "problemName": "numbers-with-repeated-digits",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numDupDigitsAtMostN(self, n: int) -> int:\r\n        @cache\r\n        def dfs(i: int, mask: int, lead: bool, limit: bool) -> int:\r\n            if i >= len(s):\r\n                return lead ^ 1\r\n            up = int(s[i]) if limit else 9\r\n            ans = 0\r\n            for j in range(up + 1):\r\n                if lead and j == 0:\r\n                    ans += dfs(i + 1, mask, True, False)\r\n                elif mask >> j & 1 ^ 1:\r\n                    ans += dfs(i + 1, mask | 1 << j, False, limit and j == up)\r\n            return ans\r\n\r\n        s = str(n)\r\n        return n - dfs(0, 0, True, True)",
+    "problemId": 1012,
+    "title": "Numbers With Repeated Digits",
+    "problemUrl": "https://leetcode.com/problems/numbers-with-repeated-digits/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1012.Numbers With Repeated Digits/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1012.Numbers With Repeated Digits/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1012.Numbers With Repeated Digits/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1012.Numbers With Repeated Digits/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1012.Numbers With Repeated Digits/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1012.Numbers With Repeated Digits/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

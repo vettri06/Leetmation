@@ -1,0 +1,43 @@
+{
+    "problemName": "four-divisors",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumFourDivisors(self, nums: List[int]) -> int:\r\n        def f(x: int) -> int:\r\n            i = 2\r\n            cnt, s = 2, x + 1\r\n            while i <= x // i:\r\n                if x % i == 0:\r\n                    cnt += 1\r\n                    s += i\r\n                    if i * i != x:\r\n                        cnt += 1\r\n                        s += x // i\r\n                i += 1\r\n            return s if cnt == 4 else 0\r\n\r\n        return sum(f(x) for x in nums)",
+    "problemId": 1390,
+    "title": "Four Divisors",
+    "problemUrl": "https://leetcode.com/problems/four-divisors/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1390.Four Divisors/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1390.Four Divisors/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1390.Four Divisors/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1390.Four Divisors/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1390.Four Divisors/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1390.Four Divisors/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1390.Four Divisors/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "rank-teams-by-votes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def rankTeams(self, votes: List[str]) -> str:\r\n        m = len(votes[0])\r\n        cnt = defaultdict(lambda: [0] * m)\r\n        for vote in votes:\r\n            for i, c in enumerate(vote):\r\n                cnt[c][i] += 1\r\n        return \"\".join(sorted(cnt, key=lambda c: (cnt[c], -ord(c)), reverse=True))",
+    "problemId": 1366,
+    "title": "Rank Teams by Votes",
+    "problemUrl": "https://leetcode.com/problems/rank-teams-by-votes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1366.Rank Teams by Votes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1366.Rank Teams by Votes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1366.Rank Teams by Votes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1366.Rank Teams by Votes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1366.Rank Teams by Votes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1366.Rank Teams by Votes/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

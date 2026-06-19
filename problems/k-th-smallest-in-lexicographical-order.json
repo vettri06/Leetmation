@@ -1,0 +1,43 @@
+{
+    "problemName": "k-th-smallest-in-lexicographical-order",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findKthNumber(self, n: int, k: int) -> int:\r\n        def count(curr):\r\n            next, cnt = curr + 1, 0\r\n            while curr <= n:\r\n                cnt += min(n - curr + 1, next - curr)\r\n                next, curr = next * 10, curr * 10\r\n            return cnt\r\n\r\n        curr = 1\r\n        k -= 1\r\n        while k:\r\n            cnt = count(curr)\r\n            if k >= cnt:\r\n                k -= cnt\r\n                curr += 1\r\n            else:\r\n                k -= 1\r\n                curr *= 10\r\n        return curr",
+    "problemId": 440,
+    "title": "K-th Smallest in Lexicographical Order",
+    "problemUrl": "https://leetcode.com/problems/k-th-smallest-in-lexicographical-order/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0440.K-th Smallest in Lexicographical Order/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0440.K-th Smallest in Lexicographical Order/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0440.K-th Smallest in Lexicographical Order/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0440.K-th Smallest in Lexicographical Order/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0440.K-th Smallest in Lexicographical Order/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0440.K-th Smallest in Lexicographical Order/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0440.K-th Smallest in Lexicographical Order/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-distance-between-unequal-words-in-array-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxDistance(self, words: List[str]) -> int:\r\n        n = len(words)\r\n        ans = 0\r\n        for i in range(n):\r\n            if words[i] != words[0]:\r\n                ans = max(ans, i + 1)\r\n            if words[i] != words[-1]:\r\n                ans = max(ans, n - i)\r\n        return ans",
+    "problemId": 3696,
+    "title": "Maximum Distance Between Unequal Words in Array I",
+    "problemUrl": "https://leetcode.com/problems/maximum-distance-between-unequal-words-in-array-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3696.Maximum Distance Between Unequal Words in Array I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3696.Maximum Distance Between Unequal Words in Array I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3696.Maximum Distance Between Unequal Words in Array I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3696.Maximum Distance Between Unequal Words in Array I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3696.Maximum Distance Between Unequal Words in Array I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3696.Maximum Distance Between Unequal Words in Array I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "problemName": "shortest-path-visiting-all-nodes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shortestPathLength(self, graph: List[List[int]]) -> int:\r\n        n = len(graph)\r\n        q = deque()\r\n        vis = set()\r\n        for i in range(n):\r\n            q.append((i, 1 << i))\r\n            vis.add((i, 1 << i))\r\n        ans = 0\r\n        while 1:\r\n            for _ in range(len(q)):\r\n                i, st = q.popleft()\r\n                if st == (1 << n) - 1:\r\n                    return ans\r\n                for j in graph[i]:\r\n                    nst = st | 1 << j\r\n                    if (j, nst) not in vis:\r\n                        vis.add((j, nst))\r\n                        q.append((j, nst))\r\n            ans += 1",
+    "problemId": 847,
+    "title": "Shortest Path Visiting All Nodes",
+    "problemUrl": "https://leetcode.com/problems/shortest-path-visiting-all-nodes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0847.Shortest Path Visiting All Nodes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0847.Shortest Path Visiting All Nodes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0847.Shortest Path Visiting All Nodes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0847.Shortest Path Visiting All Nodes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0847.Shortest Path Visiting All Nodes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0847.Shortest Path Visiting All Nodes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0847.Shortest Path Visiting All Nodes/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0847.Shortest Path Visiting All Nodes/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0847.Shortest Path Visiting All Nodes/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0847.Shortest Path Visiting All Nodes/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

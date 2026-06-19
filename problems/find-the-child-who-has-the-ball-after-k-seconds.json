@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-child-who-has-the-ball-after-k-seconds",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfChild(self, n: int, k: int) -> int:\r\n        k, mod = divmod(k, n - 1)\r\n        return n - mod - 1 if k & 1 else mod",
+    "problemId": 3178,
+    "title": "Find the Child Who Has the Ball After K Seconds",
+    "problemUrl": "https://leetcode.com/problems/find-the-child-who-has-the-ball-after-k-seconds/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3178.Find the Child Who Has the Ball After K Seconds/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3178.Find the Child Who Has the Ball After K Seconds/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3178.Find the Child Who Has the Ball After K Seconds/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3178.Find the Child Who Has the Ball After K Seconds/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3178.Find the Child Who Has the Ball After K Seconds/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3178.Find the Child Who Has the Ball After K Seconds/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

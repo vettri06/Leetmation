@@ -1,0 +1,38 @@
+{
+    "problemName": "check-if-any-element-has-prime-frequency",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkPrimeFrequency(self, nums: List[int]) -> bool:\r\n        def is_prime(x: int) -> bool:\r\n            if x < 2:\r\n                return False\r\n            return all(x % i for i in range(2, int(sqrt(x)) + 1))\r\n\r\n        cnt = Counter(nums)\r\n        return any(is_prime(x) for x in cnt.values())",
+    "problemId": 3591,
+    "title": "Check if Any Element Has Prime Frequency",
+    "problemUrl": "https://leetcode.com/problems/check-if-any-element-has-prime-frequency/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3591.Check if Any Element Has Prime Frequency/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3591.Check if Any Element Has Prime Frequency/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3591.Check if Any Element Has Prime Frequency/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3591.Check if Any Element Has Prime Frequency/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3591.Check if Any Element Has Prime Frequency/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3591.Check if Any Element Has Prime Frequency/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

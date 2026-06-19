@@ -1,0 +1,38 @@
+{
+    "problemName": "minimize-connected-groups-by-inserting-interval",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minConnectedGroups(self, intervals: List[List[int]], k: int) -> int:\r\n        intervals.sort()\r\n        merged = [intervals[0]]\r\n        for s, e in intervals[1:]:\r\n            if merged[-1][1] < s:\r\n                merged.append([s, e])\r\n            else:\r\n                merged[-1][1] = max(merged[-1][1], e)\r\n        ans = len(merged)\r\n        for i, (_, e) in enumerate(merged):\r\n            j = bisect_left(merged, [e + k + 1, 0])\r\n            ans = min(ans, len(merged) - (j - i - 1))\r\n        return ans",
+    "problemId": 3323,
+    "title": "Minimize Connected Groups by Inserting Interval",
+    "problemUrl": "https://leetcode.com/problems/minimize-connected-groups-by-inserting-interval/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3323.Minimize Connected Groups by Inserting Interval/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3323.Minimize Connected Groups by Inserting Interval/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3323.Minimize Connected Groups by Inserting Interval/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3323.Minimize Connected Groups by Inserting Interval/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3323.Minimize Connected Groups by Inserting Interval/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3323.Minimize Connected Groups by Inserting Interval/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

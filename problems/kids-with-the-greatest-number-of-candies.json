@@ -1,0 +1,48 @@
+{
+    "problemName": "kids-with-the-greatest-number-of-candies",
+    "language": "python3",
+    "code": "class Solution:\r\n    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:\r\n        mx = max(candies)\r\n        return [candy + extraCandies >= mx for candy in candies]",
+    "problemId": 1431,
+    "title": "Kids With the Greatest Number of Candies",
+    "problemUrl": "https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1431.Kids With the Greatest Number of Candies/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1431.Kids With the Greatest Number of Candies/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1431.Kids With the Greatest Number of Candies/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1431.Kids With the Greatest Number of Candies/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1431.Kids With the Greatest Number of Candies/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1431.Kids With the Greatest Number of Candies/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1431.Kids With the Greatest Number of Candies/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1431.Kids With the Greatest Number of Candies/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

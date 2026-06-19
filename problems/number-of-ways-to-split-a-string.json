@@ -1,0 +1,33 @@
+{
+    "problemName": "number-of-ways-to-split-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numWays(self, s: str) -> int:\r\n        def find(x):\r\n            t = 0\r\n            for i, c in enumerate(s):\r\n                t += int(c == '1')\r\n                if t == x:\r\n                    return i\r\n\r\n        cnt, m = divmod(sum(c == '1' for c in s), 3)\r\n        if m:\r\n            return 0\r\n        n = len(s)\r\n        mod = 10**9 + 7\r\n        if cnt == 0:\r\n            return ((n - 1) * (n - 2) // 2) % mod\r\n        i1, i2 = find(cnt), find(cnt + 1)\r\n        j1, j2 = find(cnt * 2), find(cnt * 2 + 1)\r\n        return (i2 - i1) * (j2 - j1) % (10**9 + 7)",
+    "problemId": 1573,
+    "title": "Number of Ways to Split a String",
+    "problemUrl": "https://leetcode.com/problems/number-of-ways-to-split-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1573.Number of Ways to Split a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1573.Number of Ways to Split a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1573.Number of Ways to Split a String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1573.Number of Ways to Split a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1573.Number of Ways to Split a String/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

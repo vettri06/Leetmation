@@ -1,0 +1,18 @@
+{
+    "problemName": "find-overlapping-shifts-ii",
+    "language": "mysql",
+    "code": "WITH\r\n    T AS (\r\n        SELECT DISTINCT employee_id, start_time AS st\r\n        FROM EmployeeShifts\r\n        UNION DISTINCT\r\n        SELECT DISTINCT employee_id, end_time AS st\r\n        FROM EmployeeShifts\r\n    ),\r\n    P AS (\r\n        SELECT\r\n            *,\r\n            LEAD(st) OVER (\r\n                PARTITION BY employee_id\r\n                ORDER BY st\r\n            ) AS ed\r\n        FROM T\r\n    ),\r\n    S AS (\r\n        SELECT\r\n            P.*,\r\n            COUNT(1) AS concurrent_count\r\n        FROM\r\n            P\r\n            INNER JOIN EmployeeShifts USING (employee_id)\r\n        WHERE P.st >= EmployeeShifts.start_time AND P.ed <= EmployeeShifts.end_time\r\n        GROUP BY 1, 2, 3\r\n    ),\r\n    U AS (\r\n        SELECT\r\n            t1.employee_id,\r\n            SUM(\r\n                TIMESTAMPDIFF(MINUTE, t2.start_time, LEAST(t1.end_time, t2.end_time))\r\n            ) total_overlap_duration\r\n        FROM\r\n            EmployeeShifts t1\r\n            JOIN EmployeeShifts t2\r\n                ON t1.employee_id = t2.employee_id\r\n                AND t1.start_time < t2.start_time\r\n                AND t1.end_time > t2.start_time\r\n        GROUP BY 1\r\n    )\r\nSELECT\r\n    employee_id,\r\n    MAX(concurrent_count) max_overlapping_shifts,\r\n    IFNULL(AVG(total_overlap_duration), 0) total_overlap_duration\r\nFROM\r\n    S\r\n    LEFT JOIN U USING (employee_id)\r\nGROUP BY 1\r\nORDER BY 1;",
+    "problemId": 3268,
+    "title": "Find Overlapping Shifts II",
+    "problemUrl": "https://leetcode.com/problems/find-overlapping-shifts-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3268.Find Overlapping Shifts II/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3268.Find Overlapping Shifts II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

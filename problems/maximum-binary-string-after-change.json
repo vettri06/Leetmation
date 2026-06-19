@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-binary-string-after-change",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumBinaryString(self, binary: str) -> str:\r\n        k = binary.find('0')\r\n        if k == -1:\r\n            return binary\r\n        k += binary[k + 1 :].count('0')\r\n        return '1' * k + '0' + '1' * (len(binary) - k - 1)",
+    "problemId": 1702,
+    "title": "Maximum Binary String After Change",
+    "problemUrl": "https://leetcode.com/problems/maximum-binary-string-after-change/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1702.Maximum Binary String After Change/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1702.Maximum Binary String After Change/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1702.Maximum Binary String After Change/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1702.Maximum Binary String After Change/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1702.Maximum Binary String After Change/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1702.Maximum Binary String After Change/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1702.Maximum Binary String After Change/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1702.Maximum Binary String After Change/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

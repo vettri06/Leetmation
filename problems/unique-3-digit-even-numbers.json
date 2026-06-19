@@ -1,0 +1,38 @@
+{
+    "problemName": "unique-3-digit-even-numbers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def totalNumbers(self, digits: List[int]) -> int:\r\n        s = set()\r\n        for i, a in enumerate(digits):\r\n            if a & 1:\r\n                continue\r\n            for j, b in enumerate(digits):\r\n                if i == j:\r\n                    continue\r\n                for k, c in enumerate(digits):\r\n                    if c == 0 or k in (i, j):\r\n                        continue\r\n                    s.add(c * 100 + b * 10 + a)\r\n        return len(s)",
+    "problemId": 3483,
+    "title": "Unique 3-Digit Even Numbers",
+    "problemUrl": "https://leetcode.com/problems/unique-3-digit-even-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3483.Unique 3-Digit Even Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3483.Unique 3-Digit Even Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3483.Unique 3-Digit Even Numbers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3483.Unique 3-Digit Even Numbers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3483.Unique 3-Digit Even Numbers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3483.Unique 3-Digit Even Numbers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

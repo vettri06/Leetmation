@@ -1,0 +1,38 @@
+{
+    "problemName": "the-number-of-the-smallest-unoccupied-chair",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestChair(self, times: List[List[int]], targetFriend: int) -> int:\r\n        n = len(times)\r\n        for i in range(n):\r\n            times[i].append(i)\r\n        times.sort()\r\n        idle = list(range(n))\r\n        heapify(idle)\r\n        busy = []\r\n        for arrival, leaving, i in times:\r\n            while busy and busy[0][0] <= arrival:\r\n                heappush(idle, heappop(busy)[1])\r\n            j = heappop(idle)\r\n            if i == targetFriend:\r\n                return j\r\n            heappush(busy, (leaving, j))",
+    "problemId": 1942,
+    "title": "The Number of the Smallest Unoccupied Chair",
+    "problemUrl": "https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1942.The Number of the Smallest Unoccupied Chair/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1942.The Number of the Smallest Unoccupied Chair/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1942.The Number of the Smallest Unoccupied Chair/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1942.The Number of the Smallest Unoccupied Chair/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1942.The Number of the Smallest Unoccupied Chair/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1942.The Number of the Smallest Unoccupied Chair/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

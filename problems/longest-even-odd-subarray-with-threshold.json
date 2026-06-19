@@ -1,0 +1,63 @@
+{
+    "problemName": "longest-even-odd-subarray-with-threshold",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestAlternatingSubarray(self, nums: List[int], threshold: int) -> int:\r\n        ans, n = 0, len(nums)\r\n        for l in range(n):\r\n            if nums[l] % 2 == 0 and nums[l] <= threshold:\r\n                r = l + 1\r\n                while r < n and nums[r] % 2 != nums[r - 1] % 2 and nums[r] <= threshold:\r\n                    r += 1\r\n                ans = max(ans, r - l)\r\n        return ans",
+    "problemId": 2760,
+    "title": "Longest Even Odd Subarray With Threshold",
+    "problemUrl": "https://leetcode.com/problems/longest-even-odd-subarray-with-threshold/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2760.Longest Even Odd Subarray With Threshold/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2760.Longest Even Odd Subarray With Threshold/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2760.Longest Even Odd Subarray With Threshold/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2760.Longest Even Odd Subarray With Threshold/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2760.Longest Even Odd Subarray With Threshold/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2760.Longest Even Odd Subarray With Threshold/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2760.Longest Even Odd Subarray With Threshold/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2760.Longest Even Odd Subarray With Threshold/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2760.Longest Even Odd Subarray With Threshold/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2760.Longest Even Odd Subarray With Threshold/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2760.Longest Even Odd Subarray With Threshold/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

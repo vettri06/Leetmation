@@ -1,0 +1,28 @@
+{
+    "problemName": "max-stack",
+    "language": "python3",
+    "code": "class Node:\r\n    def __init__(self, val=0):\r\n        self.val = val\r\n        self.prev: Union[Node, None] = None\r\n        self.next: Union[Node, None] = None\r\n\r\n\r\nclass DoubleLinkedList:\r\n    def __init__(self):\r\n        self.head = Node()\r\n        self.tail = Node()\r\n        self.head.next = self.tail\r\n        self.tail.prev = self.head\r\n\r\n    def append(self, val) -> Node:\r\n        node = Node(val)\r\n        node.next = self.tail\r\n        node.prev = self.tail.prev\r\n        self.tail.prev = node\r\n        node.prev.next = node\r\n        return node\r\n\r\n    @staticmethod\r\n    def remove(node) -> Node:\r\n        node.prev.next = node.next\r\n        node.next.prev = node.prev\r\n        return node\r\n\r\n    def pop(self) -> Node:\r\n        return self.remove(self.tail.prev)\r\n\r\n    def peek(self):\r\n        return self.tail.prev.val\r\n\r\n\r\nclass MaxStack:\r\n    def __init__(self):\r\n        self.stk = DoubleLinkedList()\r\n        self.sl = SortedList(key=lambda x: x.val)\r\n\r\n    def push(self, x: int) -> None:\r\n        node = self.stk.append(x)\r\n        self.sl.add(node)\r\n\r\n    def pop(self) -> int:\r\n        node = self.stk.pop()\r\n        self.sl.remove(node)\r\n        return node.val\r\n\r\n    def top(self) -> int:\r\n        return self.stk.peek()\r\n\r\n    def peekMax(self) -> int:\r\n        return self.sl[-1].val\r\n\r\n    def popMax(self) -> int:\r\n        node = self.sl.pop()\r\n        DoubleLinkedList.remove(node)\r\n        return node.val\r\n\r\n\r\n# Your MaxStack object will be instantiated and called as such:\r\n# obj = MaxStack()\r\n# obj.push(x)\r\n# param_2 = obj.pop()\r\n# param_3 = obj.top()\r\n# param_4 = obj.peekMax()\r\n# param_5 = obj.popMax()",
+    "problemId": 716,
+    "title": "Max Stack",
+    "problemUrl": "https://leetcode.com/problems/max-stack/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0716.Max Stack/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0716.Max Stack/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0716.Max Stack/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0716.Max Stack/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

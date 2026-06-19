@@ -1,0 +1,18 @@
+{
+    "problemName": "users-with-two-purchases-within-seven-days",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    t AS (\r\n        SELECT\r\n            user_id,\r\n            DATEDIFF(\r\n                purchase_date,\r\n                LAG(purchase_date, 1) OVER (\r\n                    PARTITION BY user_id\r\n                    ORDER BY purchase_date\r\n                )\r\n            ) AS d\r\n        FROM Purchases\r\n    )\r\nSELECT DISTINCT user_id\r\nFROM t\r\nWHERE d <= 7\r\nORDER BY user_id;",
+    "problemId": 2228,
+    "title": "Users With Two Purchases Within Seven Days",
+    "problemUrl": "https://leetcode.com/problems/users-with-two-purchases-within-seven-days/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2228.Users With Two Purchases Within Seven Days/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2228.Users With Two Purchases Within Seven Days/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "find-occurrences-of-an-element-in-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def occurrencesOfElement(\r\n        self, nums: List[int], queries: List[int], x: int\r\n    ) -> List[int]:\r\n        ids = [i for i, v in enumerate(nums) if v == x]\r\n        return [ids[i - 1] if i - 1 < len(ids) else -1 for i in queries]",
+    "problemId": 3159,
+    "title": "Find Occurrences of an Element in an Array",
+    "problemUrl": "https://leetcode.com/problems/find-occurrences-of-an-element-in-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3159.Find Occurrences of an Element in an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3159.Find Occurrences of an Element in an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3159.Find Occurrences of an Element in an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3159.Find Occurrences of an Element in an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3159.Find Occurrences of an Element in an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3159.Find Occurrences of an Element in an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

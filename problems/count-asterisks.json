@@ -1,0 +1,53 @@
+{
+    "problemName": "count-asterisks",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countAsterisks(self, s: str) -> int:\r\n        ans, ok = 0, 1\r\n        for c in s:\r\n            if c == \"*\":\r\n                ans += ok\r\n            elif c == \"|\":\r\n                ok ^= 1\r\n        return ans",
+    "problemId": 2315,
+    "title": "Count Asterisks",
+    "problemUrl": "https://leetcode.com/problems/count-asterisks/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2315.Count Asterisks/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2315.Count Asterisks/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2315.Count Asterisks/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2315.Count Asterisks/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2315.Count Asterisks/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2315.Count Asterisks/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2315.Count Asterisks/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2315.Count Asterisks/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2315.Count Asterisks/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-to-make-at-least-one-valid-path-in-a-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, grid: List[List[int]]) -> int:\r\n        m, n = len(grid), len(grid[0])\r\n        dirs = [[0, 0], [0, 1], [0, -1], [1, 0], [-1, 0]]\r\n        q = deque([(0, 0, 0)])\r\n        vis = set()\r\n        while q:\r\n            i, j, d = q.popleft()\r\n            if (i, j) in vis:\r\n                continue\r\n            vis.add((i, j))\r\n            if i == m - 1 and j == n - 1:\r\n                return d\r\n            for k in range(1, 5):\r\n                x, y = i + dirs[k][0], j + dirs[k][1]\r\n                if 0 <= x < m and 0 <= y < n:\r\n                    if grid[i][j] == k:\r\n                        q.appendleft((x, y, d))\r\n                    else:\r\n                        q.append((x, y, d + 1))\r\n        return -1",
+    "problemId": 1368,
+    "title": "Minimum Cost to Make at Least One Valid Path in a Grid",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1368.Minimum Cost to Make at Least One Valid Path in a Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1368.Minimum Cost to Make at Least One Valid Path in a Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1368.Minimum Cost to Make at Least One Valid Path in a Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1368.Minimum Cost to Make at Least One Valid Path in a Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1368.Minimum Cost to Make at Least One Valid Path in a Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1368.Minimum Cost to Make at Least One Valid Path in a Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

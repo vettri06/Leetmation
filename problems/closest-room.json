@@ -1,0 +1,33 @@
+{
+    "problemName": "closest-room",
+    "language": "python3",
+    "code": "class Solution:\r\n    def closestRoom(\r\n        self, rooms: List[List[int]], queries: List[List[int]]\r\n    ) -> List[int]:\r\n        rooms.sort(key=lambda x: x[1])\r\n        k = len(queries)\r\n        idx = sorted(range(k), key=lambda i: queries[i][1])\r\n        ans = [-1] * k\r\n        i, n = 0, len(rooms)\r\n        sl = SortedList(x[0] for x in rooms)\r\n        for j in idx:\r\n            prefer, minSize = queries[j]\r\n            while i < n and rooms[i][1] < minSize:\r\n                sl.remove(rooms[i][0])\r\n                i += 1\r\n            if i == n:\r\n                break\r\n            p = sl.bisect_left(prefer)\r\n            if p < len(sl):\r\n                ans[j] = sl[p]\r\n            if p and (ans[j] == -1 or ans[j] - prefer >= prefer - sl[p - 1]):\r\n                ans[j] = sl[p - 1]\r\n        return ans",
+    "problemId": 1847,
+    "title": "Closest Room",
+    "problemUrl": "https://leetcode.com/problems/closest-room/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1847.Closest Room/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1847.Closest Room/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1847.Closest Room/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1847.Closest Room/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1847.Closest Room/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "uncommon-words-from-two-sentences",
+    "language": "python3",
+    "code": "class Solution:\r\n    def uncommonFromSentences(self, s1: str, s2: str) -> List[str]:\r\n        cnt = Counter(s1.split()) + Counter(s2.split())\r\n        return [s for s, v in cnt.items() if v == 1]",
+    "problemId": 884,
+    "title": "Uncommon Words from Two Sentences",
+    "problemUrl": "https://leetcode.com/problems/uncommon-words-from-two-sentences/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0884.Uncommon Words from Two Sentences/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0884.Uncommon Words from Two Sentences/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0884.Uncommon Words from Two Sentences/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0884.Uncommon Words from Two Sentences/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0884.Uncommon Words from Two Sentences/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0884.Uncommon Words from Two Sentences/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0884.Uncommon Words from Two Sentences/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0884.Uncommon Words from Two Sentences/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

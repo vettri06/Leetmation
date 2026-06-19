@@ -1,0 +1,48 @@
+{
+    "problemName": "range-sum-query-2d-mutable",
+    "language": "python3",
+    "code": "class BinaryIndexedTree:\r\n    def __init__(self, n):\r\n        self.n = n\r\n        self.c = [0] * (n + 1)\r\n\r\n    @staticmethod\r\n    def lowbit(x):\r\n        return x & -x\r\n\r\n    def update(self, x, delta):\r\n        while x <= self.n:\r\n            self.c[x] += delta\r\n            x += BinaryIndexedTree.lowbit(x)\r\n\r\n    def query(self, x):\r\n        s = 0\r\n        while x > 0:\r\n            s += self.c[x]\r\n            x -= BinaryIndexedTree.lowbit(x)\r\n        return s\r\n\r\n\r\nclass NumMatrix:\r\n    def __init__(self, matrix: List[List[int]]):\r\n        self.trees = []\r\n        n = len(matrix[0])\r\n        for row in matrix:\r\n            tree = BinaryIndexedTree(n)\r\n            for j, v in enumerate(row):\r\n                tree.update(j + 1, v)\r\n            self.trees.append(tree)\r\n\r\n    def update(self, row: int, col: int, val: int) -> None:\r\n        tree = self.trees[row]\r\n        prev = tree.query(col + 1) - tree.query(col)\r\n        tree.update(col + 1, val - prev)\r\n\r\n    def sumRegion(self, row1: int, col1: int, row2: int, col2: int) -> int:\r\n        return sum(\r\n            tree.query(col2 + 1) - tree.query(col1)\r\n            for tree in self.trees[row1 : row2 + 1]\r\n        )\r\n\r\n\r\n# Your NumMatrix object will be instantiated and called as such:\r\n# obj = NumMatrix(matrix)\r\n# obj.update(row,col,val)\r\n# param_2 = obj.sumRegion(row1,col1,row2,col2)",
+    "problemId": 308,
+    "title": "Range Sum Query 2D - Mutable",
+    "problemUrl": "https://leetcode.com/problems/range-sum-query-2d-mutable/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0308.Range Sum Query 2D - Mutable/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0308.Range Sum Query 2D - Mutable/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0308.Range Sum Query 2D - Mutable/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0308.Range Sum Query 2D - Mutable/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0308.Range Sum Query 2D - Mutable/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0308.Range Sum Query 2D - Mutable/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0308.Range Sum Query 2D - Mutable/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0308.Range Sum Query 2D - Mutable/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

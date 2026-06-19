@@ -1,0 +1,43 @@
+{
+    "problemName": "find-the-distinct-difference-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distinctDifferenceArray(self, nums: List[int]) -> List[int]:\r\n        n = len(nums)\r\n        suf = [0] * (n + 1)\r\n        s = set()\r\n        for i in range(n - 1, -1, -1):\r\n            s.add(nums[i])\r\n            suf[i] = len(s)\r\n        s.clear()\r\n        ans = [0] * n\r\n        for i, x in enumerate(nums):\r\n            s.add(x)\r\n            ans[i] = len(s) - suf[i + 1]\r\n        return ans",
+    "problemId": 2670,
+    "title": "Find the Distinct Difference Array",
+    "problemUrl": "https://leetcode.com/problems/find-the-distinct-difference-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2670.Find the Distinct Difference Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2670.Find the Distinct Difference Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2670.Find the Distinct Difference Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2670.Find the Distinct Difference Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2670.Find the Distinct Difference Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2670.Find the Distinct Difference Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2670.Find the Distinct Difference Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

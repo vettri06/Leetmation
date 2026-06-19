@@ -1,0 +1,38 @@
+{
+    "problemName": "second-minimum-node-in-a-binary-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def findSecondMinimumValue(self, root: Optional[TreeNode]) -> int:\r\n        def dfs(root):\r\n            if root:\r\n                dfs(root.left)\r\n                dfs(root.right)\r\n                nonlocal ans, v\r\n                if root.val > v:\r\n                    ans = root.val if ans == -1 else min(ans, root.val)\r\n\r\n        ans, v = -1, root.val\r\n        dfs(root)\r\n        return ans",
+    "problemId": 671,
+    "title": "Second Minimum Node In a Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0671.Second Minimum Node In a Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0671.Second Minimum Node In a Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0671.Second Minimum Node In a Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0671.Second Minimum Node In a Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0671.Second Minimum Node In a Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0671.Second Minimum Node In a Binary Tree/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

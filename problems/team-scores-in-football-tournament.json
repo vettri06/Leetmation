@@ -1,0 +1,18 @@
+{
+    "problemName": "team-scores-in-football-tournament",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    team_id,\r\n    team_name,\r\n    SUM(\r\n        CASE\r\n            WHEN team_id = host_team\r\n            AND host_goals > guest_goals THEN 3\r\n            WHEN team_id = guest_team\r\n            AND guest_goals > host_goals THEN 3\r\n            WHEN host_goals = guest_goals THEN 1\r\n            ELSE 0\r\n        END\r\n    ) AS num_points\r\nFROM\r\n    Teams\r\n    LEFT JOIN Matches ON team_id = host_team OR team_id = guest_team\r\nGROUP BY 1\r\nORDER BY 3 DESC, 1;",
+    "problemId": 1212,
+    "title": "Team Scores in Football Tournament",
+    "problemUrl": "https://leetcode.com/problems/team-scores-in-football-tournament/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1212.Team Scores in Football Tournament/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1212.Team Scores in Football Tournament/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

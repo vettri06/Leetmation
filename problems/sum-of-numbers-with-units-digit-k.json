@@ -1,0 +1,63 @@
+{
+    "problemName": "sum-of-numbers-with-units-digit-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumNumbers(self, num: int, k: int) -> int:\r\n        if num == 0:\r\n            return 0\r\n        for i in range(1, num + 1):\r\n            if (t := num - k * i) >= 0 and t % 10 == 0:\r\n                return i\r\n        return -1",
+    "problemId": 2310,
+    "title": "Sum of Numbers With Units Digit K",
+    "problemUrl": "https://leetcode.com/problems/sum-of-numbers-with-units-digit-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2310.Sum of Numbers With Units Digit K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2310.Sum of Numbers With Units Digit K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2310.Sum of Numbers With Units Digit K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2310.Sum of Numbers With Units Digit K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2310.Sum of Numbers With Units Digit K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2310.Sum of Numbers With Units Digit K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2310.Sum of Numbers With Units Digit K/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2310.Sum of Numbers With Units Digit K/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2310.Sum of Numbers With Units Digit K/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2310.Sum of Numbers With Units Digit K/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2310.Sum of Numbers With Units Digit K/Solution3.py",
+            "sourceFile": "Solution3.py"
+        }
+    ]
+}

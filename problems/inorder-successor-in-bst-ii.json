@@ -1,0 +1,43 @@
+{
+    "problemName": "inorder-successor-in-bst-ii",
+    "language": "python3",
+    "code": "\"\"\"\r\n# Definition for a Node.\r\nclass Node:\r\n    def __init__(self, val):\r\n        self.val = val\r\n        self.left = None\r\n        self.right = None\r\n        self.parent = None\r\n\"\"\"\r\n\r\n\r\nclass Solution:\r\n    def inorderSuccessor(self, node: \"Node\") -> \"Optional[Node]\":\r\n        if node.right:\r\n            node = node.right\r\n            while node.left:\r\n                node = node.left\r\n            return node\r\n        while node.parent and node.parent.right is node:\r\n            node = node.parent\r\n        return node.parent",
+    "problemId": 510,
+    "title": "Inorder Successor in BST II",
+    "problemUrl": "https://leetcode.com/problems/inorder-successor-in-bst-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0510.Inorder Successor in BST II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0510.Inorder Successor in BST II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0510.Inorder Successor in BST II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0510.Inorder Successor in BST II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0510.Inorder Successor in BST II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0510.Inorder Successor in BST II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0510.Inorder Successor in BST II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

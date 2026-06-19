@@ -1,0 +1,18 @@
+{
+    "problemName": "calculate-special-bonus",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    employee_id,\r\n    IF(employee_id % 2 = 0 OR LEFT(name, 1) = 'M', 0, salary) AS bonus\r\nFROM employees\r\nORDER BY 1;",
+    "problemId": 1873,
+    "title": "Calculate Special Bonus",
+    "problemUrl": "https://leetcode.com/problems/calculate-special-bonus/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1873.Calculate Special Bonus/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1873.Calculate Special Bonus/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-student-replacements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def totalReplacements(self, ranks: List[int]) -> int:\r\n        ans, cur = 0, ranks[0]\r\n        for x in ranks:\r\n            if x < cur:\r\n                cur = x\r\n                ans += 1\r\n        return ans",
+    "problemId": 3616,
+    "title": "Number of Student Replacements",
+    "problemUrl": "https://leetcode.com/problems/number-of-student-replacements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3616.Number of Student Replacements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3616.Number of Student Replacements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3616.Number of Student Replacements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3616.Number of Student Replacements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3616.Number of Student Replacements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3616.Number of Student Replacements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

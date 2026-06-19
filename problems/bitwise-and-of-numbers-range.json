@@ -1,0 +1,43 @@
+{
+    "problemName": "bitwise-and-of-numbers-range",
+    "language": "python3",
+    "code": "class Solution:\r\n    def rangeBitwiseAnd(self, left: int, right: int) -> int:\r\n        while left < right:\r\n            right &= right - 1\r\n        return right",
+    "problemId": 201,
+    "title": "Bitwise AND of Numbers Range",
+    "problemUrl": "https://leetcode.com/problems/bitwise-and-of-numbers-range/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0201.Bitwise AND of Numbers Range/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0201.Bitwise AND of Numbers Range/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0201.Bitwise AND of Numbers Range/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0201.Bitwise AND of Numbers Range/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0201.Bitwise AND of Numbers Range/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0201.Bitwise AND of Numbers Range/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0201.Bitwise AND of Numbers Range/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

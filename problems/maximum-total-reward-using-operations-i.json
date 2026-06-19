@@ -1,0 +1,88 @@
+{
+    "problemName": "maximum-total-reward-using-operations-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxTotalReward(self, rewardValues: List[int]) -> int:\r\n        @cache\r\n        def dfs(x: int) -> int:\r\n            i = bisect_right(rewardValues, x)\r\n            ans = 0\r\n            for v in rewardValues[i:]:\r\n                ans = max(ans, v + dfs(x + v))\r\n            return ans\r\n\r\n        rewardValues.sort()\r\n        return dfs(0)",
+    "problemId": 3180,
+    "title": "Maximum Total Reward Using Operations I",
+    "problemUrl": "https://leetcode.com/problems/maximum-total-reward-using-operations-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution3.py",
+            "sourceFile": "Solution3.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution3.cpp",
+            "sourceFile": "Solution3.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution3.java",
+            "sourceFile": "Solution3.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution3.go",
+            "sourceFile": "Solution3.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3180.Maximum Total Reward Using Operations I/Solution3.ts",
+            "sourceFile": "Solution3.ts"
+        }
+    ]
+}

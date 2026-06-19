@@ -1,0 +1,18 @@
+{
+    "problemName": "active-users",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT DISTINCT *\r\n        FROM\r\n            Logins\r\n            JOIN Accounts USING (id)\r\n    ),\r\n    P AS (\r\n        SELECT\r\n            *,\r\n            DATE_SUB(\r\n                login_date,\r\n                INTERVAL ROW_NUMBER() OVER (\r\n                    PARTITION BY id\r\n                    ORDER BY login_date\r\n                ) DAY\r\n            ) g\r\n        FROM T\r\n    )\r\nSELECT DISTINCT id, name\r\nFROM P\r\nGROUP BY id, g\r\nHAVING COUNT(*) >= 5\r\nORDER BY 1;",
+    "problemId": 1454,
+    "title": "Active Users",
+    "problemUrl": "https://leetcode.com/problems/active-users/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1454.Active Users/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1454.Active Users/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

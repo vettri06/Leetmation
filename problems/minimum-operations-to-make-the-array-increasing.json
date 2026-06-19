@@ -1,0 +1,53 @@
+{
+    "problemName": "minimum-operations-to-make-the-array-increasing",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums: List[int]) -> int:\r\n        ans = mx = 0\r\n        for v in nums:\r\n            ans += max(0, mx + 1 - v)\r\n            mx = max(mx + 1, v)\r\n        return ans",
+    "problemId": 1827,
+    "title": "Minimum Operations to Make the Array Increasing",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1827.Minimum Operations to Make the Array Increasing/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1827.Minimum Operations to Make the Array Increasing/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1827.Minimum Operations to Make the Array Increasing/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1827.Minimum Operations to Make the Array Increasing/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1827.Minimum Operations to Make the Array Increasing/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1827.Minimum Operations to Make the Array Increasing/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1827.Minimum Operations to Make the Array Increasing/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1827.Minimum Operations to Make the Array Increasing/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1827.Minimum Operations to Make the Array Increasing/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "rectangle-overlap",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isRectangleOverlap(self, rec1: List[int], rec2: List[int]) -> bool:\r\n        x1, y1, x2, y2 = rec1\r\n        x3, y3, x4, y4 = rec2\r\n        return not (y3 >= y2 or y4 <= y1 or x3 >= x2 or x4 <= x1)",
+    "problemId": 836,
+    "title": "Rectangle Overlap",
+    "problemUrl": "https://leetcode.com/problems/rectangle-overlap/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0836.Rectangle Overlap/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0836.Rectangle Overlap/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0836.Rectangle Overlap/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0836.Rectangle Overlap/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0836.Rectangle Overlap/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0836.Rectangle Overlap/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

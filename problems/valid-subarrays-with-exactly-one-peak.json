@@ -1,0 +1,38 @@
+{
+    "problemName": "valid-subarrays-with-exactly-one-peak",
+    "language": "python3",
+    "code": "class Solution:\r\n    def validSubarrays(self, nums: list[int], k: int) -> int:\r\n        n = len(nums)\r\n        peaks = []\r\n        for i in range(1, n - 1):\r\n            if nums[i] > nums[i - 1] and nums[i] > nums[i + 1]:\r\n                peaks.append(i)\r\n\r\n        ans = 0\r\n        for j, p in enumerate(peaks):\r\n            left_min = max(p - k, 0)\r\n            if j > 0:\r\n                left_min = max(left_min, peaks[j - 1] + 1)\r\n\r\n            right_max = min(p + k, n - 1)\r\n            if j < len(peaks) - 1:\r\n                right_max = min(right_max, peaks[j + 1] - 1)\r\n\r\n            ans += (p - left_min + 1) * (right_max - p + 1)\r\n        return ans",
+    "problemId": 3874,
+    "title": "Valid Subarrays With Exactly One Peak",
+    "problemUrl": "https://leetcode.com/problems/valid-subarrays-with-exactly-one-peak/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3874.Valid Subarrays With Exactly One Peak/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3874.Valid Subarrays With Exactly One Peak/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3874.Valid Subarrays With Exactly One Peak/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3874.Valid Subarrays With Exactly One Peak/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3874.Valid Subarrays With Exactly One Peak/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3874.Valid Subarrays With Exactly One Peak/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

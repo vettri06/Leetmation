@@ -1,0 +1,33 @@
+{
+    "problemName": "people-whose-list-of-favorite-companies-is-not-a-subset-of-another-list",
+    "language": "python3",
+    "code": "class Solution:\r\n    def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:\r\n        idx = 0\r\n        d = {}\r\n        n = len(favoriteCompanies)\r\n        nums = [set() for _ in range(n)]\r\n        for i, ss in enumerate(favoriteCompanies):\r\n            for s in ss:\r\n                if s not in d:\r\n                    d[s] = idx\r\n                    idx += 1\r\n                nums[i].add(d[s])\r\n        ans = []\r\n        for i in range(n):\r\n            if not any(i != j and (nums[i] & nums[j]) == nums[i] for j in range(n)):\r\n                ans.append(i)\r\n        return ans",
+    "problemId": 1452,
+    "title": "People Whose List of Favorite Companies Is Not a Subset of Another List",
+    "problemUrl": "https://leetcode.com/problems/people-whose-list-of-favorite-companies-is-not-a-subset-of-another-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1452.People Whose List of Favorite Companies Is Not a Subset of Another List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1452.People Whose List of Favorite Companies Is Not a Subset of Another List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1452.People Whose List of Favorite Companies Is Not a Subset of Another List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1452.People Whose List of Favorite Companies Is Not a Subset of Another List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1452.People Whose List of Favorite Companies Is Not a Subset of Another List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

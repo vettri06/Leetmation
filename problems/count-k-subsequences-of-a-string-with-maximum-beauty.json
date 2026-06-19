@@ -1,0 +1,38 @@
+{
+    "problemName": "count-k-subsequences-of-a-string-with-maximum-beauty",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countKSubsequencesWithMaxBeauty(self, s: str, k: int) -> int:\r\n        f = Counter(s)\r\n        if len(f) < k:\r\n            return 0\r\n        mod = 10**9 + 7\r\n        vs = sorted(f.values(), reverse=True)\r\n        val = vs[k - 1]\r\n        x = vs.count(val)\r\n        ans = 1\r\n        for v in vs:\r\n            if v == val:\r\n                break\r\n            k -= 1\r\n            ans = ans * v % mod\r\n        ans = ans * comb(x, k) * pow(val, k, mod) % mod\r\n        return ans",
+    "problemId": 2842,
+    "title": "Count K-Subsequences of a String With Maximum Beauty",
+    "problemUrl": "https://leetcode.com/problems/count-k-subsequences-of-a-string-with-maximum-beauty/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2842.Count K-Subsequences of a String With Maximum Beauty/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2842.Count K-Subsequences of a String With Maximum Beauty/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2842.Count K-Subsequences of a String With Maximum Beauty/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2842.Count K-Subsequences of a String With Maximum Beauty/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2842.Count K-Subsequences of a String With Maximum Beauty/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2842.Count K-Subsequences of a String With Maximum Beauty/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

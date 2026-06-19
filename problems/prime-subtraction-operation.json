@@ -1,0 +1,48 @@
+{
+    "problemName": "prime-subtraction-operation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def primeSubOperation(self, nums: List[int]) -> bool:\r\n        p = []\r\n        for i in range(2, max(nums)):\r\n            for j in p:\r\n                if i % j == 0:\r\n                    break\r\n            else:\r\n                p.append(i)\r\n\r\n        n = len(nums)\r\n        for i in range(n - 2, -1, -1):\r\n            if nums[i] < nums[i + 1]:\r\n                continue\r\n            j = bisect_right(p, nums[i] - nums[i + 1])\r\n            if j == len(p) or p[j] >= nums[i]:\r\n                return False\r\n            nums[i] -= p[j]\r\n        return True",
+    "problemId": 2601,
+    "title": "Prime Subtraction Operation",
+    "problemUrl": "https://leetcode.com/problems/prime-subtraction-operation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2601.Prime Subtraction Operation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2601.Prime Subtraction Operation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2601.Prime Subtraction Operation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2601.Prime Subtraction Operation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2601.Prime Subtraction Operation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2601.Prime Subtraction Operation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2601.Prime Subtraction Operation/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2601.Prime Subtraction Operation/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

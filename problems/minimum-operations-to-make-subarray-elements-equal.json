@@ -1,0 +1,28 @@
+{
+    "problemName": "minimum-operations-to-make-subarray-elements-equal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums: List[int], k: int) -> int:\r\n        l = SortedList()\r\n        r = SortedList()\r\n        s1 = s2 = 0\r\n        ans = inf\r\n        for i, x in enumerate(nums):\r\n            l.add(x)\r\n            s1 += x\r\n            y = l.pop()\r\n            s1 -= y\r\n            r.add(y)\r\n            s2 += y\r\n            if len(r) - len(l) > 1:\r\n                y = r.pop(0)\r\n                s2 -= y\r\n                l.add(y)\r\n                s1 += y\r\n            if i >= k - 1:\r\n                ans = min(ans, s2 - r[0] * len(r) + r[0] * len(l) - s1)\r\n                j = i - k + 1\r\n                if nums[j] in r:\r\n                    r.remove(nums[j])\r\n                    s2 -= nums[j]\r\n                else:\r\n                    l.remove(nums[j])\r\n                    s1 -= nums[j]\r\n        return ans",
+    "problemId": 3422,
+    "title": "Minimum Operations to Make Subarray Elements Equal",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-make-subarray-elements-equal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3422.Minimum Operations to Make Subarray Elements Equal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3422.Minimum Operations to Make Subarray Elements Equal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3422.Minimum Operations to Make Subarray Elements Equal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3422.Minimum Operations to Make Subarray Elements Equal/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

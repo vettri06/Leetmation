@@ -1,0 +1,18 @@
+{
+    "problemName": "debounce",
+    "language": "typescript",
+    "code": "type F = (...p: any[]) => any;\r\n\r\nfunction debounce(fn: F, t: number): F {\r\n    let timeout: ReturnType<typeof setTimeout> | undefined;\r\n\r\n    return function (...args) {\r\n        if (timeout !== undefined) {\r\n            clearTimeout(timeout);\r\n        }\r\n        timeout = setTimeout(() => {\r\n            fn.apply(this, args);\r\n        }, t);\r\n    };\r\n}\r\n\r\n/**\r\n * const log = debounce(console.log, 100);\r\n * log('Hello'); // cancelled\r\n * log('Hello'); // cancelled\r\n * log('Hello'); // Logged at t=100ms\r\n */",
+    "problemId": 2627,
+    "title": "Debounce",
+    "problemUrl": "https://leetcode.com/problems/debounce/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2627.Debounce/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2627.Debounce/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

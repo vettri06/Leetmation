@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-height-of-a-triangle",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxHeightOfTriangle(self, red: int, blue: int) -> int:\r\n        ans = 0\r\n        for k in range(2):\r\n            c = [red, blue]\r\n            i, j = 1, k\r\n            while i <= c[j]:\r\n                c[j] -= i\r\n                j ^= 1\r\n                ans = max(ans, i)\r\n                i += 1\r\n        return ans",
+    "problemId": 3200,
+    "title": "Maximum Height of a Triangle",
+    "problemUrl": "https://leetcode.com/problems/maximum-height-of-a-triangle/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3200.Maximum Height of a Triangle/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3200.Maximum Height of a Triangle/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3200.Maximum Height of a Triangle/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3200.Maximum Height of a Triangle/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3200.Maximum Height of a Triangle/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3200.Maximum Height of a Triangle/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

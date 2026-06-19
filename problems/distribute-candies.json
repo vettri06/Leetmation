@@ -1,0 +1,38 @@
+{
+    "problemName": "distribute-candies",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distributeCandies(self, candyType: List[int]) -> int:\r\n        return min(len(candyType) >> 1, len(set(candyType)))",
+    "problemId": 575,
+    "title": "Distribute Candies",
+    "problemUrl": "https://leetcode.com/problems/distribute-candies/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0575.Distribute Candies/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0575.Distribute Candies/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0575.Distribute Candies/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0575.Distribute Candies/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0575.Distribute Candies/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0575.Distribute Candies/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-score-of-all-prefixes-of-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findPrefixScore(self, nums: List[int]) -> List[int]:\r\n        n = len(nums)\r\n        ans = [0] * n\r\n        mx = 0\r\n        for i, x in enumerate(nums):\r\n            mx = max(mx, x)\r\n            ans[i] = x + mx + (0 if i == 0 else ans[i - 1])\r\n        return ans",
+    "problemId": 2640,
+    "title": "Find the Score of All Prefixes of an Array",
+    "problemUrl": "https://leetcode.com/problems/find-the-score-of-all-prefixes-of-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2640.Find the Score of All Prefixes of an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2640.Find the Score of All Prefixes of an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2640.Find the Score of All Prefixes of an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2640.Find the Score of All Prefixes of an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2640.Find the Score of All Prefixes of an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2640.Find the Score of All Prefixes of an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

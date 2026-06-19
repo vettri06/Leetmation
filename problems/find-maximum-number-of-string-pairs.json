@@ -1,0 +1,38 @@
+{
+    "problemName": "find-maximum-number-of-string-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumNumberOfStringPairs(self, words: List[str]) -> int:\r\n        cnt = Counter()\r\n        ans = 0\r\n        for w in words:\r\n            ans += cnt[w[::-1]]\r\n            cnt[w] += 1\r\n        return ans",
+    "problemId": 2744,
+    "title": "Find Maximum Number of String Pairs",
+    "problemUrl": "https://leetcode.com/problems/find-maximum-number-of-string-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2744.Find Maximum Number of String Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2744.Find Maximum Number of String Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2744.Find Maximum Number of String Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2744.Find Maximum Number of String Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2744.Find Maximum Number of String Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2744.Find Maximum Number of String Pairs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "sort-array-by-moving-items-to-empty-space",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sortArray(self, nums: List[int]) -> int:\r\n        def f(nums, k):\r\n            vis = [False] * n\r\n            cnt = 0\r\n            for i, v in enumerate(nums):\r\n                if i == v or vis[i]:\r\n                    continue\r\n                cnt += 1\r\n                j = i\r\n                while not vis[j]:\r\n                    vis[j] = True\r\n                    cnt += 1\r\n                    j = nums[j]\r\n            return cnt - 2 * (nums[k] != k)\r\n\r\n        n = len(nums)\r\n        a = f(nums, 0)\r\n        b = f([(v - 1 + n) % n for v in nums], n - 1)\r\n        return min(a, b)",
+    "problemId": 2459,
+    "title": "Sort Array by Moving Items to Empty Space",
+    "problemUrl": "https://leetcode.com/problems/sort-array-by-moving-items-to-empty-space/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2459.Sort Array by Moving Items to Empty Space/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2459.Sort Array by Moving Items to Empty Space/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2459.Sort Array by Moving Items to Empty Space/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2459.Sort Array by Moving Items to Empty Space/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2459.Sort Array by Moving Items to Empty Space/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

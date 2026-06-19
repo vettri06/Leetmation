@@ -1,0 +1,73 @@
+{
+    "problemName": "find-all-anagrams-in-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findAnagrams(self, s: str, p: str) -> List[int]:\r\n        m, n = len(s), len(p)\r\n        ans = []\r\n        if m < n:\r\n            return ans\r\n        cnt1 = Counter(p)\r\n        cnt2 = Counter(s[: n - 1])\r\n        for i in range(n - 1, m):\r\n            cnt2[s[i]] += 1\r\n            if cnt1 == cnt2:\r\n                ans.append(i - n + 1)\r\n            cnt2[s[i - n + 1]] -= 1\r\n        return ans",
+    "problemId": 438,
+    "title": "Find All Anagrams in a String",
+    "problemUrl": "https://leetcode.com/problems/find-all-anagrams-in-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0438.Find All Anagrams in a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0438.Find All Anagrams in a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0438.Find All Anagrams in a String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0438.Find All Anagrams in a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0438.Find All Anagrams in a String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0438.Find All Anagrams in a String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0438.Find All Anagrams in a String/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0438.Find All Anagrams in a String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0438.Find All Anagrams in a String/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0438.Find All Anagrams in a String/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0438.Find All Anagrams in a String/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0438.Find All Anagrams in a String/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0438.Find All Anagrams in a String/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

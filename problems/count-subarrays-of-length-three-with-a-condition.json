@@ -1,0 +1,43 @@
+{
+    "problemName": "count-subarrays-of-length-three-with-a-condition",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSubarrays(self, nums: List[int]) -> int:\r\n        return sum(\r\n            (nums[i - 1] + nums[i + 1]) * 2 == nums[i] for i in range(1, len(nums) - 1)\r\n        )",
+    "problemId": 3392,
+    "title": "Count Subarrays of Length Three With a Condition",
+    "problemUrl": "https://leetcode.com/problems/count-subarrays-of-length-three-with-a-condition/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3392.Count Subarrays of Length Three With a Condition/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3392.Count Subarrays of Length Three With a Condition/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3392.Count Subarrays of Length Three With a Condition/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3392.Count Subarrays of Length Three With a Condition/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3392.Count Subarrays of Length Three With a Condition/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3392.Count Subarrays of Length Three With a Condition/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3392.Count Subarrays of Length Three With a Condition/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

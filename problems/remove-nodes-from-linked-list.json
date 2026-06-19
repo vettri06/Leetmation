@@ -1,0 +1,63 @@
+{
+    "problemName": "remove-nodes-from-linked-list",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def removeNodes(self, head: Optional[ListNode]) -> Optional[ListNode]:\r\n        nums = []\r\n        while head:\r\n            nums.append(head.val)\r\n            head = head.next\r\n        stk = []\r\n        for v in nums:\r\n            while stk and stk[-1] < v:\r\n                stk.pop()\r\n            stk.append(v)\r\n        dummy = ListNode()\r\n        head = dummy\r\n        for v in stk:\r\n            head.next = ListNode(v)\r\n            head = head.next\r\n        return dummy.next",
+    "problemId": 2487,
+    "title": "Remove Nodes From Linked List",
+    "problemUrl": "https://leetcode.com/problems/remove-nodes-from-linked-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2487.Remove Nodes From Linked List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2487.Remove Nodes From Linked List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2487.Remove Nodes From Linked List/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2487.Remove Nodes From Linked List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2487.Remove Nodes From Linked List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2487.Remove Nodes From Linked List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2487.Remove Nodes From Linked List/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2487.Remove Nodes From Linked List/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2487.Remove Nodes From Linked List/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2487.Remove Nodes From Linked List/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2487.Remove Nodes From Linked List/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

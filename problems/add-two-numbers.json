@@ -1,0 +1,68 @@
+{
+    "problemName": "add-two-numbers",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def addTwoNumbers(\r\n        self, l1: Optional[ListNode], l2: Optional[ListNode]\r\n    ) -> Optional[ListNode]:\r\n        dummy = ListNode()\r\n        carry, curr = 0, dummy\r\n        while l1 or l2 or carry:\r\n            s = (l1.val if l1 else 0) + (l2.val if l2 else 0) + carry\r\n            carry, val = divmod(s, 10)\r\n            curr.next = ListNode(val)\r\n            curr = curr.next\r\n            l1 = l1.next if l1 else None\r\n            l2 = l2.next if l2 else None\r\n        return dummy.next",
+    "problemId": 2,
+    "title": "Add Two Numbers",
+    "problemUrl": "https://leetcode.com/problems/add-two-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0002.Add Two Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0002.Add Two Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0002.Add Two Numbers/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0002.Add Two Numbers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0002.Add Two Numbers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0002.Add Two Numbers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0002.Add Two Numbers/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0002.Add Two Numbers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0002.Add Two Numbers/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0002.Add Two Numbers/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "swift",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0002.Add Two Numbers/Solution.swift",
+            "sourceFile": "Solution.swift"
+        },
+        {
+            "language": "ruby",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0002.Add Two Numbers/Solution.rb",
+            "sourceFile": "Solution.rb"
+        }
+    ]
+}

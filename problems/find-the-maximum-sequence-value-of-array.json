@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-maximum-sequence-value-of-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxValue(self, nums: List[int], k: int) -> int:\r\n        m = 1 << 7\r\n        n = len(nums)\r\n        f = [[[False] * m for _ in range(k + 2)] for _ in range(n + 1)]\r\n        f[0][0][0] = True\r\n        for i in range(n):\r\n            for j in range(k + 1):\r\n                for x in range(m):\r\n                    f[i + 1][j][x] |= f[i][j][x]\r\n                    f[i + 1][j + 1][x | nums[i]] |= f[i][j][x]\r\n\r\n        g = [[[False] * m for _ in range(k + 2)] for _ in range(n + 1)]\r\n        g[n][0][0] = True\r\n        for i in range(n, 0, -1):\r\n            for j in range(k + 1):\r\n                for y in range(m):\r\n                    g[i - 1][j][y] |= g[i][j][y]\r\n                    g[i - 1][j + 1][y | nums[i - 1]] |= g[i][j][y]\r\n\r\n        ans = 0\r\n        for i in range(k, n - k + 1):\r\n            for x in range(m):\r\n                if f[i][k][x]:\r\n                    for y in range(m):\r\n                        if g[i][k][y]:\r\n                            ans = max(ans, x ^ y)\r\n        return ans",
+    "problemId": 3287,
+    "title": "Find the Maximum Sequence Value of Array",
+    "problemUrl": "https://leetcode.com/problems/find-the-maximum-sequence-value-of-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3287.Find the Maximum Sequence Value of Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3287.Find the Maximum Sequence Value of Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3287.Find the Maximum Sequence Value of Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3287.Find the Maximum Sequence Value of Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3287.Find the Maximum Sequence Value of Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3287.Find the Maximum Sequence Value of Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

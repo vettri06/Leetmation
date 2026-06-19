@@ -1,0 +1,43 @@
+{
+    "problemName": "most-frequent-number-following-key-in-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mostFrequent(self, nums: List[int], key: int) -> int:\r\n        cnt = Counter()\r\n        ans = mx = 0\r\n        for a, b in pairwise(nums):\r\n            if a == key:\r\n                cnt[b] += 1\r\n                if mx < cnt[b]:\r\n                    mx = cnt[b]\r\n                    ans = b\r\n        return ans",
+    "problemId": 2190,
+    "title": "Most Frequent Number Following Key In an Array",
+    "problemUrl": "https://leetcode.com/problems/most-frequent-number-following-key-in-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2190.Most Frequent Number Following Key In an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2190.Most Frequent Number Following Key In an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2190.Most Frequent Number Following Key In an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2190.Most Frequent Number Following Key In an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2190.Most Frequent Number Following Key In an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2190.Most Frequent Number Following Key In an Array/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2190.Most Frequent Number Following Key In an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

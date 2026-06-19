@@ -1,0 +1,63 @@
+{
+    "problemName": "max-value-of-equation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMaxValueOfEquation(self, points: List[List[int]], k: int) -> int:\r\n        ans = -inf\r\n        pq = []\r\n        for x, y in points:\r\n            while pq and x - pq[0][1] > k:\r\n                heappop(pq)\r\n            if pq:\r\n                ans = max(ans, x + y - pq[0][0])\r\n            heappush(pq, (x - y, x))\r\n        return ans",
+    "problemId": 1499,
+    "title": "Max Value of Equation",
+    "problemUrl": "https://leetcode.com/problems/max-value-of-equation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1499.Max Value of Equation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1499.Max Value of Equation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1499.Max Value of Equation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1499.Max Value of Equation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1499.Max Value of Equation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1499.Max Value of Equation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1499.Max Value of Equation/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1499.Max Value of Equation/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1499.Max Value of Equation/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1499.Max Value of Equation/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1499.Max Value of Equation/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

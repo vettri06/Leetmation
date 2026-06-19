@@ -1,0 +1,18 @@
+{
+    "problemName": "customers-with-strictly-increasing-purchases",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    customer_id\r\nFROM\r\n    (\r\n        SELECT\r\n            customer_id,\r\n            YEAR(order_date),\r\n            SUM(price) AS total,\r\n            YEAR(order_date) - RANK() OVER (\r\n                PARTITION BY customer_id\r\n                ORDER BY SUM(price)\r\n            ) AS rk\r\n        FROM Orders\r\n        GROUP BY customer_id, YEAR(order_date)\r\n    ) AS t\r\nGROUP BY customer_id\r\nHAVING COUNT(DISTINCT rk) = 1;",
+    "problemId": 2474,
+    "title": "Customers With Strictly Increasing Purchases",
+    "problemUrl": "https://leetcode.com/problems/customers-with-strictly-increasing-purchases/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2474.Customers With Strictly Increasing Purchases/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2474.Customers With Strictly Increasing Purchases/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

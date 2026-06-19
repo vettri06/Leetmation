@@ -1,0 +1,68 @@
+{
+    "problemName": "132-pattern",
+    "language": "python3",
+    "code": "class Solution:\r\n    def find132pattern(self, nums: List[int]) -> bool:\r\n        vk = -inf\r\n        stk = []\r\n        for x in nums[::-1]:\r\n            if x < vk:\r\n                return True\r\n            while stk and stk[-1] < x:\r\n                vk = stk.pop()\r\n            stk.append(x)\r\n        return False",
+    "problemId": 456,
+    "title": "132 Pattern",
+    "problemUrl": "https://leetcode.com/problems/132-pattern/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0456.132 Pattern/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0456.132 Pattern/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0456.132 Pattern/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0456.132 Pattern/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0456.132 Pattern/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0456.132 Pattern/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0456.132 Pattern/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0456.132 Pattern/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0456.132 Pattern/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0456.132 Pattern/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0456.132 Pattern/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0456.132 Pattern/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

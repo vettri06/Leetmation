@@ -1,0 +1,63 @@
+{
+    "problemName": "minimum-amount-of-time-to-fill-cups",
+    "language": "python3",
+    "code": "class Solution:\r\n    def fillCups(self, amount: List[int]) -> int:\r\n        ans = 0\r\n        while sum(amount):\r\n            amount.sort()\r\n            ans += 1\r\n            amount[2] -= 1\r\n            amount[1] = max(0, amount[1] - 1)\r\n        return ans",
+    "problemId": 2335,
+    "title": "Minimum Amount of Time to Fill Cups",
+    "problemUrl": "https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2335.Minimum Amount of Time to Fill Cups/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2335.Minimum Amount of Time to Fill Cups/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2335.Minimum Amount of Time to Fill Cups/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2335.Minimum Amount of Time to Fill Cups/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2335.Minimum Amount of Time to Fill Cups/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2335.Minimum Amount of Time to Fill Cups/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2335.Minimum Amount of Time to Fill Cups/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2335.Minimum Amount of Time to Fill Cups/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2335.Minimum Amount of Time to Fill Cups/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2335.Minimum Amount of Time to Fill Cups/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2335.Minimum Amount of Time to Fill Cups/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

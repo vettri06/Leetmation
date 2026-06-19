@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-n-th-value-after-k-seconds",
+    "language": "python3",
+    "code": "class Solution:\r\n    def valueAfterKSeconds(self, n: int, k: int) -> int:\r\n        a = [1] * n\r\n        mod = 10**9 + 7\r\n        for _ in range(k):\r\n            for i in range(1, n):\r\n                a[i] = (a[i] + a[i - 1]) % mod\r\n        return a[n - 1]",
+    "problemId": 3179,
+    "title": "Find the N-th Value After K Seconds",
+    "problemUrl": "https://leetcode.com/problems/find-the-n-th-value-after-k-seconds/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3179.Find the N-th Value After K Seconds/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3179.Find the N-th Value After K Seconds/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3179.Find the N-th Value After K Seconds/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3179.Find the N-th Value After K Seconds/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3179.Find the N-th Value After K Seconds/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3179.Find the N-th Value After K Seconds/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

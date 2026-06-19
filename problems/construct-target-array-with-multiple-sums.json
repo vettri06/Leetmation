@@ -1,0 +1,43 @@
+{
+    "problemName": "construct-target-array-with-multiple-sums",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isPossible(self, target: List[int]) -> bool:\r\n        s = sum(target)\r\n        pq = [-x for x in target]\r\n        heapify(pq)\r\n        while -pq[0] > 1:\r\n            mx = -heappop(pq)\r\n            t = s - mx\r\n            if t == 0 or mx - t < 1:\r\n                return False\r\n            x = (mx % t) or t\r\n            heappush(pq, -x)\r\n            s = s - mx + x\r\n        return True",
+    "problemId": 1354,
+    "title": "Construct Target Array With Multiple Sums",
+    "problemUrl": "https://leetcode.com/problems/construct-target-array-with-multiple-sums/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1354.Construct Target Array With Multiple Sums/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1354.Construct Target Array With Multiple Sums/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1354.Construct Target Array With Multiple Sums/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1354.Construct Target Array With Multiple Sums/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1354.Construct Target Array With Multiple Sums/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1354.Construct Target Array With Multiple Sums/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1354.Construct Target Array With Multiple Sums/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

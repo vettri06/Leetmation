@@ -1,0 +1,23 @@
+{
+    "problemName": "traffic-light-controlled-intersection",
+    "language": "python3",
+    "code": "from threading import Lock\r\n\r\n\r\nclass TrafficLight:\r\n    def __init__(self):\r\n        self.lock = Lock()\r\n        self.road = 1\r\n\r\n    def carArrived(\r\n        self,\r\n        carId: int,  # ID of the car\r\n        # ID of the road the car travels on. Can be 1 (road A) or 2 (road B)\r\n        roadId: int,\r\n        direction: int,  # Direction of the car\r\n        # Use turnGreen() to turn light to green on current road\r\n        turnGreen: 'Callable[[], None]',\r\n        # Use crossCar() to make car cross the intersection\r\n        crossCar: 'Callable[[], None]',\r\n    ) -> None:\r\n        self.lock.acquire()\r\n        if self.road != roadId:\r\n            self.road = roadId\r\n            turnGreen()\r\n        crossCar()\r\n        self.lock.release()",
+    "problemId": 1279,
+    "title": "Traffic Light Controlled Intersection",
+    "problemUrl": "https://leetcode.com/problems/traffic-light-controlled-intersection/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1279.Traffic Light Controlled Intersection/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1279.Traffic Light Controlled Intersection/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1279.Traffic Light Controlled Intersection/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

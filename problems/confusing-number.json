@@ -1,0 +1,33 @@
+{
+    "problemName": "confusing-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def confusingNumber(self, n: int) -> bool:\r\n        x, y = n, 0\r\n        d = [0, 1, -1, -1, -1, -1, 9, -1, 8, 6]\r\n        while x:\r\n            x, v = divmod(x, 10)\r\n            if d[v] < 0:\r\n                return False\r\n            y = y * 10 + d[v]\r\n        return y != n",
+    "problemId": 1056,
+    "title": "Confusing Number",
+    "problemUrl": "https://leetcode.com/problems/confusing-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1056.Confusing Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1056.Confusing Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1056.Confusing Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1056.Confusing Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1056.Confusing Number/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

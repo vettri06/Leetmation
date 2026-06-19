@@ -1,0 +1,38 @@
+{
+    "problemName": "check-if-two-chessboard-squares-have-the-same-color",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkTwoChessboards(self, coordinate1: str, coordinate2: str) -> bool:\r\n        x = ord(coordinate1[0]) - ord(coordinate2[0])\r\n        y = int(coordinate1[1]) - int(coordinate2[1])\r\n        return (x + y) % 2 == 0",
+    "problemId": 3274,
+    "title": "Check if Two Chessboard Squares Have the Same Color",
+    "problemUrl": "https://leetcode.com/problems/check-if-two-chessboard-squares-have-the-same-color/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3274.Check if Two Chessboard Squares Have the Same Color/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3274.Check if Two Chessboard Squares Have the Same Color/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3274.Check if Two Chessboard Squares Have the Same Color/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3274.Check if Two Chessboard Squares Have the Same Color/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3274.Check if Two Chessboard Squares Have the Same Color/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3274.Check if Two Chessboard Squares Have the Same Color/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

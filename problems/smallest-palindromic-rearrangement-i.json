@@ -1,0 +1,38 @@
+{
+    "problemName": "smallest-palindromic-rearrangement-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestPalindrome(self, s: str) -> str:\r\n        cnt = Counter(s)\r\n        t = []\r\n        ch = \"\"\r\n        for c in ascii_lowercase:\r\n            v = cnt[c] // 2\r\n            t.append(c * v)\r\n            cnt[c] -= v * 2\r\n            if cnt[c] == 1:\r\n                ch = c\r\n        ans = \"\".join(t)\r\n        ans = ans + ch + ans[::-1]\r\n        return ans",
+    "problemId": 3517,
+    "title": "Smallest Palindromic Rearrangement I",
+    "problemUrl": "https://leetcode.com/problems/smallest-palindromic-rearrangement-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3517.Smallest Palindromic Rearrangement I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3517.Smallest Palindromic Rearrangement I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3517.Smallest Palindromic Rearrangement I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3517.Smallest Palindromic Rearrangement I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3517.Smallest Palindromic Rearrangement I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3517.Smallest Palindromic Rearrangement I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

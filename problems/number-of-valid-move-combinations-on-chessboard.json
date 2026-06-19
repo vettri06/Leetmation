@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-valid-move-combinations-on-chessboard",
+    "language": "python3",
+    "code": "rook_dirs = [(1, 0), (-1, 0), (0, 1), (0, -1)]\r\nbishop_dirs = [(1, 1), (1, -1), (-1, 1), (-1, -1)]\r\nqueue_dirs = rook_dirs + bishop_dirs\r\n\r\n\r\ndef get_dirs(piece: str) -> List[Tuple[int, int]]:\r\n    match piece[0]:\r\n        case \"r\":\r\n            return rook_dirs\r\n        case \"b\":\r\n            return bishop_dirs\r\n        case _:\r\n            return queue_dirs\r\n\r\n\r\nclass Solution:\r\n    def countCombinations(self, pieces: List[str], positions: List[List[int]]) -> int:\r\n        def check_stop(i: int, x: int, y: int, t: int) -> bool:\r\n            return all(dist[j][x][y] < t for j in range(i))\r\n\r\n        def check_pass(i: int, x: int, y: int, t: int) -> bool:\r\n            for j in range(i):\r\n                if dist[j][x][y] == t:\r\n                    return False\r\n                if end[j][0] == x and end[j][1] == y and end[j][2] <= t:\r\n                    return False\r\n            return True\r\n\r\n        def dfs(i: int) -> None:\r\n            if i >= n:\r\n                nonlocal ans\r\n                ans += 1\r\n                return\r\n            x, y = positions[i]\r\n            dist[i][:] = [[-1] * m for _ in range(m)]\r\n            dist[i][x][y] = 0\r\n            end[i] = (x, y, 0)\r\n            if check_stop(i, x, y, 0):\r\n                dfs(i + 1)\r\n            dirs = get_dirs(pieces[i])\r\n            for dx, dy in dirs:\r\n                dist[i][:] = [[-1] * m for _ in range(m)]\r\n                dist[i][x][y] = 0\r\n                nx, ny, nt = x + dx, y + dy, 1\r\n                while 1 <= nx < m and 1 <= ny < m and check_pass(i, nx, ny, nt):\r\n                    dist[i][nx][ny] = nt\r\n                    end[i] = (nx, ny, nt)\r\n                    if check_stop(i, nx, ny, nt):\r\n                        dfs(i + 1)\r\n                    nx += dx\r\n                    ny += dy\r\n                    nt += 1\r\n\r\n        n = len(pieces)\r\n        m = 9\r\n        dist = [[[-1] * m for _ in range(m)] for _ in range(n)]\r\n        end = [(0, 0, 0) for _ in range(n)]\r\n        ans = 0\r\n        dfs(0)\r\n        return ans",
+    "problemId": 2056,
+    "title": "Number of Valid Move Combinations On Chessboard",
+    "problemUrl": "https://leetcode.com/problems/number-of-valid-move-combinations-on-chessboard/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2056.Number of Valid Move Combinations On Chessboard/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2056.Number of Valid Move Combinations On Chessboard/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2056.Number of Valid Move Combinations On Chessboard/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2056.Number of Valid Move Combinations On Chessboard/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2056.Number of Valid Move Combinations On Chessboard/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2056.Number of Valid Move Combinations On Chessboard/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

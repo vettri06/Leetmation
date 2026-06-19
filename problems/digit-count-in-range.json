@@ -1,0 +1,33 @@
+{
+    "problemName": "digit-count-in-range",
+    "language": "python3",
+    "code": "class Solution:\r\n    def digitsCount(self, d: int, low: int, high: int) -> int:\r\n        return self.f(high, d) - self.f(low - 1, d)\r\n\r\n    def f(self, n, d):\r\n        @cache\r\n        def dfs(pos, cnt, lead, limit):\r\n            if pos <= 0:\r\n                return cnt\r\n            up = a[pos] if limit else 9\r\n            ans = 0\r\n            for i in range(up + 1):\r\n                if i == 0 and lead:\r\n                    ans += dfs(pos - 1, cnt, lead, limit and i == up)\r\n                else:\r\n                    ans += dfs(pos - 1, cnt + (i == d), False, limit and i == up)\r\n            return ans\r\n\r\n        a = [0] * 11\r\n        l = 0\r\n        while n:\r\n            l += 1\r\n            a[l] = n % 10\r\n            n //= 10\r\n        return dfs(l, 0, True, True)",
+    "problemId": 1067,
+    "title": "Digit Count in Range",
+    "problemUrl": "https://leetcode.com/problems/digit-count-in-range/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1067.Digit Count in Range/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1067.Digit Count in Range/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1067.Digit Count in Range/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1067.Digit Count in Range/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1067.Digit Count in Range/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "the-category-of-each-member-in-the-store",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    m.member_id,\r\n    name,\r\n    CASE\r\n        WHEN COUNT(v.visit_id) = 0 THEN 'Bronze'\r\n        WHEN 100 * COUNT(charged_amount) / COUNT(v.visit_id) >= 80 THEN 'Diamond'\r\n        WHEN 100 * COUNT(charged_amount) / COUNT(v.visit_id) >= 50 THEN 'Gold'\r\n        ELSE 'Silver'\r\n    END AS category\r\nFROM\r\n    Members AS m\r\n    LEFT JOIN Visits AS v ON m.member_id = v.member_id\r\n    LEFT JOIN Purchases AS p ON v.visit_id = p.visit_id\r\nGROUP BY member_id;",
+    "problemId": 2051,
+    "title": "The Category of Each Member in the Store",
+    "problemUrl": "https://leetcode.com/problems/the-category-of-each-member-in-the-store/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2051.The Category of Each Member in the Store/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2051.The Category of Each Member in the Store/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

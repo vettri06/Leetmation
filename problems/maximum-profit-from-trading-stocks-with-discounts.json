@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-profit-from-trading-stocks-with-discounts",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxProfit(\r\n        self,\r\n        n: int,\r\n        present: List[int],\r\n        future: List[int],\r\n        hierarchy: List[List[int]],\r\n        budget: int,\r\n    ) -> int:\r\n        max = lambda a, b: a if a > b else b\r\n        g = [[] for _ in range(n + 1)]\r\n        for u, v in hierarchy:\r\n            g[u].append(v)\r\n\r\n        def dfs(u: int):\r\n            nxt = [[0, 0] for _ in range(budget + 1)]\r\n            for v in g[u]:\r\n                fv = dfs(v)\r\n                for j in range(budget, -1, -1):\r\n                    for jv in range(j + 1):\r\n                        for pre in (0, 1):\r\n                            val = nxt[j - jv][pre] + fv[jv][pre]\r\n                            if val > nxt[j][pre]:\r\n                                nxt[j][pre] = val\r\n\r\n            f = [[0, 0] for _ in range(budget + 1)]\r\n            price = future[u - 1]\r\n\r\n            for j in range(budget + 1):\r\n                for pre in (0, 1):\r\n                    cost = present[u - 1] // (pre + 1)\r\n                    if j >= cost:\r\n                        f[j][pre] = max(nxt[j][0], nxt[j - cost][1] + (price - cost))\r\n                    else:\r\n                        f[j][pre] = nxt[j][0]\r\n\r\n            return f\r\n\r\n        return dfs(1)[budget][0]",
+    "problemId": 3562,
+    "title": "Maximum Profit from Trading Stocks with Discounts",
+    "problemUrl": "https://leetcode.com/problems/maximum-profit-from-trading-stocks-with-discounts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3562.Maximum Profit from Trading Stocks with Discounts/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3562.Maximum Profit from Trading Stocks with Discounts/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3562.Maximum Profit from Trading Stocks with Discounts/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3562.Maximum Profit from Trading Stocks with Discounts/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3562.Maximum Profit from Trading Stocks with Discounts/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3562.Maximum Profit from Trading Stocks with Discounts/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

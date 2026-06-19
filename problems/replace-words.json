@@ -1,0 +1,43 @@
+{
+    "problemName": "replace-words",
+    "language": "python3",
+    "code": "class Trie:\r\n    def __init__(self):\r\n        self.children = [None] * 26\r\n        self.is_end = False\r\n\r\n    def insert(self, w: str) -> None:\r\n        node = self\r\n        for c in w:\r\n            idx = ord(c) - ord(\"a\")\r\n            if node.children[idx] is None:\r\n                node.children[idx] = Trie()\r\n            node = node.children[idx]\r\n        node.is_end = True\r\n\r\n    def search(self, w: str) -> str:\r\n        node = self\r\n        for i, c in enumerate(w, 1):\r\n            idx = ord(c) - ord(\"a\")\r\n            if node.children[idx] is None:\r\n                return w\r\n            node = node.children[idx]\r\n            if node.is_end:\r\n                return w[:i]\r\n        return w\r\n\r\n\r\nclass Solution:\r\n    def replaceWords(self, dictionary: List[str], sentence: str) -> str:\r\n        trie = Trie()\r\n        for w in dictionary:\r\n            trie.insert(w)\r\n        return \" \".join(trie.search(w) for w in sentence.split())",
+    "problemId": 648,
+    "title": "Replace Words",
+    "problemUrl": "https://leetcode.com/problems/replace-words/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0648.Replace Words/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0648.Replace Words/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0648.Replace Words/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0648.Replace Words/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0648.Replace Words/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0648.Replace Words/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0648.Replace Words/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

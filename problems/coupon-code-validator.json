@@ -1,0 +1,43 @@
+{
+    "problemName": "coupon-code-validator",
+    "language": "python3",
+    "code": "class Solution:\r\n    def validateCoupons(\r\n        self, code: List[str], businessLine: List[str], isActive: List[bool]\r\n    ) -> List[str]:\r\n        def check(s: str) -> bool:\r\n            if not s:\r\n                return False\r\n            for c in s:\r\n                if not (c.isalpha() or c.isdigit() or c == \"_\"):\r\n                    return False\r\n            return True\r\n\r\n        idx = []\r\n        bs = {\"electronics\", \"grocery\", \"pharmacy\", \"restaurant\"}\r\n        for i, (c, b, a) in enumerate(zip(code, businessLine, isActive)):\r\n            if a and b in bs and check(c):\r\n                idx.append(i)\r\n        idx.sort(key=lambda i: (businessLine[i], code[i]))\r\n        return [code[i] for i in idx]",
+    "problemId": 3606,
+    "title": "Coupon Code Validator",
+    "problemUrl": "https://leetcode.com/problems/coupon-code-validator/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3606.Coupon Code Validator/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3606.Coupon Code Validator/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3606.Coupon Code Validator/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3606.Coupon Code Validator/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3606.Coupon Code Validator/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3606.Coupon Code Validator/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3606.Coupon Code Validator/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

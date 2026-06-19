@@ -1,0 +1,38 @@
+{
+    "problemName": "total-cost-to-hire-k-workers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def totalCost(self, costs: List[int], k: int, candidates: int) -> int:\r\n        n = len(costs)\r\n        if candidates * 2 >= n:\r\n            return sum(sorted(costs)[:k])\r\n        pq = []\r\n        for i, c in enumerate(costs[:candidates]):\r\n            heappush(pq, (c, i))\r\n        for i in range(n - candidates, n):\r\n            heappush(pq, (costs[i], i))\r\n        heapify(pq)\r\n        l, r = candidates, n - candidates - 1\r\n        ans = 0\r\n        for _ in range(k):\r\n            c, i = heappop(pq)\r\n            ans += c\r\n            if l > r:\r\n                continue\r\n            if i < l:\r\n                heappush(pq, (costs[l], l))\r\n                l += 1\r\n            else:\r\n                heappush(pq, (costs[r], r))\r\n                r -= 1\r\n        return ans",
+    "problemId": 2462,
+    "title": "Total Cost to Hire K Workers",
+    "problemUrl": "https://leetcode.com/problems/total-cost-to-hire-k-workers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2462.Total Cost to Hire K Workers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2462.Total Cost to Hire K Workers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2462.Total Cost to Hire K Workers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2462.Total Cost to Hire K Workers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2462.Total Cost to Hire K Workers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2462.Total Cost to Hire K Workers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

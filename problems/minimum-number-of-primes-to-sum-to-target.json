@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-number-of-primes-to-sum-to-target",
+    "language": "python3",
+    "code": "primes = []\r\nx = 2\r\nM = 1000\r\nwhile len(primes) < M:\r\n    is_prime = True\r\n    for p in primes:\r\n        if p * p > x:\r\n            break\r\n        if x % p == 0:\r\n            is_prime = False\r\n            break\r\n    if is_prime:\r\n        primes.append(x)\r\n    x += 1\r\n\r\n\r\nclass Solution:\r\n    def minNumberOfPrimes(self, n: int, m: int) -> int:\r\n        min = lambda x, y: x if x < y else y\r\n        f = [0] + [inf] * n\r\n        for x in primes[:m]:\r\n            for i in range(x, n + 1):\r\n                f[i] = min(f[i], f[i - x] + 1)\r\n        return f[n] if f[n] < inf else -1",
+    "problemId": 3610,
+    "title": "Minimum Number of Primes to Sum to Target",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-primes-to-sum-to-target/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3610.Minimum Number of Primes to Sum to Target/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3610.Minimum Number of Primes to Sum to Target/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3610.Minimum Number of Primes to Sum to Target/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3610.Minimum Number of Primes to Sum to Target/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3610.Minimum Number of Primes to Sum to Target/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3610.Minimum Number of Primes to Sum to Target/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

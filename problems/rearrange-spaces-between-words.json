@@ -1,0 +1,38 @@
+{
+    "problemName": "rearrange-spaces-between-words",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reorderSpaces(self, text: str) -> str:\r\n        spaces = text.count(\" \")\r\n        words = text.split()\r\n        if len(words) == 1:\r\n            return words[0] + \" \" * spaces\r\n        cnt, mod = divmod(spaces, len(words) - 1)\r\n        return (\" \" * cnt).join(words) + \" \" * mod",
+    "problemId": 1592,
+    "title": "Rearrange Spaces Between Words",
+    "problemUrl": "https://leetcode.com/problems/rearrange-spaces-between-words/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1592.Rearrange Spaces Between Words/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1592.Rearrange Spaces Between Words/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1592.Rearrange Spaces Between Words/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1592.Rearrange Spaces Between Words/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1592.Rearrange Spaces Between Words/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1592.Rearrange Spaces Between Words/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

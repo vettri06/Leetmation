@@ -1,0 +1,38 @@
+{
+    "problemName": "decremental-string-concatenation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimizeConcatenatedLength(self, words: List[str]) -> int:\r\n        @cache\r\n        def dfs(i: int, a: str, b: str) -> int:\r\n            if i >= len(words):\r\n                return 0\r\n            s = words[i]\r\n            x = dfs(i + 1, a, s[-1]) - int(s[0] == b)\r\n            y = dfs(i + 1, s[0], b) - int(s[-1] == a)\r\n            return len(s) + min(x, y)\r\n\r\n        return len(words[0]) + dfs(1, words[0][0], words[0][-1])",
+    "problemId": 2746,
+    "title": "Decremental String Concatenation",
+    "problemUrl": "https://leetcode.com/problems/decremental-string-concatenation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2746.Decremental String Concatenation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2746.Decremental String Concatenation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2746.Decremental String Concatenation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2746.Decremental String Concatenation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2746.Decremental String Concatenation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2746.Decremental String Concatenation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "problemName": "active-businesses",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT business_id\r\nFROM\r\n    EVENTS AS t1\r\n    JOIN (\r\n        SELECT\r\n            event_type,\r\n            AVG(occurences) AS occurences\r\n        FROM EVENTS\r\n        GROUP BY event_type\r\n    ) AS t2\r\n        ON t1.event_type = t2.event_type\r\nWHERE t1.occurences > t2.occurences\r\nGROUP BY business_id\r\nHAVING COUNT(1) > 1;",
+    "problemId": 1126,
+    "title": "Active Businesses",
+    "problemUrl": "https://leetcode.com/problems/active-businesses/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1126.Active Businesses/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1126.Active Businesses/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1126.Active Businesses/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

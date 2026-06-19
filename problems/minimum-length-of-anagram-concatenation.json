@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-length-of-anagram-concatenation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minAnagramLength(self, s: str) -> int:\r\n        def check(k: int) -> bool:\r\n            for i in range(0, n, k):\r\n                cnt1 = Counter(s[i : i + k])\r\n                for c, v in cnt.items():\r\n                    if cnt1[c] * (n // k) != v:\r\n                        return False\r\n            return True\r\n\r\n        cnt = Counter(s)\r\n        n = len(s)\r\n        for i in range(1, n + 1):\r\n            if n % i == 0 and check(i):\r\n                return i",
+    "problemId": 3138,
+    "title": "Minimum Length of Anagram Concatenation",
+    "problemUrl": "https://leetcode.com/problems/minimum-length-of-anagram-concatenation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3138.Minimum Length of Anagram Concatenation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3138.Minimum Length of Anagram Concatenation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3138.Minimum Length of Anagram Concatenation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3138.Minimum Length of Anagram Concatenation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3138.Minimum Length of Anagram Concatenation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3138.Minimum Length of Anagram Concatenation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

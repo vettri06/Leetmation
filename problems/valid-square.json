@@ -1,0 +1,33 @@
+{
+    "problemName": "valid-square",
+    "language": "python3",
+    "code": "class Solution:\r\n    def validSquare(\r\n        self, p1: List[int], p2: List[int], p3: List[int], p4: List[int]\r\n    ) -> bool:\r\n        def check(a, b, c):\r\n            (x1, y1), (x2, y2), (x3, y3) = a, b, c\r\n            d1 = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)\r\n            d2 = (x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3)\r\n            d3 = (x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3)\r\n            return any(\r\n                [\r\n                    d1 == d2 and d1 + d2 == d3 and d1,\r\n                    d2 == d3 and d2 + d3 == d1 and d2,\r\n                    d1 == d3 and d1 + d3 == d2 and d1,\r\n                ]\r\n            )\r\n\r\n        return (\r\n            check(p1, p2, p3)\r\n            and check(p2, p3, p4)\r\n            and check(p1, p3, p4)\r\n            and check(p1, p2, p4)\r\n        )",
+    "problemId": 593,
+    "title": "Valid Square",
+    "problemUrl": "https://leetcode.com/problems/valid-square/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0593.Valid Square/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0593.Valid Square/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0593.Valid Square/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0593.Valid Square/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0593.Valid Square/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-suffix-flips",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minFlips(self, target: str) -> int:\r\n        ans = 0\r\n        for v in target:\r\n            if (ans & 1) ^ int(v):\r\n                ans += 1\r\n        return ans",
+    "problemId": 1529,
+    "title": "Minimum Suffix Flips",
+    "problemUrl": "https://leetcode.com/problems/minimum-suffix-flips/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1529.Minimum Suffix Flips/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1529.Minimum Suffix Flips/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1529.Minimum Suffix Flips/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1529.Minimum Suffix Flips/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1529.Minimum Suffix Flips/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1529.Minimum Suffix Flips/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1529.Minimum Suffix Flips/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "statistics-from-a-large-sample",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sampleStats(self, count: List[int]) -> List[float]:\r\n        def find(i: int) -> int:\r\n            t = 0\r\n            for k, x in enumerate(count):\r\n                t += x\r\n                if t >= i:\r\n                    return k\r\n\r\n        mi, mx = inf, -1\r\n        s = cnt = 0\r\n        mode = 0\r\n        for k, x in enumerate(count):\r\n            if x:\r\n                mi = min(mi, k)\r\n                mx = max(mx, k)\r\n                s += k * x\r\n                cnt += x\r\n                if x > count[mode]:\r\n                    mode = k\r\n\r\n        median = (\r\n            find(cnt // 2 + 1) if cnt & 1 else (find(cnt // 2) + find(cnt // 2 + 1)) / 2\r\n        )\r\n        return [mi, mx, s / cnt, median, mode]",
+    "problemId": 1093,
+    "title": "Statistics from a Large Sample",
+    "problemUrl": "https://leetcode.com/problems/statistics-from-a-large-sample/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1093.Statistics from a Large Sample/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1093.Statistics from a Large Sample/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1093.Statistics from a Large Sample/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1093.Statistics from a Large Sample/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1093.Statistics from a Large Sample/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1093.Statistics from a Large Sample/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

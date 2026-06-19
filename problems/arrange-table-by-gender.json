@@ -1,0 +1,23 @@
+{
+    "problemName": "arrange-table-by-gender",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    t AS (\r\n        SELECT\r\n            *,\r\n            RANK() OVER (\r\n                PARTITION BY gender\r\n                ORDER BY user_id\r\n            ) AS rk1,\r\n            CASE\r\n                WHEN gender = 'female' THEN 0\r\n                WHEN gender = 'other' THEN 1\r\n                ELSE 2\r\n            END AS rk2\r\n        FROM Genders\r\n    )\r\nSELECT user_id, gender\r\nFROM t\r\nORDER BY rk1, rk2;",
+    "problemId": 2308,
+    "title": "Arrange Table by Gender",
+    "problemUrl": "https://leetcode.com/problems/arrange-table-by-gender/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2308.Arrange Table by Gender/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2308.Arrange Table by Gender/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2308.Arrange Table by Gender/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

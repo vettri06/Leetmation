@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-additions-to-make-valid-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def addMinimum(self, word: str) -> int:\r\n        s = 'abc'\r\n        ans, n = 0, len(word)\r\n        i = j = 0\r\n        while j < n:\r\n            if word[j] != s[i]:\r\n                ans += 1\r\n            else:\r\n                j += 1\r\n            i = (i + 1) % 3\r\n        if word[-1] != 'c':\r\n            ans += 1 if word[-1] == 'b' else 2\r\n        return ans",
+    "problemId": 2645,
+    "title": "Minimum Additions to Make Valid String",
+    "problemUrl": "https://leetcode.com/problems/minimum-additions-to-make-valid-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2645.Minimum Additions to Make Valid String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2645.Minimum Additions to Make Valid String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2645.Minimum Additions to Make Valid String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2645.Minimum Additions to Make Valid String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2645.Minimum Additions to Make Valid String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2645.Minimum Additions to Make Valid String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

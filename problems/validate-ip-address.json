@@ -1,0 +1,43 @@
+{
+    "problemName": "validate-ip-address",
+    "language": "python3",
+    "code": "class Solution:\r\n    def validIPAddress(self, queryIP: str) -> str:\r\n        def is_ipv4(s: str) -> bool:\r\n            ss = s.split(\".\")\r\n            if len(ss) != 4:\r\n                return False\r\n            for t in ss:\r\n                if len(t) > 1 and t[0] == \"0\":\r\n                    return False\r\n                if not t.isdigit() or not 0 <= int(t) <= 255:\r\n                    return False\r\n            return True\r\n\r\n        def is_ipv6(s: str) -> bool:\r\n            ss = s.split(\":\")\r\n            if len(ss) != 8:\r\n                return False\r\n            for t in ss:\r\n                if not 1 <= len(t) <= 4:\r\n                    return False\r\n                if not all(c in \"0123456789abcdefABCDEF\" for c in t):\r\n                    return False\r\n            return True\r\n\r\n        if is_ipv4(queryIP):\r\n            return \"IPv4\"\r\n        if is_ipv6(queryIP):\r\n            return \"IPv6\"\r\n        return \"Neither\"",
+    "problemId": 468,
+    "title": "Validate IP Address",
+    "problemUrl": "https://leetcode.com/problems/validate-ip-address/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0468.Validate IP Address/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0468.Validate IP Address/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0468.Validate IP Address/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0468.Validate IP Address/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0468.Validate IP Address/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0468.Validate IP Address/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0468.Validate IP Address/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-points-in-an-archery-competition",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumBobPoints(self, numArrows: int, aliceArrows: List[int]) -> List[int]:\r\n        st = mx = 0\r\n        m = len(aliceArrows)\r\n        for mask in range(1, 1 << m):\r\n            cnt = s = 0\r\n            for i, x in enumerate(aliceArrows):\r\n                if mask >> i & 1:\r\n                    s += i\r\n                    cnt += x + 1\r\n            if cnt <= numArrows and s > mx:\r\n                mx = s\r\n                st = mask\r\n        ans = [0] * m\r\n        for i, x in enumerate(aliceArrows):\r\n            if st >> i & 1:\r\n                ans[i] = x + 1\r\n                numArrows -= ans[i]\r\n        ans[0] += numArrows\r\n        return ans",
+    "problemId": 2212,
+    "title": "Maximum Points in an Archery Competition",
+    "problemUrl": "https://leetcode.com/problems/maximum-points-in-an-archery-competition/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2212.Maximum Points in an Archery Competition/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2212.Maximum Points in an Archery Competition/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2212.Maximum Points in an Archery Competition/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2212.Maximum Points in an Archery Competition/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2212.Maximum Points in an Archery Competition/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2212.Maximum Points in an Archery Competition/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2212.Maximum Points in an Archery Competition/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2212.Maximum Points in an Archery Competition/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "not-boring-movies",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT *\r\nFROM Cinema\r\nWHERE description != 'boring' AND id & 1 = 1\r\nORDER BY 4 DESC;",
+    "problemId": 620,
+    "title": "Not Boring Movies",
+    "problemUrl": "https://leetcode.com/problems/not-boring-movies/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0620.Not Boring Movies/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0620.Not Boring Movies/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

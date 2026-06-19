@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-enemy-forts-that-can-be-captured",
+    "language": "python3",
+    "code": "class Solution:\r\n    def captureForts(self, forts: List[int]) -> int:\r\n        n = len(forts)\r\n        i = ans = 0\r\n        while i < n:\r\n            j = i + 1\r\n            if forts[i]:\r\n                while j < n and forts[j] == 0:\r\n                    j += 1\r\n                if j < n and forts[i] + forts[j] == 0:\r\n                    ans = max(ans, j - i - 1)\r\n            i = j\r\n        return ans",
+    "problemId": 2511,
+    "title": "Maximum Enemy Forts That Can Be Captured",
+    "problemUrl": "https://leetcode.com/problems/maximum-enemy-forts-that-can-be-captured/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2511.Maximum Enemy Forts That Can Be Captured/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2511.Maximum Enemy Forts That Can Be Captured/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2511.Maximum Enemy Forts That Can Be Captured/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2511.Maximum Enemy Forts That Can Be Captured/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2511.Maximum Enemy Forts That Can Be Captured/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2511.Maximum Enemy Forts That Can Be Captured/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2511.Maximum Enemy Forts That Can Be Captured/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

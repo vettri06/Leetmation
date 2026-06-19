@@ -1,0 +1,18 @@
+{
+    "problemName": "generate-circular-array-values",
+    "language": "typescript",
+    "code": "function* cycleGenerator(arr: number[], startIndex: number): Generator<number, void, number> {\r\n    const n = arr.length;\r\n    while (true) {\r\n        const jump = yield arr[startIndex];\r\n        startIndex = (((startIndex + jump) % n) + n) % n;\r\n    }\r\n}\r\n/**\r\n *  const gen = cycleGenerator([1,2,3,4,5], 0);\r\n *  gen.next().value  // 1\r\n *  gen.next(1).value // 2\r\n *  gen.next(2).value // 4\r\n *  gen.next(6).value // 5\r\n */",
+    "problemId": 2757,
+    "title": "Generate Circular Array Values",
+    "problemUrl": "https://leetcode.com/problems/generate-circular-array-values/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2757.Generate Circular Array Values/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2757.Generate Circular Array Values/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

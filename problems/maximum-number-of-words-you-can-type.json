@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-number-of-words-you-can-type",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canBeTypedWords(self, text: str, brokenLetters: str) -> int:\r\n        s = set(brokenLetters)\r\n        return sum(all(c not in s for c in w) for w in text.split())",
+    "problemId": 1935,
+    "title": "Maximum Number of Words You Can Type",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-words-you-can-type/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1935.Maximum Number of Words You Can Type/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1935.Maximum Number of Words You Can Type/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1935.Maximum Number of Words You Can Type/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1935.Maximum Number of Words You Can Type/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1935.Maximum Number of Words You Can Type/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1935.Maximum Number of Words You Can Type/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1935.Maximum Number of Words You Can Type/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1935.Maximum Number of Words You Can Type/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

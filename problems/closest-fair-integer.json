@@ -1,0 +1,33 @@
+{
+    "problemName": "closest-fair-integer",
+    "language": "python3",
+    "code": "class Solution:\r\n    def closestFair(self, n: int) -> int:\r\n        a = b = k = 0\r\n        t = n\r\n        while t:\r\n            if (t % 10) & 1:\r\n                a += 1\r\n            else:\r\n                b += 1\r\n            t //= 10\r\n            k += 1\r\n        if k & 1:\r\n            x = 10**k\r\n            y = int('1' * (k >> 1) or '0')\r\n            return x + y\r\n        if a == b:\r\n            return n\r\n        return self.closestFair(n + 1)",
+    "problemId": 2417,
+    "title": "Closest Fair Integer",
+    "problemUrl": "https://leetcode.com/problems/closest-fair-integer/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2417.Closest Fair Integer/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2417.Closest Fair Integer/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2417.Closest Fair Integer/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2417.Closest Fair Integer/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2417.Closest Fair Integer/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

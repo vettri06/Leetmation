@@ -1,0 +1,73 @@
+{
+    "problemName": "number-of-valid-clock-times",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countTime(self, time: str) -> int:\r\n        def check(s: str, t: str) -> bool:\r\n            return all(a == b or b == '?' for a, b in zip(s, t))\r\n\r\n        return sum(\r\n            check(f'{h:02d}:{m:02d}', time) for h in range(24) for m in range(60)\r\n        )",
+    "problemId": 2437,
+    "title": "Number of Valid Clock Times",
+    "problemUrl": "https://leetcode.com/problems/number-of-valid-clock-times/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2437.Number of Valid Clock Times/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2437.Number of Valid Clock Times/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2437.Number of Valid Clock Times/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2437.Number of Valid Clock Times/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2437.Number of Valid Clock Times/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2437.Number of Valid Clock Times/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2437.Number of Valid Clock Times/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2437.Number of Valid Clock Times/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2437.Number of Valid Clock Times/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2437.Number of Valid Clock Times/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2437.Number of Valid Clock Times/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2437.Number of Valid Clock Times/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2437.Number of Valid Clock Times/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

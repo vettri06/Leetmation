@@ -1,0 +1,38 @@
+{
+    "problemName": "cut-off-trees-for-golf-event",
+    "language": "python3",
+    "code": "class Solution:\r\n    def cutOffTree(self, forest: List[List[int]]) -> int:\r\n        def f(i, j, x, y):\r\n            return abs(i - x) + abs(j - y)\r\n\r\n        def bfs(i, j, x, y):\r\n            q = [(f(i, j, x, y), i, j)]\r\n            dist = {i * n + j: 0}\r\n            while q:\r\n                _, i, j = heappop(q)\r\n                step = dist[i * n + j]\r\n                if (i, j) == (x, y):\r\n                    return step\r\n                for a, b in [[0, -1], [0, 1], [-1, 0], [1, 0]]:\r\n                    c, d = i + a, j + b\r\n                    if 0 <= c < m and 0 <= d < n and forest[c][d] > 0:\r\n                        if c * n + d not in dist or dist[c * n + d] > step + 1:\r\n                            dist[c * n + d] = step + 1\r\n                            heappush(q, (dist[c * n + d] + f(c, d, x, y), c, d))\r\n            return -1\r\n\r\n        m, n = len(forest), len(forest[0])\r\n        trees = [\r\n            (forest[i][j], i, j) for i in range(m) for j in range(n) if forest[i][j] > 1\r\n        ]\r\n        trees.sort()\r\n        i = j = 0\r\n        ans = 0\r\n        for _, x, y in trees:\r\n            t = bfs(i, j, x, y)\r\n            if t == -1:\r\n                return -1\r\n            ans += t\r\n            i, j = x, y\r\n        return ans",
+    "problemId": 675,
+    "title": "Cut Off Trees for Golf Event",
+    "problemUrl": "https://leetcode.com/problems/cut-off-trees-for-golf-event/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0675.Cut Off Trees for Golf Event/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0675.Cut Off Trees for Golf Event/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0675.Cut Off Trees for Golf Event/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0675.Cut Off Trees for Golf Event/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0675.Cut Off Trees for Golf Event/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0675.Cut Off Trees for Golf Event/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

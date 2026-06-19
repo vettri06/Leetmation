@@ -1,0 +1,38 @@
+{
+    "problemName": "find-valid-pair-of-adjacent-digits-in-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findValidPair(self, s: str) -> str:\r\n        cnt = [0] * 10\r\n        for x in map(int, s):\r\n            cnt[x] += 1\r\n        for x, y in pairwise(map(int, s)):\r\n            if x != y and cnt[x] == x and cnt[y] == y:\r\n                return f\"{x}{y}\"\r\n        return \"\"",
+    "problemId": 3438,
+    "title": "Find Valid Pair of Adjacent Digits in String",
+    "problemUrl": "https://leetcode.com/problems/find-valid-pair-of-adjacent-digits-in-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3438.Find Valid Pair of Adjacent Digits in String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3438.Find Valid Pair of Adjacent Digits in String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3438.Find Valid Pair of Adjacent Digits in String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3438.Find Valid Pair of Adjacent Digits in String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3438.Find Valid Pair of Adjacent Digits in String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3438.Find Valid Pair of Adjacent Digits in String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

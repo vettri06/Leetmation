@@ -1,0 +1,33 @@
+{
+    "problemName": "stock-price-fluctuation",
+    "language": "python3",
+    "code": "class StockPrice:\r\n    def __init__(self):\r\n        self.d = {}\r\n        self.ls = SortedList()\r\n        self.last = 0\r\n\r\n    def update(self, timestamp: int, price: int) -> None:\r\n        if timestamp in self.d:\r\n            self.ls.remove(self.d[timestamp])\r\n        self.d[timestamp] = price\r\n        self.ls.add(price)\r\n        self.last = max(self.last, timestamp)\r\n\r\n    def current(self) -> int:\r\n        return self.d[self.last]\r\n\r\n    def maximum(self) -> int:\r\n        return self.ls[-1]\r\n\r\n    def minimum(self) -> int:\r\n        return self.ls[0]\r\n\r\n\r\n# Your StockPrice object will be instantiated and called as such:\r\n# obj = StockPrice()\r\n# obj.update(timestamp,price)\r\n# param_2 = obj.current()\r\n# param_3 = obj.maximum()\r\n# param_4 = obj.minimum()",
+    "problemId": 2034,
+    "title": "Stock Price Fluctuation",
+    "problemUrl": "https://leetcode.com/problems/stock-price-fluctuation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2034.Stock Price Fluctuation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2034.Stock Price Fluctuation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2034.Stock Price Fluctuation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2034.Stock Price Fluctuation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2034.Stock Price Fluctuation/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

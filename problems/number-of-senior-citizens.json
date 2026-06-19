@@ -1,0 +1,43 @@
+{
+    "problemName": "number-of-senior-citizens",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSeniors(self, details: List[str]) -> int:\r\n        return sum(int(x[11:13]) > 60 for x in details)",
+    "problemId": 2678,
+    "title": "Number of Senior Citizens",
+    "problemUrl": "https://leetcode.com/problems/number-of-senior-citizens/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2678.Number of Senior Citizens/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2678.Number of Senior Citizens/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2678.Number of Senior Citizens/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2678.Number of Senior Citizens/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2678.Number of Senior Citizens/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2678.Number of Senior Citizens/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2678.Number of Senior Citizens/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

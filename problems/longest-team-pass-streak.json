@@ -1,0 +1,18 @@
+{
+    "problemName": "longest-team-pass-streak",
+    "language": "mysql",
+    "code": "WITH\r\n    PassesWithTeams AS (\r\n        SELECT\r\n            p.pass_from,\r\n            p.pass_to,\r\n            t1.team_name AS team_from,\r\n            t2.team_name AS team_to,\r\n            IF(t1.team_name = t2.team_name, 1, 0) same_team_flag,\r\n            p.time_stamp\r\n        FROM\r\n            Passes p\r\n            JOIN Teams t1 ON p.pass_from = t1.player_id\r\n            JOIN Teams t2 ON p.pass_to = t2.player_id\r\n    ),\r\n    StreakGroups AS (\r\n        SELECT\r\n            team_from AS team_name,\r\n            time_stamp,\r\n            same_team_flag,\r\n            SUM(\r\n                CASE\r\n                    WHEN same_team_flag = 0 THEN 1\r\n                    ELSE 0\r\n                END\r\n            ) OVER (\r\n                PARTITION BY team_from\r\n                ORDER BY time_stamp\r\n            ) AS group_id\r\n        FROM PassesWithTeams\r\n    ),\r\n    StreakLengths AS (\r\n        SELECT\r\n            team_name,\r\n            group_id,\r\n            COUNT(*) AS streak_length\r\n        FROM StreakGroups\r\n        WHERE same_team_flag = 1\r\n        GROUP BY 1, 2\r\n    ),\r\n    LongestStreaks AS (\r\n        SELECT\r\n            team_name,\r\n            MAX(streak_length) AS longest_streak\r\n        FROM StreakLengths\r\n        GROUP BY 1\r\n    )\r\nSELECT\r\n    team_name,\r\n    longest_streak\r\nFROM LongestStreaks\r\nORDER BY 1;",
+    "problemId": 3390,
+    "title": "Longest Team Pass Streak",
+    "problemUrl": "https://leetcode.com/problems/longest-team-pass-streak/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3390.Longest Team Pass Streak/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3390.Longest Team Pass Streak/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

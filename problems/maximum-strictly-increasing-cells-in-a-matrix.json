@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-strictly-increasing-cells-in-a-matrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxIncreasingCells(self, mat: List[List[int]]) -> int:\r\n        m, n = len(mat), len(mat[0])\r\n        g = defaultdict(list)\r\n        for i in range(m):\r\n            for j in range(n):\r\n                g[mat[i][j]].append((i, j))\r\n        rowMax = [0] * m\r\n        colMax = [0] * n\r\n        ans = 0\r\n        for _, pos in sorted(g.items()):\r\n            mx = []\r\n            for i, j in pos:\r\n                mx.append(1 + max(rowMax[i], colMax[j]))\r\n                ans = max(ans, mx[-1])\r\n            for k, (i, j) in enumerate(pos):\r\n                rowMax[i] = max(rowMax[i], mx[k])\r\n                colMax[j] = max(colMax[j], mx[k])\r\n        return ans",
+    "problemId": 2713,
+    "title": "Maximum Strictly Increasing Cells in a Matrix",
+    "problemUrl": "https://leetcode.com/problems/maximum-strictly-increasing-cells-in-a-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2713.Maximum Strictly Increasing Cells in a Matrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2713.Maximum Strictly Increasing Cells in a Matrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2713.Maximum Strictly Increasing Cells in a Matrix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2713.Maximum Strictly Increasing Cells in a Matrix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2713.Maximum Strictly Increasing Cells in a Matrix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2713.Maximum Strictly Increasing Cells in a Matrix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

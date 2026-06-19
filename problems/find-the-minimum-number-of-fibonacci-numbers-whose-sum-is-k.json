@@ -1,0 +1,43 @@
+{
+    "problemName": "find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMinFibonacciNumbers(self, k: int) -> int:\r\n        a = b = 1\r\n        while b <= k:\r\n            a, b = b, a + b\r\n        ans = 0\r\n        while k:\r\n            if k >= b:\r\n                k -= b\r\n                ans += 1\r\n            a, b = b - a, a\r\n        return ans",
+    "problemId": 1414,
+    "title": "Find the Minimum Number of Fibonacci Numbers Whose Sum Is K",
+    "problemUrl": "https://leetcode.com/problems/find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1414.Find the Minimum Number of Fibonacci Numbers Whose Sum Is K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1414.Find the Minimum Number of Fibonacci Numbers Whose Sum Is K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1414.Find the Minimum Number of Fibonacci Numbers Whose Sum Is K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1414.Find the Minimum Number of Fibonacci Numbers Whose Sum Is K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1414.Find the Minimum Number of Fibonacci Numbers Whose Sum Is K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1414.Find the Minimum Number of Fibonacci Numbers Whose Sum Is K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1414.Find the Minimum Number of Fibonacci Numbers Whose Sum Is K/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

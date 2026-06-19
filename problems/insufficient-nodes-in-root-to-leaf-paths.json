@@ -1,0 +1,43 @@
+{
+    "problemName": "insufficient-nodes-in-root-to-leaf-paths",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def sufficientSubset(\r\n        self, root: Optional[TreeNode], limit: int\r\n    ) -> Optional[TreeNode]:\r\n        if root is None:\r\n            return None\r\n        limit -= root.val\r\n        if root.left is None and root.right is None:\r\n            return None if limit > 0 else root\r\n        root.left = self.sufficientSubset(root.left, limit)\r\n        root.right = self.sufficientSubset(root.right, limit)\r\n        return None if root.left is None and root.right is None else root",
+    "problemId": 1080,
+    "title": "Insufficient Nodes in Root to Leaf Paths",
+    "problemUrl": "https://leetcode.com/problems/insufficient-nodes-in-root-to-leaf-paths/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1080.Insufficient Nodes in Root to Leaf Paths/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1080.Insufficient Nodes in Root to Leaf Paths/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1080.Insufficient Nodes in Root to Leaf Paths/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1080.Insufficient Nodes in Root to Leaf Paths/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1080.Insufficient Nodes in Root to Leaf Paths/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1080.Insufficient Nodes in Root to Leaf Paths/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1080.Insufficient Nodes in Root to Leaf Paths/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

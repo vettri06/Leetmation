@@ -1,0 +1,53 @@
+{
+    "problemName": "closest-subsequence-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minAbsDifference(self, nums: List[int], goal: int) -> int:\r\n        n = len(nums)\r\n        left = set()\r\n        right = set()\r\n\r\n        self.getSubSeqSum(0, 0, nums[: n // 2], left)\r\n        self.getSubSeqSum(0, 0, nums[n // 2 :], right)\r\n\r\n        result = inf\r\n        right = sorted(right)\r\n        rl = len(right)\r\n\r\n        for l in left:\r\n            remaining = goal - l\r\n            idx = bisect_left(right, remaining)\r\n\r\n            if idx < rl:\r\n                result = min(result, abs(remaining - right[idx]))\r\n\r\n            if idx > 0:\r\n                result = min(result, abs(remaining - right[idx - 1]))\r\n\r\n        return result\r\n\r\n    def getSubSeqSum(self, i: int, curr: int, arr: List[int], result: Set[int]):\r\n        if i == len(arr):\r\n            result.add(curr)\r\n            return\r\n\r\n        self.getSubSeqSum(i + 1, curr, arr, result)\r\n        self.getSubSeqSum(i + 1, curr + arr[i], arr, result)",
+    "problemId": 1755,
+    "title": "Closest Subsequence Sum",
+    "problemUrl": "https://leetcode.com/problems/closest-subsequence-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1755.Closest Subsequence Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1755.Closest Subsequence Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1755.Closest Subsequence Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1755.Closest Subsequence Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1755.Closest Subsequence Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1755.Closest Subsequence Sum/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1755.Closest Subsequence Sum/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1755.Closest Subsequence Sum/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1755.Closest Subsequence Sum/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

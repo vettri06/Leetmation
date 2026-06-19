@@ -1,0 +1,43 @@
+{
+    "problemName": "leaf-similar-trees",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:\r\n        def dfs(root: Optional[TreeNode], nums: List[int]) -> None:\r\n            if root.left == root.right:\r\n                nums.append(root.val)\r\n                return\r\n            if root.left:\r\n                dfs(root.left, nums)\r\n            if root.right:\r\n                dfs(root.right, nums)\r\n\r\n        l1, l2 = [], []\r\n        dfs(root1, l1)\r\n        dfs(root2, l2)\r\n        return l1 == l2",
+    "problemId": 872,
+    "title": "Leaf-Similar Trees",
+    "problemUrl": "https://leetcode.com/problems/leaf-similar-trees/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0872.Leaf-Similar Trees/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0872.Leaf-Similar Trees/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0872.Leaf-Similar Trees/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0872.Leaf-Similar Trees/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0872.Leaf-Similar Trees/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0872.Leaf-Similar Trees/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0872.Leaf-Similar Trees/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

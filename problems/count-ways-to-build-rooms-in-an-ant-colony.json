@@ -1,0 +1,18 @@
+{
+    "problemName": "count-ways-to-build-rooms-in-an-ant-colony",
+    "language": "python3",
+    "code": "class Solution:\r\n    def waysToBuildRooms(self, prevRoom: List[int]) -> int:\r\n        modulo = 10**9 + 7\r\n        ingoing = defaultdict(set)\r\n        outgoing = defaultdict(set)\r\n\r\n        for i in range(1, len(prevRoom)):\r\n            ingoing[i].add(prevRoom[i])\r\n            outgoing[prevRoom[i]].add(i)\r\n        ans = [1]\r\n\r\n        def recurse(i):\r\n            if len(outgoing[i]) == 0:\r\n                return 1\r\n\r\n            nodes_in_tree = 0\r\n            for v in outgoing[i]:\r\n                cn = recurse(v)\r\n                if nodes_in_tree != 0:\r\n                    ans[0] *= comb(nodes_in_tree + cn, cn)\r\n                    ans[0] %= modulo\r\n                nodes_in_tree += cn\r\n            return nodes_in_tree + 1\r\n\r\n        recurse(0)\r\n        return ans[0] % modulo",
+    "problemId": 1916,
+    "title": "Count Ways to Build Rooms in an Ant Colony",
+    "problemUrl": "https://leetcode.com/problems/count-ways-to-build-rooms-in-an-ant-colony/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1916.Count Ways to Build Rooms in an Ant Colony/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1916.Count Ways to Build Rooms in an Ant Colony/Solution.py",
+            "sourceFile": "Solution.py"
+        }
+    ]
+}

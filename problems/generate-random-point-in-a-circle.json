@@ -1,0 +1,18 @@
+{
+    "problemName": "generate-random-point-in-a-circle",
+    "language": "python3",
+    "code": "class Solution:\r\n    def __init__(self, radius: float, x_center: float, y_center: float):\r\n        self.radius = radius\r\n        self.x_center = x_center\r\n        self.y_center = y_center\r\n\r\n    def randPoint(self) -> List[float]:\r\n        length = math.sqrt(random.uniform(0, self.radius**2))\r\n        degree = random.uniform(0, 1) * 2 * math.pi\r\n        x = self.x_center + length * math.cos(degree)\r\n        y = self.y_center + length * math.sin(degree)\r\n        return [x, y]",
+    "problemId": 478,
+    "title": "Generate Random Point in a Circle",
+    "problemUrl": "https://leetcode.com/problems/generate-random-point-in-a-circle/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0478.Generate Random Point in a Circle/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0478.Generate Random Point in a Circle/Solution.py",
+            "sourceFile": "Solution.py"
+        }
+    ]
+}

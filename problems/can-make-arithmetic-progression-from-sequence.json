@@ -1,0 +1,88 @@
+{
+    "problemName": "can-make-arithmetic-progression-from-sequence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canMakeArithmeticProgression(self, arr: List[int]) -> bool:\r\n        arr.sort()\r\n        d = arr[1] - arr[0]\r\n        return all(b - a == d for a, b in pairwise(arr))",
+    "problemId": 1502,
+    "title": "Can Make Arithmetic Progression From Sequence",
+    "problemUrl": "https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1502.Can Make Arithmetic Progression From Sequence/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

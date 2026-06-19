@@ -1,0 +1,43 @@
+{
+    "problemName": "last-stone-weight",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lastStoneWeight(self, stones: List[int]) -> int:\r\n        h = [-x for x in stones]\r\n        heapify(h)\r\n        while len(h) > 1:\r\n            y, x = -heappop(h), -heappop(h)\r\n            if x != y:\r\n                heappush(h, x - y)\r\n        return 0 if not h else -h[0]",
+    "problemId": 1046,
+    "title": "Last Stone Weight",
+    "problemUrl": "https://leetcode.com/problems/last-stone-weight/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1046.Last Stone Weight/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1046.Last Stone Weight/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1046.Last Stone Weight/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1046.Last Stone Weight/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1046.Last Stone Weight/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1046.Last Stone Weight/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1046.Last Stone Weight/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

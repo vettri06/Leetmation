@@ -1,0 +1,63 @@
+{
+    "problemName": "remove-outermost-parentheses",
+    "language": "python3",
+    "code": "class Solution:\r\n    def removeOuterParentheses(self, s: str) -> str:\r\n        ans = []\r\n        cnt = 0\r\n        for c in s:\r\n            if c == '(':\r\n                cnt += 1\r\n                if cnt > 1:\r\n                    ans.append(c)\r\n            else:\r\n                cnt -= 1\r\n                if cnt > 0:\r\n                    ans.append(c)\r\n        return ''.join(ans)",
+    "problemId": 1021,
+    "title": "Remove Outermost Parentheses",
+    "problemUrl": "https://leetcode.com/problems/remove-outermost-parentheses/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1021.Remove Outermost Parentheses/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1021.Remove Outermost Parentheses/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1021.Remove Outermost Parentheses/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1021.Remove Outermost Parentheses/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1021.Remove Outermost Parentheses/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1021.Remove Outermost Parentheses/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1021.Remove Outermost Parentheses/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1021.Remove Outermost Parentheses/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1021.Remove Outermost Parentheses/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1021.Remove Outermost Parentheses/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1021.Remove Outermost Parentheses/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

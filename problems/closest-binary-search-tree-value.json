@@ -1,0 +1,73 @@
+{
+    "problemName": "closest-binary-search-tree-value",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def closestValue(self, root: Optional[TreeNode], target: float) -> int:\r\n        def dfs(node: Optional[TreeNode]):\r\n            if node is None:\r\n                return\r\n            nxt = abs(target - node.val)\r\n            nonlocal ans, diff\r\n            if nxt < diff or (nxt == diff and node.val < ans):\r\n                diff = nxt\r\n                ans = node.val\r\n            node = node.left if target < node.val else node.right\r\n            dfs(node)\r\n\r\n        ans = 0\r\n        diff = inf\r\n        dfs(root)\r\n        return ans",
+    "problemId": 270,
+    "title": "Closest Binary Search Tree Value",
+    "problemUrl": "https://leetcode.com/problems/closest-binary-search-tree-value/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0270.Closest Binary Search Tree Value/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0270.Closest Binary Search Tree Value/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0270.Closest Binary Search Tree Value/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0270.Closest Binary Search Tree Value/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0270.Closest Binary Search Tree Value/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0270.Closest Binary Search Tree Value/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0270.Closest Binary Search Tree Value/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0270.Closest Binary Search Tree Value/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0270.Closest Binary Search Tree Value/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0270.Closest Binary Search Tree Value/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0270.Closest Binary Search Tree Value/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0270.Closest Binary Search Tree Value/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0270.Closest Binary Search Tree Value/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

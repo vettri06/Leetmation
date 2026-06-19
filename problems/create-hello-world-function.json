@@ -1,0 +1,18 @@
+{
+    "problemName": "create-hello-world-function",
+    "language": "typescript",
+    "code": "function createHelloWorld() {\r\n    return function (...args): string {\r\n        return 'Hello World';\r\n    };\r\n}\r\n\r\n/**\r\n * const f = createHelloWorld();\r\n * f(); // \"Hello World\"\r\n */",
+    "problemId": 2667,
+    "title": "Create Hello World Function",
+    "problemUrl": "https://leetcode.com/problems/create-hello-world-function/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2667.Create Hello World Function/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2667.Create Hello World Function/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

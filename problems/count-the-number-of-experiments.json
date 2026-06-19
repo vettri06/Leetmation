@@ -1,0 +1,18 @@
+{
+    "problemName": "count-the-number-of-experiments",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    P AS (\r\n        SELECT 'Android' AS platform\r\n        UNION\r\n        SELECT 'IOS'\r\n        UNION\r\n        SELECT 'Web'\r\n    ),\r\n    Exp AS (\r\n        SELECT 'Reading' AS experiment_name\r\n        UNION\r\n        SELECT 'Sports'\r\n        UNION\r\n        SELECT 'Programming'\r\n    ),\r\n    T AS (\r\n        SELECT *\r\n        FROM\r\n            P,\r\n            Exp\r\n    )\r\nSELECT platform, experiment_name, COUNT(experiment_id) AS num_experiments\r\nFROM\r\n    T AS t\r\n    LEFT JOIN Experiments USING (platform, experiment_name)\r\nGROUP BY 1, 2;",
+    "problemId": 1990,
+    "title": "Count the Number of Experiments",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-experiments/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1990.Count the Number of Experiments/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1990.Count the Number of Experiments/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "problemName": "greatest-sum-divisible-by-three",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSumDivThree(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        f = [[-inf] * 3 for _ in range(n + 1)]\r\n        f[0][0] = 0\r\n        for i, x in enumerate(nums, 1):\r\n            for j in range(3):\r\n                f[i][j] = max(f[i - 1][j], f[i - 1][(j - x) % 3] + x)\r\n        return f[n][0]",
+    "problemId": 1262,
+    "title": "Greatest Sum Divisible by Three",
+    "problemUrl": "https://leetcode.com/problems/greatest-sum-divisible-by-three/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1262.Greatest Sum Divisible by Three/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1262.Greatest Sum Divisible by Three/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1262.Greatest Sum Divisible by Three/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1262.Greatest Sum Divisible by Three/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1262.Greatest Sum Divisible by Three/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1262.Greatest Sum Divisible by Three/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1262.Greatest Sum Divisible by Three/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1262.Greatest Sum Divisible by Three/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1262.Greatest Sum Divisible by Three/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1262.Greatest Sum Divisible by Three/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1262.Greatest Sum Divisible by Three/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

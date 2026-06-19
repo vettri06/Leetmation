@@ -1,0 +1,43 @@
+{
+    "problemName": "restore-ip-addresses",
+    "language": "python3",
+    "code": "class Solution:\r\n    def restoreIpAddresses(self, s: str) -> List[str]:\r\n        def check(i: int, j: int) -> int:\r\n            if s[i] == \"0\" and i != j:\r\n                return False\r\n            return 0 <= int(s[i : j + 1]) <= 255\r\n\r\n        def dfs(i: int):\r\n            if i >= n and len(t) == 4:\r\n                ans.append(\".\".join(t))\r\n                return\r\n            if i >= n or len(t) >= 4:\r\n                return\r\n            for j in range(i, min(i + 3, n)):\r\n                if check(i, j):\r\n                    t.append(s[i : j + 1])\r\n                    dfs(j + 1)\r\n                    t.pop()\r\n\r\n        n = len(s)\r\n        ans = []\r\n        t = []\r\n        dfs(0)\r\n        return ans",
+    "problemId": 93,
+    "title": "Restore IP Addresses",
+    "problemUrl": "https://leetcode.com/problems/restore-ip-addresses/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0093.Restore IP Addresses/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0093.Restore IP Addresses/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0093.Restore IP Addresses/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0093.Restore IP Addresses/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0093.Restore IP Addresses/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0093.Restore IP Addresses/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0093.Restore IP Addresses/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

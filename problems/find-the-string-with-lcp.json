@@ -1,0 +1,43 @@
+{
+    "problemName": "find-the-string-with-lcp",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findTheString(self, lcp: List[List[int]]) -> str:\r\n        n = len(lcp)\r\n        s = [\"\"] * n\r\n        i = 0\r\n        for c in ascii_lowercase:\r\n            while i < n and s[i]:\r\n                i += 1\r\n            if i == n:\r\n                break\r\n            for j in range(i, n):\r\n                if lcp[i][j]:\r\n                    s[j] = c\r\n        if \"\" in s:\r\n            return \"\"\r\n        for i in range(n - 1, -1, -1):\r\n            for j in range(n - 1, -1, -1):\r\n                if s[i] == s[j]:\r\n                    if i == n - 1 or j == n - 1:\r\n                        if lcp[i][j] != 1:\r\n                            return \"\"\r\n                    elif lcp[i][j] != lcp[i + 1][j + 1] + 1:\r\n                        return \"\"\r\n                elif lcp[i][j]:\r\n                    return \"\"\r\n        return \"\".join(s)",
+    "problemId": 2573,
+    "title": "Find the String with LCP",
+    "problemUrl": "https://leetcode.com/problems/find-the-string-with-lcp/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2573.Find the String with LCP/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2573.Find the String with LCP/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2573.Find the String with LCP/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2573.Find the String with LCP/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2573.Find the String with LCP/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2573.Find the String with LCP/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2573.Find the String with LCP/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

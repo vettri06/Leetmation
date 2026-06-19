@@ -1,0 +1,43 @@
+{
+    "problemName": "matrix-similarity-after-cyclic-shifts",
+    "language": "python3",
+    "code": "class Solution:\r\n    def areSimilar(self, mat: List[List[int]], k: int) -> bool:\r\n        n = len(mat[0])\r\n        for i, row in enumerate(mat):\r\n            for j, x in enumerate(row):\r\n                if i % 2 == 1 and x != mat[i][(j + k) % n]:\r\n                    return False\r\n                if i % 2 == 0 and x != mat[i][(j - k + n) % n]:\r\n                    return False\r\n        return True",
+    "problemId": 2946,
+    "title": "Matrix Similarity After Cyclic Shifts",
+    "problemUrl": "https://leetcode.com/problems/matrix-similarity-after-cyclic-shifts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2946.Matrix Similarity After Cyclic Shifts/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2946.Matrix Similarity After Cyclic Shifts/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2946.Matrix Similarity After Cyclic Shifts/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2946.Matrix Similarity After Cyclic Shifts/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2946.Matrix Similarity After Cyclic Shifts/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2946.Matrix Similarity After Cyclic Shifts/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2946.Matrix Similarity After Cyclic Shifts/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

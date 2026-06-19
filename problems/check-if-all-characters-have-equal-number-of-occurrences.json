@@ -1,0 +1,38 @@
+{
+    "problemName": "check-if-all-characters-have-equal-number-of-occurrences",
+    "language": "python3",
+    "code": "class Solution:\r\n    def areOccurrencesEqual(self, s: str) -> bool:\r\n        return len(set(Counter(s).values())) == 1",
+    "problemId": 1941,
+    "title": "Check if All Characters Have Equal Number of Occurrences",
+    "problemUrl": "https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1941.Check if All Characters Have Equal Number of Occurrences/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1941.Check if All Characters Have Equal Number of Occurrences/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1941.Check if All Characters Have Equal Number of Occurrences/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1941.Check if All Characters Have Equal Number of Occurrences/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1941.Check if All Characters Have Equal Number of Occurrences/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1941.Check if All Characters Have Equal Number of Occurrences/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

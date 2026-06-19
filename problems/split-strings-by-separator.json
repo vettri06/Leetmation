@@ -1,0 +1,38 @@
+{
+    "problemName": "split-strings-by-separator",
+    "language": "python3",
+    "code": "class Solution:\r\n    def splitWordsBySeparator(self, words: List[str], separator: str) -> List[str]:\r\n        return [s for w in words for s in w.split(separator) if s]",
+    "problemId": 2788,
+    "title": "Split Strings by Separator",
+    "problemUrl": "https://leetcode.com/problems/split-strings-by-separator/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2788.Split Strings by Separator/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2788.Split Strings by Separator/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2788.Split Strings by Separator/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2788.Split Strings by Separator/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2788.Split Strings by Separator/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2788.Split Strings by Separator/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

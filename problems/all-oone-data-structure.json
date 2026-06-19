@@ -1,0 +1,23 @@
+{
+    "problemName": "all-oone-data-structure",
+    "language": "python3",
+    "code": "class Node:\r\n    def __init__(self, key='', cnt=0):\r\n        self.prev = None\r\n        self.next = None\r\n        self.cnt = cnt\r\n        self.keys = {key}\r\n\r\n    def insert(self, node):\r\n        node.prev = self\r\n        node.next = self.next\r\n        node.prev.next = node\r\n        node.next.prev = node\r\n        return node\r\n\r\n    def remove(self):\r\n        self.prev.next = self.next\r\n        self.next.prev = self.prev\r\n\r\n\r\nclass AllOne:\r\n    def __init__(self):\r\n        self.root = Node()\r\n        self.root.next = self.root\r\n        self.root.prev = self.root\r\n        self.nodes = {}\r\n\r\n    def inc(self, key: str) -> None:\r\n        root, nodes = self.root, self.nodes\r\n        if key not in nodes:\r\n            if root.next == root or root.next.cnt > 1:\r\n                nodes[key] = root.insert(Node(key, 1))\r\n            else:\r\n                root.next.keys.add(key)\r\n                nodes[key] = root.next\r\n        else:\r\n            curr = nodes[key]\r\n            next = curr.next\r\n            if next == root or next.cnt > curr.cnt + 1:\r\n                nodes[key] = curr.insert(Node(key, curr.cnt + 1))\r\n            else:\r\n                next.keys.add(key)\r\n                nodes[key] = next\r\n            curr.keys.discard(key)\r\n            if not curr.keys:\r\n                curr.remove()\r\n\r\n    def dec(self, key: str) -> None:\r\n        root, nodes = self.root, self.nodes\r\n        curr = nodes[key]\r\n        if curr.cnt == 1:\r\n            nodes.pop(key)\r\n        else:\r\n            prev = curr.prev\r\n            if prev == root or prev.cnt < curr.cnt - 1:\r\n                nodes[key] = prev.insert(Node(key, curr.cnt - 1))\r\n            else:\r\n                prev.keys.add(key)\r\n                nodes[key] = prev\r\n        curr.keys.discard(key)\r\n        if not curr.keys:\r\n            curr.remove()\r\n\r\n    def getMaxKey(self) -> str:\r\n        return next(iter(self.root.prev.keys))\r\n\r\n    def getMinKey(self) -> str:\r\n        return next(iter(self.root.next.keys))\r\n\r\n\r\n# Your AllOne object will be instantiated and called as such:\r\n# obj = AllOne()\r\n# obj.inc(key)\r\n# obj.dec(key)\r\n# param_3 = obj.getMaxKey()\r\n# param_4 = obj.getMinKey()",
+    "problemId": 432,
+    "title": "All O`one Data Structure",
+    "problemUrl": "https://leetcode.com/problems/all-oone-data-structure/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0432.All O`one Data Structure/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0432.All O`one Data Structure/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0432.All O`one Data Structure/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

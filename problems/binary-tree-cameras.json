@@ -1,0 +1,38 @@
+{
+    "problemName": "binary-tree-cameras",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def minCameraCover(self, root: Optional[TreeNode]) -> int:\r\n        def dfs(root):\r\n            if root is None:\r\n                return inf, 0, 0\r\n            la, lb, lc = dfs(root.left)\r\n            ra, rb, rc = dfs(root.right)\r\n            a = min(la, lb, lc) + min(ra, rb, rc) + 1\r\n            b = min(la + rb, lb + ra, la + ra)\r\n            c = lb + rb\r\n            return a, b, c\r\n\r\n        a, b, _ = dfs(root)\r\n        return min(a, b)",
+    "problemId": 968,
+    "title": "Binary Tree Cameras",
+    "problemUrl": "https://leetcode.com/problems/binary-tree-cameras/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0968.Binary Tree Cameras/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0968.Binary Tree Cameras/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0968.Binary Tree Cameras/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0968.Binary Tree Cameras/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0968.Binary Tree Cameras/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0968.Binary Tree Cameras/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

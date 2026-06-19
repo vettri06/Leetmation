@@ -1,0 +1,43 @@
+{
+    "problemName": "longest-balanced-substring-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestBalanced(self, s: str) -> int:\r\n        def calc1(s: str) -> int:\r\n            res = 0\r\n            i, n = 0, len(s)\r\n            while i < n:\r\n                j = i + 1\r\n                while j < n and s[j] == s[i]:\r\n                    j += 1\r\n                res = max(res, j - i)\r\n                i = j\r\n            return res\r\n\r\n        def calc2(s: str, a: str, b: str) -> int:\r\n            res = 0\r\n            i, n = 0, len(s)\r\n            while i < n:\r\n                while i < n and s[i] not in (a, b):\r\n                    i += 1\r\n                pos = {0: i - 1}\r\n                d = 0\r\n                while i < n and s[i] in (a, b):\r\n                    d += 1 if s[i] == a else -1\r\n                    if d in pos:\r\n                        res = max(res, i - pos[d])\r\n                    else:\r\n                        pos[d] = i\r\n                    i += 1\r\n            return res\r\n\r\n        def calc3(s: str) -> int:\r\n            pos = {(0, 0): -1}\r\n            cnt = Counter()\r\n            res = 0\r\n            for i, c in enumerate(s):\r\n                cnt[c] += 1\r\n                k = (cnt[\"a\"] - cnt[\"b\"], cnt[\"b\"] - cnt[\"c\"])\r\n                if k in pos:\r\n                    res = max(res, i - pos[k])\r\n                else:\r\n                    pos[k] = i\r\n            return res\r\n\r\n        x = calc1(s)\r\n        y = max(calc2(s, \"a\", \"b\"), calc2(s, \"b\", \"c\"), calc2(s, \"a\", \"c\"))\r\n        z = calc3(s)\r\n        return max(x, y, z)",
+    "problemId": 3714,
+    "title": "Longest Balanced Substring II",
+    "problemUrl": "https://leetcode.com/problems/longest-balanced-substring-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3714.Longest Balanced Substring II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3714.Longest Balanced Substring II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3714.Longest Balanced Substring II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3714.Longest Balanced Substring II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3714.Longest Balanced Substring II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3714.Longest Balanced Substring II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3714.Longest Balanced Substring II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

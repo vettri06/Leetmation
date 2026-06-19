@@ -1,0 +1,18 @@
+{
+    "problemName": "classes-with-at-least-5-students",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT class\r\nFROM Courses\r\nGROUP BY 1\r\nHAVING COUNT(1) >= 5;",
+    "problemId": 596,
+    "title": "Classes With at Least 5 Students",
+    "problemUrl": "https://leetcode.com/problems/classes-with-at-least-5-students/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0596.Classes With at Least 5 Students/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0596.Classes With at Least 5 Students/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

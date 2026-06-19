@@ -1,0 +1,43 @@
+{
+    "problemName": "teemo-attacking",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findPoisonedDuration(self, timeSeries: List[int], duration: int) -> int:\r\n        ans = duration\r\n        for a, b in pairwise(timeSeries):\r\n            ans += min(duration, b - a)\r\n        return ans",
+    "problemId": 495,
+    "title": "Teemo Attacking",
+    "problemUrl": "https://leetcode.com/problems/teemo-attacking/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0495.Teemo Attacking/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0495.Teemo Attacking/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0495.Teemo Attacking/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0495.Teemo Attacking/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0495.Teemo Attacking/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0495.Teemo Attacking/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0495.Teemo Attacking/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

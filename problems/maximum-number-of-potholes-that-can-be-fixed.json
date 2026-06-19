@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-number-of-potholes-that-can-be-fixed",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxPotholes(self, road: str, budget: int) -> int:\r\n        road += \".\"\r\n        n = len(road)\r\n        cnt = [0] * n\r\n        k = 0\r\n        for c in road:\r\n            if c == \"x\":\r\n                k += 1\r\n            elif k:\r\n                cnt[k] += 1\r\n                k = 0\r\n        ans = 0\r\n        for k in range(n - 1, 0, -1):\r\n            if cnt[k] == 0:\r\n                continue\r\n            t = min(budget // (k + 1), cnt[k])\r\n            ans += t * k\r\n            budget -= t * (k + 1)\r\n            if budget == 0:\r\n                break\r\n            cnt[k - 1] += cnt[k] - t\r\n        return ans",
+    "problemId": 3119,
+    "title": "Maximum Number of Potholes That Can Be Fixed",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-potholes-that-can-be-fixed/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3119.Maximum Number of Potholes That Can Be Fixed/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3119.Maximum Number of Potholes That Can Be Fixed/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3119.Maximum Number of Potholes That Can Be Fixed/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3119.Maximum Number of Potholes That Can Be Fixed/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3119.Maximum Number of Potholes That Can Be Fixed/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3119.Maximum Number of Potholes That Can Be Fixed/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3119.Maximum Number of Potholes That Can Be Fixed/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3119.Maximum Number of Potholes That Can Be Fixed/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

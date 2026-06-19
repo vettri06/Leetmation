@@ -1,0 +1,18 @@
+{
+    "problemName": "make-object-immutable",
+    "language": "typescript",
+    "code": "type Obj = Array<any> | Record<any, any>;\r\n\r\nfunction makeImmutable(obj: Obj): Obj {\r\n    const arrayHandler: ProxyHandler<Array<any>> = {\r\n        set: (_, prop) => {\r\n            throw `Error Modifying Index: ${String(prop)}`;\r\n        },\r\n    };\r\n    const objectHandler: ProxyHandler<Record<any, any>> = {\r\n        set: (_, prop) => {\r\n            throw `Error Modifying: ${String(prop)}`;\r\n        },\r\n    };\r\n    const fnHandler: ProxyHandler<Function> = {\r\n        apply: target => {\r\n            throw `Error Calling Method: ${target.name}`;\r\n        },\r\n    };\r\n    const fn = ['pop', 'push', 'shift', 'unshift', 'splice', 'sort', 'reverse'];\r\n    const dfs = (obj: Obj) => {\r\n        for (const key in obj) {\r\n            if (typeof obj[key] === 'object' && obj[key] !== null) {\r\n                obj[key] = dfs(obj[key]);\r\n            }\r\n        }\r\n        if (Array.isArray(obj)) {\r\n            fn.forEach(f => (obj[f] = new Proxy(obj[f], fnHandler)));\r\n            return new Proxy(obj, arrayHandler);\r\n        }\r\n        return new Proxy(obj, objectHandler);\r\n    };\r\n    return dfs(obj);\r\n}\r\n\r\n/**\r\n * const obj = makeImmutable({x: 5});\r\n * obj.x = 6; // throws \"Error Modifying x\"\r\n */",
+    "problemId": 2692,
+    "title": "Make Object Immutable",
+    "problemUrl": "https://leetcode.com/problems/make-object-immutable/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2692.Make Object Immutable/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2692.Make Object Immutable/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

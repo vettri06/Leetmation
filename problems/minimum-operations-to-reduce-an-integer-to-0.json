@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-operations-to-reduce-an-integer-to-0",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, n: int) -> int:\r\n        ans = cnt = 0\r\n        while n:\r\n            if n & 1:\r\n                cnt += 1\r\n            elif cnt:\r\n                ans += 1\r\n                cnt = 0 if cnt == 1 else 1\r\n            n >>= 1\r\n        if cnt == 1:\r\n            ans += 1\r\n        elif cnt > 1:\r\n            ans += 2\r\n        return ans",
+    "problemId": 2571,
+    "title": "Minimum Operations to Reduce an Integer to 0",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2571.Minimum Operations to Reduce an Integer to 0/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2571.Minimum Operations to Reduce an Integer to 0/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2571.Minimum Operations to Reduce an Integer to 0/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2571.Minimum Operations to Reduce an Integer to 0/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2571.Minimum Operations to Reduce an Integer to 0/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2571.Minimum Operations to Reduce an Integer to 0/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

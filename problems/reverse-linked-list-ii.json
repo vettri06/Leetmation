@@ -1,0 +1,53 @@
+{
+    "problemName": "reverse-linked-list-ii",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def reverseBetween(\r\n        self, head: Optional[ListNode], left: int, right: int\r\n    ) -> Optional[ListNode]:\r\n        if head.next is None or left == right:\r\n            return head\r\n        dummy = ListNode(0, head)\r\n        pre = dummy\r\n        for _ in range(left - 1):\r\n            pre = pre.next\r\n        p, q = pre, pre.next\r\n        cur = q\r\n        for _ in range(right - left + 1):\r\n            t = cur.next\r\n            cur.next = pre\r\n            pre, cur = cur, t\r\n        p.next = pre\r\n        q.next = cur\r\n        return dummy.next",
+    "problemId": 92,
+    "title": "Reverse Linked List II",
+    "problemUrl": "https://leetcode.com/problems/reverse-linked-list-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0092.Reverse Linked List II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0092.Reverse Linked List II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0092.Reverse Linked List II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0092.Reverse Linked List II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0092.Reverse Linked List II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0092.Reverse Linked List II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0092.Reverse Linked List II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0092.Reverse Linked List II/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0092.Reverse Linked List II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "kth-ancestor-of-a-tree-node",
+    "language": "python3",
+    "code": "class TreeAncestor:\r\n    def __init__(self, n: int, parent: List[int]):\r\n        self.p = [[-1] * 18 for _ in range(n)]\r\n        for i, fa in enumerate(parent):\r\n            self.p[i][0] = fa\r\n        for j in range(1, 18):\r\n            for i in range(n):\r\n                if self.p[i][j - 1] == -1:\r\n                    continue\r\n                self.p[i][j] = self.p[self.p[i][j - 1]][j - 1]\r\n\r\n    def getKthAncestor(self, node: int, k: int) -> int:\r\n        for i in range(17, -1, -1):\r\n            if k >> i & 1:\r\n                node = self.p[node][i]\r\n                if node == -1:\r\n                    break\r\n        return node\r\n\r\n\r\n# Your TreeAncestor object will be instantiated and called as such:\r\n# obj = TreeAncestor(n, parent)\r\n# param_1 = obj.getKthAncestor(node,k)",
+    "problemId": 1483,
+    "title": "Kth Ancestor of a Tree Node",
+    "problemUrl": "https://leetcode.com/problems/kth-ancestor-of-a-tree-node/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1483.Kth Ancestor of a Tree Node/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1483.Kth Ancestor of a Tree Node/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1483.Kth Ancestor of a Tree Node/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1483.Kth Ancestor of a Tree Node/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1483.Kth Ancestor of a Tree Node/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1483.Kth Ancestor of a Tree Node/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1483.Kth Ancestor of a Tree Node/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

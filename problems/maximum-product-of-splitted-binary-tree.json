@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-product-of-splitted-binary-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def maxProduct(self, root: Optional[TreeNode]) -> int:\r\n        def sum(root: Optional[TreeNode]) -> int:\r\n            if root is None:\r\n                return 0\r\n            return root.val + sum(root.left) + sum(root.right)\r\n\r\n        def dfs(root: Optional[TreeNode]) -> int:\r\n            if root is None:\r\n                return 0\r\n            t = root.val + dfs(root.left) + dfs(root.right)\r\n            nonlocal ans, s\r\n            if t < s:\r\n                ans = max(ans, t * (s - t))\r\n            return t\r\n\r\n        mod = 10**9 + 7\r\n        s = sum(root)\r\n        ans = 0\r\n        dfs(root)\r\n        return ans % mod",
+    "problemId": 1339,
+    "title": "Maximum Product of Splitted Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1339.Maximum Product of Splitted Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1339.Maximum Product of Splitted Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1339.Maximum Product of Splitted Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1339.Maximum Product of Splitted Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1339.Maximum Product of Splitted Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1339.Maximum Product of Splitted Binary Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1339.Maximum Product of Splitted Binary Tree/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

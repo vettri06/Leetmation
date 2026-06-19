@@ -1,0 +1,23 @@
+{
+    "problemName": "user-activities-within-time-bounds",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef user_activities(sessions: pd.DataFrame) -> pd.DataFrame:\r\n    sessions = sessions.sort_values(by=[\"user_id\", \"session_start\"])\r\n    sessions[\"prev_session_end\"] = sessions.groupby([\"user_id\", \"session_type\"])[\r\n        \"session_end\"\r\n    ].shift(1)\r\n    sessions_filtered = sessions[\r\n        sessions[\"session_start\"] - sessions[\"prev_session_end\"]\r\n        <= pd.Timedelta(hours=12)\r\n    ]\r\n    return pd.DataFrame({\"user_id\": sessions_filtered[\"user_id\"].unique()})",
+    "problemId": 3060,
+    "title": "User Activities within Time Bounds",
+    "problemUrl": "https://leetcode.com/problems/user-activities-within-time-bounds/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3060.User Activities within Time Bounds/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3060.User Activities within Time Bounds/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3060.User Activities within Time Bounds/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

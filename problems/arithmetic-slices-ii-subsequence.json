@@ -1,0 +1,38 @@
+{
+    "problemName": "arithmetic-slices-ii-subsequence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfArithmeticSlices(self, nums: List[int]) -> int:\r\n        f = [defaultdict(int) for _ in nums]\r\n        ans = 0\r\n        for i, x in enumerate(nums):\r\n            for j, y in enumerate(nums[:i]):\r\n                d = x - y\r\n                ans += f[j][d]\r\n                f[i][d] += f[j][d] + 1\r\n        return ans",
+    "problemId": 446,
+    "title": "Arithmetic Slices II - Subsequence",
+    "problemUrl": "https://leetcode.com/problems/arithmetic-slices-ii-subsequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0446.Arithmetic Slices II - Subsequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0446.Arithmetic Slices II - Subsequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0446.Arithmetic Slices II - Subsequence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0446.Arithmetic Slices II - Subsequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0446.Arithmetic Slices II - Subsequence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0446.Arithmetic Slices II - Subsequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

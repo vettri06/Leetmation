@@ -1,0 +1,38 @@
+{
+    "problemName": "count-integers-in-intervals",
+    "language": "python3",
+    "code": "class Node:\r\n    __slots__ = (\"left\", \"right\", \"l\", \"r\", \"mid\", \"v\", \"add\")\r\n\r\n    def __init__(self, l, r):\r\n        self.left = None\r\n        self.right = None\r\n        self.l = l\r\n        self.r = r\r\n        self.mid = (l + r) // 2\r\n        self.v = 0\r\n        self.add = 0\r\n\r\n\r\nclass SegmentTree:\r\n    def __init__(self):\r\n        self.root = Node(1, int(1e9) + 1)\r\n\r\n    def modify(self, l, r, v, node=None):\r\n        if node is None:\r\n            node = self.root\r\n        if l > r:\r\n            return\r\n        if node.l >= l and node.r <= r:\r\n            node.v = node.r - node.l + 1\r\n            node.add = v\r\n            return\r\n        self.pushdown(node)\r\n        if l <= node.mid:\r\n            self.modify(l, r, v, node.left)\r\n        if r > node.mid:\r\n            self.modify(l, r, v, node.right)\r\n        self.pushup(node)\r\n\r\n    def query(self, l, r, node=None):\r\n        if node is None:\r\n            node = self.root\r\n        if l > r:\r\n            return 0\r\n        if node.l >= l and node.r <= r:\r\n            return node.v\r\n        self.pushdown(node)\r\n        v = 0\r\n        if l <= node.mid:\r\n            v += self.query(l, r, node.left)\r\n        if r > node.mid:\r\n            v += self.query(l, r, node.right)\r\n        return v\r\n\r\n    def pushup(self, node):\r\n        node.v = node.left.v + node.right.v\r\n\r\n    def pushdown(self, node):\r\n        if node.left is None:\r\n            node.left = Node(node.l, node.mid)\r\n        if node.right is None:\r\n            node.right = Node(node.mid + 1, node.r)\r\n        if node.add != 0:\r\n            left, right = node.left, node.right\r\n            left.add = node.add\r\n            right.add = node.add\r\n            left.v = left.r - left.l + 1\r\n            right.v = right.r - right.l + 1\r\n            node.add = 0\r\n\r\n\r\nclass CountIntervals:\r\n    def __init__(self):\r\n        self.tree = SegmentTree()\r\n\r\n    def add(self, left, right):\r\n        self.tree.modify(left, right, 1)\r\n\r\n    def count(self):\r\n        return self.tree.query(1, int(1e9))\r\n\r\n\r\n# Your CountIntervals object will be instantiated and called as such:\r\n# obj = CountIntervals()\r\n# obj.add(left, right)\r\n# param_2 = obj.count()",
+    "problemId": 2276,
+    "title": "Count Integers in Intervals",
+    "problemUrl": "https://leetcode.com/problems/count-integers-in-intervals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2276.Count Integers in Intervals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2276.Count Integers in Intervals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2276.Count Integers in Intervals/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2276.Count Integers in Intervals/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2276.Count Integers in Intervals/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2276.Count Integers in Intervals/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

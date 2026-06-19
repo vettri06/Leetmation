@@ -1,0 +1,18 @@
+{
+    "problemName": "drop-duplicate-rows",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef dropDuplicateEmails(customers: pd.DataFrame) -> pd.DataFrame:\r\n    return customers.drop_duplicates(subset=['email'])",
+    "problemId": 2882,
+    "title": "Drop Duplicate Rows",
+    "problemUrl": "https://leetcode.com/problems/drop-duplicate-rows/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2882.Drop Duplicate Rows/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2882.Drop Duplicate Rows/Solution.py",
+            "sourceFile": "Solution.py"
+        }
+    ]
+}

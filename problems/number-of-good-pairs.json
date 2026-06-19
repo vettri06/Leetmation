@@ -1,0 +1,53 @@
+{
+    "problemName": "number-of-good-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numIdenticalPairs(self, nums: List[int]) -> int:\r\n        ans = 0\r\n        cnt = Counter()\r\n        for x in nums:\r\n            ans += cnt[x]\r\n            cnt[x] += 1\r\n        return ans",
+    "problemId": 1512,
+    "title": "Number of Good Pairs",
+    "problemUrl": "https://leetcode.com/problems/number-of-good-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1512.Number of Good Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1512.Number of Good Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1512.Number of Good Pairs/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1512.Number of Good Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1512.Number of Good Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1512.Number of Good Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1512.Number of Good Pairs/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1512.Number of Good Pairs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1512.Number of Good Pairs/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "count-partitions-with-max-min-difference-at-most-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPartitions(self, nums: List[int], k: int) -> int:\r\n        mod = 10**9 + 7\r\n        sl = SortedList()\r\n        n = len(nums)\r\n        f = [1] + [0] * n\r\n        g = [1] + [0] * n\r\n        l = 1\r\n        for r, x in enumerate(nums, 1):\r\n            sl.add(x)\r\n            while sl[-1] - sl[0] > k:\r\n                sl.remove(nums[l - 1])\r\n                l += 1\r\n            f[r] = (g[r - 1] - (g[l - 2] if l >= 2 else 0) + mod) % mod\r\n            g[r] = (g[r - 1] + f[r]) % mod\r\n        return f[n]",
+    "problemId": 3578,
+    "title": "Count Partitions With Max-Min Difference at Most K",
+    "problemUrl": "https://leetcode.com/problems/count-partitions-with-max-min-difference-at-most-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3578.Count Partitions With Max-Min Difference at Most K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3578.Count Partitions With Max-Min Difference at Most K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3578.Count Partitions With Max-Min Difference at Most K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3578.Count Partitions With Max-Min Difference at Most K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3578.Count Partitions With Max-Min Difference at Most K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3578.Count Partitions With Max-Min Difference at Most K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3578.Count Partitions With Max-Min Difference at Most K/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

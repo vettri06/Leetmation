@@ -1,0 +1,38 @@
+{
+    "problemName": "subrectangle-queries",
+    "language": "python3",
+    "code": "class SubrectangleQueries:\r\n    def __init__(self, rectangle: List[List[int]]):\r\n        self.g = rectangle\r\n        self.ops = []\r\n\r\n    def updateSubrectangle(\r\n        self, row1: int, col1: int, row2: int, col2: int, newValue: int\r\n    ) -> None:\r\n        self.ops.append((row1, col1, row2, col2, newValue))\r\n\r\n    def getValue(self, row: int, col: int) -> int:\r\n        for r1, c1, r2, c2, v in self.ops[::-1]:\r\n            if r1 <= row <= r2 and c1 <= col <= c2:\r\n                return v\r\n        return self.g[row][col]\r\n\r\n\r\n# Your SubrectangleQueries object will be instantiated and called as such:\r\n# obj = SubrectangleQueries(rectangle)\r\n# obj.updateSubrectangle(row1,col1,row2,col2,newValue)\r\n# param_2 = obj.getValue(row,col)",
+    "problemId": 1476,
+    "title": "Subrectangle Queries",
+    "problemUrl": "https://leetcode.com/problems/subrectangle-queries/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1476.Subrectangle Queries/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1476.Subrectangle Queries/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1476.Subrectangle Queries/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1476.Subrectangle Queries/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1476.Subrectangle Queries/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1476.Subrectangle Queries/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

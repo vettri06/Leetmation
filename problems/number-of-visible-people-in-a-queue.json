@@ -1,0 +1,48 @@
+{
+    "problemName": "number-of-visible-people-in-a-queue",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canSeePersonsCount(self, heights: List[int]) -> List[int]:\r\n        n = len(heights)\r\n        ans = [0] * n\r\n        stk = []\r\n        for i in range(n - 1, -1, -1):\r\n            while stk and stk[-1] < heights[i]:\r\n                ans[i] += 1\r\n                stk.pop()\r\n            if stk:\r\n                ans[i] += 1\r\n            stk.append(heights[i])\r\n        return ans",
+    "problemId": 1944,
+    "title": "Number of Visible People in a Queue",
+    "problemUrl": "https://leetcode.com/problems/number-of-visible-people-in-a-queue/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1944.Number of Visible People in a Queue/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1944.Number of Visible People in a Queue/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1944.Number of Visible People in a Queue/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1944.Number of Visible People in a Queue/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1944.Number of Visible People in a Queue/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1944.Number of Visible People in a Queue/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1944.Number of Visible People in a Queue/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1944.Number of Visible People in a Queue/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

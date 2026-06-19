@@ -1,0 +1,63 @@
+{
+    "problemName": "kth-smallest-element-in-a-bst",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:\r\n        stk = []\r\n        while root or stk:\r\n            if root:\r\n                stk.append(root)\r\n                root = root.left\r\n            else:\r\n                root = stk.pop()\r\n                k -= 1\r\n                if k == 0:\r\n                    return root.val\r\n                root = root.right",
+    "problemId": 230,
+    "title": "Kth Smallest Element in a BST",
+    "problemUrl": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0230.Kth Smallest Element in a BST/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0230.Kth Smallest Element in a BST/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0230.Kth Smallest Element in a BST/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0230.Kth Smallest Element in a BST/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0230.Kth Smallest Element in a BST/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0230.Kth Smallest Element in a BST/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0230.Kth Smallest Element in a BST/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0230.Kth Smallest Element in a BST/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0230.Kth Smallest Element in a BST/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0230.Kth Smallest Element in a BST/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0230.Kth Smallest Element in a BST/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

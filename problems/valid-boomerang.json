@@ -1,0 +1,43 @@
+{
+    "problemName": "valid-boomerang",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isBoomerang(self, points: List[List[int]]) -> bool:\r\n        (x1, y1), (x2, y2), (x3, y3) = points\r\n        return (y2 - y1) * (x3 - x2) != (y3 - y2) * (x2 - x1)",
+    "problemId": 1037,
+    "title": "Valid Boomerang",
+    "problemUrl": "https://leetcode.com/problems/valid-boomerang/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1037.Valid Boomerang/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1037.Valid Boomerang/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1037.Valid Boomerang/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1037.Valid Boomerang/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1037.Valid Boomerang/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1037.Valid Boomerang/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1037.Valid Boomerang/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

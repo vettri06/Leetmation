@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-path-with-edge-reversals",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, n: int, edges: List[List[int]]) -> int:\r\n        g = [[] for _ in range(n)]\r\n        for u, v, w in edges:\r\n            g[u].append((v, w))\r\n            g[v].append((u, w * 2))\r\n        pq = [(0, 0)]\r\n        dist = [inf] * n\r\n        dist[0] = 0\r\n        while pq:\r\n            d, u = heappop(pq)\r\n            if d > dist[u]:\r\n                continue\r\n            if u == n - 1:\r\n                return d\r\n            for v, w in g[u]:\r\n                nd = d + w\r\n                if nd < dist[v]:\r\n                    dist[v] = nd\r\n                    heappush(pq, (nd, v))\r\n        return -1",
+    "problemId": 3650,
+    "title": "Minimum Cost Path with Edge Reversals",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-path-with-edge-reversals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3650.Minimum Cost Path with Edge Reversals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3650.Minimum Cost Path with Edge Reversals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3650.Minimum Cost Path with Edge Reversals/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3650.Minimum Cost Path with Edge Reversals/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3650.Minimum Cost Path with Edge Reversals/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3650.Minimum Cost Path with Edge Reversals/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

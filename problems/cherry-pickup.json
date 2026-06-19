@@ -1,0 +1,43 @@
+{
+    "problemName": "cherry-pickup",
+    "language": "python3",
+    "code": "class Solution:\r\n    def cherryPickup(self, grid: List[List[int]]) -> int:\r\n        n = len(grid)\r\n        f = [[[-inf] * n for _ in range(n)] for _ in range((n << 1) - 1)]\r\n        f[0][0][0] = grid[0][0]\r\n        for k in range(1, (n << 1) - 1):\r\n            for i1 in range(n):\r\n                for i2 in range(n):\r\n                    j1, j2 = k - i1, k - i2\r\n                    if (\r\n                        not 0 <= j1 < n\r\n                        or not 0 <= j2 < n\r\n                        or grid[i1][j1] == -1\r\n                        or grid[i2][j2] == -1\r\n                    ):\r\n                        continue\r\n                    t = grid[i1][j1]\r\n                    if i1 != i2:\r\n                        t += grid[i2][j2]\r\n                    for x1 in range(i1 - 1, i1 + 1):\r\n                        for x2 in range(i2 - 1, i2 + 1):\r\n                            if x1 >= 0 and x2 >= 0:\r\n                                f[k][i1][i2] = max(f[k][i1][i2], f[k - 1][x1][x2] + t)\r\n        return max(0, f[-1][-1][-1])",
+    "problemId": 741,
+    "title": "Cherry Pickup",
+    "problemUrl": "https://leetcode.com/problems/cherry-pickup/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0741.Cherry Pickup/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0741.Cherry Pickup/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0741.Cherry Pickup/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0741.Cherry Pickup/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0741.Cherry Pickup/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0741.Cherry Pickup/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0741.Cherry Pickup/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

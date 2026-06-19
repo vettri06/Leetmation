@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-uncommon-subsequence-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findLUSlength(self, strs: List[str]) -> int:\r\n        def check(s: str, t: str):\r\n            i = j = 0\r\n            while i < len(s) and j < len(t):\r\n                if s[i] == t[j]:\r\n                    i += 1\r\n                j += 1\r\n            return i == len(s)\r\n\r\n        ans = -1\r\n        for i, s in enumerate(strs):\r\n            for j, t in enumerate(strs):\r\n                if i != j and check(s, t):\r\n                    break\r\n            else:\r\n                ans = max(ans, len(s))\r\n        return ans",
+    "problemId": 522,
+    "title": "Longest Uncommon Subsequence II",
+    "problemUrl": "https://leetcode.com/problems/longest-uncommon-subsequence-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0522.Longest Uncommon Subsequence II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0522.Longest Uncommon Subsequence II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0522.Longest Uncommon Subsequence II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0522.Longest Uncommon Subsequence II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0522.Longest Uncommon Subsequence II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0522.Longest Uncommon Subsequence II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

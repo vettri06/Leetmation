@@ -1,0 +1,53 @@
+{
+    "problemName": "pascals-triangle",
+    "language": "python3",
+    "code": "class Solution:\r\n    def generate(self, numRows: int) -> List[List[int]]:\r\n        f = [[1]]\r\n        for i in range(numRows - 1):\r\n            g = [1] + [a + b for a, b in pairwise(f[-1])] + [1]\r\n            f.append(g)\r\n        return f",
+    "problemId": 118,
+    "title": "Pascal's Triangle",
+    "problemUrl": "https://leetcode.com/problems/pascals-triangle/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0118.Pascal's Triangle/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0118.Pascal's Triangle/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0118.Pascal's Triangle/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0118.Pascal's Triangle/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0118.Pascal's Triangle/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0118.Pascal's Triangle/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0118.Pascal's Triangle/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0118.Pascal's Triangle/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0118.Pascal's Triangle/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

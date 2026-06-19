@@ -1,0 +1,18 @@
+{
+    "problemName": "find-candidates-for-data-scientist-position",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT candidate_id\r\nFROM Candidates\r\nWHERE skill IN ('Python', 'Tableau', 'PostgreSQL')\r\nGROUP BY 1\r\nHAVING COUNT(1) = 3\r\nORDER BY 1;",
+    "problemId": 3051,
+    "title": "Find Candidates for Data Scientist Position",
+    "problemUrl": "https://leetcode.com/problems/find-candidates-for-data-scientist-position/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3051.Find Candidates for Data Scientist Position/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3051.Find Candidates for Data Scientist Position/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

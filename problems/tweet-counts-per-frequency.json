@@ -1,0 +1,28 @@
+{
+    "problemName": "tweet-counts-per-frequency",
+    "language": "python3",
+    "code": "class TweetCounts:\r\n    def __init__(self):\r\n        self.d = {\"minute\": 60, \"hour\": 3600, \"day\": 86400}\r\n        self.data = defaultdict(SortedList)\r\n\r\n    def recordTweet(self, tweetName: str, time: int) -> None:\r\n        self.data[tweetName].add(time)\r\n\r\n    def getTweetCountsPerFrequency(\r\n        self, freq: str, tweetName: str, startTime: int, endTime: int\r\n    ) -> List[int]:\r\n        f = self.d[freq]\r\n        tweets = self.data[tweetName]\r\n        t = startTime\r\n        ans = []\r\n        while t <= endTime:\r\n            l = tweets.bisect_left(t)\r\n            r = tweets.bisect_left(min(t + f, endTime + 1))\r\n            ans.append(r - l)\r\n            t += f\r\n        return ans\r\n\r\n\r\n# Your TweetCounts object will be instantiated and called as such:\r\n# obj = TweetCounts()\r\n# obj.recordTweet(tweetName,time)\r\n# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)",
+    "problemId": 1348,
+    "title": "Tweet Counts Per Frequency",
+    "problemUrl": "https://leetcode.com/problems/tweet-counts-per-frequency/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1348.Tweet Counts Per Frequency/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1348.Tweet Counts Per Frequency/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1348.Tweet Counts Per Frequency/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1348.Tweet Counts Per Frequency/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

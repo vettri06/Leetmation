@@ -1,0 +1,33 @@
+{
+    "problemName": "cycle-length-queries-in-a-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def cycleLengthQueries(self, n: int, queries: List[List[int]]) -> List[int]:\r\n        ans = []\r\n        for a, b in queries:\r\n            t = 1\r\n            while a != b:\r\n                if a > b:\r\n                    a >>= 1\r\n                else:\r\n                    b >>= 1\r\n                t += 1\r\n            ans.append(t)\r\n        return ans",
+    "problemId": 2509,
+    "title": "Cycle Length Queries in a Tree",
+    "problemUrl": "https://leetcode.com/problems/cycle-length-queries-in-a-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2509.Cycle Length Queries in a Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2509.Cycle Length Queries in a Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2509.Cycle Length Queries in a Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2509.Cycle Length Queries in a Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2509.Cycle Length Queries in a Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

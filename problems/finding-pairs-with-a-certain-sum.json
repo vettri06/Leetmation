@@ -1,0 +1,53 @@
+{
+    "problemName": "finding-pairs-with-a-certain-sum",
+    "language": "python3",
+    "code": "class FindSumPairs:\r\n    def __init__(self, nums1: List[int], nums2: List[int]):\r\n        self.cnt = Counter(nums2)\r\n        self.nums1 = nums1\r\n        self.nums2 = nums2\r\n\r\n    def add(self, index: int, val: int) -> None:\r\n        self.cnt[self.nums2[index]] -= 1\r\n        self.nums2[index] += val\r\n        self.cnt[self.nums2[index]] += 1\r\n\r\n    def count(self, tot: int) -> int:\r\n        return sum(self.cnt[tot - x] for x in self.nums1)\r\n\r\n\r\n# Your FindSumPairs object will be instantiated and called as such:\r\n# obj = FindSumPairs(nums1, nums2)\r\n# obj.add(index,val)\r\n# param_2 = obj.count(tot)",
+    "problemId": 1865,
+    "title": "Finding Pairs With a Certain Sum",
+    "problemUrl": "https://leetcode.com/problems/finding-pairs-with-a-certain-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1865.Finding Pairs With a Certain Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1865.Finding Pairs With a Certain Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1865.Finding Pairs With a Certain Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1865.Finding Pairs With a Certain Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1865.Finding Pairs With a Certain Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1865.Finding Pairs With a Certain Sum/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1865.Finding Pairs With a Certain Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1865.Finding Pairs With a Certain Sum/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1865.Finding Pairs With a Certain Sum/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

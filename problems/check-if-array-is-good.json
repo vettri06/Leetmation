@@ -1,0 +1,43 @@
+{
+    "problemName": "check-if-array-is-good",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isGood(self, nums: List[int]) -> bool:\r\n        cnt = Counter(nums)\r\n        n = len(nums) - 1\r\n        return cnt[n] == 2 and all(cnt[i] for i in range(1, n))",
+    "problemId": 2784,
+    "title": "Check if Array is Good",
+    "problemUrl": "https://leetcode.com/problems/check-if-array-is-good/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2784.Check if Array is Good/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2784.Check if Array is Good/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2784.Check if Array is Good/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2784.Check if Array is Good/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2784.Check if Array is Good/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2784.Check if Array is Good/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2784.Check if Array is Good/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

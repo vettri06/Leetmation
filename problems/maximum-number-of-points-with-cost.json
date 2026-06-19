@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-number-of-points-with-cost",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxPoints(self, points: List[List[int]]) -> int:\r\n        n = len(points[0])\r\n        f = points[0][:]\r\n        for p in points[1:]:\r\n            g = [0] * n\r\n            lmx = -inf\r\n            for j in range(n):\r\n                lmx = max(lmx, f[j] + j)\r\n                g[j] = max(g[j], p[j] + lmx - j)\r\n            rmx = -inf\r\n            for j in range(n - 1, -1, -1):\r\n                rmx = max(rmx, f[j] - j)\r\n                g[j] = max(g[j], p[j] + rmx + j)\r\n            f = g\r\n        return max(f)",
+    "problemId": 1937,
+    "title": "Maximum Number of Points with Cost",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-points-with-cost/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1937.Maximum Number of Points with Cost/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1937.Maximum Number of Points with Cost/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1937.Maximum Number of Points with Cost/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1937.Maximum Number of Points with Cost/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1937.Maximum Number of Points with Cost/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1937.Maximum Number of Points with Cost/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

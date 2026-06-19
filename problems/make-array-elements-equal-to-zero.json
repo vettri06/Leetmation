@@ -1,0 +1,48 @@
+{
+    "problemName": "make-array-elements-equal-to-zero",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countValidSelections(self, nums: List[int]) -> int:\r\n        s = sum(nums)\r\n        ans = l = 0\r\n        for x in nums:\r\n            if x:\r\n                l += x\r\n            elif l * 2 == s:\r\n                ans += 2\r\n            elif abs(l * 2 - s) == 1:\r\n                ans += 1\r\n        return ans",
+    "problemId": 3354,
+    "title": "Make Array Elements Equal to Zero",
+    "problemUrl": "https://leetcode.com/problems/make-array-elements-equal-to-zero/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3354.Make Array Elements Equal to Zero/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3354.Make Array Elements Equal to Zero/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3354.Make Array Elements Equal to Zero/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3354.Make Array Elements Equal to Zero/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3354.Make Array Elements Equal to Zero/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3354.Make Array Elements Equal to Zero/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3354.Make Array Elements Equal to Zero/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3354.Make Array Elements Equal to Zero/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "account-balance",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    account_id,\r\n    day,\r\n    SUM(IF(type = 'Deposit', amount, -amount)) OVER (\r\n        PARTITION BY account_id\r\n        ORDER BY day\r\n    ) AS balance\r\nFROM Transactions\r\nORDER BY 1, 2;",
+    "problemId": 2066,
+    "title": "Account Balance",
+    "problemUrl": "https://leetcode.com/problems/account-balance/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2066.Account Balance/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2066.Account Balance/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

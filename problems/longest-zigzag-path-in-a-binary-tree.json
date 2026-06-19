@@ -1,0 +1,33 @@
+{
+    "problemName": "longest-zigzag-path-in-a-binary-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def longestZigZag(self, root: TreeNode) -> int:\r\n        def dfs(root, l, r):\r\n            if root is None:\r\n                return\r\n            nonlocal ans\r\n            ans = max(ans, l, r)\r\n            dfs(root.left, r + 1, 0)\r\n            dfs(root.right, 0, l + 1)\r\n\r\n        ans = 0\r\n        dfs(root, 0, 0)\r\n        return ans",
+    "problemId": 1372,
+    "title": "Longest ZigZag Path in a Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1372.Longest ZigZag Path in a Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1372.Longest ZigZag Path in a Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1372.Longest ZigZag Path in a Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1372.Longest ZigZag Path in a Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1372.Longest ZigZag Path in a Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

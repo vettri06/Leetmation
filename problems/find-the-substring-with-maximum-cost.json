@@ -1,0 +1,63 @@
+{
+    "problemName": "find-the-substring-with-maximum-cost",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumCostSubstring(self, s: str, chars: str, vals: List[int]) -> int:\r\n        d = {c: v for c, v in zip(chars, vals)}\r\n        ans = tot = mi = 0\r\n        for c in s:\r\n            v = d.get(c, ord(c) - ord('a') + 1)\r\n            tot += v\r\n            ans = max(ans, tot - mi)\r\n            mi = min(mi, tot)\r\n        return ans",
+    "problemId": 2606,
+    "title": "Find the Substring With Maximum Cost",
+    "problemUrl": "https://leetcode.com/problems/find-the-substring-with-maximum-cost/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2606.Find the Substring With Maximum Cost/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2606.Find the Substring With Maximum Cost/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2606.Find the Substring With Maximum Cost/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2606.Find the Substring With Maximum Cost/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2606.Find the Substring With Maximum Cost/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2606.Find the Substring With Maximum Cost/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2606.Find the Substring With Maximum Cost/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2606.Find the Substring With Maximum Cost/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2606.Find the Substring With Maximum Cost/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2606.Find the Substring With Maximum Cost/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2606.Find the Substring With Maximum Cost/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

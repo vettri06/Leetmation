@@ -1,0 +1,38 @@
+{
+    "problemName": "positions-of-large-groups",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largeGroupPositions(self, s: str) -> List[List[int]]:\r\n        i, n = 0, len(s)\r\n        ans = []\r\n        while i < n:\r\n            j = i\r\n            while j < n and s[j] == s[i]:\r\n                j += 1\r\n            if j - i >= 3:\r\n                ans.append([i, j - 1])\r\n            i = j\r\n        return ans",
+    "problemId": 830,
+    "title": "Positions of Large Groups",
+    "problemUrl": "https://leetcode.com/problems/positions-of-large-groups/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0830.Positions of Large Groups/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0830.Positions of Large Groups/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0830.Positions of Large Groups/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0830.Positions of Large Groups/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0830.Positions of Large Groups/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0830.Positions of Large Groups/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

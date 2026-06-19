@@ -1,0 +1,18 @@
+{
+    "problemName": "customer-order-frequency",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT customer_id, name\r\nFROM\r\n    Orders\r\n    JOIN Product USING (product_id)\r\n    JOIN Customers USING (customer_id)\r\nWHERE YEAR(order_date) = 2020\r\nGROUP BY 1\r\nHAVING\r\n    SUM(IF(MONTH(order_date) = 6, quantity * price, 0)) >= 100\r\n    AND SUM(IF(MONTH(order_date) = 7, quantity * price, 0)) >= 100;",
+    "problemId": 1511,
+    "title": "Customer Order Frequency",
+    "problemUrl": "https://leetcode.com/problems/customer-order-frequency/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1511.Customer Order Frequency/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1511.Customer Order Frequency/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

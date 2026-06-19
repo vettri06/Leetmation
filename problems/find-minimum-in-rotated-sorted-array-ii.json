@@ -1,0 +1,48 @@
+{
+    "problemName": "find-minimum-in-rotated-sorted-array-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMin(self, nums: List[int]) -> int:\r\n        l, r = 0, len(nums) - 1\r\n        while l < r:\r\n            mid = (l + r) >> 1\r\n            if nums[mid] > nums[r]:\r\n                l = mid + 1\r\n            elif nums[mid] == nums[r]:\r\n                r -= 1\r\n            else:\r\n                r = mid\r\n        return nums[l]",
+    "problemId": 154,
+    "title": "Find Minimum in Rotated Sorted Array II",
+    "problemUrl": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0154.Find Minimum in Rotated Sorted Array II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0154.Find Minimum in Rotated Sorted Array II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0154.Find Minimum in Rotated Sorted Array II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0154.Find Minimum in Rotated Sorted Array II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0154.Find Minimum in Rotated Sorted Array II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0154.Find Minimum in Rotated Sorted Array II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0154.Find Minimum in Rotated Sorted Array II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0154.Find Minimum in Rotated Sorted Array II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

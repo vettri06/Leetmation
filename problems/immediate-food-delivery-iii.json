@@ -1,0 +1,18 @@
+{
+    "problemName": "immediate-food-delivery-iii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    order_date,\r\n    ROUND(\r\n        100 * SUM(IF(customer_pref_delivery_date = order_date, 1, 0)) / COUNT(*),\r\n        2\r\n    ) AS immediate_percentage\r\nFROM Delivery\r\nGROUP BY order_date\r\nORDER BY order_date;",
+    "problemId": 2686,
+    "title": "Immediate Food Delivery III",
+    "problemUrl": "https://leetcode.com/problems/immediate-food-delivery-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2686.Immediate Food Delivery III/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2686.Immediate Food Delivery III/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "problemName": "beautiful-towers-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumSumOfHeights(self, maxHeights: List[int]) -> int:\r\n        ans, n = 0, len(maxHeights)\r\n        for i, x in enumerate(maxHeights):\r\n            y = t = x\r\n            for j in range(i - 1, -1, -1):\r\n                y = min(y, maxHeights[j])\r\n                t += y\r\n            y = x\r\n            for j in range(i + 1, n):\r\n                y = min(y, maxHeights[j])\r\n                t += y\r\n            ans = max(ans, t)\r\n        return ans",
+    "problemId": 2865,
+    "title": "Beautiful Towers I",
+    "problemUrl": "https://leetcode.com/problems/beautiful-towers-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2865.Beautiful Towers I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2865.Beautiful Towers I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2865.Beautiful Towers I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2865.Beautiful Towers I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2865.Beautiful Towers I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2865.Beautiful Towers I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2865.Beautiful Towers I/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2865.Beautiful Towers I/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2865.Beautiful Towers I/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2865.Beautiful Towers I/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2865.Beautiful Towers I/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

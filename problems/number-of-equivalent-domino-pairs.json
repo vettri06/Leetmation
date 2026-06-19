@@ -1,0 +1,43 @@
+{
+    "problemName": "number-of-equivalent-domino-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numEquivDominoPairs(self, dominoes: List[List[int]]) -> int:\r\n        cnt = Counter()\r\n        ans = 0\r\n        for a, b in dominoes:\r\n            x = a * 10 + b if a < b else b * 10 + a\r\n            ans += cnt[x]\r\n            cnt[x] += 1\r\n        return ans",
+    "problemId": 1128,
+    "title": "Number of Equivalent Domino Pairs",
+    "problemUrl": "https://leetcode.com/problems/number-of-equivalent-domino-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1128.Number of Equivalent Domino Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1128.Number of Equivalent Domino Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1128.Number of Equivalent Domino Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1128.Number of Equivalent Domino Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1128.Number of Equivalent Domino Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1128.Number of Equivalent Domino Pairs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1128.Number of Equivalent Domino Pairs/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

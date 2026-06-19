@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-to-move-chips-to-the-same-position",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCostToMoveChips(self, position: List[int]) -> int:\r\n        a = sum(p % 2 for p in position)\r\n        b = len(position) - a\r\n        return min(a, b)",
+    "problemId": 1217,
+    "title": "Minimum Cost to Move Chips to The Same Position",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1217.Minimum Cost to Move Chips to The Same Position/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1217.Minimum Cost to Move Chips to The Same Position/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1217.Minimum Cost to Move Chips to The Same Position/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1217.Minimum Cost to Move Chips to The Same Position/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1217.Minimum Cost to Move Chips to The Same Position/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1217.Minimum Cost to Move Chips to The Same Position/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

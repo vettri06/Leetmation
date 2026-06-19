@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-swaps-to-make-strings-equal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumSwap(self, s1: str, s2: str) -> int:\r\n        xy = yx = 0\r\n        for a, b in zip(s1, s2):\r\n            xy += a < b\r\n            yx += a > b\r\n        if (xy + yx) % 2:\r\n            return -1\r\n        return xy // 2 + yx // 2 + xy % 2 + yx % 2",
+    "problemId": 1247,
+    "title": "Minimum Swaps to Make Strings Equal",
+    "problemUrl": "https://leetcode.com/problems/minimum-swaps-to-make-strings-equal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1247.Minimum Swaps to Make Strings Equal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1247.Minimum Swaps to Make Strings Equal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1247.Minimum Swaps to Make Strings Equal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1247.Minimum Swaps to Make Strings Equal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1247.Minimum Swaps to Make Strings Equal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1247.Minimum Swaps to Make Strings Equal/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1247.Minimum Swaps to Make Strings Equal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

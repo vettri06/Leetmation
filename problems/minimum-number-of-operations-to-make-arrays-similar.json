@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-number-of-operations-to-make-arrays-similar",
+    "language": "python3",
+    "code": "class Solution:\r\n    def makeSimilar(self, nums: List[int], target: List[int]) -> int:\r\n        nums.sort(key=lambda x: (x & 1, x))\r\n        target.sort(key=lambda x: (x & 1, x))\r\n        return sum(abs(a - b) for a, b in zip(nums, target)) // 4",
+    "problemId": 2449,
+    "title": "Minimum Number of Operations to Make Arrays Similar",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-operations-to-make-arrays-similar/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2449.Minimum Number of Operations to Make Arrays Similar/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2449.Minimum Number of Operations to Make Arrays Similar/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2449.Minimum Number of Operations to Make Arrays Similar/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2449.Minimum Number of Operations to Make Arrays Similar/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2449.Minimum Number of Operations to Make Arrays Similar/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2449.Minimum Number of Operations to Make Arrays Similar/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

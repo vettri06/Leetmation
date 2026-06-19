@@ -1,0 +1,48 @@
+{
+    "problemName": "contains-duplicate-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:\r\n        d = {}\r\n        for i, x in enumerate(nums):\r\n            if x in d and i - d[x] <= k:\r\n                return True\r\n            d[x] = i\r\n        return False",
+    "problemId": 219,
+    "title": "Contains Duplicate II",
+    "problemUrl": "https://leetcode.com/problems/contains-duplicate-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0219.Contains Duplicate II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0219.Contains Duplicate II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0219.Contains Duplicate II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0219.Contains Duplicate II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0219.Contains Duplicate II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0219.Contains Duplicate II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0219.Contains Duplicate II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0219.Contains Duplicate II/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

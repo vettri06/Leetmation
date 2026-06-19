@@ -1,0 +1,43 @@
+{
+    "problemName": "taking-maximum-energy-from-the-mystic-dungeon",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumEnergy(self, energy: List[int], k: int) -> int:\r\n        ans = -inf\r\n        n = len(energy)\r\n        for i in range(n - k, n):\r\n            j, s = i, 0\r\n            while j >= 0:\r\n                s += energy[j]\r\n                ans = max(ans, s)\r\n                j -= k\r\n        return ans",
+    "problemId": 3147,
+    "title": "Taking Maximum Energy From the Mystic Dungeon",
+    "problemUrl": "https://leetcode.com/problems/taking-maximum-energy-from-the-mystic-dungeon/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3147.Taking Maximum Energy From the Mystic Dungeon/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3147.Taking Maximum Energy From the Mystic Dungeon/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3147.Taking Maximum Energy From the Mystic Dungeon/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3147.Taking Maximum Energy From the Mystic Dungeon/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3147.Taking Maximum Energy From the Mystic Dungeon/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3147.Taking Maximum Energy From the Mystic Dungeon/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3147.Taking Maximum Energy From the Mystic Dungeon/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

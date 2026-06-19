@@ -1,0 +1,37 @@
+{
+    "problemName": "apply-operations-to-make-all-array-elements-equal-to-zero",
+    "language": "java",
+    "code": "class Solution {\n    public boolean checkArray(int[] nums, int k) {\n        int n = nums.length;\n        int[] diff = new int[n + 1];\n        int activeSubtract = 0;\n\n        for (int i = 0; i < n; i++) {\n            activeSubtract += diff[i];\n            int value = nums[i] + activeSubtract;\n            if (value < 0) return false;\n            if (value == 0) continue;\n            if (i + k > n) return false;\n\n            activeSubtract -= value;\n            diff[i + k] += value;\n        }\n        return true;\n    }\n}",
+    "problemId": 2772,
+    "title": "Apply Operations to Make All Array Elements Equal to Zero",
+    "problemUrl": "https://leetcode.com/problems/apply-operations-to-make-all-array-elements-equal-to-zero/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2772.Apply Operations to Make All Array Elements Equal to Zero/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2772.Apply Operations to Make All Array Elements Equal to Zero/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2772.Apply Operations to Make All Array Elements Equal to Zero/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2772.Apply Operations to Make All Array Elements Equal to Zero/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2772.Apply Operations to Make All Array Elements Equal to Zero/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ],
+    "rebasePolicy": "protected-local-fix"
+}

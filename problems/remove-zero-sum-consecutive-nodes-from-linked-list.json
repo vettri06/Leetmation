@@ -1,0 +1,43 @@
+{
+    "problemName": "remove-zero-sum-consecutive-nodes-from-linked-list",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def removeZeroSumSublists(self, head: Optional[ListNode]) -> Optional[ListNode]:\r\n        dummy = ListNode(next=head)\r\n        last = {}\r\n        s, cur = 0, dummy\r\n        while cur:\r\n            s += cur.val\r\n            last[s] = cur\r\n            cur = cur.next\r\n        s, cur = 0, dummy\r\n        while cur:\r\n            s += cur.val\r\n            cur.next = last[s].next\r\n            cur = cur.next\r\n        return dummy.next",
+    "problemId": 1171,
+    "title": "Remove Zero Sum Consecutive Nodes from Linked List",
+    "problemUrl": "https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1171.Remove Zero Sum Consecutive Nodes from Linked List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1171.Remove Zero Sum Consecutive Nodes from Linked List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1171.Remove Zero Sum Consecutive Nodes from Linked List/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1171.Remove Zero Sum Consecutive Nodes from Linked List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1171.Remove Zero Sum Consecutive Nodes from Linked List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1171.Remove Zero Sum Consecutive Nodes from Linked List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1171.Remove Zero Sum Consecutive Nodes from Linked List/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

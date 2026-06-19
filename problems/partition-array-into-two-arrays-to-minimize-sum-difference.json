@@ -1,0 +1,33 @@
+{
+    "problemName": "partition-array-into-two-arrays-to-minimize-sum-difference",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumDifference(self, nums: List[int]) -> int:\r\n        n = len(nums) >> 1\r\n        f = defaultdict(set)\r\n        g = defaultdict(set)\r\n        for i in range(1 << n):\r\n            s = cnt = 0\r\n            s1 = cnt1 = 0\r\n            for j in range(n):\r\n                if (i & (1 << j)) != 0:\r\n                    s += nums[j]\r\n                    cnt += 1\r\n                    s1 += nums[n + j]\r\n                    cnt1 += 1\r\n                else:\r\n                    s -= nums[j]\r\n                    s1 -= nums[n + j]\r\n            f[cnt].add(s)\r\n            g[cnt1].add(s1)\r\n\r\n        ans = inf\r\n        for i in range(n + 1):\r\n            fi, gi = sorted(list(f[i])), sorted(list(g[n - i]))\r\n            # min(abs(f[i] + g[n - i]))\r\n            for a in fi:\r\n                left, right = 0, len(gi) - 1\r\n                b = -a\r\n                while left < right:\r\n                    mid = (left + right) >> 1\r\n                    if gi[mid] >= b:\r\n                        right = mid\r\n                    else:\r\n                        left = mid + 1\r\n                ans = min(ans, abs(a + gi[left]))\r\n                if left > 0:\r\n                    ans = min(ans, abs(a + gi[left - 1]))\r\n        return ans",
+    "problemId": 2035,
+    "title": "Partition Array Into Two Arrays to Minimize Sum Difference",
+    "problemUrl": "https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2035.Partition Array Into Two Arrays to Minimize Sum Difference/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2035.Partition Array Into Two Arrays to Minimize Sum Difference/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2035.Partition Array Into Two Arrays to Minimize Sum Difference/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2035.Partition Array Into Two Arrays to Minimize Sum Difference/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2035.Partition Array Into Two Arrays to Minimize Sum Difference/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

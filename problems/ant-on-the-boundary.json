@@ -1,0 +1,38 @@
+{
+    "problemName": "ant-on-the-boundary",
+    "language": "python3",
+    "code": "class Solution:\r\n    def returnToBoundaryCount(self, nums: List[int]) -> int:\r\n        return sum(s == 0 for s in accumulate(nums))",
+    "problemId": 3028,
+    "title": "Ant on the Boundary",
+    "problemUrl": "https://leetcode.com/problems/ant-on-the-boundary/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3028.Ant on the Boundary/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3028.Ant on the Boundary/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3028.Ant on the Boundary/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3028.Ant on the Boundary/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3028.Ant on the Boundary/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3028.Ant on the Boundary/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

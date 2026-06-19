@@ -1,0 +1,18 @@
+{
+    "problemName": "hopper-company-queries-i",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    recursive Months AS (\r\n        SELECT\r\n            1 AS month\r\n        UNION ALL\r\n        SELECT\r\n            month + 1\r\n        FROM Months\r\n        WHERE month < 12\r\n    ),\r\n    Ride AS (\r\n        SELECT MONTH(requested_at) AS month, COUNT(1) AS cnt\r\n        FROM\r\n            Rides AS r\r\n            JOIN AcceptedRides AS a\r\n                ON r.ride_id = a.ride_id AND YEAR(requested_at) = 2020\r\n        GROUP BY month\r\n    )\r\nSELECT\r\n    m.month,\r\n    COUNT(driver_id) AS active_drivers,\r\n    IFNULL(r.cnt, 0) AS accepted_rides\r\nFROM\r\n    Months AS m\r\n    LEFT JOIN Drivers AS d\r\n        ON (m.month >= MONTH(d.join_date) AND YEAR(d.join_date) = 2020)\r\n        OR YEAR(d.join_date) < 2020\r\n    LEFT JOIN Ride AS r ON m.month = r.month\r\nGROUP BY month;",
+    "problemId": 1635,
+    "title": "Hopper Company Queries I",
+    "problemUrl": "https://leetcode.com/problems/hopper-company-queries-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1635.Hopper Company Queries I/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1635.Hopper Company Queries I/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

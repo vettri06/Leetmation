@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-removals-to-achieve-target-xor",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minRemovals(self, nums: List[int], target: int) -> int:\r\n        m = max(nums).bit_length()\r\n        if (1 << m) <= target:\r\n            return -1\r\n        n = len(nums)\r\n        f = [[-inf] * (1 << m) for _ in range(n + 1)]\r\n        f[0][0] = 0\r\n        for i, x in enumerate(nums, 1):\r\n            for j in range(1 << m):\r\n                f[i][j] = max(f[i - 1][j], f[i - 1][j ^ x] + 1)\r\n        if f[n][target] < 0:\r\n            return -1\r\n        return n - f[n][target]",
+    "problemId": 3877,
+    "title": "Minimum Removals to Achieve Target XOR",
+    "problemUrl": "https://leetcode.com/problems/minimum-removals-to-achieve-target-xor/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3877.Minimum Removals to Achieve Target XOR/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3877.Minimum Removals to Achieve Target XOR/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3877.Minimum Removals to Achieve Target XOR/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3877.Minimum Removals to Achieve Target XOR/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3877.Minimum Removals to Achieve Target XOR/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

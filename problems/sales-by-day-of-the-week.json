@@ -1,0 +1,18 @@
+{
+    "problemName": "sales-by-day-of-the-week",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    item_category AS category,\r\n    SUM(IF(DAYOFWEEK(order_date) = '2', quantity, 0)) AS Monday,\r\n    SUM(IF(DAYOFWEEK(order_date) = '3', quantity, 0)) AS Tuesday,\r\n    SUM(IF(DAYOFWEEK(order_date) = '4', quantity, 0)) AS Wednesday,\r\n    SUM(IF(DAYOFWEEK(order_date) = '5', quantity, 0)) AS Thursday,\r\n    SUM(IF(DAYOFWEEK(order_date) = '6', quantity, 0)) AS Friday,\r\n    SUM(IF(DAYOFWEEK(order_date) = '7', quantity, 0)) AS Saturday,\r\n    SUM(IF(DAYOFWEEK(order_date) = '1', quantity, 0)) AS Sunday\r\nFROM\r\n    Orders AS o\r\n    RIGHT JOIN Items AS i ON o.item_id = i.item_id\r\nGROUP BY category\r\nORDER BY category;",
+    "problemId": 1479,
+    "title": "Sales by Day of the Week",
+    "problemUrl": "https://leetcode.com/problems/sales-by-day-of-the-week/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1479.Sales by Day of the Week/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1479.Sales by Day of the Week/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

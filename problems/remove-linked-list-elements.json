@@ -1,0 +1,48 @@
+{
+    "problemName": "remove-linked-list-elements",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def removeElements(self, head: ListNode, val: int) -> ListNode:\r\n        dummy = ListNode(-1, head)\r\n        pre = dummy\r\n        while pre.next:\r\n            if pre.next.val != val:\r\n                pre = pre.next\r\n            else:\r\n                pre.next = pre.next.next\r\n        return dummy.next",
+    "problemId": 203,
+    "title": "Remove Linked List Elements",
+    "problemUrl": "https://leetcode.com/problems/remove-linked-list-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0203.Remove Linked List Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0203.Remove Linked List Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0203.Remove Linked List Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0203.Remove Linked List Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0203.Remove Linked List Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0203.Remove Linked List Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0203.Remove Linked List Elements/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0203.Remove Linked List Elements/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

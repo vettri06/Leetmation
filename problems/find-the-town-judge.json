@@ -1,0 +1,43 @@
+{
+    "problemName": "find-the-town-judge",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findJudge(self, n: int, trust: List[List[int]]) -> int:\r\n        cnt1 = [0] * (n + 1)\r\n        cnt2 = [0] * (n + 1)\r\n        for a, b in trust:\r\n            cnt1[a] += 1\r\n            cnt2[b] += 1\r\n        for i in range(1, n + 1):\r\n            if cnt1[i] == 0 and cnt2[i] == n - 1:\r\n                return i\r\n        return -1",
+    "problemId": 997,
+    "title": "Find the Town Judge",
+    "problemUrl": "https://leetcode.com/problems/find-the-town-judge/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0997.Find the Town Judge/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0997.Find the Town Judge/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0997.Find the Town Judge/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0997.Find the Town Judge/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0997.Find the Town Judge/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0997.Find the Town Judge/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0997.Find the Town Judge/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

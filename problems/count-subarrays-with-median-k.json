@@ -1,0 +1,38 @@
+{
+    "problemName": "count-subarrays-with-median-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSubarrays(self, nums: List[int], k: int) -> int:\r\n        i = nums.index(k)\r\n        cnt = Counter()\r\n        ans = 1\r\n        x = 0\r\n        for v in nums[i + 1 :]:\r\n            x += 1 if v > k else -1\r\n            ans += 0 <= x <= 1\r\n            cnt[x] += 1\r\n        x = 0\r\n        for j in range(i - 1, -1, -1):\r\n            x += 1 if nums[j] > k else -1\r\n            ans += 0 <= x <= 1\r\n            ans += cnt[-x] + cnt[-x + 1]\r\n        return ans",
+    "problemId": 2488,
+    "title": "Count Subarrays With Median K",
+    "problemUrl": "https://leetcode.com/problems/count-subarrays-with-median-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2488.Count Subarrays With Median K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2488.Count Subarrays With Median K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2488.Count Subarrays With Median K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2488.Count Subarrays With Median K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2488.Count Subarrays With Median K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2488.Count Subarrays With Median K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

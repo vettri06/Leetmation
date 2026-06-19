@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-falling-path-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minFallingPathSum(self, matrix: List[List[int]]) -> int:\r\n        n = len(matrix)\r\n        f = [0] * n\r\n        for row in matrix:\r\n            g = [0] * n\r\n            for j, x in enumerate(row):\r\n                l, r = max(0, j - 1), min(n, j + 2)\r\n                g[j] = min(f[l:r]) + x\r\n            f = g\r\n        return min(f)",
+    "problemId": 931,
+    "title": "Minimum Falling Path Sum",
+    "problemUrl": "https://leetcode.com/problems/minimum-falling-path-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0931.Minimum Falling Path Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0931.Minimum Falling Path Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0931.Minimum Falling Path Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0931.Minimum Falling Path Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0931.Minimum Falling Path Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0931.Minimum Falling Path Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

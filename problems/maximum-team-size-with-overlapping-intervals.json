@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-team-size-with-overlapping-intervals",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumTeamSize(self, startTime: list[int], endTime: list[int]) -> int:\r\n        intervals = list(zip(startTime, endTime))\r\n        startTime.sort()\r\n        endTime.sort()\r\n        ans = 0\r\n        for l, r in intervals:\r\n            i = bisect_right(endTime, l - 1)\r\n            j = bisect_right(startTime, r)\r\n            ans = max(ans, j - i)\r\n        return ans",
+    "problemId": 3893,
+    "title": "Maximum Team Size with Overlapping Intervals",
+    "problemUrl": "https://leetcode.com/problems/maximum-team-size-with-overlapping-intervals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3893.Maximum Team Size with Overlapping Intervals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3893.Maximum Team Size with Overlapping Intervals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3893.Maximum Team Size with Overlapping Intervals/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3893.Maximum Team Size with Overlapping Intervals/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3893.Maximum Team Size with Overlapping Intervals/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3893.Maximum Team Size with Overlapping Intervals/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

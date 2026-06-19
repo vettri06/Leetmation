@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-number-of-refueling-stops",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minRefuelStops(\r\n        self, target: int, startFuel: int, stations: List[List[int]]\r\n    ) -> int:\r\n        pq = []\r\n        ans = pre = 0\r\n        stations.append([target, 0])\r\n        for pos, fuel in stations:\r\n            dist = pos - pre\r\n            startFuel -= dist\r\n            while startFuel < 0 and pq:\r\n                startFuel -= heappop(pq)\r\n                ans += 1\r\n            if startFuel < 0:\r\n                return -1\r\n            heappush(pq, -fuel)\r\n            pre = pos\r\n        return ans",
+    "problemId": 871,
+    "title": "Minimum Number of Refueling Stops",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-refueling-stops/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0871.Minimum Number of Refueling Stops/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0871.Minimum Number of Refueling Stops/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0871.Minimum Number of Refueling Stops/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0871.Minimum Number of Refueling Stops/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0871.Minimum Number of Refueling Stops/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0871.Minimum Number of Refueling Stops/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0871.Minimum Number of Refueling Stops/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

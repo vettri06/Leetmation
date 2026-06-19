@@ -1,0 +1,38 @@
+{
+    "problemName": "hexadecimal-and-hexatrigesimal-conversion",
+    "language": "python3",
+    "code": "class Solution:\r\n    def concatHex36(self, n: int) -> str:\r\n        def f(x: int, k: int) -> str:\r\n            res = []\r\n            while x:\r\n                v = x % k\r\n                if v <= 9:\r\n                    res.append(str(v))\r\n                else:\r\n                    res.append(chr(ord(\"A\") + v - 10))\r\n                x //= k\r\n            return \"\".join(res[::-1])\r\n\r\n        x, y = n**2, n**3\r\n        return f(x, 16) + f(y, 36)",
+    "problemId": 3602,
+    "title": "Hexadecimal and Hexatrigesimal Conversion",
+    "problemUrl": "https://leetcode.com/problems/hexadecimal-and-hexatrigesimal-conversion/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3602.Hexadecimal and Hexatrigesimal Conversion/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3602.Hexadecimal and Hexatrigesimal Conversion/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3602.Hexadecimal and Hexatrigesimal Conversion/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3602.Hexadecimal and Hexatrigesimal Conversion/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3602.Hexadecimal and Hexatrigesimal Conversion/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3602.Hexadecimal and Hexatrigesimal Conversion/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

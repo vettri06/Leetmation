@@ -1,0 +1,43 @@
+{
+    "problemName": "determine-if-two-strings-are-close",
+    "language": "python3",
+    "code": "class Solution:\r\n    def closeStrings(self, word1: str, word2: str) -> bool:\r\n        cnt1, cnt2 = Counter(word1), Counter(word2)\r\n        return sorted(cnt1.values()) == sorted(cnt2.values()) and set(\r\n            cnt1.keys()\r\n        ) == set(cnt2.keys())",
+    "problemId": 1657,
+    "title": "Determine if Two Strings Are Close",
+    "problemUrl": "https://leetcode.com/problems/determine-if-two-strings-are-close/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1657.Determine if Two Strings Are Close/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1657.Determine if Two Strings Are Close/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1657.Determine if Two Strings Are Close/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1657.Determine if Two Strings Are Close/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1657.Determine if Two Strings Are Close/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1657.Determine if Two Strings Are Close/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1657.Determine if Two Strings Are Close/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

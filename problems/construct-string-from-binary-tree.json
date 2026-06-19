@@ -1,0 +1,43 @@
+{
+    "problemName": "construct-string-from-binary-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def tree2str(self, root: Optional[TreeNode]) -> str:\r\n        def dfs(root):\r\n            if root is None:\r\n                return ''\r\n            if root.left is None and root.right is None:\r\n                return str(root.val)\r\n            if root.right is None:\r\n                return f'{root.val}({dfs(root.left)})'\r\n            return f'{root.val}({dfs(root.left)})({dfs(root.right)})'\r\n\r\n        return dfs(root)",
+    "problemId": 606,
+    "title": "Construct String from Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/construct-string-from-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0606.Construct String from Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0606.Construct String from Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0606.Construct String from Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0606.Construct String from Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0606.Construct String from Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0606.Construct String from Binary Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0606.Construct String from Binary Tree/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

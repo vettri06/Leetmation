@@ -1,0 +1,43 @@
+{
+    "problemName": "number-of-sub-arrays-with-odd-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numOfSubarrays(self, arr: List[int]) -> int:\r\n        mod = 10**9 + 7\r\n        cnt = [1, 0]\r\n        ans = s = 0\r\n        for x in arr:\r\n            s += x\r\n            ans = (ans + cnt[s & 1 ^ 1]) % mod\r\n            cnt[s & 1] += 1\r\n        return ans",
+    "problemId": 1524,
+    "title": "Number of Sub-arrays With Odd Sum",
+    "problemUrl": "https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1524.Number of Sub-arrays With Odd Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1524.Number of Sub-arrays With Odd Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1524.Number of Sub-arrays With Odd Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1524.Number of Sub-arrays With Odd Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1524.Number of Sub-arrays With Odd Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1524.Number of Sub-arrays With Odd Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1524.Number of Sub-arrays With Odd Sum/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

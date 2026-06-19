@@ -1,0 +1,38 @@
+{
+    "problemName": "optimal-account-balancing",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minTransfers(self, transactions: List[List[int]]) -> int:\r\n        g = defaultdict(int)\r\n        for f, t, x in transactions:\r\n            g[f] -= x\r\n            g[t] += x\r\n        nums = [x for x in g.values() if x]\r\n        m = len(nums)\r\n        f = [inf] * (1 << m)\r\n        f[0] = 0\r\n        for i in range(1, 1 << m):\r\n            s = 0\r\n            for j, x in enumerate(nums):\r\n                if i >> j & 1:\r\n                    s += x\r\n            if s == 0:\r\n                f[i] = i.bit_count() - 1\r\n                j = (i - 1) & i\r\n                while j > 0:\r\n                    f[i] = min(f[i], f[j] + f[i ^ j])\r\n                    j = (j - 1) & i\r\n        return f[-1]",
+    "problemId": 465,
+    "title": "Optimal Account Balancing",
+    "problemUrl": "https://leetcode.com/problems/optimal-account-balancing/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0465.Optimal Account Balancing/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0465.Optimal Account Balancing/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0465.Optimal Account Balancing/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0465.Optimal Account Balancing/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0465.Optimal Account Balancing/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0465.Optimal Account Balancing/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

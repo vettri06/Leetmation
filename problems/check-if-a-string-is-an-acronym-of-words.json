@@ -1,0 +1,73 @@
+{
+    "problemName": "check-if-a-string-is-an-acronym-of-words",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isAcronym(self, words: List[str], s: str) -> bool:\r\n        return \"\".join(w[0] for w in words) == s",
+    "problemId": 2828,
+    "title": "Check if a String Is an Acronym of Words",
+    "problemUrl": "https://leetcode.com/problems/check-if-a-string-is-an-acronym-of-words/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2828.Check if a String Is an Acronym of Words/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2828.Check if a String Is an Acronym of Words/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2828.Check if a String Is an Acronym of Words/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2828.Check if a String Is an Acronym of Words/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2828.Check if a String Is an Acronym of Words/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2828.Check if a String Is an Acronym of Words/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2828.Check if a String Is an Acronym of Words/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2828.Check if a String Is an Acronym of Words/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2828.Check if a String Is an Acronym of Words/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2828.Check if a String Is an Acronym of Words/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2828.Check if a String Is an Acronym of Words/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2828.Check if a String Is an Acronym of Words/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2828.Check if a String Is an Acronym of Words/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

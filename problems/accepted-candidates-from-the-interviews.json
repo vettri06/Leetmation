@@ -1,0 +1,23 @@
+{
+    "problemName": "accepted-candidates-from-the-interviews",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef accepted_candidates(candidates: pd.DataFrame, rounds: pd.DataFrame) -> pd.DataFrame:\r\n    merged_df = pd.merge(candidates, rounds, on=\"interview_id\")\r\n    filtered_df = merged_df[merged_df[\"years_of_exp\"] >= 2]\r\n    grouped_df = filtered_df.groupby(\"candidate_id\").agg({\"score\": \"sum\"})\r\n    return grouped_df[grouped_df[\"score\"] > 15].reset_index()[[\"candidate_id\"]]",
+    "problemId": 2041,
+    "title": "Accepted Candidates From the Interviews",
+    "problemUrl": "https://leetcode.com/problems/accepted-candidates-from-the-interviews/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2041.Accepted Candidates From the Interviews/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2041.Accepted Candidates From the Interviews/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2041.Accepted Candidates From the Interviews/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

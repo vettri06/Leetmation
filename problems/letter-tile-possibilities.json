@@ -1,0 +1,38 @@
+{
+    "problemName": "letter-tile-possibilities",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numTilePossibilities(self, tiles: str) -> int:\r\n        def dfs(cnt: Counter) -> int:\r\n            ans = 0\r\n            for i, x in cnt.items():\r\n                if x > 0:\r\n                    ans += 1\r\n                    cnt[i] -= 1\r\n                    ans += dfs(cnt)\r\n                    cnt[i] += 1\r\n            return ans\r\n\r\n        cnt = Counter(tiles)\r\n        return dfs(cnt)",
+    "problemId": 1079,
+    "title": "Letter Tile Possibilities",
+    "problemUrl": "https://leetcode.com/problems/letter-tile-possibilities/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1079.Letter Tile Possibilities/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1079.Letter Tile Possibilities/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1079.Letter Tile Possibilities/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1079.Letter Tile Possibilities/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1079.Letter Tile Possibilities/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1079.Letter Tile Possibilities/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "problemName": "rank-scores",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef order_scores(scores: pd.DataFrame) -> pd.DataFrame:\r\n    # Use the rank method to assign ranks to the scores in descending order with no gaps\r\n    scores[\"rank\"] = scores[\"score\"].rank(method=\"dense\", ascending=False)\r\n\r\n    # Drop id column & Sort the DataFrame by score in descending order\r\n    result_df = scores.drop(\"id\", axis=1).sort_values(by=\"score\", ascending=False)\r\n\r\n    return result_df",
+    "problemId": 178,
+    "title": "Rank Scores",
+    "problemUrl": "https://leetcode.com/problems/rank-scores/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0178.Rank Scores/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0178.Rank Scores/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0178.Rank Scores/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0178.Rank Scores/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "problemName": "shortest-path-in-a-hidden-grid",
+    "language": "python3",
+    "code": "# \"\"\"\r\n# This is GridMaster's API interface.\r\n# You should not implement it, or speculate about its implementation\r\n# \"\"\"\r\n# class GridMaster(object):\r\n#    def canMove(self, direction: str) -> bool:\r\n#\r\n#\r\n#    def move(self, direction: str) -> bool:\r\n#\r\n#\r\n#    def isTarget(self) -> None:\r\n#\r\n#\r\n\r\n\r\nclass Solution(object):\r\n    def findShortestPath(self, master: \"GridMaster\") -> int:\r\n        def dfs(i: int, j: int):\r\n            if master.isTarget():\r\n                nonlocal target\r\n                target = (i, j)\r\n                return\r\n            for k, c in enumerate(s):\r\n                x, y = i + dirs[k], j + dirs[k + 1]\r\n                if master.canMove(c) and (x, y) not in vis:\r\n                    vis.add((x, y))\r\n                    master.move(c)\r\n                    dfs(x, y)\r\n                    master.move(s[(k + 2) % 4])\r\n\r\n        s = \"URDL\"\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        target = None\r\n        vis = set()\r\n        dfs(0, 0)\r\n        if target is None:\r\n            return -1\r\n        vis.discard((0, 0))\r\n        q = deque([(0, 0)])\r\n        ans = -1\r\n        while q:\r\n            ans += 1\r\n            for _ in range(len(q)):\r\n                i, j = q.popleft()\r\n                if (i, j) == target:\r\n                    return ans\r\n                for a, b in pairwise(dirs):\r\n                    x, y = i + a, j + b\r\n                    if (x, y) in vis:\r\n                        vis.remove((x, y))\r\n                        q.append((x, y))\r\n        return -1",
+    "problemId": 1778,
+    "title": "Shortest Path in a Hidden Grid",
+    "problemUrl": "https://leetcode.com/problems/shortest-path-in-a-hidden-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1778.Shortest Path in a Hidden Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1778.Shortest Path in a Hidden Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1778.Shortest Path in a Hidden Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1778.Shortest Path in a Hidden Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

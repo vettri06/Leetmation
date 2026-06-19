@@ -1,0 +1,68 @@
+{
+    "problemName": "construct-binary-tree-from-preorder-and-inorder-traversal",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:\r\n        def dfs(i: int, j: int, n: int) -> Optional[TreeNode]:\r\n            if n <= 0:\r\n                return None\r\n            v = preorder[i]\r\n            k = d[v]\r\n            l = dfs(i + 1, j, k - j)\r\n            r = dfs(i + 1 + k - j, k + 1, n - k + j - 1)\r\n            return TreeNode(v, l, r)\r\n\r\n        d = {v: i for i, v in enumerate(inorder)}\r\n        return dfs(0, 0, len(preorder))",
+    "problemId": 105,
+    "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+    "problemUrl": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0105.Construct Binary Tree from Preorder and Inorder Traversal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0105.Construct Binary Tree from Preorder and Inorder Traversal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0105.Construct Binary Tree from Preorder and Inorder Traversal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0105.Construct Binary Tree from Preorder and Inorder Traversal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0105.Construct Binary Tree from Preorder and Inorder Traversal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0105.Construct Binary Tree from Preorder and Inorder Traversal/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0105.Construct Binary Tree from Preorder and Inorder Traversal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0105.Construct Binary Tree from Preorder and Inorder Traversal/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0105.Construct Binary Tree from Preorder and Inorder Traversal/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0105.Construct Binary Tree from Preorder and Inorder Traversal/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0105.Construct Binary Tree from Preorder and Inorder Traversal/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0105.Construct Binary Tree from Preorder and Inorder Traversal/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

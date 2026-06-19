@@ -1,0 +1,43 @@
+{
+    "problemName": "count-prefixes-of-a-given-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPrefixes(self, words: List[str], s: str) -> int:\r\n        return sum(s.startswith(w) for w in words)",
+    "problemId": 2255,
+    "title": "Count Prefixes of a Given String",
+    "problemUrl": "https://leetcode.com/problems/count-prefixes-of-a-given-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2255.Count Prefixes of a Given String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2255.Count Prefixes of a Given String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2255.Count Prefixes of a Given String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2255.Count Prefixes of a Given String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2255.Count Prefixes of a Given String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2255.Count Prefixes of a Given String/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2255.Count Prefixes of a Given String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

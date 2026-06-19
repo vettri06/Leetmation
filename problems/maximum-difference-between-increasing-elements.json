@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-difference-between-increasing-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumDifference(self, nums: List[int]) -> int:\r\n        mi = inf\r\n        ans = -1\r\n        for x in nums:\r\n            if x > mi:\r\n                ans = max(ans, x - mi)\r\n            else:\r\n                mi = x\r\n        return ans",
+    "problemId": 2016,
+    "title": "Maximum Difference Between Increasing Elements",
+    "problemUrl": "https://leetcode.com/problems/maximum-difference-between-increasing-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2016.Maximum Difference Between Increasing Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2016.Maximum Difference Between Increasing Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2016.Maximum Difference Between Increasing Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2016.Maximum Difference Between Increasing Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2016.Maximum Difference Between Increasing Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2016.Maximum Difference Between Increasing Elements/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2016.Maximum Difference Between Increasing Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2016.Maximum Difference Between Increasing Elements/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "sum-of-absolute-differences-in-a-sorted-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getSumAbsoluteDifferences(self, nums: List[int]) -> List[int]:\r\n        ans = []\r\n        s, t = sum(nums), 0\r\n        for i, x in enumerate(nums):\r\n            v = x * i - t + s - t - x * (len(nums) - i)\r\n            ans.append(v)\r\n            t += x\r\n        return ans",
+    "problemId": 1685,
+    "title": "Sum of Absolute Differences in a Sorted Array",
+    "problemUrl": "https://leetcode.com/problems/sum-of-absolute-differences-in-a-sorted-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1685.Sum of Absolute Differences in a Sorted Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1685.Sum of Absolute Differences in a Sorted Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1685.Sum of Absolute Differences in a Sorted Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1685.Sum of Absolute Differences in a Sorted Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1685.Sum of Absolute Differences in a Sorted Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1685.Sum of Absolute Differences in a Sorted Array/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1685.Sum of Absolute Differences in a Sorted Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1685.Sum of Absolute Differences in a Sorted Array/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

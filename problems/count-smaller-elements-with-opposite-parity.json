@@ -1,0 +1,38 @@
+{
+    "problemName": "count-smaller-elements-with-opposite-parity",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSmallerOppositeParity(self, nums: list[int]) -> list[int]:\r\n        n = len(nums)\r\n        ans = [0] * n\r\n        sl = [SortedList(), SortedList()]\r\n        for i in range(n - 1, -1, -1):\r\n            ans[i] = sl[nums[i] & 1 ^ 1].bisect_left(nums[i])\r\n            sl[nums[i] & 1].add(nums[i])\r\n        return ans",
+    "problemId": 3907,
+    "title": "Count Smaller Elements With Opposite Parity",
+    "problemUrl": "https://leetcode.com/problems/count-smaller-elements-with-opposite-parity/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3907.Count Smaller Elements With Opposite Parity/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3907.Count Smaller Elements With Opposite Parity/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3907.Count Smaller Elements With Opposite Parity/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3907.Count Smaller Elements With Opposite Parity/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3907.Count Smaller Elements With Opposite Parity/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3907.Count Smaller Elements With Opposite Parity/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

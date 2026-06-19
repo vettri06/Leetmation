@@ -1,0 +1,38 @@
+{
+    "problemName": "xor-operation-in-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def xorOperation(self, n: int, start: int) -> int:\r\n        return reduce(xor, ((start + 2 * i) for i in range(n)))",
+    "problemId": 1486,
+    "title": "XOR Operation in an Array",
+    "problemUrl": "https://leetcode.com/problems/xor-operation-in-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1486.XOR Operation in an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1486.XOR Operation in an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1486.XOR Operation in an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1486.XOR Operation in an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1486.XOR Operation in an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1486.XOR Operation in an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

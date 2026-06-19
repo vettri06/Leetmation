@@ -1,0 +1,18 @@
+{
+    "problemName": "average-selling-price",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    p.product_id,\r\n    IFNULL(ROUND(SUM(price * units) / SUM(units), 2), 0) AS average_price\r\nFROM\r\n    Prices AS p\r\n    LEFT JOIN UnitsSold AS u\r\n        ON p.product_id = u.product_id AND purchase_date BETWEEN start_date AND end_date\r\nGROUP BY 1;",
+    "problemId": 1251,
+    "title": "Average Selling Price",
+    "problemUrl": "https://leetcode.com/problems/average-selling-price/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1251.Average Selling Price/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1251.Average Selling Price/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

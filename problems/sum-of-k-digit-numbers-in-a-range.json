@@ -1,0 +1,38 @@
+{
+    "problemName": "sum-of-k-digit-numbers-in-a-range",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumOfNumbers(self, l: int, r: int, k: int) -> int:\r\n        mod = 10**9 + 7\r\n\r\n        n = r - l + 1\r\n\r\n        # ((l + r) * (r - l + 1) // 2) % mod\r\n        total = (l + r) * n // 2 % mod\r\n\r\n        # pow(r - l + 1, k - 1, mod)\r\n        part1 = pow(n % mod, k - 1, mod)\r\n\r\n        # (pow(10, k, mod) - 1)\r\n        part2 = (pow(10, k, mod) - 1) % mod\r\n\r\n        # Fermat inverse of 9\r\n        inv9 = pow(9, mod - 2, mod)\r\n\r\n        ans = total\r\n        ans = ans * part1 % mod\r\n        ans = ans * part2 % mod\r\n        ans = ans * inv9 % mod\r\n\r\n        return ans",
+    "problemId": 3855,
+    "title": "Sum of K-Digit Numbers in a Range",
+    "problemUrl": "https://leetcode.com/problems/sum-of-k-digit-numbers-in-a-range/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3855.Sum of K-Digit Numbers in a Range/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3855.Sum of K-Digit Numbers in a Range/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3855.Sum of K-Digit Numbers in a Range/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3855.Sum of K-Digit Numbers in a Range/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3855.Sum of K-Digit Numbers in a Range/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3855.Sum of K-Digit Numbers in a Range/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

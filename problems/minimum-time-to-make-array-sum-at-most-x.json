@@ -1,0 +1,63 @@
+{
+    "problemName": "minimum-time-to-make-array-sum-at-most-x",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumTime(self, nums1: List[int], nums2: List[int], x: int) -> int:\r\n        n = len(nums1)\r\n        f = [[0] * (n + 1) for _ in range(n + 1)]\r\n        for i, (a, b) in enumerate(sorted(zip(nums1, nums2), key=lambda z: z[1]), 1):\r\n            for j in range(n + 1):\r\n                f[i][j] = f[i - 1][j]\r\n                if j > 0:\r\n                    f[i][j] = max(f[i][j], f[i - 1][j - 1] + a + b * j)\r\n        s1 = sum(nums1)\r\n        s2 = sum(nums2)\r\n        for j in range(n + 1):\r\n            if s1 + s2 * j - f[n][j] <= x:\r\n                return j\r\n        return -1",
+    "problemId": 2809,
+    "title": "Minimum Time to Make Array Sum At Most x",
+    "problemUrl": "https://leetcode.com/problems/minimum-time-to-make-array-sum-at-most-x/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2809.Minimum Time to Make Array Sum At Most x/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2809.Minimum Time to Make Array Sum At Most x/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2809.Minimum Time to Make Array Sum At Most x/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2809.Minimum Time to Make Array Sum At Most x/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2809.Minimum Time to Make Array Sum At Most x/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2809.Minimum Time to Make Array Sum At Most x/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2809.Minimum Time to Make Array Sum At Most x/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2809.Minimum Time to Make Array Sum At Most x/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2809.Minimum Time to Make Array Sum At Most x/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2809.Minimum Time to Make Array Sum At Most x/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2809.Minimum Time to Make Array Sum At Most x/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

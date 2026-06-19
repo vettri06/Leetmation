@@ -1,0 +1,38 @@
+{
+    "problemName": "weighted-word-mapping",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mapWordWeights(self, words: List[str], weights: List[int]) -> str:\r\n        ans = []\r\n        for w in words:\r\n            s = sum(weights[ord(c) - ord('a')] for c in w)\r\n            ans.append(ascii_lowercase[25 - s % 26])\r\n        return ''.join(ans)",
+    "problemId": 3838,
+    "title": "Weighted Word Mapping",
+    "problemUrl": "https://leetcode.com/problems/weighted-word-mapping/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3838.Weighted Word Mapping/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3838.Weighted Word Mapping/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3838.Weighted Word Mapping/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3838.Weighted Word Mapping/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3838.Weighted Word Mapping/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3838.Weighted Word Mapping/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

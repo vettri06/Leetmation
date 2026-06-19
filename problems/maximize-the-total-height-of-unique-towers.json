@@ -1,0 +1,33 @@
+{
+    "problemName": "maximize-the-total-height-of-unique-towers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumTotalSum(self, maximumHeight: List[int]) -> int:\r\n        maximumHeight.sort()\r\n        ans, mx = 0, inf\r\n        for x in maximumHeight[::-1]:\r\n            x = min(x, mx - 1)\r\n            if x <= 0:\r\n                return -1\r\n            ans += x\r\n            mx = x\r\n        return ans",
+    "problemId": 3301,
+    "title": "Maximize the Total Height of Unique Towers",
+    "problemUrl": "https://leetcode.com/problems/maximize-the-total-height-of-unique-towers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3301.Maximize the Total Height of Unique Towers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3301.Maximize the Total Height of Unique Towers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3301.Maximize the Total Height of Unique Towers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3301.Maximize the Total Height of Unique Towers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3301.Maximize the Total Height of Unique Towers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

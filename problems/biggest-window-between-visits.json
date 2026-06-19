@@ -1,0 +1,18 @@
+{
+    "problemName": "biggest-window-between-visits",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            user_id,\r\n            DATEDIFF(\r\n                LEAD(visit_date, 1, '2021-1-1') OVER (\r\n                    PARTITION BY user_id\r\n                    ORDER BY visit_date\r\n                ),\r\n                visit_date\r\n            ) AS diff\r\n        FROM UserVisits\r\n    )\r\nSELECT user_id, MAX(diff) AS biggest_window\r\nFROM T\r\nGROUP BY 1\r\nORDER BY 1;",
+    "problemId": 1709,
+    "title": "Biggest Window Between Visits",
+    "problemUrl": "https://leetcode.com/problems/biggest-window-between-visits/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1709.Biggest Window Between Visits/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1709.Biggest Window Between Visits/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

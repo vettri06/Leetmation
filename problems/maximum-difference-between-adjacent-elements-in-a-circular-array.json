@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-difference-between-adjacent-elements-in-a-circular-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxAdjacentDistance(self, nums: List[int]) -> int:\r\n        return max(abs(a - b) for a, b in pairwise(nums + [nums[0]]))",
+    "problemId": 3423,
+    "title": "Maximum Difference Between Adjacent Elements in a Circular Array",
+    "problemUrl": "https://leetcode.com/problems/maximum-difference-between-adjacent-elements-in-a-circular-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3423.Maximum Difference Between Adjacent Elements in a Circular Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3423.Maximum Difference Between Adjacent Elements in a Circular Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3423.Maximum Difference Between Adjacent Elements in a Circular Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3423.Maximum Difference Between Adjacent Elements in a Circular Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3423.Maximum Difference Between Adjacent Elements in a Circular Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3423.Maximum Difference Between Adjacent Elements in a Circular Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3423.Maximum Difference Between Adjacent Elements in a Circular Array/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3423.Maximum Difference Between Adjacent Elements in a Circular Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

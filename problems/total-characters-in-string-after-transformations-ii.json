@@ -1,0 +1,38 @@
+{
+    "problemName": "total-characters-in-string-after-transformations-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lengthAfterTransformations(self, s: str, t: int, nums: List[int]) -> int:\r\n        mod = 10**9 + 7\r\n        m = 26\r\n\r\n        cnt = [0] * m\r\n        for c in s:\r\n            cnt[ord(c) - ord(\"a\")] += 1\r\n\r\n        matrix = [[0] * m for _ in range(m)]\r\n        for i, x in enumerate(nums):\r\n            for j in range(1, x + 1):\r\n                matrix[i][(i + j) % m] = 1\r\n\r\n        def matmul(a: List[List[int]], b: List[List[int]]) -> List[List[int]]:\r\n            n, p, q = len(a), len(b), len(b[0])\r\n            res = [[0] * q for _ in range(n)]\r\n            for i in range(n):\r\n                for k in range(p):\r\n                    if a[i][k]:\r\n                        for j in range(q):\r\n                            res[i][j] = (res[i][j] + a[i][k] * b[k][j]) % mod\r\n            return res\r\n\r\n        def matpow(mat: List[List[int]], power: int) -> List[List[int]]:\r\n            res = [[int(i == j) for j in range(m)] for i in range(m)]\r\n            while power:\r\n                if power % 2:\r\n                    res = matmul(res, mat)\r\n                mat = matmul(mat, mat)\r\n                power //= 2\r\n            return res\r\n\r\n        cnt = [cnt]\r\n        factor = matpow(matrix, t)\r\n        result = matmul(cnt, factor)[0]\r\n\r\n        ans = sum(result) % mod\r\n        return ans",
+    "problemId": 3337,
+    "title": "Total Characters in String After Transformations II",
+    "problemUrl": "https://leetcode.com/problems/total-characters-in-string-after-transformations-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3337.Total Characters in String After Transformations II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3337.Total Characters in String After Transformations II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3337.Total Characters in String After Transformations II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3337.Total Characters in String After Transformations II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3337.Total Characters in String After Transformations II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3337.Total Characters in String After Transformations II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

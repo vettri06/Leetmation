@@ -1,0 +1,43 @@
+{
+    "problemName": "trionic-array-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSumTrionic(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        i = 0\r\n        ans = -inf\r\n        while i < n:\r\n            l = i\r\n            i += 1\r\n            while i < n and nums[i - 1] < nums[i]:\r\n                i += 1\r\n            if i == l + 1:\r\n                continue\r\n\r\n            p = i - 1\r\n            s = nums[p - 1] + nums[p]\r\n            while i < n and nums[i - 1] > nums[i]:\r\n                s += nums[i]\r\n                i += 1\r\n            if i == p + 1 or i == n or nums[i - 1] == nums[i]:\r\n                continue\r\n\r\n            q = i - 1\r\n            s += nums[i]\r\n            i += 1\r\n            mx = t = 0\r\n            while i < n and nums[i - 1] < nums[i]:\r\n                t += nums[i]\r\n                i += 1\r\n                mx = max(mx, t)\r\n            s += mx\r\n\r\n            mx = t = 0\r\n            for j in range(p - 2, l - 1, -1):\r\n                t += nums[j]\r\n                mx = max(mx, t)\r\n            s += mx\r\n\r\n            ans = max(ans, s)\r\n            i = q\r\n        return ans",
+    "problemId": 3640,
+    "title": "Trionic Array II",
+    "problemUrl": "https://leetcode.com/problems/trionic-array-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3640.Trionic Array II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3640.Trionic Array II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3640.Trionic Array II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3640.Trionic Array II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3640.Trionic Array II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3640.Trionic Array II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3640.Trionic Array II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

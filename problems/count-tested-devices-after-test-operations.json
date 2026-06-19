@@ -1,0 +1,43 @@
+{
+    "problemName": "count-tested-devices-after-test-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countTestedDevices(self, batteryPercentages: List[int]) -> int:\r\n        ans = 0\r\n        for x in batteryPercentages:\r\n            ans += x > ans\r\n        return ans",
+    "problemId": 2960,
+    "title": "Count Tested Devices After Test Operations",
+    "problemUrl": "https://leetcode.com/problems/count-tested-devices-after-test-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2960.Count Tested Devices After Test Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2960.Count Tested Devices After Test Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2960.Count Tested Devices After Test Operations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2960.Count Tested Devices After Test Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2960.Count Tested Devices After Test Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2960.Count Tested Devices After Test Operations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2960.Count Tested Devices After Test Operations/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

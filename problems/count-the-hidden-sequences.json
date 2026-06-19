@@ -1,0 +1,38 @@
+{
+    "problemName": "count-the-hidden-sequences",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfArrays(self, differences: List[int], lower: int, upper: int) -> int:\r\n        x = mi = mx = 0\r\n        for d in differences:\r\n            x += d\r\n            mi = min(mi, x)\r\n            mx = max(mx, x)\r\n        return max(upper - lower - (mx - mi) + 1, 0)",
+    "problemId": 2145,
+    "title": "Count the Hidden Sequences",
+    "problemUrl": "https://leetcode.com/problems/count-the-hidden-sequences/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2145.Count the Hidden Sequences/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2145.Count the Hidden Sequences/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2145.Count the Hidden Sequences/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2145.Count the Hidden Sequences/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2145.Count the Hidden Sequences/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2145.Count the Hidden Sequences/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

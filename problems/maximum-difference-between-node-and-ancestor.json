@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-difference-between-node-and-ancestor",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def maxAncestorDiff(self, root: Optional[TreeNode]) -> int:\r\n        def dfs(root: Optional[TreeNode], mi: int, mx: int):\r\n            if root is None:\r\n                return\r\n            nonlocal ans\r\n            ans = max(ans, abs(mi - root.val), abs(mx - root.val))\r\n            mi = min(mi, root.val)\r\n            mx = max(mx, root.val)\r\n            dfs(root.left, mi, mx)\r\n            dfs(root.right, mi, mx)\r\n\r\n        ans = 0\r\n        dfs(root, root.val, root.val)\r\n        return ans",
+    "problemId": 1026,
+    "title": "Maximum Difference Between Node and Ancestor",
+    "problemUrl": "https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1026.Maximum Difference Between Node and Ancestor/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1026.Maximum Difference Between Node and Ancestor/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1026.Maximum Difference Between Node and Ancestor/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1026.Maximum Difference Between Node and Ancestor/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1026.Maximum Difference Between Node and Ancestor/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1026.Maximum Difference Between Node and Ancestor/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1026.Maximum Difference Between Node and Ancestor/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1026.Maximum Difference Between Node and Ancestor/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

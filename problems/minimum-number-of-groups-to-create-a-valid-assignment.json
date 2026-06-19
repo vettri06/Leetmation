@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-number-of-groups-to-create-a-valid-assignment",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minGroupsForValidAssignment(self, nums: List[int]) -> int:\r\n        cnt = Counter(nums)\r\n        for k in range(min(cnt.values()), 0, -1):\r\n            ans = 0\r\n            for v in cnt.values():\r\n                if v // k < v % k:\r\n                    ans = 0\r\n                    break\r\n                ans += (v + k) // (k + 1)\r\n            if ans:\r\n                return ans",
+    "problemId": 2910,
+    "title": "Minimum Number of Groups to Create a Valid Assignment",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-groups-to-create-a-valid-assignment/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2910.Minimum Number of Groups to Create a Valid Assignment/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2910.Minimum Number of Groups to Create a Valid Assignment/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2910.Minimum Number of Groups to Create a Valid Assignment/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2910.Minimum Number of Groups to Create a Valid Assignment/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2910.Minimum Number of Groups to Create a Valid Assignment/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2910.Minimum Number of Groups to Create a Valid Assignment/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2910.Minimum Number of Groups to Create a Valid Assignment/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

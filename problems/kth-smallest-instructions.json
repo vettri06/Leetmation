@@ -1,0 +1,33 @@
+{
+    "problemName": "kth-smallest-instructions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def kthSmallestPath(self, destination: List[int], k: int) -> str:\r\n        v, h = destination\r\n        ans = []\r\n        for _ in range(h + v):\r\n            if h == 0:\r\n                ans.append(\"V\")\r\n            else:\r\n                x = comb(h + v - 1, h - 1)\r\n                if k > x:\r\n                    ans.append(\"V\")\r\n                    v -= 1\r\n                    k -= x\r\n                else:\r\n                    ans.append(\"H\")\r\n                    h -= 1\r\n        return \"\".join(ans)",
+    "problemId": 1643,
+    "title": "Kth Smallest Instructions",
+    "problemUrl": "https://leetcode.com/problems/kth-smallest-instructions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1643.Kth Smallest Instructions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1643.Kth Smallest Instructions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1643.Kth Smallest Instructions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1643.Kth Smallest Instructions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1643.Kth Smallest Instructions/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

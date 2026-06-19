@@ -1,0 +1,53 @@
+{
+    "problemName": "search-in-rotated-sorted-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def search(self, nums: List[int], target: int) -> int:\r\n        n = len(nums)\r\n        left, right = 0, n - 1\r\n        while left < right:\r\n            mid = (left + right) >> 1\r\n            if nums[0] <= nums[mid]:\r\n                if nums[0] <= target <= nums[mid]:\r\n                    right = mid\r\n                else:\r\n                    left = mid + 1\r\n            else:\r\n                if nums[mid] < target <= nums[n - 1]:\r\n                    left = mid + 1\r\n                else:\r\n                    right = mid\r\n        return left if nums[left] == target else -1",
+    "problemId": 33,
+    "title": "Search in Rotated Sorted Array",
+    "problemUrl": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0033.Search in Rotated Sorted Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0033.Search in Rotated Sorted Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0033.Search in Rotated Sorted Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0033.Search in Rotated Sorted Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0033.Search in Rotated Sorted Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0033.Search in Rotated Sorted Array/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0033.Search in Rotated Sorted Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0033.Search in Rotated Sorted Array/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0033.Search in Rotated Sorted Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-average-subtree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def maximumAverageSubtree(self, root: Optional[TreeNode]) -> float:\r\n        def dfs(root):\r\n            if root is None:\r\n                return 0, 0\r\n            ls, ln = dfs(root.left)\r\n            rs, rn = dfs(root.right)\r\n            s = root.val + ls + rs\r\n            n = 1 + ln + rn\r\n            nonlocal ans\r\n            ans = max(ans, s / n)\r\n            return s, n\r\n\r\n        ans = 0\r\n        dfs(root)\r\n        return ans",
+    "problemId": 1120,
+    "title": "Maximum Average Subtree",
+    "problemUrl": "https://leetcode.com/problems/maximum-average-subtree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1120.Maximum Average Subtree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1120.Maximum Average Subtree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1120.Maximum Average Subtree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1120.Maximum Average Subtree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1120.Maximum Average Subtree/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

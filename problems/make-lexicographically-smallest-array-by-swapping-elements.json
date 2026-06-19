@@ -1,0 +1,43 @@
+{
+    "problemName": "make-lexicographically-smallest-array-by-swapping-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lexicographicallySmallestArray(self, nums: List[int], limit: int) -> List[int]:\r\n        n = len(nums)\r\n        arr = sorted(zip(nums, range(n)))\r\n        ans = [0] * n\r\n        i = 0\r\n        while i < n:\r\n            j = i + 1\r\n            while j < n and arr[j][0] - arr[j - 1][0] <= limit:\r\n                j += 1\r\n            idx = sorted(k for _, k in arr[i:j])\r\n            for k, (x, _) in zip(idx, arr[i:j]):\r\n                ans[k] = x\r\n            i = j\r\n        return ans",
+    "problemId": 2948,
+    "title": "Make Lexicographically Smallest Array by Swapping Elements",
+    "problemUrl": "https://leetcode.com/problems/make-lexicographically-smallest-array-by-swapping-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2948.Make Lexicographically Smallest Array by Swapping Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2948.Make Lexicographically Smallest Array by Swapping Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2948.Make Lexicographically Smallest Array by Swapping Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2948.Make Lexicographically Smallest Array by Swapping Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2948.Make Lexicographically Smallest Array by Swapping Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2948.Make Lexicographically Smallest Array by Swapping Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2948.Make Lexicographically Smallest Array by Swapping Elements/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "find-top-scoring-students",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT student_id\r\nFROM\r\n    students\r\n    JOIN courses USING (major)\r\n    LEFT JOIN enrollments USING (student_id, course_id)\r\nGROUP BY 1\r\nHAVING SUM(grade = 'A') = COUNT(major)\r\nORDER BY 1;",
+    "problemId": 3182,
+    "title": "Find Top Scoring Students",
+    "problemUrl": "https://leetcode.com/problems/find-top-scoring-students/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3182.Find Top Scoring Students/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3182.Find Top Scoring Students/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

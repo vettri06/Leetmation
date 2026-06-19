@@ -1,0 +1,38 @@
+{
+    "problemName": "find-duplicate-file-in-system",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findDuplicate(self, paths: List[str]) -> List[List[str]]:\r\n        d = defaultdict(list)\r\n        for p in paths:\r\n            ps = p.split()\r\n            for f in ps[1:]:\r\n                i = f.find('(')\r\n                name, content = f[:i], f[i + 1 : -1]\r\n                d[content].append(ps[0] + '/' + name)\r\n        return [v for v in d.values() if len(v) > 1]",
+    "problemId": 609,
+    "title": "Find Duplicate File in System",
+    "problemUrl": "https://leetcode.com/problems/find-duplicate-file-in-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0609.Find Duplicate File in System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0609.Find Duplicate File in System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0609.Find Duplicate File in System/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0609.Find Duplicate File in System/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0609.Find Duplicate File in System/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0609.Find Duplicate File in System/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

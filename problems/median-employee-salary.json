@@ -1,0 +1,18 @@
+{
+    "problemName": "median-employee-salary",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    t AS (\r\n        SELECT\r\n            *,\r\n            ROW_NUMBER() OVER (\r\n                PARTITION BY company\r\n                ORDER BY salary ASC\r\n            ) AS rk,\r\n            COUNT(id) OVER (PARTITION BY company) AS n\r\n        FROM Employee\r\n    )\r\nSELECT\r\n    id,\r\n    company,\r\n    salary\r\nFROM t\r\nWHERE rk >= n / 2 AND rk <= n / 2 + 1;",
+    "problemId": 569,
+    "title": "Median Employee Salary",
+    "problemUrl": "https://leetcode.com/problems/median-employee-salary/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0569.Median Employee Salary/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0569.Median Employee Salary/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

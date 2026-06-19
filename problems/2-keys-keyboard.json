@@ -1,0 +1,68 @@
+{
+    "problemName": "2-keys-keyboard",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSteps(self, n: int) -> int:\r\n        @cache\r\n        def dfs(n):\r\n            if n == 1:\r\n                return 0\r\n            i, ans = 2, n\r\n            while i * i <= n:\r\n                if n % i == 0:\r\n                    ans = min(ans, dfs(n // i) + i)\r\n                i += 1\r\n            return ans\r\n\r\n        return dfs(n)",
+    "problemId": 650,
+    "title": "2 Keys Keyboard",
+    "problemUrl": "https://leetcode.com/problems/2-keys-keyboard/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0650.2 Keys Keyboard/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0650.2 Keys Keyboard/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0650.2 Keys Keyboard/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0650.2 Keys Keyboard/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0650.2 Keys Keyboard/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0650.2 Keys Keyboard/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0650.2 Keys Keyboard/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0650.2 Keys Keyboard/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0650.2 Keys Keyboard/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0650.2 Keys Keyboard/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0650.2 Keys Keyboard/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0650.2 Keys Keyboard/Solution3.java",
+            "sourceFile": "Solution3.java"
+        }
+    ]
+}

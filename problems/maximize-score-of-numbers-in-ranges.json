@@ -1,0 +1,33 @@
+{
+    "problemName": "maximize-score-of-numbers-in-ranges",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxPossibleScore(self, start: List[int], d: int) -> int:\r\n        def check(mi: int) -> bool:\r\n            last = -inf\r\n            for st in start:\r\n                if last + mi > st + d:\r\n                    return False\r\n                last = max(st, last + mi)\r\n            return True\r\n\r\n        start.sort()\r\n        l, r = 0, start[-1] + d - start[0]\r\n        while l < r:\r\n            mid = (l + r + 1) >> 1\r\n            if check(mid):\r\n                l = mid\r\n            else:\r\n                r = mid - 1\r\n        return l",
+    "problemId": 3281,
+    "title": "Maximize Score of Numbers in Ranges",
+    "problemUrl": "https://leetcode.com/problems/maximize-score-of-numbers-in-ranges/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3281.Maximize Score of Numbers in Ranges/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3281.Maximize Score of Numbers in Ranges/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3281.Maximize Score of Numbers in Ranges/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3281.Maximize Score of Numbers in Ranges/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3281.Maximize Score of Numbers in Ranges/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

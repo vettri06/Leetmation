@@ -1,0 +1,38 @@
+{
+    "problemName": "count-digit-appearances",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countDigitOccurrences(self, nums: list[int], digit: int) -> int:\r\n        ans = 0\r\n        for x in nums:\r\n            while x:\r\n                v = x % 10\r\n                if v == digit:\r\n                    ans += 1\r\n                x //= 10\r\n        return ans",
+    "problemId": 3895,
+    "title": "Count Digit Appearances",
+    "problemUrl": "https://leetcode.com/problems/count-digit-appearances/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3895.Count Digit Appearances/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3895.Count Digit Appearances/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3895.Count Digit Appearances/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3895.Count Digit Appearances/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3895.Count Digit Appearances/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3895.Count Digit Appearances/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

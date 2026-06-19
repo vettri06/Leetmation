@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-islands-ii",
+    "language": "python3",
+    "code": "class UnionFind:\r\n    def __init__(self, n: int):\r\n        self.p = list(range(n))\r\n        self.size = [1] * n\r\n\r\n    def find(self, x: int):\r\n        if self.p[x] != x:\r\n            self.p[x] = self.find(self.p[x])\r\n        return self.p[x]\r\n\r\n    def union(self, a: int, b: int) -> bool:\r\n        pa, pb = self.find(a - 1), self.find(b - 1)\r\n        if pa == pb:\r\n            return False\r\n        if self.size[pa] > self.size[pb]:\r\n            self.p[pb] = pa\r\n            self.size[pa] += self.size[pb]\r\n        else:\r\n            self.p[pa] = pb\r\n            self.size[pb] += self.size[pa]\r\n        return True\r\n\r\n\r\nclass Solution:\r\n    def numIslands2(self, m: int, n: int, positions: List[List[int]]) -> List[int]:\r\n        uf = UnionFind(m * n)\r\n        grid = [[0] * n for _ in range(m)]\r\n        ans = []\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        cnt = 0\r\n        for i, j in positions:\r\n            if grid[i][j]:\r\n                ans.append(cnt)\r\n                continue\r\n            grid[i][j] = 1\r\n            cnt += 1\r\n            for a, b in pairwise(dirs):\r\n                x, y = i + a, j + b\r\n                if (\r\n                    0 <= x < m\r\n                    and 0 <= y < n\r\n                    and grid[x][y]\r\n                    and uf.union(i * n + j, x * n + y)\r\n                ):\r\n                    cnt -= 1\r\n            ans.append(cnt)\r\n        return ans",
+    "problemId": 305,
+    "title": "Number of Islands II",
+    "problemUrl": "https://leetcode.com/problems/number-of-islands-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0305.Number of Islands II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0305.Number of Islands II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0305.Number of Islands II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0305.Number of Islands II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0305.Number of Islands II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0305.Number of Islands II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

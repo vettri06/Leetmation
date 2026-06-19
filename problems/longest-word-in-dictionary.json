@@ -1,0 +1,48 @@
+{
+    "problemName": "longest-word-in-dictionary",
+    "language": "python3",
+    "code": "class Trie:\r\n    def __init__(self):\r\n        self.children: List[Optional[Trie]] = [None] * 26\r\n        self.is_end = False\r\n\r\n    def insert(self, w: str):\r\n        node = self\r\n        for c in w:\r\n            idx = ord(c) - ord(\"a\")\r\n            if node.children[idx] is None:\r\n                node.children[idx] = Trie()\r\n            node = node.children[idx]\r\n        node.is_end = True\r\n\r\n    def search(self, w: str) -> bool:\r\n        node = self\r\n        for c in w:\r\n            idx = ord(c) - ord(\"a\")\r\n            if node.children[idx] is None:\r\n                return False\r\n            node = node.children[idx]\r\n            if not node.is_end:\r\n                return False\r\n        return True\r\n\r\n\r\nclass Solution:\r\n    def longestWord(self, words: List[str]) -> str:\r\n        trie = Trie()\r\n        for w in words:\r\n            trie.insert(w)\r\n        ans = \"\"\r\n        for w in words:\r\n            if trie.search(w) and (\r\n                len(ans) < len(w) or (len(ans) == len(w) and ans > w)\r\n            ):\r\n                ans = w\r\n        return ans",
+    "problemId": 720,
+    "title": "Longest Word in Dictionary",
+    "problemUrl": "https://leetcode.com/problems/longest-word-in-dictionary/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0720.Longest Word in Dictionary/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0720.Longest Word in Dictionary/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0720.Longest Word in Dictionary/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0720.Longest Word in Dictionary/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0720.Longest Word in Dictionary/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0720.Longest Word in Dictionary/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0720.Longest Word in Dictionary/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0720.Longest Word in Dictionary/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

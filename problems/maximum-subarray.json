@@ -1,0 +1,63 @@
+{
+    "problemName": "maximum-subarray",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSubArray(self, nums: List[int]) -> int:\r\n        ans = f = nums[0]\r\n        for x in nums[1:]:\r\n            f = max(f, 0) + x\r\n            ans = max(ans, f)\r\n        return ans",
+    "problemId": 53,
+    "title": "Maximum Subarray",
+    "problemUrl": "https://leetcode.com/problems/maximum-subarray/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0053.Maximum Subarray/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0053.Maximum Subarray/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0053.Maximum Subarray/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0053.Maximum Subarray/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0053.Maximum Subarray/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0053.Maximum Subarray/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0053.Maximum Subarray/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0053.Maximum Subarray/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0053.Maximum Subarray/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0053.Maximum Subarray/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0053.Maximum Subarray/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

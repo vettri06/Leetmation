@@ -1,0 +1,38 @@
+{
+    "problemName": "earliest-time-to-finish-one-task",
+    "language": "python3",
+    "code": "class Solution:\r\n    def earliestTime(self, tasks: List[List[int]]) -> int:\r\n        return min(s + t for s, t in tasks)",
+    "problemId": 3683,
+    "title": "Earliest Time to Finish One Task",
+    "problemUrl": "https://leetcode.com/problems/earliest-time-to-finish-one-task/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3683.Earliest Time to Finish One Task/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3683.Earliest Time to Finish One Task/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3683.Earliest Time to Finish One Task/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3683.Earliest Time to Finish One Task/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3683.Earliest Time to Finish One Task/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3683.Earliest Time to Finish One Task/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

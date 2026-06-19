@@ -1,0 +1,33 @@
+{
+    "problemName": "find-servers-that-handled-most-number-of-requests",
+    "language": "python3",
+    "code": "class Solution:\r\n    def busiestServers(self, k: int, arrival: List[int], load: List[int]) -> List[int]:\r\n        free = SortedList(range(k))\r\n        busy = []\r\n        cnt = [0] * k\r\n        for i, (start, t) in enumerate(zip(arrival, load)):\r\n            while busy and busy[0][0] <= start:\r\n                free.add(busy[0][1])\r\n                heappop(busy)\r\n            if not free:\r\n                continue\r\n            j = free.bisect_left(i % k)\r\n            if j == len(free):\r\n                j = 0\r\n            server = free[j]\r\n            cnt[server] += 1\r\n            heappush(busy, (start + t, server))\r\n            free.remove(server)\r\n\r\n        mx = max(cnt)\r\n        return [i for i, v in enumerate(cnt) if v == mx]",
+    "problemId": 1606,
+    "title": "Find Servers That Handled Most Number of Requests",
+    "problemUrl": "https://leetcode.com/problems/find-servers-that-handled-most-number-of-requests/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1606.Find Servers That Handled Most Number of Requests/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1606.Find Servers That Handled Most Number of Requests/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1606.Find Servers That Handled Most Number of Requests/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1606.Find Servers That Handled Most Number of Requests/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1606.Find Servers That Handled Most Number of Requests/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

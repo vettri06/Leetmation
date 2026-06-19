@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-number-of-matching-indices-after-right-shifts",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumMatchingIndices(self, nums1: List[int], nums2: List[int]) -> int:\r\n        n = len(nums1)\r\n        ans = 0\r\n        for k in range(n):\r\n            t = sum(nums1[(i + k) % n] == x for i, x in enumerate(nums2))\r\n            ans = max(ans, t)\r\n        return ans",
+    "problemId": 3400,
+    "title": "Maximum Number of Matching Indices After Right Shifts",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-matching-indices-after-right-shifts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3400.Maximum Number of Matching Indices After Right Shifts/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3400.Maximum Number of Matching Indices After Right Shifts/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3400.Maximum Number of Matching Indices After Right Shifts/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3400.Maximum Number of Matching Indices After Right Shifts/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3400.Maximum Number of Matching Indices After Right Shifts/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3400.Maximum Number of Matching Indices After Right Shifts/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

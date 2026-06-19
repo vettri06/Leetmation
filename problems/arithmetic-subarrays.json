@@ -1,0 +1,48 @@
+{
+    "problemName": "arithmetic-subarrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkArithmeticSubarrays(\r\n        self, nums: List[int], l: List[int], r: List[int]\r\n    ) -> List[bool]:\r\n        def check(nums, l, r):\r\n            n = r - l + 1\r\n            s = set(nums[l : l + n])\r\n            a1, an = min(nums[l : l + n]), max(nums[l : l + n])\r\n            d, mod = divmod(an - a1, n - 1)\r\n            return mod == 0 and all((a1 + (i - 1) * d) in s for i in range(1, n))\r\n\r\n        return [check(nums, left, right) for left, right in zip(l, r)]",
+    "problemId": 1630,
+    "title": "Arithmetic Subarrays",
+    "problemUrl": "https://leetcode.com/problems/arithmetic-subarrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1630.Arithmetic Subarrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1630.Arithmetic Subarrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1630.Arithmetic Subarrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1630.Arithmetic Subarrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1630.Arithmetic Subarrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1630.Arithmetic Subarrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1630.Arithmetic Subarrays/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1630.Arithmetic Subarrays/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

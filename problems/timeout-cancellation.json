@@ -1,0 +1,23 @@
+{
+    "problemName": "timeout-cancellation",
+    "language": "javascript",
+    "code": "/**\r\n * @param {Function} fn\r\n * @param {Array} args\r\n * @param {number} t\r\n * @return {Function}\r\n */\r\nvar cancellable = function (fn, args, t) {\r\n    const timer = setTimeout(() => fn(...args), t);\r\n    return () => {\r\n        clearTimeout(timer);\r\n    };\r\n};\r\n\r\n/**\r\n *  const result = []\r\n *\r\n *  const fn = (x) => x * 5\r\n *  const args = [2], t = 20, cancelT = 50\r\n *\r\n *  const start = performance.now()\r\n *\r\n *  const log = (...argsArr) => {\r\n *      const diff = Math.floor(performance.now() - start);\r\n *      result.push({\"time\": diff, \"returned\": fn(...argsArr))\r\n *  }\r\n *\r\n *  const cancel = cancellable(log, args, t);\r\n *\r\n *  const maxT = Math.max(t, cancelT)\r\n *\r\n *  setTimeout(() => {\r\n *     cancel()\r\n *  }, cancelT)\r\n *\r\n *  setTimeout(() => {\r\n *     console.log(result) // [{\"time\":20,\"returned\":10}]\r\n *  }, maxT + 15)\r\n */",
+    "problemId": 2715,
+    "title": "Timeout Cancellation",
+    "problemUrl": "https://leetcode.com/problems/timeout-cancellation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2715.Timeout Cancellation/Solution.js",
+    "sourceFile": "Solution.js",
+    "sourceCandidates": [
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2715.Timeout Cancellation/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2715.Timeout Cancellation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

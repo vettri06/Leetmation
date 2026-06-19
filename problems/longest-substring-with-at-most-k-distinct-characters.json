@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-substring-with-at-most-k-distinct-characters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lengthOfLongestSubstringKDistinct(self, s: str, k: int) -> int:\r\n        l = 0\r\n        cnt = Counter()\r\n        for c in s:\r\n            cnt[c] += 1\r\n            if len(cnt) > k:\r\n                cnt[s[l]] -= 1\r\n                if cnt[s[l]] == 0:\r\n                    del cnt[s[l]]\r\n                l += 1\r\n        return len(s) - l",
+    "problemId": 340,
+    "title": "Longest Substring with At Most K Distinct Characters",
+    "problemUrl": "https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0340.Longest Substring with At Most K Distinct Characters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0340.Longest Substring with At Most K Distinct Characters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0340.Longest Substring with At Most K Distinct Characters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0340.Longest Substring with At Most K Distinct Characters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0340.Longest Substring with At Most K Distinct Characters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0340.Longest Substring with At Most K Distinct Characters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

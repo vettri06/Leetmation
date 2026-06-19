@@ -1,0 +1,38 @@
+{
+    "problemName": "snapshot-array",
+    "language": "python3",
+    "code": "class SnapshotArray:\r\n\r\n    def __init__(self, length: int):\r\n        self.arr = [[] for _ in range(length)]\r\n        self.i = 0\r\n\r\n    def set(self, index: int, val: int) -> None:\r\n        self.arr[index].append((self.i, val))\r\n\r\n    def snap(self) -> int:\r\n        self.i += 1\r\n        return self.i - 1\r\n\r\n    def get(self, index: int, snap_id: int) -> int:\r\n        i = bisect_left(self.arr[index], (snap_id, inf)) - 1\r\n        return 0 if i < 0 else self.arr[index][i][1]\r\n\r\n\r\n# Your SnapshotArray object will be instantiated and called as such:\r\n# obj = SnapshotArray(length)\r\n# obj.set(index,val)\r\n# param_2 = obj.snap()\r\n# param_3 = obj.get(index,snap_id)",
+    "problemId": 1146,
+    "title": "Snapshot Array",
+    "problemUrl": "https://leetcode.com/problems/snapshot-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1146.Snapshot Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1146.Snapshot Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1146.Snapshot Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1146.Snapshot Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1146.Snapshot Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1146.Snapshot Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

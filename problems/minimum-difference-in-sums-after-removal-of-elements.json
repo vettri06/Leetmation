@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-difference-in-sums-after-removal-of-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumDifference(self, nums: List[int]) -> int:\r\n        m = len(nums)\r\n        n = m // 3\r\n\r\n        s = 0\r\n        pre = [0] * (m + 1)\r\n        q1 = []\r\n        for i, x in enumerate(nums[: n * 2], 1):\r\n            s += x\r\n            heappush(q1, -x)\r\n            if len(q1) > n:\r\n                s -= -heappop(q1)\r\n            pre[i] = s\r\n\r\n        s = 0\r\n        suf = [0] * (m + 1)\r\n        q2 = []\r\n        for i in range(m, n, -1):\r\n            x = nums[i - 1]\r\n            s += x\r\n            heappush(q2, x)\r\n            if len(q2) > n:\r\n                s -= heappop(q2)\r\n            suf[i] = s\r\n\r\n        return min(pre[i] - suf[i + 1] for i in range(n, n * 2 + 1))",
+    "problemId": 2163,
+    "title": "Minimum Difference in Sums After Removal of Elements",
+    "problemUrl": "https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2163.Minimum Difference in Sums After Removal of Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2163.Minimum Difference in Sums After Removal of Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2163.Minimum Difference in Sums After Removal of Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2163.Minimum Difference in Sums After Removal of Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2163.Minimum Difference in Sums After Removal of Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2163.Minimum Difference in Sums After Removal of Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2163.Minimum Difference in Sums After Removal of Elements/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

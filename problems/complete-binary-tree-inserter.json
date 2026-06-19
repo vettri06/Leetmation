@@ -1,0 +1,43 @@
+{
+    "problemName": "complete-binary-tree-inserter",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass CBTInserter:\r\n\r\n    def __init__(self, root: Optional[TreeNode]):\r\n        self.tree = []\r\n        q = deque([root])\r\n        while q:\r\n            for _ in range(len(q)):\r\n                node = q.popleft()\r\n                self.tree.append(node)\r\n                if node.left:\r\n                    q.append(node.left)\r\n                if node.right:\r\n                    q.append(node.right)\r\n\r\n    def insert(self, val: int) -> int:\r\n        p = self.tree[(len(self.tree) - 1) // 2]\r\n        node = TreeNode(val)\r\n        self.tree.append(node)\r\n        if p.left is None:\r\n            p.left = node\r\n        else:\r\n            p.right = node\r\n        return p.val\r\n\r\n    def get_root(self) -> Optional[TreeNode]:\r\n        return self.tree[0]\r\n\r\n\r\n# Your CBTInserter object will be instantiated and called as such:\r\n# obj = CBTInserter(root)\r\n# param_1 = obj.insert(val)\r\n# param_2 = obj.get_root()",
+    "problemId": 919,
+    "title": "Complete Binary Tree Inserter",
+    "problemUrl": "https://leetcode.com/problems/complete-binary-tree-inserter/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0919.Complete Binary Tree Inserter/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0919.Complete Binary Tree Inserter/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0919.Complete Binary Tree Inserter/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0919.Complete Binary Tree Inserter/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0919.Complete Binary Tree Inserter/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0919.Complete Binary Tree Inserter/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0919.Complete Binary Tree Inserter/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

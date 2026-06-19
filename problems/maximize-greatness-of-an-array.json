@@ -1,0 +1,38 @@
+{
+    "problemName": "maximize-greatness-of-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximizeGreatness(self, nums: List[int]) -> int:\r\n        nums.sort()\r\n        i = 0\r\n        for x in nums:\r\n            i += x > nums[i]\r\n        return i",
+    "problemId": 2592,
+    "title": "Maximize Greatness of an Array",
+    "problemUrl": "https://leetcode.com/problems/maximize-greatness-of-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2592.Maximize Greatness of an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2592.Maximize Greatness of an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2592.Maximize Greatness of an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2592.Maximize Greatness of an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2592.Maximize Greatness of an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2592.Maximize Greatness of an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

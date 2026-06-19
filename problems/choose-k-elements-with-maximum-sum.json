@@ -1,0 +1,33 @@
+{
+    "problemName": "choose-k-elements-with-maximum-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMaxSum(self, nums1: List[int], nums2: List[int], k: int) -> List[int]:\r\n        arr = [(x, i) for i, x in enumerate(nums1)]\r\n        arr.sort()\r\n        pq = []\r\n        s = j = 0\r\n        n = len(arr)\r\n        ans = [0] * n\r\n        for h, (x, i) in enumerate(arr):\r\n            while j < h and arr[j][0] < x:\r\n                y = nums2[arr[j][1]]\r\n                heappush(pq, y)\r\n                s += y\r\n                if len(pq) > k:\r\n                    s -= heappop(pq)\r\n                j += 1\r\n            ans[i] = s\r\n        return ans",
+    "problemId": 3478,
+    "title": "Choose K Elements With Maximum Sum",
+    "problemUrl": "https://leetcode.com/problems/choose-k-elements-with-maximum-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3478.Choose K Elements With Maximum Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3478.Choose K Elements With Maximum Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3478.Choose K Elements With Maximum Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3478.Choose K Elements With Maximum Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3478.Choose K Elements With Maximum Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

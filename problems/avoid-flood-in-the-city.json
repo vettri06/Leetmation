@@ -1,0 +1,42 @@
+{
+    "problemName": "avoid-flood-in-the-city",
+    "language": "java",
+    "code": "class Solution {\n    public int[] avoidFlood(int[] rains) {\n        int n = rains.length;\n        int[] ans = new int[n];\n        Map<Integer, Integer> fullLakeDay = new HashMap<>();\n        TreeSet<Integer> dryDays = new TreeSet<>();\n\n        for (int i = 0; i < n; i++) {\n            int lake = rains[i];\n            if (lake == 0) {\n                ans[i] = 1;\n                dryDays.add(i);\n                continue;\n            }\n\n            ans[i] = -1;\n            if (fullLakeDay.containsKey(lake)) {\n                Integer dryDay = dryDays.higher(fullLakeDay.get(lake));\n                if (dryDay == null) return new int[0];\n                ans[dryDay] = lake;\n                dryDays.remove(dryDay);\n            }\n            fullLakeDay.put(lake, i);\n        }\n        return ans;\n    }\n}",
+    "problemId": 1488,
+    "title": "Avoid Flood in The City",
+    "problemUrl": "https://leetcode.com/problems/avoid-flood-in-the-city/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1488.Avoid Flood in The City/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1488.Avoid Flood in The City/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1488.Avoid Flood in The City/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1488.Avoid Flood in The City/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1488.Avoid Flood in The City/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1488.Avoid Flood in The City/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ],
+    "rebasePolicy": "protected-local-fix"
+}

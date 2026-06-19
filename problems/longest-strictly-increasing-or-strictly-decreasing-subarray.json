@@ -1,0 +1,43 @@
+{
+    "problemName": "longest-strictly-increasing-or-strictly-decreasing-subarray",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestMonotonicSubarray(self, nums: List[int]) -> int:\r\n        ans = t = 1\r\n        for i, x in enumerate(nums[1:]):\r\n            if nums[i] < x:\r\n                t += 1\r\n                ans = max(ans, t)\r\n            else:\r\n                t = 1\r\n        t = 1\r\n        for i, x in enumerate(nums[1:]):\r\n            if nums[i] > x:\r\n                t += 1\r\n                ans = max(ans, t)\r\n            else:\r\n                t = 1\r\n        return ans",
+    "problemId": 3105,
+    "title": "Longest Strictly Increasing or Strictly Decreasing Subarray",
+    "problemUrl": "https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3105.Longest Strictly Increasing or Strictly Decreasing Subarray/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3105.Longest Strictly Increasing or Strictly Decreasing Subarray/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3105.Longest Strictly Increasing or Strictly Decreasing Subarray/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3105.Longest Strictly Increasing or Strictly Decreasing Subarray/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3105.Longest Strictly Increasing or Strictly Decreasing Subarray/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3105.Longest Strictly Increasing or Strictly Decreasing Subarray/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3105.Longest Strictly Increasing or Strictly Decreasing Subarray/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "find-three-consecutive-integers-that-sum-to-a-given-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumOfThree(self, num: int) -> List[int]:\r\n        x, mod = divmod(num, 3)\r\n        return [] if mod else [x - 1, x, x + 1]",
+    "problemId": 2177,
+    "title": "Find Three Consecutive Integers That Sum to a Given Number",
+    "problemUrl": "https://leetcode.com/problems/find-three-consecutive-integers-that-sum-to-a-given-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2177.Find Three Consecutive Integers That Sum to a Given Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2177.Find Three Consecutive Integers That Sum to a Given Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2177.Find Three Consecutive Integers That Sum to a Given Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2177.Find Three Consecutive Integers That Sum to a Given Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2177.Find Three Consecutive Integers That Sum to a Given Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2177.Find Three Consecutive Integers That Sum to a Given Number/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2177.Find Three Consecutive Integers That Sum to a Given Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2177.Find Three Consecutive Integers That Sum to a Given Number/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

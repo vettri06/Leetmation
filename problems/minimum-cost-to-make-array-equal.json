@@ -1,0 +1,58 @@
+{
+    "problemName": "minimum-cost-to-make-array-equal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, nums: List[int], cost: List[int]) -> int:\r\n        arr = sorted(zip(nums, cost))\r\n        n = len(arr)\r\n        f = [0] * (n + 1)\r\n        g = [0] * (n + 1)\r\n        for i in range(1, n + 1):\r\n            a, b = arr[i - 1]\r\n            f[i] = f[i - 1] + a * b\r\n            g[i] = g[i - 1] + b\r\n        ans = inf\r\n        for i in range(1, n + 1):\r\n            a = arr[i - 1][0]\r\n            l = a * g[i - 1] - f[i - 1]\r\n            r = f[n] - f[i] - a * (g[n] - g[i])\r\n            ans = min(ans, l + r)\r\n        return ans",
+    "problemId": 2448,
+    "title": "Minimum Cost to Make Array Equal",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-make-array-equal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2448.Minimum Cost to Make Array Equal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2448.Minimum Cost to Make Array Equal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2448.Minimum Cost to Make Array Equal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2448.Minimum Cost to Make Array Equal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2448.Minimum Cost to Make Array Equal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2448.Minimum Cost to Make Array Equal/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2448.Minimum Cost to Make Array Equal/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2448.Minimum Cost to Make Array Equal/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2448.Minimum Cost to Make Array Equal/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2448.Minimum Cost to Make Array Equal/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "reconstruct-a-2-row-binary-matrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reconstructMatrix(\r\n        self, upper: int, lower: int, colsum: List[int]\r\n    ) -> List[List[int]]:\r\n        n = len(colsum)\r\n        ans = [[0] * n for _ in range(2)]\r\n        for j, v in enumerate(colsum):\r\n            if v == 2:\r\n                ans[0][j] = ans[1][j] = 1\r\n                upper, lower = upper - 1, lower - 1\r\n            if v == 1:\r\n                if upper > lower:\r\n                    upper -= 1\r\n                    ans[0][j] = 1\r\n                else:\r\n                    lower -= 1\r\n                    ans[1][j] = 1\r\n            if upper < 0 or lower < 0:\r\n                return []\r\n        return ans if lower == upper == 0 else []",
+    "problemId": 1253,
+    "title": "Reconstruct a 2-Row Binary Matrix",
+    "problemUrl": "https://leetcode.com/problems/reconstruct-a-2-row-binary-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1253.Reconstruct a 2-Row Binary Matrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1253.Reconstruct a 2-Row Binary Matrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1253.Reconstruct a 2-Row Binary Matrix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1253.Reconstruct a 2-Row Binary Matrix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1253.Reconstruct a 2-Row Binary Matrix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1253.Reconstruct a 2-Row Binary Matrix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

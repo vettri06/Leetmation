@@ -1,0 +1,33 @@
+{
+    "problemName": "destroy-sequential-targets",
+    "language": "python3",
+    "code": "class Solution:\r\n    def destroyTargets(self, nums: List[int], space: int) -> int:\r\n        cnt = Counter(v % space for v in nums)\r\n        ans = mx = 0\r\n        for v in nums:\r\n            t = cnt[v % space]\r\n            if t > mx or (t == mx and v < ans):\r\n                ans = v\r\n                mx = t\r\n        return ans",
+    "problemId": 2453,
+    "title": "Destroy Sequential Targets",
+    "problemUrl": "https://leetcode.com/problems/destroy-sequential-targets/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2453.Destroy Sequential Targets/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2453.Destroy Sequential Targets/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2453.Destroy Sequential Targets/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2453.Destroy Sequential Targets/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2453.Destroy Sequential Targets/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

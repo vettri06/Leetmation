@@ -1,0 +1,33 @@
+{
+    "problemName": "continuous-subarray-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkSubarraySum(self, nums: List[int], k: int) -> bool:\r\n        d = {0: -1}\r\n        s = 0\r\n        for i, x in enumerate(nums):\r\n            s = (s + x) % k\r\n            if s not in d:\r\n                d[s] = i\r\n            elif i - d[s] > 1:\r\n                return True\r\n        return False",
+    "problemId": 523,
+    "title": "Continuous Subarray Sum",
+    "problemUrl": "https://leetcode.com/problems/continuous-subarray-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0523.Continuous Subarray Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0523.Continuous Subarray Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0523.Continuous Subarray Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0523.Continuous Subarray Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0523.Continuous Subarray Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

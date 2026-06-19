@@ -1,0 +1,28 @@
+{
+    "problemName": "department-highest-salary",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef department_highest_salary(\r\n    employee: pd.DataFrame, department: pd.DataFrame\r\n) -> pd.DataFrame:\r\n    # Merge the two tables on departmentId and department id\r\n    merged = employee.merge(department, left_on='departmentId', right_on='id')\r\n\r\n    # Find the maximum salary for each department\r\n    max_salaries = merged.groupby('departmentId')['salary'].transform('max')\r\n\r\n    # Filter employees who have the highest salary in their department\r\n    top_earners = merged[merged['salary'] == max_salaries]\r\n\r\n    # Select required columns and rename them\r\n    result = top_earners[['name_y', 'name_x', 'salary']].copy()\r\n    result.columns = ['Department', 'Employee', 'Salary']\r\n\r\n    return result",
+    "problemId": 184,
+    "title": "Department Highest Salary",
+    "problemUrl": "https://leetcode.com/problems/department-highest-salary/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0184.Department Highest Salary/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0184.Department Highest Salary/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0184.Department Highest Salary/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0184.Department Highest Salary/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

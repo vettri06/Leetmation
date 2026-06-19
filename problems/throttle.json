@@ -1,0 +1,18 @@
+{
+    "problemName": "throttle",
+    "language": "typescript",
+    "code": "type F = (...args: any[]) => void;\r\n\r\nconst throttle = (fn: F, t: number): F => {\r\n    let pending = false;\r\n    let nextArgs;\r\n    const wrapper = (...args) => {\r\n        nextArgs = args;\r\n        if (!pending) {\r\n            fn(...args);\r\n            pending = true;\r\n            nextArgs = undefined;\r\n            setTimeout(() => {\r\n                pending = false;\r\n                if (nextArgs) wrapper(...nextArgs);\r\n            }, t);\r\n        }\r\n    };\r\n    return wrapper;\r\n};\r\n\r\n/**\r\n * const throttled = throttle(console.log, 100);\r\n * throttled(\"log\"); // logged immediately.\r\n * throttled(\"log\"); // logged at t=100ms.\r\n */",
+    "problemId": 2676,
+    "title": "Throttle",
+    "problemUrl": "https://leetcode.com/problems/throttle/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2676.Throttle/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2676.Throttle/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

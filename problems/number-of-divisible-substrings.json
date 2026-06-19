@@ -1,0 +1,73 @@
+{
+    "problemName": "number-of-divisible-substrings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countDivisibleSubstrings(self, word: str) -> int:\r\n        d = [\"ab\", \"cde\", \"fgh\", \"ijk\", \"lmn\", \"opq\", \"rst\", \"uvw\", \"xyz\"]\r\n        mp = {}\r\n        for i, s in enumerate(d, 1):\r\n            for c in s:\r\n                mp[c] = i\r\n        ans = 0\r\n        n = len(word)\r\n        for i in range(n):\r\n            s = 0\r\n            for j in range(i, n):\r\n                s += mp[word[j]]\r\n                ans += s % (j - i + 1) == 0\r\n        return ans",
+    "problemId": 2950,
+    "title": "Number of Divisible Substrings",
+    "problemUrl": "https://leetcode.com/problems/number-of-divisible-substrings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2950.Number of Divisible Substrings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2950.Number of Divisible Substrings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2950.Number of Divisible Substrings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2950.Number of Divisible Substrings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2950.Number of Divisible Substrings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2950.Number of Divisible Substrings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2950.Number of Divisible Substrings/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2950.Number of Divisible Substrings/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2950.Number of Divisible Substrings/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2950.Number of Divisible Substrings/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2950.Number of Divisible Substrings/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2950.Number of Divisible Substrings/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2950.Number of Divisible Substrings/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

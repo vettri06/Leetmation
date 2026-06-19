@@ -1,0 +1,48 @@
+{
+    "problemName": "sort-matrix-by-diagonals",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sortMatrix(self, grid: List[List[int]]) -> List[List[int]]:\r\n        n = len(grid)\r\n        for k in range(n - 2, -1, -1):\r\n            i, j = k, 0\r\n            t = []\r\n            while i < n and j < n:\r\n                t.append(grid[i][j])\r\n                i += 1\r\n                j += 1\r\n            t.sort()\r\n            i, j = k, 0\r\n            while i < n and j < n:\r\n                grid[i][j] = t.pop()\r\n                i += 1\r\n                j += 1\r\n        for k in range(n - 2, 0, -1):\r\n            i, j = k, n - 1\r\n            t = []\r\n            while i >= 0 and j >= 0:\r\n                t.append(grid[i][j])\r\n                i -= 1\r\n                j -= 1\r\n            t.sort()\r\n            i, j = k, n - 1\r\n            while i >= 0 and j >= 0:\r\n                grid[i][j] = t.pop()\r\n                i -= 1\r\n                j -= 1\r\n        return grid",
+    "problemId": 3446,
+    "title": "Sort Matrix by Diagonals",
+    "problemUrl": "https://leetcode.com/problems/sort-matrix-by-diagonals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3446.Sort Matrix by Diagonals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3446.Sort Matrix by Diagonals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3446.Sort Matrix by Diagonals/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3446.Sort Matrix by Diagonals/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3446.Sort Matrix by Diagonals/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3446.Sort Matrix by Diagonals/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3446.Sort Matrix by Diagonals/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3446.Sort Matrix by Diagonals/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

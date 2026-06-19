@@ -1,0 +1,43 @@
+{
+    "problemName": "first-unique-number",
+    "language": "python3",
+    "code": "class FirstUnique:\r\n    def __init__(self, nums: List[int]):\r\n        self.cnt = Counter(nums)\r\n        self.unique = OrderedDict({v: 1 for v in nums if self.cnt[v] == 1})\r\n\r\n    def showFirstUnique(self) -> int:\r\n        return -1 if not self.unique else next(v for v in self.unique.keys())\r\n\r\n    def add(self, value: int) -> None:\r\n        self.cnt[value] += 1\r\n        if self.cnt[value] == 1:\r\n            self.unique[value] = 1\r\n        elif value in self.unique:\r\n            self.unique.pop(value)\r\n\r\n\r\n# Your FirstUnique object will be instantiated and called as such:\r\n# obj = FirstUnique(nums)\r\n# param_1 = obj.showFirstUnique()\r\n# obj.add(value)",
+    "problemId": 1429,
+    "title": "First Unique Number",
+    "problemUrl": "https://leetcode.com/problems/first-unique-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1429.First Unique Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1429.First Unique Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1429.First Unique Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1429.First Unique Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1429.First Unique Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1429.First Unique Number/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1429.First Unique Number/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

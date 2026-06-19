@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-valid-words-for-each-puzzle",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:\r\n        cnt = Counter()\r\n        for w in words:\r\n            mask = 0\r\n            for c in w:\r\n                mask |= 1 << (ord(c) - ord(\"a\"))\r\n            cnt[mask] += 1\r\n\r\n        ans = []\r\n        for p in puzzles:\r\n            mask = 0\r\n            for c in p:\r\n                mask |= 1 << (ord(c) - ord(\"a\"))\r\n            x, i, j = 0, ord(p[0]) - ord(\"a\"), mask\r\n            while j:\r\n                if j >> i & 1:\r\n                    x += cnt[j]\r\n                j = (j - 1) & mask\r\n            ans.append(x)\r\n        return ans",
+    "problemId": 1178,
+    "title": "Number of Valid Words for Each Puzzle",
+    "problemUrl": "https://leetcode.com/problems/number-of-valid-words-for-each-puzzle/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1178.Number of Valid Words for Each Puzzle/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1178.Number of Valid Words for Each Puzzle/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1178.Number of Valid Words for Each Puzzle/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1178.Number of Valid Words for Each Puzzle/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1178.Number of Valid Words for Each Puzzle/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1178.Number of Valid Words for Each Puzzle/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

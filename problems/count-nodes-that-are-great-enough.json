@@ -1,0 +1,33 @@
+{
+    "problemName": "count-nodes-that-are-great-enough",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def countGreatEnoughNodes(self, root: Optional[TreeNode], k: int) -> int:\r\n        def push(pq, x):\r\n            heappush(pq, x)\r\n            if len(pq) > k:\r\n                heappop(pq)\r\n\r\n        def dfs(root):\r\n            if root is None:\r\n                return []\r\n            l, r = dfs(root.left), dfs(root.right)\r\n            for x in r:\r\n                push(l, x)\r\n            if len(l) == k and -l[0] < root.val:\r\n                nonlocal ans\r\n                ans += 1\r\n            push(l, -root.val)\r\n            return l\r\n\r\n        ans = 0\r\n        dfs(root)\r\n        return ans",
+    "problemId": 2792,
+    "title": "Count Nodes That Are Great Enough",
+    "problemUrl": "https://leetcode.com/problems/count-nodes-that-are-great-enough/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2792.Count Nodes That Are Great Enough/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2792.Count Nodes That Are Great Enough/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2792.Count Nodes That Are Great Enough/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2792.Count Nodes That Are Great Enough/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2792.Count Nodes That Are Great Enough/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

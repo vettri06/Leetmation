@@ -1,0 +1,48 @@
+{
+    "problemName": "partitioning-into-minimum-number-of-deci-binary-numbers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minPartitions(self, n: str) -> int:\r\n        return int(max(n))",
+    "problemId": 1689,
+    "title": "Partitioning Into Minimum Number Of Deci-Binary Numbers",
+    "problemUrl": "https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1689.Partitioning Into Minimum Number Of Deci-Binary Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1689.Partitioning Into Minimum Number Of Deci-Binary Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1689.Partitioning Into Minimum Number Of Deci-Binary Numbers/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1689.Partitioning Into Minimum Number Of Deci-Binary Numbers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1689.Partitioning Into Minimum Number Of Deci-Binary Numbers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1689.Partitioning Into Minimum Number Of Deci-Binary Numbers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1689.Partitioning Into Minimum Number Of Deci-Binary Numbers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1689.Partitioning Into Minimum Number Of Deci-Binary Numbers/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

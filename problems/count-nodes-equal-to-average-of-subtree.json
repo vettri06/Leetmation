@@ -1,0 +1,38 @@
+{
+    "problemName": "count-nodes-equal-to-average-of-subtree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def averageOfSubtree(self, root: TreeNode) -> int:\r\n        def dfs(root) -> tuple:\r\n            if not root:\r\n                return 0, 0\r\n            ls, ln = dfs(root.left)\r\n            rs, rn = dfs(root.right)\r\n            s = ls + rs + root.val\r\n            n = ln + rn + 1\r\n            nonlocal ans\r\n            ans += int(s // n == root.val)\r\n            return s, n\r\n\r\n        ans = 0\r\n        dfs(root)\r\n        return ans",
+    "problemId": 2265,
+    "title": "Count Nodes Equal to Average of Subtree",
+    "problemUrl": "https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2265.Count Nodes Equal to Average of Subtree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2265.Count Nodes Equal to Average of Subtree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2265.Count Nodes Equal to Average of Subtree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2265.Count Nodes Equal to Average of Subtree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2265.Count Nodes Equal to Average of Subtree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2265.Count Nodes Equal to Average of Subtree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

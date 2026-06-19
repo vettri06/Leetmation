@@ -1,0 +1,38 @@
+{
+    "problemName": "count-distinct-subarrays-divisible-by-k-in-sorted-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numGoodSubarrays(self, nums: List[int], k: int) -> int:\r\n        cnt = Counter({0: 1})\r\n        ans = s = 0\r\n        for x in nums:\r\n            s = (s + x) % k\r\n            ans += cnt[s]\r\n            cnt[s] += 1\r\n        n = len(nums)\r\n        i = 0\r\n        while i < n:\r\n            j = i + 1\r\n            while j < n and nums[j] == nums[i]:\r\n                j += 1\r\n            m = j - i\r\n            for h in range(1, m + 1):\r\n                if (h * nums[i]) % k == 0:\r\n                    ans -= m - h\r\n            i = j\r\n        return ans",
+    "problemId": 3729,
+    "title": "Count Distinct Subarrays Divisible by K in Sorted Array",
+    "problemUrl": "https://leetcode.com/problems/count-distinct-subarrays-divisible-by-k-in-sorted-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3729.Count Distinct Subarrays Divisible by K in Sorted Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3729.Count Distinct Subarrays Divisible by K in Sorted Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3729.Count Distinct Subarrays Divisible by K in Sorted Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3729.Count Distinct Subarrays Divisible by K in Sorted Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3729.Count Distinct Subarrays Divisible by K in Sorted Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3729.Count Distinct Subarrays Divisible by K in Sorted Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

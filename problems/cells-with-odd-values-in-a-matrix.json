@@ -1,0 +1,73 @@
+{
+    "problemName": "cells-with-odd-values-in-a-matrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def oddCells(self, m: int, n: int, indices: List[List[int]]) -> int:\r\n        g = [[0] * n for _ in range(m)]\r\n        for r, c in indices:\r\n            for i in range(m):\r\n                g[i][c] += 1\r\n            for j in range(n):\r\n                g[r][j] += 1\r\n        return sum(v % 2 for row in g for v in row)",
+    "problemId": 1252,
+    "title": "Cells with Odd Values in a Matrix",
+    "problemUrl": "https://leetcode.com/problems/cells-with-odd-values-in-a-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1252.Cells with Odd Values in a Matrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1252.Cells with Odd Values in a Matrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1252.Cells with Odd Values in a Matrix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1252.Cells with Odd Values in a Matrix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1252.Cells with Odd Values in a Matrix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1252.Cells with Odd Values in a Matrix/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1252.Cells with Odd Values in a Matrix/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1252.Cells with Odd Values in a Matrix/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1252.Cells with Odd Values in a Matrix/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1252.Cells with Odd Values in a Matrix/Solution3.py",
+            "sourceFile": "Solution3.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1252.Cells with Odd Values in a Matrix/Solution3.cpp",
+            "sourceFile": "Solution3.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1252.Cells with Odd Values in a Matrix/Solution3.java",
+            "sourceFile": "Solution3.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1252.Cells with Odd Values in a Matrix/Solution3.go",
+            "sourceFile": "Solution3.go"
+        }
+    ]
+}

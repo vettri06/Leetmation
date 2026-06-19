@@ -1,0 +1,38 @@
+{
+    "problemName": "smallest-sufficient-team",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestSufficientTeam(\r\n        self, req_skills: List[str], people: List[List[str]]\r\n    ) -> List[int]:\r\n        d = {s: i for i, s in enumerate(req_skills)}\r\n        m, n = len(req_skills), len(people)\r\n        p = [0] * n\r\n        for i, ss in enumerate(people):\r\n            for s in ss:\r\n                p[i] |= 1 << d[s]\r\n        f = [inf] * (1 << m)\r\n        g = [0] * (1 << m)\r\n        h = [0] * (1 << m)\r\n        f[0] = 0\r\n        for i in range(1 << m):\r\n            if f[i] == inf:\r\n                continue\r\n            for j in range(n):\r\n                if f[i] + 1 < f[i | p[j]]:\r\n                    f[i | p[j]] = f[i] + 1\r\n                    g[i | p[j]] = j\r\n                    h[i | p[j]] = i\r\n        i = (1 << m) - 1\r\n        ans = []\r\n        while i:\r\n            ans.append(g[i])\r\n            i = h[i]\r\n        return ans",
+    "problemId": 1125,
+    "title": "Smallest Sufficient Team",
+    "problemUrl": "https://leetcode.com/problems/smallest-sufficient-team/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1125.Smallest Sufficient Team/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1125.Smallest Sufficient Team/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1125.Smallest Sufficient Team/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1125.Smallest Sufficient Team/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1125.Smallest Sufficient Team/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1125.Smallest Sufficient Team/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

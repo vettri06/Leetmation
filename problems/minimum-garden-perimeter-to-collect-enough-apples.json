@@ -1,0 +1,63 @@
+{
+    "problemName": "minimum-garden-perimeter-to-collect-enough-apples",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumPerimeter(self, neededApples: int) -> int:\r\n        x = 1\r\n        while 2 * x * (x + 1) * (2 * x + 1) < neededApples:\r\n            x += 1\r\n        return x * 8",
+    "problemId": 1954,
+    "title": "Minimum Garden Perimeter to Collect Enough Apples",
+    "problemUrl": "https://leetcode.com/problems/minimum-garden-perimeter-to-collect-enough-apples/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1954.Minimum Garden Perimeter to Collect Enough Apples/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1954.Minimum Garden Perimeter to Collect Enough Apples/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1954.Minimum Garden Perimeter to Collect Enough Apples/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1954.Minimum Garden Perimeter to Collect Enough Apples/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1954.Minimum Garden Perimeter to Collect Enough Apples/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1954.Minimum Garden Perimeter to Collect Enough Apples/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1954.Minimum Garden Perimeter to Collect Enough Apples/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1954.Minimum Garden Perimeter to Collect Enough Apples/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1954.Minimum Garden Perimeter to Collect Enough Apples/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1954.Minimum Garden Perimeter to Collect Enough Apples/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1954.Minimum Garden Perimeter to Collect Enough Apples/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

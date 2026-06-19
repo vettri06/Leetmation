@@ -1,0 +1,48 @@
+{
+    "problemName": "smallest-even-multiple",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestEvenMultiple(self, n: int) -> int:\r\n        return n if n % 2 == 0 else n * 2",
+    "problemId": 2413,
+    "title": "Smallest Even Multiple",
+    "problemUrl": "https://leetcode.com/problems/smallest-even-multiple/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2413.Smallest Even Multiple/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2413.Smallest Even Multiple/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2413.Smallest Even Multiple/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2413.Smallest Even Multiple/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2413.Smallest Even Multiple/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2413.Smallest Even Multiple/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2413.Smallest Even Multiple/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2413.Smallest Even Multiple/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

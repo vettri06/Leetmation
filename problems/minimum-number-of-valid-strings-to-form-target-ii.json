@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-number-of-valid-strings-to-form-target-ii",
+    "language": "python3",
+    "code": "class Hashing:\r\n    __slots__ = [\"mod\", \"h\", \"p\"]\r\n\r\n    def __init__(self, s: List[str], base: int, mod: int):\r\n        self.mod = mod\r\n        self.h = [0] * (len(s) + 1)\r\n        self.p = [1] * (len(s) + 1)\r\n        for i in range(1, len(s) + 1):\r\n            self.h[i] = (self.h[i - 1] * base + ord(s[i - 1])) % mod\r\n            self.p[i] = (self.p[i - 1] * base) % mod\r\n\r\n    def query(self, l: int, r: int) -> int:\r\n        return (self.h[r] - self.h[l - 1] * self.p[r - l + 1]) % self.mod\r\n\r\n\r\nclass Solution:\r\n    def minValidStrings(self, words: List[str], target: str) -> int:\r\n        def f(i: int) -> int:\r\n            l, r = 0, min(n - i, m)\r\n            while l < r:\r\n                mid = (l + r + 1) >> 1\r\n                sub = hashing.query(i + 1, i + mid)\r\n                if sub in s[mid]:\r\n                    l = mid\r\n                else:\r\n                    r = mid - 1\r\n            return l\r\n\r\n        base, mod = 13331, 998244353\r\n        hashing = Hashing(target, base, mod)\r\n        m = max(len(w) for w in words)\r\n        s = [set() for _ in range(m + 1)]\r\n        for w in words:\r\n            h = 0\r\n            for j, c in enumerate(w, 1):\r\n                h = (h * base + ord(c)) % mod\r\n                s[j].add(h)\r\n        ans = last = mx = 0\r\n        n = len(target)\r\n        for i in range(n):\r\n            dist = f(i)\r\n            mx = max(mx, i + dist)\r\n            if i == last:\r\n                if i == mx:\r\n                    return -1\r\n                last = mx\r\n                ans += 1\r\n        return ans",
+    "problemId": 3292,
+    "title": "Minimum Number of Valid Strings to Form Target II",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-valid-strings-to-form-target-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3292.Minimum Number of Valid Strings to Form Target II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3292.Minimum Number of Valid Strings to Form Target II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3292.Minimum Number of Valid Strings to Form Target II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3292.Minimum Number of Valid Strings to Form Target II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3292.Minimum Number of Valid Strings to Form Target II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3292.Minimum Number of Valid Strings to Form Target II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3292.Minimum Number of Valid Strings to Form Target II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

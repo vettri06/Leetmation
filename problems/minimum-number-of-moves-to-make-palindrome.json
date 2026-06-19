@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-number-of-moves-to-make-palindrome",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minMovesToMakePalindrome(self, s: str) -> int:\r\n        cs = list(s)\r\n        ans, n = 0, len(s)\r\n        i, j = 0, n - 1\r\n        while i < j:\r\n            even = False\r\n            for k in range(j, i, -1):\r\n                if cs[i] == cs[k]:\r\n                    even = True\r\n                    while k < j:\r\n                        cs[k], cs[k + 1] = cs[k + 1], cs[k]\r\n                        k += 1\r\n                        ans += 1\r\n                    j -= 1\r\n                    break\r\n            if not even:\r\n                ans += n // 2 - i\r\n            i += 1\r\n        return ans",
+    "problemId": 2193,
+    "title": "Minimum Number of Moves to Make Palindrome",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2193.Minimum Number of Moves to Make Palindrome/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2193.Minimum Number of Moves to Make Palindrome/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2193.Minimum Number of Moves to Make Palindrome/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2193.Minimum Number of Moves to Make Palindrome/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2193.Minimum Number of Moves to Make Palindrome/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

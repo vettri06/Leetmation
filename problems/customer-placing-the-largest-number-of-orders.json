@@ -1,0 +1,23 @@
+{
+    "problemName": "customer-placing-the-largest-number-of-orders",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    customer_number\r\nFROM orders\r\nGROUP BY customer_number\r\nORDER BY COUNT(1) DESC\r\nLIMIT 1;",
+    "problemId": 586,
+    "title": "Customer Placing the Largest Number of Orders",
+    "problemUrl": "https://leetcode.com/problems/customer-placing-the-largest-number-of-orders/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0586.Customer Placing the Largest Number of Orders/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0586.Customer Placing the Largest Number of Orders/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0586.Customer Placing the Largest Number of Orders/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

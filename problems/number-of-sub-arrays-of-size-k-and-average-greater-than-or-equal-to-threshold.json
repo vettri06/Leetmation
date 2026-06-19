@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:\r\n        threshold *= k\r\n        s = sum(arr[:k])\r\n        ans = int(s >= threshold)\r\n        for i in range(k, len(arr)):\r\n            s += arr[i] - arr[i - k]\r\n            ans += int(s >= threshold)\r\n        return ans",
+    "problemId": 1343,
+    "title": "Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold",
+    "problemUrl": "https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1343.Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1343.Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1343.Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1343.Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1343.Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1343.Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

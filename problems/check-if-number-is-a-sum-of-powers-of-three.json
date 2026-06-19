@@ -1,0 +1,48 @@
+{
+    "problemName": "check-if-number-is-a-sum-of-powers-of-three",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkPowersOfThree(self, n: int) -> bool:\r\n        while n:\r\n            if n % 3 > 1:\r\n                return False\r\n            n //= 3\r\n        return True",
+    "problemId": 1780,
+    "title": "Check if Number is a Sum of Powers of Three",
+    "problemUrl": "https://leetcode.com/problems/check-if-number-is-a-sum-of-powers-of-three/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1780.Check if Number is a Sum of Powers of Three/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1780.Check if Number is a Sum of Powers of Three/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1780.Check if Number is a Sum of Powers of Three/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1780.Check if Number is a Sum of Powers of Three/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1780.Check if Number is a Sum of Powers of Three/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1780.Check if Number is a Sum of Powers of Three/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1780.Check if Number is a Sum of Powers of Three/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1780.Check if Number is a Sum of Powers of Three/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

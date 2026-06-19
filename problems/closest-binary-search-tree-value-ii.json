@@ -1,0 +1,33 @@
+{
+    "problemName": "closest-binary-search-tree-value-ii",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def closestKValues(self, root: TreeNode, target: float, k: int) -> List[int]:\r\n        def dfs(root):\r\n            if root is None:\r\n                return\r\n            dfs(root.left)\r\n            if len(q) < k:\r\n                q.append(root.val)\r\n            else:\r\n                if abs(root.val - target) >= abs(q[0] - target):\r\n                    return\r\n                q.popleft()\r\n                q.append(root.val)\r\n            dfs(root.right)\r\n\r\n        q = deque()\r\n        dfs(root)\r\n        return list(q)",
+    "problemId": 272,
+    "title": "Closest Binary Search Tree Value II",
+    "problemUrl": "https://leetcode.com/problems/closest-binary-search-tree-value-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0272.Closest Binary Search Tree Value II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0272.Closest Binary Search Tree Value II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0272.Closest Binary Search Tree Value II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0272.Closest Binary Search Tree Value II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0272.Closest Binary Search Tree Value II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

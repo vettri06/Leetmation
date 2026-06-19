@@ -1,0 +1,38 @@
+{
+    "problemName": "design-an-atm-machine",
+    "language": "python3",
+    "code": "class ATM:\r\n    def __init__(self):\r\n        self.d = [20, 50, 100, 200, 500]\r\n        self.m = len(self.d)\r\n        self.cnt = [0] * self.m\r\n\r\n    def deposit(self, banknotesCount: List[int]) -> None:\r\n        for i, x in enumerate(banknotesCount):\r\n            self.cnt[i] += x\r\n\r\n    def withdraw(self, amount: int) -> List[int]:\r\n        ans = [0] * self.m\r\n        for i in reversed(range(self.m)):\r\n            ans[i] = min(amount // self.d[i], self.cnt[i])\r\n            amount -= ans[i] * self.d[i]\r\n        if amount > 0:\r\n            return [-1]\r\n        for i, x in enumerate(ans):\r\n            self.cnt[i] -= x\r\n        return ans\r\n\r\n\r\n# Your ATM object will be instantiated and called as such:\r\n# obj = ATM()\r\n# obj.deposit(banknotesCount)\r\n# param_2 = obj.withdraw(amount)",
+    "problemId": 2241,
+    "title": "Design an ATM Machine",
+    "problemUrl": "https://leetcode.com/problems/design-an-atm-machine/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2241.Design an ATM Machine/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2241.Design an ATM Machine/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2241.Design an ATM Machine/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2241.Design an ATM Machine/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2241.Design an ATM Machine/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2241.Design an ATM Machine/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

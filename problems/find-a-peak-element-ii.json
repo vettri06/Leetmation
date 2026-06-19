@@ -1,0 +1,43 @@
+{
+    "problemName": "find-a-peak-element-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findPeakGrid(self, mat: List[List[int]]) -> List[int]:\r\n        l, r = 0, len(mat) - 1\r\n        while l < r:\r\n            mid = (l + r) >> 1\r\n            j = mat[mid].index(max(mat[mid]))\r\n            if mat[mid][j] > mat[mid + 1][j]:\r\n                r = mid\r\n            else:\r\n                l = mid + 1\r\n        return [l, mat[l].index(max(mat[l]))]",
+    "problemId": 1901,
+    "title": "Find a Peak Element II",
+    "problemUrl": "https://leetcode.com/problems/find-a-peak-element-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1901.Find a Peak Element II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1901.Find a Peak Element II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1901.Find a Peak Element II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1901.Find a Peak Element II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1901.Find a Peak Element II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1901.Find a Peak Element II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1901.Find a Peak Element II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

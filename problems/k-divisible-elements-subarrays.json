@@ -1,0 +1,38 @@
+{
+    "problemName": "k-divisible-elements-subarrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countDistinct(self, nums: List[int], k: int, p: int) -> int:\r\n        s = set()\r\n        n = len(nums)\r\n        base1, base2 = 131, 13331\r\n        mod1, mod2 = 10**9 + 7, 10**9 + 9\r\n        for i in range(n):\r\n            h1 = h2 = cnt = 0\r\n            for j in range(i, n):\r\n                cnt += nums[j] % p == 0\r\n                if cnt > k:\r\n                    break\r\n                h1 = (h1 * base1 + nums[j]) % mod1\r\n                h2 = (h2 * base2 + nums[j]) % mod2\r\n                s.add(h1 << 32 | h2)\r\n        return len(s)",
+    "problemId": 2261,
+    "title": "K Divisible Elements Subarrays",
+    "problemUrl": "https://leetcode.com/problems/k-divisible-elements-subarrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2261.K Divisible Elements Subarrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2261.K Divisible Elements Subarrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2261.K Divisible Elements Subarrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2261.K Divisible Elements Subarrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2261.K Divisible Elements Subarrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2261.K Divisible Elements Subarrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

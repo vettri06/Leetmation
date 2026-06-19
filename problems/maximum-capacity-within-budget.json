@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-capacity-within-budget",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxCapacity(self, costs: List[int], capacity: List[int], budget: int) -> int:\r\n        arr = []\r\n        for a, b in zip(costs, capacity):\r\n            if a < budget:\r\n                arr.append((a, b))\r\n        if not arr:\r\n            return 0\r\n        arr.sort()\r\n        remain = SortedList()\r\n        for i, (_, b) in enumerate(arr):\r\n            remain.add((b, i))\r\n        i, j = 0, len(arr) - 1\r\n        ans = remain[-1][0]\r\n        while i < j:\r\n            remain.discard((arr[i][1], i))\r\n            while i < j and arr[i][0] + arr[j][0] >= budget:\r\n                remain.discard((arr[j][1], j))\r\n                j -= 1\r\n            if remain:\r\n                ans = max(ans, arr[i][1] + remain[-1][0])\r\n            i += 1\r\n        return ans",
+    "problemId": 3814,
+    "title": "Maximum Capacity Within Budget",
+    "problemUrl": "https://leetcode.com/problems/maximum-capacity-within-budget/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3814.Maximum Capacity Within Budget/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3814.Maximum Capacity Within Budget/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3814.Maximum Capacity Within Budget/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3814.Maximum Capacity Within Budget/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3814.Maximum Capacity Within Budget/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

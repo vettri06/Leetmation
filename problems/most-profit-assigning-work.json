@@ -1,0 +1,63 @@
+{
+    "problemName": "most-profit-assigning-work",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxProfitAssignment(\r\n        self, difficulty: List[int], profit: List[int], worker: List[int]\r\n    ) -> int:\r\n        worker.sort()\r\n        jobs = sorted(zip(difficulty, profit))\r\n        ans = mx = i = 0\r\n        for w in worker:\r\n            while i < len(jobs) and jobs[i][0] <= w:\r\n                mx = max(mx, jobs[i][1])\r\n                i += 1\r\n            ans += mx\r\n        return ans",
+    "problemId": 826,
+    "title": "Most Profit Assigning Work",
+    "problemUrl": "https://leetcode.com/problems/most-profit-assigning-work/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0826.Most Profit Assigning Work/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0826.Most Profit Assigning Work/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0826.Most Profit Assigning Work/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0826.Most Profit Assigning Work/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0826.Most Profit Assigning Work/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0826.Most Profit Assigning Work/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0826.Most Profit Assigning Work/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0826.Most Profit Assigning Work/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0826.Most Profit Assigning Work/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0826.Most Profit Assigning Work/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0826.Most Profit Assigning Work/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

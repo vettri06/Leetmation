@@ -1,0 +1,38 @@
+{
+    "problemName": "non-decreasing-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkPossibility(self, nums: List[int]) -> bool:\r\n        def is_sorted(nums: List[int]) -> bool:\r\n            return all(a <= b for a, b in pairwise(nums))\r\n\r\n        n = len(nums)\r\n        for i in range(n - 1):\r\n            a, b = nums[i], nums[i + 1]\r\n            if a > b:\r\n                nums[i] = b\r\n                if is_sorted(nums):\r\n                    return True\r\n                nums[i] = nums[i + 1] = a\r\n                return is_sorted(nums)\r\n        return True",
+    "problemId": 665,
+    "title": "Non-decreasing Array",
+    "problemUrl": "https://leetcode.com/problems/non-decreasing-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0665.Non-decreasing Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0665.Non-decreasing Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0665.Non-decreasing Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0665.Non-decreasing Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0665.Non-decreasing Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0665.Non-decreasing Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

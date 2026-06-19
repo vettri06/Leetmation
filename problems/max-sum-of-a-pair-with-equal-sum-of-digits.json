@@ -1,0 +1,43 @@
+{
+    "problemName": "max-sum-of-a-pair-with-equal-sum-of-digits",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumSum(self, nums: List[int]) -> int:\r\n        d = defaultdict(int)\r\n        ans = -1\r\n        for v in nums:\r\n            x, y = 0, v\r\n            while y:\r\n                x += y % 10\r\n                y //= 10\r\n            if x in d:\r\n                ans = max(ans, d[x] + v)\r\n            d[x] = max(d[x], v)\r\n        return ans",
+    "problemId": 2342,
+    "title": "Max Sum of a Pair With Equal Sum of Digits",
+    "problemUrl": "https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2342.Max Sum of a Pair With Equal Sum of Digits/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2342.Max Sum of a Pair With Equal Sum of Digits/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2342.Max Sum of a Pair With Equal Sum of Digits/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2342.Max Sum of a Pair With Equal Sum of Digits/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2342.Max Sum of a Pair With Equal Sum of Digits/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2342.Max Sum of a Pair With Equal Sum of Digits/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2342.Max Sum of a Pair With Equal Sum of Digits/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

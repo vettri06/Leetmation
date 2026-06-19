@@ -1,0 +1,38 @@
+{
+    "problemName": "apply-operations-to-make-string-empty",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lastNonEmptyString(self, s: str) -> str:\r\n        cnt = Counter(s)\r\n        mx = cnt.most_common(1)[0][1]\r\n        last = {c: i for i, c in enumerate(s)}\r\n        return \"\".join(c for i, c in enumerate(s) if cnt[c] == mx and last[c] == i)",
+    "problemId": 3039,
+    "title": "Apply Operations to Make String Empty",
+    "problemUrl": "https://leetcode.com/problems/apply-operations-to-make-string-empty/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3039.Apply Operations to Make String Empty/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3039.Apply Operations to Make String Empty/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3039.Apply Operations to Make String Empty/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3039.Apply Operations to Make String Empty/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3039.Apply Operations to Make String Empty/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3039.Apply Operations to Make String Empty/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

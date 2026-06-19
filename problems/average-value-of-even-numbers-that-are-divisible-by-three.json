@@ -1,0 +1,53 @@
+{
+    "problemName": "average-value-of-even-numbers-that-are-divisible-by-three",
+    "language": "python3",
+    "code": "class Solution:\r\n    def averageValue(self, nums: List[int]) -> int:\r\n        s = n = 0\r\n        for x in nums:\r\n            if x % 6 == 0:\r\n                s += x\r\n                n += 1\r\n        return 0 if n == 0 else s // n",
+    "problemId": 2455,
+    "title": "Average Value of Even Numbers That Are Divisible by Three",
+    "problemUrl": "https://leetcode.com/problems/average-value-of-even-numbers-that-are-divisible-by-three/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2455.Average Value of Even Numbers That Are Divisible by Three/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2455.Average Value of Even Numbers That Are Divisible by Three/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2455.Average Value of Even Numbers That Are Divisible by Three/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2455.Average Value of Even Numbers That Are Divisible by Three/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2455.Average Value of Even Numbers That Are Divisible by Three/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2455.Average Value of Even Numbers That Are Divisible by Three/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2455.Average Value of Even Numbers That Are Divisible by Three/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2455.Average Value of Even Numbers That Are Divisible by Three/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2455.Average Value of Even Numbers That Are Divisible by Three/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "longest-substring-with-at-least-k-repeating-characters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestSubstring(self, s: str, k: int) -> int:\r\n        def dfs(l, r):\r\n            cnt = Counter(s[l : r + 1])\r\n            split = next((c for c, v in cnt.items() if v < k), '')\r\n            if not split:\r\n                return r - l + 1\r\n            i = l\r\n            ans = 0\r\n            while i <= r:\r\n                while i <= r and s[i] == split:\r\n                    i += 1\r\n                if i >= r:\r\n                    break\r\n                j = i\r\n                while j <= r and s[j] != split:\r\n                    j += 1\r\n                t = dfs(i, j - 1)\r\n                ans = max(ans, t)\r\n                i = j\r\n            return ans\r\n\r\n        return dfs(0, len(s) - 1)",
+    "problemId": 395,
+    "title": "Longest Substring with At Least K Repeating Characters",
+    "problemUrl": "https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0395.Longest Substring with At Least K Repeating Characters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0395.Longest Substring with At Least K Repeating Characters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0395.Longest Substring with At Least K Repeating Characters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0395.Longest Substring with At Least K Repeating Characters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0395.Longest Substring with At Least K Repeating Characters/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

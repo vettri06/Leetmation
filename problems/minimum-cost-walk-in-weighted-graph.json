@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-walk-in-weighted-graph",
+    "language": "python3",
+    "code": "class UnionFind:\r\n    def __init__(self, n):\r\n        self.p = list(range(n))\r\n        self.size = [1] * n\r\n\r\n    def find(self, x):\r\n        if self.p[x] != x:\r\n            self.p[x] = self.find(self.p[x])\r\n        return self.p[x]\r\n\r\n    def union(self, a, b):\r\n        pa, pb = self.find(a), self.find(b)\r\n        if pa == pb:\r\n            return False\r\n        if self.size[pa] > self.size[pb]:\r\n            self.p[pb] = pa\r\n            self.size[pa] += self.size[pb]\r\n        else:\r\n            self.p[pa] = pb\r\n            self.size[pb] += self.size[pa]\r\n        return True\r\n\r\n\r\nclass Solution:\r\n    def minimumCost(\r\n        self, n: int, edges: List[List[int]], query: List[List[int]]\r\n    ) -> List[int]:\r\n        g = [-1] * n\r\n        uf = UnionFind(n)\r\n        for u, v, _ in edges:\r\n            uf.union(u, v)\r\n        for u, _, w in edges:\r\n            root = uf.find(u)\r\n            g[root] &= w\r\n\r\n        def f(u: int, v: int) -> int:\r\n            if u == v:\r\n                return 0\r\n            a, b = uf.find(u), uf.find(v)\r\n            return g[a] if a == b else -1\r\n\r\n        return [f(s, t) for s, t in query]",
+    "problemId": 3108,
+    "title": "Minimum Cost Walk in Weighted Graph",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-walk-in-weighted-graph/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3108.Minimum Cost Walk in Weighted Graph/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3108.Minimum Cost Walk in Weighted Graph/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3108.Minimum Cost Walk in Weighted Graph/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3108.Minimum Cost Walk in Weighted Graph/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3108.Minimum Cost Walk in Weighted Graph/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3108.Minimum Cost Walk in Weighted Graph/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

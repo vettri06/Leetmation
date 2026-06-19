@@ -1,0 +1,63 @@
+{
+    "problemName": "n-ary-tree-postorder-traversal",
+    "language": "python3",
+    "code": "\"\"\"\r\n# Definition for a Node.\r\nclass Node:\r\n    def __init__(self, val=None, children=None):\r\n        self.val = val\r\n        self.children = children\r\n\"\"\"\r\n\r\n\r\nclass Solution:\r\n    def postorder(self, root: 'Node') -> List[int]:\r\n        def dfs(root):\r\n            if root is None:\r\n                return\r\n            for child in root.children:\r\n                dfs(child)\r\n            ans.append(root.val)\r\n\r\n        ans = []\r\n        dfs(root)\r\n        return ans",
+    "problemId": 590,
+    "title": "N-ary Tree Postorder Traversal",
+    "problemUrl": "https://leetcode.com/problems/n-ary-tree-postorder-traversal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0590.N-ary Tree Postorder Traversal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0590.N-ary Tree Postorder Traversal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0590.N-ary Tree Postorder Traversal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0590.N-ary Tree Postorder Traversal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0590.N-ary Tree Postorder Traversal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0590.N-ary Tree Postorder Traversal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0590.N-ary Tree Postorder Traversal/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0590.N-ary Tree Postorder Traversal/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0590.N-ary Tree Postorder Traversal/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0590.N-ary Tree Postorder Traversal/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0590.N-ary Tree Postorder Traversal/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

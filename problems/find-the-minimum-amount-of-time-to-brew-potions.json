@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-minimum-amount-of-time-to-brew-potions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minTime(self, skill: List[int], mana: List[int]) -> int:\r\n        max = lambda a, b: a if a > b else b\r\n        n = len(skill)\r\n        f = [0] * n\r\n        for x in mana:\r\n            tot = 0\r\n            for i in range(n):\r\n                tot = max(tot, f[i]) + skill[i] * x\r\n            f[-1] = tot\r\n            for i in range(n - 2, -1, -1):\r\n                f[i] = f[i + 1] - skill[i + 1] * x\r\n        return f[-1]",
+    "problemId": 3494,
+    "title": "Find the Minimum Amount of Time to Brew Potions",
+    "problemUrl": "https://leetcode.com/problems/find-the-minimum-amount-of-time-to-brew-potions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3494.Find the Minimum Amount of Time to Brew Potions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3494.Find the Minimum Amount of Time to Brew Potions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3494.Find the Minimum Amount of Time to Brew Potions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3494.Find the Minimum Amount of Time to Brew Potions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3494.Find the Minimum Amount of Time to Brew Potions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3494.Find the Minimum Amount of Time to Brew Potions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

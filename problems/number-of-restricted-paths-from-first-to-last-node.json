@@ -1,0 +1,43 @@
+{
+    "problemName": "number-of-restricted-paths-from-first-to-last-node",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countRestrictedPaths(self, n: int, edges: List[List[int]]) -> int:\r\n        @cache\r\n        def dfs(i):\r\n            if i == n:\r\n                return 1\r\n            ans = 0\r\n            for j, _ in g[i]:\r\n                if dist[i] > dist[j]:\r\n                    ans = (ans + dfs(j)) % mod\r\n            return ans\r\n\r\n        g = defaultdict(list)\r\n        for u, v, w in edges:\r\n            g[u].append((v, w))\r\n            g[v].append((u, w))\r\n        q = [(0, n)]\r\n        dist = [inf] * (n + 1)\r\n        dist[n] = 0\r\n        mod = 10**9 + 7\r\n        while q:\r\n            _, u = heappop(q)\r\n            for v, w in g[u]:\r\n                if dist[v] > dist[u] + w:\r\n                    dist[v] = dist[u] + w\r\n                    heappush(q, (dist[v], v))\r\n        return dfs(1)",
+    "problemId": 1786,
+    "title": "Number of Restricted Paths From First to Last Node",
+    "problemUrl": "https://leetcode.com/problems/number-of-restricted-paths-from-first-to-last-node/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1786.Number of Restricted Paths From First to Last Node/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1786.Number of Restricted Paths From First to Last Node/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1786.Number of Restricted Paths From First to Last Node/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1786.Number of Restricted Paths From First to Last Node/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1786.Number of Restricted Paths From First to Last Node/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1786.Number of Restricted Paths From First to Last Node/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1786.Number of Restricted Paths From First to Last Node/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

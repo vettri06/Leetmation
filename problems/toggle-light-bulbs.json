@@ -1,0 +1,38 @@
+{
+    "problemName": "toggle-light-bulbs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def toggleLightBulbs(self, bulbs: list[int]) -> list[int]:\r\n        st = [0] * 101\r\n        for x in bulbs:\r\n            st[x] ^= 1\r\n        return [i for i, x in enumerate(st) if x]",
+    "problemId": 3842,
+    "title": "Toggle Light Bulbs",
+    "problemUrl": "https://leetcode.com/problems/toggle-light-bulbs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3842.Toggle Light Bulbs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3842.Toggle Light Bulbs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3842.Toggle Light Bulbs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3842.Toggle Light Bulbs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3842.Toggle Light Bulbs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3842.Toggle Light Bulbs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

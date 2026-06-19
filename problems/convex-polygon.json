@@ -1,0 +1,33 @@
+{
+    "problemName": "convex-polygon",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isConvex(self, points: List[List[int]]) -> bool:\r\n        n = len(points)\r\n        pre = cur = 0\r\n        for i in range(n):\r\n            x1 = points[(i + 1) % n][0] - points[i][0]\r\n            y1 = points[(i + 1) % n][1] - points[i][1]\r\n            x2 = points[(i + 2) % n][0] - points[i][0]\r\n            y2 = points[(i + 2) % n][1] - points[i][1]\r\n            cur = x1 * y2 - x2 * y1\r\n            if cur != 0:\r\n                if cur * pre < 0:\r\n                    return False\r\n                pre = cur\r\n        return True",
+    "problemId": 469,
+    "title": "Convex Polygon",
+    "problemUrl": "https://leetcode.com/problems/convex-polygon/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0469.Convex Polygon/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0469.Convex Polygon/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0469.Convex Polygon/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0469.Convex Polygon/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0469.Convex Polygon/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

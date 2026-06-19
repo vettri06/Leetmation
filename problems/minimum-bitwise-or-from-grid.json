@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-bitwise-or-from-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumOR(self, grid: List[List[int]]) -> int:\r\n        mx = max(map(max, grid))\r\n        m = mx.bit_length()\r\n        ans = 0\r\n        for i in range(m - 1, -1, -1):\r\n            mask = ans | ((1 << i) - 1)\r\n            for row in grid:\r\n                found = False\r\n                for x in row:\r\n                    if (x | mask) == mask:\r\n                        found = True\r\n                        break\r\n                if not found:\r\n                    ans |= 1 << i\r\n                    break\r\n        return ans",
+    "problemId": 3858,
+    "title": "Minimum Bitwise OR From Grid",
+    "problemUrl": "https://leetcode.com/problems/minimum-bitwise-or-from-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3858.Minimum Bitwise OR From Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3858.Minimum Bitwise OR From Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3858.Minimum Bitwise OR From Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3858.Minimum Bitwise OR From Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3858.Minimum Bitwise OR From Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

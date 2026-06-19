@@ -1,0 +1,43 @@
+{
+    "problemName": "find-maximal-uncovered-ranges",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMaximalUncoveredRanges(\r\n        self, n: int, ranges: List[List[int]]\r\n    ) -> List[List[int]]:\r\n        ranges.sort()\r\n        last = -1\r\n        ans = []\r\n        for l, r in ranges:\r\n            if last + 1 < l:\r\n                ans.append([last + 1, l - 1])\r\n            last = max(last, r)\r\n        if last + 1 < n:\r\n            ans.append([last + 1, n - 1])\r\n        return ans",
+    "problemId": 2655,
+    "title": "Find Maximal Uncovered Ranges",
+    "problemUrl": "https://leetcode.com/problems/find-maximal-uncovered-ranges/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2655.Find Maximal Uncovered Ranges/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2655.Find Maximal Uncovered Ranges/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2655.Find Maximal Uncovered Ranges/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2655.Find Maximal Uncovered Ranges/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2655.Find Maximal Uncovered Ranges/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2655.Find Maximal Uncovered Ranges/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2655.Find Maximal Uncovered Ranges/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "delete-columns-to-make-sorted-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minDeletionSize(self, strs: List[str]) -> int:\r\n        n = len(strs)\r\n        m = len(strs[0])\r\n        st = [False] * (n - 1)\r\n        ans = 0\r\n        for j in range(m):\r\n            must_del = False\r\n            for i in range(n - 1):\r\n                if not st[i] and strs[i][j] > strs[i + 1][j]:\r\n                    must_del = True\r\n                    break\r\n            if must_del:\r\n                ans += 1\r\n            else:\r\n                for i in range(n - 1):\r\n                    if not st[i] and strs[i][j] < strs[i + 1][j]:\r\n                        st[i] = True\r\n        return ans",
+    "problemId": 955,
+    "title": "Delete Columns to Make Sorted II",
+    "problemUrl": "https://leetcode.com/problems/delete-columns-to-make-sorted-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0955.Delete Columns to Make Sorted II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0955.Delete Columns to Make Sorted II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0955.Delete Columns to Make Sorted II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0955.Delete Columns to Make Sorted II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0955.Delete Columns to Make Sorted II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0955.Delete Columns to Make Sorted II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0955.Delete Columns to Make Sorted II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

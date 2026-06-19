@@ -1,0 +1,53 @@
+{
+    "problemName": "find-closest-person",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findClosest(self, x: int, y: int, z: int) -> int:\r\n        a = abs(x - z)\r\n        b = abs(y - z)\r\n        return 0 if a == b else (1 if a < b else 2)",
+    "problemId": 3516,
+    "title": "Find Closest Person",
+    "problemUrl": "https://leetcode.com/problems/find-closest-person/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3516.Find Closest Person/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3516.Find Closest Person/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3516.Find Closest Person/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3516.Find Closest Person/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3516.Find Closest Person/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3516.Find Closest Person/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3516.Find Closest Person/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3516.Find Closest Person/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3516.Find Closest Person/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

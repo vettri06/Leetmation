@@ -1,0 +1,48 @@
+{
+    "problemName": "find-the-minimum-possible-sum-of-a-beautiful-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumPossibleSum(self, n: int, target: int) -> int:\r\n        mod = 10**9 + 7\r\n        m = target // 2\r\n        if n <= m:\r\n            return ((1 + n) * n // 2) % mod\r\n        return ((1 + m) * m // 2 + (target + target + n - m - 1) * (n - m) // 2) % mod",
+    "problemId": 2834,
+    "title": "Find the Minimum Possible Sum of a Beautiful Array",
+    "problemUrl": "https://leetcode.com/problems/find-the-minimum-possible-sum-of-a-beautiful-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2834.Find the Minimum Possible Sum of a Beautiful Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2834.Find the Minimum Possible Sum of a Beautiful Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2834.Find the Minimum Possible Sum of a Beautiful Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2834.Find the Minimum Possible Sum of a Beautiful Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2834.Find the Minimum Possible Sum of a Beautiful Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2834.Find the Minimum Possible Sum of a Beautiful Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2834.Find the Minimum Possible Sum of a Beautiful Array/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2834.Find the Minimum Possible Sum of a Beautiful Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

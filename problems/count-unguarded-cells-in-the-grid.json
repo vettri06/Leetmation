@@ -1,0 +1,53 @@
+{
+    "problemName": "count-unguarded-cells-in-the-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countUnguarded(\r\n        self, m: int, n: int, guards: List[List[int]], walls: List[List[int]]\r\n    ) -> int:\r\n        g = [[0] * n for _ in range(m)]\r\n        for i, j in guards:\r\n            g[i][j] = 2\r\n        for i, j in walls:\r\n            g[i][j] = 2\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        for i, j in guards:\r\n            for a, b in pairwise(dirs):\r\n                x, y = i, j\r\n                while 0 <= x + a < m and 0 <= y + b < n and g[x + a][y + b] < 2:\r\n                    x, y = x + a, y + b\r\n                    g[x][y] = 1\r\n        return sum(v == 0 for row in g for v in row)",
+    "problemId": 2257,
+    "title": "Count Unguarded Cells in the Grid",
+    "problemUrl": "https://leetcode.com/problems/count-unguarded-cells-in-the-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2257.Count Unguarded Cells in the Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2257.Count Unguarded Cells in the Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2257.Count Unguarded Cells in the Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2257.Count Unguarded Cells in the Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2257.Count Unguarded Cells in the Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2257.Count Unguarded Cells in the Grid/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2257.Count Unguarded Cells in the Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2257.Count Unguarded Cells in the Grid/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2257.Count Unguarded Cells in the Grid/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

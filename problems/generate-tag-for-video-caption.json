@@ -1,0 +1,38 @@
+{
+    "problemName": "generate-tag-for-video-caption",
+    "language": "python3",
+    "code": "class Solution:\r\n    def generateTag(self, caption: str) -> str:\r\n        words = [s.capitalize() for s in caption.split()]\r\n        if words:\r\n            words[0] = words[0].lower()\r\n        return \"#\" + \"\".join(words)[:99]",
+    "problemId": 3582,
+    "title": "Generate Tag for Video Caption",
+    "problemUrl": "https://leetcode.com/problems/generate-tag-for-video-caption/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3582.Generate Tag for Video Caption/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3582.Generate Tag for Video Caption/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3582.Generate Tag for Video Caption/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3582.Generate Tag for Video Caption/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3582.Generate Tag for Video Caption/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3582.Generate Tag for Video Caption/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

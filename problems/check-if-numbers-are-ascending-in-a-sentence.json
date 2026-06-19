@@ -1,0 +1,48 @@
+{
+    "problemName": "check-if-numbers-are-ascending-in-a-sentence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def areNumbersAscending(self, s: str) -> bool:\r\n        pre = 0\r\n        for t in s.split():\r\n            if t[0].isdigit():\r\n                if (cur := int(t)) <= pre:\r\n                    return False\r\n                pre = cur\r\n        return True",
+    "problemId": 2042,
+    "title": "Check if Numbers Are Ascending in a Sentence",
+    "problemUrl": "https://leetcode.com/problems/check-if-numbers-are-ascending-in-a-sentence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2042.Check if Numbers Are Ascending in a Sentence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2042.Check if Numbers Are Ascending in a Sentence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2042.Check if Numbers Are Ascending in a Sentence/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2042.Check if Numbers Are Ascending in a Sentence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2042.Check if Numbers Are Ascending in a Sentence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2042.Check if Numbers Are Ascending in a Sentence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2042.Check if Numbers Are Ascending in a Sentence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2042.Check if Numbers Are Ascending in a Sentence/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

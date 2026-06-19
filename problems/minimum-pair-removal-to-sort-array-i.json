@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-pair-removal-to-sort-array-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumPairRemoval(self, nums: List[int]) -> int:\r\n        arr = nums[:]\r\n        ans = 0\r\n\r\n        def is_non_decreasing(a: List[int]) -> bool:\r\n            for i in range(1, len(a)):\r\n                if a[i] < a[i - 1]:\r\n                    return False\r\n            return True\r\n\r\n        while not is_non_decreasing(arr):\r\n            k = 0\r\n            s = arr[0] + arr[1]\r\n            for i in range(1, len(arr) - 1):\r\n                t = arr[i] + arr[i + 1]\r\n                if s > t:\r\n                    s = t\r\n                    k = i\r\n            arr[k] = s\r\n            arr.pop(k + 1)\r\n            ans += 1\r\n        return ans",
+    "problemId": 3507,
+    "title": "Minimum Pair Removal to Sort Array I",
+    "problemUrl": "https://leetcode.com/problems/minimum-pair-removal-to-sort-array-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3507.Minimum Pair Removal to Sort Array I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3507.Minimum Pair Removal to Sort Array I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3507.Minimum Pair Removal to Sort Array I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3507.Minimum Pair Removal to Sort Array I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3507.Minimum Pair Removal to Sort Array I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3507.Minimum Pair Removal to Sort Array I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3507.Minimum Pair Removal to Sort Array I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

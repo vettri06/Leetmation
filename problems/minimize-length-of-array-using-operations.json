@@ -1,0 +1,38 @@
+{
+    "problemName": "minimize-length-of-array-using-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumArrayLength(self, nums: List[int]) -> int:\r\n        mi = min(nums)\r\n        if any(x % mi for x in nums):\r\n            return 1\r\n        return (nums.count(mi) + 1) // 2",
+    "problemId": 3012,
+    "title": "Minimize Length of Array Using Operations",
+    "problemUrl": "https://leetcode.com/problems/minimize-length-of-array-using-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3012.Minimize Length of Array Using Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3012.Minimize Length of Array Using Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3012.Minimize Length of Array Using Operations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3012.Minimize Length of Array Using Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3012.Minimize Length of Array Using Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3012.Minimize Length of Array Using Operations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

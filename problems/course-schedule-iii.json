@@ -1,0 +1,38 @@
+{
+    "problemName": "course-schedule-iii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def scheduleCourse(self, courses: List[List[int]]) -> int:\r\n        courses.sort(key=lambda x: x[1])\r\n        pq = []\r\n        s = 0\r\n        for duration, last in courses:\r\n            heappush(pq, -duration)\r\n            s += duration\r\n            while s > last:\r\n                s += heappop(pq)\r\n        return len(pq)",
+    "problemId": 630,
+    "title": "Course Schedule III",
+    "problemUrl": "https://leetcode.com/problems/course-schedule-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0630.Course Schedule III/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0630.Course Schedule III/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0630.Course Schedule III/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0630.Course Schedule III/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0630.Course Schedule III/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0630.Course Schedule III/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "subtree-of-another-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:\r\n        def same(p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:\r\n            if p is None or q is None:\r\n                return p is q\r\n            return p.val == q.val and same(p.left, q.left) and same(p.right, q.right)\r\n\r\n        if root is None:\r\n            return False\r\n        return (\r\n            same(root, subRoot)\r\n            or self.isSubtree(root.left, subRoot)\r\n            or self.isSubtree(root.right, subRoot)\r\n        )",
+    "problemId": 572,
+    "title": "Subtree of Another Tree",
+    "problemUrl": "https://leetcode.com/problems/subtree-of-another-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0572.Subtree of Another Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0572.Subtree of Another Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0572.Subtree of Another Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0572.Subtree of Another Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0572.Subtree of Another Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0572.Subtree of Another Tree/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0572.Subtree of Another Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0572.Subtree of Another Tree/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

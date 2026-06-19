@@ -1,0 +1,48 @@
+{
+    "problemName": "number-of-students-doing-homework-at-a-given-time",
+    "language": "python3",
+    "code": "class Solution:\r\n    def busyStudent(\r\n        self, startTime: List[int], endTime: List[int], queryTime: int\r\n    ) -> int:\r\n        return sum(x <= queryTime <= y for x, y in zip(startTime, endTime))",
+    "problemId": 1450,
+    "title": "Number of Students Doing Homework at a Given Time",
+    "problemUrl": "https://leetcode.com/problems/number-of-students-doing-homework-at-a-given-time/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1450.Number of Students Doing Homework at a Given Time/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1450.Number of Students Doing Homework at a Given Time/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1450.Number of Students Doing Homework at a Given Time/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1450.Number of Students Doing Homework at a Given Time/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1450.Number of Students Doing Homework at a Given Time/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1450.Number of Students Doing Homework at a Given Time/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1450.Number of Students Doing Homework at a Given Time/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1450.Number of Students Doing Homework at a Given Time/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

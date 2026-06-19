@@ -1,0 +1,18 @@
+{
+    "problemName": "method-chaining",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef findHeavyAnimals(animals: pd.DataFrame) -> pd.DataFrame:\r\n    return animals[animals['weight'] > 100].sort_values('weight', ascending=False)[\r\n        ['name']\r\n    ]",
+    "problemId": 2891,
+    "title": "Method Chaining",
+    "problemUrl": "https://leetcode.com/problems/method-chaining/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2891.Method Chaining/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2891.Method Chaining/Solution.py",
+            "sourceFile": "Solution.py"
+        }
+    ]
+}

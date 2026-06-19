@@ -1,0 +1,18 @@
+{
+    "problemName": "cache-with-time-limit",
+    "language": "typescript",
+    "code": "class TimeLimitedCache {\r\n    #cache: Map<number, [value: number, expire: number]> = new Map();\r\n\r\n    set(key: number, value: number, duration: number): boolean {\r\n        const isExist = this.#cache.has(key);\r\n\r\n        if (!this.#isExpired(key)) {\r\n            this.#cache.set(key, [value, Date.now() + duration]);\r\n        }\r\n\r\n        return isExist;\r\n    }\r\n\r\n    get(key: number): number {\r\n        if (this.#isExpired(key)) return -1;\r\n        const res = this.#cache.get(key)?.[0] ?? -1;\r\n        return res;\r\n    }\r\n\r\n    count(): number {\r\n        const xs = Array.from(this.#cache).filter(([key]) => !this.#isExpired(key));\r\n        return xs.length;\r\n    }\r\n\r\n    #isExpired = (key: number) =>\r\n        this.#cache.has(key) &&\r\n        (this.#cache.get(key)?.[1] ?? Number.NEGATIVE_INFINITY) < Date.now();\r\n}\r\n\r\n/**\r\n * Your TimeLimitedCache object will be instantiated and called as such:\r\n * var obj = new TimeLimitedCache()\r\n * obj.set(1, 42, 1000); // false\r\n * obj.get(1) // 42\r\n * obj.count() // 1\r\n */",
+    "problemId": 2622,
+    "title": "Cache With Time Limit",
+    "problemUrl": "https://leetcode.com/problems/cache-with-time-limit/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2622.Cache With Time Limit/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2622.Cache With Time Limit/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

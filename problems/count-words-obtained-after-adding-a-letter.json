@@ -1,0 +1,33 @@
+{
+    "problemName": "count-words-obtained-after-adding-a-letter",
+    "language": "python3",
+    "code": "class Solution:\r\n    def wordCount(self, startWords: List[str], targetWords: List[str]) -> int:\r\n        s = {sum(1 << (ord(c) - 97) for c in w) for w in startWords}\r\n        ans = 0\r\n        for w in targetWords:\r\n            x = sum(1 << (ord(c) - 97) for c in w)\r\n            for c in w:\r\n                if x ^ (1 << (ord(c) - 97)) in s:\r\n                    ans += 1\r\n                    break\r\n        return ans",
+    "problemId": 2135,
+    "title": "Count Words Obtained After Adding a Letter",
+    "problemUrl": "https://leetcode.com/problems/count-words-obtained-after-adding-a-letter/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2135.Count Words Obtained After Adding a Letter/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2135.Count Words Obtained After Adding a Letter/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2135.Count Words Obtained After Adding a Letter/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2135.Count Words Obtained After Adding a Letter/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2135.Count Words Obtained After Adding a Letter/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

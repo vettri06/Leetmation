@@ -1,0 +1,43 @@
+{
+    "problemName": "construct-binary-search-tree-from-preorder-traversal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def bstFromPreorder(self, preorder: List[int]) -> Optional[TreeNode]:\r\n        def dfs(i: int, j: int) -> Optional[TreeNode]:\r\n            if i > j:\r\n                return None\r\n            root = TreeNode(preorder[i])\r\n            l, r = i + 1, j + 1\r\n            while l < r:\r\n                mid = (l + r) >> 1\r\n                if preorder[mid] > preorder[i]:\r\n                    r = mid\r\n                else:\r\n                    l = mid + 1\r\n            root.left = dfs(i + 1, l - 1)\r\n            root.right = dfs(l, j)\r\n            return root\r\n\r\n        return dfs(0, len(preorder) - 1)",
+    "problemId": 1008,
+    "title": "Construct Binary Search Tree from Preorder Traversal",
+    "problemUrl": "https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1008.Construct Binary Search Tree from Preorder Traversal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1008.Construct Binary Search Tree from Preorder Traversal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1008.Construct Binary Search Tree from Preorder Traversal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1008.Construct Binary Search Tree from Preorder Traversal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1008.Construct Binary Search Tree from Preorder Traversal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1008.Construct Binary Search Tree from Preorder Traversal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1008.Construct Binary Search Tree from Preorder Traversal/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

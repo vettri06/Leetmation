@@ -1,0 +1,38 @@
+{
+    "problemName": "compute-decimal-representation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def decimalRepresentation(self, n: int) -> List[int]:\r\n        ans = []\r\n        p = 1\r\n        while n:\r\n            n, v = divmod(n, 10)\r\n            if v:\r\n                ans.append(p * v)\r\n            p *= 10\r\n        ans.reverse()\r\n        return ans",
+    "problemId": 3697,
+    "title": "Compute Decimal Representation",
+    "problemUrl": "https://leetcode.com/problems/compute-decimal-representation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3697.Compute Decimal Representation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3697.Compute Decimal Representation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3697.Compute Decimal Representation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3697.Compute Decimal Representation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3697.Compute Decimal Representation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3697.Compute Decimal Representation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

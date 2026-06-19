@@ -1,0 +1,23 @@
+{
+    "problemName": "books-with-null-ratings",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_unrated_books(books: pd.DataFrame) -> pd.DataFrame:\r\n    unrated_books = books[books[\"rating\"].isnull()]\r\n    return unrated_books[[\"book_id\", \"title\", \"author\", \"published_year\"]].sort_values(\r\n        by=\"book_id\"\r\n    )",
+    "problemId": 3358,
+    "title": "Books with NULL Ratings",
+    "problemUrl": "https://leetcode.com/problems/books-with-null-ratings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3358.Books with NULL Ratings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3358.Books with NULL Ratings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3358.Books with NULL Ratings/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

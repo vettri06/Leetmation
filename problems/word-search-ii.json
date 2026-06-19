@@ -1,0 +1,38 @@
+{
+    "problemName": "word-search-ii",
+    "language": "python3",
+    "code": "class Trie:\r\n    def __init__(self):\r\n        self.children: List[Trie | None] = [None] * 26\r\n        self.ref: int = -1\r\n\r\n    def insert(self, w: str, ref: int):\r\n        node = self\r\n        for c in w:\r\n            idx = ord(c) - ord('a')\r\n            if node.children[idx] is None:\r\n                node.children[idx] = Trie()\r\n            node = node.children[idx]\r\n        node.ref = ref\r\n\r\n\r\nclass Solution:\r\n    def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:\r\n        def dfs(node: Trie, i: int, j: int):\r\n            idx = ord(board[i][j]) - ord('a')\r\n            if node.children[idx] is None:\r\n                return\r\n            node = node.children[idx]\r\n            if node.ref >= 0:\r\n                ans.append(words[node.ref])\r\n                node.ref = -1\r\n            c = board[i][j]\r\n            board[i][j] = '#'\r\n            for a, b in pairwise((-1, 0, 1, 0, -1)):\r\n                x, y = i + a, j + b\r\n                if 0 <= x < m and 0 <= y < n and board[x][y] != '#':\r\n                    dfs(node, x, y)\r\n            board[i][j] = c\r\n\r\n        tree = Trie()\r\n        for i, w in enumerate(words):\r\n            tree.insert(w, i)\r\n        m, n = len(board), len(board[0])\r\n        ans = []\r\n        for i in range(m):\r\n            for j in range(n):\r\n                dfs(tree, i, j)\r\n        return ans",
+    "problemId": 212,
+    "title": "Word Search II",
+    "problemUrl": "https://leetcode.com/problems/word-search-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0212.Word Search II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0212.Word Search II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0212.Word Search II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0212.Word Search II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0212.Word Search II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0212.Word Search II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

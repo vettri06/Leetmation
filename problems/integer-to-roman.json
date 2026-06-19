@@ -1,0 +1,53 @@
+{
+    "problemName": "integer-to-roman",
+    "language": "python3",
+    "code": "class Solution:\r\n    def intToRoman(self, num: int) -> str:\r\n        cs = ('M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I')\r\n        vs = (1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1)\r\n        ans = []\r\n        for c, v in zip(cs, vs):\r\n            while num >= v:\r\n                num -= v\r\n                ans.append(c)\r\n        return ''.join(ans)",
+    "problemId": 12,
+    "title": "Integer to Roman",
+    "problemUrl": "https://leetcode.com/problems/integer-to-roman/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0012.Integer to Roman/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0012.Integer to Roman/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0012.Integer to Roman/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0012.Integer to Roman/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0012.Integer to Roman/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0012.Integer to Roman/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0012.Integer to Roman/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0012.Integer to Roman/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0012.Integer to Roman/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

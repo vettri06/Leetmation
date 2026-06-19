@@ -1,0 +1,48 @@
+{
+    "problemName": "merge-sorted-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:\r\n        k = m + n - 1\r\n        i, j = m - 1, n - 1\r\n        while j >= 0:\r\n            if i >= 0 and nums1[i] > nums2[j]:\r\n                nums1[k] = nums1[i]\r\n                i -= 1\r\n            else:\r\n                nums1[k] = nums2[j]\r\n                j -= 1\r\n            k -= 1",
+    "problemId": 88,
+    "title": "Merge Sorted Array",
+    "problemUrl": "https://leetcode.com/problems/merge-sorted-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0088.Merge Sorted Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0088.Merge Sorted Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0088.Merge Sorted Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0088.Merge Sorted Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0088.Merge Sorted Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0088.Merge Sorted Array/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0088.Merge Sorted Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0088.Merge Sorted Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

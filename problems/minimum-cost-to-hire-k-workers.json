@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-cost-to-hire-k-workers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mincostToHireWorkers(\r\n        self, quality: List[int], wage: List[int], k: int\r\n    ) -> float:\r\n        t = sorted(zip(quality, wage), key=lambda x: x[1] / x[0])\r\n        ans, tot = inf, 0\r\n        h = []\r\n        for q, w in t:\r\n            tot += q\r\n            heappush(h, -q)\r\n            if len(h) == k:\r\n                ans = min(ans, w / q * tot)\r\n                tot += heappop(h)\r\n        return ans",
+    "problemId": 857,
+    "title": "Minimum Cost to Hire K Workers",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-hire-k-workers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0857.Minimum Cost to Hire K Workers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0857.Minimum Cost to Hire K Workers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0857.Minimum Cost to Hire K Workers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0857.Minimum Cost to Hire K Workers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0857.Minimum Cost to Hire K Workers/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

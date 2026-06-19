@@ -1,0 +1,33 @@
+{
+    "problemName": "properties-graph",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfComponents(self, properties: List[List[int]], k: int) -> int:\r\n        def dfs(i: int) -> None:\r\n            vis[i] = True\r\n            for j in g[i]:\r\n                if not vis[j]:\r\n                    dfs(j)\r\n\r\n        n = len(properties)\r\n        ss = list(map(set, properties))\r\n        g = [[] for _ in range(n)]\r\n        for i, s1 in enumerate(ss):\r\n            for j in range(i):\r\n                s2 = ss[j]\r\n                if len(s1 & s2) >= k:\r\n                    g[i].append(j)\r\n                    g[j].append(i)\r\n        ans = 0\r\n        vis = [False] * n\r\n        for i in range(n):\r\n            if not vis[i]:\r\n                dfs(i)\r\n                ans += 1\r\n        return ans",
+    "problemId": 3493,
+    "title": "Properties Graph",
+    "problemUrl": "https://leetcode.com/problems/properties-graph/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3493.Properties Graph/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3493.Properties Graph/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3493.Properties Graph/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3493.Properties Graph/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3493.Properties Graph/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

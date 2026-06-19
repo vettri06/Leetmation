@@ -1,0 +1,18 @@
+{
+    "problemName": "number-of-trusted-contacts-of-a-customer",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    invoice_id,\r\n    t2.customer_name,\r\n    price,\r\n    COUNT(t3.user_id) AS contacts_cnt,\r\n    COUNT(t4.email) AS trusted_contacts_cnt\r\nFROM\r\n    Invoices AS t1\r\n    LEFT JOIN Customers AS t2 ON t1.user_id = t2.customer_id\r\n    LEFT JOIN Contacts AS t3 ON t1.user_id = t3.user_id\r\n    LEFT JOIN Customers AS t4 ON t3.contact_email = t4.email\r\nGROUP BY invoice_id\r\nORDER BY invoice_id;",
+    "problemId": 1364,
+    "title": "Number of Trusted Contacts of a Customer",
+    "problemUrl": "https://leetcode.com/problems/number-of-trusted-contacts-of-a-customer/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1364.Number of Trusted Contacts of a Customer/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1364.Number of Trusted Contacts of a Customer/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

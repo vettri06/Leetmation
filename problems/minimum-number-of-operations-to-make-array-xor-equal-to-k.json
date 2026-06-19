@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-number-of-operations-to-make-array-xor-equal-to-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums: List[int], k: int) -> int:\r\n        return reduce(xor, nums, k).bit_count()",
+    "problemId": 2997,
+    "title": "Minimum Number of Operations to Make Array XOR Equal to K",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2997.Minimum Number of Operations to Make Array XOR Equal to K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2997.Minimum Number of Operations to Make Array XOR Equal to K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2997.Minimum Number of Operations to Make Array XOR Equal to K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2997.Minimum Number of Operations to Make Array XOR Equal to K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2997.Minimum Number of Operations to Make Array XOR Equal to K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2997.Minimum Number of Operations to Make Array XOR Equal to K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

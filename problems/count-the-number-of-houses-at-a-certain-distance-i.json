@@ -1,0 +1,38 @@
+{
+    "problemName": "count-the-number-of-houses-at-a-certain-distance-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countOfPairs(self, n: int, x: int, y: int) -> List[int]:\r\n        x, y = x - 1, y - 1\r\n        ans = [0] * n\r\n        for i in range(n):\r\n            for j in range(i + 1, n):\r\n                a = j - i\r\n                b = abs(i - x) + 1 + abs(j - y)\r\n                c = abs(i - y) + 1 + abs(j - x)\r\n                ans[min(a, b, c) - 1] += 2\r\n        return ans",
+    "problemId": 3015,
+    "title": "Count the Number of Houses at a Certain Distance I",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-houses-at-a-certain-distance-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3015.Count the Number of Houses at a Certain Distance I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3015.Count the Number of Houses at a Certain Distance I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3015.Count the Number of Houses at a Certain Distance I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3015.Count the Number of Houses at a Certain Distance I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3015.Count the Number of Houses at a Certain Distance I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3015.Count the Number of Houses at a Certain Distance I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

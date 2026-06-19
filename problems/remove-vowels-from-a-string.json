@@ -1,0 +1,38 @@
+{
+    "problemName": "remove-vowels-from-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def removeVowels(self, s: str) -> str:\r\n        return \"\".join(c for c in s if c not in \"aeiou\")",
+    "problemId": 1119,
+    "title": "Remove Vowels from a String",
+    "problemUrl": "https://leetcode.com/problems/remove-vowels-from-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1119.Remove Vowels from a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1119.Remove Vowels from a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1119.Remove Vowels from a String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1119.Remove Vowels from a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1119.Remove Vowels from a String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1119.Remove Vowels from a String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

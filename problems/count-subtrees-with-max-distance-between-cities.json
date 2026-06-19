@@ -1,0 +1,63 @@
+{
+    "problemName": "count-subtrees-with-max-distance-between-cities",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSubgraphsForEachDiameter(\r\n        self, n: int, edges: List[List[int]]\r\n    ) -> List[int]:\r\n        def dfs(u: int, d: int = 0):\r\n            nonlocal mx, nxt, msk\r\n            if mx < d:\r\n                mx, nxt = d, u\r\n            msk ^= 1 << u\r\n            for v in g[u]:\r\n                if msk >> v & 1:\r\n                    dfs(v, d + 1)\r\n\r\n        g = defaultdict(list)\r\n        for u, v in edges:\r\n            u, v = u - 1, v - 1\r\n            g[u].append(v)\r\n            g[v].append(u)\r\n        ans = [0] * (n - 1)\r\n        nxt = mx = 0\r\n        for mask in range(1, 1 << n):\r\n            if mask & (mask - 1) == 0:\r\n                continue\r\n            msk, mx = mask, 0\r\n            cur = msk.bit_length() - 1\r\n            dfs(cur)\r\n            if msk == 0:\r\n                msk, mx = mask, 0\r\n                dfs(nxt)\r\n                ans[mx - 1] += 1\r\n        return ans",
+    "problemId": 1617,
+    "title": "Count Subtrees With Max Distance Between Cities",
+    "problemUrl": "https://leetcode.com/problems/count-subtrees-with-max-distance-between-cities/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1617.Count Subtrees With Max Distance Between Cities/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1617.Count Subtrees With Max Distance Between Cities/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1617.Count Subtrees With Max Distance Between Cities/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1617.Count Subtrees With Max Distance Between Cities/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1617.Count Subtrees With Max Distance Between Cities/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1617.Count Subtrees With Max Distance Between Cities/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1617.Count Subtrees With Max Distance Between Cities/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1617.Count Subtrees With Max Distance Between Cities/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1617.Count Subtrees With Max Distance Between Cities/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1617.Count Subtrees With Max Distance Between Cities/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1617.Count Subtrees With Max Distance Between Cities/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

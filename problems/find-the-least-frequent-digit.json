@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-least-frequent-digit",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getLeastFrequentDigit(self, n: int) -> int:\r\n        cnt = [0] * 10\r\n        while n:\r\n            n, x = divmod(n, 10)\r\n            cnt[x] += 1\r\n        ans, f = 0, inf\r\n        for x, v in enumerate(cnt):\r\n            if 0 < v < f:\r\n                f = v\r\n                ans = x\r\n        return ans",
+    "problemId": 3663,
+    "title": "Find The Least Frequent Digit",
+    "problemUrl": "https://leetcode.com/problems/find-the-least-frequent-digit/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3663.Find The Least Frequent Digit/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3663.Find The Least Frequent Digit/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3663.Find The Least Frequent Digit/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3663.Find The Least Frequent Digit/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3663.Find The Least Frequent Digit/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3663.Find The Least Frequent Digit/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

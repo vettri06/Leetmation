@@ -1,0 +1,38 @@
+{
+    "problemName": "reformat-date",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reformatDate(self, date: str) -> str:\r\n        s = date.split()\r\n        s.reverse()\r\n        months = \" JanFebMarAprMayJunJulAugSepOctNovDec\"\r\n        s[1] = str(months.index(s[1]) // 3 + 1).zfill(2)\r\n        s[2] = s[2][:-2].zfill(2)\r\n        return \"-\".join(s)",
+    "problemId": 1507,
+    "title": "Reformat Date",
+    "problemUrl": "https://leetcode.com/problems/reformat-date/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1507.Reformat Date/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1507.Reformat Date/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1507.Reformat Date/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1507.Reformat Date/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1507.Reformat Date/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1507.Reformat Date/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

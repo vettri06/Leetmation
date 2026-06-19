@@ -1,0 +1,18 @@
+{
+    "problemName": "symmetric-coordinates",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    P AS (\r\n        SELECT\r\n            ROW_NUMBER() OVER () AS id,\r\n            x,\r\n            y\r\n        FROM Coordinates\r\n    )\r\nSELECT DISTINCT\r\n    p1.x,\r\n    p1.y\r\nFROM\r\n    P AS p1\r\n    JOIN P AS p2 ON p1.x = p2.y AND p1.y = p2.x AND p1.x <= p1.y AND p1.id != p2.id\r\nORDER BY 1, 2;",
+    "problemId": 2978,
+    "title": "Symmetric Coordinates",
+    "problemUrl": "https://leetcode.com/problems/symmetric-coordinates/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2978.Symmetric Coordinates/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2978.Symmetric Coordinates/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

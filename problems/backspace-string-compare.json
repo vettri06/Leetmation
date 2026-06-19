@@ -1,0 +1,43 @@
+{
+    "problemName": "backspace-string-compare",
+    "language": "python3",
+    "code": "class Solution:\r\n    def backspaceCompare(self, s: str, t: str) -> bool:\r\n        i, j, skip1, skip2 = len(s) - 1, len(t) - 1, 0, 0\r\n        while i >= 0 or j >= 0:\r\n            while i >= 0:\r\n                if s[i] == '#':\r\n                    skip1 += 1\r\n                    i -= 1\r\n                elif skip1:\r\n                    skip1 -= 1\r\n                    i -= 1\r\n                else:\r\n                    break\r\n            while j >= 0:\r\n                if t[j] == '#':\r\n                    skip2 += 1\r\n                    j -= 1\r\n                elif skip2:\r\n                    skip2 -= 1\r\n                    j -= 1\r\n                else:\r\n                    break\r\n            if i >= 0 and j >= 0:\r\n                if s[i] != t[j]:\r\n                    return False\r\n            elif i >= 0 or j >= 0:\r\n                return False\r\n            i, j = i - 1, j - 1\r\n        return True",
+    "problemId": 844,
+    "title": "Backspace String Compare",
+    "problemUrl": "https://leetcode.com/problems/backspace-string-compare/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0844.Backspace String Compare/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0844.Backspace String Compare/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0844.Backspace String Compare/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0844.Backspace String Compare/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0844.Backspace String Compare/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0844.Backspace String Compare/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0844.Backspace String Compare/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

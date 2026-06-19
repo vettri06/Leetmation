@@ -1,0 +1,48 @@
+{
+    "problemName": "longest-nice-subarray",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestNiceSubarray(self, nums: List[int]) -> int:\r\n        ans = mask = l = 0\r\n        for r, x in enumerate(nums):\r\n            while mask & x:\r\n                mask ^= nums[l]\r\n                l += 1\r\n            mask |= x\r\n            ans = max(ans, r - l + 1)\r\n        return ans",
+    "problemId": 2401,
+    "title": "Longest Nice Subarray",
+    "problemUrl": "https://leetcode.com/problems/longest-nice-subarray/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2401.Longest Nice Subarray/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2401.Longest Nice Subarray/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2401.Longest Nice Subarray/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2401.Longest Nice Subarray/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2401.Longest Nice Subarray/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2401.Longest Nice Subarray/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2401.Longest Nice Subarray/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2401.Longest Nice Subarray/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

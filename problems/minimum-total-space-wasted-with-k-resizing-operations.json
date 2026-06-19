@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-total-space-wasted-with-k-resizing-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSpaceWastedKResizing(self, nums: List[int], k: int) -> int:\r\n        k += 1\r\n        n = len(nums)\r\n        g = [[0] * n for _ in range(n)]\r\n        for i in range(n):\r\n            s = mx = 0\r\n            for j in range(i, n):\r\n                s += nums[j]\r\n                mx = max(mx, nums[j])\r\n                g[i][j] = mx * (j - i + 1) - s\r\n        f = [[inf] * (k + 1) for _ in range(n + 1)]\r\n        f[0][0] = 0\r\n        for i in range(1, n + 1):\r\n            for j in range(1, k + 1):\r\n                for h in range(i):\r\n                    f[i][j] = min(f[i][j], f[h][j - 1] + g[h][i - 1])\r\n        return f[-1][-1]",
+    "problemId": 1959,
+    "title": "Minimum Total Space Wasted With K Resizing Operations",
+    "problemUrl": "https://leetcode.com/problems/minimum-total-space-wasted-with-k-resizing-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1959.Minimum Total Space Wasted With K Resizing Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1959.Minimum Total Space Wasted With K Resizing Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1959.Minimum Total Space Wasted With K Resizing Operations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1959.Minimum Total Space Wasted With K Resizing Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1959.Minimum Total Space Wasted With K Resizing Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1959.Minimum Total Space Wasted With K Resizing Operations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1959.Minimum Total Space Wasted With K Resizing Operations/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

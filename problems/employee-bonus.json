@@ -1,0 +1,18 @@
+{
+    "problemName": "employee-bonus",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT name, bonus\r\nFROM\r\n    Employee\r\n    LEFT JOIN Bonus USING (empId)\r\nWHERE IFNULL(bonus, 0) < 1000;",
+    "problemId": 577,
+    "title": "Employee Bonus",
+    "problemUrl": "https://leetcode.com/problems/employee-bonus/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0577.Employee Bonus/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0577.Employee Bonus/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

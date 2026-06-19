@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-subsequences-with-odd-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def subsequenceCount(self, nums: List[int]) -> int:\r\n        mod = 10**9 + 7\r\n        f = [0] * 2\r\n        for x in nums:\r\n            if x % 2:\r\n                f[0], f[1] = (f[0] + f[1]) % mod, (f[0] + f[1] + 1) % mod\r\n            else:\r\n                f[0], f[1] = (f[0] + f[0] + 1) % mod, (f[1] + f[1]) % mod\r\n        return f[1]",
+    "problemId": 3247,
+    "title": "Number of Subsequences with Odd Sum",
+    "problemUrl": "https://leetcode.com/problems/number-of-subsequences-with-odd-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3247.Number of Subsequences with Odd Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3247.Number of Subsequences with Odd Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3247.Number of Subsequences with Odd Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3247.Number of Subsequences with Odd Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3247.Number of Subsequences with Odd Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3247.Number of Subsequences with Odd Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

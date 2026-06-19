@@ -1,0 +1,33 @@
+{
+    "problemName": "analyze-user-website-visit-pattern",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mostVisitedPattern(\r\n        self, username: List[str], timestamp: List[int], website: List[str]\r\n    ) -> List[str]:\r\n        d = defaultdict(list)\r\n        for user, _, site in sorted(\r\n            zip(username, timestamp, website), key=lambda x: x[1]\r\n        ):\r\n            d[user].append(site)\r\n\r\n        cnt = Counter()\r\n        for sites in d.values():\r\n            m = len(sites)\r\n            s = set()\r\n            if m > 2:\r\n                for i in range(m - 2):\r\n                    for j in range(i + 1, m - 1):\r\n                        for k in range(j + 1, m):\r\n                            s.add((sites[i], sites[j], sites[k]))\r\n            for t in s:\r\n                cnt[t] += 1\r\n        return sorted(cnt.items(), key=lambda x: (-x[1], x[0]))[0][0]",
+    "problemId": 1152,
+    "title": "Analyze User Website Visit Pattern",
+    "problemUrl": "https://leetcode.com/problems/analyze-user-website-visit-pattern/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1152.Analyze User Website Visit Pattern/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1152.Analyze User Website Visit Pattern/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1152.Analyze User Website Visit Pattern/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1152.Analyze User Website Visit Pattern/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1152.Analyze User Website Visit Pattern/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

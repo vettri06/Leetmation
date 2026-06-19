@@ -1,0 +1,43 @@
+{
+    "problemName": "design-a-number-container-system",
+    "language": "python3",
+    "code": "class NumberContainers:\r\n    def __init__(self):\r\n        self.d = {}\r\n        self.g = defaultdict(SortedSet)\r\n\r\n    def change(self, index: int, number: int) -> None:\r\n        if index in self.d:\r\n            old_number = self.d[index]\r\n            self.g[old_number].remove(index)\r\n        self.d[index] = number\r\n        self.g[number].add(index)\r\n\r\n    def find(self, number: int) -> int:\r\n        ids = self.g[number]\r\n        return ids[0] if ids else -1\r\n\r\n\r\n# Your NumberContainers object will be instantiated and called as such:\r\n# obj = NumberContainers()\r\n# obj.change(index,number)\r\n# param_2 = obj.find(number)",
+    "problemId": 2349,
+    "title": "Design a Number Container System",
+    "problemUrl": "https://leetcode.com/problems/design-a-number-container-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2349.Design a Number Container System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2349.Design a Number Container System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2349.Design a Number Container System/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2349.Design a Number Container System/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2349.Design a Number Container System/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2349.Design a Number Container System/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2349.Design a Number Container System/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "transform-to-chessboard",
+    "language": "python3",
+    "code": "class Solution:\r\n    def movesToChessboard(self, board: List[List[int]]) -> int:\r\n        def f(mask, cnt):\r\n            ones = mask.bit_count()\r\n            if n & 1:\r\n                if abs(n - 2 * ones) != 1 or abs(n - 2 * cnt) != 1:\r\n                    return -1\r\n                if ones == n // 2:\r\n                    return n // 2 - (mask & 0xAAAAAAAA).bit_count()\r\n                return (n + 1) // 2 - (mask & 0x55555555).bit_count()\r\n            else:\r\n                if ones != n // 2 or cnt != n // 2:\r\n                    return -1\r\n                cnt0 = n // 2 - (mask & 0xAAAAAAAA).bit_count()\r\n                cnt1 = n // 2 - (mask & 0x55555555).bit_count()\r\n                return min(cnt0, cnt1)\r\n\r\n        n = len(board)\r\n        mask = (1 << n) - 1\r\n        rowMask = colMask = 0\r\n        for i in range(n):\r\n            rowMask |= board[0][i] << i\r\n            colMask |= board[i][0] << i\r\n        revRowMask = mask ^ rowMask\r\n        revColMask = mask ^ colMask\r\n        sameRow = sameCol = 0\r\n        for i in range(n):\r\n            curRowMask = curColMask = 0\r\n            for j in range(n):\r\n                curRowMask |= board[i][j] << j\r\n                curColMask |= board[j][i] << j\r\n            if curRowMask not in (rowMask, revRowMask) or curColMask not in (\r\n                colMask,\r\n                revColMask,\r\n            ):\r\n                return -1\r\n            sameRow += curRowMask == rowMask\r\n            sameCol += curColMask == colMask\r\n        t1 = f(rowMask, sameRow)\r\n        t2 = f(colMask, sameCol)\r\n        return -1 if t1 == -1 or t2 == -1 else t1 + t2",
+    "problemId": 782,
+    "title": "Transform to Chessboard",
+    "problemUrl": "https://leetcode.com/problems/transform-to-chessboard/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0782.Transform to Chessboard/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0782.Transform to Chessboard/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0782.Transform to Chessboard/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0782.Transform to Chessboard/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0782.Transform to Chessboard/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

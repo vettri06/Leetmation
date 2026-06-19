@@ -1,0 +1,38 @@
+{
+    "problemName": "palindrome-rearrangement-queries",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canMakePalindromeQueries(self, s: str, queries: List[List[int]]) -> List[bool]:\r\n        def count(pre: List[List[int]], i: int, j: int) -> List[int]:\r\n            return [x - y for x, y in zip(pre[j + 1], pre[i])]\r\n\r\n        def sub(cnt1: List[int], cnt2: List[int]) -> List[int]:\r\n            res = []\r\n            for x, y in zip(cnt1, cnt2):\r\n                if x - y < 0:\r\n                    return []\r\n                res.append(x - y)\r\n            return res\r\n\r\n        def check(\r\n            pre1: List[List[int]], pre2: List[List[int]], a: int, b: int, c: int, d: int\r\n        ) -> bool:\r\n            if diff[a] > 0 or diff[m] - diff[max(b, d) + 1] > 0:\r\n                return False\r\n            if d <= b:\r\n                return count(pre1, a, b) == count(pre2, a, b)\r\n            if b < c:\r\n                return (\r\n                    diff[c] - diff[b + 1] == 0\r\n                    and count(pre1, a, b) == count(pre2, a, b)\r\n                    and count(pre1, c, d) == count(pre2, c, d)\r\n                )\r\n            cnt1 = sub(count(pre1, a, b), count(pre2, a, c - 1))\r\n            cnt2 = sub(count(pre2, c, d), count(pre1, b + 1, d))\r\n            return bool(cnt1) and bool(cnt2) and cnt1 == cnt2\r\n\r\n        n = len(s)\r\n        m = n // 2\r\n        t = s[m:][::-1]\r\n        s = s[:m]\r\n        pre1 = [[0] * 26 for _ in range(m + 1)]\r\n        pre2 = [[0] * 26 for _ in range(m + 1)]\r\n        diff = [0] * (m + 1)\r\n        for i, (c1, c2) in enumerate(zip(s, t), 1):\r\n            pre1[i] = pre1[i - 1][:]\r\n            pre2[i] = pre2[i - 1][:]\r\n            pre1[i][ord(c1) - ord(\"a\")] += 1\r\n            pre2[i][ord(c2) - ord(\"a\")] += 1\r\n            diff[i] = diff[i - 1] + int(c1 != c2)\r\n        ans = []\r\n        for a, b, c, d in queries:\r\n            c, d = n - 1 - d, n - 1 - c\r\n            ok = (\r\n                check(pre1, pre2, a, b, c, d)\r\n                if a <= c\r\n                else check(pre2, pre1, c, d, a, b)\r\n            )\r\n            ans.append(ok)\r\n        return ans",
+    "problemId": 2983,
+    "title": "Palindrome Rearrangement Queries",
+    "problemUrl": "https://leetcode.com/problems/palindrome-rearrangement-queries/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2983.Palindrome Rearrangement Queries/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2983.Palindrome Rearrangement Queries/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2983.Palindrome Rearrangement Queries/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2983.Palindrome Rearrangement Queries/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2983.Palindrome Rearrangement Queries/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2983.Palindrome Rearrangement Queries/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "largest-local-values-in-a-matrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestLocal(self, grid: List[List[int]]) -> List[List[int]]:\r\n        n = len(grid)\r\n        ans = [[0] * (n - 2) for _ in range(n - 2)]\r\n        for i in range(n - 2):\r\n            for j in range(n - 2):\r\n                ans[i][j] = max(\r\n                    grid[x][y] for x in range(i, i + 3) for y in range(j, j + 3)\r\n                )\r\n        return ans",
+    "problemId": 2373,
+    "title": "Largest Local Values in a Matrix",
+    "problemUrl": "https://leetcode.com/problems/largest-local-values-in-a-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2373.Largest Local Values in a Matrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2373.Largest Local Values in a Matrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2373.Largest Local Values in a Matrix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2373.Largest Local Values in a Matrix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2373.Largest Local Values in a Matrix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2373.Largest Local Values in a Matrix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

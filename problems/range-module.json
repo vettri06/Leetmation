@@ -1,0 +1,38 @@
+{
+    "problemName": "range-module",
+    "language": "python3",
+    "code": "class Node:\r\n    __slots__ = ['left', 'right', 'add', 'v']\r\n\r\n    def __init__(self):\r\n        self.left = None\r\n        self.right = None\r\n        self.add = 0\r\n        self.v = False\r\n\r\n\r\nclass SegmentTree:\r\n    __slots__ = ['root']\r\n\r\n    def __init__(self):\r\n        self.root = Node()\r\n\r\n    def modify(self, left, right, v, l=1, r=int(1e9), node=None):\r\n        if node is None:\r\n            node = self.root\r\n        if l >= left and r <= right:\r\n            if v == 1:\r\n                node.add = 1\r\n                node.v = True\r\n            else:\r\n                node.add = -1\r\n                node.v = False\r\n            return\r\n        self.pushdown(node)\r\n        mid = (l + r) >> 1\r\n        if left <= mid:\r\n            self.modify(left, right, v, l, mid, node.left)\r\n        if right > mid:\r\n            self.modify(left, right, v, mid + 1, r, node.right)\r\n        self.pushup(node)\r\n\r\n    def query(self, left, right, l=1, r=int(1e9), node=None):\r\n        if node is None:\r\n            node = self.root\r\n        if l >= left and r <= right:\r\n            return node.v\r\n        self.pushdown(node)\r\n        mid = (l + r) >> 1\r\n        v = True\r\n        if left <= mid:\r\n            v = v and self.query(left, right, l, mid, node.left)\r\n        if right > mid:\r\n            v = v and self.query(left, right, mid + 1, r, node.right)\r\n        return v\r\n\r\n    def pushup(self, node):\r\n        node.v = bool(node.left and node.left.v and node.right and node.right.v)\r\n\r\n    def pushdown(self, node):\r\n        if node.left is None:\r\n            node.left = Node()\r\n        if node.right is None:\r\n            node.right = Node()\r\n        if node.add:\r\n            node.left.add = node.right.add = node.add\r\n            node.left.v = node.add == 1\r\n            node.right.v = node.add == 1\r\n            node.add = 0\r\n\r\n\r\nclass RangeModule:\r\n    def __init__(self):\r\n        self.tree = SegmentTree()\r\n\r\n    def addRange(self, left: int, right: int) -> None:\r\n        self.tree.modify(left, right - 1, 1)\r\n\r\n    def queryRange(self, left: int, right: int) -> bool:\r\n        return self.tree.query(left, right - 1)\r\n\r\n    def removeRange(self, left: int, right: int) -> None:\r\n        self.tree.modify(left, right - 1, -1)\r\n\r\n\r\n# Your RangeModule object will be instantiated and called as such:\r\n# obj = RangeModule()\r\n# obj.addRange(left,right)\r\n# param_2 = obj.queryRange(left,right)\r\n# obj.removeRange(left,right)",
+    "problemId": 715,
+    "title": "Range Module",
+    "problemUrl": "https://leetcode.com/problems/range-module/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0715.Range Module/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0715.Range Module/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0715.Range Module/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0715.Range Module/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0715.Range Module/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0715.Range Module/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

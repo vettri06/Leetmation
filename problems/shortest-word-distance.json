@@ -1,0 +1,33 @@
+{
+    "problemName": "shortest-word-distance",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shortestDistance(self, wordsDict: List[str], word1: str, word2: str) -> int:\r\n        i = j = -1\r\n        ans = inf\r\n        for k, w in enumerate(wordsDict):\r\n            if w == word1:\r\n                i = k\r\n            if w == word2:\r\n                j = k\r\n            if i != -1 and j != -1:\r\n                ans = min(ans, abs(i - j))\r\n        return ans",
+    "problemId": 243,
+    "title": "Shortest Word Distance",
+    "problemUrl": "https://leetcode.com/problems/shortest-word-distance/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0243.Shortest Word Distance/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0243.Shortest Word Distance/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0243.Shortest Word Distance/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0243.Shortest Word Distance/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0243.Shortest Word Distance/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

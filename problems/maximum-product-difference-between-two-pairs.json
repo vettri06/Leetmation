@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-product-difference-between-two-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxProductDifference(self, nums: List[int]) -> int:\r\n        nums.sort()\r\n        return nums[-1] * nums[-2] - nums[0] * nums[1]",
+    "problemId": 1913,
+    "title": "Maximum Product Difference Between Two Pairs",
+    "problemUrl": "https://leetcode.com/problems/maximum-product-difference-between-two-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1913.Maximum Product Difference Between Two Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1913.Maximum Product Difference Between Two Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1913.Maximum Product Difference Between Two Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1913.Maximum Product Difference Between Two Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1913.Maximum Product Difference Between Two Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1913.Maximum Product Difference Between Two Pairs/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "problemName": "verbal-arithmetic-puzzle",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isAnyMapping(\r\n        self, words, row, col, bal, letToDig, digToLet, totalRows, totalCols\r\n    ):\r\n        # If traversed all columns.\r\n        if col == totalCols:\r\n            return bal == 0\r\n\r\n        # At the end of a particular column.\r\n        if row == totalRows:\r\n            return bal % 10 == 0 and self.isAnyMapping(\r\n                words, 0, col + 1, bal // 10, letToDig, digToLet, totalRows, totalCols\r\n            )\r\n\r\n        w = words[row]\r\n\r\n        # If the current string 'w' has no character in the ('col')th index.\r\n        if col >= len(w):\r\n            return self.isAnyMapping(\r\n                words, row + 1, col, bal, letToDig, digToLet, totalRows, totalCols\r\n            )\r\n\r\n        # Take the current character in the variable letter.\r\n        letter = w[len(w) - 1 - col]\r\n\r\n        # Create a variable 'sign' to check whether we have to add it or subtract it.\r\n        if row < totalRows - 1:\r\n            sign = 1\r\n        else:\r\n            sign = -1\r\n\r\n        # If we have a prior valid mapping, then use that mapping.\r\n        # The second condition is for the leading zeros.\r\n        if letter in letToDig and (\r\n            letToDig[letter] != 0\r\n            or (letToDig[letter] == 0 and len(w) == 1)\r\n            or col != len(w) - 1\r\n        ):\r\n\r\n            return self.isAnyMapping(\r\n                words,\r\n                row + 1,\r\n                col,\r\n                bal + sign * letToDig[letter],\r\n                letToDig,\r\n                digToLet,\r\n                totalRows,\r\n                totalCols,\r\n            )\r\n\r\n        # Choose a new mapping.\r\n        else:\r\n            for i in range(10):\r\n                # If 'i'th mapping is valid then select it.\r\n                if digToLet[i] == \"-\" and (\r\n                    i != 0 or (i == 0 and len(w) == 1) or col != len(w) - 1\r\n                ):\r\n                    digToLet[i] = letter\r\n                    letToDig[letter] = i\r\n\r\n                    # Call the function again with the new mapping.\r\n                    if self.isAnyMapping(\r\n                        words,\r\n                        row + 1,\r\n                        col,\r\n                        bal + sign * letToDig[letter],\r\n                        letToDig,\r\n                        digToLet,\r\n                        totalRows,\r\n                        totalCols,\r\n                    ):\r\n                        return True\r\n\r\n                    # Unselect the mapping.\r\n                    digToLet[i] = \"-\"\r\n                    if letter in letToDig:\r\n                        del letToDig[letter]\r\n\r\n        # If nothing is correct then just return false.\r\n        return False\r\n\r\n    def isSolvable(self, words, result):\r\n        # Add the string 'result' in the list 'words'.\r\n        words.append(result)\r\n\r\n        # Initialize 'totalRows' with the size of the list.\r\n        totalRows = len(words)\r\n\r\n        # Find the longest string in the list and set 'totalCols' with the size of that string.\r\n        totalCols = max(len(word) for word in words)\r\n\r\n        # Create a HashMap for the letter to digit mapping.\r\n        letToDig = {}\r\n\r\n        # Create a list for the digit to letter mapping.\r\n        digToLet = [\"-\"] * 10\r\n\r\n        return self.isAnyMapping(\r\n            words, 0, 0, 0, letToDig, digToLet, totalRows, totalCols\r\n        )",
+    "problemId": 1307,
+    "title": "Verbal Arithmetic Puzzle",
+    "problemUrl": "https://leetcode.com/problems/verbal-arithmetic-puzzle/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1307.Verbal Arithmetic Puzzle/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1307.Verbal Arithmetic Puzzle/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1307.Verbal Arithmetic Puzzle/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1307.Verbal Arithmetic Puzzle/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

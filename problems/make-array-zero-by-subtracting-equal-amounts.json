@@ -1,0 +1,48 @@
+{
+    "problemName": "make-array-zero-by-subtracting-equal-amounts",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumOperations(self, nums: List[int]) -> int:\r\n        return len({x for x in nums if x})",
+    "problemId": 2357,
+    "title": "Make Array Zero by Subtracting Equal Amounts",
+    "problemUrl": "https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2357.Make Array Zero by Subtracting Equal Amounts/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2357.Make Array Zero by Subtracting Equal Amounts/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2357.Make Array Zero by Subtracting Equal Amounts/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2357.Make Array Zero by Subtracting Equal Amounts/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2357.Make Array Zero by Subtracting Equal Amounts/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2357.Make Array Zero by Subtracting Equal Amounts/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2357.Make Array Zero by Subtracting Equal Amounts/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2357.Make Array Zero by Subtracting Equal Amounts/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

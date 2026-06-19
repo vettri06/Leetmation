@@ -1,0 +1,33 @@
+{
+    "problemName": "bitwise-or-of-all-subsequence-sums",
+    "language": "python3",
+    "code": "class Solution:\r\n    def subsequenceSumOr(self, nums: List[int]) -> int:\r\n        cnt = [0] * 64\r\n        ans = 0\r\n        for v in nums:\r\n            for i in range(31):\r\n                if (v >> i) & 1:\r\n                    cnt[i] += 1\r\n        for i in range(63):\r\n            if cnt[i]:\r\n                ans |= 1 << i\r\n            cnt[i + 1] += cnt[i] // 2\r\n        return ans",
+    "problemId": 2505,
+    "title": "Bitwise OR of All Subsequence Sums",
+    "problemUrl": "https://leetcode.com/problems/bitwise-or-of-all-subsequence-sums/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2505.Bitwise OR of All Subsequence Sums/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2505.Bitwise OR of All Subsequence Sums/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2505.Bitwise OR of All Subsequence Sums/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2505.Bitwise OR of All Subsequence Sums/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2505.Bitwise OR of All Subsequence Sums/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

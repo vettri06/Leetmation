@@ -1,0 +1,38 @@
+{
+    "problemName": "equalize-strings-by-adding-or-removing-characters-at-ends",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, initial: str, target: str) -> int:\r\n        m, n = len(initial), len(target)\r\n        f = [[0] * (n + 1) for _ in range(m + 1)]\r\n        mx = 0\r\n        for i, a in enumerate(initial, 1):\r\n            for j, b in enumerate(target, 1):\r\n                if a == b:\r\n                    f[i][j] = f[i - 1][j - 1] + 1\r\n                    mx = max(mx, f[i][j])\r\n        return m + n - mx * 2",
+    "problemId": 3135,
+    "title": "Equalize Strings by Adding or Removing Characters at Ends",
+    "problemUrl": "https://leetcode.com/problems/equalize-strings-by-adding-or-removing-characters-at-ends/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3135.Equalize Strings by Adding or Removing Characters at Ends/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3135.Equalize Strings by Adding or Removing Characters at Ends/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3135.Equalize Strings by Adding or Removing Characters at Ends/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3135.Equalize Strings by Adding or Removing Characters at Ends/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3135.Equalize Strings by Adding or Removing Characters at Ends/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3135.Equalize Strings by Adding or Removing Characters at Ends/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

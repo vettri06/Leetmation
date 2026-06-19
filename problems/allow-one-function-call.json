@@ -1,0 +1,23 @@
+{
+    "problemName": "allow-one-function-call",
+    "language": "javascript",
+    "code": "/**\r\n * @param {Function} fn\r\n * @return {Function}\r\n */\r\nvar once = function (fn) {\r\n    let called = false;\r\n    return function (...args) {\r\n        if (!called) {\r\n            called = true;\r\n            return fn(...args);\r\n        }\r\n    };\r\n};\r\n\r\n/**\r\n * let fn = (a,b,c) => (a + b + c)\r\n * let onceFn = once(fn)\r\n *\r\n * onceFn(1,2,3); // 6\r\n * onceFn(2,3,6); // returns undefined without calling fn\r\n */",
+    "problemId": 2666,
+    "title": "Allow One Function Call",
+    "problemUrl": "https://leetcode.com/problems/allow-one-function-call/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2666.Allow One Function Call/Solution.js",
+    "sourceFile": "Solution.js",
+    "sourceCandidates": [
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2666.Allow One Function Call/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2666.Allow One Function Call/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

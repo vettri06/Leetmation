@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-integer-added-to-array-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def addedInteger(self, nums1: List[int], nums2: List[int]) -> int:\r\n        return min(nums2) - min(nums1)",
+    "problemId": 3131,
+    "title": "Find the Integer Added to Array I",
+    "problemUrl": "https://leetcode.com/problems/find-the-integer-added-to-array-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3131.Find the Integer Added to Array I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3131.Find the Integer Added to Array I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3131.Find the Integer Added to Array I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3131.Find the Integer Added to Array I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3131.Find the Integer Added to Array I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3131.Find the Integer Added to Array I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

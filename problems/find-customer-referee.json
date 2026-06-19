@@ -1,0 +1,18 @@
+{
+    "problemName": "find-customer-referee",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT name\r\nFROM Customer\r\nWHERE IFNULL(referee_id, 0) != 2;",
+    "problemId": 584,
+    "title": "Find Customer Referee",
+    "problemUrl": "https://leetcode.com/problems/find-customer-referee/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0584.Find Customer Referee/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0584.Find Customer Referee/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

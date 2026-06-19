@@ -1,0 +1,48 @@
+{
+    "problemName": "smallest-range-covering-elements-from-k-lists",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestRange(self, nums: List[List[int]]) -> List[int]:\r\n        t = [(x, i) for i, v in enumerate(nums) for x in v]\r\n        t.sort()\r\n        cnt = Counter()\r\n        ans = [-inf, inf]\r\n        j = 0\r\n        for i, (b, v) in enumerate(t):\r\n            cnt[v] += 1\r\n            while len(cnt) == len(nums):\r\n                a = t[j][0]\r\n                x = b - a - (ans[1] - ans[0])\r\n                if x < 0 or (x == 0 and a < ans[0]):\r\n                    ans = [a, b]\r\n                w = t[j][1]\r\n                cnt[w] -= 1\r\n                if cnt[w] == 0:\r\n                    cnt.pop(w)\r\n                j += 1\r\n        return ans",
+    "problemId": 632,
+    "title": "Smallest Range Covering Elements from K Lists",
+    "problemUrl": "https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0632.Smallest Range Covering Elements from K Lists/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0632.Smallest Range Covering Elements from K Lists/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0632.Smallest Range Covering Elements from K Lists/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0632.Smallest Range Covering Elements from K Lists/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0632.Smallest Range Covering Elements from K Lists/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0632.Smallest Range Covering Elements from K Lists/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0632.Smallest Range Covering Elements from K Lists/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0632.Smallest Range Covering Elements from K Lists/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

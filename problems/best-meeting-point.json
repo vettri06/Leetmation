@@ -1,0 +1,38 @@
+{
+    "problemName": "best-meeting-point",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minTotalDistance(self, grid: List[List[int]]) -> int:\r\n        def f(arr, x):\r\n            return sum(abs(v - x) for v in arr)\r\n\r\n        rows, cols = [], []\r\n        for i, row in enumerate(grid):\r\n            for j, v in enumerate(row):\r\n                if v:\r\n                    rows.append(i)\r\n                    cols.append(j)\r\n        cols.sort()\r\n        i = rows[len(rows) >> 1]\r\n        j = cols[len(cols) >> 1]\r\n        return f(rows, i) + f(cols, j)",
+    "problemId": 296,
+    "title": "Best Meeting Point",
+    "problemUrl": "https://leetcode.com/problems/best-meeting-point/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0296.Best Meeting Point/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0296.Best Meeting Point/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0296.Best Meeting Point/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0296.Best Meeting Point/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0296.Best Meeting Point/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0296.Best Meeting Point/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

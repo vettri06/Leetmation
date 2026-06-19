@@ -1,0 +1,53 @@
+{
+    "problemName": "construct-product-matrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def constructProductMatrix(self, grid: List[List[int]]) -> List[List[int]]:\r\n        n, m = len(grid), len(grid[0])\r\n        p = [[0] * m for _ in range(n)]\r\n        mod = 12345\r\n        suf = 1\r\n        for i in range(n - 1, -1, -1):\r\n            for j in range(m - 1, -1, -1):\r\n                p[i][j] = suf\r\n                suf = suf * grid[i][j] % mod\r\n        pre = 1\r\n        for i in range(n):\r\n            for j in range(m):\r\n                p[i][j] = p[i][j] * pre % mod\r\n                pre = pre * grid[i][j] % mod\r\n        return p",
+    "problemId": 2906,
+    "title": "Construct Product Matrix",
+    "problemUrl": "https://leetcode.com/problems/construct-product-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2906.Construct Product Matrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2906.Construct Product Matrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2906.Construct Product Matrix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2906.Construct Product Matrix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2906.Construct Product Matrix/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2906.Construct Product Matrix/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2906.Construct Product Matrix/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2906.Construct Product Matrix/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2906.Construct Product Matrix/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

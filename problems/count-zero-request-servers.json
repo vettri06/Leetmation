@@ -1,0 +1,38 @@
+{
+    "problemName": "count-zero-request-servers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countServers(\r\n        self, n: int, logs: List[List[int]], x: int, queries: List[int]\r\n    ) -> List[int]:\r\n        cnt = Counter()\r\n        logs.sort(key=lambda x: x[1])\r\n        ans = [0] * len(queries)\r\n        j = k = 0\r\n        for r, i in sorted(zip(queries, count())):\r\n            l = r - x\r\n            while k < len(logs) and logs[k][1] <= r:\r\n                cnt[logs[k][0]] += 1\r\n                k += 1\r\n            while j < len(logs) and logs[j][1] < l:\r\n                cnt[logs[j][0]] -= 1\r\n                if cnt[logs[j][0]] == 0:\r\n                    cnt.pop(logs[j][0])\r\n                j += 1\r\n            ans[i] = n - len(cnt)\r\n        return ans",
+    "problemId": 2747,
+    "title": "Count Zero Request Servers",
+    "problemUrl": "https://leetcode.com/problems/count-zero-request-servers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2747.Count Zero Request Servers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2747.Count Zero Request Servers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2747.Count Zero Request Servers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2747.Count Zero Request Servers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2747.Count Zero Request Servers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2747.Count Zero Request Servers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

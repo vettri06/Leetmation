@@ -1,0 +1,38 @@
+{
+    "problemName": "encode-n-ary-tree-to-binary-tree",
+    "language": "python3",
+    "code": "\"\"\"\r\n# Definition for a Node.\r\nclass Node:\r\n    def __init__(self, val: Optional[int] = None, children: Optional[List['Node']] = None):\r\n        self.val = val\r\n        self.children = children\r\n\"\"\"\r\n\r\n\"\"\"\r\n# Definition for a binary tree node.\r\nclass TreeNode:\r\n    def __init__(self, x):\r\n        self.val = x\r\n        self.left = None\r\n        self.right = None\r\n\"\"\"\r\n\r\n\r\nclass Codec:\r\n    # Encodes an n-ary tree to a binary tree.\r\n    def encode(self, root: \"Optional[Node]\") -> Optional[TreeNode]:\r\n        if root is None:\r\n            return None\r\n        node = TreeNode(root.val)\r\n        if not root.children:\r\n            return node\r\n        left = self.encode(root.children[0])\r\n        node.left = left\r\n        for child in root.children[1:]:\r\n            left.right = self.encode(child)\r\n            left = left.right\r\n        return node\r\n\r\n    # Decodes your binary tree to an n-ary tree.\r\n    def decode(self, data: Optional[TreeNode]) -> \"Optional[Node]\":\r\n        if data is None:\r\n            return None\r\n        node = Node(data.val, [])\r\n        if data.left is None:\r\n            return node\r\n        left = data.left\r\n        while left:\r\n            node.children.append(self.decode(left))\r\n            left = left.right\r\n        return node\r\n\r\n\r\n# Your Codec object will be instantiated and called as such:\r\n# codec = Codec()\r\n# codec.decode(codec.encode(root))",
+    "problemId": 431,
+    "title": "Encode N-ary Tree to Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0431.Encode N-ary Tree to Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0431.Encode N-ary Tree to Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0431.Encode N-ary Tree to Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0431.Encode N-ary Tree to Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0431.Encode N-ary Tree to Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0431.Encode N-ary Tree to Binary Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

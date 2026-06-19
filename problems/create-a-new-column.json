@@ -1,0 +1,18 @@
+{
+    "problemName": "create-a-new-column",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:\r\n    employees['bonus'] = employees['salary'] * 2\r\n    return employees",
+    "problemId": 2881,
+    "title": "Create a New Column",
+    "problemUrl": "https://leetcode.com/problems/create-a-new-column/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2881.Create a New Column/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2881.Create a New Column/Solution.py",
+            "sourceFile": "Solution.py"
+        }
+    ]
+}

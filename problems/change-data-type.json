@@ -1,0 +1,18 @@
+{
+    "problemName": "change-data-type",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef changeDatatype(students: pd.DataFrame) -> pd.DataFrame:\r\n    students['grade'] = students['grade'].astype(int)\r\n    return students",
+    "problemId": 2886,
+    "title": "Change Data Type",
+    "problemUrl": "https://leetcode.com/problems/change-data-type/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2886.Change Data Type/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2886.Change Data Type/Solution.py",
+            "sourceFile": "Solution.py"
+        }
+    ]
+}

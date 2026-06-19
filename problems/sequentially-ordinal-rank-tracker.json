@@ -1,0 +1,38 @@
+{
+    "problemName": "sequentially-ordinal-rank-tracker",
+    "language": "python3",
+    "code": "class SORTracker:\r\n    def __init__(self):\r\n        self.sl = SortedList()\r\n        self.i = -1\r\n\r\n    def add(self, name: str, score: int) -> None:\r\n        self.sl.add((-score, name))\r\n\r\n    def get(self) -> str:\r\n        self.i += 1\r\n        return self.sl[self.i][1]\r\n\r\n\r\n# Your SORTracker object will be instantiated and called as such:\r\n# obj = SORTracker()\r\n# obj.add(name,score)\r\n# param_2 = obj.get()",
+    "problemId": 2102,
+    "title": "Sequentially Ordinal Rank Tracker",
+    "problemUrl": "https://leetcode.com/problems/sequentially-ordinal-rank-tracker/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2102.Sequentially Ordinal Rank Tracker/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2102.Sequentially Ordinal Rank Tracker/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2102.Sequentially Ordinal Rank Tracker/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2102.Sequentially Ordinal Rank Tracker/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2102.Sequentially Ordinal Rank Tracker/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2102.Sequentially Ordinal Rank Tracker/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

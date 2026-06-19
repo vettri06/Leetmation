@@ -1,0 +1,73 @@
+{
+    "problemName": "my-calendar-ii",
+    "language": "python3",
+    "code": "class MyCalendarTwo:\r\n    def __init__(self):\r\n        self.sd = SortedDict()\r\n\r\n    def book(self, startTime: int, endTime: int) -> bool:\r\n        self.sd[startTime] = self.sd.get(startTime, 0) + 1\r\n        self.sd[endTime] = self.sd.get(endTime, 0) - 1\r\n        s = 0\r\n        for v in self.sd.values():\r\n            s += v\r\n            if s > 2:\r\n                self.sd[startTime] -= 1\r\n                self.sd[endTime] += 1\r\n                return False\r\n        return True\r\n\r\n\r\n# Your MyCalendarTwo object will be instantiated and called as such:\r\n# obj = MyCalendarTwo()\r\n# param_1 = obj.book(startTime,endTime)",
+    "problemId": 731,
+    "title": "My Calendar II",
+    "problemUrl": "https://leetcode.com/problems/my-calendar-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0731.My Calendar II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0731.My Calendar II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0731.My Calendar II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0731.My Calendar II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0731.My Calendar II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0731.My Calendar II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0731.My Calendar II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0731.My Calendar II/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0731.My Calendar II/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0731.My Calendar II/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0731.My Calendar II/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0731.My Calendar II/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0731.My Calendar II/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

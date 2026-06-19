@@ -1,0 +1,23 @@
+{
+    "problemName": "count-salary-categories",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    S AS (\r\n        SELECT 'Low Salary' AS category\r\n        UNION\r\n        SELECT 'Average Salary'\r\n        UNION\r\n        SELECT 'High Salary'\r\n    ),\r\n    T AS (\r\n        SELECT\r\n            CASE\r\n                WHEN income < 20000 THEN \"Low Salary\"\r\n                WHEN income > 50000 THEN 'High Salary'\r\n                ELSE 'Average Salary'\r\n            END AS category,\r\n            COUNT(1) AS accounts_count\r\n        FROM Accounts\r\n        GROUP BY 1\r\n    )\r\nSELECT category, IFNULL(accounts_count, 0) AS accounts_count\r\nFROM\r\n    S\r\n    LEFT JOIN T USING (category);",
+    "problemId": 1907,
+    "title": "Count Salary Categories",
+    "problemUrl": "https://leetcode.com/problems/count-salary-categories/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1907.Count Salary Categories/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1907.Count Salary Categories/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1907.Count Salary Categories/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

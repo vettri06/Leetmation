@@ -1,0 +1,63 @@
+{
+    "problemName": "find-subarray-with-bitwise-or-closest-to-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumDifference(self, nums: List[int], k: int) -> int:\r\n        m = max(nums).bit_length()\r\n        cnt = [0] * m\r\n        s = i = 0\r\n        ans = inf\r\n        for j, x in enumerate(nums):\r\n            s |= x\r\n            ans = min(ans, abs(s - k))\r\n            for h in range(m):\r\n                if x >> h & 1:\r\n                    cnt[h] += 1\r\n            while i < j and s > k:\r\n                y = nums[i]\r\n                for h in range(m):\r\n                    if y >> h & 1:\r\n                        cnt[h] -= 1\r\n                        if cnt[h] == 0:\r\n                            s ^= 1 << h\r\n                i += 1\r\n                ans = min(ans, abs(s - k))\r\n        return ans",
+    "problemId": 3171,
+    "title": "Find Subarray With Bitwise OR Closest to K",
+    "problemUrl": "https://leetcode.com/problems/find-subarray-with-bitwise-or-closest-to-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3171.Find Subarray With Bitwise OR Closest to K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3171.Find Subarray With Bitwise OR Closest to K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3171.Find Subarray With Bitwise OR Closest to K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3171.Find Subarray With Bitwise OR Closest to K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3171.Find Subarray With Bitwise OR Closest to K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3171.Find Subarray With Bitwise OR Closest to K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3171.Find Subarray With Bitwise OR Closest to K/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3171.Find Subarray With Bitwise OR Closest to K/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3171.Find Subarray With Bitwise OR Closest to K/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3171.Find Subarray With Bitwise OR Closest to K/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3171.Find Subarray With Bitwise OR Closest to K/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

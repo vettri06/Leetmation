@@ -1,0 +1,43 @@
+{
+    "problemName": "long-pressed-name",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isLongPressedName(self, name: str, typed: str) -> bool:\r\n        m, n = len(name), len(typed)\r\n        i = j = 0\r\n        while i < m and j < n:\r\n            if name[i] != typed[j]:\r\n                return False\r\n            x = i + 1\r\n            while x < m and name[x] == name[i]:\r\n                x += 1\r\n            y = j + 1\r\n            while y < n and typed[y] == typed[j]:\r\n                y += 1\r\n            if x - i > y - j:\r\n                return False\r\n            i, j = x, y\r\n        return i == m and j == n",
+    "problemId": 925,
+    "title": "Long Pressed Name",
+    "problemUrl": "https://leetcode.com/problems/long-pressed-name/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0925.Long Pressed Name/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0925.Long Pressed Name/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0925.Long Pressed Name/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0925.Long Pressed Name/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0925.Long Pressed Name/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0925.Long Pressed Name/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0925.Long Pressed Name/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

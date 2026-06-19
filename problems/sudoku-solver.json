@@ -1,0 +1,38 @@
+{
+    "problemName": "sudoku-solver",
+    "language": "python3",
+    "code": "class Solution:\r\n    def solveSudoku(self, board: List[List[str]]) -> None:\r\n        def dfs(k):\r\n            nonlocal ok\r\n            if k == len(t):\r\n                ok = True\r\n                return\r\n            i, j = t[k]\r\n            for v in range(9):\r\n                if row[i][v] == col[j][v] == block[i // 3][j // 3][v] == False:\r\n                    row[i][v] = col[j][v] = block[i // 3][j // 3][v] = True\r\n                    board[i][j] = str(v + 1)\r\n                    dfs(k + 1)\r\n                    row[i][v] = col[j][v] = block[i // 3][j // 3][v] = False\r\n                if ok:\r\n                    return\r\n\r\n        row = [[False] * 9 for _ in range(9)]\r\n        col = [[False] * 9 for _ in range(9)]\r\n        block = [[[False] * 9 for _ in range(3)] for _ in range(3)]\r\n        t = []\r\n        ok = False\r\n        for i in range(9):\r\n            for j in range(9):\r\n                if board[i][j] == '.':\r\n                    t.append((i, j))\r\n                else:\r\n                    v = int(board[i][j]) - 1\r\n                    row[i][v] = col[j][v] = block[i // 3][j // 3][v] = True\r\n        dfs(0)",
+    "problemId": 37,
+    "title": "Sudoku Solver",
+    "problemUrl": "https://leetcode.com/problems/sudoku-solver/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0037.Sudoku Solver/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0037.Sudoku Solver/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0037.Sudoku Solver/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0037.Sudoku Solver/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0037.Sudoku Solver/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0037.Sudoku Solver/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

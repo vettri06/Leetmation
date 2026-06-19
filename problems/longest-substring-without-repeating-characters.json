@@ -1,0 +1,68 @@
+{
+    "problemName": "longest-substring-without-repeating-characters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lengthOfLongestSubstring(self, s: str) -> int:\r\n        cnt = Counter()\r\n        ans = l = 0\r\n        for r, c in enumerate(s):\r\n            cnt[c] += 1\r\n            while cnt[c] > 1:\r\n                cnt[s[l]] -= 1\r\n                l += 1\r\n            ans = max(ans, r - l + 1)\r\n        return ans",
+    "problemId": 3,
+    "title": "Longest Substring Without Repeating Characters",
+    "problemUrl": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0003.Longest Substring Without Repeating Characters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0003.Longest Substring Without Repeating Characters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0003.Longest Substring Without Repeating Characters/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0003.Longest Substring Without Repeating Characters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0003.Longest Substring Without Repeating Characters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0003.Longest Substring Without Repeating Characters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0003.Longest Substring Without Repeating Characters/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0003.Longest Substring Without Repeating Characters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0003.Longest Substring Without Repeating Characters/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0003.Longest Substring Without Repeating Characters/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "kotlin",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0003.Longest Substring Without Repeating Characters/Solution.kt",
+            "sourceFile": "Solution.kt"
+        },
+        {
+            "language": "swift",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0003.Longest Substring Without Repeating Characters/Solution.swift",
+            "sourceFile": "Solution.swift"
+        }
+    ]
+}

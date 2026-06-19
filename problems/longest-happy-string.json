@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-happy-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestDiverseString(self, a: int, b: int, c: int) -> str:\r\n        h = []\r\n        if a > 0:\r\n            heappush(h, [-a, 'a'])\r\n        if b > 0:\r\n            heappush(h, [-b, 'b'])\r\n        if c > 0:\r\n            heappush(h, [-c, 'c'])\r\n\r\n        ans = []\r\n        while len(h) > 0:\r\n            cur = heappop(h)\r\n            if len(ans) >= 2 and ans[-1] == cur[1] and ans[-2] == cur[1]:\r\n                if len(h) == 0:\r\n                    break\r\n                nxt = heappop(h)\r\n                ans.append(nxt[1])\r\n                if -nxt[0] > 1:\r\n                    nxt[0] += 1\r\n                    heappush(h, nxt)\r\n                heappush(h, cur)\r\n            else:\r\n                ans.append(cur[1])\r\n                if -cur[0] > 1:\r\n                    cur[0] += 1\r\n                    heappush(h, cur)\r\n\r\n        return ''.join(ans)",
+    "problemId": 1405,
+    "title": "Longest Happy String",
+    "problemUrl": "https://leetcode.com/problems/longest-happy-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1405.Longest Happy String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1405.Longest Happy String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1405.Longest Happy String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1405.Longest Happy String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1405.Longest Happy String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1405.Longest Happy String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

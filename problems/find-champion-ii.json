@@ -1,0 +1,53 @@
+{
+    "problemName": "find-champion-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findChampion(self, n: int, edges: List[List[int]]) -> int:\r\n        indeg = [0] * n\r\n        for _, v in edges:\r\n            indeg[v] += 1\r\n        return -1 if indeg.count(0) != 1 else indeg.index(0)",
+    "problemId": 2924,
+    "title": "Find Champion II",
+    "problemUrl": "https://leetcode.com/problems/find-champion-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2924.Find Champion II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2924.Find Champion II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2924.Find Champion II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2924.Find Champion II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2924.Find Champion II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2924.Find Champion II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2924.Find Champion II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2924.Find Champion II/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2924.Find Champion II/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

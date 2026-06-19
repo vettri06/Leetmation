@@ -1,0 +1,53 @@
+{
+    "problemName": "ways-to-express-an-integer-as-sum-of-powers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfWays(self, n: int, x: int) -> int:\r\n        mod = 10**9 + 7\r\n        f = [[0] * (n + 1) for _ in range(n + 1)]\r\n        f[0][0] = 1\r\n        for i in range(1, n + 1):\r\n            k = pow(i, x)\r\n            for j in range(n + 1):\r\n                f[i][j] = f[i - 1][j]\r\n                if k <= j:\r\n                    f[i][j] = (f[i][j] + f[i - 1][j - k]) % mod\r\n        return f[n][n]",
+    "problemId": 2787,
+    "title": "Ways to Express an Integer as Sum of Powers",
+    "problemUrl": "https://leetcode.com/problems/ways-to-express-an-integer-as-sum-of-powers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2787.Ways to Express an Integer as Sum of Powers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2787.Ways to Express an Integer as Sum of Powers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2787.Ways to Express an Integer as Sum of Powers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2787.Ways to Express an Integer as Sum of Powers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2787.Ways to Express an Integer as Sum of Powers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2787.Ways to Express an Integer as Sum of Powers/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2787.Ways to Express an Integer as Sum of Powers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2787.Ways to Express an Integer as Sum of Powers/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2787.Ways to Express an Integer as Sum of Powers/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

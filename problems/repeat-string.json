@@ -1,0 +1,23 @@
+{
+    "problemName": "repeat-string",
+    "language": "javascript",
+    "code": "String.prototype.replicate = function (times) {\r\n    return Array(times).fill(this).join('');\r\n};",
+    "problemId": 2796,
+    "title": "Repeat String",
+    "problemUrl": "https://leetcode.com/problems/repeat-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2796.Repeat String/Solution.js",
+    "sourceFile": "Solution.js",
+    "sourceCandidates": [
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2796.Repeat String/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2796.Repeat String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

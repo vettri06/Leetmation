@@ -1,0 +1,43 @@
+{
+    "problemName": "count-total-number-of-colored-cells",
+    "language": "python3",
+    "code": "class Solution:\r\n    def coloredCells(self, n: int) -> int:\r\n        return 2 * n * (n - 1) + 1",
+    "problemId": 2579,
+    "title": "Count Total Number of Colored Cells",
+    "problemUrl": "https://leetcode.com/problems/count-total-number-of-colored-cells/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2579.Count Total Number of Colored Cells/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2579.Count Total Number of Colored Cells/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2579.Count Total Number of Colored Cells/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2579.Count Total Number of Colored Cells/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2579.Count Total Number of Colored Cells/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2579.Count Total Number of Colored Cells/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2579.Count Total Number of Colored Cells/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

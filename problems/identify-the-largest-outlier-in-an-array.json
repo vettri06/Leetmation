@@ -1,0 +1,43 @@
+{
+    "problemName": "identify-the-largest-outlier-in-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getLargestOutlier(self, nums: List[int]) -> int:\r\n        s = sum(nums)\r\n        cnt = Counter(nums)\r\n        ans = -inf\r\n        for x, v in cnt.items():\r\n            t = s - x\r\n            if t % 2 or cnt[t // 2] == 0:\r\n                continue\r\n            if x != t // 2 or v > 1:\r\n                ans = max(ans, x)\r\n        return ans",
+    "problemId": 3371,
+    "title": "Identify the Largest Outlier in an Array",
+    "problemUrl": "https://leetcode.com/problems/identify-the-largest-outlier-in-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3371.Identify the Largest Outlier in an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3371.Identify the Largest Outlier in an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3371.Identify the Largest Outlier in an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3371.Identify the Largest Outlier in an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3371.Identify the Largest Outlier in an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3371.Identify the Largest Outlier in an Array/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3371.Identify the Largest Outlier in an Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

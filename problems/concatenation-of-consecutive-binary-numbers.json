@@ -1,0 +1,93 @@
+{
+    "problemName": "concatenation-of-consecutive-binary-numbers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def concatenatedBinary(self, n: int) -> int:\r\n        mod = 10**9 + 7\r\n        ans = 0\r\n        for i in range(1, n + 1):\r\n            ans = (ans << i.bit_length() | i) % mod\r\n        return ans",
+    "problemId": 1680,
+    "title": "Concatenation of Consecutive Binary Numbers",
+    "problemUrl": "https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution2.cs",
+            "sourceFile": "Solution2.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1680.Concatenation of Consecutive Binary Numbers/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

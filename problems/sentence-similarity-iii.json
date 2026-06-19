@@ -1,0 +1,43 @@
+{
+    "problemName": "sentence-similarity-iii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def areSentencesSimilar(self, sentence1: str, sentence2: str) -> bool:\r\n        words1, words2 = sentence1.split(), sentence2.split()\r\n        m, n = len(words1), len(words2)\r\n        if m < n:\r\n            words1, words2 = words2, words1\r\n            m, n = n, m\r\n        i = j = 0\r\n        while i < n and words1[i] == words2[i]:\r\n            i += 1\r\n        while j < n and words1[m - 1 - j] == words2[n - 1 - j]:\r\n            j += 1\r\n        return i + j >= n",
+    "problemId": 1813,
+    "title": "Sentence Similarity III",
+    "problemUrl": "https://leetcode.com/problems/sentence-similarity-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1813.Sentence Similarity III/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1813.Sentence Similarity III/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1813.Sentence Similarity III/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1813.Sentence Similarity III/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1813.Sentence Similarity III/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1813.Sentence Similarity III/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1813.Sentence Similarity III/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

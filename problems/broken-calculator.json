@@ -1,0 +1,38 @@
+{
+    "problemName": "broken-calculator",
+    "language": "python3",
+    "code": "class Solution:\r\n    def brokenCalc(self, startValue: int, target: int) -> int:\r\n        ans = 0\r\n        while startValue < target:\r\n            if target & 1:\r\n                target += 1\r\n            else:\r\n                target >>= 1\r\n            ans += 1\r\n        ans += startValue - target\r\n        return ans",
+    "problemId": 991,
+    "title": "Broken Calculator",
+    "problemUrl": "https://leetcode.com/problems/broken-calculator/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0991.Broken Calculator/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0991.Broken Calculator/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0991.Broken Calculator/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0991.Broken Calculator/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0991.Broken Calculator/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0991.Broken Calculator/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

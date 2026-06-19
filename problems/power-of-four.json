@@ -1,0 +1,53 @@
+{
+    "problemName": "power-of-four",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isPowerOfFour(self, n: int) -> bool:\r\n        return n > 0 and (n & (n - 1)) == 0 and (n & 0xAAAAAAAA) == 0",
+    "problemId": 342,
+    "title": "Power of Four",
+    "problemUrl": "https://leetcode.com/problems/power-of-four/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0342.Power of Four/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0342.Power of Four/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0342.Power of Four/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0342.Power of Four/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0342.Power of Four/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0342.Power of Four/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0342.Power of Four/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0342.Power of Four/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0342.Power of Four/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

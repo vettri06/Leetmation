@@ -1,0 +1,38 @@
+{
+    "problemName": "add-digits",
+    "language": "python3",
+    "code": "class Solution:\r\n    def addDigits(self, num: int) -> int:\r\n        return 0 if num == 0 else (num - 1) % 9 + 1",
+    "problemId": 258,
+    "title": "Add Digits",
+    "problemUrl": "https://leetcode.com/problems/add-digits/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0258.Add Digits/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0258.Add Digits/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0258.Add Digits/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0258.Add Digits/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0258.Add Digits/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0258.Add Digits/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

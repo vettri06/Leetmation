@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-operations-to-make-the-integer-zero",
+    "language": "python3",
+    "code": "class Solution:\r\n    def makeTheIntegerZero(self, num1: int, num2: int) -> int:\r\n        for k in count(1):\r\n            x = num1 - k * num2\r\n            if x < 0:\r\n                break\r\n            if x.bit_count() <= k <= x:\r\n                return k\r\n        return -1",
+    "problemId": 2749,
+    "title": "Minimum Operations to Make the Integer Zero",
+    "problemUrl": "https://leetcode.com/problems/minimum-operations-to-make-the-integer-zero/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2749.Minimum Operations to Make the Integer Zero/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2749.Minimum Operations to Make the Integer Zero/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2749.Minimum Operations to Make the Integer Zero/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2749.Minimum Operations to Make the Integer Zero/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2749.Minimum Operations to Make the Integer Zero/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2749.Minimum Operations to Make the Integer Zero/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2749.Minimum Operations to Make the Integer Zero/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2749.Minimum Operations to Make the Integer Zero/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

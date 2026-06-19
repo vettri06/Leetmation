@@ -1,0 +1,33 @@
+{
+    "problemName": "decode-xored-permutation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def decode(self, encoded: List[int]) -> List[int]:\r\n        n = len(encoded) + 1\r\n        a = b = 0\r\n        for i in range(0, n - 1, 2):\r\n            a ^= encoded[i]\r\n        for i in range(1, n + 1):\r\n            b ^= i\r\n        perm = [0] * n\r\n        perm[-1] = a ^ b\r\n        for i in range(n - 2, -1, -1):\r\n            perm[i] = encoded[i] ^ perm[i + 1]\r\n        return perm",
+    "problemId": 1734,
+    "title": "Decode XORed Permutation",
+    "problemUrl": "https://leetcode.com/problems/decode-xored-permutation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1734.Decode XORed Permutation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1734.Decode XORed Permutation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1734.Decode XORed Permutation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1734.Decode XORed Permutation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1734.Decode XORed Permutation/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

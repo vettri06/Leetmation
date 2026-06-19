@@ -1,0 +1,33 @@
+{
+    "problemName": "number-of-different-subsequences-gcds",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countDifferentSubsequenceGCDs(self, nums: List[int]) -> int:\r\n        mx = max(nums)\r\n        vis = set(nums)\r\n        ans = 0\r\n        for x in range(1, mx + 1):\r\n            g = 0\r\n            for y in range(x, mx + 1, x):\r\n                if y in vis:\r\n                    g = gcd(g, y)\r\n                    if g == x:\r\n                        ans += 1\r\n                        break\r\n        return ans",
+    "problemId": 1819,
+    "title": "Number of Different Subsequences GCDs",
+    "problemUrl": "https://leetcode.com/problems/number-of-different-subsequences-gcds/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1819.Number of Different Subsequences GCDs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1819.Number of Different Subsequences GCDs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1819.Number of Different Subsequences GCDs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1819.Number of Different Subsequences GCDs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1819.Number of Different Subsequences GCDs/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

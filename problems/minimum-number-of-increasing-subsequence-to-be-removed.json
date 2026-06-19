@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-number-of-increasing-subsequence-to-be-removed",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, nums: List[int]) -> int:\r\n        g = []\r\n        for x in nums:\r\n            l, r = 0, len(g)\r\n            while l < r:\r\n                mid = (l + r) >> 1\r\n                if g[mid] < x:\r\n                    r = mid\r\n                else:\r\n                    l = mid + 1\r\n            if l == len(g):\r\n                g.append(x)\r\n            else:\r\n                g[l] = x\r\n        return len(g)",
+    "problemId": 3231,
+    "title": "Minimum Number of Increasing Subsequence to Be Removed",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-increasing-subsequence-to-be-removed/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3231.Minimum Number of Increasing Subsequence to Be Removed/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3231.Minimum Number of Increasing Subsequence to Be Removed/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3231.Minimum Number of Increasing Subsequence to Be Removed/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3231.Minimum Number of Increasing Subsequence to Be Removed/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3231.Minimum Number of Increasing Subsequence to Be Removed/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3231.Minimum Number of Increasing Subsequence to Be Removed/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3231.Minimum Number of Increasing Subsequence to Be Removed/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

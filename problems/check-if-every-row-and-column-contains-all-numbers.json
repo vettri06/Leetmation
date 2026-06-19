@@ -1,0 +1,38 @@
+{
+    "problemName": "check-if-every-row-and-column-contains-all-numbers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkValid(self, matrix: List[List[int]]) -> bool:\r\n        n = len(matrix)\r\n        return all(len(set(row)) == n for row in chain(matrix, zip(*matrix)))",
+    "problemId": 2133,
+    "title": "Check if Every Row and Column Contains All Numbers",
+    "problemUrl": "https://leetcode.com/problems/check-if-every-row-and-column-contains-all-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2133.Check if Every Row and Column Contains All Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2133.Check if Every Row and Column Contains All Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2133.Check if Every Row and Column Contains All Numbers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2133.Check if Every Row and Column Contains All Numbers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2133.Check if Every Row and Column Contains All Numbers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2133.Check if Every Row and Column Contains All Numbers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

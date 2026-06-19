@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-of-absolute-value-expression",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxAbsValExpr(self, arr1: List[int], arr2: List[int]) -> int:\r\n        dirs = (1, -1, -1, 1, 1)\r\n        ans = -inf\r\n        for a, b in pairwise(dirs):\r\n            mx, mi = -inf, inf\r\n            for i, (x, y) in enumerate(zip(arr1, arr2)):\r\n                mx = max(mx, a * x + b * y + i)\r\n                mi = min(mi, a * x + b * y + i)\r\n                ans = max(ans, mx - mi)\r\n        return ans",
+    "problemId": 1131,
+    "title": "Maximum of Absolute Value Expression",
+    "problemUrl": "https://leetcode.com/problems/maximum-of-absolute-value-expression/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1131.Maximum of Absolute Value Expression/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1131.Maximum of Absolute Value Expression/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1131.Maximum of Absolute Value Expression/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1131.Maximum of Absolute Value Expression/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1131.Maximum of Absolute Value Expression/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1131.Maximum of Absolute Value Expression/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

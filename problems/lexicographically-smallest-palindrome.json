@@ -1,0 +1,43 @@
+{
+    "problemName": "lexicographically-smallest-palindrome",
+    "language": "python3",
+    "code": "class Solution:\r\n    def makeSmallestPalindrome(self, s: str) -> str:\r\n        cs = list(s)\r\n        i, j = 0, len(s) - 1\r\n        while i < j:\r\n            cs[i] = cs[j] = min(cs[i], cs[j])\r\n            i, j = i + 1, j - 1\r\n        return \"\".join(cs)",
+    "problemId": 2697,
+    "title": "Lexicographically Smallest Palindrome",
+    "problemUrl": "https://leetcode.com/problems/lexicographically-smallest-palindrome/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2697.Lexicographically Smallest Palindrome/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2697.Lexicographically Smallest Palindrome/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2697.Lexicographically Smallest Palindrome/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2697.Lexicographically Smallest Palindrome/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2697.Lexicographically Smallest Palindrome/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2697.Lexicographically Smallest Palindrome/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2697.Lexicographically Smallest Palindrome/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

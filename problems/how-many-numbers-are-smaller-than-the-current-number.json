@@ -1,0 +1,63 @@
+{
+    "problemName": "how-many-numbers-are-smaller-than-the-current-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:\r\n        arr = sorted(nums)\r\n        return [bisect_left(arr, x) for x in nums]",
+    "problemId": 1365,
+    "title": "How Many Numbers Are Smaller Than the Current Number",
+    "problemUrl": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1365.How Many Numbers Are Smaller Than the Current Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1365.How Many Numbers Are Smaller Than the Current Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1365.How Many Numbers Are Smaller Than the Current Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1365.How Many Numbers Are Smaller Than the Current Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1365.How Many Numbers Are Smaller Than the Current Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1365.How Many Numbers Are Smaller Than the Current Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1365.How Many Numbers Are Smaller Than the Current Number/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1365.How Many Numbers Are Smaller Than the Current Number/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1365.How Many Numbers Are Smaller Than the Current Number/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1365.How Many Numbers Are Smaller Than the Current Number/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1365.How Many Numbers Are Smaller Than the Current Number/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

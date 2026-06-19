@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSideLength(self, mat: List[List[int]], threshold: int) -> int:\r\n        def check(k: int) -> bool:\r\n            for i in range(m - k + 1):\r\n                for j in range(n - k + 1):\r\n                    v = s[i + k][j + k] - s[i][j + k] - s[i + k][j] + s[i][j]\r\n                    if v <= threshold:\r\n                        return True\r\n            return False\r\n\r\n        m, n = len(mat), len(mat[0])\r\n        s = [[0] * (n + 1) for _ in range(m + 1)]\r\n        for i, row in enumerate(mat, 1):\r\n            for j, x in enumerate(row, 1):\r\n                s[i][j] = s[i - 1][j] + s[i][j - 1] - s[i - 1][j - 1] + x\r\n        l, r = 0, min(m, n)\r\n        while l < r:\r\n            mid = (l + r + 1) >> 1\r\n            if check(mid):\r\n                l = mid\r\n            else:\r\n                r = mid - 1\r\n        return l",
+    "problemId": 1292,
+    "title": "Maximum Side Length of a Square with Sum Less than or Equal to Threshold",
+    "problemUrl": "https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1292.Maximum Side Length of a Square with Sum Less than or Equal to Threshold/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1292.Maximum Side Length of a Square with Sum Less than or Equal to Threshold/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1292.Maximum Side Length of a Square with Sum Less than or Equal to Threshold/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1292.Maximum Side Length of a Square with Sum Less than or Equal to Threshold/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1292.Maximum Side Length of a Square with Sum Less than or Equal to Threshold/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1292.Maximum Side Length of a Square with Sum Less than or Equal to Threshold/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1292.Maximum Side Length of a Square with Sum Less than or Equal to Threshold/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

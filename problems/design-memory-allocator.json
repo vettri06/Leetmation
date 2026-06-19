@@ -1,0 +1,58 @@
+{
+    "problemName": "design-memory-allocator",
+    "language": "python3",
+    "code": "class Allocator:\r\n    def __init__(self, n: int):\r\n        self.m = [0] * n\r\n\r\n    def allocate(self, size: int, mID: int) -> int:\r\n        cnt = 0\r\n        for i, v in enumerate(self.m):\r\n            if v:\r\n                cnt = 0\r\n            else:\r\n                cnt += 1\r\n                if cnt == size:\r\n                    self.m[i - size + 1 : i + 1] = [mID] * size\r\n                    return i - size + 1\r\n        return -1\r\n\r\n    def freeMemory(self, mID: int) -> int:\r\n        ans = 0\r\n        for i, v in enumerate(self.m):\r\n            if v == mID:\r\n                self.m[i] = 0\r\n                ans += 1\r\n        return ans\r\n\r\n\r\n# Your Allocator object will be instantiated and called as such:\r\n# obj = Allocator(n)\r\n# param_1 = obj.allocate(size,mID)\r\n# param_2 = obj.freeMemory(mID)",
+    "problemId": 2502,
+    "title": "Design Memory Allocator",
+    "problemUrl": "https://leetcode.com/problems/design-memory-allocator/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2502.Design Memory Allocator/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2502.Design Memory Allocator/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2502.Design Memory Allocator/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2502.Design Memory Allocator/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2502.Design Memory Allocator/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2502.Design Memory Allocator/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2502.Design Memory Allocator/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2502.Design Memory Allocator/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2502.Design Memory Allocator/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2502.Design Memory Allocator/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

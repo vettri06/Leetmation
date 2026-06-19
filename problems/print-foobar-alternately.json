@@ -1,0 +1,28 @@
+{
+    "problemName": "print-foobar-alternately",
+    "language": "python3",
+    "code": "from threading import Semaphore\r\n\r\n\r\nclass FooBar:\r\n    def __init__(self, n):\r\n        self.n = n\r\n        self.f = Semaphore(1)\r\n        self.b = Semaphore(0)\r\n\r\n    def foo(self, printFoo: \"Callable[[], None]\") -> None:\r\n        for _ in range(self.n):\r\n            self.f.acquire()\r\n            # printFoo() outputs \"foo\". Do not change or remove this line.\r\n            printFoo()\r\n            self.b.release()\r\n\r\n    def bar(self, printBar: \"Callable[[], None]\") -> None:\r\n        for _ in range(self.n):\r\n            self.b.acquire()\r\n            # printBar() outputs \"bar\". Do not change or remove this line.\r\n            printBar()\r\n            self.f.release()",
+    "problemId": 1115,
+    "title": "Print FooBar Alternately",
+    "problemUrl": "https://leetcode.com/problems/print-foobar-alternately/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1115.Print FooBar Alternately/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1115.Print FooBar Alternately/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1115.Print FooBar Alternately/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1115.Print FooBar Alternately/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

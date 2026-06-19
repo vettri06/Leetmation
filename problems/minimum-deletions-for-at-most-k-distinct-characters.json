@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-deletions-for-at-most-k-distinct-characters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minDeletion(self, s: str, k: int) -> int:\r\n        return sum(sorted(Counter(s).values())[:-k])",
+    "problemId": 3545,
+    "title": "Minimum Deletions for At Most K Distinct Characters",
+    "problemUrl": "https://leetcode.com/problems/minimum-deletions-for-at-most-k-distinct-characters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3545.Minimum Deletions for At Most K Distinct Characters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3545.Minimum Deletions for At Most K Distinct Characters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3545.Minimum Deletions for At Most K Distinct Characters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3545.Minimum Deletions for At Most K Distinct Characters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3545.Minimum Deletions for At Most K Distinct Characters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

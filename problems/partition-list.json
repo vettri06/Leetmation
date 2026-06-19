@@ -1,0 +1,53 @@
+{
+    "problemName": "partition-list",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def partition(self, head: Optional[ListNode], x: int) -> Optional[ListNode]:\r\n        l = ListNode()\r\n        r = ListNode()\r\n        tl, tr = l, r\r\n        while head:\r\n            if head.val < x:\r\n                tl.next = head\r\n                tl = tl.next\r\n            else:\r\n                tr.next = head\r\n                tr = tr.next\r\n            head = head.next\r\n        tr.next = None\r\n        tl.next = r.next\r\n        return l.next",
+    "problemId": 86,
+    "title": "Partition List",
+    "problemUrl": "https://leetcode.com/problems/partition-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0086.Partition List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0086.Partition List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0086.Partition List/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0086.Partition List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0086.Partition List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0086.Partition List/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0086.Partition List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0086.Partition List/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0086.Partition List/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

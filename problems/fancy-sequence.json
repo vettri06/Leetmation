@@ -1,0 +1,38 @@
+{
+    "problemName": "fancy-sequence",
+    "language": "python3",
+    "code": "MOD = int(1e9 + 7)\r\n\r\n\r\nclass Node:\r\n    def __init__(self, l, r):\r\n        self.left = None\r\n        self.right = None\r\n        self.l = l\r\n        self.r = r\r\n        self.mid = (l + r) >> 1\r\n        self.v = 0\r\n        self.add = 0\r\n        self.mul = 1\r\n\r\n\r\nclass SegmentTree:\r\n    def __init__(self):\r\n        self.root = Node(1, int(1e5 + 1))\r\n\r\n    def modifyAdd(self, l, r, inc, node=None):\r\n        if l > r:\r\n            return\r\n        if node is None:\r\n            node = self.root\r\n        if node.l >= l and node.r <= r:\r\n            node.v = (node.v + (node.r - node.l + 1) * inc) % MOD\r\n            node.add += inc\r\n            return\r\n        self.pushdown(node)\r\n        if l <= node.mid:\r\n            self.modifyAdd(l, r, inc, node.left)\r\n        if r > node.mid:\r\n            self.modifyAdd(l, r, inc, node.right)\r\n        self.pushup(node)\r\n\r\n    def modifyMul(self, l, r, m, node=None):\r\n        if l > r:\r\n            return\r\n        if node is None:\r\n            node = self.root\r\n        if node.l >= l and node.r <= r:\r\n            node.v = (node.v * m) % MOD\r\n            node.add = (node.add * m) % MOD\r\n            node.mul = (node.mul * m) % MOD\r\n            return\r\n        self.pushdown(node)\r\n        if l <= node.mid:\r\n            self.modifyMul(l, r, m, node.left)\r\n        if r > node.mid:\r\n            self.modifyMul(l, r, m, node.right)\r\n        self.pushup(node)\r\n\r\n    def query(self, l, r, node=None):\r\n        if l > r:\r\n            return 0\r\n        if node is None:\r\n            node = self.root\r\n        if node.l >= l and node.r <= r:\r\n            return node.v\r\n        self.pushdown(node)\r\n        v = 0\r\n        if l <= node.mid:\r\n            v = (v + self.query(l, r, node.left)) % MOD\r\n        if r > node.mid:\r\n            v = (v + self.query(l, r, node.right)) % MOD\r\n        return v\r\n\r\n    def pushup(self, node):\r\n        node.v = (node.left.v + node.right.v) % MOD\r\n\r\n    def pushdown(self, node):\r\n        if node.left is None:\r\n            node.left = Node(node.l, node.mid)\r\n        if node.right is None:\r\n            node.right = Node(node.mid + 1, node.r)\r\n        left, right = node.left, node.right\r\n        if node.add != 0 or node.mul != 1:\r\n            left.v = (left.v * node.mul + (left.r - left.l + 1) * node.add) % MOD\r\n            right.v = (right.v * node.mul + (right.r - right.l + 1) * node.add) % MOD\r\n            left.add = (left.add * node.mul + node.add) % MOD\r\n            right.add = (right.add * node.mul + node.add) % MOD\r\n            left.mul = (left.mul * node.mul) % MOD\r\n            right.mul = (right.mul * node.mul) % MOD\r\n            node.add = 0\r\n            node.mul = 1\r\n\r\n\r\nclass Fancy:\r\n    def __init__(self):\r\n        self.n = 0\r\n        self.tree = SegmentTree()\r\n\r\n    def append(self, val: int) -> None:\r\n        self.n += 1\r\n        self.tree.modifyAdd(self.n, self.n, val)\r\n\r\n    def addAll(self, inc: int) -> None:\r\n        self.tree.modifyAdd(1, self.n, inc)\r\n\r\n    def multAll(self, m: int) -> None:\r\n        self.tree.modifyMul(1, self.n, m)\r\n\r\n    def getIndex(self, idx: int) -> int:\r\n        return -1 if idx >= self.n else self.tree.query(idx + 1, idx + 1)\r\n\r\n\r\n# Your Fancy object will be instantiated and called as such:\r\n# obj = Fancy()\r\n# obj.append(val)\r\n# obj.addAll(inc)\r\n# obj.multAll(m)\r\n# param_4 = obj.getIndex(idx)",
+    "problemId": 1622,
+    "title": "Fancy Sequence",
+    "problemUrl": "https://leetcode.com/problems/fancy-sequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1622.Fancy Sequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1622.Fancy Sequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1622.Fancy Sequence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1622.Fancy Sequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1622.Fancy Sequence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1622.Fancy Sequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

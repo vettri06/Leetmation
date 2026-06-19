@@ -1,0 +1,38 @@
+{
+    "problemName": "vowel-consonant-score",
+    "language": "python3",
+    "code": "class Solution:\r\n    def vowelConsonantScore(self, s: str) -> int:\r\n        v = c = 0\r\n        for ch in s:\r\n            if ch.isalpha():\r\n                c += 1\r\n                if ch in \"aeiou\":\r\n                    v += 1\r\n        c -= v\r\n        return 0 if c == 0 else v // c",
+    "problemId": 3813,
+    "title": "Vowel-Consonant Score",
+    "problemUrl": "https://leetcode.com/problems/vowel-consonant-score/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3813.Vowel-Consonant Score/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3813.Vowel-Consonant Score/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3813.Vowel-Consonant Score/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3813.Vowel-Consonant Score/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3813.Vowel-Consonant Score/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3813.Vowel-Consonant Score/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "custom-interval",
+    "language": "typescript",
+    "code": "const intervalMap = new Map<number, NodeJS.Timeout>();\r\n\r\nfunction customInterval(fn: Function, delay: number, period: number): number {\r\n    let count = 0;\r\n    function recursiveTimeout() {\r\n        intervalMap.set(\r\n            id,\r\n            setTimeout(\r\n                () => {\r\n                    fn();\r\n                    count++;\r\n                    recursiveTimeout();\r\n                },\r\n                delay + period * count,\r\n            ),\r\n        );\r\n    }\r\n\r\n    const id = Date.now();\r\n    recursiveTimeout();\r\n    return id;\r\n}\r\n\r\nfunction customClearInterval(id: number) {\r\n    if (intervalMap.has(id)) {\r\n        clearTimeout(intervalMap.get(id)!);\r\n        intervalMap.delete(id);\r\n    }\r\n}",
+    "problemId": 2805,
+    "title": "Custom Interval",
+    "problemUrl": "https://leetcode.com/problems/custom-interval/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2805.Custom Interval/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2805.Custom Interval/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

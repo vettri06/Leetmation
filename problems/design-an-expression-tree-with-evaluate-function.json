@@ -1,0 +1,28 @@
+{
+    "problemName": "design-an-expression-tree-with-evaluate-function",
+    "language": "python3",
+    "code": "import abc\r\nfrom abc import ABC, abstractmethod\r\n\r\n\"\"\"\r\nThis is the interface for the expression tree Node.\r\nYou should not remove it, and you can define some classes to implement it.\r\n\"\"\"\r\n\r\n\r\nclass Node(ABC):\r\n    @abstractmethod\r\n    # define your fields here\r\n    def evaluate(self) -> int:\r\n        pass\r\n\r\n\r\nclass MyNode(Node):\r\n    def __init__(self, val):\r\n        self.val = val\r\n        self.left = None\r\n        self.right = None\r\n\r\n    def evaluate(self) -> int:\r\n        x = self.val\r\n        if x.isdigit():\r\n            return int(x)\r\n\r\n        left, right = self.left.evaluate(), self.right.evaluate()\r\n        if x == '+':\r\n            return left + right\r\n        if x == '-':\r\n            return left - right\r\n        if x == '*':\r\n            return left * right\r\n        if x == '/':\r\n            return left // right\r\n\r\n\r\n\"\"\"\r\nThis is the TreeBuilder class.\r\nYou can treat it as the driver code that takes the postinfix input\r\nand returns the expression tree represnting it as a Node.\r\n\"\"\"\r\n\r\n\r\nclass TreeBuilder(object):\r\n    def buildTree(self, postfix: List[str]) -> 'Node':\r\n        stk = []\r\n        for s in postfix:\r\n            node = MyNode(s)\r\n            if not s.isdigit():\r\n                node.right = stk.pop()\r\n                node.left = stk.pop()\r\n            stk.append(node)\r\n        return stk[-1]\r\n\r\n\r\n\"\"\"\r\nYour TreeBuilder object will be instantiated and called as such:\r\nobj = TreeBuilder();\r\nexpTree = obj.buildTree(postfix);\r\nans = expTree.evaluate();\r\n\"\"\"",
+    "problemId": 1628,
+    "title": "Design an Expression Tree With Evaluate Function",
+    "problemUrl": "https://leetcode.com/problems/design-an-expression-tree-with-evaluate-function/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1628.Design an Expression Tree With Evaluate Function/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1628.Design an Expression Tree With Evaluate Function/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1628.Design an Expression Tree With Evaluate Function/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1628.Design an Expression Tree With Evaluate Function/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

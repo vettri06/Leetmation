@@ -1,0 +1,33 @@
+{
+    "problemName": "replace-the-substring-for-balanced-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def balancedString(self, s: str) -> int:\r\n        cnt = Counter(s)\r\n        n = len(s)\r\n        if all(v <= n // 4 for v in cnt.values()):\r\n            return 0\r\n        ans, j = n, 0\r\n        for i, c in enumerate(s):\r\n            cnt[c] -= 1\r\n            while j <= i and all(v <= n // 4 for v in cnt.values()):\r\n                ans = min(ans, i - j + 1)\r\n                cnt[s[j]] += 1\r\n                j += 1\r\n        return ans",
+    "problemId": 1234,
+    "title": "Replace the Substring for Balanced String",
+    "problemUrl": "https://leetcode.com/problems/replace-the-substring-for-balanced-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1234.Replace the Substring for Balanced String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1234.Replace the Substring for Balanced String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1234.Replace the Substring for Balanced String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1234.Replace the Substring for Balanced String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1234.Replace the Substring for Balanced String/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

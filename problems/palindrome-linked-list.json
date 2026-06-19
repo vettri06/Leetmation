@@ -1,0 +1,48 @@
+{
+    "problemName": "palindrome-linked-list",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def isPalindrome(self, head: Optional[ListNode]) -> bool:\r\n        slow, fast = head, head.next\r\n        while fast and fast.next:\r\n            slow, fast = slow.next, fast.next.next\r\n        pre, cur = None, slow.next\r\n        while cur:\r\n            t = cur.next\r\n            cur.next = pre\r\n            pre, cur = cur, t\r\n        while pre:\r\n            if pre.val != head.val:\r\n                return False\r\n            pre, head = pre.next, head.next\r\n        return True",
+    "problemId": 234,
+    "title": "Palindrome Linked List",
+    "problemUrl": "https://leetcode.com/problems/palindrome-linked-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0234.Palindrome Linked List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0234.Palindrome Linked List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0234.Palindrome Linked List/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0234.Palindrome Linked List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0234.Palindrome Linked List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0234.Palindrome Linked List/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0234.Palindrome Linked List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0234.Palindrome Linked List/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

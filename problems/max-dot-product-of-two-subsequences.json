@@ -1,0 +1,43 @@
+{
+    "problemName": "max-dot-product-of-two-subsequences",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:\r\n        m, n = len(nums1), len(nums2)\r\n        f = [[-inf] * (n + 1) for _ in range(m + 1)]\r\n        for i, x in enumerate(nums1, 1):\r\n            for j, y in enumerate(nums2, 1):\r\n                v = x * y\r\n                f[i][j] = max(f[i - 1][j], f[i][j - 1], max(0, f[i - 1][j - 1]) + v)\r\n        return f[m][n]",
+    "problemId": 1458,
+    "title": "Max Dot Product of Two Subsequences",
+    "problemUrl": "https://leetcode.com/problems/max-dot-product-of-two-subsequences/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1458.Max Dot Product of Two Subsequences/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1458.Max Dot Product of Two Subsequences/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1458.Max Dot Product of Two Subsequences/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1458.Max Dot Product of Two Subsequences/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1458.Max Dot Product of Two Subsequences/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1458.Max Dot Product of Two Subsequences/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1458.Max Dot Product of Two Subsequences/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

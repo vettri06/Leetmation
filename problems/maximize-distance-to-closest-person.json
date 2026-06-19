@@ -1,0 +1,38 @@
+{
+    "problemName": "maximize-distance-to-closest-person",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxDistToClosest(self, seats: List[int]) -> int:\r\n        first = last = None\r\n        d = 0\r\n        for i, c in enumerate(seats):\r\n            if c:\r\n                if last is not None:\r\n                    d = max(d, i - last)\r\n                if first is None:\r\n                    first = i\r\n                last = i\r\n        return max(first, len(seats) - last - 1, d // 2)",
+    "problemId": 849,
+    "title": "Maximize Distance to Closest Person",
+    "problemUrl": "https://leetcode.com/problems/maximize-distance-to-closest-person/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0849.Maximize Distance to Closest Person/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0849.Maximize Distance to Closest Person/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0849.Maximize Distance to Closest Person/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0849.Maximize Distance to Closest Person/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0849.Maximize Distance to Closest Person/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0849.Maximize Distance to Closest Person/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

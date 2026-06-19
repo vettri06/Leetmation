@@ -1,0 +1,38 @@
+{
+    "problemName": "trapping-rain-water-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def trapRainWater(self, heightMap: List[List[int]]) -> int:\r\n        m, n = len(heightMap), len(heightMap[0])\r\n        vis = [[False] * n for _ in range(m)]\r\n        pq = []\r\n        for i in range(m):\r\n            for j in range(n):\r\n                if i == 0 or i == m - 1 or j == 0 or j == n - 1:\r\n                    heappush(pq, (heightMap[i][j], i, j))\r\n                    vis[i][j] = True\r\n        ans = 0\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        while pq:\r\n            h, i, j = heappop(pq)\r\n            for a, b in pairwise(dirs):\r\n                x, y = i + a, j + b\r\n                if x >= 0 and x < m and y >= 0 and y < n and not vis[x][y]:\r\n                    ans += max(0, h - heightMap[x][y])\r\n                    vis[x][y] = True\r\n                    heappush(pq, (max(h, heightMap[x][y]), x, y))\r\n        return ans",
+    "problemId": 407,
+    "title": "Trapping Rain Water II",
+    "problemUrl": "https://leetcode.com/problems/trapping-rain-water-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0407.Trapping Rain Water II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0407.Trapping Rain Water II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0407.Trapping Rain Water II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0407.Trapping Rain Water II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0407.Trapping Rain Water II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0407.Trapping Rain Water II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

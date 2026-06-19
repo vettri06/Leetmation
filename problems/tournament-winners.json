@@ -1,0 +1,18 @@
+{
+    "problemName": "tournament-winners",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    s AS (\r\n        SELECT first_player AS player_id, first_score AS score, group_id\r\n        FROM\r\n            Matches AS m\r\n            JOIN Players AS p ON m.first_player = p.player_id\r\n        UNION ALL\r\n        SELECT second_player AS player_id, second_score AS score, group_id\r\n        FROM\r\n            Matches AS m\r\n            JOIN Players AS p ON m.second_player = p.player_id\r\n    ),\r\n    t AS (\r\n        SELECT group_id, player_id, SUM(score) AS scores\r\n        FROM s\r\n        GROUP BY player_id\r\n    ),\r\n    p AS (\r\n        SELECT\r\n            group_id,\r\n            player_id,\r\n            RANK() OVER (\r\n                PARTITION BY group_id\r\n                ORDER BY scores DESC, player_id\r\n            ) AS rk\r\n        FROM t\r\n    )\r\nSELECT group_id, player_id\r\nFROM p\r\nWHERE rk = 1;",
+    "problemId": 1194,
+    "title": "Tournament Winners",
+    "problemUrl": "https://leetcode.com/problems/tournament-winners/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1194.Tournament Winners/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1194.Tournament Winners/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

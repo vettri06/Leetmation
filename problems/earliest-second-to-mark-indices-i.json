@@ -1,0 +1,38 @@
+{
+    "problemName": "earliest-second-to-mark-indices-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def earliestSecondToMarkIndices(\r\n        self, nums: List[int], changeIndices: List[int]\r\n    ) -> int:\r\n        def check(t: int) -> bool:\r\n            decrement = 0\r\n            marked = 0\r\n            last = {i: s for s, i in enumerate(changeIndices[:t])}\r\n            for s, i in enumerate(changeIndices[:t]):\r\n                if last[i] == s:\r\n                    if decrement < nums[i - 1]:\r\n                        return False\r\n                    decrement -= nums[i - 1]\r\n                    marked += 1\r\n                else:\r\n                    decrement += 1\r\n            return marked == len(nums)\r\n\r\n        m = len(changeIndices)\r\n        l = bisect_left(range(1, m + 2), True, key=check) + 1\r\n        return -1 if l > m else l",
+    "problemId": 3048,
+    "title": "Earliest Second to Mark Indices I",
+    "problemUrl": "https://leetcode.com/problems/earliest-second-to-mark-indices-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3048.Earliest Second to Mark Indices I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3048.Earliest Second to Mark Indices I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3048.Earliest Second to Mark Indices I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3048.Earliest Second to Mark Indices I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3048.Earliest Second to Mark Indices I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3048.Earliest Second to Mark Indices I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "increment-submatrices-by-one",
+    "language": "python3",
+    "code": "class Solution:\r\n    def rangeAddQueries(self, n: int, queries: List[List[int]]) -> List[List[int]]:\r\n        mat = [[0] * n for _ in range(n)]\r\n        for x1, y1, x2, y2 in queries:\r\n            mat[x1][y1] += 1\r\n            if x2 + 1 < n:\r\n                mat[x2 + 1][y1] -= 1\r\n            if y2 + 1 < n:\r\n                mat[x1][y2 + 1] -= 1\r\n            if x2 + 1 < n and y2 + 1 < n:\r\n                mat[x2 + 1][y2 + 1] += 1\r\n\r\n        for i in range(n):\r\n            for j in range(n):\r\n                if i:\r\n                    mat[i][j] += mat[i - 1][j]\r\n                if j:\r\n                    mat[i][j] += mat[i][j - 1]\r\n                if i and j:\r\n                    mat[i][j] -= mat[i - 1][j - 1]\r\n        return mat",
+    "problemId": 2536,
+    "title": "Increment Submatrices by One",
+    "problemUrl": "https://leetcode.com/problems/increment-submatrices-by-one/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2536.Increment Submatrices by One/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2536.Increment Submatrices by One/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2536.Increment Submatrices by One/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2536.Increment Submatrices by One/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2536.Increment Submatrices by One/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2536.Increment Submatrices by One/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2536.Increment Submatrices by One/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2536.Increment Submatrices by One/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "sort-characters-by-frequency",
+    "language": "python3",
+    "code": "class Solution:\r\n    def frequencySort(self, s: str) -> str:\r\n        cnt = Counter(s)\r\n        return ''.join(c * v for c, v in sorted(cnt.items(), key=lambda x: -x[1]))",
+    "problemId": 451,
+    "title": "Sort Characters By Frequency",
+    "problemUrl": "https://leetcode.com/problems/sort-characters-by-frequency/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0451.Sort Characters By Frequency/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0451.Sort Characters By Frequency/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0451.Sort Characters By Frequency/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0451.Sort Characters By Frequency/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0451.Sort Characters By Frequency/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0451.Sort Characters By Frequency/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0451.Sort Characters By Frequency/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "design-an-ordered-stream",
+    "language": "python3",
+    "code": "class OrderedStream:\r\n    def __init__(self, n: int):\r\n        self.ptr = 1\r\n        self.data = [None] * (n + 1)\r\n\r\n    def insert(self, idKey: int, value: str) -> List[str]:\r\n        self.data[idKey] = value\r\n        ans = []\r\n        while self.ptr < len(self.data) and self.data[self.ptr]:\r\n            ans.append(self.data[self.ptr])\r\n            self.ptr += 1\r\n        return ans\r\n\r\n\r\n# Your OrderedStream object will be instantiated and called as such:\r\n# obj = OrderedStream(n)\r\n# param_1 = obj.insert(idKey,value)",
+    "problemId": 1656,
+    "title": "Design an Ordered Stream",
+    "problemUrl": "https://leetcode.com/problems/design-an-ordered-stream/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1656.Design an Ordered Stream/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1656.Design an Ordered Stream/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1656.Design an Ordered Stream/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1656.Design an Ordered Stream/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1656.Design an Ordered Stream/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1656.Design an Ordered Stream/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1656.Design an Ordered Stream/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

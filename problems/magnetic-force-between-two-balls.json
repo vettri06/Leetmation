@@ -1,0 +1,38 @@
+{
+    "problemName": "magnetic-force-between-two-balls",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxDistance(self, position: List[int], m: int) -> int:\r\n        def check(f: int) -> bool:\r\n            prev = -inf\r\n            cnt = 0\r\n            for curr in position:\r\n                if curr - prev >= f:\r\n                    prev = curr\r\n                    cnt += 1\r\n            return cnt < m\r\n\r\n        position.sort()\r\n        l, r = 1, position[-1]\r\n        return bisect_left(range(l, r + 1), True, key=check)",
+    "problemId": 1552,
+    "title": "Magnetic Force Between Two Balls",
+    "problemUrl": "https://leetcode.com/problems/magnetic-force-between-two-balls/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1552.Magnetic Force Between Two Balls/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1552.Magnetic Force Between Two Balls/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1552.Magnetic Force Between Two Balls/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1552.Magnetic Force Between Two Balls/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1552.Magnetic Force Between Two Balls/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1552.Magnetic Force Between Two Balls/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

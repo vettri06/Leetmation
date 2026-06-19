@@ -1,0 +1,43 @@
+{
+    "problemName": "count-beautiful-substrings-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def beautifulSubstrings(self, s: str, k: int) -> int:\r\n        n = len(s)\r\n        vs = set(\"aeiou\")\r\n        ans = 0\r\n        for i in range(n):\r\n            vowels = 0\r\n            for j in range(i, n):\r\n                vowels += s[j] in vs\r\n                consonants = j - i + 1 - vowels\r\n                if vowels == consonants and vowels * consonants % k == 0:\r\n                    ans += 1\r\n        return ans",
+    "problemId": 2947,
+    "title": "Count Beautiful Substrings I",
+    "problemUrl": "https://leetcode.com/problems/count-beautiful-substrings-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2947.Count Beautiful Substrings I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2947.Count Beautiful Substrings I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2947.Count Beautiful Substrings I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2947.Count Beautiful Substrings I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2947.Count Beautiful Substrings I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2947.Count Beautiful Substrings I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2947.Count Beautiful Substrings I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

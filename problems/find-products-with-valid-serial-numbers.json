@@ -1,0 +1,23 @@
+{
+    "problemName": "find-products-with-valid-serial-numbers",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_valid_serial_products(products: pd.DataFrame) -> pd.DataFrame:\r\n    valid_pattern = r\"\\bSN[0-9]{4}-[0-9]{4}\\b\"\r\n    valid_products = products[\r\n        products[\"description\"].str.contains(valid_pattern, regex=True)\r\n    ]\r\n    valid_products = valid_products.sort_values(by=\"product_id\")\r\n    return valid_products",
+    "problemId": 3465,
+    "title": "Find Products with Valid Serial Numbers",
+    "problemUrl": "https://leetcode.com/problems/find-products-with-valid-serial-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3465.Find Products with Valid Serial Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3465.Find Products with Valid Serial Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3465.Find Products with Valid Serial Numbers/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

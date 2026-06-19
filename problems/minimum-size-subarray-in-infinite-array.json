@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-size-subarray-in-infinite-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSizeSubarray(self, nums: List[int], target: int) -> int:\r\n        s = sum(nums)\r\n        n = len(nums)\r\n        a = 0\r\n        if target > s:\r\n            a = n * (target // s)\r\n            target -= target // s * s\r\n        if target == s:\r\n            return n\r\n        pos = {0: -1}\r\n        pre = 0\r\n        b = inf\r\n        for i, x in enumerate(nums):\r\n            pre += x\r\n            if (t := pre - target) in pos:\r\n                b = min(b, i - pos[t])\r\n            if (t := pre - (s - target)) in pos:\r\n                b = min(b, n - (i - pos[t]))\r\n            pos[pre] = i\r\n        return -1 if b == inf else a + b",
+    "problemId": 2875,
+    "title": "Minimum Size Subarray in Infinite Array",
+    "problemUrl": "https://leetcode.com/problems/minimum-size-subarray-in-infinite-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2875.Minimum Size Subarray in Infinite Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2875.Minimum Size Subarray in Infinite Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2875.Minimum Size Subarray in Infinite Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2875.Minimum Size Subarray in Infinite Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2875.Minimum Size Subarray in Infinite Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2875.Minimum Size Subarray in Infinite Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

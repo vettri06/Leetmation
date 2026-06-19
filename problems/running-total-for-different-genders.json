@@ -1,0 +1,18 @@
+{
+    "problemName": "running-total-for-different-genders",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    gender,\r\n    day,\r\n    SUM(score_points) OVER (\r\n        PARTITION BY gender\r\n        ORDER BY gender, day\r\n    ) AS total\r\nFROM Scores;",
+    "problemId": 1308,
+    "title": "Running Total for Different Genders",
+    "problemUrl": "https://leetcode.com/problems/running-total-for-different-genders/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1308.Running Total for Different Genders/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1308.Running Total for Different Genders/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "equal-rational-numbers",
+    "language": "python3",
+    "code": "from fractions import Fraction\n\nclass Solution:\n    def isRationalEqual(self, s: str, t: str) -> bool:\n        return self.value(s) == self.value(t)\n\n    def value(self, text: str) -> Fraction:\n        if '.' not in text:\n            return Fraction(int(text), 1)\n\n        integer, decimal = text.split('.')\n        if '(' not in decimal:\n            numerator = int((integer or '0') + decimal) if decimal else int(integer or '0')\n            return Fraction(numerator, 10 ** len(decimal))\n\n        non_repeat, repeat = decimal.split('(')\n        repeat = repeat[:-1]\n        base = Fraction(int(integer or '0'), 1)\n        if non_repeat:\n            base += Fraction(int(non_repeat), 10 ** len(non_repeat))\n        repeated = Fraction(int(repeat), (10 ** len(repeat) - 1) * (10 ** len(non_repeat)))\n        return base + repeated"
+}

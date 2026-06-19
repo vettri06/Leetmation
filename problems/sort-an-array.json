@@ -1,0 +1,88 @@
+{
+    "problemName": "sort-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sortArray(self, nums: List[int]) -> List[int]:\r\n        def quick_sort(l, r):\r\n            if l >= r:\r\n                return\r\n            x = nums[randint(l, r)]\r\n            i, j, k = l - 1, r + 1, l\r\n            while k < j:\r\n                if nums[k] < x:\r\n                    nums[i + 1], nums[k] = nums[k], nums[i + 1]\r\n                    i, k = i + 1, k + 1\r\n                elif nums[k] > x:\r\n                    j -= 1\r\n                    nums[j], nums[k] = nums[k], nums[j]\r\n                else:\r\n                    k = k + 1\r\n            quick_sort(l, i)\r\n            quick_sort(j, r)\r\n\r\n        quick_sort(0, len(nums) - 1)\r\n        return nums",
+    "problemId": 912,
+    "title": "Sort an Array",
+    "problemUrl": "https://leetcode.com/problems/sort-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "kotlin",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution.kt",
+            "sourceFile": "Solution.kt"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0912.Sort an Array/Solution3.java",
+            "sourceFile": "Solution3.java"
+        }
+    ]
+}

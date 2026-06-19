@@ -1,0 +1,53 @@
+{
+    "problemName": "the-employee-that-worked-on-the-longest-task",
+    "language": "python3",
+    "code": "class Solution:\r\n    def hardestWorker(self, n: int, logs: List[List[int]]) -> int:\r\n        last = mx = ans = 0\r\n        for uid, t in logs:\r\n            t -= last\r\n            if mx < t or (mx == t and ans > uid):\r\n                ans, mx = uid, t\r\n            last += t\r\n        return ans",
+    "problemId": 2432,
+    "title": "The Employee That Worked on the Longest Task",
+    "problemUrl": "https://leetcode.com/problems/the-employee-that-worked-on-the-longest-task/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2432.The Employee That Worked on the Longest Task/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2432.The Employee That Worked on the Longest Task/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2432.The Employee That Worked on the Longest Task/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2432.The Employee That Worked on the Longest Task/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2432.The Employee That Worked on the Longest Task/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2432.The Employee That Worked on the Longest Task/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2432.The Employee That Worked on the Longest Task/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2432.The Employee That Worked on the Longest Task/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2432.The Employee That Worked on the Longest Task/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

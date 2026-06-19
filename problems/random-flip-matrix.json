@@ -1,0 +1,23 @@
+{
+    "problemName": "random-flip-matrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def __init__(self, m: int, n: int):\r\n        self.m = m\r\n        self.n = n\r\n        self.total = m * n\r\n        self.mp = {}\r\n\r\n    def flip(self) -> List[int]:\r\n        self.total -= 1\r\n        x = random.randint(0, self.total)\r\n        idx = self.mp.get(x, x)\r\n        self.mp[x] = self.mp.get(self.total, self.total)\r\n        return [idx // self.n, idx % self.n]\r\n\r\n    def reset(self) -> None:\r\n        self.total = self.m * self.n\r\n        self.mp.clear()\r\n\r\n\r\n# Your Solution object will be instantiated and called as such:\r\n# obj = Solution(m, n)\r\n# param_1 = obj.flip()\r\n# obj.reset()",
+    "problemId": 519,
+    "title": "Random Flip Matrix",
+    "problemUrl": "https://leetcode.com/problems/random-flip-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0519.Random Flip Matrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0519.Random Flip Matrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0519.Random Flip Matrix/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

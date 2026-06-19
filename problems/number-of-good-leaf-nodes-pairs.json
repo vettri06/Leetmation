@@ -1,0 +1,43 @@
+{
+    "problemName": "number-of-good-leaf-nodes-pairs",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def countPairs(self, root: TreeNode, distance: int) -> int:\r\n        def dfs(root, cnt, i):\r\n            if root is None or i >= distance:\r\n                return\r\n            if root.left is None and root.right is None:\r\n                cnt[i] += 1\r\n                return\r\n            dfs(root.left, cnt, i + 1)\r\n            dfs(root.right, cnt, i + 1)\r\n\r\n        if root is None:\r\n            return 0\r\n        ans = self.countPairs(root.left, distance) + self.countPairs(\r\n            root.right, distance\r\n        )\r\n        cnt1 = Counter()\r\n        cnt2 = Counter()\r\n        dfs(root.left, cnt1, 1)\r\n        dfs(root.right, cnt2, 1)\r\n\r\n        for k1, v1 in cnt1.items():\r\n            for k2, v2 in cnt2.items():\r\n                if k1 + k2 <= distance:\r\n                    ans += v1 * v2\r\n        return ans",
+    "problemId": 1530,
+    "title": "Number of Good Leaf Nodes Pairs",
+    "problemUrl": "https://leetcode.com/problems/number-of-good-leaf-nodes-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1530.Number of Good Leaf Nodes Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1530.Number of Good Leaf Nodes Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1530.Number of Good Leaf Nodes Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1530.Number of Good Leaf Nodes Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1530.Number of Good Leaf Nodes Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1530.Number of Good Leaf Nodes Pairs/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1530.Number of Good Leaf Nodes Pairs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

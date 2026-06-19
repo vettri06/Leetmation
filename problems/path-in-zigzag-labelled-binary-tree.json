@@ -1,0 +1,33 @@
+{
+    "problemName": "path-in-zigzag-labelled-binary-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def pathInZigZagTree(self, label: int) -> List[int]:\r\n        x = i = 1\r\n        while (x << 1) <= label:\r\n            x <<= 1\r\n            i += 1\r\n        ans = [0] * i\r\n        while i:\r\n            ans[i - 1] = label\r\n            label = ((1 << (i - 1)) + (1 << i) - 1 - label) >> 1\r\n            i -= 1\r\n        return ans",
+    "problemId": 1104,
+    "title": "Path In Zigzag Labelled Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1104.Path In Zigzag Labelled Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1104.Path In Zigzag Labelled Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1104.Path In Zigzag Labelled Binary Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1104.Path In Zigzag Labelled Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1104.Path In Zigzag Labelled Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

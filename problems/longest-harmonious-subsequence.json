@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-harmonious-subsequence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findLHS(self, nums: List[int]) -> int:\r\n        cnt = Counter(nums)\r\n        return max((c + cnt[x + 1] for x, c in cnt.items() if cnt[x + 1]), default=0)",
+    "problemId": 594,
+    "title": "Longest Harmonious Subsequence",
+    "problemUrl": "https://leetcode.com/problems/longest-harmonious-subsequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0594.Longest Harmonious Subsequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0594.Longest Harmonious Subsequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0594.Longest Harmonious Subsequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0594.Longest Harmonious Subsequence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0594.Longest Harmonious Subsequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0594.Longest Harmonious Subsequence/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

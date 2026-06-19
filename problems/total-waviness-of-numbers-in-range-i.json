@@ -1,0 +1,38 @@
+{
+    "problemName": "total-waviness-of-numbers-in-range-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def totalWaviness(self, num1: int, num2: int) -> int:\r\n        def f(x: int) -> int:\r\n            nums = []\r\n            while x:\r\n                nums.append(x % 10)\r\n                x //= 10\r\n            m = len(nums)\r\n            if m < 3:\r\n                return 0\r\n            s = 0\r\n            for i in range(1, m - 1):\r\n                if nums[i] > nums[i - 1] and nums[i] > nums[i + 1]:\r\n                    s += 1\r\n                elif nums[i] < nums[i - 1] and nums[i] < nums[i + 1]:\r\n                    s += 1\r\n            return s\r\n\r\n        return sum(f(x) for x in range(num1, num2 + 1))",
+    "problemId": 3751,
+    "title": "Total Waviness of Numbers in Range I",
+    "problemUrl": "https://leetcode.com/problems/total-waviness-of-numbers-in-range-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3751.Total Waviness of Numbers in Range I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3751.Total Waviness of Numbers in Range I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3751.Total Waviness of Numbers in Range I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3751.Total Waviness of Numbers in Range I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3751.Total Waviness of Numbers in Range I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3751.Total Waviness of Numbers in Range I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "smallest-value-of-the-rearranged-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestNumber(self, num: int) -> int:\r\n        neg = num < 0\r\n        num = abs(num)\r\n        cnt = [0] * 10\r\n        while num:\r\n            cnt[num % 10] += 1\r\n            num //= 10\r\n        ans = 0\r\n        if neg:\r\n            for i in reversed(range(10)):\r\n                for _ in range(cnt[i]):\r\n                    ans *= 10\r\n                    ans += i\r\n            return -ans\r\n        if cnt[0]:\r\n            for i in range(1, 10):\r\n                if cnt[i]:\r\n                    ans = i\r\n                    cnt[i] -= 1\r\n                    break\r\n        for i in range(10):\r\n            for _ in range(cnt[i]):\r\n                ans *= 10\r\n                ans += i\r\n        return ans",
+    "problemId": 2165,
+    "title": "Smallest Value of the Rearranged Number",
+    "problemUrl": "https://leetcode.com/problems/smallest-value-of-the-rearranged-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2165.Smallest Value of the Rearranged Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2165.Smallest Value of the Rearranged Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2165.Smallest Value of the Rearranged Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2165.Smallest Value of the Rearranged Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2165.Smallest Value of the Rearranged Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2165.Smallest Value of the Rearranged Number/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2165.Smallest Value of the Rearranged Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2165.Smallest Value of the Rearranged Number/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

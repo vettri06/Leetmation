@@ -1,0 +1,38 @@
+{
+    "problemName": "shift-distance-between-two-strings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shiftDistance(\r\n        self, s: str, t: str, nextCost: List[int], previousCost: List[int]\r\n    ) -> int:\r\n        m = 26\r\n        s1 = [0] * (m << 1 | 1)\r\n        s2 = [0] * (m << 1 | 1)\r\n        for i in range(m << 1):\r\n            s1[i + 1] = s1[i] + nextCost[i % m]\r\n            s2[i + 1] = s2[i] + previousCost[(i + 1) % m]\r\n        ans = 0\r\n        for a, b in zip(s, t):\r\n            x, y = ord(a) - ord(\"a\"), ord(b) - ord(\"a\")\r\n            c1 = s1[y + m if y < x else y] - s1[x]\r\n            c2 = s2[x + m if x < y else x] - s2[y]\r\n            ans += min(c1, c2)\r\n        return ans",
+    "problemId": 3361,
+    "title": "Shift Distance Between Two Strings",
+    "problemUrl": "https://leetcode.com/problems/shift-distance-between-two-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3361.Shift Distance Between Two Strings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3361.Shift Distance Between Two Strings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3361.Shift Distance Between Two Strings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3361.Shift Distance Between Two Strings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3361.Shift Distance Between Two Strings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3361.Shift Distance Between Two Strings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

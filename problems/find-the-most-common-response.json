@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-most-common-response",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findCommonResponse(self, responses: List[List[str]]) -> str:\r\n        cnt = Counter()\r\n        for ws in responses:\r\n            for w in set(ws):\r\n                cnt[w] += 1\r\n        ans = responses[0][0]\r\n        for w, x in cnt.items():\r\n            if cnt[ans] < x or (cnt[ans] == x and w < ans):\r\n                ans = w\r\n        return ans",
+    "problemId": 3527,
+    "title": "Find the Most Common Response",
+    "problemUrl": "https://leetcode.com/problems/find-the-most-common-response/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3527.Find the Most Common Response/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3527.Find the Most Common Response/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3527.Find the Most Common Response/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3527.Find the Most Common Response/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3527.Find the Most Common Response/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3527.Find the Most Common Response/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

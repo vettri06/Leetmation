@@ -1,0 +1,48 @@
+{
+    "problemName": "check-distances-between-same-letters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkDistances(self, s: str, distance: List[int]) -> bool:\r\n        d = defaultdict(int)\r\n        for i, c in enumerate(map(ord, s), 1):\r\n            j = c - ord(\"a\")\r\n            if d[j] and i - d[j] - 1 != distance[j]:\r\n                return False\r\n            d[j] = i\r\n        return True",
+    "problemId": 2399,
+    "title": "Check Distances Between Same Letters",
+    "problemUrl": "https://leetcode.com/problems/check-distances-between-same-letters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2399.Check Distances Between Same Letters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2399.Check Distances Between Same Letters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2399.Check Distances Between Same Letters/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2399.Check Distances Between Same Letters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2399.Check Distances Between Same Letters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2399.Check Distances Between Same Letters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2399.Check Distances Between Same Letters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2399.Check Distances Between Same Letters/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

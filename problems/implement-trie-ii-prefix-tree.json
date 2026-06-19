@@ -1,0 +1,33 @@
+{
+    "problemName": "implement-trie-ii-prefix-tree",
+    "language": "python3",
+    "code": "class Trie:\r\n    def __init__(self):\r\n        self.children = [None] * 26\r\n        self.v = self.pv = 0\r\n\r\n    def insert(self, word: str) -> None:\r\n        node = self\r\n        for c in word:\r\n            idx = ord(c) - ord('a')\r\n            if node.children[idx] is None:\r\n                node.children[idx] = Trie()\r\n            node = node.children[idx]\r\n            node.pv += 1\r\n        node.v += 1\r\n\r\n    def countWordsEqualTo(self, word: str) -> int:\r\n        node = self.search(word)\r\n        return 0 if node is None else node.v\r\n\r\n    def countWordsStartingWith(self, prefix: str) -> int:\r\n        node = self.search(prefix)\r\n        return 0 if node is None else node.pv\r\n\r\n    def erase(self, word: str) -> None:\r\n        node = self\r\n        for c in word:\r\n            idx = ord(c) - ord('a')\r\n            node = node.children[idx]\r\n            node.pv -= 1\r\n        node.v -= 1\r\n\r\n    def search(self, word):\r\n        node = self\r\n        for c in word:\r\n            idx = ord(c) - ord('a')\r\n            if node.children[idx] is None:\r\n                return None\r\n            node = node.children[idx]\r\n        return node\r\n\r\n\r\n# Your Trie object will be instantiated and called as such:\r\n# obj = Trie()\r\n# obj.insert(word)\r\n# param_2 = obj.countWordsEqualTo(word)\r\n# param_3 = obj.countWordsStartingWith(prefix)\r\n# obj.erase(word)",
+    "problemId": 1804,
+    "title": "Implement Trie II (Prefix Tree)",
+    "problemUrl": "https://leetcode.com/problems/implement-trie-ii-prefix-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1804.Implement Trie II (Prefix Tree)/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1804.Implement Trie II (Prefix Tree)/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1804.Implement Trie II (Prefix Tree)/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1804.Implement Trie II (Prefix Tree)/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1804.Implement Trie II (Prefix Tree)/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

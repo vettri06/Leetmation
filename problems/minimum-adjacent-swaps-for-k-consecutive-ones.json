@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-adjacent-swaps-for-k-consecutive-ones",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minMoves(self, nums: List[int], k: int) -> int:\r\n        arr = [i for i, x in enumerate(nums) if x]\r\n        s = list(accumulate(arr, initial=0))\r\n        ans = inf\r\n        x = (k + 1) // 2\r\n        y = k - x\r\n        for i in range(x - 1, len(arr) - y):\r\n            j = arr[i]\r\n            ls = s[i + 1] - s[i + 1 - x]\r\n            rs = s[i + 1 + y] - s[i + 1]\r\n            a = (j + j - x + 1) * x // 2 - ls\r\n            b = rs - (j + 1 + j + y) * y // 2\r\n            ans = min(ans, a + b)\r\n        return ans",
+    "problemId": 1703,
+    "title": "Minimum Adjacent Swaps for K Consecutive Ones",
+    "problemUrl": "https://leetcode.com/problems/minimum-adjacent-swaps-for-k-consecutive-ones/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1703.Minimum Adjacent Swaps for K Consecutive Ones/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1703.Minimum Adjacent Swaps for K Consecutive Ones/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1703.Minimum Adjacent Swaps for K Consecutive Ones/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1703.Minimum Adjacent Swaps for K Consecutive Ones/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1703.Minimum Adjacent Swaps for K Consecutive Ones/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

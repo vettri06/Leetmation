@@ -1,0 +1,38 @@
+{
+    "problemName": "how-many-apples-can-you-put-into-the-basket",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxNumberOfApples(self, weight: List[int]) -> int:\r\n        weight.sort()\r\n        s = 0\r\n        for i, x in enumerate(weight):\r\n            s += x\r\n            if s > 5000:\r\n                return i\r\n        return len(weight)",
+    "problemId": 1196,
+    "title": "How Many Apples Can You Put into the Basket",
+    "problemUrl": "https://leetcode.com/problems/how-many-apples-can-you-put-into-the-basket/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1196.How Many Apples Can You Put into the Basket/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1196.How Many Apples Can You Put into the Basket/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1196.How Many Apples Can You Put into the Basket/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1196.How Many Apples Can You Put into the Basket/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1196.How Many Apples Can You Put into the Basket/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1196.How Many Apples Can You Put into the Basket/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "problemName": "find-users-with-high-token-usage",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_users_with_high_tokens(prompts: pd.DataFrame) -> pd.DataFrame:\r\n    df = prompts.groupby(\"user_id\", as_index=False).agg(\r\n        prompt_count=(\"user_id\", \"size\"),\r\n        avg_tokens=(\"tokens\", \"mean\"),\r\n        max_tokens=(\"tokens\", \"max\"),\r\n    )\r\n\r\n    df[\"avg_tokens\"] = df[\"avg_tokens\"].round(2)\r\n\r\n    df = df[(df[\"prompt_count\"] >= 3) & (df[\"max_tokens\"] > df[\"avg_tokens\"])]\r\n\r\n    df = (\r\n        df.sort_values([\"avg_tokens\", \"user_id\"], ascending=[False, True])\r\n        .loc[:, [\"user_id\", \"prompt_count\", \"avg_tokens\"]]\r\n        .reset_index(drop=True)\r\n    )\r\n\r\n    return df",
+    "problemId": 3793,
+    "title": "Find Users with High Token Usage",
+    "problemUrl": "https://leetcode.com/problems/find-users-with-high-token-usage/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3793.Find Users with High Token Usage/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3793.Find Users with High Token Usage/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3793.Find Users with High Token Usage/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

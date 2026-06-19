@@ -1,0 +1,43 @@
+{
+    "problemName": "transform-array-to-all-equal-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canMakeEqual(self, nums: List[int], k: int) -> bool:\r\n        def check(target: int, k: int) -> bool:\r\n            cnt, sign = 0, 1\r\n            for i in range(len(nums) - 1):\r\n                x = nums[i] * sign\r\n                if x == target:\r\n                    sign = 1\r\n                else:\r\n                    sign = -1\r\n                    cnt += 1\r\n            return cnt <= k and nums[-1] * sign == target\r\n\r\n        return check(nums[0], k) or check(-nums[0], k)",
+    "problemId": 3576,
+    "title": "Transform Array to All Equal Elements",
+    "problemUrl": "https://leetcode.com/problems/transform-array-to-all-equal-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3576.Transform Array to All Equal Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3576.Transform Array to All Equal Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3576.Transform Array to All Equal Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3576.Transform Array to All Equal Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3576.Transform Array to All Equal Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3576.Transform Array to All Equal Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3576.Transform Array to All Equal Elements/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

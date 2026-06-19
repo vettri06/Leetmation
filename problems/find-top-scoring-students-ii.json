@@ -1,0 +1,18 @@
+{
+    "problemName": "find-top-scoring-students-ii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT student_id\r\n        FROM enrollments\r\n        GROUP BY 1\r\n        HAVING AVG(GPA) >= 2.5\r\n    )\r\nSELECT student_id\r\nFROM\r\n    T\r\n    JOIN students USING (student_id)\r\n    JOIN courses USING (major)\r\n    LEFT JOIN enrollments USING (student_id, course_id)\r\nGROUP BY 1\r\nHAVING\r\n    SUM(mandatory = 'yes' AND grade = 'A') = SUM(mandatory = 'yes')\r\n    AND SUM(mandatory = 'no' AND grade IS NOT NULL) = SUM(mandatory = 'no' AND grade IN ('A', 'B'))\r\n    AND SUM(mandatory = 'no' AND grade IS NOT NULL) >= 2\r\nORDER BY 1;",
+    "problemId": 3188,
+    "title": "Find Top Scoring Students II",
+    "problemUrl": "https://leetcode.com/problems/find-top-scoring-students-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3188.Find Top Scoring Students II/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3188.Find Top Scoring Students II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

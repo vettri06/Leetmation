@@ -1,0 +1,33 @@
+{
+    "problemName": "array-transformation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def transformArray(self, arr: List[int]) -> List[int]:\r\n        f = True\r\n        while f:\r\n            f = False\r\n            t = arr[:]\r\n            for i in range(1, len(t) - 1):\r\n                if t[i] > t[i - 1] and t[i] > t[i + 1]:\r\n                    arr[i] -= 1\r\n                    f = True\r\n                if t[i] < t[i - 1] and t[i] < t[i + 1]:\r\n                    arr[i] += 1\r\n                    f = True\r\n        return arr",
+    "problemId": 1243,
+    "title": "Array Transformation",
+    "problemUrl": "https://leetcode.com/problems/array-transformation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1243.Array Transformation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1243.Array Transformation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1243.Array Transformation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1243.Array Transformation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1243.Array Transformation/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

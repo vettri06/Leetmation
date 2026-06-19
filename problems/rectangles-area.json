@@ -1,0 +1,18 @@
+{
+    "problemName": "rectangles-area",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    p1.id AS p1,\r\n    p2.id AS p2,\r\n    ABS(p1.x_value - p2.x_value) * ABS(p1.y_value - p2.y_value) AS area\r\nFROM\r\n    Points AS p1\r\n    JOIN Points AS p2 ON p1.id < p2.id\r\nWHERE p1.x_value != p2.x_value AND p1.y_value != p2.y_value\r\nORDER BY area DESC, p1, p2;",
+    "problemId": 1459,
+    "title": "Rectangles Area",
+    "problemUrl": "https://leetcode.com/problems/rectangles-area/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1459.Rectangles Area/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1459.Rectangles Area/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

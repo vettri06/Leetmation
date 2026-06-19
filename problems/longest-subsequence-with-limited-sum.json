@@ -1,0 +1,73 @@
+{
+    "problemName": "longest-subsequence-with-limited-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def answerQueries(self, nums: List[int], queries: List[int]) -> List[int]:\r\n        nums.sort()\r\n        s = list(accumulate(nums))\r\n        return [bisect_right(s, q) for q in queries]",
+    "problemId": 2389,
+    "title": "Longest Subsequence With Limited Sum",
+    "problemUrl": "https://leetcode.com/problems/longest-subsequence-with-limited-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2389.Longest Subsequence With Limited Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2389.Longest Subsequence With Limited Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2389.Longest Subsequence With Limited Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2389.Longest Subsequence With Limited Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2389.Longest Subsequence With Limited Sum/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2389.Longest Subsequence With Limited Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2389.Longest Subsequence With Limited Sum/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2389.Longest Subsequence With Limited Sum/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2389.Longest Subsequence With Limited Sum/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2389.Longest Subsequence With Limited Sum/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2389.Longest Subsequence With Limited Sum/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2389.Longest Subsequence With Limited Sum/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2389.Longest Subsequence With Limited Sum/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

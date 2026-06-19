@@ -1,0 +1,18 @@
+{
+    "problemName": "users-that-actively-request-confirmation-messages",
+    "language": "mysql",
+    "code": "SELECT DISTINCT user_id\r\nFROM\r\n    Confirmations AS c1\r\n    JOIN Confirmations AS c2 USING (user_id)\r\nWHERE\r\n    c1.time_stamp < c2.time_stamp\r\n    AND TIMESTAMPDIFF(SECOND, c1.time_stamp, c2.time_stamp) <= 24 * 60 * 60;",
+    "problemId": 1939,
+    "title": "Users That Actively Request Confirmation Messages",
+    "problemUrl": "https://leetcode.com/problems/users-that-actively-request-confirmation-messages/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1939.Users That Actively Request Confirmation Messages/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1939.Users That Actively Request Confirmation Messages/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

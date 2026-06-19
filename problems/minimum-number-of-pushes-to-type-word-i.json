@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-number-of-pushes-to-type-word-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumPushes(self, word: str) -> int:\r\n        n = len(word)\r\n        ans, k = 0, 1\r\n        for _ in range(n // 8):\r\n            ans += k * 8\r\n            k += 1\r\n        ans += k * (n % 8)\r\n        return ans",
+    "problemId": 3014,
+    "title": "Minimum Number of Pushes to Type Word I",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3014.Minimum Number of Pushes to Type Word I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3014.Minimum Number of Pushes to Type Word I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3014.Minimum Number of Pushes to Type Word I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3014.Minimum Number of Pushes to Type Word I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3014.Minimum Number of Pushes to Type Word I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3014.Minimum Number of Pushes to Type Word I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

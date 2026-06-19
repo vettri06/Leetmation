@@ -1,0 +1,48 @@
+{
+    "problemName": "a-number-after-a-double-reversal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isSameAfterReversals(self, num: int) -> bool:\r\n        return num == 0 or num % 10 != 0",
+    "problemId": 2119,
+    "title": "A Number After a Double Reversal",
+    "problemUrl": "https://leetcode.com/problems/a-number-after-a-double-reversal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2119.A Number After a Double Reversal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2119.A Number After a Double Reversal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2119.A Number After a Double Reversal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2119.A Number After a Double Reversal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2119.A Number After a Double Reversal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2119.A Number After a Double Reversal/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2119.A Number After a Double Reversal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2119.A Number After a Double Reversal/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

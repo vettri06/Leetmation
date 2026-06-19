@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-number-of-days-to-disconnect-island",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minDays(self, grid: List[List[int]]) -> int:\r\n        if self.count(grid) != 1:\r\n            return 0\r\n        m, n = len(grid), len(grid[0])\r\n        for i in range(m):\r\n            for j in range(n):\r\n                if grid[i][j] == 1:\r\n                    grid[i][j] = 0\r\n                    if self.count(grid) != 1:\r\n                        return 1\r\n                    grid[i][j] = 1\r\n        return 2\r\n\r\n    def count(self, grid):\r\n        def dfs(i, j):\r\n            grid[i][j] = 2\r\n            for a, b in [[0, -1], [0, 1], [1, 0], [-1, 0]]:\r\n                x, y = i + a, j + b\r\n                if 0 <= x < m and 0 <= y < n and grid[x][y] == 1:\r\n                    dfs(x, y)\r\n\r\n        m, n = len(grid), len(grid[0])\r\n        cnt = 0\r\n        for i in range(m):\r\n            for j in range(n):\r\n                if grid[i][j] == 1:\r\n                    dfs(i, j)\r\n                    cnt += 1\r\n        for i in range(m):\r\n            for j in range(n):\r\n                if grid[i][j] == 2:\r\n                    grid[i][j] = 1\r\n        return cnt",
+    "problemId": 1568,
+    "title": "Minimum Number of Days to Disconnect Island",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-days-to-disconnect-island/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1568.Minimum Number of Days to Disconnect Island/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1568.Minimum Number of Days to Disconnect Island/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1568.Minimum Number of Days to Disconnect Island/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1568.Minimum Number of Days to Disconnect Island/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1568.Minimum Number of Days to Disconnect Island/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1568.Minimum Number of Days to Disconnect Island/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1568.Minimum Number of Days to Disconnect Island/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

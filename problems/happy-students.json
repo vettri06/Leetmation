@@ -1,0 +1,38 @@
+{
+    "problemName": "happy-students",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countWays(self, nums: List[int]) -> int:\r\n        nums.sort()\r\n        n = len(nums)\r\n        ans = 0\r\n        for i in range(n + 1):\r\n            if i and nums[i - 1] >= i:\r\n                continue\r\n            if i < n and nums[i] <= i:\r\n                continue\r\n            ans += 1\r\n        return ans",
+    "problemId": 2860,
+    "title": "Happy Students",
+    "problemUrl": "https://leetcode.com/problems/happy-students/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2860.Happy Students/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2860.Happy Students/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2860.Happy Students/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2860.Happy Students/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2860.Happy Students/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2860.Happy Students/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "problemName": "maximum-profit-from-trading-stocks",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumProfit(self, present: List[int], future: List[int], budget: int) -> int:\r\n        f = [[0] * (budget + 1) for _ in range(len(present) + 1)]\r\n        for i, w in enumerate(present, 1):\r\n            for j in range(budget + 1):\r\n                f[i][j] = f[i - 1][j]\r\n                if j >= w and future[i - 1] > w:\r\n                    f[i][j] = max(f[i][j], f[i - 1][j - w] + future[i - 1] - w)\r\n        return f[-1][-1]",
+    "problemId": 2291,
+    "title": "Maximum Profit From Trading Stocks",
+    "problemUrl": "https://leetcode.com/problems/maximum-profit-from-trading-stocks/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2291.Maximum Profit From Trading Stocks/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2291.Maximum Profit From Trading Stocks/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2291.Maximum Profit From Trading Stocks/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2291.Maximum Profit From Trading Stocks/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2291.Maximum Profit From Trading Stocks/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2291.Maximum Profit From Trading Stocks/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2291.Maximum Profit From Trading Stocks/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2291.Maximum Profit From Trading Stocks/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2291.Maximum Profit From Trading Stocks/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2291.Maximum Profit From Trading Stocks/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

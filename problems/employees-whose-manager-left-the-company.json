@@ -1,0 +1,23 @@
+{
+    "problemName": "employees-whose-manager-left-the-company",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT e1.employee_id\r\nFROM\r\n    Employees AS e1\r\n    LEFT JOIN Employees AS e2 ON e1.manager_id = e2.employee_id\r\nWHERE e1.salary < 30000 AND e1.manager_id IS NOT NULL AND e2.employee_id IS NULL\r\nORDER BY 1;",
+    "problemId": 1978,
+    "title": "Employees Whose Manager Left the Company",
+    "problemUrl": "https://leetcode.com/problems/employees-whose-manager-left-the-company/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1978.Employees Whose Manager Left the Company/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1978.Employees Whose Manager Left the Company/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1978.Employees Whose Manager Left the Company/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "check-if-one-string-swap-can-make-strings-equal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def areAlmostEqual(self, s1: str, s2: str) -> bool:\r\n        cnt = 0\r\n        c1 = c2 = None\r\n        for a, b in zip(s1, s2):\r\n            if a != b:\r\n                cnt += 1\r\n                if cnt > 2 or (cnt == 2 and (a != c2 or b != c1)):\r\n                    return False\r\n                c1, c2 = a, b\r\n        return cnt != 1",
+    "problemId": 1790,
+    "title": "Check if One String Swap Can Make Strings Equal",
+    "problemUrl": "https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1790.Check if One String Swap Can Make Strings Equal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1790.Check if One String Swap Can Make Strings Equal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1790.Check if One String Swap Can Make Strings Equal/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1790.Check if One String Swap Can Make Strings Equal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1790.Check if One String Swap Can Make Strings Equal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1790.Check if One String Swap Can Make Strings Equal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1790.Check if One String Swap Can Make Strings Equal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1790.Check if One String Swap Can Make Strings Equal/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

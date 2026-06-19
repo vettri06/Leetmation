@@ -1,0 +1,43 @@
+{
+    "problemName": "rotating-the-box",
+    "language": "python3",
+    "code": "class Solution:\r\n    def rotateTheBox(self, boxGrid: List[List[str]]) -> List[List[str]]:\r\n        m, n = len(boxGrid), len(boxGrid[0])\r\n        ans = [[None] * m for _ in range(n)]\r\n        for i in range(m):\r\n            for j in range(n):\r\n                ans[j][m - i - 1] = boxGrid[i][j]\r\n        for j in range(m):\r\n            q = deque()\r\n            for i in range(n - 1, -1, -1):\r\n                if ans[i][j] == \"*\":\r\n                    q.clear()\r\n                elif ans[i][j] == \".\":\r\n                    q.append(i)\r\n                elif q:\r\n                    ans[q.popleft()][j] = \"#\"\r\n                    ans[i][j] = \".\"\r\n                    q.append(i)\r\n        return ans",
+    "problemId": 1861,
+    "title": "Rotating the Box",
+    "problemUrl": "https://leetcode.com/problems/rotating-the-box/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1861.Rotating the Box/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1861.Rotating the Box/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1861.Rotating the Box/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1861.Rotating the Box/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1861.Rotating the Box/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1861.Rotating the Box/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1861.Rotating the Box/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

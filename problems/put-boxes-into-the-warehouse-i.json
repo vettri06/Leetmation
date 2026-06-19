@@ -1,0 +1,38 @@
+{
+    "problemName": "put-boxes-into-the-warehouse-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxBoxesInWarehouse(self, boxes: List[int], warehouse: List[int]) -> int:\r\n        n = len(warehouse)\r\n        left = [warehouse[0]] * n\r\n        for i in range(1, n):\r\n            left[i] = min(left[i - 1], warehouse[i])\r\n        boxes.sort()\r\n        i, j = 0, n - 1\r\n        while i < len(boxes):\r\n            while j >= 0 and left[j] < boxes[i]:\r\n                j -= 1\r\n            if j < 0:\r\n                break\r\n            i, j = i + 1, j - 1\r\n        return i",
+    "problemId": 1564,
+    "title": "Put Boxes Into the Warehouse I",
+    "problemUrl": "https://leetcode.com/problems/put-boxes-into-the-warehouse-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1564.Put Boxes Into the Warehouse I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1564.Put Boxes Into the Warehouse I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1564.Put Boxes Into the Warehouse I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1564.Put Boxes Into the Warehouse I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1564.Put Boxes Into the Warehouse I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1564.Put Boxes Into the Warehouse I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

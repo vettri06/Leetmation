@@ -1,0 +1,53 @@
+{
+    "problemName": "sort-the-jumbled-numbers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sortJumbled(self, mapping: List[int], nums: List[int]) -> List[int]:\r\n        def f(x: int) -> int:\r\n            if x == 0:\r\n                return mapping[0]\r\n            y, k = 0, 1\r\n            while x:\r\n                x, v = divmod(x, 10)\r\n                v = mapping[v]\r\n                y = k * v + y\r\n                k *= 10\r\n            return y\r\n\r\n        arr = sorted((f(x), i) for i, x in enumerate(nums))\r\n        return [nums[i] for _, i in arr]",
+    "problemId": 2191,
+    "title": "Sort the Jumbled Numbers",
+    "problemUrl": "https://leetcode.com/problems/sort-the-jumbled-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2191.Sort the Jumbled Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2191.Sort the Jumbled Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2191.Sort the Jumbled Numbers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2191.Sort the Jumbled Numbers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2191.Sort the Jumbled Numbers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2191.Sort the Jumbled Numbers/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2191.Sort the Jumbled Numbers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2191.Sort the Jumbled Numbers/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2191.Sort the Jumbled Numbers/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

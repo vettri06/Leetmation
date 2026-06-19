@@ -1,0 +1,38 @@
+{
+    "problemName": "binary-tree-longest-consecutive-sequence",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def longestConsecutive(self, root: Optional[TreeNode]) -> int:\r\n        def dfs(root: Optional[TreeNode]) -> int:\r\n            if root is None:\r\n                return 0\r\n            l = dfs(root.left) + 1\r\n            r = dfs(root.right) + 1\r\n            if root.left and root.left.val - root.val != 1:\r\n                l = 1\r\n            if root.right and root.right.val - root.val != 1:\r\n                r = 1\r\n            t = max(l, r)\r\n            nonlocal ans\r\n            ans = max(ans, t)\r\n            return t\r\n\r\n        ans = 0\r\n        dfs(root)\r\n        return ans",
+    "problemId": 298,
+    "title": "Binary Tree Longest Consecutive Sequence",
+    "problemUrl": "https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0298.Binary Tree Longest Consecutive Sequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0298.Binary Tree Longest Consecutive Sequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0298.Binary Tree Longest Consecutive Sequence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0298.Binary Tree Longest Consecutive Sequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0298.Binary Tree Longest Consecutive Sequence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0298.Binary Tree Longest Consecutive Sequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

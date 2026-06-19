@@ -1,0 +1,23 @@
+{
+    "problemName": "premier-league-table-ranking-ii",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef calculate_team_tiers(team_stats: pd.DataFrame) -> pd.DataFrame:\r\n    team_stats[\"points\"] = team_stats[\"wins\"] * 3 + team_stats[\"draws\"]\r\n    team_stats[\"position\"] = (\r\n        team_stats[\"points\"].rank(method=\"min\", ascending=False).astype(int)\r\n    )\r\n    total_teams = len(team_stats)\r\n    team_stats[\"tier\"] = np.where(\r\n        team_stats[\"position\"] <= np.ceil(total_teams / 3.0),\r\n        \"Tier 1\",\r\n        np.where(\r\n            team_stats[\"position\"] <= np.ceil(2 * total_teams / 3.0), \"Tier 2\", \"Tier 3\"\r\n        ),\r\n    )\r\n    team_stats = team_stats.sort_values(\r\n        by=[\"points\", \"team_name\"], ascending=[False, True]\r\n    )\r\n    return team_stats[[\"team_name\", \"points\", \"position\", \"tier\"]]",
+    "problemId": 3252,
+    "title": "Premier League Table Ranking II",
+    "problemUrl": "https://leetcode.com/problems/premier-league-table-ranking-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3252.Premier League Table Ranking II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3252.Premier League Table Ranking II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3252.Premier League Table Ranking II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

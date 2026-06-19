@@ -1,0 +1,78 @@
+{
+    "problemName": "divide-players-into-teams-of-equal-skill",
+    "language": "python3",
+    "code": "class Solution:\r\n    def dividePlayers(self, skill: List[int]) -> int:\r\n        skill.sort()\r\n        t = skill[0] + skill[-1]\r\n        i, j = 0, len(skill) - 1\r\n        ans = 0\r\n        while i < j:\r\n            if skill[i] + skill[j] != t:\r\n                return -1\r\n            ans += skill[i] * skill[j]\r\n            i, j = i + 1, j - 1\r\n        return ans",
+    "problemId": 2491,
+    "title": "Divide Players Into Teams of Equal Skill",
+    "problemUrl": "https://leetcode.com/problems/divide-players-into-teams-of-equal-skill/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2491.Divide Players Into Teams of Equal Skill/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2491.Divide Players Into Teams of Equal Skill/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2491.Divide Players Into Teams of Equal Skill/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2491.Divide Players Into Teams of Equal Skill/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2491.Divide Players Into Teams of Equal Skill/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2491.Divide Players Into Teams of Equal Skill/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2491.Divide Players Into Teams of Equal Skill/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2491.Divide Players Into Teams of Equal Skill/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2491.Divide Players Into Teams of Equal Skill/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2491.Divide Players Into Teams of Equal Skill/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2491.Divide Players Into Teams of Equal Skill/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2491.Divide Players Into Teams of Equal Skill/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2491.Divide Players Into Teams of Equal Skill/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2491.Divide Players Into Teams of Equal Skill/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

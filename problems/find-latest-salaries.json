@@ -1,0 +1,18 @@
+{
+    "problemName": "find-latest-salaries",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    emp_id,\r\n    firstname,\r\n    lastname,\r\n    MAX(salary) AS salary,\r\n    department_id\r\nFROM Salary\r\nGROUP BY emp_id\r\nORDER BY emp_id;",
+    "problemId": 2668,
+    "title": "Find Latest Salaries",
+    "problemUrl": "https://leetcode.com/problems/find-latest-salaries/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2668.Find Latest Salaries/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2668.Find Latest Salaries/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

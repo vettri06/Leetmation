@@ -1,0 +1,38 @@
+{
+    "problemName": "exam-room",
+    "language": "python3",
+    "code": "class ExamRoom:\r\n    def __init__(self, n: int):\r\n        def dist(x):\r\n            l, r = x\r\n            return r - l - 1 if l == -1 or r == n else (r - l) >> 1\r\n\r\n        self.n = n\r\n        self.ts = SortedList(key=lambda x: (-dist(x), x[0]))\r\n        self.left = {}\r\n        self.right = {}\r\n        self.add((-1, n))\r\n\r\n    def seat(self) -> int:\r\n        s = self.ts[0]\r\n        p = (s[0] + s[1]) >> 1\r\n        if s[0] == -1:\r\n            p = 0\r\n        elif s[1] == self.n:\r\n            p = self.n - 1\r\n        self.delete(s)\r\n        self.add((s[0], p))\r\n        self.add((p, s[1]))\r\n        return p\r\n\r\n    def leave(self, p: int) -> None:\r\n        l, r = self.left[p], self.right[p]\r\n        self.delete((l, p))\r\n        self.delete((p, r))\r\n        self.add((l, r))\r\n\r\n    def add(self, s):\r\n        self.ts.add(s)\r\n        self.left[s[1]] = s[0]\r\n        self.right[s[0]] = s[1]\r\n\r\n    def delete(self, s):\r\n        self.ts.remove(s)\r\n        self.left.pop(s[1])\r\n        self.right.pop(s[0])\r\n\r\n\r\n# Your ExamRoom object will be instantiated and called as such:\r\n# obj = ExamRoom(n)\r\n# param_1 = obj.seat()\r\n# obj.leave(p)",
+    "problemId": 855,
+    "title": "Exam Room",
+    "problemUrl": "https://leetcode.com/problems/exam-room/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0855.Exam Room/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0855.Exam Room/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0855.Exam Room/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0855.Exam Room/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0855.Exam Room/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0855.Exam Room/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "shortest-way-to-form-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def shortestWay(self, source: str, target: str) -> int:\r\n        def f(i, j):\r\n            while i < m and j < n:\r\n                if source[i] == target[j]:\r\n                    j += 1\r\n                i += 1\r\n            return j\r\n\r\n        m, n = len(source), len(target)\r\n        ans = j = 0\r\n        while j < n:\r\n            k = f(0, j)\r\n            if k == j:\r\n                return -1\r\n            j = k\r\n            ans += 1\r\n        return ans",
+    "problemId": 1055,
+    "title": "Shortest Way to Form String",
+    "problemUrl": "https://leetcode.com/problems/shortest-way-to-form-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1055.Shortest Way to Form String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1055.Shortest Way to Form String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1055.Shortest Way to Form String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1055.Shortest Way to Form String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1055.Shortest Way to Form String/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

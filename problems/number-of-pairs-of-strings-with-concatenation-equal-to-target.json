@@ -1,0 +1,53 @@
+{
+    "problemName": "number-of-pairs-of-strings-with-concatenation-equal-to-target",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numOfPairs(self, nums: List[str], target: str) -> int:\r\n        n = len(nums)\r\n        return sum(\r\n            i != j and nums[i] + nums[j] == target for i in range(n) for j in range(n)\r\n        )",
+    "problemId": 2023,
+    "title": "Number of Pairs of Strings With Concatenation Equal to Target",
+    "problemUrl": "https://leetcode.com/problems/number-of-pairs-of-strings-with-concatenation-equal-to-target/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2023.Number of Pairs of Strings With Concatenation Equal to Target/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2023.Number of Pairs of Strings With Concatenation Equal to Target/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2023.Number of Pairs of Strings With Concatenation Equal to Target/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2023.Number of Pairs of Strings With Concatenation Equal to Target/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2023.Number of Pairs of Strings With Concatenation Equal to Target/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2023.Number of Pairs of Strings With Concatenation Equal to Target/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2023.Number of Pairs of Strings With Concatenation Equal to Target/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2023.Number of Pairs of Strings With Concatenation Equal to Target/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2023.Number of Pairs of Strings With Concatenation Equal to Target/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "rotate-list",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:\r\n        if head is None or head.next is None:\r\n            return head\r\n        cur, n = head, 0\r\n        while cur:\r\n            n += 1\r\n            cur = cur.next\r\n        k %= n\r\n        if k == 0:\r\n            return head\r\n        fast = slow = head\r\n        for _ in range(k):\r\n            fast = fast.next\r\n        while fast.next:\r\n            fast, slow = fast.next, slow.next\r\n\r\n        ans = slow.next\r\n        slow.next = None\r\n        fast.next = head\r\n        return ans",
+    "problemId": 61,
+    "title": "Rotate List",
+    "problemUrl": "https://leetcode.com/problems/rotate-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0061.Rotate List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0061.Rotate List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0061.Rotate List/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0061.Rotate List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0061.Rotate List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0061.Rotate List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0061.Rotate List/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0061.Rotate List/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

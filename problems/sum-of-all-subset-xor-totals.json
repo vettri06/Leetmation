@@ -1,0 +1,83 @@
+{
+    "problemName": "sum-of-all-subset-xor-totals",
+    "language": "python3",
+    "code": "class Solution:\r\n    def subsetXORSum(self, nums: List[int]) -> int:\r\n        ans, n = 0, len(nums)\r\n        for i in range(1 << n):\r\n            s = 0\r\n            for j in range(n):\r\n                if i >> j & 1:\r\n                    s ^= nums[j]\r\n            ans += s\r\n        return ans",
+    "problemId": 1863,
+    "title": "Sum of All Subset XOR Totals",
+    "problemUrl": "https://leetcode.com/problems/sum-of-all-subset-xor-totals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1863.Sum of All Subset XOR Totals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1863.Sum of All Subset XOR Totals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1863.Sum of All Subset XOR Totals/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1863.Sum of All Subset XOR Totals/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1863.Sum of All Subset XOR Totals/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1863.Sum of All Subset XOR Totals/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1863.Sum of All Subset XOR Totals/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1863.Sum of All Subset XOR Totals/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1863.Sum of All Subset XOR Totals/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1863.Sum of All Subset XOR Totals/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1863.Sum of All Subset XOR Totals/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1863.Sum of All Subset XOR Totals/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1863.Sum of All Subset XOR Totals/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1863.Sum of All Subset XOR Totals/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1863.Sum of All Subset XOR Totals/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

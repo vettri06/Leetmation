@@ -1,0 +1,43 @@
+{
+    "problemName": "faulty-keyboard",
+    "language": "python3",
+    "code": "class Solution:\r\n    def finalString(self, s: str) -> str:\r\n        t = []\r\n        for c in s:\r\n            if c == \"i\":\r\n                t = t[::-1]\r\n            else:\r\n                t.append(c)\r\n        return \"\".join(t)",
+    "problemId": 2810,
+    "title": "Faulty Keyboard",
+    "problemUrl": "https://leetcode.com/problems/faulty-keyboard/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2810.Faulty Keyboard/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2810.Faulty Keyboard/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2810.Faulty Keyboard/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2810.Faulty Keyboard/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2810.Faulty Keyboard/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2810.Faulty Keyboard/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2810.Faulty Keyboard/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

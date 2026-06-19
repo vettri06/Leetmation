@@ -1,0 +1,38 @@
+{
+    "problemName": "sort-features-by-popularity",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sortFeatures(self, features: List[str], responses: List[str]) -> List[str]:\r\n        cnt = Counter()\r\n        for s in responses:\r\n            for w in set(s.split()):\r\n                cnt[w] += 1\r\n        return sorted(features, key=lambda w: -cnt[w])",
+    "problemId": 1772,
+    "title": "Sort Features by Popularity",
+    "problemUrl": "https://leetcode.com/problems/sort-features-by-popularity/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1772.Sort Features by Popularity/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1772.Sort Features by Popularity/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1772.Sort Features by Popularity/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1772.Sort Features by Popularity/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1772.Sort Features by Popularity/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1772.Sort Features by Popularity/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

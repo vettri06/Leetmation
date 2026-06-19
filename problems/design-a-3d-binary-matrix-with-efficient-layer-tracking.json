@@ -1,0 +1,28 @@
+{
+    "problemName": "design-a-3d-binary-matrix-with-efficient-layer-tracking",
+    "language": "python3",
+    "code": "class matrix3D:\r\n    def __init__(self, n: int):\r\n        self.g = [[[0] * n for _ in range(n)] for _ in range(n)]\r\n        self.cnt = [0] * n\r\n        self.sl = SortedList(key=lambda x: (-x[0], -x[1]))\r\n\r\n    def setCell(self, x: int, y: int, z: int) -> None:\r\n        if self.g[x][y][z]:\r\n            return\r\n        self.g[x][y][z] = 1\r\n        self.sl.discard((self.cnt[x], x))\r\n        self.cnt[x] += 1\r\n        self.sl.add((self.cnt[x], x))\r\n\r\n    def unsetCell(self, x: int, y: int, z: int) -> None:\r\n        if self.g[x][y][z] == 0:\r\n            return\r\n        self.g[x][y][z] = 0\r\n        self.sl.discard((self.cnt[x], x))\r\n        self.cnt[x] -= 1\r\n        if self.cnt[x]:\r\n            self.sl.add((self.cnt[x], x))\r\n\r\n    def largestMatrix(self) -> int:\r\n        return self.sl[0][1] if self.sl else len(self.g) - 1\r\n\r\n\r\n# Your matrix3D object will be instantiated and called as such:\r\n# obj = matrix3D(n)\r\n# obj.setCell(x,y,z)\r\n# obj.unsetCell(x,y,z)\r\n# param_3 = obj.largestMatrix()",
+    "problemId": 3391,
+    "title": "Design a 3D Binary Matrix with Efficient Layer Tracking",
+    "problemUrl": "https://leetcode.com/problems/design-a-3d-binary-matrix-with-efficient-layer-tracking/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3391.Design a 3D Binary Matrix with Efficient Layer Tracking/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3391.Design a 3D Binary Matrix with Efficient Layer Tracking/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3391.Design a 3D Binary Matrix with Efficient Layer Tracking/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3391.Design a 3D Binary Matrix with Efficient Layer Tracking/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

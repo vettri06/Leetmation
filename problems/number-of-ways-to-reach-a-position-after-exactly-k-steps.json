@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-ways-to-reach-a-position-after-exactly-k-steps",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfWays(self, startPos: int, endPos: int, k: int) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int) -> int:\r\n            if i > j or j < 0:\r\n                return 0\r\n            if j == 0:\r\n                return 1 if i == 0 else 0\r\n            return (dfs(i + 1, j - 1) + dfs(abs(i - 1), j - 1)) % mod\r\n\r\n        mod = 10**9 + 7\r\n        return dfs(abs(startPos - endPos), k)",
+    "problemId": 2400,
+    "title": "Number of Ways to Reach a Position After Exactly k Steps",
+    "problemUrl": "https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2400.Number of Ways to Reach a Position After Exactly k Steps/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2400.Number of Ways to Reach a Position After Exactly k Steps/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2400.Number of Ways to Reach a Position After Exactly k Steps/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2400.Number of Ways to Reach a Position After Exactly k Steps/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2400.Number of Ways to Reach a Position After Exactly k Steps/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2400.Number of Ways to Reach a Position After Exactly k Steps/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

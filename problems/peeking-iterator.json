@@ -1,0 +1,33 @@
+{
+    "problemName": "peeking-iterator",
+    "language": "python3",
+    "code": "# Below is the interface for Iterator, which is already defined for you.\r\n#\r\n# class Iterator:\r\n#     def __init__(self, nums):\r\n#         \"\"\"\r\n#         Initializes an iterator object to the beginning of a list.\r\n#         :type nums: List[int]\r\n#         \"\"\"\r\n#\r\n#     def hasNext(self):\r\n#         \"\"\"\r\n#         Returns true if the iteration has more elements.\r\n#         :rtype: bool\r\n#         \"\"\"\r\n#\r\n#     def next(self):\r\n#         \"\"\"\r\n#         Returns the next element in the iteration.\r\n#         :rtype: int\r\n#         \"\"\"\r\n\r\n\r\nclass PeekingIterator:\r\n    def __init__(self, iterator):\r\n        \"\"\"\r\n        Initialize your data structure here.\r\n        :type iterator: Iterator\r\n        \"\"\"\r\n        self.iterator = iterator\r\n        self.has_peeked = False\r\n        self.peeked_element = None\r\n\r\n    def peek(self):\r\n        \"\"\"\r\n        Returns the next element in the iteration without advancing the iterator.\r\n        :rtype: int\r\n        \"\"\"\r\n        if not self.has_peeked:\r\n            self.peeked_element = self.iterator.next()\r\n            self.has_peeked = True\r\n        return self.peeked_element\r\n\r\n    def next(self):\r\n        \"\"\"\r\n        :rtype: int\r\n        \"\"\"\r\n        if not self.has_peeked:\r\n            return self.iterator.next()\r\n        result = self.peeked_element\r\n        self.has_peeked = False\r\n        self.peeked_element = None\r\n        return result\r\n\r\n    def hasNext(self):\r\n        \"\"\"\r\n        :rtype: bool\r\n        \"\"\"\r\n        return self.has_peeked or self.iterator.hasNext()\r\n\r\n\r\n# Your PeekingIterator object will be instantiated and called as such:\r\n# iter = PeekingIterator(Iterator(nums))\r\n# while iter.hasNext():\r\n#     val = iter.peek()   # Get the next element but not advance the iterator.\r\n#     iter.next()         # Should return the same value as [val].",
+    "problemId": 284,
+    "title": "Peeking Iterator",
+    "problemUrl": "https://leetcode.com/problems/peeking-iterator/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0284.Peeking Iterator/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0284.Peeking Iterator/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0284.Peeking Iterator/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0284.Peeking Iterator/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0284.Peeking Iterator/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "problemName": "product-of-array-except-self",
+    "language": "python3",
+    "code": "class Solution:\r\n    def productExceptSelf(self, nums: List[int]) -> List[int]:\r\n        n = len(nums)\r\n        ans = [0] * n\r\n        left = right = 1\r\n        for i, x in enumerate(nums):\r\n            ans[i] = left\r\n            left *= x\r\n        for i in range(n - 1, -1, -1):\r\n            ans[i] *= right\r\n            right *= nums[i]\r\n        return ans",
+    "problemId": 238,
+    "title": "Product of Array Except Self",
+    "problemUrl": "https://leetcode.com/problems/product-of-array-except-self/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0238.Product of Array Except Self/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0238.Product of Array Except Self/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0238.Product of Array Except Self/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0238.Product of Array Except Self/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0238.Product of Array Except Self/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0238.Product of Array Except Self/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0238.Product of Array Except Self/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0238.Product of Array Except Self/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0238.Product of Array Except Self/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

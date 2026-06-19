@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-moves-to-get-a-peaceful-board",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minMoves(self, rooks: List[List[int]]) -> int:\r\n        rooks.sort()\r\n        ans = sum(abs(x - i) for i, (x, _) in enumerate(rooks))\r\n        rooks.sort(key=lambda x: x[1])\r\n        ans += sum(abs(y - j) for j, (_, y) in enumerate(rooks))\r\n        return ans",
+    "problemId": 3189,
+    "title": "Minimum Moves to Get a Peaceful Board",
+    "problemUrl": "https://leetcode.com/problems/minimum-moves-to-get-a-peaceful-board/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3189.Minimum Moves to Get a Peaceful Board/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3189.Minimum Moves to Get a Peaceful Board/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3189.Minimum Moves to Get a Peaceful Board/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3189.Minimum Moves to Get a Peaceful Board/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3189.Minimum Moves to Get a Peaceful Board/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3189.Minimum Moves to Get a Peaceful Board/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

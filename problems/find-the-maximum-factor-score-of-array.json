@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-maximum-factor-score-of-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxScore(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        suf_gcd = [0] * (n + 1)\r\n        suf_lcm = [0] * n + [1]\r\n        for i in range(n - 1, -1, -1):\r\n            suf_gcd[i] = gcd(suf_gcd[i + 1], nums[i])\r\n            suf_lcm[i] = lcm(suf_lcm[i + 1], nums[i])\r\n        ans = suf_gcd[0] * suf_lcm[0]\r\n        pre_gcd, pre_lcm = 0, 1\r\n        for i, x in enumerate(nums):\r\n            ans = max(ans, gcd(pre_gcd, suf_gcd[i + 1]) * lcm(pre_lcm, suf_lcm[i + 1]))\r\n            pre_gcd = gcd(pre_gcd, x)\r\n            pre_lcm = lcm(pre_lcm, x)\r\n        return ans",
+    "problemId": 3334,
+    "title": "Find the Maximum Factor Score of Array",
+    "problemUrl": "https://leetcode.com/problems/find-the-maximum-factor-score-of-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3334.Find the Maximum Factor Score of Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3334.Find the Maximum Factor Score of Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3334.Find the Maximum Factor Score of Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3334.Find the Maximum Factor Score of Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3334.Find the Maximum Factor Score of Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3334.Find the Maximum Factor Score of Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

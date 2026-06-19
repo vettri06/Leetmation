@@ -1,0 +1,43 @@
+{
+    "problemName": "range-sum-of-sorted-subarray-sums",
+    "language": "python3",
+    "code": "class Solution:\r\n    def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:\r\n        arr = []\r\n        for i in range(n):\r\n            s = 0\r\n            for j in range(i, n):\r\n                s += nums[j]\r\n                arr.append(s)\r\n        arr.sort()\r\n        mod = 10**9 + 7\r\n        return sum(arr[left - 1 : right]) % mod",
+    "problemId": 1508,
+    "title": "Range Sum of Sorted Subarray Sums",
+    "problemUrl": "https://leetcode.com/problems/range-sum-of-sorted-subarray-sums/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1508.Range Sum of Sorted Subarray Sums/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1508.Range Sum of Sorted Subarray Sums/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1508.Range Sum of Sorted Subarray Sums/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1508.Range Sum of Sorted Subarray Sums/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1508.Range Sum of Sorted Subarray Sums/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1508.Range Sum of Sorted Subarray Sums/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1508.Range Sum of Sorted Subarray Sums/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

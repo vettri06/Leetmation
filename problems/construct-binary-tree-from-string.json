@@ -1,0 +1,33 @@
+{
+    "problemName": "construct-binary-tree-from-string",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def str2tree(self, s: str) -> TreeNode:\r\n        def dfs(s):\r\n            if not s:\r\n                return None\r\n            p = s.find('(')\r\n            if p == -1:\r\n                return TreeNode(int(s))\r\n            root = TreeNode(int(s[:p]))\r\n            start = p\r\n            cnt = 0\r\n            for i in range(p, len(s)):\r\n                if s[i] == '(':\r\n                    cnt += 1\r\n                elif s[i] == ')':\r\n                    cnt -= 1\r\n                if cnt == 0:\r\n                    if start == p:\r\n                        root.left = dfs(s[start + 1 : i])\r\n                        start = i + 1\r\n                    else:\r\n                        root.right = dfs(s[start + 1 : i])\r\n            return root\r\n\r\n        return dfs(s)",
+    "problemId": 536,
+    "title": "Construct Binary Tree from String",
+    "problemUrl": "https://leetcode.com/problems/construct-binary-tree-from-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0536.Construct Binary Tree from String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0536.Construct Binary Tree from String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0536.Construct Binary Tree from String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0536.Construct Binary Tree from String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0536.Construct Binary Tree from String/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

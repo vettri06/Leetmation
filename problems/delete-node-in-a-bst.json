@@ -1,0 +1,43 @@
+{
+    "problemName": "delete-node-in-a-bst",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:\r\n        if root is None:\r\n            return None\r\n        if root.val > key:\r\n            root.left = self.deleteNode(root.left, key)\r\n            return root\r\n        if root.val < key:\r\n            root.right = self.deleteNode(root.right, key)\r\n            return root\r\n        if root.left is None:\r\n            return root.right\r\n        if root.right is None:\r\n            return root.left\r\n        node = root.right\r\n        while node.left:\r\n            node = node.left\r\n        node.left = root.left\r\n        root = root.right\r\n        return root",
+    "problemId": 450,
+    "title": "Delete Node in a BST",
+    "problemUrl": "https://leetcode.com/problems/delete-node-in-a-bst/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0450.Delete Node in a BST/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0450.Delete Node in a BST/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0450.Delete Node in a BST/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0450.Delete Node in a BST/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0450.Delete Node in a BST/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0450.Delete Node in a BST/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0450.Delete Node in a BST/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

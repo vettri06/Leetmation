@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-subarrays-that-match-a-pattern-ii",
+    "language": "python3",
+    "code": "def partial(s):\r\n    g, pi = 0, [0] * len(s)\r\n    for i in range(1, len(s)):\r\n        while g and (s[g] != s[i]):\r\n            g = pi[g - 1]\r\n        pi[i] = g = g + (s[g] == s[i])\r\n    return pi\r\n\r\n\r\ndef match(s, pat):\r\n    pi = partial(pat)\r\n    g, idx = 0, []\r\n    for i in range(len(s)):\r\n        while g and pat[g] != s[i]:\r\n            g = pi[g - 1]\r\n        g += pat[g] == s[i]\r\n        if g == len(pi):\r\n            idx.append(i + 1 - g)\r\n            g = pi[g - 1]\r\n    return idx\r\n\r\n\r\ndef string_find(s, pat):\r\n    pi = partial(pat)\r\n    g = 0\r\n    for i in range(len(s)):\r\n        while g and pat[g] != s[i]:\r\n            g = pi[g - 1]\r\n        g += pat[g] == s[i]\r\n        if g == len(pi):\r\n            return True\r\n    return False\r\n\r\n\r\nclass Solution:\r\n    def countMatchingSubarrays(self, nums: List[int], pattern: List[int]) -> int:\r\n        s = []\r\n        for i in range(1, len(nums)):\r\n            if nums[i] > nums[i - 1]:\r\n                s.append(1)\r\n            elif nums[i] == nums[i - 1]:\r\n                s.append(0)\r\n            else:\r\n                s.append(-1)\r\n        return len(match(s, pattern))",
+    "problemId": 3036,
+    "title": "Number of Subarrays That Match a Pattern II",
+    "problemUrl": "https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3036.Number of Subarrays That Match a Pattern II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3036.Number of Subarrays That Match a Pattern II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3036.Number of Subarrays That Match a Pattern II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3036.Number of Subarrays That Match a Pattern II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3036.Number of Subarrays That Match a Pattern II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3036.Number of Subarrays That Match a Pattern II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "problemName": "lexicographically-smallest-string-after-applying-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findLexSmallestString(self, s: str, a: int, b: int) -> str:\r\n        q = deque([s])\r\n        vis = {s}\r\n        ans = s\r\n        while q:\r\n            s = q.popleft()\r\n            if ans > s:\r\n                ans = s\r\n            t1 = ''.join(\r\n                [str((int(c) + a) % 10) if i & 1 else c for i, c in enumerate(s)]\r\n            )\r\n            t2 = s[-b:] + s[:-b]\r\n            for t in (t1, t2):\r\n                if t not in vis:\r\n                    vis.add(t)\r\n                    q.append(t)\r\n        return ans",
+    "problemId": 1625,
+    "title": "Lexicographically Smallest String After Applying Operations",
+    "problemUrl": "https://leetcode.com/problems/lexicographically-smallest-string-after-applying-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1625.Lexicographically Smallest String After Applying Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1625.Lexicographically Smallest String After Applying Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1625.Lexicographically Smallest String After Applying Operations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1625.Lexicographically Smallest String After Applying Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1625.Lexicographically Smallest String After Applying Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1625.Lexicographically Smallest String After Applying Operations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1625.Lexicographically Smallest String After Applying Operations/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1625.Lexicographically Smallest String After Applying Operations/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1625.Lexicographically Smallest String After Applying Operations/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1625.Lexicographically Smallest String After Applying Operations/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1625.Lexicographically Smallest String After Applying Operations/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

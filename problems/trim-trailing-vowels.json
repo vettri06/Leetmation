@@ -1,0 +1,38 @@
+{
+    "problemName": "trim-trailing-vowels",
+    "language": "python3",
+    "code": "class Solution:\r\n    def trimTrailingVowels(self, s: str) -> str:\r\n        i = len(s) - 1\r\n        while i >= 0 and s[i] in \"aeiou\":\r\n            i -= 1\r\n        return s[: i + 1]",
+    "problemId": 3856,
+    "title": "Trim Trailing Vowels",
+    "problemUrl": "https://leetcode.com/problems/trim-trailing-vowels/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3856.Trim Trailing Vowels/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3856.Trim Trailing Vowels/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3856.Trim Trailing Vowels/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3856.Trim Trailing Vowels/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3856.Trim Trailing Vowels/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3856.Trim Trailing Vowels/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

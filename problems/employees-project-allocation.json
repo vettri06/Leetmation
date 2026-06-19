@@ -1,0 +1,23 @@
+{
+    "problemName": "employees-project-allocation",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef employees_with_above_avg_workload(\r\n    project: pd.DataFrame, employees: pd.DataFrame\r\n) -> pd.DataFrame:\r\n    merged_df = pd.merge(project, employees, on=\"employee_id\")\r\n    avg_workload_per_team = merged_df.groupby(\"team\")[\"workload\"].mean().reset_index()\r\n    merged_df = pd.merge(\r\n        merged_df, avg_workload_per_team, on=\"team\", suffixes=(\"\", \"_avg\")\r\n    )\r\n    ans = merged_df[merged_df[\"workload\"] > merged_df[\"workload_avg\"]]\r\n    ans = ans[[\"employee_id\", \"project_id\", \"name\", \"workload\"]]\r\n    ans = ans.rename(columns={\"name\": \"employee_name\", \"workload\": \"project_workload\"})\r\n    return ans.sort_values(by=[\"employee_id\", \"project_id\"])",
+    "problemId": 3057,
+    "title": "Employees Project Allocation",
+    "problemUrl": "https://leetcode.com/problems/employees-project-allocation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3057.Employees Project Allocation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3057.Employees Project Allocation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3057.Employees Project Allocation/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

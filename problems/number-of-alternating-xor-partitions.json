@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-alternating-xor-partitions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def alternatingXOR(self, nums: List[int], target1: int, target2: int) -> int:\r\n        cnt1 = defaultdict(int)\r\n        cnt2 = defaultdict(int)\r\n        cnt2[0] = 1\r\n        ans = pre = 0\r\n        mod = 10**9 + 7\r\n        for x in nums:\r\n            pre ^= x\r\n            a = cnt2[pre ^ target1]\r\n            b = cnt1[pre ^ target2]\r\n            ans = (a + b) % mod\r\n            cnt1[pre] = (cnt1[pre] + a) % mod\r\n            cnt2[pre] = (cnt2[pre] + b) % mod\r\n        return ans",
+    "problemId": 3811,
+    "title": "Number of Alternating XOR Partitions",
+    "problemUrl": "https://leetcode.com/problems/number-of-alternating-xor-partitions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3811.Number of Alternating XOR Partitions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3811.Number of Alternating XOR Partitions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3811.Number of Alternating XOR Partitions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3811.Number of Alternating XOR Partitions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3811.Number of Alternating XOR Partitions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3811.Number of Alternating XOR Partitions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

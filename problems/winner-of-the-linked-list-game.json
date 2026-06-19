@@ -1,0 +1,38 @@
+{
+    "problemName": "winner-of-the-linked-list-game",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def gameResult(self, head: Optional[ListNode]) -> str:\r\n        odd = even = 0\r\n        while head:\r\n            a = head.val\r\n            b = head.next.val\r\n            odd += a < b\r\n            even += a > b\r\n            head = head.next.next\r\n        if odd > even:\r\n            return \"Odd\"\r\n        if odd < even:\r\n            return \"Even\"\r\n        return \"Tie\"",
+    "problemId": 3062,
+    "title": "Winner of the Linked List Game",
+    "problemUrl": "https://leetcode.com/problems/winner-of-the-linked-list-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3062.Winner of the Linked List Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3062.Winner of the Linked List Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3062.Winner of the Linked List Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3062.Winner of the Linked List Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3062.Winner of the Linked List Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3062.Winner of the Linked List Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

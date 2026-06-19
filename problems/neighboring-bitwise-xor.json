@@ -1,0 +1,53 @@
+{
+    "problemName": "neighboring-bitwise-xor",
+    "language": "python3",
+    "code": "class Solution:\r\n    def doesValidArrayExist(self, derived: List[int]) -> bool:\r\n        return reduce(xor, derived) == 0",
+    "problemId": 2683,
+    "title": "Neighboring Bitwise XOR",
+    "problemUrl": "https://leetcode.com/problems/neighboring-bitwise-xor/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2683.Neighboring Bitwise XOR/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2683.Neighboring Bitwise XOR/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2683.Neighboring Bitwise XOR/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2683.Neighboring Bitwise XOR/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2683.Neighboring Bitwise XOR/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2683.Neighboring Bitwise XOR/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2683.Neighboring Bitwise XOR/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2683.Neighboring Bitwise XOR/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2683.Neighboring Bitwise XOR/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

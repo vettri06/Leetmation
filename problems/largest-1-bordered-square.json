@@ -1,0 +1,33 @@
+{
+    "problemName": "largest-1-bordered-square",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largest1BorderedSquare(self, grid: List[List[int]]) -> int:\r\n        m, n = len(grid), len(grid[0])\r\n        down = [[0] * n for _ in range(m)]\r\n        right = [[0] * n for _ in range(m)]\r\n        for i in range(m - 1, -1, -1):\r\n            for j in range(n - 1, -1, -1):\r\n                if grid[i][j]:\r\n                    down[i][j] = down[i + 1][j] + 1 if i + 1 < m else 1\r\n                    right[i][j] = right[i][j + 1] + 1 if j + 1 < n else 1\r\n        for k in range(min(m, n), 0, -1):\r\n            for i in range(m - k + 1):\r\n                for j in range(n - k + 1):\r\n                    if (\r\n                        down[i][j] >= k\r\n                        and right[i][j] >= k\r\n                        and right[i + k - 1][j] >= k\r\n                        and down[i][j + k - 1] >= k\r\n                    ):\r\n                        return k * k\r\n        return 0",
+    "problemId": 1139,
+    "title": "Largest 1-Bordered Square",
+    "problemUrl": "https://leetcode.com/problems/largest-1-bordered-square/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1139.Largest 1-Bordered Square/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1139.Largest 1-Bordered Square/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1139.Largest 1-Bordered Square/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1139.Largest 1-Bordered Square/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1139.Largest 1-Bordered Square/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

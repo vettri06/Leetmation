@@ -1,0 +1,43 @@
+{
+    "problemName": "reformat-the-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reformat(self, s: str) -> str:\r\n        a = [c for c in s if c.islower()]\r\n        b = [c for c in s if c.isdigit()]\r\n        if abs(len(a) - len(b)) > 1:\r\n            return ''\r\n        if len(a) < len(b):\r\n            a, b = b, a\r\n        ans = []\r\n        for x, y in zip(a, b):\r\n            ans.append(x + y)\r\n        if len(a) > len(b):\r\n            ans.append(a[-1])\r\n        return ''.join(ans)",
+    "problemId": 1417,
+    "title": "Reformat The String",
+    "problemUrl": "https://leetcode.com/problems/reformat-the-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1417.Reformat The String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1417.Reformat The String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1417.Reformat The String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1417.Reformat The String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1417.Reformat The String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1417.Reformat The String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1417.Reformat The String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

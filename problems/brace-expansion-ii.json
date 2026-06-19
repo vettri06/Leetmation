@@ -1,0 +1,38 @@
+{
+    "problemName": "brace-expansion-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def braceExpansionII(self, expression: str) -> List[str]:\r\n        def dfs(exp):\r\n            j = exp.find('}')\r\n            if j == -1:\r\n                s.add(exp)\r\n                return\r\n            i = exp.rfind('{', 0, j - 1)\r\n            a, c = exp[:i], exp[j + 1 :]\r\n            for b in exp[i + 1 : j].split(','):\r\n                dfs(a + b + c)\r\n\r\n        s = set()\r\n        dfs(expression)\r\n        return sorted(s)",
+    "problemId": 1096,
+    "title": "Brace Expansion II",
+    "problemUrl": "https://leetcode.com/problems/brace-expansion-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1096.Brace Expansion II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1096.Brace Expansion II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1096.Brace Expansion II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1096.Brace Expansion II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1096.Brace Expansion II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1096.Brace Expansion II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

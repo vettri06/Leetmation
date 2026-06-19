@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-to-connect-sticks",
+    "language": "python3",
+    "code": "class Solution:\r\n    def connectSticks(self, sticks: List[int]) -> int:\r\n        heapify(sticks)\r\n        ans = 0\r\n        while len(sticks) > 1:\r\n            z = heappop(sticks) + heappop(sticks)\r\n            ans += z\r\n            heappush(sticks, z)\r\n        return ans",
+    "problemId": 1167,
+    "title": "Minimum Cost to Connect Sticks",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-connect-sticks/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1167.Minimum Cost to Connect Sticks/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1167.Minimum Cost to Connect Sticks/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1167.Minimum Cost to Connect Sticks/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1167.Minimum Cost to Connect Sticks/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1167.Minimum Cost to Connect Sticks/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1167.Minimum Cost to Connect Sticks/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

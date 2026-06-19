@@ -1,0 +1,38 @@
+{
+    "problemName": "count-common-words-with-one-occurrence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countWords(self, words1: List[str], words2: List[str]) -> int:\r\n        cnt1 = Counter(words1)\r\n        cnt2 = Counter(words2)\r\n        return sum(v == 1 and cnt2[w] == 1 for w, v in cnt1.items())",
+    "problemId": 2085,
+    "title": "Count Common Words With One Occurrence",
+    "problemUrl": "https://leetcode.com/problems/count-common-words-with-one-occurrence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2085.Count Common Words With One Occurrence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2085.Count Common Words With One Occurrence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2085.Count Common Words With One Occurrence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2085.Count Common Words With One Occurrence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2085.Count Common Words With One Occurrence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2085.Count Common Words With One Occurrence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

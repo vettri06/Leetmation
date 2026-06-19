@@ -1,0 +1,33 @@
+{
+    "problemName": "design-event-manager",
+    "language": "python3",
+    "code": "class EventManager:\r\n\r\n    def __init__(self, events: list[list[int]]):\r\n        self.sl = SortedList()\r\n        self.d = {}\r\n        for eventId, priority in events:\r\n            self.sl.add((-priority, eventId))\r\n            self.d[eventId] = priority\r\n\r\n    def updatePriority(self, eventId: int, newPriority: int) -> None:\r\n        old_priority = self.d[eventId]\r\n        self.sl.remove((-old_priority, eventId))\r\n        self.sl.add((-newPriority, eventId))\r\n        self.d[eventId] = newPriority\r\n\r\n    def pollHighest(self) -> int:\r\n        if not self.sl:\r\n            return -1\r\n        eventId = self.sl.pop(0)[1]\r\n        self.d.pop(eventId)\r\n        return eventId\r\n\r\n\r\n# Your EventManager object will be instantiated and called as such:\r\n# obj = EventManager(events)\r\n# obj.updatePriority(eventId,newPriority)\r\n# param_2 = obj.pollHighest()",
+    "problemId": 3885,
+    "title": "Design Event Manager",
+    "problemUrl": "https://leetcode.com/problems/design-event-manager/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3885.Design Event Manager/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3885.Design Event Manager/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3885.Design Event Manager/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3885.Design Event Manager/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3885.Design Event Manager/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

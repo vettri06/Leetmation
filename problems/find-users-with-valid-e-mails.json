@@ -1,0 +1,23 @@
+{
+    "problemName": "find-users-with-valid-e-mails",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef valid_emails(users: pd.DataFrame) -> pd.DataFrame:\r\n    pattern = r\"^[A-Za-z][A-Za-z0-9_.-]*@leetcode\\.com$\"\r\n    mask = users[\"mail\"].str.match(pattern, flags=0, na=False)\r\n    return users.loc[mask, [\"user_id\", \"name\", \"mail\"]]",
+    "problemId": 1517,
+    "title": "Find Users With Valid E-Mails",
+    "problemUrl": "https://leetcode.com/problems/find-users-with-valid-e-mails/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1517.Find Users With Valid E-Mails/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1517.Find Users With Valid E-Mails/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1517.Find Users With Valid E-Mails/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

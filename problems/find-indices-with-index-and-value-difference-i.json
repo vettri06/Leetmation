@@ -1,0 +1,43 @@
+{
+    "problemName": "find-indices-with-index-and-value-difference-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findIndices(\r\n        self, nums: List[int], indexDifference: int, valueDifference: int\r\n    ) -> List[int]:\r\n        mi = mx = 0\r\n        for i in range(indexDifference, len(nums)):\r\n            j = i - indexDifference\r\n            if nums[j] < nums[mi]:\r\n                mi = j\r\n            if nums[j] > nums[mx]:\r\n                mx = j\r\n            if nums[i] - nums[mi] >= valueDifference:\r\n                return [mi, i]\r\n            if nums[mx] - nums[i] >= valueDifference:\r\n                return [mx, i]\r\n        return [-1, -1]",
+    "problemId": 2903,
+    "title": "Find Indices With Index and Value Difference I",
+    "problemUrl": "https://leetcode.com/problems/find-indices-with-index-and-value-difference-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2903.Find Indices With Index and Value Difference I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2903.Find Indices With Index and Value Difference I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2903.Find Indices With Index and Value Difference I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2903.Find Indices With Index and Value Difference I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2903.Find Indices With Index and Value Difference I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2903.Find Indices With Index and Value Difference I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2903.Find Indices With Index and Value Difference I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "unique-word-abbreviation",
+    "language": "python3",
+    "code": "class ValidWordAbbr:\r\n    def __init__(self, dictionary: List[str]):\r\n        self.d = defaultdict(set)\r\n        for s in dictionary:\r\n            self.d[self.abbr(s)].add(s)\r\n\r\n    def isUnique(self, word: str) -> bool:\r\n        s = self.abbr(word)\r\n        return s not in self.d or all(word == t for t in self.d[s])\r\n\r\n    def abbr(self, s: str) -> str:\r\n        return s if len(s) < 3 else s[0] + str(len(s) - 2) + s[-1]\r\n\r\n\r\n# Your ValidWordAbbr object will be instantiated and called as such:\r\n# obj = ValidWordAbbr(dictionary)\r\n# param_1 = obj.isUnique(word)",
+    "problemId": 288,
+    "title": "Unique Word Abbreviation",
+    "problemUrl": "https://leetcode.com/problems/unique-word-abbreviation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0288.Unique Word Abbreviation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0288.Unique Word Abbreviation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0288.Unique Word Abbreviation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0288.Unique Word Abbreviation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0288.Unique Word Abbreviation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0288.Unique Word Abbreviation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

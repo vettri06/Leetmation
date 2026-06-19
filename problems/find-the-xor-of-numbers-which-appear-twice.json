@@ -1,0 +1,63 @@
+{
+    "problemName": "find-the-xor-of-numbers-which-appear-twice",
+    "language": "python3",
+    "code": "class Solution:\r\n    def duplicateNumbersXOR(self, nums: List[int]) -> int:\r\n        cnt = Counter(nums)\r\n        return reduce(xor, [x for x, v in cnt.items() if v == 2], 0)",
+    "problemId": 3158,
+    "title": "Find the XOR of Numbers Which Appear Twice",
+    "problemUrl": "https://leetcode.com/problems/find-the-xor-of-numbers-which-appear-twice/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3158.Find the XOR of Numbers Which Appear Twice/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3158.Find the XOR of Numbers Which Appear Twice/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3158.Find the XOR of Numbers Which Appear Twice/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3158.Find the XOR of Numbers Which Appear Twice/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3158.Find the XOR of Numbers Which Appear Twice/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3158.Find the XOR of Numbers Which Appear Twice/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3158.Find the XOR of Numbers Which Appear Twice/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3158.Find the XOR of Numbers Which Appear Twice/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3158.Find the XOR of Numbers Which Appear Twice/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3158.Find the XOR of Numbers Which Appear Twice/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3158.Find the XOR of Numbers Which Appear Twice/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-total-subarray-value-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxTotalValue(self, nums: List[int], k: int) -> int:\r\n        return k * (max(nums) - min(nums))",
+    "problemId": 3689,
+    "title": "Maximum Total Subarray Value I",
+    "problemUrl": "https://leetcode.com/problems/maximum-total-subarray-value-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3689.Maximum Total Subarray Value I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3689.Maximum Total Subarray Value I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3689.Maximum Total Subarray Value I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3689.Maximum Total Subarray Value I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3689.Maximum Total Subarray Value I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3689.Maximum Total Subarray Value I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

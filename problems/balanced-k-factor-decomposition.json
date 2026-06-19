@@ -1,0 +1,38 @@
+{
+    "problemName": "balanced-k-factor-decomposition",
+    "language": "python3",
+    "code": "mx = 10**5 + 1\r\ng = [[] for _ in range(mx)]\r\nfor i in range(1, mx):\r\n    for j in range(i, mx, i):\r\n        g[j].append(i)\r\n\r\n\r\nclass Solution:\r\n    def minDifference(self, n: int, k: int) -> List[int]:\r\n        def dfs(i: int, x: int, mi: int, mx: int):\r\n            if i == 0:\r\n                nonlocal cur, ans\r\n                d = max(mx, x) - min(mi, x)\r\n                if d < cur:\r\n                    cur = d\r\n                    path[i] = x\r\n                    ans = path[:]\r\n                return\r\n            for y in g[x]:\r\n                path[i] = y\r\n                dfs(i - 1, x // y, min(mi, y), max(mx, y))\r\n\r\n        ans = None\r\n        path = [0] * k\r\n        cur = inf\r\n        dfs(k - 1, n, inf, 0)\r\n        return ans",
+    "problemId": 3669,
+    "title": "Balanced K-Factor Decomposition",
+    "problemUrl": "https://leetcode.com/problems/balanced-k-factor-decomposition/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3669.Balanced K-Factor Decomposition/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3669.Balanced K-Factor Decomposition/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3669.Balanced K-Factor Decomposition/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3669.Balanced K-Factor Decomposition/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3669.Balanced K-Factor Decomposition/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3669.Balanced K-Factor Decomposition/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

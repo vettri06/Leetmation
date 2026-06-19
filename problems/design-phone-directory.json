@@ -1,0 +1,33 @@
+{
+    "problemName": "design-phone-directory",
+    "language": "python3",
+    "code": "class PhoneDirectory:\r\n\r\n    def __init__(self, maxNumbers: int):\r\n        self.available = set(range(maxNumbers))\r\n\r\n    def get(self) -> int:\r\n        if not self.available:\r\n            return -1\r\n        return self.available.pop()\r\n\r\n    def check(self, number: int) -> bool:\r\n        return number in self.available\r\n\r\n    def release(self, number: int) -> None:\r\n        self.available.add(number)\r\n\r\n\r\n# Your PhoneDirectory object will be instantiated and called as such:\r\n# obj = PhoneDirectory(maxNumbers)\r\n# param_1 = obj.get()\r\n# param_2 = obj.check(number)\r\n# obj.release(number)",
+    "problemId": 379,
+    "title": "Design Phone Directory",
+    "problemUrl": "https://leetcode.com/problems/design-phone-directory/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0379.Design Phone Directory/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0379.Design Phone Directory/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0379.Design Phone Directory/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0379.Design Phone Directory/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0379.Design Phone Directory/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

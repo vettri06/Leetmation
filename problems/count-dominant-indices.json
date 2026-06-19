@@ -1,0 +1,38 @@
+{
+    "problemName": "count-dominant-indices",
+    "language": "python3",
+    "code": "class Solution:\r\n    def dominantIndices(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        ans = 0\r\n        suf = nums[-1]\r\n        for i in range(n - 2, -1, -1):\r\n            if nums[i] > suf / (n - i - 1):\r\n                ans += 1\r\n            suf += nums[i]\r\n        return ans",
+    "problemId": 3833,
+    "title": "Count Dominant Indices",
+    "problemUrl": "https://leetcode.com/problems/count-dominant-indices/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3833.Count Dominant Indices/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3833.Count Dominant Indices/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3833.Count Dominant Indices/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3833.Count Dominant Indices/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3833.Count Dominant Indices/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3833.Count Dominant Indices/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

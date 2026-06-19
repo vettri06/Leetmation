@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-time-to-build-blocks",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minBuildTime(self, blocks: List[int], split: int) -> int:\r\n        heapify(blocks)\r\n        while len(blocks) > 1:\r\n            heappop(blocks)\r\n            heappush(blocks, heappop(blocks) + split)\r\n        return blocks[0]",
+    "problemId": 1199,
+    "title": "Minimum Time to Build Blocks",
+    "problemUrl": "https://leetcode.com/problems/minimum-time-to-build-blocks/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1199.Minimum Time to Build Blocks/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1199.Minimum Time to Build Blocks/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1199.Minimum Time to Build Blocks/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1199.Minimum Time to Build Blocks/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1199.Minimum Time to Build Blocks/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1199.Minimum Time to Build Blocks/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1199.Minimum Time to Build Blocks/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

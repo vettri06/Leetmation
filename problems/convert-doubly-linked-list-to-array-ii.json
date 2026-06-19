@@ -1,0 +1,38 @@
+{
+    "problemName": "convert-doubly-linked-list-to-array-ii",
+    "language": "python3",
+    "code": "\"\"\"\r\n# Definition for a Node.\r\nclass Node:\r\n    def __init__(self, val, prev=None, next=None):\r\n        self.val = val\r\n        self.prev = prev\r\n        self.next = next\r\n\"\"\"\r\n\r\n\r\nclass Solution:\r\n    def toArray(self, node: \"Optional[Node]\") -> List[int]:\r\n        while node.prev:\r\n            node = node.prev\r\n        ans = []\r\n        while node:\r\n            ans.append(node.val)\r\n            node = node.next\r\n        return ans",
+    "problemId": 3294,
+    "title": "Convert Doubly Linked List to Array II",
+    "problemUrl": "https://leetcode.com/problems/convert-doubly-linked-list-to-array-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3294.Convert Doubly Linked List to Array II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3294.Convert Doubly Linked List to Array II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3294.Convert Doubly Linked List to Array II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3294.Convert Doubly Linked List to Array II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3294.Convert Doubly Linked List to Array II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3294.Convert Doubly Linked List to Array II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

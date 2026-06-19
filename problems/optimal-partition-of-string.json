@@ -1,0 +1,43 @@
+{
+    "problemName": "optimal-partition-of-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def partitionString(self, s: str) -> int:\r\n        ans, mask = 1, 0\r\n        for x in map(lambda c: ord(c) - ord(\"a\"), s):\r\n            if mask >> x & 1:\r\n                ans += 1\r\n                mask = 0\r\n            mask |= 1 << x\r\n        return ans",
+    "problemId": 2405,
+    "title": "Optimal Partition of String",
+    "problemUrl": "https://leetcode.com/problems/optimal-partition-of-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2405.Optimal Partition of String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2405.Optimal Partition of String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2405.Optimal Partition of String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2405.Optimal Partition of String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2405.Optimal Partition of String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2405.Optimal Partition of String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2405.Optimal Partition of String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

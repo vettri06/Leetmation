@@ -1,0 +1,38 @@
+{
+    "problemName": "successful-pairs-of-spells-and-potions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def successfulPairs(\r\n        self, spells: List[int], potions: List[int], success: int\r\n    ) -> List[int]:\r\n        potions.sort()\r\n        m = len(potions)\r\n        return [m - bisect_left(potions, success / v) for v in spells]",
+    "problemId": 2300,
+    "title": "Successful Pairs of Spells and Potions",
+    "problemUrl": "https://leetcode.com/problems/successful-pairs-of-spells-and-potions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2300.Successful Pairs of Spells and Potions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2300.Successful Pairs of Spells and Potions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2300.Successful Pairs of Spells and Potions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2300.Successful Pairs of Spells and Potions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2300.Successful Pairs of Spells and Potions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2300.Successful Pairs of Spells and Potions/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

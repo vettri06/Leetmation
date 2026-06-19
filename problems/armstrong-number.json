@@ -1,0 +1,43 @@
+{
+    "problemName": "armstrong-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isArmstrong(self, n: int) -> bool:\r\n        k = len(str(n))\r\n        s, x = 0, n\r\n        while x:\r\n            s += (x % 10) ** k\r\n            x //= 10\r\n        return s == n",
+    "problemId": 1134,
+    "title": "Armstrong Number",
+    "problemUrl": "https://leetcode.com/problems/armstrong-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1134.Armstrong Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1134.Armstrong Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1134.Armstrong Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1134.Armstrong Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1134.Armstrong Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1134.Armstrong Number/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1134.Armstrong Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

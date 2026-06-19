@@ -1,0 +1,18 @@
+{
+    "problemName": "status-of-flight-tickets",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    passenger_id,\r\n    IF(\r\n        (\r\n            RANK() OVER (\r\n                PARTITION BY flight_id\r\n                ORDER BY booking_time\r\n            )\r\n        ) <= capacity,\r\n        'Confirmed',\r\n        'Waitlist'\r\n    ) AS Status\r\nFROM\r\n    Passengers\r\n    JOIN Flights USING (flight_id)\r\nORDER BY passenger_id;",
+    "problemId": 2793,
+    "title": "Status of Flight Tickets",
+    "problemUrl": "https://leetcode.com/problems/status-of-flight-tickets/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2793.Status of Flight Tickets/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2793.Status of Flight Tickets/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

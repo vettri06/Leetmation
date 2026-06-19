@@ -1,0 +1,38 @@
+{
+    "problemName": "least-number-of-unique-integers-after-k-removals",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:\r\n        cnt = Counter(arr)\r\n        for i, v in enumerate(sorted(cnt.values())):\r\n            k -= v\r\n            if k < 0:\r\n                return len(cnt) - i\r\n        return 0",
+    "problemId": 1481,
+    "title": "Least Number of Unique Integers after K Removals",
+    "problemUrl": "https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1481.Least Number of Unique Integers after K Removals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1481.Least Number of Unique Integers after K Removals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1481.Least Number of Unique Integers after K Removals/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1481.Least Number of Unique Integers after K Removals/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1481.Least Number of Unique Integers after K Removals/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1481.Least Number of Unique Integers after K Removals/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

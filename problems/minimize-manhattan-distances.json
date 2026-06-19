@@ -1,0 +1,38 @@
+{
+    "problemName": "minimize-manhattan-distances",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumDistance(self, points: List[List[int]]) -> int:\r\n        sl1 = SortedList()\r\n        sl2 = SortedList()\r\n        for x, y in points:\r\n            sl1.add(x + y)\r\n            sl2.add(x - y)\r\n        ans = inf\r\n        for x, y in points:\r\n            sl1.remove(x + y)\r\n            sl2.remove(x - y)\r\n            ans = min(ans, max(sl1[-1] - sl1[0], sl2[-1] - sl2[0]))\r\n            sl1.add(x + y)\r\n            sl2.add(x - y)\r\n        return ans",
+    "problemId": 3102,
+    "title": "Minimize Manhattan Distances",
+    "problemUrl": "https://leetcode.com/problems/minimize-manhattan-distances/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3102.Minimize Manhattan Distances/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3102.Minimize Manhattan Distances/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3102.Minimize Manhattan Distances/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3102.Minimize Manhattan Distances/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3102.Minimize Manhattan Distances/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3102.Minimize Manhattan Distances/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

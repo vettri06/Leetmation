@@ -1,0 +1,43 @@
+{
+    "problemName": "apple-redistribution-into-boxes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumBoxes(self, apple: List[int], capacity: List[int]) -> int:\r\n        capacity.sort(reverse=True)\r\n        s = sum(apple)\r\n        for i, c in enumerate(capacity, 1):\r\n            s -= c\r\n            if s <= 0:\r\n                return i",
+    "problemId": 3074,
+    "title": "Apple Redistribution into Boxes",
+    "problemUrl": "https://leetcode.com/problems/apple-redistribution-into-boxes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3074.Apple Redistribution into Boxes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3074.Apple Redistribution into Boxes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3074.Apple Redistribution into Boxes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3074.Apple Redistribution into Boxes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3074.Apple Redistribution into Boxes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3074.Apple Redistribution into Boxes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3074.Apple Redistribution into Boxes/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

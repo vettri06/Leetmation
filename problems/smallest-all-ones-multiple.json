@@ -1,0 +1,38 @@
+{
+    "problemName": "smallest-all-ones-multiple",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minAllOneMultiple(self, k: int) -> int:\r\n        if k % 2 == 0:\r\n            return -1\r\n        x = 1 % k\r\n        ans = 1\r\n        for _ in range(k):\r\n            x = (x * 10 + 1) % k\r\n            ans += 1\r\n            if x == 0:\r\n                return ans\r\n        return -1",
+    "problemId": 3790,
+    "title": "Smallest All-Ones Multiple",
+    "problemUrl": "https://leetcode.com/problems/smallest-all-ones-multiple/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3790.Smallest All-Ones Multiple/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3790.Smallest All-Ones Multiple/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3790.Smallest All-Ones Multiple/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3790.Smallest All-Ones Multiple/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3790.Smallest All-Ones Multiple/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3790.Smallest All-Ones Multiple/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

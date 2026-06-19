@@ -1,0 +1,43 @@
+{
+    "problemName": "recover-binary-search-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def recoverTree(self, root: Optional[TreeNode]) -> None:\r\n        \"\"\"\r\n        Do not return anything, modify root in-place instead.\r\n        \"\"\"\r\n\r\n        def dfs(root):\r\n            if root is None:\r\n                return\r\n            nonlocal prev, first, second\r\n            dfs(root.left)\r\n            if prev and prev.val > root.val:\r\n                if first is None:\r\n                    first = prev\r\n                second = root\r\n            prev = root\r\n            dfs(root.right)\r\n\r\n        prev = first = second = None\r\n        dfs(root)\r\n        first.val, second.val = second.val, first.val",
+    "problemId": 99,
+    "title": "Recover Binary Search Tree",
+    "problemUrl": "https://leetcode.com/problems/recover-binary-search-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0099.Recover Binary Search Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0099.Recover Binary Search Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0099.Recover Binary Search Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0099.Recover Binary Search Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0099.Recover Binary Search Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0099.Recover Binary Search Tree/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0099.Recover Binary Search Tree/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

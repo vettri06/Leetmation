@@ -1,0 +1,38 @@
+{
+    "problemName": "sum-of-compatible-numbers-in-range-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumOfGoodIntegers(self, n: int, k: int) -> int:\r\n        ans = 0\r\n        for x in range(max(1, n - k), n + k + 1):\r\n            if (n & x) == 0:\r\n                ans += x\r\n        return ans",
+    "problemId": 3954,
+    "title": "Sum of Compatible Numbers in Range I",
+    "problemUrl": "https://leetcode.com/problems/sum-of-compatible-numbers-in-range-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3954.Sum of Compatible Numbers in Range I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3954.Sum of Compatible Numbers in Range I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3954.Sum of Compatible Numbers in Range I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3954.Sum of Compatible Numbers in Range I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3954.Sum of Compatible Numbers in Range I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3954.Sum of Compatible Numbers in Range I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

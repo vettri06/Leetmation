@@ -1,0 +1,43 @@
+{
+    "problemName": "increasing-triplet-subsequence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def increasingTriplet(self, nums: List[int]) -> bool:\r\n        mi, mid = inf, inf\r\n        for num in nums:\r\n            if num > mid:\r\n                return True\r\n            if num <= mi:\r\n                mi = num\r\n            else:\r\n                mid = num\r\n        return False",
+    "problemId": 334,
+    "title": "Increasing Triplet Subsequence",
+    "problemUrl": "https://leetcode.com/problems/increasing-triplet-subsequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0334.Increasing Triplet Subsequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0334.Increasing Triplet Subsequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0334.Increasing Triplet Subsequence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0334.Increasing Triplet Subsequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0334.Increasing Triplet Subsequence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0334.Increasing Triplet Subsequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0334.Increasing Triplet Subsequence/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

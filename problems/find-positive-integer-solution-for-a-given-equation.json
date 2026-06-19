@@ -1,0 +1,63 @@
+{
+    "problemName": "find-positive-integer-solution-for-a-given-equation",
+    "language": "python3",
+    "code": "\"\"\"\r\nThis is the custom function interface.\r\nYou should not implement it, or speculate about its implementation\r\nclass CustomFunction:\r\n    # Returns f(x, y) for any given positive integers x and y.\r\n    # Note that f(x, y) is increasing with respect to both x and y.\r\n    # i.e. f(x, y) < f(x + 1, y), f(x, y) < f(x, y + 1)\r\n    def f(self, x, y):\r\n\r\n\"\"\"\r\n\r\n\r\nclass Solution:\r\n    def findSolution(self, customfunction: \"CustomFunction\", z: int) -> List[List[int]]:\r\n        ans = []\r\n        for x in range(1, z + 1):\r\n            y = 1 + bisect_left(\r\n                range(1, z + 1), z, key=lambda y: customfunction.f(x, y)\r\n            )\r\n            if customfunction.f(x, y) == z:\r\n                ans.append([x, y])\r\n        return ans",
+    "problemId": 1237,
+    "title": "Find Positive Integer Solution for a Given Equation",
+    "problemUrl": "https://leetcode.com/problems/find-positive-integer-solution-for-a-given-equation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1237.Find Positive Integer Solution for a Given Equation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1237.Find Positive Integer Solution for a Given Equation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1237.Find Positive Integer Solution for a Given Equation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1237.Find Positive Integer Solution for a Given Equation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1237.Find Positive Integer Solution for a Given Equation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1237.Find Positive Integer Solution for a Given Equation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1237.Find Positive Integer Solution for a Given Equation/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1237.Find Positive Integer Solution for a Given Equation/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1237.Find Positive Integer Solution for a Given Equation/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1237.Find Positive Integer Solution for a Given Equation/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1237.Find Positive Integer Solution for a Given Equation/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

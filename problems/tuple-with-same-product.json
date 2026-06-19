@@ -1,0 +1,43 @@
+{
+    "problemName": "tuple-with-same-product",
+    "language": "python3",
+    "code": "class Solution:\r\n    def tupleSameProduct(self, nums: List[int]) -> int:\r\n        cnt = defaultdict(int)\r\n        for i in range(1, len(nums)):\r\n            for j in range(i):\r\n                x = nums[i] * nums[j]\r\n                cnt[x] += 1\r\n        return sum(v * (v - 1) // 2 for v in cnt.values()) << 3",
+    "problemId": 1726,
+    "title": "Tuple with Same Product",
+    "problemUrl": "https://leetcode.com/problems/tuple-with-same-product/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1726.Tuple with Same Product/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1726.Tuple with Same Product/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1726.Tuple with Same Product/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1726.Tuple with Same Product/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1726.Tuple with Same Product/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1726.Tuple with Same Product/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1726.Tuple with Same Product/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

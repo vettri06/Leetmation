@@ -1,0 +1,63 @@
+{
+    "problemName": "check-if-a-number-is-majority-element-in-a-sorted-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isMajorityElement(self, nums: List[int], target: int) -> bool:\r\n        left = bisect_left(nums, target)\r\n        right = bisect_right(nums, target)\r\n        return right - left > len(nums) // 2",
+    "problemId": 1150,
+    "title": "Check If a Number Is Majority Element in a Sorted Array",
+    "problemUrl": "https://leetcode.com/problems/check-if-a-number-is-majority-element-in-a-sorted-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1150.Check If a Number Is Majority Element in a Sorted Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1150.Check If a Number Is Majority Element in a Sorted Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1150.Check If a Number Is Majority Element in a Sorted Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1150.Check If a Number Is Majority Element in a Sorted Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1150.Check If a Number Is Majority Element in a Sorted Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1150.Check If a Number Is Majority Element in a Sorted Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1150.Check If a Number Is Majority Element in a Sorted Array/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1150.Check If a Number Is Majority Element in a Sorted Array/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1150.Check If a Number Is Majority Element in a Sorted Array/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1150.Check If a Number Is Majority Element in a Sorted Array/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1150.Check If a Number Is Majority Element in a Sorted Array/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

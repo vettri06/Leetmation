@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-distance-to-the-target-element",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getMinDistance(self, nums: List[int], target: int, start: int) -> int:\r\n        return min(abs(i - start) for i, x in enumerate(nums) if x == target)",
+    "problemId": 1848,
+    "title": "Minimum Distance to the Target Element",
+    "problemUrl": "https://leetcode.com/problems/minimum-distance-to-the-target-element/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1848.Minimum Distance to the Target Element/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1848.Minimum Distance to the Target Element/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1848.Minimum Distance to the Target Element/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1848.Minimum Distance to the Target Element/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1848.Minimum Distance to the Target Element/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1848.Minimum Distance to the Target Element/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1848.Minimum Distance to the Target Element/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

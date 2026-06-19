@@ -1,0 +1,38 @@
+{
+    "problemName": "robot-room-cleaner",
+    "language": "python3",
+    "code": "# \"\"\"\r\n# This is the robot's control interface.\r\n# You should not implement it, or speculate about its implementation\r\n# \"\"\"\r\n# class Robot:\r\n#    def move(self):\r\n#        \"\"\"\r\n#        Returns true if the cell in front is open and robot moves into the cell.\r\n#        Returns false if the cell in front is blocked and robot stays in the current cell.\r\n#        :rtype bool\r\n#        \"\"\"\r\n#\r\n#    def turnLeft(self):\r\n#        \"\"\"\r\n#        Robot will stay in the same cell after calling turnLeft/turnRight.\r\n#        Each turn will be 90 degrees.\r\n#        :rtype void\r\n#        \"\"\"\r\n#\r\n#    def turnRight(self):\r\n#        \"\"\"\r\n#        Robot will stay in the same cell after calling turnLeft/turnRight.\r\n#        Each turn will be 90 degrees.\r\n#        :rtype void\r\n#        \"\"\"\r\n#\r\n#    def clean(self):\r\n#        \"\"\"\r\n#        Clean the current cell.\r\n#        :rtype void\r\n#        \"\"\"\r\n\r\n\r\nclass Solution:\r\n    def cleanRoom(self, robot):\r\n        \"\"\"\r\n        :type robot: Robot\r\n        :rtype: None\r\n        \"\"\"\r\n\r\n        def dfs(i, j, d):\r\n            vis.add((i, j))\r\n            robot.clean()\r\n            for k in range(4):\r\n                nd = (d + k) % 4\r\n                x, y = i + dirs[nd], j + dirs[nd + 1]\r\n                if (x, y) not in vis and robot.move():\r\n                    dfs(x, y, nd)\r\n                    robot.turnRight()\r\n                    robot.turnRight()\r\n                    robot.move()\r\n                    robot.turnRight()\r\n                    robot.turnRight()\r\n                robot.turnRight()\r\n\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        vis = set()\r\n        dfs(0, 0, 0)",
+    "problemId": 489,
+    "title": "Robot Room Cleaner",
+    "problemUrl": "https://leetcode.com/problems/robot-room-cleaner/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0489.Robot Room Cleaner/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0489.Robot Room Cleaner/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0489.Robot Room Cleaner/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0489.Robot Room Cleaner/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0489.Robot Room Cleaner/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0489.Robot Room Cleaner/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-requests-without-violating-the-limit",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxRequests(self, requests: list[list[int]], k: int, window: int) -> int:\r\n        g = defaultdict(list)\r\n        for u, t in requests:\r\n            g[u].append(t)\r\n        ans = len(requests)\r\n        for ts in g.values():\r\n            ts.sort()\r\n            kept = deque()\r\n            for t in ts:\r\n                while kept and t - kept[0] > window:\r\n                    kept.popleft()\r\n                if len(kept) < k:\r\n                    kept.append(t)\r\n                else:\r\n                    ans -= 1\r\n        return ans",
+    "problemId": 3851,
+    "title": "Maximum Requests Without Violating the Limit",
+    "problemUrl": "https://leetcode.com/problems/maximum-requests-without-violating-the-limit/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3851.Maximum Requests Without Violating the Limit/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3851.Maximum Requests Without Violating the Limit/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3851.Maximum Requests Without Violating the Limit/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3851.Maximum Requests Without Violating the Limit/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3851.Maximum Requests Without Violating the Limit/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3851.Maximum Requests Without Violating the Limit/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3851.Maximum Requests Without Violating the Limit/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

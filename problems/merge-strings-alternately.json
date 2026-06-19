@@ -1,0 +1,48 @@
+{
+    "problemName": "merge-strings-alternately",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mergeAlternately(self, word1: str, word2: str) -> str:\r\n        return ''.join(a + b for a, b in zip_longest(word1, word2, fillvalue=''))",
+    "problemId": 1768,
+    "title": "Merge Strings Alternately",
+    "problemUrl": "https://leetcode.com/problems/merge-strings-alternately/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1768.Merge Strings Alternately/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1768.Merge Strings Alternately/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1768.Merge Strings Alternately/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1768.Merge Strings Alternately/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1768.Merge Strings Alternately/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1768.Merge Strings Alternately/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1768.Merge Strings Alternately/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1768.Merge Strings Alternately/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

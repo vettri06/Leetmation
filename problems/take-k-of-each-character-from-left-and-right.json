@@ -1,0 +1,43 @@
+{
+    "problemName": "take-k-of-each-character-from-left-and-right",
+    "language": "python3",
+    "code": "class Solution:\r\n    def takeCharacters(self, s: str, k: int) -> int:\r\n        cnt = Counter(s)\r\n        if any(cnt[c] < k for c in \"abc\"):\r\n            return -1\r\n        mx = j = 0\r\n        for i, c in enumerate(s):\r\n            cnt[c] -= 1\r\n            while cnt[c] < k:\r\n                cnt[s[j]] += 1\r\n                j += 1\r\n            mx = max(mx, i - j + 1)\r\n        return len(s) - mx",
+    "problemId": 2516,
+    "title": "Take K of Each Character From Left and Right",
+    "problemUrl": "https://leetcode.com/problems/take-k-of-each-character-from-left-and-right/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2516.Take K of Each Character From Left and Right/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2516.Take K of Each Character From Left and Right/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2516.Take K of Each Character From Left and Right/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2516.Take K of Each Character From Left and Right/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2516.Take K of Each Character From Left and Right/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2516.Take K of Each Character From Left and Right/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2516.Take K of Each Character From Left and Right/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

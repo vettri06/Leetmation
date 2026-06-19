@@ -1,0 +1,33 @@
+{
+    "problemName": "random-point-in-non-overlapping-rectangles",
+    "language": "python3",
+    "code": "class Solution:\r\n    def __init__(self, rects: List[List[int]]):\r\n        self.rects = rects\r\n        self.s = [0] * len(rects)\r\n        for i, (x1, y1, x2, y2) in enumerate(rects):\r\n            self.s[i] = self.s[i - 1] + (x2 - x1 + 1) * (y2 - y1 + 1)\r\n\r\n    def pick(self) -> List[int]:\r\n        v = random.randint(1, self.s[-1])\r\n        idx = bisect_left(self.s, v)\r\n        x1, y1, x2, y2 = self.rects[idx]\r\n        return [random.randint(x1, x2), random.randint(y1, y2)]\r\n\r\n\r\n# Your Solution object will be instantiated and called as such:\r\n# obj = Solution(rects)\r\n# param_1 = obj.pick()",
+    "problemId": 497,
+    "title": "Random Point in Non-overlapping Rectangles",
+    "problemUrl": "https://leetcode.com/problems/random-point-in-non-overlapping-rectangles/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0497.Random Point in Non-overlapping Rectangles/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0497.Random Point in Non-overlapping Rectangles/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0497.Random Point in Non-overlapping Rectangles/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0497.Random Point in Non-overlapping Rectangles/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0497.Random Point in Non-overlapping Rectangles/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

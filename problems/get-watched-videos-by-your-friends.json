@@ -1,0 +1,38 @@
+{
+    "problemName": "get-watched-videos-by-your-friends",
+    "language": "python3",
+    "code": "class Solution:\r\n    def watchedVideosByFriends(\r\n        self,\r\n        watchedVideos: List[List[str]],\r\n        friends: List[List[int]],\r\n        id: int,\r\n        level: int,\r\n    ) -> List[str]:\r\n        q = deque([id])\r\n        vis = {id}\r\n        for _ in range(level):\r\n            for _ in range(len(q)):\r\n                i = q.popleft()\r\n                for j in friends[i]:\r\n                    if j not in vis:\r\n                        vis.add(j)\r\n                        q.append(j)\r\n        cnt = Counter()\r\n        for i in q:\r\n            for v in watchedVideos[i]:\r\n                cnt[v] += 1\r\n        return sorted(cnt.keys(), key=lambda k: (cnt[k], k))",
+    "problemId": 1311,
+    "title": "Get Watched Videos by Your Friends",
+    "problemUrl": "https://leetcode.com/problems/get-watched-videos-by-your-friends/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1311.Get Watched Videos by Your Friends/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1311.Get Watched Videos by Your Friends/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1311.Get Watched Videos by Your Friends/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1311.Get Watched Videos by Your Friends/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1311.Get Watched Videos by Your Friends/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1311.Get Watched Videos by Your Friends/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

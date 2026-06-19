@@ -1,0 +1,33 @@
+{
+    "problemName": "consecutive-numbers",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef consecutive_numbers(logs: pd.DataFrame) -> pd.DataFrame:\r\n    all_the_same = lambda lst: lst.nunique() == 1\r\n    logs[\"is_consecutive\"] = (\r\n        logs[\"num\"].rolling(window=3, center=True, min_periods=3).apply(all_the_same)\r\n    )\r\n    return (\r\n        logs.query(\"is_consecutive == 1.0\")[[\"num\"]]\r\n        .drop_duplicates()\r\n        .rename(columns={\"num\": \"ConsecutiveNums\"})\r\n    )",
+    "problemId": 180,
+    "title": "Consecutive Numbers",
+    "problemUrl": "https://leetcode.com/problems/consecutive-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0180.Consecutive Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0180.Consecutive Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0180.Consecutive Numbers/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0180.Consecutive Numbers/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0180.Consecutive Numbers/Solution3.sql",
+            "sourceFile": "Solution3.sql"
+        }
+    ]
+}

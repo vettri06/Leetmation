@@ -1,0 +1,33 @@
+{
+    "problemName": "longest-substring-of-all-vowels-in-order",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestBeautifulSubstring(self, word: str) -> int:\r\n        arr = []\r\n        n = len(word)\r\n        i = 0\r\n        while i < n:\r\n            j = i\r\n            while j < n and word[j] == word[i]:\r\n                j += 1\r\n            arr.append((word[i], j - i))\r\n            i = j\r\n        ans = 0\r\n        for i in range(len(arr) - 4):\r\n            a, b, c, d, e = arr[i : i + 5]\r\n            if a[0] + b[0] + c[0] + d[0] + e[0] == \"aeiou\":\r\n                ans = max(ans, a[1] + b[1] + c[1] + d[1] + e[1])\r\n        return ans",
+    "problemId": 1839,
+    "title": "Longest Substring Of All Vowels in Order",
+    "problemUrl": "https://leetcode.com/problems/longest-substring-of-all-vowels-in-order/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1839.Longest Substring Of All Vowels in Order/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1839.Longest Substring Of All Vowels in Order/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1839.Longest Substring Of All Vowels in Order/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1839.Longest Substring Of All Vowels in Order/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1839.Longest Substring Of All Vowels in Order/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

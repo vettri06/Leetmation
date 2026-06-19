@@ -1,0 +1,43 @@
+{
+    "problemName": "trionic-array-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isTrionic(self, nums: List[int]) -> bool:\r\n        n = len(nums)\r\n        p = 0\r\n        while p < n - 2 and nums[p] < nums[p + 1]:\r\n            p += 1\r\n        if p == 0:\r\n            return False\r\n        q = p\r\n        while q < n - 1 and nums[q] > nums[q + 1]:\r\n            q += 1\r\n        if q == p or q == n - 1:\r\n            return False\r\n        while q < n - 1 and nums[q] < nums[q + 1]:\r\n            q += 1\r\n        return q == n - 1",
+    "problemId": 3637,
+    "title": "Trionic Array I",
+    "problemUrl": "https://leetcode.com/problems/trionic-array-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3637.Trionic Array I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3637.Trionic Array I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3637.Trionic Array I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3637.Trionic Array I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3637.Trionic Array I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3637.Trionic Array I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3637.Trionic Array I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

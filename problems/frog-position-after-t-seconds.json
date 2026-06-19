@@ -1,0 +1,43 @@
+{
+    "problemName": "frog-position-after-t-seconds",
+    "language": "python3",
+    "code": "class Solution:\r\n    def frogPosition(\r\n        self, n: int, edges: List[List[int]], t: int, target: int\r\n    ) -> float:\r\n        g = defaultdict(list)\r\n        for u, v in edges:\r\n            g[u].append(v)\r\n            g[v].append(u)\r\n        q = deque([(1, 1.0)])\r\n        vis = [False] * (n + 1)\r\n        vis[1] = True\r\n        while q and t >= 0:\r\n            for _ in range(len(q)):\r\n                u, p = q.popleft()\r\n                cnt = len(g[u]) - int(u != 1)\r\n                if u == target:\r\n                    return p if cnt * t == 0 else 0\r\n                for v in g[u]:\r\n                    if not vis[v]:\r\n                        vis[v] = True\r\n                        q.append((v, p / cnt))\r\n            t -= 1\r\n        return 0",
+    "problemId": 1377,
+    "title": "Frog Position After T Seconds",
+    "problemUrl": "https://leetcode.com/problems/frog-position-after-t-seconds/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1377.Frog Position After T Seconds/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1377.Frog Position After T Seconds/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1377.Frog Position After T Seconds/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1377.Frog Position After T Seconds/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1377.Frog Position After T Seconds/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1377.Frog Position After T Seconds/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1377.Frog Position After T Seconds/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

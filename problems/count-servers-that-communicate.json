@@ -1,0 +1,43 @@
+{
+    "problemName": "count-servers-that-communicate",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countServers(self, grid: List[List[int]]) -> int:\r\n        m, n = len(grid), len(grid[0])\r\n        row = [0] * m\r\n        col = [0] * n\r\n        for i in range(m):\r\n            for j in range(n):\r\n                row[i] += grid[i][j]\r\n                col[j] += grid[i][j]\r\n        return sum(\r\n            grid[i][j] and (row[i] > 1 or col[j] > 1)\r\n            for i in range(m)\r\n            for j in range(n)\r\n        )",
+    "problemId": 1267,
+    "title": "Count Servers that Communicate",
+    "problemUrl": "https://leetcode.com/problems/count-servers-that-communicate/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1267.Count Servers that Communicate/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1267.Count Servers that Communicate/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1267.Count Servers that Communicate/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1267.Count Servers that Communicate/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1267.Count Servers that Communicate/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1267.Count Servers that Communicate/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1267.Count Servers that Communicate/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

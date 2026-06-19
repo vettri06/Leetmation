@@ -1,0 +1,38 @@
+{
+    "problemName": "basic-calculator-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def calculate(self, s: str) -> int:\r\n        v, n = 0, len(s)\r\n        sign = '+'\r\n        stk = []\r\n        for i, c in enumerate(s):\r\n            if c.isdigit():\r\n                v = v * 10 + int(c)\r\n            if i == n - 1 or c in '+-*/':\r\n                match sign:\r\n                    case '+':\r\n                        stk.append(v)\r\n                    case '-':\r\n                        stk.append(-v)\r\n                    case '*':\r\n                        stk.append(stk.pop() * v)\r\n                    case '/':\r\n                        stk.append(int(stk.pop() / v))\r\n                sign = c\r\n                v = 0\r\n        return sum(stk)",
+    "problemId": 227,
+    "title": "Basic Calculator II",
+    "problemUrl": "https://leetcode.com/problems/basic-calculator-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0227.Basic Calculator II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0227.Basic Calculator II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0227.Basic Calculator II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0227.Basic Calculator II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0227.Basic Calculator II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0227.Basic Calculator II/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

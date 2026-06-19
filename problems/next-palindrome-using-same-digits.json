@@ -1,0 +1,38 @@
+{
+    "problemName": "next-palindrome-using-same-digits",
+    "language": "python3",
+    "code": "class Solution:\r\n    def nextPalindrome(self, num: str) -> str:\r\n        def next_permutation(nums: List[str]) -> bool:\r\n            n = len(nums) // 2\r\n            i = n - 2\r\n            while i >= 0 and nums[i] >= nums[i + 1]:\r\n                i -= 1\r\n            if i < 0:\r\n                return False\r\n            j = n - 1\r\n            while j >= 0 and nums[j] <= nums[i]:\r\n                j -= 1\r\n            nums[i], nums[j] = nums[j], nums[i]\r\n            nums[i + 1 : n] = nums[i + 1 : n][::-1]\r\n            return True\r\n\r\n        nums = list(num)\r\n        if not next_permutation(nums):\r\n            return \"\"\r\n        n = len(nums)\r\n        for i in range(n // 2):\r\n            nums[n - i - 1] = nums[i]\r\n        return \"\".join(nums)",
+    "problemId": 1842,
+    "title": "Next Palindrome Using Same Digits",
+    "problemUrl": "https://leetcode.com/problems/next-palindrome-using-same-digits/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1842.Next Palindrome Using Same Digits/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1842.Next Palindrome Using Same Digits/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1842.Next Palindrome Using Same Digits/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1842.Next Palindrome Using Same Digits/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1842.Next Palindrome Using Same Digits/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1842.Next Palindrome Using Same Digits/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

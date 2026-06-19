@@ -1,0 +1,43 @@
+{
+    "problemName": "destroying-asteroids",
+    "language": "python3",
+    "code": "class Solution:\r\n    def asteroidsDestroyed(self, mass: int, asteroids: List[int]) -> bool:\r\n        asteroids.sort()\r\n        for x in asteroids:\r\n            if mass < x:\r\n                return False\r\n            mass += x\r\n        return True",
+    "problemId": 2126,
+    "title": "Destroying Asteroids",
+    "problemUrl": "https://leetcode.com/problems/destroying-asteroids/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2126.Destroying Asteroids/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2126.Destroying Asteroids/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2126.Destroying Asteroids/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2126.Destroying Asteroids/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2126.Destroying Asteroids/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2126.Destroying Asteroids/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2126.Destroying Asteroids/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

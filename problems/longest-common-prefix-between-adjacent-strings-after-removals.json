@@ -1,0 +1,33 @@
+{
+    "problemName": "longest-common-prefix-between-adjacent-strings-after-removals",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestCommonPrefix(self, words: List[str]) -> List[int]:\r\n        @cache\r\n        def calc(s: str, t: str) -> int:\r\n            k = 0\r\n            for a, b in zip(s, t):\r\n                if a != b:\r\n                    break\r\n                k += 1\r\n            return k\r\n\r\n        def add(i: int, j: int):\r\n            if 0 <= i < n and 0 <= j < n:\r\n                sl.add(calc(words[i], words[j]))\r\n\r\n        def remove(i: int, j: int):\r\n            if 0 <= i < n and 0 <= j < n:\r\n                sl.remove(calc(words[i], words[j]))\r\n\r\n        n = len(words)\r\n        sl = SortedList(calc(a, b) for a, b in pairwise(words))\r\n        ans = []\r\n        for i in range(n):\r\n            remove(i, i + 1)\r\n            remove(i - 1, i)\r\n            add(i - 1, i + 1)\r\n            ans.append(sl[-1] if sl and sl[-1] > 0 else 0)\r\n            remove(i - 1, i + 1)\r\n            add(i - 1, i)\r\n            add(i, i + 1)\r\n        return ans",
+    "problemId": 3598,
+    "title": "Longest Common Prefix Between Adjacent Strings After Removals",
+    "problemUrl": "https://leetcode.com/problems/longest-common-prefix-between-adjacent-strings-after-removals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3598.Longest Common Prefix Between Adjacent Strings After Removals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3598.Longest Common Prefix Between Adjacent Strings After Removals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3598.Longest Common Prefix Between Adjacent Strings After Removals/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3598.Longest Common Prefix Between Adjacent Strings After Removals/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3598.Longest Common Prefix Between Adjacent Strings After Removals/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

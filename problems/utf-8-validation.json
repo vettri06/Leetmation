@@ -1,0 +1,38 @@
+{
+    "problemName": "utf-8-validation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def validUtf8(self, data: List[int]) -> bool:\r\n        cnt = 0\r\n        for v in data:\r\n            if cnt > 0:\r\n                if v >> 6 != 0b10:\r\n                    return False\r\n                cnt -= 1\r\n            elif v >> 7 == 0:\r\n                cnt = 0\r\n            elif v >> 5 == 0b110:\r\n                cnt = 1\r\n            elif v >> 4 == 0b1110:\r\n                cnt = 2\r\n            elif v >> 3 == 0b11110:\r\n                cnt = 3\r\n            else:\r\n                return False\r\n        return cnt == 0",
+    "problemId": 393,
+    "title": "UTF-8 Validation",
+    "problemUrl": "https://leetcode.com/problems/utf-8-validation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0393.UTF-8 Validation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0393.UTF-8 Validation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0393.UTF-8 Validation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0393.UTF-8 Validation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0393.UTF-8 Validation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0393.UTF-8 Validation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

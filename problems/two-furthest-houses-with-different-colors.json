@@ -1,0 +1,43 @@
+{
+    "problemName": "two-furthest-houses-with-different-colors",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxDistance(self, colors: List[int]) -> int:\r\n        n = len(colors)\r\n        if colors[0] != colors[-1]:\r\n            return n - 1\r\n        i, j = 1, n - 2\r\n        while colors[i] == colors[0]:\r\n            i += 1\r\n        while colors[j] == colors[0]:\r\n            j -= 1\r\n        return max(n - i - 1, j)",
+    "problemId": 2078,
+    "title": "Two Furthest Houses With Different Colors",
+    "problemUrl": "https://leetcode.com/problems/two-furthest-houses-with-different-colors/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2078.Two Furthest Houses With Different Colors/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2078.Two Furthest Houses With Different Colors/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2078.Two Furthest Houses With Different Colors/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2078.Two Furthest Houses With Different Colors/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2078.Two Furthest Houses With Different Colors/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2078.Two Furthest Houses With Different Colors/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2078.Two Furthest Houses With Different Colors/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

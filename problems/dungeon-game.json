@@ -1,0 +1,38 @@
+{
+    "problemName": "dungeon-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def calculateMinimumHP(self, dungeon: List[List[int]]) -> int:\r\n        m, n = len(dungeon), len(dungeon[0])\r\n        dp = [[inf] * (n + 1) for _ in range(m + 1)]\r\n        dp[m][n - 1] = dp[m - 1][n] = 1\r\n        for i in range(m - 1, -1, -1):\r\n            for j in range(n - 1, -1, -1):\r\n                dp[i][j] = max(1, min(dp[i + 1][j], dp[i][j + 1]) - dungeon[i][j])\r\n        return dp[0][0]",
+    "problemId": 174,
+    "title": "Dungeon Game",
+    "problemUrl": "https://leetcode.com/problems/dungeon-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0174.Dungeon Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0174.Dungeon Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0174.Dungeon Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0174.Dungeon Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0174.Dungeon Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0174.Dungeon Game/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

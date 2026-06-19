@@ -1,0 +1,38 @@
+{
+    "problemName": "super-pow",
+    "language": "python3",
+    "code": "class Solution:\r\n    def superPow(self, a: int, b: List[int]) -> int:\r\n        mod = 1337\r\n        ans = 1\r\n        for e in b[::-1]:\r\n            ans = ans * pow(a, e, mod) % mod\r\n            a = pow(a, 10, mod)\r\n        return ans",
+    "problemId": 372,
+    "title": "Super Pow",
+    "problemUrl": "https://leetcode.com/problems/super-pow/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0372.Super Pow/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0372.Super Pow/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0372.Super Pow/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0372.Super Pow/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0372.Super Pow/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0372.Super Pow/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

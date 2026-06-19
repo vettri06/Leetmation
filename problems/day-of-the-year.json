@@ -1,0 +1,43 @@
+{
+    "problemName": "day-of-the-year",
+    "language": "python3",
+    "code": "class Solution:\r\n    def dayOfYear(self, date: str) -> int:\r\n        y, m, d = (int(s) for s in date.split('-'))\r\n        v = 29 if y % 400 == 0 or (y % 4 == 0 and y % 100) else 28\r\n        days = [31, v, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n        return sum(days[: m - 1]) + d",
+    "problemId": 1154,
+    "title": "Day of the Year",
+    "problemUrl": "https://leetcode.com/problems/day-of-the-year/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1154.Day of the Year/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1154.Day of the Year/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1154.Day of the Year/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1154.Day of the Year/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1154.Day of the Year/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1154.Day of the Year/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1154.Day of the Year/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

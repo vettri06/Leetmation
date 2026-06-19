@@ -1,0 +1,23 @@
+{
+    "problemName": "create-object-from-two-arrays",
+    "language": "javascript",
+    "code": "/**\r\n * @param {Array} keysArr\r\n * @param {Array} valuesArr\r\n * @return {Object}\r\n */\r\nvar createObject = function (keysArr, valuesArr) {\r\n    const ans = {};\r\n    for (let i = 0; i < keysArr.length; ++i) {\r\n        const k = keysArr[i] + '';\r\n        if (ans[k] === undefined) {\r\n            ans[k] = valuesArr[i];\r\n        }\r\n    }\r\n    return ans;\r\n};",
+    "problemId": 2794,
+    "title": "Create Object from Two Arrays",
+    "problemUrl": "https://leetcode.com/problems/create-object-from-two-arrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2794.Create Object from Two Arrays/Solution.js",
+    "sourceFile": "Solution.js",
+    "sourceCandidates": [
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2794.Create Object from Two Arrays/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2794.Create Object from Two Arrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

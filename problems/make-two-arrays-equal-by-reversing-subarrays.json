@@ -1,0 +1,93 @@
+{
+    "problemName": "make-two-arrays-equal-by-reversing-subarrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canBeEqual(self, target: List[int], arr: List[int]) -> bool:\r\n        return sorted(target) == sorted(arr)",
+    "problemId": 1460,
+    "title": "Make Two Arrays Equal by Reversing Subarrays",
+    "problemUrl": "https://leetcode.com/problems/make-two-arrays-equal-by-reversing-subarrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution2.c",
+            "sourceFile": "Solution2.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1460.Make Two Arrays Equal by Reversing Subarrays/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

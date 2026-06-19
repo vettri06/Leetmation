@@ -1,0 +1,38 @@
+{
+    "problemName": "angle-between-hands-of-a-clock",
+    "language": "python3",
+    "code": "class Solution:\r\n    def angleClock(self, hour: int, minutes: int) -> float:\r\n        h = 30 * hour + 0.5 * minutes\r\n        m = 6 * minutes\r\n        diff = abs(h - m)\r\n        return min(diff, 360 - diff)",
+    "problemId": 1344,
+    "title": "Angle Between Hands of a Clock",
+    "problemUrl": "https://leetcode.com/problems/angle-between-hands-of-a-clock/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1344.Angle Between Hands of a Clock/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1344.Angle Between Hands of a Clock/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1344.Angle Between Hands of a Clock/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1344.Angle Between Hands of a Clock/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1344.Angle Between Hands of a Clock/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1344.Angle Between Hands of a Clock/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

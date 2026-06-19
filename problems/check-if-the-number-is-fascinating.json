@@ -1,0 +1,43 @@
+{
+    "problemName": "check-if-the-number-is-fascinating",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isFascinating(self, n: int) -> bool:\r\n        s = str(n) + str(2 * n) + str(3 * n)\r\n        return \"\".join(sorted(s)) == \"123456789\"",
+    "problemId": 2729,
+    "title": "Check if The Number is Fascinating",
+    "problemUrl": "https://leetcode.com/problems/check-if-the-number-is-fascinating/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2729.Check if The Number is Fascinating/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2729.Check if The Number is Fascinating/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2729.Check if The Number is Fascinating/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2729.Check if The Number is Fascinating/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2729.Check if The Number is Fascinating/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2729.Check if The Number is Fascinating/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2729.Check if The Number is Fascinating/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

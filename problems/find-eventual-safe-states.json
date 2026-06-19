@@ -1,0 +1,63 @@
+{
+    "problemName": "find-eventual-safe-states",
+    "language": "python3",
+    "code": "class Solution:\r\n    def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:\r\n        rg = defaultdict(list)\r\n        indeg = [0] * len(graph)\r\n        for i, vs in enumerate(graph):\r\n            for j in vs:\r\n                rg[j].append(i)\r\n            indeg[i] = len(vs)\r\n        q = deque([i for i, v in enumerate(indeg) if v == 0])\r\n        while q:\r\n            i = q.popleft()\r\n            for j in rg[i]:\r\n                indeg[j] -= 1\r\n                if indeg[j] == 0:\r\n                    q.append(j)\r\n        return [i for i, v in enumerate(indeg) if v == 0]",
+    "problemId": 802,
+    "title": "Find Eventual Safe States",
+    "problemUrl": "https://leetcode.com/problems/find-eventual-safe-states/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0802.Find Eventual Safe States/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0802.Find Eventual Safe States/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0802.Find Eventual Safe States/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0802.Find Eventual Safe States/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0802.Find Eventual Safe States/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0802.Find Eventual Safe States/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0802.Find Eventual Safe States/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0802.Find Eventual Safe States/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0802.Find Eventual Safe States/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0802.Find Eventual Safe States/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0802.Find Eventual Safe States/Solution2.js",
+            "sourceFile": "Solution2.js"
+        }
+    ]
+}

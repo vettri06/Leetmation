@@ -1,0 +1,28 @@
+{
+    "problemName": "amount-of-new-area-painted-each-day",
+    "language": "python3",
+    "code": "class Node:\r\n    def __init__(self, l, r):\r\n        self.left = None\r\n        self.right = None\r\n        self.l = l\r\n        self.r = r\r\n        self.mid = (l + r) >> 1\r\n        self.v = 0\r\n        self.add = 0\r\n\r\n\r\nclass SegmentTree:\r\n    def __init__(self):\r\n        self.root = Node(1, 10**5 + 10)\r\n\r\n    def modify(self, l, r, v, node=None):\r\n        if l > r:\r\n            return\r\n        if node is None:\r\n            node = self.root\r\n        if node.l >= l and node.r <= r:\r\n            node.v = node.r - node.l + 1\r\n            node.add = v\r\n            return\r\n        self.pushdown(node)\r\n        if l <= node.mid:\r\n            self.modify(l, r, v, node.left)\r\n        if r > node.mid:\r\n            self.modify(l, r, v, node.right)\r\n        self.pushup(node)\r\n\r\n    def query(self, l, r, node=None):\r\n        if l > r:\r\n            return 0\r\n        if node is None:\r\n            node = self.root\r\n        if node.l >= l and node.r <= r:\r\n            return node.v\r\n        self.pushdown(node)\r\n        v = 0\r\n        if l <= node.mid:\r\n            v += self.query(l, r, node.left)\r\n        if r > node.mid:\r\n            v += self.query(l, r, node.right)\r\n        return v\r\n\r\n    def pushup(self, node):\r\n        node.v = node.left.v + node.right.v\r\n\r\n    def pushdown(self, node):\r\n        if node.left is None:\r\n            node.left = Node(node.l, node.mid)\r\n        if node.right is None:\r\n            node.right = Node(node.mid + 1, node.r)\r\n        if node.add:\r\n            left, right = node.left, node.right\r\n            left.v = left.r - left.l + 1\r\n            right.v = right.r - right.l + 1\r\n            left.add = node.add\r\n            right.add = node.add\r\n            node.add = 0\r\n\r\n\r\nclass Solution:\r\n    def amountPainted(self, paint: List[List[int]]) -> List[int]:\r\n        tree = SegmentTree()\r\n        ans = []\r\n        for i, (start, end) in enumerate(paint):\r\n            l, r = start + 1, end\r\n            v = tree.query(l, r)\r\n            ans.append(r - l + 1 - v)\r\n            tree.modify(l, r, 1)\r\n        return ans",
+    "problemId": 2158,
+    "title": "Amount of New Area Painted Each Day",
+    "problemUrl": "https://leetcode.com/problems/amount-of-new-area-painted-each-day/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2158.Amount of New Area Painted Each Day/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2158.Amount of New Area Painted Each Day/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2158.Amount of New Area Painted Each Day/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2158.Amount of New Area Painted Each Day/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "find-median-given-frequency-of-numbers",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    t AS (\r\n        SELECT\r\n            *,\r\n            SUM(frequency) OVER (ORDER BY num ASC) AS rk1,\r\n            SUM(frequency) OVER (ORDER BY num DESC) AS rk2,\r\n            SUM(frequency) OVER () AS s\r\n        FROM Numbers\r\n    )\r\nSELECT\r\n    ROUND(AVG(num), 1) AS median\r\nFROM t\r\nWHERE rk1 >= s / 2 AND rk2 >= s / 2;",
+    "problemId": 571,
+    "title": "Find Median Given Frequency of Numbers",
+    "problemUrl": "https://leetcode.com/problems/find-median-given-frequency-of-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0571.Find Median Given Frequency of Numbers/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0571.Find Median Given Frequency of Numbers/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

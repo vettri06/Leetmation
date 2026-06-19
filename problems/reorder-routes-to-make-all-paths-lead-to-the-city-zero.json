@@ -1,0 +1,68 @@
+{
+    "problemName": "reorder-routes-to-make-all-paths-lead-to-the-city-zero",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minReorder(self, n: int, connections: List[List[int]]) -> int:\r\n        def dfs(a: int, fa: int) -> int:\r\n            return sum(c + dfs(b, a) for b, c in g[a] if b != fa)\r\n\r\n        g = [[] for _ in range(n)]\r\n        for a, b in connections:\r\n            g[a].append((b, 1))\r\n            g[b].append((a, 0))\r\n        return dfs(0, -1)",
+    "problemId": 1466,
+    "title": "Reorder Routes to Make All Paths Lead to the City Zero",
+    "problemUrl": "https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1466.Reorder Routes to Make All Paths Lead to the City Zero/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1466.Reorder Routes to Make All Paths Lead to the City Zero/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1466.Reorder Routes to Make All Paths Lead to the City Zero/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1466.Reorder Routes to Make All Paths Lead to the City Zero/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1466.Reorder Routes to Make All Paths Lead to the City Zero/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1466.Reorder Routes to Make All Paths Lead to the City Zero/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1466.Reorder Routes to Make All Paths Lead to the City Zero/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1466.Reorder Routes to Make All Paths Lead to the City Zero/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1466.Reorder Routes to Make All Paths Lead to the City Zero/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1466.Reorder Routes to Make All Paths Lead to the City Zero/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1466.Reorder Routes to Make All Paths Lead to the City Zero/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1466.Reorder Routes to Make All Paths Lead to the City Zero/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

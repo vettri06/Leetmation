@@ -1,0 +1,43 @@
+{
+    "problemName": "find-k-th-smallest-pair-distance",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestDistancePair(self, nums: List[int], k: int) -> int:\r\n        def count(dist):\r\n            cnt = 0\r\n            for i, b in enumerate(nums):\r\n                a = b - dist\r\n                j = bisect_left(nums, a, 0, i)\r\n                cnt += i - j\r\n            return cnt\r\n\r\n        nums.sort()\r\n        return bisect_left(range(nums[-1] - nums[0]), k, key=count)",
+    "problemId": 719,
+    "title": "Find K-th Smallest Pair Distance",
+    "problemUrl": "https://leetcode.com/problems/find-k-th-smallest-pair-distance/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0719.Find K-th Smallest Pair Distance/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0719.Find K-th Smallest Pair Distance/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0719.Find K-th Smallest Pair Distance/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0719.Find K-th Smallest Pair Distance/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0719.Find K-th Smallest Pair Distance/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0719.Find K-th Smallest Pair Distance/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0719.Find K-th Smallest Pair Distance/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

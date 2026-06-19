@@ -1,0 +1,33 @@
+{
+    "problemName": "find-beautiful-indices-in-the-given-array-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def beautifulIndices(self, s: str, a: str, b: str, k: int) -> List[int]:\r\n        def build_prefix_function(pattern):\r\n            prefix_function = [0] * len(pattern)\r\n            j = 0\r\n            for i in range(1, len(pattern)):\r\n                while j > 0 and pattern[i] != pattern[j]:\r\n                    j = prefix_function[j - 1]\r\n                if pattern[i] == pattern[j]:\r\n                    j += 1\r\n                prefix_function[i] = j\r\n            return prefix_function\r\n\r\n        def kmp_search(pattern, text, prefix_function):\r\n            occurrences = []\r\n            j = 0\r\n            for i in range(len(text)):\r\n                while j > 0 and text[i] != pattern[j]:\r\n                    j = prefix_function[j - 1]\r\n                if text[i] == pattern[j]:\r\n                    j += 1\r\n                if j == len(pattern):\r\n                    occurrences.append(i - j + 1)\r\n                    j = prefix_function[j - 1]\r\n            return occurrences\r\n\r\n        prefix_a = build_prefix_function(a)\r\n        prefix_b = build_prefix_function(b)\r\n\r\n        resa = kmp_search(a, s, prefix_a)\r\n        resb = kmp_search(b, s, prefix_b)\r\n\r\n        res = []\r\n        print(resa, resb)\r\n        i = 0\r\n        j = 0\r\n        while i < len(resa):\r\n            while j < len(resb):\r\n                if abs(resb[j] - resa[i]) <= k:\r\n                    res.append(resa[i])\r\n                    break\r\n                elif j + 1 < len(resb) and abs(resb[j + 1] - resa[i]) < abs(\r\n                    resb[j] - resa[i]\r\n                ):\r\n                    j += 1\r\n                else:\r\n                    break\r\n            i += 1\r\n        return res",
+    "problemId": 3008,
+    "title": "Find Beautiful Indices in the Given Array II",
+    "problemUrl": "https://leetcode.com/problems/find-beautiful-indices-in-the-given-array-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3008.Find Beautiful Indices in the Given Array II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3008.Find Beautiful Indices in the Given Array II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3008.Find Beautiful Indices in the Given Array II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3008.Find Beautiful Indices in the Given Array II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3008.Find Beautiful Indices in the Given Array II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

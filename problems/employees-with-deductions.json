@@ -1,0 +1,18 @@
+{
+    "problemName": "employees-with-deductions",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            employee_id,\r\n            SUM(ceiling(TIMESTAMPDIFF(second, in_time, out_time) / 60)) / 60 AS tot\r\n        FROM Logs\r\n        GROUP BY employee_id\r\n    )\r\nSELECT employee_id\r\nFROM\r\n    Employees\r\n    LEFT JOIN T USING (employee_id)\r\nWHERE IFNULL(tot, 0) < needed_hours;",
+    "problemId": 2394,
+    "title": "Employees With Deductions",
+    "problemUrl": "https://leetcode.com/problems/employees-with-deductions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2394.Employees With Deductions/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2394.Employees With Deductions/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

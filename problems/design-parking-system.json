@@ -1,0 +1,53 @@
+{
+    "problemName": "design-parking-system",
+    "language": "python3",
+    "code": "class ParkingSystem:\r\n    def __init__(self, big: int, medium: int, small: int):\r\n        self.cnt = [0, big, medium, small]\r\n\r\n    def addCar(self, carType: int) -> bool:\r\n        if self.cnt[carType] == 0:\r\n            return False\r\n        self.cnt[carType] -= 1\r\n        return True\r\n\r\n\r\n# Your ParkingSystem object will be instantiated and called as such:\r\n# obj = ParkingSystem(big, medium, small)\r\n# param_1 = obj.addCar(carType)",
+    "problemId": 1603,
+    "title": "Design Parking System",
+    "problemUrl": "https://leetcode.com/problems/design-parking-system/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1603.Design Parking System/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1603.Design Parking System/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1603.Design Parking System/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1603.Design Parking System/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1603.Design Parking System/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1603.Design Parking System/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1603.Design Parking System/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1603.Design Parking System/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1603.Design Parking System/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

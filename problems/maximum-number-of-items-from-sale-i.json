@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-number-of-items-from-sale-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumSaleItems(self, items: List[List[int]], budget: int) -> int:\r\n        f = [0] * (budget + 1)\r\n        mn = inf\r\n        for factor, price in items:\r\n            mn = min(mn, price)\r\n            cnt = sum(factor_j % factor == 0 for factor_j, _ in items)\r\n            for j in range(budget, price - 1, -1):\r\n                f[j] = max(f[j], f[j - price] + cnt)\r\n        return max(x + (budget - i) // mn for i, x in enumerate(f))",
+    "problemId": 3946,
+    "title": "Maximum Number of Items From Sale I",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-items-from-sale-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3946.Maximum Number of Items From Sale I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3946.Maximum Number of Items From Sale I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3946.Maximum Number of Items From Sale I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3946.Maximum Number of Items From Sale I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3946.Maximum Number of Items From Sale I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3946.Maximum Number of Items From Sale I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

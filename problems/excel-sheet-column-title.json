@@ -1,0 +1,43 @@
+{
+    "problemName": "excel-sheet-column-title",
+    "language": "python3",
+    "code": "class Solution:\r\n    def convertToTitle(self, columnNumber: int) -> str:\r\n        res = []\r\n        while columnNumber:\r\n            columnNumber -= 1\r\n            res.append(chr(ord('A') + columnNumber % 26))\r\n            columnNumber //= 26\r\n        return ''.join(res[::-1])",
+    "problemId": 168,
+    "title": "Excel Sheet Column Title",
+    "problemUrl": "https://leetcode.com/problems/excel-sheet-column-title/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0168.Excel Sheet Column Title/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0168.Excel Sheet Column Title/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0168.Excel Sheet Column Title/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0168.Excel Sheet Column Title/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0168.Excel Sheet Column Title/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0168.Excel Sheet Column Title/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0168.Excel Sheet Column Title/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

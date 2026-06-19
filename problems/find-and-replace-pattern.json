@@ -1,0 +1,43 @@
+{
+    "problemName": "find-and-replace-pattern",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findAndReplacePattern(self, words: List[str], pattern: str) -> List[str]:\r\n        def match(s, t):\r\n            m1, m2 = [0] * 128, [0] * 128\r\n            for i, (a, b) in enumerate(zip(s, t), 1):\r\n                if m1[ord(a)] != m2[ord(b)]:\r\n                    return False\r\n                m1[ord(a)] = m2[ord(b)] = i\r\n            return True\r\n\r\n        return [word for word in words if match(word, pattern)]",
+    "problemId": 890,
+    "title": "Find and Replace Pattern",
+    "problemUrl": "https://leetcode.com/problems/find-and-replace-pattern/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0890.Find and Replace Pattern/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0890.Find and Replace Pattern/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0890.Find and Replace Pattern/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0890.Find and Replace Pattern/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0890.Find and Replace Pattern/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0890.Find and Replace Pattern/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0890.Find and Replace Pattern/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

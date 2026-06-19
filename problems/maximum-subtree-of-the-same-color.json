@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-subtree-of-the-same-color",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumSubtreeSize(self, edges: List[List[int]], colors: List[int]) -> int:\r\n        def dfs(a: int, fa: int) -> bool:\r\n            ok = True\r\n            for b in g[a]:\r\n                if b != fa:\r\n                    t = dfs(b, a)\r\n                    ok = ok and colors[a] == colors[b] and t\r\n                    size[a] += size[b]\r\n            if ok:\r\n                nonlocal ans\r\n                ans = max(ans, size[a])\r\n            return ok\r\n\r\n        n = len(edges) + 1\r\n        g = [[] for _ in range(n)]\r\n        size = [1] * n\r\n        for a, b in edges:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n        ans = 0\r\n        dfs(0, -1)\r\n        return ans",
+    "problemId": 3004,
+    "title": "Maximum Subtree of the Same Color",
+    "problemUrl": "https://leetcode.com/problems/maximum-subtree-of-the-same-color/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3004.Maximum Subtree of the Same Color/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3004.Maximum Subtree of the Same Color/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3004.Maximum Subtree of the Same Color/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3004.Maximum Subtree of the Same Color/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3004.Maximum Subtree of the Same Color/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3004.Maximum Subtree of the Same Color/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

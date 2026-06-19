@@ -1,0 +1,18 @@
+{
+    "problemName": "the-number-of-rich-customers",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    COUNT(DISTINCT customer_id) AS rich_count\r\nFROM Store\r\nWHERE amount > 500;",
+    "problemId": 2082,
+    "title": "The Number of Rich Customers",
+    "problemUrl": "https://leetcode.com/problems/the-number-of-rich-customers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2082.The Number of Rich Customers/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2082.The Number of Rich Customers/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

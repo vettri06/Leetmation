@@ -1,0 +1,63 @@
+{
+    "problemName": "remove-nth-node-from-end-of-list",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:\r\n        dummy = ListNode(next=head)\r\n        fast = slow = dummy\r\n        for _ in range(n):\r\n            fast = fast.next\r\n        while fast.next:\r\n            slow, fast = slow.next, fast.next\r\n        slow.next = slow.next.next\r\n        return dummy.next",
+    "problemId": 19,
+    "title": "Remove Nth Node From End of List",
+    "problemUrl": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0019.Remove Nth Node From End of List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0019.Remove Nth Node From End of List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0019.Remove Nth Node From End of List/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0019.Remove Nth Node From End of List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0019.Remove Nth Node From End of List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0019.Remove Nth Node From End of List/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0019.Remove Nth Node From End of List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0019.Remove Nth Node From End of List/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0019.Remove Nth Node From End of List/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "swift",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0019.Remove Nth Node From End of List/Solution.swift",
+            "sourceFile": "Solution.swift"
+        },
+        {
+            "language": "ruby",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0019.Remove Nth Node From End of List/Solution.rb",
+            "sourceFile": "Solution.rb"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "binary-searchable-numbers-in-an-unsorted-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def binarySearchableNumbers(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        ok = [1] * n\r\n        mx, mi = -1000000, 1000000\r\n        for i, x in enumerate(nums):\r\n            if x < mx:\r\n                ok[i] = 0\r\n            else:\r\n                mx = x\r\n        for i in range(n - 1, -1, -1):\r\n            if nums[i] > mi:\r\n                ok[i] = 0\r\n            else:\r\n                mi = nums[i]\r\n        return sum(ok)",
+    "problemId": 1966,
+    "title": "Binary Searchable Numbers in an Unsorted Array",
+    "problemUrl": "https://leetcode.com/problems/binary-searchable-numbers-in-an-unsorted-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1966.Binary Searchable Numbers in an Unsorted Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1966.Binary Searchable Numbers in an Unsorted Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1966.Binary Searchable Numbers in an Unsorted Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1966.Binary Searchable Numbers in an Unsorted Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1966.Binary Searchable Numbers in an Unsorted Array/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

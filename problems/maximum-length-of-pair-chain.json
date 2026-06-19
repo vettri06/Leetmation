@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-length-of-pair-chain",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findLongestChain(self, pairs: List[List[int]]) -> int:\r\n        pairs.sort(key=lambda x: x[1])\r\n        ans, pre = 0, -inf\r\n        for a, b in pairs:\r\n            if pre < a:\r\n                ans += 1\r\n                pre = b\r\n        return ans",
+    "problemId": 646,
+    "title": "Maximum Length of Pair Chain",
+    "problemUrl": "https://leetcode.com/problems/maximum-length-of-pair-chain/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0646.Maximum Length of Pair Chain/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0646.Maximum Length of Pair Chain/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0646.Maximum Length of Pair Chain/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0646.Maximum Length of Pair Chain/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0646.Maximum Length of Pair Chain/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0646.Maximum Length of Pair Chain/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

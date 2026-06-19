@@ -1,0 +1,103 @@
+{
+    "problemName": "longest-subarray-of-1s-after-deleting-one-element",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestSubarray(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        left = [0] * (n + 1)\r\n        right = [0] * (n + 1)\r\n        for i, x in enumerate(nums, 1):\r\n            if x:\r\n                left[i] = left[i - 1] + 1\r\n        for i in range(n - 1, -1, -1):\r\n            if nums[i]:\r\n                right[i] = right[i + 1] + 1\r\n        return max(left[i] + right[i + 1] for i in range(n))",
+    "problemId": 1493,
+    "title": "Longest Subarray of 1's After Deleting One Element",
+    "problemUrl": "https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution3.py",
+            "sourceFile": "Solution3.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution3.cpp",
+            "sourceFile": "Solution3.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution3.java",
+            "sourceFile": "Solution3.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution3.go",
+            "sourceFile": "Solution3.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution3.ts",
+            "sourceFile": "Solution3.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1493.Longest Subarray of 1's After Deleting One Element/Solution3.rs",
+            "sourceFile": "Solution3.rs"
+        }
+    ]
+}

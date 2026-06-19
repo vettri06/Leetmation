@@ -1,0 +1,38 @@
+{
+    "problemName": "campus-bikes-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def assignBikes(self, workers: List[List[int]], bikes: List[List[int]]) -> int:\r\n        n, m = len(workers), len(bikes)\r\n        f = [[inf] * (1 << m) for _ in range(n + 1)]\r\n        f[0][0] = 0\r\n        for i, (x1, y1) in enumerate(workers, 1):\r\n            for j in range(1 << m):\r\n                for k, (x2, y2) in enumerate(bikes):\r\n                    if j >> k & 1:\r\n                        f[i][j] = min(\r\n                            f[i][j],\r\n                            f[i - 1][j ^ (1 << k)] + abs(x1 - x2) + abs(y1 - y2),\r\n                        )\r\n        return min(f[n])",
+    "problemId": 1066,
+    "title": "Campus Bikes II",
+    "problemUrl": "https://leetcode.com/problems/campus-bikes-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1066.Campus Bikes II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1066.Campus Bikes II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1066.Campus Bikes II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1066.Campus Bikes II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1066.Campus Bikes II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1066.Campus Bikes II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

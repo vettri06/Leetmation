@@ -1,0 +1,23 @@
+{
+    "problemName": "design-twitter",
+    "language": "python3",
+    "code": "class Twitter:\r\n    def __init__(self):\r\n        \"\"\"\r\n        Initialize your data structure here.\r\n        \"\"\"\r\n        self.user_tweets = defaultdict(list)\r\n        self.user_following = defaultdict(set)\r\n        self.tweets = defaultdict()\r\n        self.time = 0\r\n\r\n    def postTweet(self, userId: int, tweetId: int) -> None:\r\n        \"\"\"\r\n        Compose a new tweet.\r\n        \"\"\"\r\n        self.time += 1\r\n        self.user_tweets[userId].append(tweetId)\r\n        self.tweets[tweetId] = self.time\r\n\r\n    def getNewsFeed(self, userId: int) -> List[int]:\r\n        \"\"\"\r\n        Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent.\r\n        \"\"\"\r\n        following = self.user_following[userId]\r\n        users = set(following)\r\n        users.add(userId)\r\n        tweets = [self.user_tweets[u][::-1][:10] for u in users]\r\n        tweets = sum(tweets, [])\r\n        return nlargest(10, tweets, key=lambda tweet: self.tweets[tweet])\r\n\r\n    def follow(self, followerId: int, followeeId: int) -> None:\r\n        \"\"\"\r\n        Follower follows a followee. If the operation is invalid, it should be a no-op.\r\n        \"\"\"\r\n        self.user_following[followerId].add(followeeId)\r\n\r\n    def unfollow(self, followerId: int, followeeId: int) -> None:\r\n        \"\"\"\r\n        Follower unfollows a followee. If the operation is invalid, it should be a no-op.\r\n        \"\"\"\r\n        following = self.user_following[followerId]\r\n        if followeeId in following:\r\n            following.remove(followeeId)\r\n\r\n\r\n# Your Twitter object will be instantiated and called as such:\r\n# obj = Twitter()\r\n# obj.postTweet(userId,tweetId)\r\n# param_2 = obj.getNewsFeed(userId)\r\n# obj.follow(followerId,followeeId)\r\n# obj.unfollow(followerId,followeeId)",
+    "problemId": 355,
+    "title": "Design Twitter",
+    "problemUrl": "https://leetcode.com/problems/design-twitter/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0355.Design Twitter/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0355.Design Twitter/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0355.Design Twitter/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-to-acquire-required-items",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumCost(\r\n        self, cost1: int, cost2: int, costBoth: int, need1: int, need2: int\r\n    ) -> int:\r\n        a = need1 * cost1 + need2 * cost2\r\n        b = costBoth * max(need1, need2)\r\n        mn = min(need1, need2)\r\n        c = costBoth * mn + (need1 - mn) * cost1 + (need2 - mn) * cost2\r\n        return min(a, b, c)",
+    "problemId": 3789,
+    "title": "Minimum Cost to Acquire Required Items",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-acquire-required-items/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3789.Minimum Cost to Acquire Required Items/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3789.Minimum Cost to Acquire Required Items/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3789.Minimum Cost to Acquire Required Items/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3789.Minimum Cost to Acquire Required Items/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3789.Minimum Cost to Acquire Required Items/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3789.Minimum Cost to Acquire Required Items/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

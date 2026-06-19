@@ -1,0 +1,48 @@
+{
+    "problemName": "simplify-path",
+    "language": "python3",
+    "code": "class Solution:\r\n    def simplifyPath(self, path: str) -> str:\r\n        stk = []\r\n        for s in path.split('/'):\r\n            if not s or s == '.':\r\n                continue\r\n            if s == '..':\r\n                if stk:\r\n                    stk.pop()\r\n            else:\r\n                stk.append(s)\r\n        return '/' + '/'.join(stk)",
+    "problemId": 71,
+    "title": "Simplify Path",
+    "problemUrl": "https://leetcode.com/problems/simplify-path/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0071.Simplify Path/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0071.Simplify Path/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0071.Simplify Path/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0071.Simplify Path/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0071.Simplify Path/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0071.Simplify Path/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0071.Simplify Path/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0071.Simplify Path/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

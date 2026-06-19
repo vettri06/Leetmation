@@ -1,0 +1,23 @@
+{
+    "problemName": "combine-two-tables",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef combine_two_tables(person: pd.DataFrame, address: pd.DataFrame) -> pd.DataFrame:\r\n    return pd.merge(left=person, right=address, how=\"left\", on=\"personId\")[\r\n        [\"firstName\", \"lastName\", \"city\", \"state\"]\r\n    ]",
+    "problemId": 175,
+    "title": "Combine Two Tables",
+    "problemUrl": "https://leetcode.com/problems/combine-two-tables/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0175.Combine Two Tables/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0175.Combine Two Tables/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0175.Combine Two Tables/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

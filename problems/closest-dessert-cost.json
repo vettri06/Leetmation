@@ -1,0 +1,38 @@
+{
+    "problemName": "closest-dessert-cost",
+    "language": "python3",
+    "code": "class Solution:\r\n    def closestCost(\r\n        self, baseCosts: List[int], toppingCosts: List[int], target: int\r\n    ) -> int:\r\n        def dfs(i, t):\r\n            if i >= len(toppingCosts):\r\n                arr.append(t)\r\n                return\r\n            dfs(i + 1, t)\r\n            dfs(i + 1, t + toppingCosts[i])\r\n\r\n        arr = []\r\n        dfs(0, 0)\r\n        arr.sort()\r\n        d = ans = inf\r\n\r\n        # 选择一种冰激淋基料\r\n        for x in baseCosts:\r\n            # 枚举子集和\r\n            for y in arr:\r\n                # 二分查找\r\n                i = bisect_left(arr, target - x - y)\r\n                for j in (i, i - 1):\r\n                    if 0 <= j < len(arr):\r\n                        t = abs(x + y + arr[j] - target)\r\n                        if d > t or (d == t and ans > x + y + arr[j]):\r\n                            d = t\r\n                            ans = x + y + arr[j]\r\n        return ans",
+    "problemId": 1774,
+    "title": "Closest Dessert Cost",
+    "problemUrl": "https://leetcode.com/problems/closest-dessert-cost/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1774.Closest Dessert Cost/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1774.Closest Dessert Cost/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1774.Closest Dessert Cost/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1774.Closest Dessert Cost/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1774.Closest Dessert Cost/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1774.Closest Dessert Cost/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

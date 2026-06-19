@@ -1,0 +1,48 @@
+{
+    "problemName": "distance-between-bus-stops",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distanceBetweenBusStops(\r\n        self, distance: List[int], start: int, destination: int\r\n    ) -> int:\r\n        s = sum(distance)\r\n        t, n = 0, len(distance)\r\n        while start != destination:\r\n            t += distance[start]\r\n            start = (start + 1) % n\r\n        return min(t, s - t)",
+    "problemId": 1184,
+    "title": "Distance Between Bus Stops",
+    "problemUrl": "https://leetcode.com/problems/distance-between-bus-stops/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1184.Distance Between Bus Stops/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1184.Distance Between Bus Stops/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1184.Distance Between Bus Stops/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1184.Distance Between Bus Stops/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1184.Distance Between Bus Stops/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1184.Distance Between Bus Stops/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1184.Distance Between Bus Stops/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1184.Distance Between Bus Stops/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

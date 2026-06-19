@@ -1,0 +1,33 @@
+{
+    "problemName": "minimize-deviation-in-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumDeviation(self, nums: List[int]) -> int:\r\n        h = []\r\n        mi = inf\r\n        for v in nums:\r\n            if v & 1:\r\n                v <<= 1\r\n            h.append(-v)\r\n            mi = min(mi, v)\r\n        heapify(h)\r\n        ans = -h[0] - mi\r\n        while h[0] % 2 == 0:\r\n            x = heappop(h) // 2\r\n            heappush(h, x)\r\n            mi = min(mi, -x)\r\n            ans = min(ans, -h[0] - mi)\r\n        return ans",
+    "problemId": 1675,
+    "title": "Minimize Deviation in Array",
+    "problemUrl": "https://leetcode.com/problems/minimize-deviation-in-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1675.Minimize Deviation in Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1675.Minimize Deviation in Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1675.Minimize Deviation in Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1675.Minimize Deviation in Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1675.Minimize Deviation in Array/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

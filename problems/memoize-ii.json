@@ -1,0 +1,18 @@
+{
+    "problemName": "memoize-ii",
+    "language": "typescript",
+    "code": "type Fn = (...params: any) => any;\r\n\r\nfunction memoize(fn: Fn): Fn {\r\n    const idxMap: Map<string, number> = new Map();\r\n    const cache: Map<string, any> = new Map();\r\n\r\n    const getIdx = (obj: any): number => {\r\n        if (!idxMap.has(obj)) {\r\n            idxMap.set(obj, idxMap.size);\r\n        }\r\n        return idxMap.get(obj)!;\r\n    };\r\n\r\n    return function (...params: any) {\r\n        const key = params.map(getIdx).join(',');\r\n        if (!cache.has(key)) {\r\n            cache.set(key, fn(...params));\r\n        }\r\n        return cache.get(key)!;\r\n    };\r\n}\r\n\r\n/**\r\n * let callCount = 0;\r\n * const memoizedFn = memoize(function (a, b) {\r\n *\t callCount += 1;\r\n *   return a + b;\r\n * })\r\n * memoizedFn(2, 3) // 5\r\n * memoizedFn(2, 3) // 5\r\n * console.log(callCount) // 1\r\n */",
+    "problemId": 2630,
+    "title": "Memoize II",
+    "problemUrl": "https://leetcode.com/problems/memoize-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2630.Memoize II/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2630.Memoize II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

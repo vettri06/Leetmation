@@ -1,0 +1,48 @@
+{
+    "problemName": "apply-bitwise-operations-to-make-strings-equal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def makeStringsEqual(self, s: str, target: str) -> bool:\r\n        return (\"1\" in s) == (\"1\" in target)",
+    "problemId": 2546,
+    "title": "Apply Bitwise Operations to Make Strings Equal",
+    "problemUrl": "https://leetcode.com/problems/apply-bitwise-operations-to-make-strings-equal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2546.Apply Bitwise Operations to Make Strings Equal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2546.Apply Bitwise Operations to Make Strings Equal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2546.Apply Bitwise Operations to Make Strings Equal/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2546.Apply Bitwise Operations to Make Strings Equal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2546.Apply Bitwise Operations to Make Strings Equal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2546.Apply Bitwise Operations to Make Strings Equal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2546.Apply Bitwise Operations to Make Strings Equal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2546.Apply Bitwise Operations to Make Strings Equal/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

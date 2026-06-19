@@ -1,0 +1,33 @@
+{
+    "problemName": "perfect-rectangle",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isRectangleCover(self, rectangles: List[List[int]]) -> bool:\r\n        area = 0\r\n        minX, minY = rectangles[0][0], rectangles[0][1]\r\n        maxX, maxY = rectangles[0][2], rectangles[0][3]\r\n        cnt = defaultdict(int)\r\n\r\n        for r in rectangles:\r\n            area += (r[2] - r[0]) * (r[3] - r[1])\r\n\r\n            minX = min(minX, r[0])\r\n            minY = min(minY, r[1])\r\n            maxX = max(maxX, r[2])\r\n            maxY = max(maxY, r[3])\r\n\r\n            cnt[(r[0], r[1])] += 1\r\n            cnt[(r[0], r[3])] += 1\r\n            cnt[(r[2], r[3])] += 1\r\n            cnt[(r[2], r[1])] += 1\r\n\r\n        if (\r\n            area != (maxX - minX) * (maxY - minY)\r\n            or cnt[(minX, minY)] != 1\r\n            or cnt[(minX, maxY)] != 1\r\n            or cnt[(maxX, maxY)] != 1\r\n            or cnt[(maxX, minY)] != 1\r\n        ):\r\n            return False\r\n\r\n        del cnt[(minX, minY)], cnt[(minX, maxY)], cnt[(maxX, maxY)], cnt[(maxX, minY)]\r\n\r\n        return all(c == 2 or c == 4 for c in cnt.values())",
+    "problemId": 391,
+    "title": "Perfect Rectangle",
+    "problemUrl": "https://leetcode.com/problems/perfect-rectangle/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0391.Perfect Rectangle/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0391.Perfect Rectangle/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0391.Perfect Rectangle/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0391.Perfect Rectangle/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0391.Perfect Rectangle/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

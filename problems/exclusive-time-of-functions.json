@@ -1,0 +1,38 @@
+{
+    "problemName": "exclusive-time-of-functions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def exclusiveTime(self, n: int, logs: List[str]) -> List[int]:\r\n        stk = []\r\n        ans = [0] * n\r\n        pre = 0\r\n        for log in logs:\r\n            i, op, t = log.split(\":\")\r\n            i, cur = int(i), int(t)\r\n            if op[0] == \"s\":\r\n                if stk:\r\n                    ans[stk[-1]] += cur - pre\r\n                stk.append(i)\r\n                pre = cur\r\n            else:\r\n                ans[stk.pop()] += cur - pre + 1\r\n                pre = cur + 1\r\n        return ans",
+    "problemId": 636,
+    "title": "Exclusive Time of Functions",
+    "problemUrl": "https://leetcode.com/problems/exclusive-time-of-functions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0636.Exclusive Time of Functions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0636.Exclusive Time of Functions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0636.Exclusive Time of Functions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0636.Exclusive Time of Functions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0636.Exclusive Time of Functions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0636.Exclusive Time of Functions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

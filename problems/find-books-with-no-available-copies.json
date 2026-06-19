@@ -1,0 +1,23 @@
+{
+    "problemName": "find-books-with-no-available-copies",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_books_with_no_available_copies(\r\n    library_books: pd.DataFrame, borrowing_records: pd.DataFrame\r\n) -> pd.DataFrame:\r\n    current_borrowers = (\r\n        borrowing_records[borrowing_records[\"return_date\"].isna()]\r\n        .groupby(\"book_id\")\r\n        .size()\r\n        .rename(\"current_borrowers\")\r\n        .reset_index()\r\n    )\r\n\r\n    merged = library_books.merge(current_borrowers, on=\"book_id\", how=\"inner\")\r\n    fully_borrowed = merged[merged[\"current_borrowers\"] == merged[\"total_copies\"]]\r\n    fully_borrowed = fully_borrowed.sort_values(\r\n        by=[\"current_borrowers\", \"title\"], ascending=[False, True]\r\n    )\r\n\r\n    cols = [\r\n        \"book_id\",\r\n        \"title\",\r\n        \"author\",\r\n        \"genre\",\r\n        \"publication_year\",\r\n        \"current_borrowers\",\r\n    ]\r\n    return fully_borrowed[cols].reset_index(drop=True)",
+    "problemId": 3570,
+    "title": "Find Books with No Available Copies",
+    "problemUrl": "https://leetcode.com/problems/find-books-with-no-available-copies/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3570.Find Books with No Available Copies/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3570.Find Books with No Available Copies/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3570.Find Books with No Available Copies/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

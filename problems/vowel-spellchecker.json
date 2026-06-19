@@ -1,0 +1,38 @@
+{
+    "problemName": "vowel-spellchecker",
+    "language": "python3",
+    "code": "class Solution:\r\n    def spellchecker(self, wordlist: List[str], queries: List[str]) -> List[str]:\r\n        def f(w):\r\n            t = []\r\n            for c in w:\r\n                t.append(\"*\" if c in \"aeiou\" else c)\r\n            return \"\".join(t)\r\n\r\n        s = set(wordlist)\r\n        low, pat = {}, {}\r\n        for w in wordlist:\r\n            t = w.lower()\r\n            low.setdefault(t, w)\r\n            pat.setdefault(f(t), w)\r\n\r\n        ans = []\r\n        for q in queries:\r\n            if q in s:\r\n                ans.append(q)\r\n                continue\r\n            q = q.lower()\r\n            if q in low:\r\n                ans.append(low[q])\r\n                continue\r\n            q = f(q)\r\n            if q in pat:\r\n                ans.append(pat[q])\r\n                continue\r\n            ans.append(\"\")\r\n        return ans",
+    "problemId": 966,
+    "title": "Vowel Spellchecker",
+    "problemUrl": "https://leetcode.com/problems/vowel-spellchecker/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0966.Vowel Spellchecker/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0966.Vowel Spellchecker/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0966.Vowel Spellchecker/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0966.Vowel Spellchecker/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0966.Vowel Spellchecker/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0966.Vowel Spellchecker/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

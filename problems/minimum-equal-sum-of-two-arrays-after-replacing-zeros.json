@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-equal-sum-of-two-arrays-after-replacing-zeros",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSum(self, nums1: List[int], nums2: List[int]) -> int:\r\n        s1 = sum(nums1) + nums1.count(0)\r\n        s2 = sum(nums2) + nums2.count(0)\r\n        if s1 > s2:\r\n            return self.minSum(nums2, nums1)\r\n        if s1 == s2:\r\n            return s1\r\n        return -1 if nums1.count(0) == 0 else s2",
+    "problemId": 2918,
+    "title": "Minimum Equal Sum of Two Arrays After Replacing Zeros",
+    "problemUrl": "https://leetcode.com/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2918.Minimum Equal Sum of Two Arrays After Replacing Zeros/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2918.Minimum Equal Sum of Two Arrays After Replacing Zeros/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2918.Minimum Equal Sum of Two Arrays After Replacing Zeros/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2918.Minimum Equal Sum of Two Arrays After Replacing Zeros/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2918.Minimum Equal Sum of Two Arrays After Replacing Zeros/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2918.Minimum Equal Sum of Two Arrays After Replacing Zeros/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2918.Minimum Equal Sum of Two Arrays After Replacing Zeros/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

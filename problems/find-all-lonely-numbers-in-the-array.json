@@ -1,0 +1,33 @@
+{
+    "problemName": "find-all-lonely-numbers-in-the-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findLonely(self, nums: List[int]) -> List[int]:\r\n        cnt = Counter(nums)\r\n        return [\r\n            x for x, v in cnt.items() if v == 1 and cnt[x - 1] == 0 and cnt[x + 1] == 0\r\n        ]",
+    "problemId": 2150,
+    "title": "Find All Lonely Numbers in the Array",
+    "problemUrl": "https://leetcode.com/problems/find-all-lonely-numbers-in-the-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2150.Find All Lonely Numbers in the Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2150.Find All Lonely Numbers in the Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2150.Find All Lonely Numbers in the Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2150.Find All Lonely Numbers in the Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2150.Find All Lonely Numbers in the Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

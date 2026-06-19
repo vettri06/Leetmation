@@ -1,0 +1,33 @@
+{
+    "problemName": "count-days-spent-together",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countDaysTogether(\r\n        self, arriveAlice: str, leaveAlice: str, arriveBob: str, leaveBob: str\r\n    ) -> int:\r\n        a = max(arriveAlice, arriveBob)\r\n        b = min(leaveAlice, leaveBob)\r\n        days = (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)\r\n        x = sum(days[: int(a[:2]) - 1]) + int(a[3:])\r\n        y = sum(days[: int(b[:2]) - 1]) + int(b[3:])\r\n        return max(y - x + 1, 0)",
+    "problemId": 2409,
+    "title": "Count Days Spent Together",
+    "problemUrl": "https://leetcode.com/problems/count-days-spent-together/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2409.Count Days Spent Together/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2409.Count Days Spent Together/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2409.Count Days Spent Together/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2409.Count Days Spent Together/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2409.Count Days Spent Together/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "problemName": "customer-who-visited-but-did-not-make-any-transactions",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT customer_id, COUNT(1) AS count_no_trans\r\nFROM Visits\r\nWHERE visit_id NOT IN (SELECT visit_id FROM Transactions)\r\nGROUP BY 1;",
+    "problemId": 1581,
+    "title": "Customer Who Visited but Did Not Make Any Transactions",
+    "problemUrl": "https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1581.Customer Who Visited but Did Not Make Any Transactions/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1581.Customer Who Visited but Did Not Make Any Transactions/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1581.Customer Who Visited but Did Not Make Any Transactions/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

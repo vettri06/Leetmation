@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-count-of-monotonic-pairs-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countOfPairs(self, nums: List[int]) -> int:\r\n        mod = 10**9 + 7\r\n        n, m = len(nums), max(nums)\r\n        f = [[0] * (m + 1) for _ in range(n)]\r\n        for j in range(nums[0] + 1):\r\n            f[0][j] = 1\r\n        for i in range(1, n):\r\n            s = list(accumulate(f[i - 1]))\r\n            for j in range(nums[i] + 1):\r\n                k = min(j, j + nums[i - 1] - nums[i])\r\n                if k >= 0:\r\n                    f[i][j] = s[k] % mod\r\n        return sum(f[-1][: nums[-1] + 1]) % mod",
+    "problemId": 3251,
+    "title": "Find the Count of Monotonic Pairs II",
+    "problemUrl": "https://leetcode.com/problems/find-the-count-of-monotonic-pairs-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3251.Find the Count of Monotonic Pairs II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3251.Find the Count of Monotonic Pairs II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3251.Find the Count of Monotonic Pairs II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3251.Find the Count of Monotonic Pairs II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3251.Find the Count of Monotonic Pairs II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3251.Find the Count of Monotonic Pairs II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

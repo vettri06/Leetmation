@@ -1,0 +1,48 @@
+{
+    "problemName": "magic-squares-in-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numMagicSquaresInside(self, grid: List[List[int]]) -> int:\r\n        def check(i: int, j: int) -> int:\r\n            if i + 3 > m or j + 3 > n:\r\n                return 0\r\n            s = set()\r\n            row = [0] * 3\r\n            col = [0] * 3\r\n            a = b = 0\r\n            for x in range(i, i + 3):\r\n                for y in range(j, j + 3):\r\n                    v = grid[x][y]\r\n                    if v < 1 or v > 9:\r\n                        return 0\r\n                    s.add(v)\r\n                    row[x - i] += v\r\n                    col[y - j] += v\r\n                    if x - i == y - j:\r\n                        a += v\r\n                    if x - i == 2 - (y - j):\r\n                        b += v\r\n            if len(s) != 9 or a != b:\r\n                return 0\r\n            if any(x != a for x in row) or any(x != a for x in col):\r\n                return 0\r\n            return 1\r\n\r\n        m, n = len(grid), len(grid[0])\r\n        return sum(check(i, j) for i in range(m) for j in range(n))",
+    "problemId": 840,
+    "title": "Magic Squares In Grid",
+    "problemUrl": "https://leetcode.com/problems/magic-squares-in-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0840.Magic Squares In Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0840.Magic Squares In Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0840.Magic Squares In Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0840.Magic Squares In Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0840.Magic Squares In Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0840.Magic Squares In Grid/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0840.Magic Squares In Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0840.Magic Squares In Grid/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

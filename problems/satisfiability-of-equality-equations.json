@@ -1,0 +1,38 @@
+{
+    "problemName": "satisfiability-of-equality-equations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def equationsPossible(self, equations: List[str]) -> bool:\r\n        def find(x):\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        p = list(range(26))\r\n        for e in equations:\r\n            a, b = ord(e[0]) - ord('a'), ord(e[-1]) - ord('a')\r\n            if e[1] == '=':\r\n                p[find(a)] = find(b)\r\n        for e in equations:\r\n            a, b = ord(e[0]) - ord('a'), ord(e[-1]) - ord('a')\r\n            if e[1] == '!' and find(a) == find(b):\r\n                return False\r\n        return True",
+    "problemId": 990,
+    "title": "Satisfiability of Equality Equations",
+    "problemUrl": "https://leetcode.com/problems/satisfiability-of-equality-equations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0990.Satisfiability of Equality Equations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0990.Satisfiability of Equality Equations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0990.Satisfiability of Equality Equations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0990.Satisfiability of Equality Equations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0990.Satisfiability of Equality Equations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0990.Satisfiability of Equality Equations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

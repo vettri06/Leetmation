@@ -1,0 +1,23 @@
+{
+    "problemName": "find-consistently-improving-employees",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_consistently_improving_employees(\r\n    employees: pd.DataFrame, performance_reviews: pd.DataFrame\r\n) -> pd.DataFrame:\r\n    performance_reviews = performance_reviews.sort_values(\r\n        [\"employee_id\", \"review_date\"], ascending=[True, False]\r\n    )\r\n    performance_reviews[\"rn\"] = (\r\n        performance_reviews.groupby(\"employee_id\").cumcount() + 1\r\n    )\r\n    performance_reviews[\"lag_rating\"] = performance_reviews.groupby(\"employee_id\")[\r\n        \"rating\"\r\n    ].shift(1)\r\n    performance_reviews[\"delta\"] = (\r\n        performance_reviews[\"lag_rating\"] - performance_reviews[\"rating\"]\r\n    )\r\n    recent = performance_reviews[\r\n        (performance_reviews[\"rn\"] > 1) & (performance_reviews[\"rn\"] <= 3)\r\n    ]\r\n    improvement = (\r\n        recent.groupby(\"employee_id\")\r\n        .agg(\r\n            improvement_score=(\"delta\", \"sum\"),\r\n            count=(\"delta\", \"count\"),\r\n            min_delta=(\"delta\", \"min\"),\r\n        )\r\n        .reset_index()\r\n    )\r\n    improvement = improvement[\r\n        (improvement[\"count\"] == 2) & (improvement[\"min_delta\"] > 0)\r\n    ]\r\n    result = improvement.merge(employees[[\"employee_id\", \"name\"]], on=\"employee_id\")\r\n    result = result.sort_values(\r\n        by=[\"improvement_score\", \"name\"], ascending=[False, True]\r\n    )\r\n    return result[[\"employee_id\", \"name\", \"improvement_score\"]]",
+    "problemId": 3580,
+    "title": "Find Consistently Improving Employees",
+    "problemUrl": "https://leetcode.com/problems/find-consistently-improving-employees/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3580.Find Consistently Improving Employees/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3580.Find Consistently Improving Employees/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3580.Find Consistently Improving Employees/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

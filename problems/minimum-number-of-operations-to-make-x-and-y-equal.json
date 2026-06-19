@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-number-of-operations-to-make-x-and-y-equal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumOperationsToMakeEqual(self, x: int, y: int) -> int:\r\n        @cache\r\n        def dfs(x: int) -> int:\r\n            if y >= x:\r\n                return y - x\r\n            ans = x - y\r\n            ans = min(ans, x % 5 + 1 + dfs(x // 5))\r\n            ans = min(ans, 5 - x % 5 + 1 + dfs(x // 5 + 1))\r\n            ans = min(ans, x % 11 + 1 + dfs(x // 11))\r\n            ans = min(ans, 11 - x % 11 + 1 + dfs(x // 11 + 1))\r\n            return ans\r\n\r\n        return dfs(x)",
+    "problemId": 2998,
+    "title": "Minimum Number of Operations to Make X and Y Equal",
+    "problemUrl": "https://leetcode.com/problems/minimum-number-of-operations-to-make-x-and-y-equal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2998.Minimum Number of Operations to Make X and Y Equal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2998.Minimum Number of Operations to Make X and Y Equal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2998.Minimum Number of Operations to Make X and Y Equal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2998.Minimum Number of Operations to Make X and Y Equal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2998.Minimum Number of Operations to Make X and Y Equal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2998.Minimum Number of Operations to Make X and Y Equal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

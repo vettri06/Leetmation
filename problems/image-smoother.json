@@ -1,0 +1,43 @@
+{
+    "problemName": "image-smoother",
+    "language": "python3",
+    "code": "class Solution:\r\n    def imageSmoother(self, img: List[List[int]]) -> List[List[int]]:\r\n        m, n = len(img), len(img[0])\r\n        ans = [[0] * n for _ in range(m)]\r\n        for i in range(m):\r\n            for j in range(n):\r\n                s = cnt = 0\r\n                for x in range(i - 1, i + 2):\r\n                    for y in range(j - 1, j + 2):\r\n                        if 0 <= x < m and 0 <= y < n:\r\n                            cnt += 1\r\n                            s += img[x][y]\r\n                ans[i][j] = s // cnt\r\n        return ans",
+    "problemId": 661,
+    "title": "Image Smoother",
+    "problemUrl": "https://leetcode.com/problems/image-smoother/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0661.Image Smoother/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0661.Image Smoother/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0661.Image Smoother/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0661.Image Smoother/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0661.Image Smoother/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0661.Image Smoother/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0661.Image Smoother/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

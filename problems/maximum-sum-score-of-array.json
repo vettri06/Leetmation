@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-sum-score-of-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumSumScore(self, nums: List[int]) -> int:\r\n        l, r = 0, sum(nums)\r\n        ans = -inf\r\n        for x in nums:\r\n            l += x\r\n            ans = max(ans, l, r)\r\n            r -= x\r\n        return ans",
+    "problemId": 2219,
+    "title": "Maximum Sum Score of Array",
+    "problemUrl": "https://leetcode.com/problems/maximum-sum-score-of-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2219.Maximum Sum Score of Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2219.Maximum Sum Score of Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2219.Maximum Sum Score of Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2219.Maximum Sum Score of Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2219.Maximum Sum Score of Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2219.Maximum Sum Score of Array/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2219.Maximum Sum Score of Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2219.Maximum Sum Score of Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

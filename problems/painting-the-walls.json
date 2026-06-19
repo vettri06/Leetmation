@@ -1,0 +1,38 @@
+{
+    "problemName": "painting-the-walls",
+    "language": "python3",
+    "code": "class Solution:\r\n    def paintWalls(self, cost: List[int], time: List[int]) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int) -> int:\r\n            if n - i <= j:\r\n                return 0\r\n            if i >= n:\r\n                return inf\r\n            return min(dfs(i + 1, j + time[i]) + cost[i], dfs(i + 1, j - 1))\r\n\r\n        n = len(cost)\r\n        return dfs(0, 0)",
+    "problemId": 2742,
+    "title": "Painting the Walls",
+    "problemUrl": "https://leetcode.com/problems/painting-the-walls/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2742.Painting the Walls/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2742.Painting the Walls/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2742.Painting the Walls/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2742.Painting the Walls/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2742.Painting the Walls/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2742.Painting the Walls/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

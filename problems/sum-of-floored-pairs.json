@@ -1,0 +1,43 @@
+{
+    "problemName": "sum-of-floored-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumOfFlooredPairs(self, nums: List[int]) -> int:\r\n        mod = 10**9 + 7\r\n        cnt = Counter(nums)\r\n        mx = max(nums)\r\n        s = [0] * (mx + 1)\r\n        for i in range(1, mx + 1):\r\n            s[i] = s[i - 1] + cnt[i]\r\n        ans = 0\r\n        for y in range(1, mx + 1):\r\n            if cnt[y]:\r\n                d = 1\r\n                while d * y <= mx:\r\n                    ans += cnt[y] * d * (s[min(mx, d * y + y - 1)] - s[d * y - 1])\r\n                    ans %= mod\r\n                    d += 1\r\n        return ans",
+    "problemId": 1862,
+    "title": "Sum of Floored Pairs",
+    "problemUrl": "https://leetcode.com/problems/sum-of-floored-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1862.Sum of Floored Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1862.Sum of Floored Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1862.Sum of Floored Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1862.Sum of Floored Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1862.Sum of Floored Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1862.Sum of Floored Pairs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1862.Sum of Floored Pairs/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

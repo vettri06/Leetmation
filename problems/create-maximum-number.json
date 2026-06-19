@@ -1,0 +1,38 @@
+{
+    "problemName": "create-maximum-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxNumber(self, nums1: List[int], nums2: List[int], k: int) -> List[int]:\r\n        def f(nums: List[int], k: int) -> List[int]:\r\n            n = len(nums)\r\n            stk = [0] * k\r\n            top = -1\r\n            remain = n - k\r\n            for x in nums:\r\n                while top >= 0 and stk[top] < x and remain > 0:\r\n                    top -= 1\r\n                    remain -= 1\r\n                if top + 1 < k:\r\n                    top += 1\r\n                    stk[top] = x\r\n                else:\r\n                    remain -= 1\r\n            return stk\r\n\r\n        def compare(nums1: List[int], nums2: List[int], i: int, j: int) -> bool:\r\n            if i >= len(nums1):\r\n                return False\r\n            if j >= len(nums2):\r\n                return True\r\n            if nums1[i] > nums2[j]:\r\n                return True\r\n            if nums1[i] < nums2[j]:\r\n                return False\r\n            return compare(nums1, nums2, i + 1, j + 1)\r\n\r\n        def merge(nums1: List[int], nums2: List[int]) -> List[int]:\r\n            m, n = len(nums1), len(nums2)\r\n            i = j = 0\r\n            ans = [0] * (m + n)\r\n            for k in range(m + n):\r\n                if compare(nums1, nums2, i, j):\r\n                    ans[k] = nums1[i]\r\n                    i += 1\r\n                else:\r\n                    ans[k] = nums2[j]\r\n                    j += 1\r\n            return ans\r\n\r\n        m, n = len(nums1), len(nums2)\r\n        l, r = max(0, k - n), min(k, m)\r\n        ans = [0] * k\r\n        for x in range(l, r + 1):\r\n            arr1 = f(nums1, x)\r\n            arr2 = f(nums2, k - x)\r\n            arr = merge(arr1, arr2)\r\n            if ans < arr:\r\n                ans = arr\r\n        return ans",
+    "problemId": 321,
+    "title": "Create Maximum Number",
+    "problemUrl": "https://leetcode.com/problems/create-maximum-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0321.Create Maximum Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0321.Create Maximum Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0321.Create Maximum Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0321.Create Maximum Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0321.Create Maximum Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0321.Create Maximum Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "problemName": "number-of-arithmetic-triplets",
+    "language": "python3",
+    "code": "class Solution:\r\n    def arithmeticTriplets(self, nums: List[int], diff: int) -> int:\r\n        return sum(b - a == diff and c - b == diff for a, b, c in combinations(nums, 3))",
+    "problemId": 2367,
+    "title": "Number of Arithmetic Triplets",
+    "problemUrl": "https://leetcode.com/problems/number-of-arithmetic-triplets/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2367.Number of Arithmetic Triplets/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2367.Number of Arithmetic Triplets/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2367.Number of Arithmetic Triplets/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2367.Number of Arithmetic Triplets/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2367.Number of Arithmetic Triplets/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2367.Number of Arithmetic Triplets/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2367.Number of Arithmetic Triplets/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2367.Number of Arithmetic Triplets/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2367.Number of Arithmetic Triplets/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2367.Number of Arithmetic Triplets/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2367.Number of Arithmetic Triplets/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

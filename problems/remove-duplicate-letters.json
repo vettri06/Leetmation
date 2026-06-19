@@ -1,0 +1,43 @@
+{
+    "problemName": "remove-duplicate-letters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def removeDuplicateLetters(self, s: str) -> str:\r\n        last = {c: i for i, c in enumerate(s)}\r\n        stk = []\r\n        vis = set()\r\n        for i, c in enumerate(s):\r\n            if c in vis:\r\n                continue\r\n            while stk and stk[-1] > c and last[stk[-1]] > i:\r\n                vis.remove(stk.pop())\r\n            stk.append(c)\r\n            vis.add(c)\r\n        return ''.join(stk)",
+    "problemId": 316,
+    "title": "Remove Duplicate Letters",
+    "problemUrl": "https://leetcode.com/problems/remove-duplicate-letters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0316.Remove Duplicate Letters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0316.Remove Duplicate Letters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0316.Remove Duplicate Letters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0316.Remove Duplicate Letters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0316.Remove Duplicate Letters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0316.Remove Duplicate Letters/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0316.Remove Duplicate Letters/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

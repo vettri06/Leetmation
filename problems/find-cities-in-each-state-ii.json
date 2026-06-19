@@ -1,0 +1,23 @@
+{
+    "problemName": "find-cities-in-each-state-ii",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef state_city_analysis(cities: pd.DataFrame) -> pd.DataFrame:\r\n    cities[\"matching_letter\"] = cities[\"city\"].str[0] == cities[\"state\"].str[0]\r\n\r\n    result = (\r\n        cities.groupby(\"state\")\r\n        .agg(\r\n            cities=(\"city\", lambda x: \", \".join(sorted(x))),\r\n            matching_letter_count=(\"matching_letter\", \"sum\"),\r\n            city_count=(\"city\", \"count\"),\r\n        )\r\n        .reset_index()\r\n    )\r\n\r\n    result = result[(result[\"city_count\"] >= 3) & (result[\"matching_letter_count\"] > 0)]\r\n\r\n    result = result.sort_values(\r\n        by=[\"matching_letter_count\", \"state\"], ascending=[False, True]\r\n    )\r\n\r\n    result = result.drop(columns=[\"city_count\"])\r\n\r\n    return result",
+    "problemId": 3328,
+    "title": "Find Cities in Each State II",
+    "problemUrl": "https://leetcode.com/problems/find-cities-in-each-state-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3328.Find Cities in Each State II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3328.Find Cities in Each State II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3328.Find Cities in Each State II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

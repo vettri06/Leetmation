@@ -1,0 +1,38 @@
+{
+    "problemName": "find-missing-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMissingElements(self, nums: List[int]) -> List[int]:\r\n        mn, mx = min(nums), max(nums)\r\n        s = set(nums)\r\n        return [x for x in range(mn + 1, mx) if x not in s]",
+    "problemId": 3731,
+    "title": "Find Missing Elements",
+    "problemUrl": "https://leetcode.com/problems/find-missing-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3731.Find Missing Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3731.Find Missing Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3731.Find Missing Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3731.Find Missing Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3731.Find Missing Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3731.Find Missing Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

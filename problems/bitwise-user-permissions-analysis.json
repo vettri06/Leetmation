@@ -1,0 +1,18 @@
+{
+    "problemName": "bitwise-user-permissions-analysis",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    BIT_AND(permissions) AS common_perms,\r\n    BIT_OR(permissions) AS any_perms\r\nFROM user_permissions;",
+    "problemId": 3204,
+    "title": "Bitwise User Permissions Analysis",
+    "problemUrl": "https://leetcode.com/problems/bitwise-user-permissions-analysis/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3204.Bitwise User Permissions Analysis/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3204.Bitwise User Permissions Analysis/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

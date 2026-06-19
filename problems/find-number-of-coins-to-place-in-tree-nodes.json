@@ -1,0 +1,38 @@
+{
+    "problemName": "find-number-of-coins-to-place-in-tree-nodes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def placedCoins(self, edges: List[List[int]], cost: List[int]) -> List[int]:\r\n        def dfs(a: int, fa: int) -> List[int]:\r\n            res = [cost[a]]\r\n            for b in g[a]:\r\n                if b != fa:\r\n                    res.extend(dfs(b, a))\r\n            res.sort()\r\n            if len(res) >= 3:\r\n                ans[a] = max(res[-3] * res[-2] * res[-1], res[0] * res[1] * res[-1], 0)\r\n            if len(res) > 5:\r\n                res = res[:2] + res[-3:]\r\n            return res\r\n\r\n        n = len(cost)\r\n        g = [[] for _ in range(n)]\r\n        for a, b in edges:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n        ans = [1] * n\r\n        dfs(0, -1)\r\n        return ans",
+    "problemId": 2973,
+    "title": "Find Number of Coins to Place in Tree Nodes",
+    "problemUrl": "https://leetcode.com/problems/find-number-of-coins-to-place-in-tree-nodes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2973.Find Number of Coins to Place in Tree Nodes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2973.Find Number of Coins to Place in Tree Nodes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2973.Find Number of Coins to Place in Tree Nodes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2973.Find Number of Coins to Place in Tree Nodes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2973.Find Number of Coins to Place in Tree Nodes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2973.Find Number of Coins to Place in Tree Nodes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

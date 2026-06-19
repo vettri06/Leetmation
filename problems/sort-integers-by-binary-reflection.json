@@ -1,0 +1,38 @@
+{
+    "problemName": "sort-integers-by-binary-reflection",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sortByReflection(self, nums: List[int]) -> List[int]:\r\n        def f(x: int) -> int:\r\n            y = 0\r\n            while x:\r\n                y = y << 1 | (x & 1)\r\n                x >>= 1\r\n            return y\r\n\r\n        nums.sort(key=lambda x: (f(x), x))\r\n        return nums",
+    "problemId": 3769,
+    "title": "Sort Integers by Binary Reflection",
+    "problemUrl": "https://leetcode.com/problems/sort-integers-by-binary-reflection/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3769.Sort Integers by Binary Reflection/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3769.Sort Integers by Binary Reflection/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3769.Sort Integers by Binary Reflection/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3769.Sort Integers by Binary Reflection/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3769.Sort Integers by Binary Reflection/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3769.Sort Integers by Binary Reflection/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

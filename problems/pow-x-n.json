@@ -1,0 +1,53 @@
+{
+    "problemName": "pow-x-n",
+    "language": "python3",
+    "code": "class Solution:\r\n    def myPow(self, x: float, n: int) -> float:\r\n        def qpow(a: float, n: int) -> float:\r\n            ans = 1\r\n            while n:\r\n                if n & 1:\r\n                    ans *= a\r\n                a *= a\r\n                n >>= 1\r\n            return ans\r\n\r\n        return qpow(x, n) if n >= 0 else 1 / qpow(x, -n)",
+    "problemId": 50,
+    "title": "Pow(x, n)",
+    "problemUrl": "https://leetcode.com/problems/pow-x-n/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0050.Pow(x, n)/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0050.Pow(x, n)/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0050.Pow(x, n)/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0050.Pow(x, n)/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0050.Pow(x, n)/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0050.Pow(x, n)/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0050.Pow(x, n)/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0050.Pow(x, n)/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0050.Pow(x, n)/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

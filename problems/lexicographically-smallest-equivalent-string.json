@@ -1,0 +1,48 @@
+{
+    "problemName": "lexicographically-smallest-equivalent-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestEquivalentString(self, s1: str, s2: str, baseStr: str) -> str:\r\n        def find(x: int) -> int:\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        p = list(range(26))\r\n        for a, b in zip(s1, s2):\r\n            x, y = ord(a) - ord(\"a\"), ord(b) - ord(\"a\")\r\n            px, py = find(x), find(y)\r\n            if px < py:\r\n                p[py] = px\r\n            else:\r\n                p[px] = py\r\n        return \"\".join(chr(find(ord(c) - ord(\"a\")) + ord(\"a\")) for c in baseStr)",
+    "problemId": 1061,
+    "title": "Lexicographically Smallest Equivalent String",
+    "problemUrl": "https://leetcode.com/problems/lexicographically-smallest-equivalent-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1061.Lexicographically Smallest Equivalent String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1061.Lexicographically Smallest Equivalent String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1061.Lexicographically Smallest Equivalent String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1061.Lexicographically Smallest Equivalent String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1061.Lexicographically Smallest Equivalent String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1061.Lexicographically Smallest Equivalent String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1061.Lexicographically Smallest Equivalent String/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1061.Lexicographically Smallest Equivalent String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

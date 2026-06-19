@@ -1,0 +1,48 @@
+{
+    "problemName": "merge-two-binary-trees",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def mergeTrees(\r\n        self, root1: Optional[TreeNode], root2: Optional[TreeNode]\r\n    ) -> Optional[TreeNode]:\r\n        if root1 is None:\r\n            return root2\r\n        if root2 is None:\r\n            return root1\r\n        node = TreeNode(root1.val + root2.val)\r\n        node.left = self.mergeTrees(root1.left, root2.left)\r\n        node.right = self.mergeTrees(root1.right, root2.right)\r\n        return node",
+    "problemId": 617,
+    "title": "Merge Two Binary Trees",
+    "problemUrl": "https://leetcode.com/problems/merge-two-binary-trees/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0617.Merge Two Binary Trees/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0617.Merge Two Binary Trees/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0617.Merge Two Binary Trees/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0617.Merge Two Binary Trees/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0617.Merge Two Binary Trees/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0617.Merge Two Binary Trees/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0617.Merge Two Binary Trees/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0617.Merge Two Binary Trees/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

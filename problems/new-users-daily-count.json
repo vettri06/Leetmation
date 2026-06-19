@@ -1,0 +1,18 @@
+{
+    "problemName": "new-users-daily-count",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            user_id,\r\n            MIN(activity_date) OVER (PARTITION BY user_id) AS login_date\r\n        FROM Traffic\r\n        WHERE activity = 'login'\r\n    )\r\nSELECT login_date, COUNT(DISTINCT user_id) AS user_count\r\nFROM T\r\nWHERE DATEDIFF('2019-06-30', login_date) <= 90\r\nGROUP BY 1;",
+    "problemId": 1107,
+    "title": "New Users Daily Count",
+    "problemUrl": "https://leetcode.com/problems/new-users-daily-count/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1107.New Users Daily Count/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1107.New Users Daily Count/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

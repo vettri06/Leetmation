@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-number-of-moves-to-kill-all-pawns",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxMoves(self, kx: int, ky: int, positions: List[List[int]]) -> int:\r\n        @cache\r\n        def dfs(last: int, state: int, k: int) -> int:\r\n            if state == 0:\r\n                return 0\r\n            if k:\r\n                res = 0\r\n                for i, (x, y) in enumerate(positions):\r\n                    if state >> i & 1:\r\n                        t = dfs(i, state ^ (1 << i), k ^ 1) + dist[last][x][y]\r\n                        if res < t:\r\n                            res = t\r\n                return res\r\n            else:\r\n                res = inf\r\n                for i, (x, y) in enumerate(positions):\r\n                    if state >> i & 1:\r\n                        t = dfs(i, state ^ (1 << i), k ^ 1) + dist[last][x][y]\r\n                        if res > t:\r\n                            res = t\r\n                return res\r\n\r\n        n = len(positions)\r\n        m = 50\r\n        dist = [[[-1] * m for _ in range(m)] for _ in range(n + 1)]\r\n        dx = [1, 1, 2, 2, -1, -1, -2, -2]\r\n        dy = [2, -2, 1, -1, 2, -2, 1, -1]\r\n        positions.append([kx, ky])\r\n        for i, (x, y) in enumerate(positions):\r\n            dist[i][x][y] = 0\r\n            q = deque([(x, y)])\r\n            step = 0\r\n            while q:\r\n                step += 1\r\n                for _ in range(len(q)):\r\n                    x1, y1 = q.popleft()\r\n                    for j in range(8):\r\n                        x2, y2 = x1 + dx[j], y1 + dy[j]\r\n                        if 0 <= x2 < m and 0 <= y2 < m and dist[i][x2][y2] == -1:\r\n                            dist[i][x2][y2] = step\r\n                            q.append((x2, y2))\r\n\r\n        ans = dfs(n, (1 << n) - 1, 1)\r\n        dfs.cache_clear()\r\n        return ans",
+    "problemId": 3283,
+    "title": "Maximum Number of Moves to Kill All Pawns",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-moves-to-kill-all-pawns/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3283.Maximum Number of Moves to Kill All Pawns/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3283.Maximum Number of Moves to Kill All Pawns/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3283.Maximum Number of Moves to Kill All Pawns/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3283.Maximum Number of Moves to Kill All Pawns/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3283.Maximum Number of Moves to Kill All Pawns/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

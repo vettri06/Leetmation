@@ -1,0 +1,38 @@
+{
+    "problemName": "license-key-formatting",
+    "language": "python3",
+    "code": "class Solution:\r\n    def licenseKeyFormatting(self, s: str, k: int) -> str:\r\n        n = len(s)\r\n        cnt = (n - s.count(\"-\")) % k or k\r\n        ans = []\r\n        for i, c in enumerate(s):\r\n            if c == \"-\":\r\n                continue\r\n            ans.append(c.upper())\r\n            cnt -= 1\r\n            if cnt == 0:\r\n                cnt = k\r\n                if i != n - 1:\r\n                    ans.append(\"-\")\r\n        return \"\".join(ans).rstrip(\"-\")",
+    "problemId": 482,
+    "title": "License Key Formatting",
+    "problemUrl": "https://leetcode.com/problems/license-key-formatting/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0482.License Key Formatting/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0482.License Key Formatting/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0482.License Key Formatting/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0482.License Key Formatting/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0482.License Key Formatting/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0482.License Key Formatting/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

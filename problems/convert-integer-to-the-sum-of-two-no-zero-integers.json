@@ -1,0 +1,73 @@
+{
+    "problemName": "convert-integer-to-the-sum-of-two-no-zero-integers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getNoZeroIntegers(self, n: int) -> List[int]:\r\n        for a in count(1):\r\n            b = n - a\r\n            if \"0\" not in f\"{a}{b}\":\r\n                return [a, b]",
+    "problemId": 1317,
+    "title": "Convert Integer to the Sum of Two No-Zero Integers",
+    "problemUrl": "https://leetcode.com/problems/convert-integer-to-the-sum-of-two-no-zero-integers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1317.Convert Integer to the Sum of Two No-Zero Integers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1317.Convert Integer to the Sum of Two No-Zero Integers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1317.Convert Integer to the Sum of Two No-Zero Integers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1317.Convert Integer to the Sum of Two No-Zero Integers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1317.Convert Integer to the Sum of Two No-Zero Integers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1317.Convert Integer to the Sum of Two No-Zero Integers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1317.Convert Integer to the Sum of Two No-Zero Integers/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1317.Convert Integer to the Sum of Two No-Zero Integers/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1317.Convert Integer to the Sum of Two No-Zero Integers/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1317.Convert Integer to the Sum of Two No-Zero Integers/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1317.Convert Integer to the Sum of Two No-Zero Integers/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1317.Convert Integer to the Sum of Two No-Zero Integers/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1317.Convert Integer to the Sum of Two No-Zero Integers/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

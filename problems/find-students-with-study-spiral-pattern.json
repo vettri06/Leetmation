@@ -1,0 +1,23 @@
+{
+    "problemName": "find-students-with-study-spiral-pattern",
+    "language": "python3",
+    "code": "import pandas as pd\r\nfrom datetime import timedelta\r\n\r\n\r\ndef find_study_spiral_pattern(\r\n    students: pd.DataFrame, study_sessions: pd.DataFrame\r\n) -> pd.DataFrame:\r\n    # Convert session_date to datetime\r\n    study_sessions[\"session_date\"] = pd.to_datetime(study_sessions[\"session_date\"])\r\n\r\n    result = []\r\n\r\n    # Group study sessions by student\r\n    for student_id, group in study_sessions.groupby(\"student_id\"):\r\n        # Sort sessions by date\r\n        group = group.sort_values(\"session_date\").reset_index(drop=True)\r\n\r\n        temp = []  # Holds current contiguous segment\r\n        last_date = None\r\n\r\n        for idx, row in group.iterrows():\r\n            if not temp:\r\n                temp.append(row)\r\n            else:\r\n                delta = (row[\"session_date\"] - last_date).days\r\n                if delta <= 2:\r\n                    temp.append(row)\r\n                else:\r\n                    # Check the previous contiguous segment\r\n                    if len(temp) >= 6:\r\n                        _check_pattern(student_id, temp, result)\r\n                    temp = [row]\r\n            last_date = row[\"session_date\"]\r\n\r\n        # Check the final segment\r\n        if len(temp) >= 6:\r\n            _check_pattern(student_id, temp, result)\r\n\r\n    # Build result DataFrame\r\n    df_result = pd.DataFrame(\r\n        result, columns=[\"student_id\", \"cycle_length\", \"total_study_hours\"]\r\n    )\r\n\r\n    if df_result.empty:\r\n        return pd.DataFrame(\r\n            columns=[\r\n                \"student_id\",\r\n                \"student_name\",\r\n                \"major\",\r\n                \"cycle_length\",\r\n                \"total_study_hours\",\r\n            ]\r\n        )\r\n\r\n    # Join with students table to get name and major\r\n    df_result = df_result.merge(students, on=\"student_id\")\r\n\r\n    df_result = df_result[\r\n        [\"student_id\", \"student_name\", \"major\", \"cycle_length\", \"total_study_hours\"]\r\n    ]\r\n\r\n    return df_result.sort_values(\r\n        by=[\"cycle_length\", \"total_study_hours\"], ascending=[False, False]\r\n    ).reset_index(drop=True)\r\n\r\n\r\ndef _check_pattern(student_id, sessions, result):\r\n    subjects = [row[\"subject\"] for row in sessions]\r\n    hours = sum(row[\"hours_studied\"] for row in sessions)\r\n\r\n    n = len(subjects)\r\n\r\n    # Try possible cycle lengths from 3 up to half of the sequence\r\n    for cycle_len in range(3, n // 2 + 1):\r\n        if n % cycle_len != 0:\r\n            continue\r\n\r\n        # Extract the first cycle\r\n        first_cycle = subjects[:cycle_len]\r\n        is_pattern = True\r\n\r\n        # Compare each following cycle with the first\r\n        for i in range(1, n // cycle_len):\r\n            if subjects[i * cycle_len : (i + 1) * cycle_len] != first_cycle:\r\n                is_pattern = False\r\n                break\r\n\r\n        # If a repeated cycle is detected, store the result\r\n        if is_pattern:\r\n            result.append(\r\n                {\r\n                    \"student_id\": student_id,\r\n                    \"cycle_length\": cycle_len,\r\n                    \"total_study_hours\": hours,\r\n                }\r\n            )\r\n            break  # Stop at the first valid cycle found",
+    "problemId": 3617,
+    "title": "Find Students with Study Spiral Pattern",
+    "problemUrl": "https://leetcode.com/problems/find-students-with-study-spiral-pattern/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3617.Find Students with Study Spiral Pattern/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3617.Find Students with Study Spiral Pattern/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3617.Find Students with Study Spiral Pattern/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

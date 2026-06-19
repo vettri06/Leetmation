@@ -1,0 +1,23 @@
+{
+    "problemName": "calculate-trapping-rain-water",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef calculate_trapped_rain_water(heights: pd.DataFrame) -> pd.DataFrame:\r\n    heights[\"l\"] = heights[\"height\"].cummax()\r\n    heights[\"r\"] = heights[\"height\"][::-1].cummax()[::-1]\r\n    heights[\"trapped_water\"] = heights[[\"l\", \"r\"]].min(axis=1) - heights[\"height\"]\r\n    return pd.DataFrame({\"total_trapped_water\": [heights[\"trapped_water\"].sum()]})",
+    "problemId": 3061,
+    "title": "Calculate Trapping Rain Water",
+    "problemUrl": "https://leetcode.com/problems/calculate-trapping-rain-water/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3061.Calculate Trapping Rain Water/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3061.Calculate Trapping Rain Water/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3061.Calculate Trapping Rain Water/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

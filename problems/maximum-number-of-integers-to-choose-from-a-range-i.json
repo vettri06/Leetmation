@@ -1,0 +1,68 @@
+{
+    "problemName": "maximum-number-of-integers-to-choose-from-a-range-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxCount(self, banned: List[int], n: int, maxSum: int) -> int:\r\n        ans = s = 0\r\n        ban = set(banned)\r\n        for i in range(1, n + 1):\r\n            if s + i > maxSum:\r\n                break\r\n            if i not in ban:\r\n                ans += 1\r\n                s += i\r\n        return ans",
+    "problemId": 2554,
+    "title": "Maximum Number of Integers to Choose From a Range I",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2554.Maximum Number of Integers to Choose From a Range I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2554.Maximum Number of Integers to Choose From a Range I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2554.Maximum Number of Integers to Choose From a Range I/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2554.Maximum Number of Integers to Choose From a Range I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2554.Maximum Number of Integers to Choose From a Range I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2554.Maximum Number of Integers to Choose From a Range I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2554.Maximum Number of Integers to Choose From a Range I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2554.Maximum Number of Integers to Choose From a Range I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2554.Maximum Number of Integers to Choose From a Range I/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2554.Maximum Number of Integers to Choose From a Range I/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2554.Maximum Number of Integers to Choose From a Range I/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2554.Maximum Number of Integers to Choose From a Range I/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

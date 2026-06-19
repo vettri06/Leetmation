@@ -1,0 +1,18 @@
+{
+    "problemName": "total-traveled-distance",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT user_id, name, IFNULL(SUM(distance), 0) AS 'traveled distance'\r\nFROM\r\n    Users\r\n    LEFT JOIN Rides USING (user_id)\r\nGROUP BY 1\r\nORDER BY 1;",
+    "problemId": 2837,
+    "title": "Total Traveled Distance",
+    "problemUrl": "https://leetcode.com/problems/total-traveled-distance/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2837.Total Traveled Distance/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2837.Total Traveled Distance/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

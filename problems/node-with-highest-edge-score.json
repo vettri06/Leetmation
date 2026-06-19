@@ -1,0 +1,43 @@
+{
+    "problemName": "node-with-highest-edge-score",
+    "language": "python3",
+    "code": "class Solution:\r\n    def edgeScore(self, edges: List[int]) -> int:\r\n        ans = 0\r\n        cnt = [0] * len(edges)\r\n        for i, j in enumerate(edges):\r\n            cnt[j] += i\r\n            if cnt[ans] < cnt[j] or (cnt[ans] == cnt[j] and j < ans):\r\n                ans = j\r\n        return ans",
+    "problemId": 2374,
+    "title": "Node With Highest Edge Score",
+    "problemUrl": "https://leetcode.com/problems/node-with-highest-edge-score/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2374.Node With Highest Edge Score/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2374.Node With Highest Edge Score/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2374.Node With Highest Edge Score/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2374.Node With Highest Edge Score/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2374.Node With Highest Edge Score/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2374.Node With Highest Edge Score/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2374.Node With Highest Edge Score/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

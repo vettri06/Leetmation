@@ -1,0 +1,73 @@
+{
+    "problemName": "range-sum-query-mutable",
+    "language": "python3",
+    "code": "class BinaryIndexedTree:\r\n    __slots__ = [\"n\", \"c\"]\r\n\r\n    def __init__(self, n):\r\n        self.n = n\r\n        self.c = [0] * (n + 1)\r\n\r\n    def update(self, x: int, delta: int):\r\n        while x <= self.n:\r\n            self.c[x] += delta\r\n            x += x & -x\r\n\r\n    def query(self, x: int) -> int:\r\n        s = 0\r\n        while x > 0:\r\n            s += self.c[x]\r\n            x -= x & -x\r\n        return s\r\n\r\n\r\nclass NumArray:\r\n    __slots__ = [\"tree\"]\r\n\r\n    def __init__(self, nums: List[int]):\r\n        self.tree = BinaryIndexedTree(len(nums))\r\n        for i, v in enumerate(nums, 1):\r\n            self.tree.update(i, v)\r\n\r\n    def update(self, index: int, val: int) -> None:\r\n        prev = self.sumRange(index, index)\r\n        self.tree.update(index + 1, val - prev)\r\n\r\n    def sumRange(self, left: int, right: int) -> int:\r\n        return self.tree.query(right + 1) - self.tree.query(left)\r\n\r\n\r\n# Your NumArray object will be instantiated and called as such:\r\n# obj = NumArray(nums)\r\n# obj.update(index,val)\r\n# param_2 = obj.sumRange(left,right)",
+    "problemId": 307,
+    "title": "Range Sum Query - Mutable",
+    "problemUrl": "https://leetcode.com/problems/range-sum-query-mutable/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0307.Range Sum Query - Mutable/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0307.Range Sum Query - Mutable/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0307.Range Sum Query - Mutable/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0307.Range Sum Query - Mutable/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0307.Range Sum Query - Mutable/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0307.Range Sum Query - Mutable/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0307.Range Sum Query - Mutable/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0307.Range Sum Query - Mutable/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0307.Range Sum Query - Mutable/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0307.Range Sum Query - Mutable/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0307.Range Sum Query - Mutable/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0307.Range Sum Query - Mutable/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0307.Range Sum Query - Mutable/Solution2.cs",
+            "sourceFile": "Solution2.cs"
+        }
+    ]
+}

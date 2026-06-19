@@ -1,0 +1,38 @@
+{
+    "problemName": "get-the-maximum-score",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSum(self, nums1: List[int], nums2: List[int]) -> int:\r\n        mod = 10**9 + 7\r\n        m, n = len(nums1), len(nums2)\r\n        i = j = 0\r\n        f = g = 0\r\n        while i < m or j < n:\r\n            if i == m:\r\n                g += nums2[j]\r\n                j += 1\r\n            elif j == n:\r\n                f += nums1[i]\r\n                i += 1\r\n            elif nums1[i] < nums2[j]:\r\n                f += nums1[i]\r\n                i += 1\r\n            elif nums1[i] > nums2[j]:\r\n                g += nums2[j]\r\n                j += 1\r\n            else:\r\n                f = g = max(f, g) + nums1[i]\r\n                i += 1\r\n                j += 1\r\n        return max(f, g) % mod",
+    "problemId": 1537,
+    "title": "Get the Maximum Score",
+    "problemUrl": "https://leetcode.com/problems/get-the-maximum-score/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1537.Get the Maximum Score/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1537.Get the Maximum Score/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1537.Get the Maximum Score/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1537.Get the Maximum Score/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1537.Get the Maximum Score/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1537.Get the Maximum Score/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

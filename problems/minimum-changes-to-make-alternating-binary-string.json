@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-changes-to-make-alternating-binary-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, s: str) -> int:\r\n        cnt = sum(c != '01'[i & 1] for i, c in enumerate(s))\r\n        return min(cnt, len(s) - cnt)",
+    "problemId": 1758,
+    "title": "Minimum Changes To Make Alternating Binary String",
+    "problemUrl": "https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1758.Minimum Changes To Make Alternating Binary String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1758.Minimum Changes To Make Alternating Binary String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1758.Minimum Changes To Make Alternating Binary String/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1758.Minimum Changes To Make Alternating Binary String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1758.Minimum Changes To Make Alternating Binary String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1758.Minimum Changes To Make Alternating Binary String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1758.Minimum Changes To Make Alternating Binary String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1758.Minimum Changes To Make Alternating Binary String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

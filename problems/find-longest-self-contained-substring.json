@@ -1,0 +1,38 @@
+{
+    "problemName": "find-longest-self-contained-substring",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSubstringLength(self, s: str) -> int:\r\n        first, last = {}, {}\r\n        for i, c in enumerate(s):\r\n            if c not in first:\r\n                first[c] = i\r\n            last[c] = i\r\n        ans, n = -1, len(s)\r\n        for c, i in first.items():\r\n            mx = last[c]\r\n            for j in range(i, n):\r\n                a, b = first[s[j]], last[s[j]]\r\n                if a < i:\r\n                    break\r\n                mx = max(mx, b)\r\n                if mx == j and j - i + 1 < n:\r\n                    ans = max(ans, j - i + 1)\r\n        return ans",
+    "problemId": 3104,
+    "title": "Find Longest Self-Contained Substring",
+    "problemUrl": "https://leetcode.com/problems/find-longest-self-contained-substring/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3104.Find Longest Self-Contained Substring/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3104.Find Longest Self-Contained Substring/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3104.Find Longest Self-Contained Substring/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3104.Find Longest Self-Contained Substring/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3104.Find Longest Self-Contained Substring/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3104.Find Longest Self-Contained Substring/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "distinct-prime-factors-of-product-of-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distinctPrimeFactors(self, nums: List[int]) -> int:\r\n        s = set()\r\n        for n in nums:\r\n            i = 2\r\n            while i <= n // i:\r\n                if n % i == 0:\r\n                    s.add(i)\r\n                    while n % i == 0:\r\n                        n //= i\r\n                i += 1\r\n            if n > 1:\r\n                s.add(n)\r\n        return len(s)",
+    "problemId": 2521,
+    "title": "Distinct Prime Factors of Product of Array",
+    "problemUrl": "https://leetcode.com/problems/distinct-prime-factors-of-product-of-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2521.Distinct Prime Factors of Product of Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2521.Distinct Prime Factors of Product of Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2521.Distinct Prime Factors of Product of Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2521.Distinct Prime Factors of Product of Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2521.Distinct Prime Factors of Product of Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2521.Distinct Prime Factors of Product of Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

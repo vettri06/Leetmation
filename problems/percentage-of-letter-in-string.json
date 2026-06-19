@@ -1,0 +1,38 @@
+{
+    "problemName": "percentage-of-letter-in-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def percentageLetter(self, s: str, letter: str) -> int:\r\n        return s.count(letter) * 100 // len(s)",
+    "problemId": 2278,
+    "title": "Percentage of Letter in String",
+    "problemUrl": "https://leetcode.com/problems/percentage-of-letter-in-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2278.Percentage of Letter in String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2278.Percentage of Letter in String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2278.Percentage of Letter in String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2278.Percentage of Letter in String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2278.Percentage of Letter in String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2278.Percentage of Letter in String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

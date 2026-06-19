@@ -1,0 +1,33 @@
+{
+    "problemName": "reaching-points",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reachingPoints(self, sx: int, sy: int, tx: int, ty: int) -> bool:\r\n        while tx > sx and ty > sy and tx != ty:\r\n            if tx > ty:\r\n                tx %= ty\r\n            else:\r\n                ty %= tx\r\n        if tx == sx and ty == sy:\r\n            return True\r\n        if tx == sx:\r\n            return ty > sy and (ty - sy) % tx == 0\r\n        if ty == sy:\r\n            return tx > sx and (tx - sx) % ty == 0\r\n        return False",
+    "problemId": 780,
+    "title": "Reaching Points",
+    "problemUrl": "https://leetcode.com/problems/reaching-points/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0780.Reaching Points/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0780.Reaching Points/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0780.Reaching Points/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0780.Reaching Points/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0780.Reaching Points/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

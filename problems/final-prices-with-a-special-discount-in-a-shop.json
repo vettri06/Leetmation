@@ -1,0 +1,48 @@
+{
+    "problemName": "final-prices-with-a-special-discount-in-a-shop",
+    "language": "python3",
+    "code": "class Solution:\r\n    def finalPrices(self, prices: List[int]) -> List[int]:\r\n        stk = []\r\n        for i in reversed(range(len(prices))):\r\n            x = prices[i]\r\n            while stk and x < stk[-1]:\r\n                stk.pop()\r\n            if stk:\r\n                prices[i] -= stk[-1]\r\n            stk.append(x)\r\n        return prices",
+    "problemId": 1475,
+    "title": "Final Prices With a Special Discount in a Shop",
+    "problemUrl": "https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1475.Final Prices With a Special Discount in a Shop/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1475.Final Prices With a Special Discount in a Shop/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1475.Final Prices With a Special Discount in a Shop/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1475.Final Prices With a Special Discount in a Shop/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1475.Final Prices With a Special Discount in a Shop/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1475.Final Prices With a Special Discount in a Shop/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1475.Final Prices With a Special Discount in a Shop/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1475.Final Prices With a Special Discount in a Shop/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-degree-of-each-vertex",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findDegrees(self, matrix: list[list[int]]) -> list[int]:\r\n        ans = [0] * len(matrix)\r\n        for i, row in enumerate(matrix):\r\n            for x in row:\r\n                ans[i] += x\r\n        return ans",
+    "problemId": 3898,
+    "title": "Find the Degree of Each Vertex",
+    "problemUrl": "https://leetcode.com/problems/find-the-degree-of-each-vertex/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3898.Find the Degree of Each Vertex/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3898.Find the Degree of Each Vertex/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3898.Find the Degree of Each Vertex/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3898.Find the Degree of Each Vertex/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3898.Find the Degree of Each Vertex/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3898.Find the Degree of Each Vertex/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-repeating-character-replacement",
+    "language": "python3",
+    "code": "class Solution:\r\n    def characterReplacement(self, s: str, k: int) -> int:\r\n        cnt = Counter()\r\n        l = mx = 0\r\n        for r, c in enumerate(s):\r\n            cnt[c] += 1\r\n            mx = max(mx, cnt[c])\r\n            if r - l + 1 - mx > k:\r\n                cnt[s[l]] -= 1\r\n                l += 1\r\n        return len(s) - l",
+    "problemId": 424,
+    "title": "Longest Repeating Character Replacement",
+    "problemUrl": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0424.Longest Repeating Character Replacement/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0424.Longest Repeating Character Replacement/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0424.Longest Repeating Character Replacement/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0424.Longest Repeating Character Replacement/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0424.Longest Repeating Character Replacement/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0424.Longest Repeating Character Replacement/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

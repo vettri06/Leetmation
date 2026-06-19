@@ -1,0 +1,43 @@
+{
+    "problemName": "di-string-match",
+    "language": "python3",
+    "code": "class Solution:\r\n    def diStringMatch(self, s: str) -> List[int]:\r\n        low, high = 0, len(s)\r\n        ans = []\r\n        for c in s:\r\n            if c == \"I\":\r\n                ans.append(low)\r\n                low += 1\r\n            else:\r\n                ans.append(high)\r\n                high -= 1\r\n        ans.append(low)\r\n        return ans",
+    "problemId": 942,
+    "title": "DI String Match",
+    "problemUrl": "https://leetcode.com/problems/di-string-match/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0942.DI String Match/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0942.DI String Match/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0942.DI String Match/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0942.DI String Match/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0942.DI String Match/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0942.DI String Match/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0942.DI String Match/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

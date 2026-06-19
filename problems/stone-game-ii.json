@@ -1,0 +1,43 @@
+{
+    "problemName": "stone-game-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def stoneGameII(self, piles: List[int]) -> int:\r\n        @cache\r\n        def dfs(i, m):\r\n            if m * 2 >= n - i:\r\n                return s[n] - s[i]\r\n            return max(\r\n                s[n] - s[i] - dfs(i + x, max(m, x)) for x in range(1, m << 1 | 1)\r\n            )\r\n\r\n        n = len(piles)\r\n        s = list(accumulate(piles, initial=0))\r\n        return dfs(0, 1)",
+    "problemId": 1140,
+    "title": "Stone Game II",
+    "problemUrl": "https://leetcode.com/problems/stone-game-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1140.Stone Game II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1140.Stone Game II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1140.Stone Game II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1140.Stone Game II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1140.Stone Game II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1140.Stone Game II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1140.Stone Game II/Solution2.py",
+            "sourceFile": "Solution2.py"
+        }
+    ]
+}

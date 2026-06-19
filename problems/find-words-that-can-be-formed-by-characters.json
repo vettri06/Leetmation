@@ -1,0 +1,38 @@
+{
+    "problemName": "find-words-that-can-be-formed-by-characters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countCharacters(self, words: List[str], chars: str) -> int:\r\n        cnt = Counter(chars)\r\n        ans = 0\r\n        for w in words:\r\n            wc = Counter(w)\r\n            if all(cnt[c] >= v for c, v in wc.items()):\r\n                ans += len(w)\r\n        return ans",
+    "problemId": 1160,
+    "title": "Find Words That Can Be Formed by Characters",
+    "problemUrl": "https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1160.Find Words That Can Be Formed by Characters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1160.Find Words That Can Be Formed by Characters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1160.Find Words That Can Be Formed by Characters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1160.Find Words That Can Be Formed by Characters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1160.Find Words That Can Be Formed by Characters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1160.Find Words That Can Be Formed by Characters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

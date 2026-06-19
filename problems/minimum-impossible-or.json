@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-impossible-or",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minImpossibleOR(self, nums: List[int]) -> int:\r\n        s = set(nums)\r\n        return next(1 << i for i in range(32) if 1 << i not in s)",
+    "problemId": 2568,
+    "title": "Minimum Impossible OR",
+    "problemUrl": "https://leetcode.com/problems/minimum-impossible-or/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2568.Minimum Impossible OR/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2568.Minimum Impossible OR/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2568.Minimum Impossible OR/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2568.Minimum Impossible OR/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2568.Minimum Impossible OR/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2568.Minimum Impossible OR/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

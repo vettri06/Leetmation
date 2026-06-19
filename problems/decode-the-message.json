@@ -1,0 +1,48 @@
+{
+    "problemName": "decode-the-message",
+    "language": "python3",
+    "code": "class Solution:\r\n    def decodeMessage(self, key: str, message: str) -> str:\r\n        d = {\" \": \" \"}\r\n        i = 0\r\n        for c in key:\r\n            if c not in d:\r\n                d[c] = ascii_lowercase[i]\r\n                i += 1\r\n        return \"\".join(d[c] for c in message)",
+    "problemId": 2325,
+    "title": "Decode the Message",
+    "problemUrl": "https://leetcode.com/problems/decode-the-message/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2325.Decode the Message/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2325.Decode the Message/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2325.Decode the Message/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2325.Decode the Message/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2325.Decode the Message/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2325.Decode the Message/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2325.Decode the Message/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2325.Decode the Message/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

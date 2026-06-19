@@ -1,0 +1,33 @@
+{
+    "problemName": "find-the-sum-of-subsequence-powers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumOfPowers(self, nums: List[int], k: int) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int, k: int, mi: int) -> int:\r\n            if i >= n:\r\n                return mi if k == 0 else 0\r\n            if n - i < k:\r\n                return 0\r\n            ans = dfs(i + 1, j, k, mi)\r\n            if j == n:\r\n                ans += dfs(i + 1, i, k - 1, mi)\r\n            else:\r\n                ans += dfs(i + 1, i, k - 1, min(mi, nums[i] - nums[j]))\r\n            ans %= mod\r\n            return ans\r\n\r\n        mod = 10**9 + 7\r\n        n = len(nums)\r\n        nums.sort()\r\n        return dfs(0, n, k, inf)",
+    "problemId": 3098,
+    "title": "Find the Sum of Subsequence Powers",
+    "problemUrl": "https://leetcode.com/problems/find-the-sum-of-subsequence-powers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3098.Find the Sum of Subsequence Powers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3098.Find the Sum of Subsequence Powers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3098.Find the Sum of Subsequence Powers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3098.Find the Sum of Subsequence Powers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3098.Find the Sum of Subsequence Powers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "number-of-substrings-with-fixed-ratio",
+    "language": "python3",
+    "code": "class Solution:\r\n    def fixedRatio(self, s: str, num1: int, num2: int) -> int:\r\n        n0 = n1 = 0\r\n        ans = 0\r\n        cnt = Counter({0: 1})\r\n        for c in s:\r\n            n0 += c == '0'\r\n            n1 += c == '1'\r\n            x = n1 * num1 - n0 * num2\r\n            ans += cnt[x]\r\n            cnt[x] += 1\r\n        return ans",
+    "problemId": 2489,
+    "title": "Number of Substrings With Fixed Ratio",
+    "problemUrl": "https://leetcode.com/problems/number-of-substrings-with-fixed-ratio/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2489.Number of Substrings With Fixed Ratio/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2489.Number of Substrings With Fixed Ratio/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2489.Number of Substrings With Fixed Ratio/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2489.Number of Substrings With Fixed Ratio/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2489.Number of Substrings With Fixed Ratio/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

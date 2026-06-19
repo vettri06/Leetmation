@@ -1,0 +1,33 @@
+{
+    "problemName": "construct-quad-tree",
+    "language": "python3",
+    "code": "\"\"\"\r\n# Definition for a QuadTree node.\r\nclass Node:\r\n    def __init__(self, val, isLeaf, topLeft, topRight, bottomLeft, bottomRight):\r\n        self.val = val\r\n        self.isLeaf = isLeaf\r\n        self.topLeft = topLeft\r\n        self.topRight = topRight\r\n        self.bottomLeft = bottomLeft\r\n        self.bottomRight = bottomRight\r\n\"\"\"\r\n\r\n\r\nclass Solution:\r\n    def construct(self, grid: List[List[int]]) -> 'Node':\r\n        def dfs(a, b, c, d):\r\n            zero = one = 0\r\n            for i in range(a, c + 1):\r\n                for j in range(b, d + 1):\r\n                    if grid[i][j] == 0:\r\n                        zero = 1\r\n                    else:\r\n                        one = 1\r\n            isLeaf = zero + one == 1\r\n            val = isLeaf and one\r\n            if isLeaf:\r\n                return Node(grid[a][b], True)\r\n            topLeft = dfs(a, b, (a + c) // 2, (b + d) // 2)\r\n            topRight = dfs(a, (b + d) // 2 + 1, (a + c) // 2, d)\r\n            bottomLeft = dfs((a + c) // 2 + 1, b, c, (b + d) // 2)\r\n            bottomRight = dfs((a + c) // 2 + 1, (b + d) // 2 + 1, c, d)\r\n            return Node(val, isLeaf, topLeft, topRight, bottomLeft, bottomRight)\r\n\r\n        return dfs(0, 0, len(grid) - 1, len(grid[0]) - 1)",
+    "problemId": 427,
+    "title": "Construct Quad Tree",
+    "problemUrl": "https://leetcode.com/problems/construct-quad-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0427.Construct Quad Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0427.Construct Quad Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0427.Construct Quad Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0427.Construct Quad Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0427.Construct Quad Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

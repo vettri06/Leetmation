@@ -1,0 +1,48 @@
+{
+    "problemName": "replace-all-digits-with-characters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def replaceDigits(self, s: str) -> str:\r\n        s = list(s)\r\n        for i in range(1, len(s), 2):\r\n            s[i] = chr(ord(s[i - 1]) + int(s[i]))\r\n        return ''.join(s)",
+    "problemId": 1844,
+    "title": "Replace All Digits with Characters",
+    "problemUrl": "https://leetcode.com/problems/replace-all-digits-with-characters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1844.Replace All Digits with Characters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1844.Replace All Digits with Characters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1844.Replace All Digits with Characters/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1844.Replace All Digits with Characters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1844.Replace All Digits with Characters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1844.Replace All Digits with Characters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1844.Replace All Digits with Characters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1844.Replace All Digits with Characters/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

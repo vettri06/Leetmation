@@ -1,0 +1,38 @@
+{
+    "problemName": "3sum-with-multiplicity",
+    "language": "python3",
+    "code": "class Solution:\r\n    def threeSumMulti(self, arr: List[int], target: int) -> int:\r\n        mod = 10**9 + 7\r\n        cnt = Counter(arr)\r\n        ans = 0\r\n        for j, b in enumerate(arr):\r\n            cnt[b] -= 1\r\n            for a in arr[:j]:\r\n                c = target - a - b\r\n                ans = (ans + cnt[c]) % mod\r\n        return ans",
+    "problemId": 923,
+    "title": "3Sum With Multiplicity",
+    "problemUrl": "https://leetcode.com/problems/3sum-with-multiplicity/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0923.3Sum With Multiplicity/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0923.3Sum With Multiplicity/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0923.3Sum With Multiplicity/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0923.3Sum With Multiplicity/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0923.3Sum With Multiplicity/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0923.3Sum With Multiplicity/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

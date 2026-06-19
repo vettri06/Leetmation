@@ -1,0 +1,33 @@
+{
+    "problemName": "count-the-number-of-winning-sequences",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countWinningSequences(self, s: str) -> int:\r\n        def calc(x: int, y: int) -> int:\r\n            if x == y:\r\n                return 0\r\n            if x < y:\r\n                return 1 if x == 0 and y == 2 else -1\r\n            return -1 if x == 2 and y == 0 else 1\r\n\r\n        @cache\r\n        def dfs(i: int, j: int, k: int) -> int:\r\n            if len(s) - i <= j:\r\n                return 0\r\n            if i >= len(s):\r\n                return int(j < 0)\r\n            res = 0\r\n            for l in range(3):\r\n                if l == k:\r\n                    continue\r\n                res = (res + dfs(i + 1, j + calc(d[s[i]], l), l)) % mod\r\n            return res\r\n\r\n        mod = 10**9 + 7\r\n        d = {\"F\": 0, \"W\": 1, \"E\": 2}\r\n        ans = dfs(0, 0, -1)\r\n        dfs.cache_clear()\r\n        return ans",
+    "problemId": 3320,
+    "title": "Count The Number of Winning Sequences",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-winning-sequences/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3320.Count The Number of Winning Sequences/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3320.Count The Number of Winning Sequences/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3320.Count The Number of Winning Sequences/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3320.Count The Number of Winning Sequences/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3320.Count The Number of Winning Sequences/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "find-the-quiet-students-in-all-exams",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            student_id,\r\n            RANK() OVER (\r\n                PARTITION BY exam_id\r\n                ORDER BY score\r\n            ) AS rk1,\r\n            RANK() OVER (\r\n                PARTITION BY exam_id\r\n                ORDER BY score DESC\r\n            ) AS rk2\r\n        FROM Exam\r\n    )\r\nSELECT student_id, student_name\r\nFROM\r\n    T\r\n    JOIN Student USING (student_id)\r\nGROUP BY 1\r\nHAVING SUM(rk1 = 1) = 0 AND SUM(rk2 = 1) = 0\r\nORDER BY 1;",
+    "problemId": 1412,
+    "title": "Find the Quiet Students in All Exams",
+    "problemUrl": "https://leetcode.com/problems/find-the-quiet-students-in-all-exams/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1412.Find the Quiet Students in All Exams/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1412.Find the Quiet Students in All Exams/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

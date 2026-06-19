@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-right-shifts-to-sort-the-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumRightShifts(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        i = 1\r\n        while i < n and nums[i - 1] < nums[i]:\r\n            i += 1\r\n        k = i + 1\r\n        while k < n and nums[k - 1] < nums[k] < nums[0]:\r\n            k += 1\r\n        return -1 if k < n else n - i",
+    "problemId": 2855,
+    "title": "Minimum Right Shifts to Sort the Array",
+    "problemUrl": "https://leetcode.com/problems/minimum-right-shifts-to-sort-the-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2855.Minimum Right Shifts to Sort the Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2855.Minimum Right Shifts to Sort the Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2855.Minimum Right Shifts to Sort the Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2855.Minimum Right Shifts to Sort the Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2855.Minimum Right Shifts to Sort the Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2855.Minimum Right Shifts to Sort the Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "check-if-it-is-a-straight-line",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkStraightLine(self, coordinates: List[List[int]]) -> bool:\r\n        x1, y1 = coordinates[0]\r\n        x2, y2 = coordinates[1]\r\n        for x, y in coordinates[2:]:\r\n            if (x - x1) * (y2 - y1) != (y - y1) * (x2 - x1):\r\n                return False\r\n        return True",
+    "problemId": 1232,
+    "title": "Check If It Is a Straight Line",
+    "problemUrl": "https://leetcode.com/problems/check-if-it-is-a-straight-line/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1232.Check If It Is a Straight Line/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1232.Check If It Is a Straight Line/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1232.Check If It Is a Straight Line/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1232.Check If It Is a Straight Line/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1232.Check If It Is a Straight Line/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

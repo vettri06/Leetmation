@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-time-to-remove-all-cars-containing-illegal-goods",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumTime(self, s: str) -> int:\r\n        n = len(s)\r\n        pre = [0] * (n + 1)\r\n        suf = [0] * (n + 1)\r\n        for i, c in enumerate(s):\r\n            pre[i + 1] = pre[i] if c == '0' else min(pre[i] + 2, i + 1)\r\n        for i in range(n - 1, -1, -1):\r\n            suf[i] = suf[i + 1] if s[i] == '0' else min(suf[i + 1] + 2, n - i)\r\n        return min(a + b for a, b in zip(pre[1:], suf[1:]))",
+    "problemId": 2167,
+    "title": "Minimum Time to Remove All Cars Containing Illegal Goods",
+    "problemUrl": "https://leetcode.com/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2167.Minimum Time to Remove All Cars Containing Illegal Goods/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2167.Minimum Time to Remove All Cars Containing Illegal Goods/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2167.Minimum Time to Remove All Cars Containing Illegal Goods/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2167.Minimum Time to Remove All Cars Containing Illegal Goods/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2167.Minimum Time to Remove All Cars Containing Illegal Goods/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

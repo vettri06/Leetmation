@@ -1,0 +1,73 @@
+{
+    "problemName": "longest-consecutive-sequence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def longestConsecutive(self, nums: List[int]) -> int:\r\n        s = set(nums)\r\n        ans = 0\r\n        d = defaultdict(int)\r\n        for x in nums:\r\n            y = x\r\n            while y in s:\r\n                s.remove(y)\r\n                y += 1\r\n            d[x] = d[y] + y - x\r\n            ans = max(ans, d[x])\r\n        return ans",
+    "problemId": 128,
+    "title": "Longest Consecutive Sequence",
+    "problemUrl": "https://leetcode.com/problems/longest-consecutive-sequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0128.Longest Consecutive Sequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0128.Longest Consecutive Sequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0128.Longest Consecutive Sequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0128.Longest Consecutive Sequence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0128.Longest Consecutive Sequence/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0128.Longest Consecutive Sequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0128.Longest Consecutive Sequence/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0128.Longest Consecutive Sequence/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0128.Longest Consecutive Sequence/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0128.Longest Consecutive Sequence/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0128.Longest Consecutive Sequence/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0128.Longest Consecutive Sequence/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0128.Longest Consecutive Sequence/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-original-typed-string-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def possibleStringCount(self, word: str, k: int) -> int:\r\n        mod = 10**9 + 7\r\n        nums = []\r\n        ans = 1\r\n        cur = 0\r\n        for i, c in enumerate(word):\r\n            cur += 1\r\n            if i == len(word) - 1 or c != word[i + 1]:\r\n                if cur > 1:\r\n                    if k > 0:\r\n                        nums.append(cur - 1)\r\n                    ans = ans * cur % mod\r\n                cur = 0\r\n                k -= 1\r\n        if k < 1:\r\n            return ans\r\n        m = len(nums)\r\n        f = [[0] * k for _ in range(m + 1)]\r\n        f[0][0] = 1\r\n        for i, x in enumerate(nums, 1):\r\n            s = list(accumulate(f[i - 1], initial=0))\r\n            for j in range(k):\r\n                f[i][j] = (s[j + 1] - s[j - min(x, j)] + mod) % mod\r\n        return (ans - sum(f[m][j] for j in range(k))) % mod",
+    "problemId": 3333,
+    "title": "Find the Original Typed String II",
+    "problemUrl": "https://leetcode.com/problems/find-the-original-typed-string-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3333.Find the Original Typed String II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3333.Find the Original Typed String II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3333.Find the Original Typed String II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3333.Find the Original Typed String II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3333.Find the Original Typed String II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3333.Find the Original Typed String II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "merge-two-2d-arrays-by-summing-values",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mergeArrays(\r\n        self, nums1: List[List[int]], nums2: List[List[int]]\r\n    ) -> List[List[int]]:\r\n        cnt = Counter()\r\n        for i, v in nums1 + nums2:\r\n            cnt[i] += v\r\n        return sorted(cnt.items())",
+    "problemId": 2570,
+    "title": "Merge Two 2D Arrays by Summing Values",
+    "problemUrl": "https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2570.Merge Two 2D Arrays by Summing Values/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2570.Merge Two 2D Arrays by Summing Values/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2570.Merge Two 2D Arrays by Summing Values/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2570.Merge Two 2D Arrays by Summing Values/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2570.Merge Two 2D Arrays by Summing Values/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2570.Merge Two 2D Arrays by Summing Values/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2570.Merge Two 2D Arrays by Summing Values/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

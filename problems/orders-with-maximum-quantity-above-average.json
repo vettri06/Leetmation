@@ -1,0 +1,18 @@
+{
+    "problemName": "orders-with-maximum-quantity-above-average",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    t AS (\r\n        SELECT\r\n            order_id,\r\n            MAX(quantity) AS max_quantity,\r\n            SUM(quantity) / COUNT(1) AS avg_quantity\r\n        FROM OrdersDetails\r\n        GROUP BY order_id\r\n    )\r\nSELECT order_id\r\nFROM t\r\nWHERE max_quantity > (SELECT MAX(avg_quantity) FROM t);",
+    "problemId": 1867,
+    "title": "Orders With Maximum Quantity Above Average",
+    "problemUrl": "https://leetcode.com/problems/orders-with-maximum-quantity-above-average/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1867.Orders With Maximum Quantity Above Average/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1867.Orders With Maximum Quantity Above Average/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

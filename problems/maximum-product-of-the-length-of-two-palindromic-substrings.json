@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-product-of-the-length-of-two-palindromic-substrings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxProduct(self, s: str) -> int:\r\n        n = len(s)\r\n        hlen = [0] * n\r\n        center = right = 0\r\n\r\n        for i in range(n):\r\n            if i < right:\r\n                hlen[i] = min(right - i, hlen[2 * center - i])\r\n            while (\r\n                0 <= i - 1 - hlen[i]\r\n                and i + 1 + hlen[i] < len(s)\r\n                and s[i - 1 - hlen[i]] == s[i + 1 + hlen[i]]\r\n            ):\r\n                hlen[i] += 1\r\n            if right < i + hlen[i]:\r\n                center, right = i, i + hlen[i]\r\n\r\n        prefix = [0] * n\r\n        suffix = [0] * n\r\n\r\n        for i in range(n):\r\n            prefix[i + hlen[i]] = max(prefix[i + hlen[i]], 2 * hlen[i] + 1)\r\n            suffix[i - hlen[i]] = max(suffix[i - hlen[i]], 2 * hlen[i] + 1)\r\n\r\n        for i in range(1, n):\r\n            prefix[~i] = max(prefix[~i], prefix[~i + 1] - 2)\r\n            suffix[i] = max(suffix[i], suffix[i - 1] - 2)\r\n\r\n        for i in range(1, n):\r\n            prefix[i] = max(prefix[i - 1], prefix[i])\r\n            suffix[~i] = max(suffix[~i], suffix[~i + 1])\r\n\r\n        return max(prefix[i - 1] * suffix[i] for i in range(1, n))",
+    "problemId": 1960,
+    "title": "Maximum Product of the Length of Two Palindromic Substrings",
+    "problemUrl": "https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-substrings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1960.Maximum Product of the Length of Two Palindromic Substrings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1960.Maximum Product of the Length of Two Palindromic Substrings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1960.Maximum Product of the Length of Two Palindromic Substrings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1960.Maximum Product of the Length of Two Palindromic Substrings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1960.Maximum Product of the Length of Two Palindromic Substrings/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

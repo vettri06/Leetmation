@@ -1,0 +1,68 @@
+{
+    "problemName": "maximum-number-of-events-that-can-be-attended-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxValue(self, events: List[List[int]], k: int) -> int:\r\n        @cache\r\n        def dfs(i: int, k: int) -> int:\r\n            if i >= len(events):\r\n                return 0\r\n            _, ed, val = events[i]\r\n            ans = dfs(i + 1, k)\r\n            if k:\r\n                j = bisect_right(events, ed, lo=i + 1, key=lambda x: x[0])\r\n                ans = max(ans, dfs(j, k - 1) + val)\r\n            return ans\r\n\r\n        events.sort()\r\n        return dfs(0, k)",
+    "problemId": 1751,
+    "title": "Maximum Number of Events That Can Be Attended II",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1751.Maximum Number of Events That Can Be Attended II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1751.Maximum Number of Events That Can Be Attended II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1751.Maximum Number of Events That Can Be Attended II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1751.Maximum Number of Events That Can Be Attended II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1751.Maximum Number of Events That Can Be Attended II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1751.Maximum Number of Events That Can Be Attended II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1751.Maximum Number of Events That Can Be Attended II/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1751.Maximum Number of Events That Can Be Attended II/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1751.Maximum Number of Events That Can Be Attended II/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1751.Maximum Number of Events That Can Be Attended II/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1751.Maximum Number of Events That Can Be Attended II/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1751.Maximum Number of Events That Can Be Attended II/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

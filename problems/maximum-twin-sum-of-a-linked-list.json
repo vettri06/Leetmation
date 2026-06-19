@@ -1,0 +1,68 @@
+{
+    "problemName": "maximum-twin-sum-of-a-linked-list",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def pairSum(self, head: Optional[ListNode]) -> int:\r\n        s = []\r\n        while head:\r\n            s.append(head.val)\r\n            head = head.next\r\n        n = len(s)\r\n        return max(s[i] + s[-(i + 1)] for i in range(n >> 1))",
+    "problemId": 2130,
+    "title": "Maximum Twin Sum of a Linked List",
+    "problemUrl": "https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2130.Maximum Twin Sum of a Linked List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2130.Maximum Twin Sum of a Linked List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2130.Maximum Twin Sum of a Linked List/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2130.Maximum Twin Sum of a Linked List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2130.Maximum Twin Sum of a Linked List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2130.Maximum Twin Sum of a Linked List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2130.Maximum Twin Sum of a Linked List/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2130.Maximum Twin Sum of a Linked List/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2130.Maximum Twin Sum of a Linked List/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2130.Maximum Twin Sum of a Linked List/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2130.Maximum Twin Sum of a Linked List/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2130.Maximum Twin Sum of a Linked List/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

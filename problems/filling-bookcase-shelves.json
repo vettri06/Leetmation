@@ -1,0 +1,43 @@
+{
+    "problemName": "filling-bookcase-shelves",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minHeightShelves(self, books: List[List[int]], shelfWidth: int) -> int:\r\n        n = len(books)\r\n        f = [0] * (n + 1)\r\n        for i, (w, h) in enumerate(books, 1):\r\n            f[i] = f[i - 1] + h\r\n            for j in range(i - 1, 0, -1):\r\n                w += books[j - 1][0]\r\n                if w > shelfWidth:\r\n                    break\r\n                h = max(h, books[j - 1][1])\r\n                f[i] = min(f[i], f[j - 1] + h)\r\n        return f[n]",
+    "problemId": 1105,
+    "title": "Filling Bookcase Shelves",
+    "problemUrl": "https://leetcode.com/problems/filling-bookcase-shelves/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1105.Filling Bookcase Shelves/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1105.Filling Bookcase Shelves/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1105.Filling Bookcase Shelves/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1105.Filling Bookcase Shelves/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1105.Filling Bookcase Shelves/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1105.Filling Bookcase Shelves/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1105.Filling Bookcase Shelves/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-possible-sets-of-closing-branches",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfSets(self, n: int, maxDistance: int, roads: List[List[int]]) -> int:\r\n        ans = 0\r\n        for mask in range(1 << n):\r\n            g = [[inf] * n for _ in range(n)]\r\n            for u, v, w in roads:\r\n                if mask >> u & 1 and mask >> v & 1:\r\n                    g[u][v] = min(g[u][v], w)\r\n                    g[v][u] = min(g[v][u], w)\r\n            for k in range(n):\r\n                if mask >> k & 1:\r\n                    g[k][k] = 0\r\n                    for i in range(n):\r\n                        for j in range(n):\r\n                            # g[i][j] = min(g[i][j], g[i][k] + g[k][j])\r\n                            if g[i][k] + g[k][j] < g[i][j]:\r\n                                g[i][j] = g[i][k] + g[k][j]\r\n            if all(\r\n                g[i][j] <= maxDistance\r\n                for i in range(n)\r\n                for j in range(n)\r\n                if mask >> i & 1 and mask >> j & 1\r\n            ):\r\n                ans += 1\r\n        return ans",
+    "problemId": 2959,
+    "title": "Number of Possible Sets of Closing Branches",
+    "problemUrl": "https://leetcode.com/problems/number-of-possible-sets-of-closing-branches/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2959.Number of Possible Sets of Closing Branches/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2959.Number of Possible Sets of Closing Branches/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2959.Number of Possible Sets of Closing Branches/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2959.Number of Possible Sets of Closing Branches/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2959.Number of Possible Sets of Closing Branches/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2959.Number of Possible Sets of Closing Branches/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

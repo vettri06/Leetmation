@@ -1,0 +1,33 @@
+{
+    "problemName": "count-anagrams",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countAnagrams(self, s: str) -> int:\r\n        mod = 10**9 + 7\r\n        ans = mul = 1\r\n        for w in s.split():\r\n            cnt = Counter()\r\n            for i, c in enumerate(w, 1):\r\n                cnt[c] += 1\r\n                mul = mul * cnt[c] % mod\r\n                ans = ans * i % mod\r\n        return ans * pow(mul, -1, mod) % mod",
+    "problemId": 2514,
+    "title": "Count Anagrams",
+    "problemUrl": "https://leetcode.com/problems/count-anagrams/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2514.Count Anagrams/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2514.Count Anagrams/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2514.Count Anagrams/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2514.Count Anagrams/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2514.Count Anagrams/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

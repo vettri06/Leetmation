@@ -1,0 +1,38 @@
+{
+    "problemName": "special-array-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isArraySpecial(self, nums: List[int], queries: List[List[int]]) -> List[bool]:\r\n        n = len(nums)\r\n        d = list(range(n))\r\n        for i in range(1, n):\r\n            if nums[i] % 2 != nums[i - 1] % 2:\r\n                d[i] = d[i - 1]\r\n        return [d[t] <= f for f, t in queries]",
+    "problemId": 3152,
+    "title": "Special Array II",
+    "problemUrl": "https://leetcode.com/problems/special-array-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3152.Special Array II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3152.Special Array II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3152.Special Array II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3152.Special Array II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3152.Special Array II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3152.Special Array II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

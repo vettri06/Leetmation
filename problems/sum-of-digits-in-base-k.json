@@ -1,0 +1,53 @@
+{
+    "problemName": "sum-of-digits-in-base-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumBase(self, n: int, k: int) -> int:\r\n        ans = 0\r\n        while n:\r\n            ans += n % k\r\n            n //= k\r\n        return ans",
+    "problemId": 1837,
+    "title": "Sum of Digits in Base K",
+    "problemUrl": "https://leetcode.com/problems/sum-of-digits-in-base-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1837.Sum of Digits in Base K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1837.Sum of Digits in Base K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1837.Sum of Digits in Base K/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1837.Sum of Digits in Base K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1837.Sum of Digits in Base K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1837.Sum of Digits in Base K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1837.Sum of Digits in Base K/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1837.Sum of Digits in Base K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1837.Sum of Digits in Base K/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

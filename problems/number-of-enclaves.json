@@ -1,0 +1,73 @@
+{
+    "problemName": "number-of-enclaves",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numEnclaves(self, grid: List[List[int]]) -> int:\r\n        def dfs(i: int, j: int):\r\n            grid[i][j] = 0\r\n            for a, b in pairwise(dirs):\r\n                x, y = i + a, j + b\r\n                if 0 <= x < m and 0 <= y < n and grid[x][y]:\r\n                    dfs(x, y)\r\n\r\n        m, n = len(grid), len(grid[0])\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        for j in range(n):\r\n            for i in (0, m - 1):\r\n                if grid[i][j]:\r\n                    dfs(i, j)\r\n        for i in range(m):\r\n            for j in (0, n - 1):\r\n                if grid[i][j]:\r\n                    dfs(i, j)\r\n        return sum(sum(row) for row in grid)",
+    "problemId": 1020,
+    "title": "Number of Enclaves",
+    "problemUrl": "https://leetcode.com/problems/number-of-enclaves/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1020.Number of Enclaves/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1020.Number of Enclaves/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1020.Number of Enclaves/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1020.Number of Enclaves/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1020.Number of Enclaves/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1020.Number of Enclaves/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1020.Number of Enclaves/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1020.Number of Enclaves/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1020.Number of Enclaves/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1020.Number of Enclaves/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1020.Number of Enclaves/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1020.Number of Enclaves/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1020.Number of Enclaves/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

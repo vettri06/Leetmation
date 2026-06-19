@@ -1,0 +1,38 @@
+{
+    "problemName": "count-pairs-of-points-with-distance-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPairs(self, coordinates: List[List[int]], k: int) -> int:\r\n        cnt = Counter()\r\n        ans = 0\r\n        for x2, y2 in coordinates:\r\n            for a in range(k + 1):\r\n                b = k - a\r\n                x1, y1 = a ^ x2, b ^ y2\r\n                ans += cnt[(x1, y1)]\r\n            cnt[(x2, y2)] += 1\r\n        return ans",
+    "problemId": 2857,
+    "title": "Count Pairs of Points With Distance k",
+    "problemUrl": "https://leetcode.com/problems/count-pairs-of-points-with-distance-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2857.Count Pairs of Points With Distance k/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2857.Count Pairs of Points With Distance k/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2857.Count Pairs of Points With Distance k/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2857.Count Pairs of Points With Distance k/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2857.Count Pairs of Points With Distance k/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2857.Count Pairs of Points With Distance k/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

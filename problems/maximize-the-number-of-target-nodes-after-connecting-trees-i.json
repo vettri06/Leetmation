@@ -1,0 +1,48 @@
+{
+    "problemName": "maximize-the-number-of-target-nodes-after-connecting-trees-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxTargetNodes(\r\n        self, edges1: List[List[int]], edges2: List[List[int]], k: int\r\n    ) -> List[int]:\r\n        def build(edges: List[List[int]]) -> List[List[int]]:\r\n            n = len(edges) + 1\r\n            g = [[] for _ in range(n)]\r\n            for a, b in edges:\r\n                g[a].append(b)\r\n                g[b].append(a)\r\n            return g\r\n\r\n        def dfs(g: List[List[int]], a: int, fa: int, d: int) -> int:\r\n            if d < 0:\r\n                return 0\r\n            cnt = 1\r\n            for b in g[a]:\r\n                if b != fa:\r\n                    cnt += dfs(g, b, a, d - 1)\r\n            return cnt\r\n\r\n        g2 = build(edges2)\r\n        m = len(edges2) + 1\r\n        t = max(dfs(g2, i, -1, k - 1) for i in range(m))\r\n        g1 = build(edges1)\r\n        n = len(edges1) + 1\r\n        return [dfs(g1, i, -1, k) + t for i in range(n)]",
+    "problemId": 3372,
+    "title": "Maximize the Number of Target Nodes After Connecting Trees I",
+    "problemUrl": "https://leetcode.com/problems/maximize-the-number-of-target-nodes-after-connecting-trees-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3372.Maximize the Number of Target Nodes After Connecting Trees I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3372.Maximize the Number of Target Nodes After Connecting Trees I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3372.Maximize the Number of Target Nodes After Connecting Trees I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3372.Maximize the Number of Target Nodes After Connecting Trees I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3372.Maximize the Number of Target Nodes After Connecting Trees I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3372.Maximize the Number of Target Nodes After Connecting Trees I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3372.Maximize the Number of Target Nodes After Connecting Trees I/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3372.Maximize the Number of Target Nodes After Connecting Trees I/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

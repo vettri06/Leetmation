@@ -1,0 +1,43 @@
+{
+    "problemName": "design-graph-with-shortest-path-calculator",
+    "language": "python3",
+    "code": "class Graph:\r\n    def __init__(self, n: int, edges: List[List[int]]):\r\n        self.n = n\r\n        self.g = [[inf] * n for _ in range(n)]\r\n        for f, t, c in edges:\r\n            self.g[f][t] = c\r\n\r\n    def addEdge(self, edge: List[int]) -> None:\r\n        f, t, c = edge\r\n        self.g[f][t] = c\r\n\r\n    def shortestPath(self, node1: int, node2: int) -> int:\r\n        dist = [inf] * self.n\r\n        dist[node1] = 0\r\n        vis = [False] * self.n\r\n        for _ in range(self.n):\r\n            t = -1\r\n            for j in range(self.n):\r\n                if not vis[j] and (t == -1 or dist[t] > dist[j]):\r\n                    t = j\r\n            vis[t] = True\r\n            for j in range(self.n):\r\n                dist[j] = min(dist[j], dist[t] + self.g[t][j])\r\n        return -1 if dist[node2] == inf else dist[node2]\r\n\r\n\r\n# Your Graph object will be instantiated and called as such:\r\n# obj = Graph(n, edges)\r\n# obj.addEdge(edge)\r\n# param_2 = obj.shortestPath(node1,node2)",
+    "problemId": 2642,
+    "title": "Design Graph With Shortest Path Calculator",
+    "problemUrl": "https://leetcode.com/problems/design-graph-with-shortest-path-calculator/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2642.Design Graph With Shortest Path Calculator/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2642.Design Graph With Shortest Path Calculator/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2642.Design Graph With Shortest Path Calculator/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2642.Design Graph With Shortest Path Calculator/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2642.Design Graph With Shortest Path Calculator/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2642.Design Graph With Shortest Path Calculator/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2642.Design Graph With Shortest Path Calculator/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "find-candidates-for-data-scientist-position-ii",
+    "language": "mysql",
+    "code": "WITH\r\n    S AS (\r\n        SELECT\r\n            candidate_id,\r\n            project_id,\r\n            COUNT(*) matched_skills,\r\n            SUM(\r\n                CASE\r\n                    WHEN proficiency > importance THEN 10\r\n                    WHEN proficiency < importance THEN -5\r\n                    ELSE 0\r\n                END\r\n            ) + 100 AS score\r\n        FROM\r\n            Candidates\r\n            JOIN Projects USING (skill)\r\n        GROUP BY 1, 2\r\n    ),\r\n    T AS (\r\n        SELECT project_id, COUNT(1) required_skills\r\n        FROM Projects\r\n        GROUP BY 1\r\n    ),\r\n    P AS (\r\n        SELECT\r\n            project_id,\r\n            candidate_id,\r\n            score,\r\n            RANK() OVER (\r\n                PARTITION BY project_id\r\n                ORDER BY score DESC, candidate_id\r\n            ) rk\r\n        FROM\r\n            S\r\n            JOIN T USING (project_id)\r\n        WHERE matched_skills = required_skills\r\n    )\r\nSELECT project_id, candidate_id, score\r\nFROM P\r\nWHERE rk = 1\r\nORDER BY 1;",
+    "problemId": 3278,
+    "title": "Find Candidates for Data Scientist Position II",
+    "problemUrl": "https://leetcode.com/problems/find-candidates-for-data-scientist-position-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3278.Find Candidates for Data Scientist Position II/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3278.Find Candidates for Data Scientist Position II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

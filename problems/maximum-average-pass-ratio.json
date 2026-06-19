@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-average-pass-ratio",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxAverageRatio(self, classes: List[List[int]], extraStudents: int) -> float:\r\n        h = [(a / b - (a + 1) / (b + 1), a, b) for a, b in classes]\r\n        heapify(h)\r\n        for _ in range(extraStudents):\r\n            _, a, b = heappop(h)\r\n            a, b = a + 1, b + 1\r\n            heappush(h, (a / b - (a + 1) / (b + 1), a, b))\r\n        return sum(v[1] / v[2] for v in h) / len(classes)",
+    "problemId": 1792,
+    "title": "Maximum Average Pass Ratio",
+    "problemUrl": "https://leetcode.com/problems/maximum-average-pass-ratio/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1792.Maximum Average Pass Ratio/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1792.Maximum Average Pass Ratio/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1792.Maximum Average Pass Ratio/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1792.Maximum Average Pass Ratio/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1792.Maximum Average Pass Ratio/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1792.Maximum Average Pass Ratio/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1792.Maximum Average Pass Ratio/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

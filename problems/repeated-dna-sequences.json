@@ -1,0 +1,58 @@
+{
+    "problemName": "repeated-dna-sequences",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findRepeatedDnaSequences(self, s: str) -> List[str]:\r\n        cnt = Counter()\r\n        ans = []\r\n        for i in range(len(s) - 10 + 1):\r\n            t = s[i : i + 10]\r\n            cnt[t] += 1\r\n            if cnt[t] == 2:\r\n                ans.append(t)\r\n        return ans",
+    "problemId": 187,
+    "title": "Repeated DNA Sequences",
+    "problemUrl": "https://leetcode.com/problems/repeated-dna-sequences/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0187.Repeated DNA Sequences/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0187.Repeated DNA Sequences/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0187.Repeated DNA Sequences/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0187.Repeated DNA Sequences/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0187.Repeated DNA Sequences/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0187.Repeated DNA Sequences/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0187.Repeated DNA Sequences/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0187.Repeated DNA Sequences/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0187.Repeated DNA Sequences/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0187.Repeated DNA Sequences/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

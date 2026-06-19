@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-subarrays-in-a-valid-split",
+    "language": "python3",
+    "code": "class Solution:\r\n    def validSubarraySplit(self, nums: List[int]) -> int:\r\n        @cache\r\n        def dfs(i):\r\n            if i >= n:\r\n                return 0\r\n            ans = inf\r\n            for j in range(i, n):\r\n                if gcd(nums[i], nums[j]) > 1:\r\n                    ans = min(ans, 1 + dfs(j + 1))\r\n            return ans\r\n\r\n        n = len(nums)\r\n        ans = dfs(0)\r\n        dfs.cache_clear()\r\n        return ans if ans < inf else -1",
+    "problemId": 2464,
+    "title": "Minimum Subarrays in a Valid Split",
+    "problemUrl": "https://leetcode.com/problems/minimum-subarrays-in-a-valid-split/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2464.Minimum Subarrays in a Valid Split/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2464.Minimum Subarrays in a Valid Split/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2464.Minimum Subarrays in a Valid Split/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2464.Minimum Subarrays in a Valid Split/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2464.Minimum Subarrays in a Valid Split/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

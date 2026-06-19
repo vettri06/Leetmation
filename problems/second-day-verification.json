@@ -1,0 +1,18 @@
+{
+    "problemName": "second-day-verification",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT user_id\r\nFROM\r\n    Emails AS e\r\n    JOIN texts AS t\r\n        ON e.email_id = t.email_id\r\n        AND DATEDIFF(action_date, signup_date) = 1\r\n        AND signup_action = 'Verified'\r\nORDER BY 1;",
+    "problemId": 3172,
+    "title": "Second Day Verification",
+    "problemUrl": "https://leetcode.com/problems/second-day-verification/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3172.Second Day Verification/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3172.Second Day Verification/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

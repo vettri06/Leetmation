@@ -1,0 +1,38 @@
+{
+    "problemName": "bitwise-ors-of-subarrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def subarrayBitwiseORs(self, arr: List[int]) -> int:\r\n        ans = set()\r\n        s = set()\r\n        for x in arr:\r\n            s = {x | y for y in s} | {x}\r\n            ans |= s\r\n        return len(ans)",
+    "problemId": 898,
+    "title": "Bitwise ORs of Subarrays",
+    "problemUrl": "https://leetcode.com/problems/bitwise-ors-of-subarrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0898.Bitwise ORs of Subarrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0898.Bitwise ORs of Subarrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0898.Bitwise ORs of Subarrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0898.Bitwise ORs of Subarrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0898.Bitwise ORs of Subarrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0898.Bitwise ORs of Subarrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "largest-palindromic-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestPalindromic(self, num: str) -> str:\r\n        cnt = Counter(num)\r\n        ans = ''\r\n        for i in range(9, -1, -1):\r\n            v = str(i)\r\n            if cnt[v] % 2:\r\n                ans = v\r\n                cnt[v] -= 1\r\n                break\r\n        for i in range(10):\r\n            v = str(i)\r\n            if cnt[v]:\r\n                cnt[v] //= 2\r\n                s = cnt[v] * v\r\n                ans = s + ans + s\r\n        return ans.strip('0') or '0'",
+    "problemId": 2384,
+    "title": "Largest Palindromic Number",
+    "problemUrl": "https://leetcode.com/problems/largest-palindromic-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2384.Largest Palindromic Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2384.Largest Palindromic Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2384.Largest Palindromic Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2384.Largest Palindromic Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2384.Largest Palindromic Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2384.Largest Palindromic Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

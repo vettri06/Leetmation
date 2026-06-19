@@ -1,0 +1,48 @@
+{
+    "problemName": "words-within-two-edits-of-dictionary",
+    "language": "python3",
+    "code": "class Solution:\r\n    def twoEditWords(self, queries: List[str], dictionary: List[str]) -> List[str]:\r\n        ans = []\r\n        for s in queries:\r\n            for t in dictionary:\r\n                if sum(a != b for a, b in zip(s, t)) < 3:\r\n                    ans.append(s)\r\n                    break\r\n        return ans",
+    "problemId": 2452,
+    "title": "Words Within Two Edits of Dictionary",
+    "problemUrl": "https://leetcode.com/problems/words-within-two-edits-of-dictionary/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2452.Words Within Two Edits of Dictionary/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2452.Words Within Two Edits of Dictionary/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2452.Words Within Two Edits of Dictionary/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2452.Words Within Two Edits of Dictionary/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2452.Words Within Two Edits of Dictionary/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2452.Words Within Two Edits of Dictionary/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2452.Words Within Two Edits of Dictionary/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2452.Words Within Two Edits of Dictionary/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

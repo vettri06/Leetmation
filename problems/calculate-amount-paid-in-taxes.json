@@ -1,0 +1,43 @@
+{
+    "problemName": "calculate-amount-paid-in-taxes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def calculateTax(self, brackets: List[List[int]], income: int) -> float:\r\n        ans = prev = 0\r\n        for upper, percent in brackets:\r\n            ans += max(0, min(income, upper) - prev) * percent\r\n            prev = upper\r\n        return ans / 100",
+    "problemId": 2303,
+    "title": "Calculate Amount Paid in Taxes",
+    "problemUrl": "https://leetcode.com/problems/calculate-amount-paid-in-taxes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2303.Calculate Amount Paid in Taxes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2303.Calculate Amount Paid in Taxes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2303.Calculate Amount Paid in Taxes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2303.Calculate Amount Paid in Taxes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2303.Calculate Amount Paid in Taxes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2303.Calculate Amount Paid in Taxes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2303.Calculate Amount Paid in Taxes/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

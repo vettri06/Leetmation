@@ -1,0 +1,43 @@
+{
+    "problemName": "powerful-integers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def powerfulIntegers(self, x: int, y: int, bound: int) -> List[int]:\r\n        ans = set()\r\n        a = 1\r\n        while a <= bound:\r\n            b = 1\r\n            while a + b <= bound:\r\n                ans.add(a + b)\r\n                b *= y\r\n                if y == 1:\r\n                    break\r\n            if x == 1:\r\n                break\r\n            a *= x\r\n        return list(ans)",
+    "problemId": 970,
+    "title": "Powerful Integers",
+    "problemUrl": "https://leetcode.com/problems/powerful-integers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0970.Powerful Integers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0970.Powerful Integers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0970.Powerful Integers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0970.Powerful Integers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0970.Powerful Integers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0970.Powerful Integers/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0970.Powerful Integers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

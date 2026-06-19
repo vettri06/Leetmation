@@ -1,0 +1,18 @@
+{
+    "problemName": "check-if-an-original-string-exists-given-two-encoded-strings",
+    "language": "typescript",
+    "code": "function possiblyEquals(s1: string, s2: string): boolean {\r\n    const n = s1.length,\r\n        m = s2.length;\r\n    let dp: Array<Array<Set<number>>> = Array.from({ length: n + 1 }, v =>\r\n        Array.from({ length: m + 1 }, w => new Set()),\r\n    );\r\n    dp[0][0].add(0);\r\n\r\n    for (let i = 0; i <= n; i++) {\r\n        for (let j = 0; j <= m; j++) {\r\n            for (let delta of dp[i][j]) {\r\n                // s1为数字\r\n                let num = 0;\r\n                if (delta <= 0) {\r\n                    for (let p = i; i < Math.min(i + 3, n); p++) {\r\n                        if (isDigit(s1[p])) {\r\n                            num = num * 10 + Number(s1[p]);\r\n                            dp[p + 1][j].add(delta + num);\r\n                        } else {\r\n                            break;\r\n                        }\r\n                    }\r\n                }\r\n\r\n                // s2为数字\r\n                num = 0;\r\n                if (delta >= 0) {\r\n                    for (let q = j; q < Math.min(j + 3, m); q++) {\r\n                        if (isDigit(s2[q])) {\r\n                            num = num * 10 + Number(s2[q]);\r\n                            dp[i][q + 1].add(delta - num);\r\n                        } else {\r\n                            break;\r\n                        }\r\n                    }\r\n                }\r\n\r\n                // 数字匹配s1为字母\r\n                if (i < n && delta < 0 && !isDigit(s1[i])) {\r\n                    dp[i + 1][j].add(delta + 1);\r\n                }\r\n\r\n                // 数字匹配s2为字母\r\n                if (j < m && delta > 0 && !isDigit(s2[j])) {\r\n                    dp[i][j + 1].add(delta - 1);\r\n                }\r\n\r\n                // 两个字母匹配\r\n                if (i < n && j < m && delta == 0 && s1[i] == s2[j]) {\r\n                    dp[i + 1][j + 1].add(0);\r\n                }\r\n            }\r\n        }\r\n    }\r\n    return dp[n][m].has(0);\r\n}\r\n\r\nfunction isDigit(char: string): boolean {\r\n    return /^\\d{1}$/g.test(char);\r\n}",
+    "problemId": 2060,
+    "title": "Check if an Original String Exists Given Two Encoded Strings",
+    "problemUrl": "https://leetcode.com/problems/check-if-an-original-string-exists-given-two-encoded-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2060.Check if an Original String Exists Given Two Encoded Strings/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2060.Check if an Original String Exists Given Two Encoded Strings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

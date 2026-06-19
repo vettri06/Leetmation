@@ -1,0 +1,38 @@
+{
+    "problemName": "fair-distribution-of-cookies",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distributeCookies(self, cookies: List[int], k: int) -> int:\r\n        def dfs(i):\r\n            if i >= len(cookies):\r\n                nonlocal ans\r\n                ans = max(cnt)\r\n                return\r\n            for j in range(k):\r\n                if cnt[j] + cookies[i] >= ans or (j and cnt[j] == cnt[j - 1]):\r\n                    continue\r\n                cnt[j] += cookies[i]\r\n                dfs(i + 1)\r\n                cnt[j] -= cookies[i]\r\n\r\n        ans = inf\r\n        cnt = [0] * k\r\n        cookies.sort(reverse=True)\r\n        dfs(0)\r\n        return ans",
+    "problemId": 2305,
+    "title": "Fair Distribution of Cookies",
+    "problemUrl": "https://leetcode.com/problems/fair-distribution-of-cookies/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2305.Fair Distribution of Cookies/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2305.Fair Distribution of Cookies/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2305.Fair Distribution of Cookies/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2305.Fair Distribution of Cookies/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2305.Fair Distribution of Cookies/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2305.Fair Distribution of Cookies/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

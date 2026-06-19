@@ -1,0 +1,23 @@
+{
+    "problemName": "get-highest-answer-rate-question",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT question_id AS survey_log\r\nFROM SurveyLog\r\nGROUP BY 1\r\nORDER BY SUM(action = 'answer') / SUM(action = 'show') DESC, 1\r\nLIMIT 1;",
+    "problemId": 578,
+    "title": "Get Highest Answer Rate Question",
+    "problemUrl": "https://leetcode.com/problems/get-highest-answer-rate-question/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0578.Get Highest Answer Rate Question/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0578.Get Highest Answer Rate Question/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0578.Get Highest Answer Rate Question/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

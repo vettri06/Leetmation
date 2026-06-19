@@ -1,0 +1,38 @@
+{
+    "problemName": "binary-trees-with-factors",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numFactoredBinaryTrees(self, arr: List[int]) -> int:\r\n        mod = 10**9 + 7\r\n        n = len(arr)\r\n        arr.sort()\r\n        idx = {v: i for i, v in enumerate(arr)}\r\n        f = [1] * n\r\n        for i, a in enumerate(arr):\r\n            for j in range(i):\r\n                b = arr[j]\r\n                if a % b == 0 and (c := (a // b)) in idx:\r\n                    f[i] = (f[i] + f[j] * f[idx[c]]) % mod\r\n        return sum(f) % mod",
+    "problemId": 823,
+    "title": "Binary Trees With Factors",
+    "problemUrl": "https://leetcode.com/problems/binary-trees-with-factors/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0823.Binary Trees With Factors/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0823.Binary Trees With Factors/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0823.Binary Trees With Factors/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0823.Binary Trees With Factors/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0823.Binary Trees With Factors/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0823.Binary Trees With Factors/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

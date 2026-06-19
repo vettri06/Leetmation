@@ -1,0 +1,18 @@
+{
+    "problemName": "promise-pool",
+    "language": "typescript",
+    "code": "type F = () => Promise<any>;\r\n\r\nfunction promisePool(functions: F[], n: number): Promise<any> {\r\n    const wrappers = functions.map(fn => async () => {\r\n        await fn();\r\n        const nxt = waiting.shift();\r\n        nxt && (await nxt());\r\n    });\r\n\r\n    const running = wrappers.slice(0, n);\r\n    const waiting = wrappers.slice(n);\r\n    return Promise.all(running.map(fn => fn()));\r\n}",
+    "problemId": 2636,
+    "title": "Promise Pool",
+    "problemUrl": "https://leetcode.com/problems/promise-pool/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2636.Promise Pool/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2636.Promise Pool/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

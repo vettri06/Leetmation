@@ -1,0 +1,58 @@
+{
+    "problemName": "distinct-numbers-in-each-subarray",
+    "language": "python3",
+    "code": "class Solution:\r\n    def distinctNumbers(self, nums: List[int], k: int) -> List[int]:\r\n        cnt = Counter(nums[:k])\r\n        ans = [len(cnt)]\r\n        for i in range(k, len(nums)):\r\n            cnt[nums[i]] += 1\r\n            cnt[nums[i - k]] -= 1\r\n            if cnt[nums[i - k]] == 0:\r\n                cnt.pop(nums[i - k])\r\n            ans.append(len(cnt))\r\n        return ans",
+    "problemId": 1852,
+    "title": "Distinct Numbers in Each Subarray",
+    "problemUrl": "https://leetcode.com/problems/distinct-numbers-in-each-subarray/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1852.Distinct Numbers in Each Subarray/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1852.Distinct Numbers in Each Subarray/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1852.Distinct Numbers in Each Subarray/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1852.Distinct Numbers in Each Subarray/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1852.Distinct Numbers in Each Subarray/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1852.Distinct Numbers in Each Subarray/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1852.Distinct Numbers in Each Subarray/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1852.Distinct Numbers in Each Subarray/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1852.Distinct Numbers in Each Subarray/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1852.Distinct Numbers in Each Subarray/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

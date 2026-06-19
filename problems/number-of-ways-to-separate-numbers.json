@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-ways-to-separate-numbers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfCombinations(self, num: str) -> int:\r\n        def cmp(i, j, k):\r\n            x = lcp[i][j]\r\n            return x >= k or num[i + x] >= num[j + x]\r\n\r\n        mod = 10**9 + 7\r\n        n = len(num)\r\n        lcp = [[0] * (n + 1) for _ in range(n + 1)]\r\n        for i in range(n - 1, -1, -1):\r\n            for j in range(n - 1, -1, -1):\r\n                if num[i] == num[j]:\r\n                    lcp[i][j] = 1 + lcp[i + 1][j + 1]\r\n\r\n        dp = [[0] * (n + 1) for _ in range(n + 1)]\r\n        dp[0][0] = 1\r\n        for i in range(1, n + 1):\r\n            for j in range(1, i + 1):\r\n                v = 0\r\n                if num[i - j] != '0':\r\n                    if i - j - j >= 0 and cmp(i - j, i - j - j, j):\r\n                        v = dp[i - j][j]\r\n                    else:\r\n                        v = dp[i - j][min(j - 1, i - j)]\r\n                dp[i][j] = (dp[i][j - 1] + v) % mod\r\n        return dp[n][n]",
+    "problemId": 1977,
+    "title": "Number of Ways to Separate Numbers",
+    "problemUrl": "https://leetcode.com/problems/number-of-ways-to-separate-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1977.Number of Ways to Separate Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1977.Number of Ways to Separate Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1977.Number of Ways to Separate Numbers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1977.Number of Ways to Separate Numbers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1977.Number of Ways to Separate Numbers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1977.Number of Ways to Separate Numbers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

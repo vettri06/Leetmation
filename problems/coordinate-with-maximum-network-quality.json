@@ -1,0 +1,33 @@
+{
+    "problemName": "coordinate-with-maximum-network-quality",
+    "language": "python3",
+    "code": "class Solution:\r\n    def bestCoordinate(self, towers: List[List[int]], radius: int) -> List[int]:\r\n        mx = 0\r\n        ans = [0, 0]\r\n        for i in range(51):\r\n            for j in range(51):\r\n                t = 0\r\n                for x, y, q in towers:\r\n                    d = ((x - i) ** 2 + (y - j) ** 2) ** 0.5\r\n                    if d <= radius:\r\n                        t += floor(q / (1 + d))\r\n                if t > mx:\r\n                    mx = t\r\n                    ans = [i, j]\r\n        return ans",
+    "problemId": 1620,
+    "title": "Coordinate With Maximum Network Quality",
+    "problemUrl": "https://leetcode.com/problems/coordinate-with-maximum-network-quality/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1620.Coordinate With Maximum Network Quality/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1620.Coordinate With Maximum Network Quality/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1620.Coordinate With Maximum Network Quality/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1620.Coordinate With Maximum Network Quality/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1620.Coordinate With Maximum Network Quality/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

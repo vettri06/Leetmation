@@ -1,0 +1,58 @@
+{
+    "problemName": "two-sum-less-than-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def twoSumLessThanK(self, nums: List[int], k: int) -> int:\r\n        nums.sort()\r\n        ans = -1\r\n        for i, x in enumerate(nums):\r\n            j = bisect_left(nums, k - x, lo=i + 1) - 1\r\n            if i < j:\r\n                ans = max(ans, x + nums[j])\r\n        return ans",
+    "problemId": 1099,
+    "title": "Two Sum Less Than K",
+    "problemUrl": "https://leetcode.com/problems/two-sum-less-than-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1099.Two Sum Less Than K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1099.Two Sum Less Than K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1099.Two Sum Less Than K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1099.Two Sum Less Than K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1099.Two Sum Less Than K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1099.Two Sum Less Than K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1099.Two Sum Less Than K/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1099.Two Sum Less Than K/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1099.Two Sum Less Than K/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1099.Two Sum Less Than K/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

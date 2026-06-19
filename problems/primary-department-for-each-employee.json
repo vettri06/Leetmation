@@ -1,0 +1,18 @@
+{
+    "problemName": "primary-department-for-each-employee",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT employee_id, department_id\r\nFROM Employee\r\nWHERE primary_flag = 'Y'\r\nUNION\r\nSELECT employee_id, department_id\r\nFROM Employee\r\nGROUP BY 1\r\nHAVING COUNT(1) = 1;",
+    "problemId": 1789,
+    "title": "Primary Department for Each Employee",
+    "problemUrl": "https://leetcode.com/problems/primary-department-for-each-employee/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1789.Primary Department for Each Employee/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1789.Primary Department for Each Employee/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

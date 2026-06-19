@@ -1,0 +1,18 @@
+{
+    "problemName": "check-if-object-instance-of-class",
+    "language": "typescript",
+    "code": "function checkIfInstanceOf(obj: any, classFunction: any): boolean {\r\n    if (classFunction === null || classFunction === undefined) {\r\n        return false;\r\n    }\r\n    while (obj !== null && obj !== undefined) {\r\n        const proto = Object.getPrototypeOf(obj);\r\n        if (proto === classFunction.prototype) {\r\n            return true;\r\n        }\r\n        obj = proto;\r\n    }\r\n    return false;\r\n}\r\n\r\n/**\r\n * checkIfInstanceOf(new Date(), Date); // true\r\n */",
+    "problemId": 2618,
+    "title": "Check if Object Instance of Class",
+    "problemUrl": "https://leetcode.com/problems/check-if-object-instance-of-class/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2618.Check if Object Instance of Class/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2618.Check if Object Instance of Class/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

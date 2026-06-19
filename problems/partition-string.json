@@ -1,0 +1,53 @@
+{
+    "problemName": "partition-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def partitionString(self, s: str) -> List[str]:\r\n        vis = set()\r\n        ans = []\r\n        t = \"\"\r\n        for c in s:\r\n            t += c\r\n            if t not in vis:\r\n                vis.add(t)\r\n                ans.append(t)\r\n                t = \"\"\r\n        return ans",
+    "problemId": 3597,
+    "title": "Partition String",
+    "problemUrl": "https://leetcode.com/problems/partition-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3597.Partition String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3597.Partition String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3597.Partition String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3597.Partition String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3597.Partition String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3597.Partition String/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3597.Partition String/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3597.Partition String/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3597.Partition String/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

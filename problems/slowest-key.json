@@ -1,0 +1,33 @@
+{
+    "problemName": "slowest-key",
+    "language": "python3",
+    "code": "class Solution:\r\n    def slowestKey(self, releaseTimes: List[int], keysPressed: str) -> str:\r\n        ans = keysPressed[0]\r\n        mx = releaseTimes[0]\r\n        for i in range(1, len(keysPressed)):\r\n            d = releaseTimes[i] - releaseTimes[i - 1]\r\n            if d > mx or (d == mx and ord(keysPressed[i]) > ord(ans)):\r\n                mx = d\r\n                ans = keysPressed[i]\r\n        return ans",
+    "problemId": 1629,
+    "title": "Slowest Key",
+    "problemUrl": "https://leetcode.com/problems/slowest-key/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1629.Slowest Key/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1629.Slowest Key/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1629.Slowest Key/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1629.Slowest Key/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1629.Slowest Key/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

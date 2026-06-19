@@ -1,0 +1,38 @@
+{
+    "problemName": "binary-search-tree-iterator-ii",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass BSTIterator:\r\n    def __init__(self, root: Optional[TreeNode]):\r\n        self.nums = []\r\n\r\n        def dfs(root):\r\n            if root is None:\r\n                return\r\n            dfs(root.left)\r\n            self.nums.append(root.val)\r\n            dfs(root.right)\r\n\r\n        dfs(root)\r\n        self.i = -1\r\n\r\n    def hasNext(self) -> bool:\r\n        return self.i < len(self.nums) - 1\r\n\r\n    def next(self) -> int:\r\n        self.i += 1\r\n        return self.nums[self.i]\r\n\r\n    def hasPrev(self) -> bool:\r\n        return self.i > 0\r\n\r\n    def prev(self) -> int:\r\n        self.i -= 1\r\n        return self.nums[self.i]\r\n\r\n\r\n# Your BSTIterator object will be instantiated and called as such:\r\n# obj = BSTIterator(root)\r\n# param_1 = obj.hasNext()\r\n# param_2 = obj.next()\r\n# param_3 = obj.hasPrev()\r\n# param_4 = obj.prev()",
+    "problemId": 1586,
+    "title": "Binary Search Tree Iterator II",
+    "problemUrl": "https://leetcode.com/problems/binary-search-tree-iterator-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1586.Binary Search Tree Iterator II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1586.Binary Search Tree Iterator II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1586.Binary Search Tree Iterator II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1586.Binary Search Tree Iterator II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1586.Binary Search Tree Iterator II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1586.Binary Search Tree Iterator II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

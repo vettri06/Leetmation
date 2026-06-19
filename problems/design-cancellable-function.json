@@ -1,0 +1,18 @@
+{
+    "problemName": "design-cancellable-function",
+    "language": "typescript",
+    "code": "function cancellable<T>(generator: Generator<Promise<any>, T, unknown>): [() => void, Promise<T>] {\r\n    let cancel: () => void = () => {};\r\n    const cancelPromise = new Promise((resolve, reject) => {\r\n        cancel = () => reject('Cancelled');\r\n    });\r\n    cancelPromise.catch(() => {});\r\n\r\n    const promise = (async () => {\r\n        let next = generator.next();\r\n        while (!next.done) {\r\n            try {\r\n                next = generator.next(await Promise.race([next.value, cancelPromise]));\r\n            } catch (e) {\r\n                next = generator.throw(e);\r\n            }\r\n        }\r\n        return next.value;\r\n    })();\r\n\r\n    return [cancel, promise];\r\n}\r\n\r\n/**\r\n * function* tasks() {\r\n *   const val = yield new Promise(resolve => resolve(2 + 2));\r\n *   yield new Promise(resolve => setTimeout(resolve, 100));\r\n *   return val + 1;\r\n * }\r\n * const [cancel, promise] = cancellable(tasks());\r\n * setTimeout(cancel, 50);\r\n * promise.catch(console.log); // logs \"Cancelled\" at t=50ms\r\n */",
+    "problemId": 2650,
+    "title": "Design Cancellable Function",
+    "problemUrl": "https://leetcode.com/problems/design-cancellable-function/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2650.Design Cancellable Function/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2650.Design Cancellable Function/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

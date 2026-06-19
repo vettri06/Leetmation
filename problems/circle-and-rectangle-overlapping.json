@@ -1,0 +1,38 @@
+{
+    "problemName": "circle-and-rectangle-overlapping",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkOverlap(\r\n        self,\r\n        radius: int,\r\n        xCenter: int,\r\n        yCenter: int,\r\n        x1: int,\r\n        y1: int,\r\n        x2: int,\r\n        y2: int,\r\n    ) -> bool:\r\n        def f(i: int, j: int, k: int) -> int:\r\n            if i <= k <= j:\r\n                return 0\r\n            return i - k if k < i else k - j\r\n\r\n        a = f(x1, x2, xCenter)\r\n        b = f(y1, y2, yCenter)\r\n        return a * a + b * b <= radius * radius",
+    "problemId": 1401,
+    "title": "Circle and Rectangle Overlapping",
+    "problemUrl": "https://leetcode.com/problems/circle-and-rectangle-overlapping/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1401.Circle and Rectangle Overlapping/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1401.Circle and Rectangle Overlapping/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1401.Circle and Rectangle Overlapping/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1401.Circle and Rectangle Overlapping/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1401.Circle and Rectangle Overlapping/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1401.Circle and Rectangle Overlapping/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

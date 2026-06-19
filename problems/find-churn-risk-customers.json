@@ -1,0 +1,23 @@
+{
+    "problemName": "find-churn-risk-customers",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_churn_risk_customers(subscription_events: pd.DataFrame) -> pd.DataFrame:\r\n    subscription_events[\"event_date\"] = pd.to_datetime(\r\n        subscription_events[\"event_date\"]\r\n    )\r\n    subscription_events = subscription_events.sort_values(\r\n        [\"user_id\", \"event_date\", \"event_id\"]\r\n    )\r\n    last_events = (\r\n        subscription_events.groupby(\"user_id\")\r\n        .tail(1)[[\"user_id\", \"event_type\", \"plan_name\", \"monthly_amount\"]]\r\n        .rename(\r\n            columns={\r\n                \"event_type\": \"last_event_type\",\r\n                \"plan_name\": \"current_plan\",\r\n                \"monthly_amount\": \"current_monthly_amount\",\r\n            }\r\n        )\r\n    )\r\n\r\n    agg_df = (\r\n        subscription_events.groupby(\"user_id\")\r\n        .agg(\r\n            start_date=(\"event_date\", \"min\"),\r\n            last_event_date=(\"event_date\", \"max\"),\r\n            max_historical_amount=(\"monthly_amount\", \"max\"),\r\n            downgrade_count=(\"event_type\", lambda x: (x == \"downgrade\").sum()),\r\n        )\r\n        .reset_index()\r\n    )\r\n\r\n    merged = pd.merge(agg_df, last_events, on=\"user_id\", how=\"inner\")\r\n    merged[\"days_as_subscriber\"] = (\r\n        merged[\"last_event_date\"] - merged[\"start_date\"]\r\n    ).dt.days\r\n\r\n    result = merged[\r\n        (merged[\"last_event_type\"] != \"cancel\")\r\n        & (merged[\"downgrade_count\"] >= 1)\r\n        & (merged[\"current_monthly_amount\"] < 0.5 * merged[\"max_historical_amount\"])\r\n        & (merged[\"days_as_subscriber\"] >= 60)\r\n    ][\r\n        [\r\n            \"user_id\",\r\n            \"current_plan\",\r\n            \"current_monthly_amount\",\r\n            \"max_historical_amount\",\r\n            \"days_as_subscriber\",\r\n        ]\r\n    ]\r\n\r\n    result = result.sort_values(\r\n        [\"days_as_subscriber\", \"user_id\"], ascending=[False, True]\r\n    ).reset_index(drop=True)\r\n    return result",
+    "problemId": 3716,
+    "title": "Find Churn Risk Customers",
+    "problemUrl": "https://leetcode.com/problems/find-churn-risk-customers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3716.Find Churn Risk Customers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3716.Find Churn Risk Customers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3716.Find Churn Risk Customers/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

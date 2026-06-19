@@ -1,0 +1,48 @@
+{
+    "problemName": "number-of-equal-numbers-blocks",
+    "language": "python3",
+    "code": "# Definition for BigArray.\r\n# class BigArray:\r\n#     def at(self, index: long) -> int:\r\n#         pass\r\n#     def size(self) -> long:\r\n#         pass\r\nclass Solution(object):\r\n    def countBlocks(self, nums: Optional[\"BigArray\"]) -> int:\r\n        i, n = 0, nums.size()\r\n        ans = 0\r\n        while i < n:\r\n            ans += 1\r\n            x = nums.at(i)\r\n            if i + 1 < n and nums.at(i + 1) != x:\r\n                i += 1\r\n            else:\r\n                i += bisect_left(range(i, n), True, key=lambda j: nums.at(j) != x)\r\n        return ans",
+    "problemId": 2936,
+    "title": "Number of Equal Numbers Blocks",
+    "problemUrl": "https://leetcode.com/problems/number-of-equal-numbers-blocks/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2936.Number of Equal Numbers Blocks/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2936.Number of Equal Numbers Blocks/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2936.Number of Equal Numbers Blocks/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2936.Number of Equal Numbers Blocks/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2936.Number of Equal Numbers Blocks/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2936.Number of Equal Numbers Blocks/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2936.Number of Equal Numbers Blocks/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2936.Number of Equal Numbers Blocks/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

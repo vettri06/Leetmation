@@ -1,0 +1,38 @@
+{
+    "problemName": "sum-of-good-numbers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumOfGoodNumbers(self, nums: List[int], k: int) -> int:\r\n        ans = 0\r\n        for i, x in enumerate(nums):\r\n            if i >= k and x <= nums[i - k]:\r\n                continue\r\n            if i + k < len(nums) and x <= nums[i + k]:\r\n                continue\r\n            ans += x\r\n        return ans",
+    "problemId": 3452,
+    "title": "Sum of Good Numbers",
+    "problemUrl": "https://leetcode.com/problems/sum-of-good-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3452.Sum of Good Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3452.Sum of Good Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3452.Sum of Good Numbers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3452.Sum of Good Numbers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3452.Sum of Good Numbers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3452.Sum of Good Numbers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

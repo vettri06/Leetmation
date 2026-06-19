@@ -1,0 +1,38 @@
+{
+    "problemName": "shortest-path-to-get-food",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getFood(self, grid: List[List[str]]) -> int:\r\n        m, n = len(grid), len(grid[0])\r\n        i, j = next((i, j) for i in range(m) for j in range(n) if grid[i][j] == '*')\r\n        q = deque([(i, j)])\r\n        dirs = (-1, 0, 1, 0, -1)\r\n        ans = 0\r\n        while q:\r\n            ans += 1\r\n            for _ in range(len(q)):\r\n                i, j = q.popleft()\r\n                for a, b in pairwise(dirs):\r\n                    x, y = i + a, j + b\r\n                    if 0 <= x < m and 0 <= y < n:\r\n                        if grid[x][y] == '#':\r\n                            return ans\r\n                        if grid[x][y] == 'O':\r\n                            grid[x][y] = 'X'\r\n                            q.append((x, y))\r\n        return -1",
+    "problemId": 1730,
+    "title": "Shortest Path to Get Food",
+    "problemUrl": "https://leetcode.com/problems/shortest-path-to-get-food/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1730.Shortest Path to Get Food/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1730.Shortest Path to Get Food/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1730.Shortest Path to Get Food/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1730.Shortest Path to Get Food/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1730.Shortest Path to Get Food/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1730.Shortest Path to Get Food/Solution.js",
+            "sourceFile": "Solution.js"
+        }
+    ]
+}

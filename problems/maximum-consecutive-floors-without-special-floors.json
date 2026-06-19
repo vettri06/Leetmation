@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-consecutive-floors-without-special-floors",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxConsecutive(self, bottom: int, top: int, special: List[int]) -> int:\r\n        special.sort()\r\n        ans = max(special[0] - bottom, top - special[-1])\r\n        for x, y in pairwise(special):\r\n            ans = max(ans, y - x - 1)\r\n        return ans",
+    "problemId": 2274,
+    "title": "Maximum Consecutive Floors Without Special Floors",
+    "problemUrl": "https://leetcode.com/problems/maximum-consecutive-floors-without-special-floors/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2274.Maximum Consecutive Floors Without Special Floors/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2274.Maximum Consecutive Floors Without Special Floors/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2274.Maximum Consecutive Floors Without Special Floors/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2274.Maximum Consecutive Floors Without Special Floors/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2274.Maximum Consecutive Floors Without Special Floors/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

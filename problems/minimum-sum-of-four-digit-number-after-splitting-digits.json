@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-sum-of-four-digit-number-after-splitting-digits",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumSum(self, num: int) -> int:\r\n        nums = []\r\n        while num:\r\n            nums.append(num % 10)\r\n            num //= 10\r\n        nums.sort()\r\n        return 10 * (nums[0] + nums[1]) + nums[2] + nums[3]",
+    "problemId": 2160,
+    "title": "Minimum Sum of Four Digit Number After Splitting Digits",
+    "problemUrl": "https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2160.Minimum Sum of Four Digit Number After Splitting Digits/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2160.Minimum Sum of Four Digit Number After Splitting Digits/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2160.Minimum Sum of Four Digit Number After Splitting Digits/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2160.Minimum Sum of Four Digit Number After Splitting Digits/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2160.Minimum Sum of Four Digit Number After Splitting Digits/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2160.Minimum Sum of Four Digit Number After Splitting Digits/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2160.Minimum Sum of Four Digit Number After Splitting Digits/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2160.Minimum Sum of Four Digit Number After Splitting Digits/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

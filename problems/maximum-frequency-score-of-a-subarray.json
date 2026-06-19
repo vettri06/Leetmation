@@ -1,0 +1,33 @@
+{
+    "problemName": "maximum-frequency-score-of-a-subarray",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxFrequencyScore(self, nums: List[int], k: int) -> int:\r\n        mod = 10**9 + 7\r\n        cnt = Counter(nums[:k])\r\n        ans = cur = sum(pow(k, v, mod) for k, v in cnt.items()) % mod\r\n        i = k\r\n        while i < len(nums):\r\n            a, b = nums[i - k], nums[i]\r\n            if a != b:\r\n                cur += (b - 1) * pow(b, cnt[b], mod) if cnt[b] else b\r\n                cur -= (a - 1) * pow(a, cnt[a] - 1, mod) if cnt[a] > 1 else a\r\n                cur %= mod\r\n                cnt[b] += 1\r\n                cnt[a] -= 1\r\n                ans = max(ans, cur)\r\n            i += 1\r\n        return ans",
+    "problemId": 2524,
+    "title": "Maximum Frequency Score of a Subarray",
+    "problemUrl": "https://leetcode.com/problems/maximum-frequency-score-of-a-subarray/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2524.Maximum Frequency Score of a Subarray/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2524.Maximum Frequency Score of a Subarray/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2524.Maximum Frequency Score of a Subarray/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2524.Maximum Frequency Score of a Subarray/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2524.Maximum Frequency Score of a Subarray/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

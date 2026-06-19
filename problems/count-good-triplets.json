@@ -1,0 +1,48 @@
+{
+    "problemName": "count-good-triplets",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:\r\n        ans, n = 0, len(arr)\r\n        for i in range(n):\r\n            for j in range(i + 1, n):\r\n                for k in range(j + 1, n):\r\n                    ans += (\r\n                        abs(arr[i] - arr[j]) <= a\r\n                        and abs(arr[j] - arr[k]) <= b\r\n                        and abs(arr[i] - arr[k]) <= c\r\n                    )\r\n        return ans",
+    "problemId": 1534,
+    "title": "Count Good Triplets",
+    "problemUrl": "https://leetcode.com/problems/count-good-triplets/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1534.Count Good Triplets/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1534.Count Good Triplets/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1534.Count Good Triplets/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1534.Count Good Triplets/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1534.Count Good Triplets/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1534.Count Good Triplets/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1534.Count Good Triplets/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1534.Count Good Triplets/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

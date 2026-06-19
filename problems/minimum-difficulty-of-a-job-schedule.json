@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-difficulty-of-a-job-schedule",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:\r\n        n = len(jobDifficulty)\r\n        f = [[inf] * (d + 1) for _ in range(n + 1)]\r\n        f[0][0] = 0\r\n        for i in range(1, n + 1):\r\n            for j in range(1, min(d + 1, i + 1)):\r\n                mx = 0\r\n                for k in range(i, 0, -1):\r\n                    mx = max(mx, jobDifficulty[k - 1])\r\n                    f[i][j] = min(f[i][j], f[k - 1][j - 1] + mx)\r\n        return -1 if f[n][d] >= inf else f[n][d]",
+    "problemId": 1335,
+    "title": "Minimum Difficulty of a Job Schedule",
+    "problemUrl": "https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1335.Minimum Difficulty of a Job Schedule/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1335.Minimum Difficulty of a Job Schedule/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1335.Minimum Difficulty of a Job Schedule/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1335.Minimum Difficulty of a Job Schedule/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1335.Minimum Difficulty of a Job Schedule/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1335.Minimum Difficulty of a Job Schedule/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

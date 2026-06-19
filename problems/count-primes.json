@@ -1,0 +1,43 @@
+{
+    "problemName": "count-primes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPrimes(self, n: int) -> int:\r\n        primes = [True] * n\r\n        ans = 0\r\n        for i in range(2, n):\r\n            if primes[i]:\r\n                ans += 1\r\n                for j in range(i + i, n, i):\r\n                    primes[j] = False\r\n        return ans",
+    "problemId": 204,
+    "title": "Count Primes",
+    "problemUrl": "https://leetcode.com/problems/count-primes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0204.Count Primes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0204.Count Primes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0204.Count Primes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0204.Count Primes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0204.Count Primes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0204.Count Primes/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0204.Count Primes/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

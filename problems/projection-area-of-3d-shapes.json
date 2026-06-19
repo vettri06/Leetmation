@@ -1,0 +1,43 @@
+{
+    "problemName": "projection-area-of-3d-shapes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def projectionArea(self, grid: List[List[int]]) -> int:\r\n        xy = sum(v > 0 for row in grid for v in row)\r\n        yz = sum(max(row) for row in grid)\r\n        zx = sum(max(col) for col in zip(*grid))\r\n        return xy + yz + zx",
+    "problemId": 883,
+    "title": "Projection Area of 3D Shapes",
+    "problemUrl": "https://leetcode.com/problems/projection-area-of-3d-shapes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0883.Projection Area of 3D Shapes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0883.Projection Area of 3D Shapes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0883.Projection Area of 3D Shapes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0883.Projection Area of 3D Shapes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0883.Projection Area of 3D Shapes/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0883.Projection Area of 3D Shapes/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0883.Projection Area of 3D Shapes/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

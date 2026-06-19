@@ -1,0 +1,43 @@
+{
+    "problemName": "count-subarrays-where-max-element-appears-at-least-k-times",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSubarrays(self, nums: List[int], k: int) -> int:\r\n        mx = max(nums)\r\n        n = len(nums)\r\n        ans = cnt = j = 0\r\n        for x in nums:\r\n            while j < n and cnt < k:\r\n                cnt += nums[j] == mx\r\n                j += 1\r\n            if cnt < k:\r\n                break\r\n            ans += n - j + 1\r\n            cnt -= x == mx\r\n        return ans",
+    "problemId": 2962,
+    "title": "Count Subarrays Where Max Element Appears at Least K Times",
+    "problemUrl": "https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2962.Count Subarrays Where Max Element Appears at Least K Times/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2962.Count Subarrays Where Max Element Appears at Least K Times/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2962.Count Subarrays Where Max Element Appears at Least K Times/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2962.Count Subarrays Where Max Element Appears at Least K Times/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2962.Count Subarrays Where Max Element Appears at Least K Times/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2962.Count Subarrays Where Max Element Appears at Least K Times/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2962.Count Subarrays Where Max Element Appears at Least K Times/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

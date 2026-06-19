@@ -1,0 +1,18 @@
+{
+    "problemName": "interval-cancellation",
+    "language": "typescript",
+    "code": "function cancellable(fn: Function, args: any[], t: number): Function {\r\n    fn(...args);\r\n    const time = setInterval(() => fn(...args), t);\r\n    return () => clearInterval(time);\r\n}\r\n\r\n/**\r\n *  const result = []\r\n *\r\n *  const fn = (x) => x * 2\r\n *  const args = [4], t = 20, cancelT = 110\r\n *\r\n *  const log = (...argsArr) => {\r\n *      result.push(fn(...argsArr))\r\n *  }\r\n *\r\n *  const cancel = cancellable(fn, args, t);\r\n *\r\n *  setTimeout(() => {\r\n *     cancel()\r\n *     console.log(result) // [\r\n *                         //      {\"time\":0,\"returned\":8},\r\n *                         //      {\"time\":20,\"returned\":8},\r\n *                         //      {\"time\":40,\"returned\":8},\r\n *                         //      {\"time\":60,\"returned\":8},\r\n *                         //      {\"time\":80,\"returned\":8},\r\n *                         //      {\"time\":100,\"returned\":8}\r\n *                         //  ]\r\n *  }, cancelT)\r\n */",
+    "problemId": 2725,
+    "title": "Interval Cancellation",
+    "problemUrl": "https://leetcode.com/problems/interval-cancellation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2725.Interval Cancellation/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2725.Interval Cancellation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

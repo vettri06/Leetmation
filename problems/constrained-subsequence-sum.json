@@ -1,0 +1,38 @@
+{
+    "problemName": "constrained-subsequence-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def constrainedSubsetSum(self, nums: List[int], k: int) -> int:\r\n        q = deque([0])\r\n        n = len(nums)\r\n        f = [0] * n\r\n        ans = -inf\r\n        for i, x in enumerate(nums):\r\n            while i - q[0] > k:\r\n                q.popleft()\r\n            f[i] = max(0, f[q[0]]) + x\r\n            ans = max(ans, f[i])\r\n            while q and f[q[-1]] <= f[i]:\r\n                q.pop()\r\n            q.append(i)\r\n        return ans",
+    "problemId": 1425,
+    "title": "Constrained Subsequence Sum",
+    "problemUrl": "https://leetcode.com/problems/constrained-subsequence-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1425.Constrained Subsequence Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1425.Constrained Subsequence Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1425.Constrained Subsequence Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1425.Constrained Subsequence Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1425.Constrained Subsequence Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1425.Constrained Subsequence Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

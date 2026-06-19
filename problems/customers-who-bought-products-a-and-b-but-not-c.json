@@ -1,0 +1,18 @@
+{
+    "problemName": "customers-who-bought-products-a-and-b-but-not-c",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT customer_id, customer_name\r\nFROM\r\n    Customers\r\n    LEFT JOIN Orders USING (customer_id)\r\nGROUP BY 1\r\nHAVING SUM(product_name = 'A') > 0 AND SUM(product_name = 'B') > 0 AND SUM(product_name = 'C') = 0\r\nORDER BY 1;",
+    "problemId": 1398,
+    "title": "Customers Who Bought Products A and B but Not C",
+    "problemUrl": "https://leetcode.com/problems/customers-who-bought-products-a-and-b-but-not-c/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1398.Customers Who Bought Products A and B but Not C/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1398.Customers Who Bought Products A and B but Not C/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

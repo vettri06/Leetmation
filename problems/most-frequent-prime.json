@@ -1,0 +1,38 @@
+{
+    "problemName": "most-frequent-prime",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mostFrequentPrime(self, mat: List[List[int]]) -> int:\r\n        def is_prime(x: int) -> int:\r\n            return all(x % i != 0 for i in range(2, isqrt(x) + 1))\r\n\r\n        m, n = len(mat), len(mat[0])\r\n        cnt = Counter()\r\n        for i in range(m):\r\n            for j in range(n):\r\n                for a in range(-1, 2):\r\n                    for b in range(-1, 2):\r\n                        if a == 0 and b == 0:\r\n                            continue\r\n                        x, y, v = i + a, j + b, mat[i][j]\r\n                        while 0 <= x < m and 0 <= y < n:\r\n                            v = v * 10 + mat[x][y]\r\n                            if is_prime(v):\r\n                                cnt[v] += 1\r\n                            x, y = x + a, y + b\r\n        ans, mx = -1, 0\r\n        for v, x in cnt.items():\r\n            if mx < x:\r\n                mx = x\r\n                ans = v\r\n            elif mx == x:\r\n                ans = max(ans, v)\r\n        return ans",
+    "problemId": 3044,
+    "title": "Most Frequent Prime",
+    "problemUrl": "https://leetcode.com/problems/most-frequent-prime/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3044.Most Frequent Prime/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3044.Most Frequent Prime/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3044.Most Frequent Prime/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3044.Most Frequent Prime/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3044.Most Frequent Prime/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3044.Most Frequent Prime/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

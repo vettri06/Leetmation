@@ -1,0 +1,43 @@
+{
+    "problemName": "find-the-maximum-divisibility-score",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxDivScore(self, nums: List[int], divisors: List[int]) -> int:\r\n        ans, mx = divisors[0], 0\r\n        for div in divisors:\r\n            cnt = sum(x % div == 0 for x in nums)\r\n            if mx < cnt:\r\n                mx, ans = cnt, div\r\n            elif mx == cnt and ans > div:\r\n                ans = div\r\n        return ans",
+    "problemId": 2644,
+    "title": "Find the Maximum Divisibility Score",
+    "problemUrl": "https://leetcode.com/problems/find-the-maximum-divisibility-score/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2644.Find the Maximum Divisibility Score/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2644.Find the Maximum Divisibility Score/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2644.Find the Maximum Divisibility Score/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2644.Find the Maximum Divisibility Score/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2644.Find the Maximum Divisibility Score/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2644.Find the Maximum Divisibility Score/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2644.Find the Maximum Divisibility Score/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

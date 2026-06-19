@@ -1,0 +1,58 @@
+{
+    "problemName": "sliding-window-median",
+    "language": "python3",
+    "code": "class MedianFinder:\r\n    def __init__(self, k: int):\r\n        self.k = k\r\n        self.small = []\r\n        self.large = []\r\n        self.delayed = defaultdict(int)\r\n        self.small_size = 0\r\n        self.large_size = 0\r\n\r\n    def add_num(self, num: int):\r\n        if not self.small or num <= -self.small[0]:\r\n            heappush(self.small, -num)\r\n            self.small_size += 1\r\n        else:\r\n            heappush(self.large, num)\r\n            self.large_size += 1\r\n        self.rebalance()\r\n\r\n    def find_median(self) -> float:\r\n        return -self.small[0] if self.k & 1 else (-self.small[0] + self.large[0]) / 2\r\n\r\n    def remove_num(self, num: int):\r\n        self.delayed[num] += 1\r\n        if num <= -self.small[0]:\r\n            self.small_size -= 1\r\n            if num == -self.small[0]:\r\n                self.prune(self.small)\r\n        else:\r\n            self.large_size -= 1\r\n            if num == self.large[0]:\r\n                self.prune(self.large)\r\n        self.rebalance()\r\n\r\n    def prune(self, pq: List[int]):\r\n        sign = -1 if pq is self.small else 1\r\n        while pq and sign * pq[0] in self.delayed:\r\n            self.delayed[sign * pq[0]] -= 1\r\n            if self.delayed[sign * pq[0]] == 0:\r\n                self.delayed.pop(sign * pq[0])\r\n            heappop(pq)\r\n\r\n    def rebalance(self):\r\n        if self.small_size > self.large_size + 1:\r\n            heappush(self.large, -heappop(self.small))\r\n            self.small_size -= 1\r\n            self.large_size += 1\r\n            self.prune(self.small)\r\n        elif self.small_size < self.large_size:\r\n            heappush(self.small, -heappop(self.large))\r\n            self.large_size -= 1\r\n            self.small_size += 1\r\n            self.prune(self.large)\r\n\r\n\r\nclass Solution:\r\n    def medianSlidingWindow(self, nums: List[int], k: int) -> List[float]:\r\n        finder = MedianFinder(k)\r\n        for x in nums[:k]:\r\n            finder.add_num(x)\r\n        ans = [finder.find_median()]\r\n        for i in range(k, len(nums)):\r\n            finder.add_num(nums[i])\r\n            finder.remove_num(nums[i - k])\r\n            ans.append(finder.find_median())\r\n        return ans",
+    "problemId": 480,
+    "title": "Sliding Window Median",
+    "problemUrl": "https://leetcode.com/problems/sliding-window-median/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0480.Sliding Window Median/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0480.Sliding Window Median/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0480.Sliding Window Median/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0480.Sliding Window Median/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0480.Sliding Window Median/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0480.Sliding Window Median/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0480.Sliding Window Median/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0480.Sliding Window Median/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0480.Sliding Window Median/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0480.Sliding Window Median/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

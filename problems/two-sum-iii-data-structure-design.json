@@ -1,0 +1,33 @@
+{
+    "problemName": "two-sum-iii-data-structure-design",
+    "language": "python3",
+    "code": "class TwoSum:\r\n\r\n    def __init__(self):\r\n        self.cnt = defaultdict(int)\r\n\r\n    def add(self, number: int) -> None:\r\n        self.cnt[number] += 1\r\n\r\n    def find(self, value: int) -> bool:\r\n        for x, v in self.cnt.items():\r\n            y = value - x\r\n            if y in self.cnt and (x != y or v > 1):\r\n                return True\r\n        return False\r\n\r\n\r\n# Your TwoSum object will be instantiated and called as such:\r\n# obj = TwoSum()\r\n# obj.add(number)\r\n# param_2 = obj.find(value)",
+    "problemId": 170,
+    "title": "Two Sum III - Data structure design",
+    "problemUrl": "https://leetcode.com/problems/two-sum-iii-data-structure-design/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0170.Two Sum III - Data structure design/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0170.Two Sum III - Data structure design/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0170.Two Sum III - Data structure design/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0170.Two Sum III - Data structure design/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0170.Two Sum III - Data structure design/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

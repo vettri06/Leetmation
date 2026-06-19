@@ -1,0 +1,38 @@
+{
+    "problemName": "set-intersection-size-at-least-two",
+    "language": "python3",
+    "code": "class Solution:\r\n    def intersectionSizeTwo(self, intervals: List[List[int]]) -> int:\r\n        intervals.sort(key=lambda x: (x[1], -x[0]))\r\n        s = e = -1\r\n        ans = 0\r\n        for a, b in intervals:\r\n            if a <= s:\r\n                continue\r\n            if a > e:\r\n                ans += 2\r\n                s, e = b - 1, b\r\n            else:\r\n                ans += 1\r\n                s, e = e, b\r\n        return ans",
+    "problemId": 757,
+    "title": "Set Intersection Size At Least Two",
+    "problemUrl": "https://leetcode.com/problems/set-intersection-size-at-least-two/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0757.Set Intersection Size At Least Two/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0757.Set Intersection Size At Least Two/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0757.Set Intersection Size At Least Two/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0757.Set Intersection Size At Least Two/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0757.Set Intersection Size At Least Two/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0757.Set Intersection Size At Least Two/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

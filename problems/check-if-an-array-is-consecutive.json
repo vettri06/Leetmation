@@ -1,0 +1,38 @@
+{
+    "problemName": "check-if-an-array-is-consecutive",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isConsecutive(self, nums: List[int]) -> bool:\r\n        mi, mx = min(nums), max(nums)\r\n        return len(set(nums)) == mx - mi + 1 == len(nums)",
+    "problemId": 2229,
+    "title": "Check if an Array Is Consecutive",
+    "problemUrl": "https://leetcode.com/problems/check-if-an-array-is-consecutive/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2229.Check if an Array Is Consecutive/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2229.Check if an Array Is Consecutive/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2229.Check if an Array Is Consecutive/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2229.Check if an Array Is Consecutive/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2229.Check if an Array Is Consecutive/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2229.Check if an Array Is Consecutive/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

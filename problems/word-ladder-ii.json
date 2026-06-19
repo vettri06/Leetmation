@@ -1,0 +1,28 @@
+{
+    "problemName": "word-ladder-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findLadders(\r\n        self, beginWord: str, endWord: str, wordList: List[str]\r\n    ) -> List[List[str]]:\r\n        def dfs(path, cur):\r\n            if cur == beginWord:\r\n                ans.append(path[::-1])\r\n                return\r\n            for precursor in prev[cur]:\r\n                path.append(precursor)\r\n                dfs(path, precursor)\r\n                path.pop()\r\n\r\n        ans = []\r\n        words = set(wordList)\r\n        if endWord not in words:\r\n            return ans\r\n        words.discard(beginWord)\r\n        dist = {beginWord: 0}\r\n        prev = defaultdict(set)\r\n        q = deque([beginWord])\r\n        found = False\r\n        step = 0\r\n        while q and not found:\r\n            step += 1\r\n            for i in range(len(q), 0, -1):\r\n                p = q.popleft()\r\n                s = list(p)\r\n                for i in range(len(s)):\r\n                    ch = s[i]\r\n                    for j in range(26):\r\n                        s[i] = chr(ord('a') + j)\r\n                        t = ''.join(s)\r\n                        if dist.get(t, 0) == step:\r\n                            prev[t].add(p)\r\n                        if t not in words:\r\n                            continue\r\n                        prev[t].add(p)\r\n                        words.discard(t)\r\n                        q.append(t)\r\n                        dist[t] = step\r\n                        if endWord == t:\r\n                            found = True\r\n                    s[i] = ch\r\n        if found:\r\n            path = [endWord]\r\n            dfs(path, endWord)\r\n        return ans",
+    "problemId": 126,
+    "title": "Word Ladder II",
+    "problemUrl": "https://leetcode.com/problems/word-ladder-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0126.Word Ladder II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0126.Word Ladder II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0126.Word Ladder II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0126.Word Ladder II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

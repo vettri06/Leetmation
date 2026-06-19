@@ -1,0 +1,38 @@
+{
+    "problemName": "convert-a-number-to-hexadecimal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def toHex(self, num: int) -> str:\r\n        if num == 0:\r\n            return '0'\r\n        chars = '0123456789abcdef'\r\n        s = []\r\n        for i in range(7, -1, -1):\r\n            x = (num >> (4 * i)) & 0xF\r\n            if s or x != 0:\r\n                s.append(chars[x])\r\n        return ''.join(s)",
+    "problemId": 405,
+    "title": "Convert a Number to Hexadecimal",
+    "problemUrl": "https://leetcode.com/problems/convert-a-number-to-hexadecimal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0405.Convert a Number to Hexadecimal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0405.Convert a Number to Hexadecimal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0405.Convert a Number to Hexadecimal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0405.Convert a Number to Hexadecimal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0405.Convert a Number to Hexadecimal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0405.Convert a Number to Hexadecimal/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

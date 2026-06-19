@@ -1,0 +1,38 @@
+{
+    "problemName": "constructing-two-increasing-arrays",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minLargest(self, nums1: List[int], nums2: List[int]) -> int:\r\n        def nxt(x: int, y: int) -> int:\r\n            return x + 1 if (x & 1 ^ y) == 1 else x + 2\r\n\r\n        m, n = len(nums1), len(nums2)\r\n        f = [[0] * (n + 1) for _ in range(m + 1)]\r\n        for i, x in enumerate(nums1, 1):\r\n            f[i][0] = nxt(f[i - 1][0], x)\r\n        for j, y in enumerate(nums2, 1):\r\n            f[0][j] = nxt(f[0][j - 1], y)\r\n        for i, x in enumerate(nums1, 1):\r\n            for j, y in enumerate(nums2, 1):\r\n                f[i][j] = min(nxt(f[i - 1][j], x), nxt(f[i][j - 1], y))\r\n        return f[m][n]",
+    "problemId": 3269,
+    "title": "Constructing Two Increasing Arrays",
+    "problemUrl": "https://leetcode.com/problems/constructing-two-increasing-arrays/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3269.Constructing Two Increasing Arrays/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3269.Constructing Two Increasing Arrays/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3269.Constructing Two Increasing Arrays/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3269.Constructing Two Increasing Arrays/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3269.Constructing Two Increasing Arrays/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3269.Constructing Two Increasing Arrays/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

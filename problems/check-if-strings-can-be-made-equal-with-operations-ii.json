@@ -1,0 +1,43 @@
+{
+    "problemName": "check-if-strings-can-be-made-equal-with-operations-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def checkStrings(self, s1: str, s2: str) -> bool:\r\n        return Counter(s1[::2]) == Counter(s2[::2]) and Counter(s1[1::2]) == Counter(\r\n            s2[1::2]\r\n        )",
+    "problemId": 2840,
+    "title": "Check if Strings Can be Made Equal With Operations II",
+    "problemUrl": "https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2840.Check if Strings Can be Made Equal With Operations II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2840.Check if Strings Can be Made Equal With Operations II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2840.Check if Strings Can be Made Equal With Operations II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2840.Check if Strings Can be Made Equal With Operations II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2840.Check if Strings Can be Made Equal With Operations II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2840.Check if Strings Can be Made Equal With Operations II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2840.Check if Strings Can be Made Equal With Operations II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

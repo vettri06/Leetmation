@@ -1,0 +1,38 @@
+{
+    "problemName": "moving-stones-until-consecutive",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numMovesStones(self, a: int, b: int, c: int) -> List[int]:\r\n        x, z = min(a, b, c), max(a, b, c)\r\n        y = a + b + c - x - z\r\n        mi = mx = 0\r\n        if z - x > 2:\r\n            mi = 1 if y - x < 3 or z - y < 3 else 2\r\n            mx = z - x - 2\r\n        return [mi, mx]",
+    "problemId": 1033,
+    "title": "Moving Stones Until Consecutive",
+    "problemUrl": "https://leetcode.com/problems/moving-stones-until-consecutive/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1033.Moving Stones Until Consecutive/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1033.Moving Stones Until Consecutive/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1033.Moving Stones Until Consecutive/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1033.Moving Stones Until Consecutive/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1033.Moving Stones Until Consecutive/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1033.Moving Stones Until Consecutive/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

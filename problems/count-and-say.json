@@ -1,0 +1,53 @@
+{
+    "problemName": "count-and-say",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countAndSay(self, n: int) -> str:\r\n        s = '1'\r\n        for _ in range(n - 1):\r\n            i = 0\r\n            t = []\r\n            while i < len(s):\r\n                j = i\r\n                while j < len(s) and s[j] == s[i]:\r\n                    j += 1\r\n                t.append(str(j - i))\r\n                t.append(str(s[i]))\r\n                i = j\r\n            s = ''.join(t)\r\n        return s",
+    "problemId": 38,
+    "title": "Count and Say",
+    "problemUrl": "https://leetcode.com/problems/count-and-say/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0038.Count and Say/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0038.Count and Say/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0038.Count and Say/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0038.Count and Say/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0038.Count and Say/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0038.Count and Say/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0038.Count and Say/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0038.Count and Say/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0038.Count and Say/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

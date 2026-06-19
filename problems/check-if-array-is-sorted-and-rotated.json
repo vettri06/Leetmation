@@ -1,0 +1,48 @@
+{
+    "problemName": "check-if-array-is-sorted-and-rotated",
+    "language": "python3",
+    "code": "class Solution:\r\n    def check(self, nums: List[int]) -> bool:\r\n        return sum(nums[i - 1] > x for i, x in enumerate(nums)) <= 1",
+    "problemId": 1752,
+    "title": "Check if Array Is Sorted and Rotated",
+    "problemUrl": "https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1752.Check if Array Is Sorted and Rotated/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1752.Check if Array Is Sorted and Rotated/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1752.Check if Array Is Sorted and Rotated/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1752.Check if Array Is Sorted and Rotated/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1752.Check if Array Is Sorted and Rotated/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1752.Check if Array Is Sorted and Rotated/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1752.Check if Array Is Sorted and Rotated/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1752.Check if Array Is Sorted and Rotated/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

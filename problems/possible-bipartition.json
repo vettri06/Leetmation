@@ -1,0 +1,63 @@
+{
+    "problemName": "possible-bipartition",
+    "language": "python3",
+    "code": "class Solution:\r\n    def possibleBipartition(self, n: int, dislikes: List[List[int]]) -> bool:\r\n        def dfs(i, c):\r\n            color[i] = c\r\n            for j in g[i]:\r\n                if color[j] == c:\r\n                    return False\r\n                if color[j] == 0 and not dfs(j, 3 - c):\r\n                    return False\r\n            return True\r\n\r\n        g = defaultdict(list)\r\n        color = [0] * n\r\n        for a, b in dislikes:\r\n            a, b = a - 1, b - 1\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n        return all(c or dfs(i, 1) for i, c in enumerate(color))",
+    "problemId": 886,
+    "title": "Possible Bipartition",
+    "problemUrl": "https://leetcode.com/problems/possible-bipartition/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0886.Possible Bipartition/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0886.Possible Bipartition/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0886.Possible Bipartition/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0886.Possible Bipartition/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0886.Possible Bipartition/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0886.Possible Bipartition/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0886.Possible Bipartition/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0886.Possible Bipartition/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0886.Possible Bipartition/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0886.Possible Bipartition/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0886.Possible Bipartition/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

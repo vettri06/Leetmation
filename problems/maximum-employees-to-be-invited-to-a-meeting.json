@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-employees-to-be-invited-to-a-meeting",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumInvitations(self, favorite: List[int]) -> int:\r\n        def max_cycle(fa: List[int]) -> int:\r\n            n = len(fa)\r\n            vis = [False] * n\r\n            ans = 0\r\n            for i in range(n):\r\n                if vis[i]:\r\n                    continue\r\n                cycle = []\r\n                j = i\r\n                while not vis[j]:\r\n                    cycle.append(j)\r\n                    vis[j] = True\r\n                    j = fa[j]\r\n                for k, v in enumerate(cycle):\r\n                    if v == j:\r\n                        ans = max(ans, len(cycle) - k)\r\n                        break\r\n            return ans\r\n\r\n        def topological_sort(fa: List[int]) -> int:\r\n            n = len(fa)\r\n            indeg = [0] * n\r\n            dist = [1] * n\r\n            for v in fa:\r\n                indeg[v] += 1\r\n            q = deque(i for i, v in enumerate(indeg) if v == 0)\r\n            while q:\r\n                i = q.popleft()\r\n                dist[fa[i]] = max(dist[fa[i]], dist[i] + 1)\r\n                indeg[fa[i]] -= 1\r\n                if indeg[fa[i]] == 0:\r\n                    q.append(fa[i])\r\n            return sum(dist[i] for i, v in enumerate(fa) if i == fa[fa[i]])\r\n\r\n        return max(max_cycle(favorite), topological_sort(favorite))",
+    "problemId": 2127,
+    "title": "Maximum Employees to Be Invited to a Meeting",
+    "problemUrl": "https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2127.Maximum Employees to Be Invited to a Meeting/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2127.Maximum Employees to Be Invited to a Meeting/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2127.Maximum Employees to Be Invited to a Meeting/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2127.Maximum Employees to Be Invited to a Meeting/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2127.Maximum Employees to Be Invited to a Meeting/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2127.Maximum Employees to Be Invited to a Meeting/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

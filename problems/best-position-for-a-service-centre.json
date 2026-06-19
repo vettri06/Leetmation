@@ -1,0 +1,38 @@
+{
+    "problemName": "best-position-for-a-service-centre",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getMinDistSum(self, positions: List[List[int]]) -> float:\r\n        n = len(positions)\r\n        x = y = 0\r\n        for x1, y1 in positions:\r\n            x += x1\r\n            y += y1\r\n        x, y = x / n, y / n\r\n        decay = 0.999\r\n        eps = 1e-6\r\n        alpha = 0.5\r\n        while 1:\r\n            grad_x = grad_y = 0\r\n            dist = 0\r\n            for x1, y1 in positions:\r\n                a = x - x1\r\n                b = y - y1\r\n                c = sqrt(a * a + b * b)\r\n                grad_x += a / (c + 1e-8)\r\n                grad_y += b / (c + 1e-8)\r\n                dist += c\r\n            dx = grad_x * alpha\r\n            dy = grad_y * alpha\r\n            x -= dx\r\n            y -= dy\r\n            alpha *= decay\r\n            if abs(dx) <= eps and abs(dy) <= eps:\r\n                return dist",
+    "problemId": 1515,
+    "title": "Best Position for a Service Centre",
+    "problemUrl": "https://leetcode.com/problems/best-position-for-a-service-centre/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1515.Best Position for a Service Centre/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1515.Best Position for a Service Centre/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1515.Best Position for a Service Centre/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1515.Best Position for a Service Centre/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1515.Best Position for a Service Centre/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1515.Best Position for a Service Centre/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

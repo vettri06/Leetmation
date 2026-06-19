@@ -1,0 +1,38 @@
+{
+    "problemName": "first-matching-character-from-both-ends",
+    "language": "python3",
+    "code": "class Solution:\r\n    def firstMatchingIndex(self, s: str) -> int:\r\n        for i in range(len(s) // 2 + 1):\r\n            if s[i] == s[-i - 1]:\r\n                return i\r\n        return -1",
+    "problemId": 3884,
+    "title": "First Matching Character From Both Ends",
+    "problemUrl": "https://leetcode.com/problems/first-matching-character-from-both-ends/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3884.First Matching Character From Both Ends/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3884.First Matching Character From Both Ends/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3884.First Matching Character From Both Ends/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3884.First Matching Character From Both Ends/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3884.First Matching Character From Both Ends/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3884.First Matching Character From Both Ends/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "angles-of-a-triangle",
+    "language": "python3",
+    "code": "class Solution:\r\n    def internalAngles(self, sides: list[int]) -> list[float]:\r\n        sides.sort()\r\n        a, b, c = sides\r\n        if a + b <= c:\r\n            return []\r\n        A = degrees(acos((b**2 + c**2 - a**2) / (2 * b * c)))\r\n        B = degrees(acos((a**2 + c**2 - b**2) / (2 * a * c)))\r\n        C = 180 - A - B\r\n        return [A, B, C]",
+    "problemId": 3899,
+    "title": "Angles of a Triangle",
+    "problemUrl": "https://leetcode.com/problems/angles-of-a-triangle/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3899.Angles of a Triangle/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3899.Angles of a Triangle/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3899.Angles of a Triangle/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3899.Angles of a Triangle/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3899.Angles of a Triangle/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3899.Angles of a Triangle/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

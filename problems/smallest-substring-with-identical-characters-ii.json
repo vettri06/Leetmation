@@ -1,0 +1,38 @@
+{
+    "problemName": "smallest-substring-with-identical-characters-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minLength(self, s: str, numOps: int) -> int:\r\n        def check(m: int) -> bool:\r\n            cnt = 0\r\n            if m == 1:\r\n                t = \"01\"\r\n                cnt = sum(c == t[i & 1] for i, c in enumerate(s))\r\n                cnt = min(cnt, n - cnt)\r\n            else:\r\n                k = 0\r\n                for i, c in enumerate(s):\r\n                    k += 1\r\n                    if i == len(s) - 1 or c != s[i + 1]:\r\n                        cnt += k // (m + 1)\r\n                        k = 0\r\n            return cnt <= numOps\r\n\r\n        n = len(s)\r\n        return bisect_left(range(n), True, lo=1, key=check)",
+    "problemId": 3399,
+    "title": "Smallest Substring With Identical Characters II",
+    "problemUrl": "https://leetcode.com/problems/smallest-substring-with-identical-characters-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3399.Smallest Substring With Identical Characters II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3399.Smallest Substring With Identical Characters II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3399.Smallest Substring With Identical Characters II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3399.Smallest Substring With Identical Characters II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3399.Smallest Substring With Identical Characters II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3399.Smallest Substring With Identical Characters II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

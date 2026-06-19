@@ -1,0 +1,33 @@
+{
+    "problemName": "query-kth-smallest-trimmed-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestTrimmedNumbers(\r\n        self, nums: List[str], queries: List[List[int]]\r\n    ) -> List[int]:\r\n        ans = []\r\n        for k, trim in queries:\r\n            t = sorted((v[-trim:], i) for i, v in enumerate(nums))\r\n            ans.append(t[k - 1][1])\r\n        return ans",
+    "problemId": 2343,
+    "title": "Query Kth Smallest Trimmed Number",
+    "problemUrl": "https://leetcode.com/problems/query-kth-smallest-trimmed-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2343.Query Kth Smallest Trimmed Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2343.Query Kth Smallest Trimmed Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2343.Query Kth Smallest Trimmed Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2343.Query Kth Smallest Trimmed Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2343.Query Kth Smallest Trimmed Number/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

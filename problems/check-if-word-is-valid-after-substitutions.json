@@ -1,0 +1,38 @@
+{
+    "problemName": "check-if-word-is-valid-after-substitutions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def isValid(self, s: str) -> bool:\r\n        if len(s) % 3:\r\n            return False\r\n        t = []\r\n        for c in s:\r\n            t.append(c)\r\n            if ''.join(t[-3:]) == 'abc':\r\n                t[-3:] = []\r\n        return not t",
+    "problemId": 1003,
+    "title": "Check If Word Is Valid After Substitutions",
+    "problemUrl": "https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1003.Check If Word Is Valid After Substitutions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1003.Check If Word Is Valid After Substitutions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1003.Check If Word Is Valid After Substitutions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1003.Check If Word Is Valid After Substitutions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1003.Check If Word Is Valid After Substitutions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1003.Check If Word Is Valid After Substitutions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

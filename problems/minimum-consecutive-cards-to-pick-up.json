@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-consecutive-cards-to-pick-up",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumCardPickup(self, cards: List[int]) -> int:\r\n        last = {}\r\n        ans = inf\r\n        for i, x in enumerate(cards):\r\n            if x in last:\r\n                ans = min(ans, i - last[x] + 1)\r\n            last[x] = i\r\n        return -1 if ans == inf else ans",
+    "problemId": 2260,
+    "title": "Minimum Consecutive Cards to Pick Up",
+    "problemUrl": "https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2260.Minimum Consecutive Cards to Pick Up/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2260.Minimum Consecutive Cards to Pick Up/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2260.Minimum Consecutive Cards to Pick Up/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2260.Minimum Consecutive Cards to Pick Up/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2260.Minimum Consecutive Cards to Pick Up/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2260.Minimum Consecutive Cards to Pick Up/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

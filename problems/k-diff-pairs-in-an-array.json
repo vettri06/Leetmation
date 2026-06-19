@@ -1,0 +1,43 @@
+{
+    "problemName": "k-diff-pairs-in-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findPairs(self, nums: List[int], k: int) -> int:\r\n        ans = set()\r\n        vis = set()\r\n        for x in nums:\r\n            if x - k in vis:\r\n                ans.add(x - k)\r\n            if x + k in vis:\r\n                ans.add(x)\r\n            vis.add(x)\r\n        return len(ans)",
+    "problemId": 532,
+    "title": "K-diff Pairs in an Array",
+    "problemUrl": "https://leetcode.com/problems/k-diff-pairs-in-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0532.K-diff Pairs in an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0532.K-diff Pairs in an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0532.K-diff Pairs in an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0532.K-diff Pairs in an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0532.K-diff Pairs in an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0532.K-diff Pairs in an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0532.K-diff Pairs in an Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "count-equal-and-divisible-pairs-in-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countPairs(self, nums: List[int], k: int) -> int:\r\n        ans = 0\r\n        for j in range(1, len(nums)):\r\n            for i, x in enumerate(nums[:j]):\r\n                ans += int(x == nums[j] and i * j % k == 0)\r\n        return ans",
+    "problemId": 2176,
+    "title": "Count Equal and Divisible Pairs in an Array",
+    "problemUrl": "https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2176.Count Equal and Divisible Pairs in an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2176.Count Equal and Divisible Pairs in an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2176.Count Equal and Divisible Pairs in an Array/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2176.Count Equal and Divisible Pairs in an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2176.Count Equal and Divisible Pairs in an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2176.Count Equal and Divisible Pairs in an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2176.Count Equal and Divisible Pairs in an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2176.Count Equal and Divisible Pairs in an Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

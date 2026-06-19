@@ -1,0 +1,43 @@
+{
+    "problemName": "number-of-different-integers-in-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numDifferentIntegers(self, word: str) -> int:\r\n        s = set()\r\n        i, n = 0, len(word)\r\n        while i < n:\r\n            if word[i].isdigit():\r\n                while i < n and word[i] == '0':\r\n                    i += 1\r\n                j = i\r\n                while j < n and word[j].isdigit():\r\n                    j += 1\r\n                s.add(word[i:j])\r\n                i = j\r\n            i += 1\r\n        return len(s)",
+    "problemId": 1805,
+    "title": "Number of Different Integers in a String",
+    "problemUrl": "https://leetcode.com/problems/number-of-different-integers-in-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1805.Number of Different Integers in a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1805.Number of Different Integers in a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1805.Number of Different Integers in a String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1805.Number of Different Integers in a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1805.Number of Different Integers in a String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1805.Number of Different Integers in a String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1805.Number of Different Integers in a String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "good-indices-in-a-digit-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def goodIndices(self, s: str) -> List[int]:\r\n        ans = []\r\n        for i in range(len(s)):\r\n            t = str(i)\r\n            k = len(t)\r\n            if s[i + 1 - k : i + 1] == t:\r\n                ans.append(i)\r\n        return ans",
+    "problemId": 3817,
+    "title": "Good Indices in a Digit String",
+    "problemUrl": "https://leetcode.com/problems/good-indices-in-a-digit-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3817.Good Indices in a Digit String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3817.Good Indices in a Digit String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3817.Good Indices in a Digit String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3817.Good Indices in a Digit String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3817.Good Indices in a Digit String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3817.Good Indices in a Digit String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

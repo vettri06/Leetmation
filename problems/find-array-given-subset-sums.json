@@ -1,0 +1,53 @@
+{
+    "problemName": "find-array-given-subset-sums",
+    "language": "python3",
+    "code": "class Solution:\r\n    def recoverArray(self, n: int, sums: List[int]) -> List[int]:\r\n        m = -min(sums)\r\n        sl = SortedList(x + m for x in sums)\r\n        sl.remove(0)\r\n        ans = [sl[0]]\r\n        for i in range(1, n):\r\n            for j in range(1 << i):\r\n                if j >> (i - 1) & 1:\r\n                    s = sum(ans[k] for k in range(i) if j >> k & 1)\r\n                    sl.remove(s)\r\n            ans.append(sl[0])\r\n        for i in range(1 << n):\r\n            s = sum(ans[j] for j in range(n) if i >> j & 1)\r\n            if s == m:\r\n                for j in range(n):\r\n                    if i >> j & 1:\r\n                        ans[j] *= -1\r\n                break\r\n        return ans",
+    "problemId": 1982,
+    "title": "Find Array Given Subset Sums",
+    "problemUrl": "https://leetcode.com/problems/find-array-given-subset-sums/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1982.Find Array Given Subset Sums/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1982.Find Array Given Subset Sums/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1982.Find Array Given Subset Sums/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1982.Find Array Given Subset Sums/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1982.Find Array Given Subset Sums/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1982.Find Array Given Subset Sums/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1982.Find Array Given Subset Sums/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1982.Find Array Given Subset Sums/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1982.Find Array Given Subset Sums/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

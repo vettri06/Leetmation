@@ -1,0 +1,38 @@
+{
+    "problemName": "sum-of-matrix-after-queries",
+    "language": "python3",
+    "code": "class Solution:\r\n    def matrixSumQueries(self, n: int, queries: List[List[int]]) -> int:\r\n        row = set()\r\n        col = set()\r\n        ans = 0\r\n        for t, i, v in queries[::-1]:\r\n            if t == 0:\r\n                if i not in row:\r\n                    ans += v * (n - len(col))\r\n                    row.add(i)\r\n            else:\r\n                if i not in col:\r\n                    ans += v * (n - len(row))\r\n                    col.add(i)\r\n        return ans",
+    "problemId": 2718,
+    "title": "Sum of Matrix After Queries",
+    "problemUrl": "https://leetcode.com/problems/sum-of-matrix-after-queries/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2718.Sum of Matrix After Queries/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2718.Sum of Matrix After Queries/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2718.Sum of Matrix After Queries/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2718.Sum of Matrix After Queries/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2718.Sum of Matrix After Queries/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2718.Sum of Matrix After Queries/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

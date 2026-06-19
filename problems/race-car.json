@@ -1,0 +1,33 @@
+{
+    "problemName": "race-car",
+    "language": "python3",
+    "code": "class Solution:\r\n    def racecar(self, target: int) -> int:\r\n        dp = [0] * (target + 1)\r\n        for i in range(1, target + 1):\r\n            k = i.bit_length()\r\n            if i == 2**k - 1:\r\n                dp[i] = k\r\n                continue\r\n            dp[i] = dp[2**k - 1 - i] + k + 1\r\n            for j in range(k - 1):\r\n                dp[i] = min(dp[i], dp[i - (2 ** (k - 1) - 2**j)] + k - 1 + j + 2)\r\n        return dp[target]",
+    "problemId": 818,
+    "title": "Race Car",
+    "problemUrl": "https://leetcode.com/problems/race-car/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0818.Race Car/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0818.Race Car/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0818.Race Car/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0818.Race Car/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0818.Race Car/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

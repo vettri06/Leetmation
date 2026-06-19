@@ -1,0 +1,33 @@
+{
+    "problemName": "read-n-characters-given-read4-ii-call-multiple-times",
+    "language": "python3",
+    "code": "# The read4 API is already defined for you.\r\n# def read4(buf4: List[str]) -> int:\r\n\r\n\r\nclass Solution:\r\n    def __init__(self):\r\n        self.buf4 = [None] * 4\r\n        self.i = self.size = 0\r\n\r\n    def read(self, buf: List[str], n: int) -> int:\r\n        j = 0\r\n        while j < n:\r\n            if self.i == self.size:\r\n                self.size = read4(self.buf4)\r\n                self.i = 0\r\n                if self.size == 0:\r\n                    break\r\n            while j < n and self.i < self.size:\r\n                buf[j] = self.buf4[self.i]\r\n                self.i += 1\r\n                j += 1\r\n        return j",
+    "problemId": 158,
+    "title": "Read N Characters Given read4 II - Call Multiple Times",
+    "problemUrl": "https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0158.Read N Characters Given read4 II - Call Multiple Times/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0158.Read N Characters Given read4 II - Call Multiple Times/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0158.Read N Characters Given read4 II - Call Multiple Times/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0158.Read N Characters Given read4 II - Call Multiple Times/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0158.Read N Characters Given read4 II - Call Multiple Times/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-length-of-a-concatenated-string-with-unique-characters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxLength(self, arr: List[str]) -> int:\r\n        s = [0]\r\n        for t in arr:\r\n            x = 0\r\n            for b in map(lambda c: ord(c) - 97, t):\r\n                if x >> b & 1:\r\n                    x = 0\r\n                    break\r\n                x |= 1 << b\r\n            if x:\r\n                s.extend((x | y) for y in s if (x & y) == 0)\r\n        return max(x.bit_count() for x in s)",
+    "problemId": 1239,
+    "title": "Maximum Length of a Concatenated String with Unique Characters",
+    "problemUrl": "https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1239.Maximum Length of a Concatenated String with Unique Characters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1239.Maximum Length of a Concatenated String with Unique Characters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1239.Maximum Length of a Concatenated String with Unique Characters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1239.Maximum Length of a Concatenated String with Unique Characters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1239.Maximum Length of a Concatenated String with Unique Characters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1239.Maximum Length of a Concatenated String with Unique Characters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-swaps-to-make-sequences-increasing",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minSwap(self, nums1: List[int], nums2: List[int]) -> int:\r\n        a, b = 0, 1\r\n        for i in range(1, len(nums1)):\r\n            x, y = a, b\r\n            if nums1[i - 1] >= nums1[i] or nums2[i - 1] >= nums2[i]:\r\n                a, b = y, x + 1\r\n            else:\r\n                b = y + 1\r\n                if nums1[i - 1] < nums2[i] and nums2[i - 1] < nums1[i]:\r\n                    a, b = min(a, y), min(b, x + 1)\r\n        return min(a, b)",
+    "problemId": 801,
+    "title": "Minimum Swaps To Make Sequences Increasing",
+    "problemUrl": "https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0801.Minimum Swaps To Make Sequences Increasing/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0801.Minimum Swaps To Make Sequences Increasing/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0801.Minimum Swaps To Make Sequences Increasing/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0801.Minimum Swaps To Make Sequences Increasing/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0801.Minimum Swaps To Make Sequences Increasing/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0801.Minimum Swaps To Make Sequences Increasing/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

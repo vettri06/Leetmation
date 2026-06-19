@@ -1,0 +1,38 @@
+{
+    "problemName": "count-connected-subgraphs-with-even-node-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def evenSumSubgraphs(self, nums: list[int], edges: list[list[int]]) -> int:\r\n        n = len(nums)\r\n        g = [[] for _ in range(n)]\r\n        for u, v in edges:\r\n            g[u].append(v)\r\n            g[v].append(u)\r\n        m = (1 << n) - 1\r\n        ans = 0\r\n        for sub in range(1, m + 1):\r\n            s = sum(x for i, x in enumerate(nums) if sub >> i & 1)\r\n            if s % 2:\r\n                continue\r\n            vis = m ^ sub\r\n\r\n            def dfs(u: int) -> None:\r\n                nonlocal vis\r\n                vis |= 1 << u\r\n                for v in g[u]:\r\n                    if (vis >> v & 1) == 0:\r\n                        dfs(v)\r\n\r\n            dfs(sub.bit_length() - 1)\r\n            if vis == m:\r\n                ans += 1\r\n        return ans",
+    "problemId": 3910,
+    "title": "Count Connected Subgraphs with Even Node Sum",
+    "problemUrl": "https://leetcode.com/problems/count-connected-subgraphs-with-even-node-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3910.Count Connected Subgraphs with Even Node Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3910.Count Connected Subgraphs with Even Node Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3910.Count Connected Subgraphs with Even Node Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3910.Count Connected Subgraphs with Even Node Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3910.Count Connected Subgraphs with Even Node Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3910.Count Connected Subgraphs with Even Node Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

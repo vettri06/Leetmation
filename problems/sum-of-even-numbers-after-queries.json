@@ -1,0 +1,53 @@
+{
+    "problemName": "sum-of-even-numbers-after-queries",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumEvenAfterQueries(\r\n        self, nums: List[int], queries: List[List[int]]\r\n    ) -> List[int]:\r\n        s = sum(x for x in nums if x % 2 == 0)\r\n        ans = []\r\n        for v, i in queries:\r\n            if nums[i] % 2 == 0:\r\n                s -= nums[i]\r\n            nums[i] += v\r\n            if nums[i] % 2 == 0:\r\n                s += nums[i]\r\n            ans.append(s)\r\n        return ans",
+    "problemId": 985,
+    "title": "Sum of Even Numbers After Queries",
+    "problemUrl": "https://leetcode.com/problems/sum-of-even-numbers-after-queries/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0985.Sum of Even Numbers After Queries/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0985.Sum of Even Numbers After Queries/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0985.Sum of Even Numbers After Queries/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0985.Sum of Even Numbers After Queries/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0985.Sum of Even Numbers After Queries/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0985.Sum of Even Numbers After Queries/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0985.Sum of Even Numbers After Queries/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0985.Sum of Even Numbers After Queries/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0985.Sum of Even Numbers After Queries/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

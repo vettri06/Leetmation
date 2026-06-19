@@ -1,0 +1,33 @@
+{
+    "problemName": "find-the-k-sum-of-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def kSum(self, nums: List[int], k: int) -> int:\r\n        mx = 0\r\n        for i, x in enumerate(nums):\r\n            if x > 0:\r\n                mx += x\r\n            else:\r\n                nums[i] = -x\r\n        nums.sort()\r\n        h = [(0, 0)]\r\n        for _ in range(k - 1):\r\n            s, i = heappop(h)\r\n            if i < len(nums):\r\n                heappush(h, (s + nums[i], i + 1))\r\n                if i:\r\n                    heappush(h, (s + nums[i] - nums[i - 1], i + 1))\r\n        return mx - h[0][0]",
+    "problemId": 2386,
+    "title": "Find the K-Sum of an Array",
+    "problemUrl": "https://leetcode.com/problems/find-the-k-sum-of-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2386.Find the K-Sum of an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2386.Find the K-Sum of an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2386.Find the K-Sum of an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2386.Find the K-Sum of an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2386.Find the K-Sum of an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "problemName": "find-all-unique-email-domains",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_unique_email_domains(emails: pd.DataFrame) -> pd.DataFrame:\r\n    emails[\"email_domain\"] = emails[\"email\"].str.split(\"@\").str[-1]\r\n    emails = emails[emails[\"email\"].str.contains(\".com\")]\r\n    return (\r\n        emails.groupby(\"email_domain\")\r\n        .size()\r\n        .reset_index(name=\"count\")\r\n        .sort_values(by=\"email_domain\")\r\n    )",
+    "problemId": 3059,
+    "title": "Find All Unique Email Domains",
+    "problemUrl": "https://leetcode.com/problems/find-all-unique-email-domains/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3059.Find All Unique Email Domains/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3059.Find All Unique Email Domains/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3059.Find All Unique Email Domains/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

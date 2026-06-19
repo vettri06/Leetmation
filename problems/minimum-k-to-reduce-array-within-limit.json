@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-k-to-reduce-array-within-limit",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumK(self, nums: List[int]) -> int:\r\n        def check(k: int) -> bool:\r\n            t = 0\r\n            for x in nums:\r\n                t += (x + k - 1) // k\r\n            return t <= k * k\r\n\r\n        l, r = 1, 10**5\r\n        while l < r:\r\n            mid = (l + r) >> 1\r\n            if check(mid):\r\n                r = mid\r\n            else:\r\n                l = mid + 1\r\n        return l",
+    "problemId": 3824,
+    "title": "Minimum K to Reduce Array Within Limit",
+    "problemUrl": "https://leetcode.com/problems/minimum-k-to-reduce-array-within-limit/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3800-3899/3824.Minimum K to Reduce Array Within Limit/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3824.Minimum K to Reduce Array Within Limit/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3824.Minimum K to Reduce Array Within Limit/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3824.Minimum K to Reduce Array Within Limit/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3824.Minimum K to Reduce Array Within Limit/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3800-3899/3824.Minimum K to Reduce Array Within Limit/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

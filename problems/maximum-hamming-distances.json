@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-hamming-distances",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxHammingDistances(self, nums: List[int], m: int) -> List[int]:\r\n        dist = [-1] * (1 << m)\r\n        for x in nums:\r\n            dist[x] = 0\r\n        q = nums\r\n        k = 1\r\n        while q:\r\n            t = []\r\n            for x in q:\r\n                for i in range(m):\r\n                    y = x ^ (1 << i)\r\n                    if dist[y] == -1:\r\n                        t.append(y)\r\n                        dist[y] = k\r\n            q = t\r\n            k += 1\r\n        return [m - dist[x ^ ((1 << m) - 1)] for x in nums]",
+    "problemId": 3141,
+    "title": "Maximum Hamming Distances",
+    "problemUrl": "https://leetcode.com/problems/maximum-hamming-distances/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3141.Maximum Hamming Distances/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3141.Maximum Hamming Distances/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3141.Maximum Hamming Distances/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3141.Maximum Hamming Distances/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3141.Maximum Hamming Distances/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3141.Maximum Hamming Distances/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

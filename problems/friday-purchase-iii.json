@@ -1,0 +1,18 @@
+{
+    "problemName": "friday-purchase-iii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH RECURSIVE\r\n    T AS (\r\n        SELECT 1 AS week_of_month\r\n        UNION\r\n        SELECT week_of_month + 1\r\n        FROM T\r\n        WHERE week_of_month < 4\r\n    ),\r\n    M AS (\r\n        SELECT 'Premium' AS membership\r\n        UNION\r\n        SELECT 'VIP'\r\n    ),\r\n    P AS (\r\n        SELECT CEIL(DAYOFMONTH(purchase_date) / 7) AS week_of_month, membership, amount_spend\r\n        FROM\r\n            Purchases\r\n            JOIN Users USING (user_id)\r\n        WHERE DAYOFWEEK(purchase_date) = 6\r\n    )\r\nSELECT week_of_month, membership, IFNULL(SUM(amount_spend), 0) AS total_amount\r\nFROM\r\n    T\r\n    JOIN M\r\n    LEFT JOIN P USING (week_of_month, membership)\r\nGROUP BY 1, 2\r\nORDER BY 1, 2;",
+    "problemId": 3118,
+    "title": "Friday Purchase III",
+    "problemUrl": "https://leetcode.com/problems/friday-purchase-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3118.Friday Purchase III/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3118.Friday Purchase III/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

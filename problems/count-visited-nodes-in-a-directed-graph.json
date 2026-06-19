@@ -1,0 +1,38 @@
+{
+    "problemName": "count-visited-nodes-in-a-directed-graph",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countVisitedNodes(self, edges: List[int]) -> List[int]:\r\n        n = len(edges)\r\n        ans = [0] * n\r\n        vis = [0] * n\r\n        for i in range(n):\r\n            if not ans[i]:\r\n                cnt, j = 0, i\r\n                while not vis[j]:\r\n                    cnt += 1\r\n                    vis[j] = cnt\r\n                    j = edges[j]\r\n                cycle, total = 0, cnt + ans[j]\r\n                if not ans[j]:\r\n                    cycle = cnt - vis[j] + 1\r\n                    total = cnt\r\n                j = i\r\n                while not ans[j]:\r\n                    ans[j] = max(total, cycle)\r\n                    total -= 1\r\n                    j = edges[j]\r\n        return ans",
+    "problemId": 2876,
+    "title": "Count Visited Nodes in a Directed Graph",
+    "problemUrl": "https://leetcode.com/problems/count-visited-nodes-in-a-directed-graph/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2876.Count Visited Nodes in a Directed Graph/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2876.Count Visited Nodes in a Directed Graph/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2876.Count Visited Nodes in a Directed Graph/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2876.Count Visited Nodes in a Directed Graph/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2876.Count Visited Nodes in a Directed Graph/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2876.Count Visited Nodes in a Directed Graph/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

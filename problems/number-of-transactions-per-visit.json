@@ -1,0 +1,18 @@
+{
+    "problemName": "number-of-transactions-per-visit",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH RECURSIVE\r\n    S AS (\r\n        SELECT 0 AS n\r\n        UNION\r\n        SELECT n + 1\r\n        FROM S\r\n        WHERE\r\n            n < (\r\n                SELECT MAX(cnt)\r\n                FROM\r\n                    (\r\n                        SELECT COUNT(1) AS cnt\r\n                        FROM Transactions\r\n                        GROUP BY user_id, transaction_date\r\n                    ) AS t\r\n            )\r\n    ),\r\n    T AS (\r\n        SELECT v.user_id, visit_date, IFNULL(cnt, 0) AS cnt\r\n        FROM\r\n            Visits AS v\r\n            LEFT JOIN (\r\n                SELECT user_id, transaction_date, COUNT(1) AS cnt\r\n                FROM Transactions\r\n                GROUP BY 1, 2\r\n            ) AS t\r\n                ON v.user_id = t.user_id AND v.visit_date = t.transaction_date\r\n    )\r\nSELECT n AS transactions_count, COUNT(user_id) AS visits_count\r\nFROM\r\n    S AS s\r\n    LEFT JOIN T AS t ON s.n = t.cnt\r\nGROUP BY n\r\nORDER BY n;",
+    "problemId": 1336,
+    "title": "Number of Transactions per Visit",
+    "problemUrl": "https://leetcode.com/problems/number-of-transactions-per-visit/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1336.Number of Transactions per Visit/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1336.Number of Transactions per Visit/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

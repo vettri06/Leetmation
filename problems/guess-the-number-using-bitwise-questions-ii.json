@@ -1,0 +1,33 @@
+{
+    "problemName": "guess-the-number-using-bitwise-questions-ii",
+    "language": "python3",
+    "code": "# Definition of commonBits API.\r\n# def commonBits(num: int) -> int:\r\n\r\n\r\nclass Solution:\r\n    def findNumber(self) -> int:\r\n        n = 0\r\n        for i in range(32):\r\n            count1 = commonBits(1 << i)\r\n            count2 = commonBits(1 << i)\r\n            if count1 > count2:\r\n                n |= 1 << i\r\n        return n",
+    "problemId": 3094,
+    "title": "Guess the Number Using Bitwise Questions II",
+    "problemUrl": "https://leetcode.com/problems/guess-the-number-using-bitwise-questions-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3094.Guess the Number Using Bitwise Questions II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3094.Guess the Number Using Bitwise Questions II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3094.Guess the Number Using Bitwise Questions II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3094.Guess the Number Using Bitwise Questions II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3094.Guess the Number Using Bitwise Questions II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "k-items-with-the-maximum-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def kItemsWithMaximumSum(\r\n        self, numOnes: int, numZeros: int, numNegOnes: int, k: int\r\n    ) -> int:\r\n        if numOnes >= k:\r\n            return k\r\n        if numZeros >= k - numOnes:\r\n            return numOnes\r\n        return numOnes - (k - numOnes - numZeros)",
+    "problemId": 2600,
+    "title": "K Items With the Maximum Sum",
+    "problemUrl": "https://leetcode.com/problems/k-items-with-the-maximum-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2600.K Items With the Maximum Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2600.K Items With the Maximum Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2600.K Items With the Maximum Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2600.K Items With the Maximum Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2600.K Items With the Maximum Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2600.K Items With the Maximum Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2600.K Items With the Maximum Sum/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2600.K Items With the Maximum Sum/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

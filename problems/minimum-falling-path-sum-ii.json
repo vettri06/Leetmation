@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-falling-path-sum-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minFallingPathSum(self, grid: List[List[int]]) -> int:\r\n        n = len(grid)\r\n        f = [0] * n\r\n        for row in grid:\r\n            g = row[:]\r\n            for i in range(n):\r\n                g[i] += min((f[j] for j in range(n) if j != i), default=0)\r\n            f = g\r\n        return min(f)",
+    "problemId": 1289,
+    "title": "Minimum Falling Path Sum II",
+    "problemUrl": "https://leetcode.com/problems/minimum-falling-path-sum-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1289.Minimum Falling Path Sum II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1289.Minimum Falling Path Sum II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1289.Minimum Falling Path Sum II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1289.Minimum Falling Path Sum II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1289.Minimum Falling Path Sum II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1289.Minimum Falling Path Sum II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

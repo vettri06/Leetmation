@@ -1,0 +1,38 @@
+{
+    "problemName": "count-numbers-with-unique-digits",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countNumbersWithUniqueDigits(self, n: int) -> int:\r\n        @cache\r\n        def dfs(i: int, mask: int, lead: bool) -> int:\r\n            if i < 0:\r\n                return 1\r\n            ans = 0\r\n            for j in range(10):\r\n                if mask >> j & 1:\r\n                    continue\r\n                if lead and j == 0:\r\n                    ans += dfs(i - 1, mask, True)\r\n                else:\r\n                    ans += dfs(i - 1, mask | 1 << j, False)\r\n            return ans\r\n\r\n        return dfs(n - 1, 0, True)",
+    "problemId": 357,
+    "title": "Count Numbers with Unique Digits",
+    "problemUrl": "https://leetcode.com/problems/count-numbers-with-unique-digits/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0357.Count Numbers with Unique Digits/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0357.Count Numbers with Unique Digits/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0357.Count Numbers with Unique Digits/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0357.Count Numbers with Unique Digits/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0357.Count Numbers with Unique Digits/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0357.Count Numbers with Unique Digits/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

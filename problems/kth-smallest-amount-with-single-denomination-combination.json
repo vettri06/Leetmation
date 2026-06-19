@@ -1,0 +1,38 @@
+{
+    "problemName": "kth-smallest-amount-with-single-denomination-combination",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findKthSmallest(self, coins: List[int], k: int) -> int:\r\n        def check(mx: int) -> bool:\r\n            cnt = 0\r\n            for i in range(1, 1 << len(coins)):\r\n                v = 1\r\n                for j, x in enumerate(coins):\r\n                    if i >> j & 1:\r\n                        v = lcm(v, x)\r\n                        if v > mx:\r\n                            break\r\n                m = i.bit_count()\r\n                if m & 1:\r\n                    cnt += mx // v\r\n                else:\r\n                    cnt -= mx // v\r\n            return cnt >= k\r\n\r\n        return bisect_left(range(10**11), True, key=check)",
+    "problemId": 3116,
+    "title": "Kth Smallest Amount With Single Denomination Combination",
+    "problemUrl": "https://leetcode.com/problems/kth-smallest-amount-with-single-denomination-combination/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3116.Kth Smallest Amount With Single Denomination Combination/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3116.Kth Smallest Amount With Single Denomination Combination/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3116.Kth Smallest Amount With Single Denomination Combination/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3116.Kth Smallest Amount With Single Denomination Combination/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3116.Kth Smallest Amount With Single Denomination Combination/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3116.Kth Smallest Amount With Single Denomination Combination/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

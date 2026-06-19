@@ -1,0 +1,38 @@
+{
+    "problemName": "count-k-th-roots-in-a-range",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countKthRoots(self, l: int, r: int, k: int) -> int:\r\n        if k == 1:\r\n            return r - l + 1\r\n        ans = 0\r\n        for x in count():\r\n            y = x**k\r\n            if y > r:\r\n                break\r\n            if l <= y <= r:\r\n                ans += 1\r\n        return ans",
+    "problemId": 3932,
+    "title": "Count K-th Roots in a Range",
+    "problemUrl": "https://leetcode.com/problems/count-k-th-roots-in-a-range/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3932.Count K-th Roots in a Range/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3932.Count K-th Roots in a Range/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3932.Count K-th Roots in a Range/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3932.Count K-th Roots in a Range/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3932.Count K-th Roots in a Range/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3932.Count K-th Roots in a Range/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

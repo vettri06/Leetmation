@@ -1,0 +1,38 @@
+{
+    "problemName": "sum-of-distances-in-tree",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumOfDistancesInTree(self, n: int, edges: List[List[int]]) -> List[int]:\r\n        def dfs1(i: int, fa: int, d: int):\r\n            ans[0] += d\r\n            size[i] = 1\r\n            for j in g[i]:\r\n                if j != fa:\r\n                    dfs1(j, i, d + 1)\r\n                    size[i] += size[j]\r\n\r\n        def dfs2(i: int, fa: int, t: int):\r\n            ans[i] = t\r\n            for j in g[i]:\r\n                if j != fa:\r\n                    dfs2(j, i, t - size[j] + n - size[j])\r\n\r\n        g = defaultdict(list)\r\n        for a, b in edges:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n\r\n        ans = [0] * n\r\n        size = [0] * n\r\n        dfs1(0, -1, 0)\r\n        dfs2(0, -1, ans[0])\r\n        return ans",
+    "problemId": 834,
+    "title": "Sum of Distances in Tree",
+    "problemUrl": "https://leetcode.com/problems/sum-of-distances-in-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0834.Sum of Distances in Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0834.Sum of Distances in Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0834.Sum of Distances in Tree/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0834.Sum of Distances in Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0834.Sum of Distances in Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0834.Sum of Distances in Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "string-to-integer-atoi",
+    "language": "python3",
+    "code": "class Solution:\r\n    def myAtoi(self, s: str) -> int:\r\n        if not s:\r\n            return 0\r\n        n = len(s)\r\n        if n == 0:\r\n            return 0\r\n        i = 0\r\n        while s[i] == ' ':\r\n            i += 1\r\n            # 仅包含空格\r\n            if i == n:\r\n                return 0\r\n        sign = -1 if s[i] == '-' else 1\r\n        if s[i] in ['-', '+']:\r\n            i += 1\r\n        res, flag = 0, (2**31 - 1) // 10\r\n        while i < n:\r\n            # 非数字，跳出循环体\r\n            if not s[i].isdigit():\r\n                break\r\n            c = int(s[i])\r\n            # 溢出判断\r\n            if res > flag or (res == flag and c > 7):\r\n                return 2**31 - 1 if sign > 0 else -(2**31)\r\n            res = res * 10 + c\r\n            i += 1\r\n        return sign * res",
+    "problemId": 8,
+    "title": "String to Integer (atoi)",
+    "problemUrl": "https://leetcode.com/problems/string-to-integer-atoi/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0008.String to Integer (atoi)/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0008.String to Integer (atoi)/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0008.String to Integer (atoi)/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0008.String to Integer (atoi)/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0008.String to Integer (atoi)/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0008.String to Integer (atoi)/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0008.String to Integer (atoi)/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0008.String to Integer (atoi)/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

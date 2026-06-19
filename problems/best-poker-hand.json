@@ -1,0 +1,48 @@
+{
+    "problemName": "best-poker-hand",
+    "language": "python3",
+    "code": "class Solution:\r\n    def bestHand(self, ranks: List[int], suits: List[str]) -> str:\r\n        # if len(set(suits)) == 1:\r\n        if all(a == b for a, b in pairwise(suits)):\r\n            return 'Flush'\r\n        cnt = Counter(ranks)\r\n        if any(v >= 3 for v in cnt.values()):\r\n            return 'Three of a Kind'\r\n        if any(v == 2 for v in cnt.values()):\r\n            return 'Pair'\r\n        return 'High Card'",
+    "problemId": 2347,
+    "title": "Best Poker Hand",
+    "problemUrl": "https://leetcode.com/problems/best-poker-hand/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2347.Best Poker Hand/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2347.Best Poker Hand/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2347.Best Poker Hand/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2347.Best Poker Hand/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2347.Best Poker Hand/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2347.Best Poker Hand/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2347.Best Poker Hand/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2347.Best Poker Hand/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "lfu-cache",
+    "language": "python3",
+    "code": "class Node:\r\n    def __init__(self, key: int, value: int) -> None:\r\n        self.key = key\r\n        self.value = value\r\n        self.freq = 1\r\n        self.prev = None\r\n        self.next = None\r\n\r\n\r\nclass DoublyLinkedList:\r\n    def __init__(self) -> None:\r\n        self.head = Node(-1, -1)\r\n        self.tail = Node(-1, -1)\r\n        self.head.next = self.tail\r\n        self.tail.prev = self.head\r\n\r\n    def add_first(self, node: Node) -> None:\r\n        node.prev = self.head\r\n        node.next = self.head.next\r\n        self.head.next.prev = node\r\n        self.head.next = node\r\n\r\n    def remove(self, node: Node) -> Node:\r\n        node.next.prev = node.prev\r\n        node.prev.next = node.next\r\n        node.next, node.prev = None, None\r\n        return node\r\n\r\n    def remove_last(self) -> Node:\r\n        return self.remove(self.tail.prev)\r\n\r\n    def is_empty(self) -> bool:\r\n        return self.head.next == self.tail\r\n\r\n\r\nclass LFUCache:\r\n    def __init__(self, capacity: int):\r\n        self.capacity = capacity\r\n        self.min_freq = 0\r\n        self.map = defaultdict(Node)\r\n        self.freq_map = defaultdict(DoublyLinkedList)\r\n\r\n    def get(self, key: int) -> int:\r\n        if self.capacity == 0 or key not in self.map:\r\n            return -1\r\n        node = self.map[key]\r\n        self.incr_freq(node)\r\n        return node.value\r\n\r\n    def put(self, key: int, value: int) -> None:\r\n        if self.capacity == 0:\r\n            return\r\n        if key in self.map:\r\n            node = self.map[key]\r\n            node.value = value\r\n            self.incr_freq(node)\r\n            return\r\n        if len(self.map) == self.capacity:\r\n            ls = self.freq_map[self.min_freq]\r\n            node = ls.remove_last()\r\n            self.map.pop(node.key)\r\n        node = Node(key, value)\r\n        self.add_node(node)\r\n        self.map[key] = node\r\n        self.min_freq = 1\r\n\r\n    def incr_freq(self, node: Node) -> None:\r\n        freq = node.freq\r\n        ls = self.freq_map[freq]\r\n        ls.remove(node)\r\n        if ls.is_empty():\r\n            self.freq_map.pop(freq)\r\n            if freq == self.min_freq:\r\n                self.min_freq += 1\r\n        node.freq += 1\r\n        self.add_node(node)\r\n\r\n    def add_node(self, node: Node) -> None:\r\n        freq = node.freq\r\n        ls = self.freq_map[freq]\r\n        ls.add_first(node)\r\n        self.freq_map[freq] = ls\r\n\r\n\r\n# Your LFUCache object will be instantiated and called as such:\r\n# obj = LFUCache(capacity)\r\n# param_1 = obj.get(key)\r\n# obj.put(key,value)",
+    "problemId": 460,
+    "title": "LFU Cache",
+    "problemUrl": "https://leetcode.com/problems/lfu-cache/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0460.LFU Cache/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0460.LFU Cache/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0460.LFU Cache/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0460.LFU Cache/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0460.LFU Cache/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0460.LFU Cache/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

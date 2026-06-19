@@ -1,0 +1,83 @@
+{
+    "problemName": "alice-and-bob-playing-flower-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def flowerGame(self, n: int, m: int) -> int:\r\n        a1 = (n + 1) // 2\r\n        b1 = (m + 1) // 2\r\n        a2 = n // 2\r\n        b2 = m // 2\r\n        return a1 * b2 + a2 * b1",
+    "problemId": 3021,
+    "title": "Alice and Bob Playing Flower Game",
+    "problemUrl": "https://leetcode.com/problems/alice-and-bob-playing-flower-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3021.Alice and Bob Playing Flower Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3021.Alice and Bob Playing Flower Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3021.Alice and Bob Playing Flower Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3021.Alice and Bob Playing Flower Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3021.Alice and Bob Playing Flower Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3021.Alice and Bob Playing Flower Game/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3021.Alice and Bob Playing Flower Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3021.Alice and Bob Playing Flower Game/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3021.Alice and Bob Playing Flower Game/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3021.Alice and Bob Playing Flower Game/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3021.Alice and Bob Playing Flower Game/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3021.Alice and Bob Playing Flower Game/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3021.Alice and Bob Playing Flower Game/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3021.Alice and Bob Playing Flower Game/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3021.Alice and Bob Playing Flower Game/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

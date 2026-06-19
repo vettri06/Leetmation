@@ -1,0 +1,48 @@
+{
+    "problemName": "minimize-string-length",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimizedStringLength(self, s: str) -> int:\r\n        return len(set(s))",
+    "problemId": 2716,
+    "title": "Minimize String Length",
+    "problemUrl": "https://leetcode.com/problems/minimize-string-length/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2716.Minimize String Length/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2716.Minimize String Length/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2716.Minimize String Length/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2716.Minimize String Length/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2716.Minimize String Length/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2716.Minimize String Length/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2716.Minimize String Length/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2716.Minimize String Length/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

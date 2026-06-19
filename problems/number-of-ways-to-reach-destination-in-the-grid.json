@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-ways-to-reach-destination-in-the-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfWays(\r\n        self, n: int, m: int, k: int, source: List[int], dest: List[int]\r\n    ) -> int:\r\n        mod = 10**9 + 7\r\n        a, b, c, d = 1, 0, 0, 0\r\n        for _ in range(k):\r\n            aa = ((n - 1) * b + (m - 1) * c) % mod\r\n            bb = (a + (n - 2) * b + (m - 1) * d) % mod\r\n            cc = (a + (m - 2) * c + (n - 1) * d) % mod\r\n            dd = (b + c + (n - 2) * d + (m - 2) * d) % mod\r\n            a, b, c, d = aa, bb, cc, dd\r\n        if source[0] == dest[0]:\r\n            return a if source[1] == dest[1] else c\r\n        return b if source[1] == dest[1] else d",
+    "problemId": 2912,
+    "title": "Number of Ways to Reach Destination in the Grid",
+    "problemUrl": "https://leetcode.com/problems/number-of-ways-to-reach-destination-in-the-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2912.Number of Ways to Reach Destination in the Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2912.Number of Ways to Reach Destination in the Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2912.Number of Ways to Reach Destination in the Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2912.Number of Ways to Reach Destination in the Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2912.Number of Ways to Reach Destination in the Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2912.Number of Ways to Reach Destination in the Grid/Solution2.py",
+            "sourceFile": "Solution2.py"
+        }
+    ]
+}

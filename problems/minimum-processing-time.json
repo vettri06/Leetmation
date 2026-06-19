@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-processing-time",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minProcessingTime(self, processorTime: List[int], tasks: List[int]) -> int:\r\n        processorTime.sort()\r\n        tasks.sort()\r\n        ans = 0\r\n        i = len(tasks) - 1\r\n        for t in processorTime:\r\n            ans = max(ans, t + tasks[i])\r\n            i -= 4\r\n        return ans",
+    "problemId": 2895,
+    "title": "Minimum Processing Time",
+    "problemUrl": "https://leetcode.com/problems/minimum-processing-time/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2895.Minimum Processing Time/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2895.Minimum Processing Time/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2895.Minimum Processing Time/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2895.Minimum Processing Time/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2895.Minimum Processing Time/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2895.Minimum Processing Time/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

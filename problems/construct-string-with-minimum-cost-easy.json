@@ -1,0 +1,38 @@
+{
+    "problemName": "construct-string-with-minimum-cost-easy",
+    "language": "python3",
+    "code": "class Trie:\r\n    def __init__(self):\r\n        self.children: List[Optional[Trie]] = [None] * 26\r\n        self.cost = inf\r\n\r\n    def insert(self, word: str, cost: int):\r\n        node = self\r\n        for c in word:\r\n            idx = ord(c) - ord(\"a\")\r\n            if node.children[idx] is None:\r\n                node.children[idx] = Trie()\r\n            node = node.children[idx]\r\n        node.cost = min(node.cost, cost)\r\n\r\n\r\nclass Solution:\r\n    def minimumCost(self, target: str, words: List[str], costs: List[int]) -> int:\r\n        @cache\r\n        def dfs(i: int) -> int:\r\n            if i >= len(target):\r\n                return 0\r\n            ans = inf\r\n            node = trie\r\n            for j in range(i, len(target)):\r\n                idx = ord(target[j]) - ord(\"a\")\r\n                if node.children[idx] is None:\r\n                    return ans\r\n                node = node.children[idx]\r\n                ans = min(ans, node.cost + dfs(j + 1))\r\n            return ans\r\n\r\n        trie = Trie()\r\n        for word, cost in zip(words, costs):\r\n            trie.insert(word, cost)\r\n        ans = dfs(0)\r\n        return ans if ans < inf else -1",
+    "problemId": 3253,
+    "title": "Construct String with Minimum Cost (Easy)",
+    "problemUrl": "https://leetcode.com/problems/construct-string-with-minimum-cost-easy/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3253.Construct String with Minimum Cost (Easy)/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3253.Construct String with Minimum Cost (Easy)/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3253.Construct String with Minimum Cost (Easy)/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3253.Construct String with Minimum Cost (Easy)/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3253.Construct String with Minimum Cost (Easy)/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3253.Construct String with Minimum Cost (Easy)/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "construct-string-with-minimum-cost",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumCost(self, target: str, words: List[str], costs: List[int]) -> int:\r\n        base, mod = 13331, 998244353\r\n        n = len(target)\r\n        h = [0] * (n + 1)\r\n        p = [1] * (n + 1)\r\n        for i, c in enumerate(target, 1):\r\n            h[i] = (h[i - 1] * base + ord(c)) % mod\r\n            p[i] = (p[i - 1] * base) % mod\r\n        f = [0] + [inf] * n\r\n        ss = sorted(set(map(len, words)))\r\n        d = defaultdict(lambda: inf)\r\n        min = lambda a, b: a if a < b else b\r\n        for w, c in zip(words, costs):\r\n            x = 0\r\n            for ch in w:\r\n                x = (x * base + ord(ch)) % mod\r\n            d[x] = min(d[x], c)\r\n        for i in range(1, n + 1):\r\n            for j in ss:\r\n                if j > i:\r\n                    break\r\n                x = (h[i] - h[i - j] * p[j]) % mod\r\n                f[i] = min(f[i], f[i - j] + d[x])\r\n        return f[n] if f[n] < inf else -1",
+    "problemId": 3213,
+    "title": "Construct String with Minimum Cost",
+    "problemUrl": "https://leetcode.com/problems/construct-string-with-minimum-cost/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3213.Construct String with Minimum Cost/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3213.Construct String with Minimum Cost/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3213.Construct String with Minimum Cost/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3213.Construct String with Minimum Cost/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3213.Construct String with Minimum Cost/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3213.Construct String with Minimum Cost/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

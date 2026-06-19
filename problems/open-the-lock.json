@@ -1,0 +1,73 @@
+{
+    "problemName": "open-the-lock",
+    "language": "python3",
+    "code": "class Solution:\r\n    def openLock(self, deadends: List[str], target: str) -> int:\r\n        def next(s):\r\n            res = []\r\n            s = list(s)\r\n            for i in range(4):\r\n                c = s[i]\r\n                s[i] = '9' if c == '0' else str(int(c) - 1)\r\n                res.append(''.join(s))\r\n                s[i] = '0' if c == '9' else str(int(c) + 1)\r\n                res.append(''.join(s))\r\n                s[i] = c\r\n            return res\r\n\r\n        if target == '0000':\r\n            return 0\r\n        s = set(deadends)\r\n        if '0000' in s:\r\n            return -1\r\n        q = deque(['0000'])\r\n        s.add('0000')\r\n        ans = 0\r\n        while q:\r\n            ans += 1\r\n            for _ in range(len(q)):\r\n                p = q.popleft()\r\n                for t in next(p):\r\n                    if t == target:\r\n                        return ans\r\n                    if t not in s:\r\n                        q.append(t)\r\n                        s.add(t)\r\n        return -1",
+    "problemId": 752,
+    "title": "Open the Lock",
+    "problemUrl": "https://leetcode.com/problems/open-the-lock/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0752.Open the Lock/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0752.Open the Lock/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0752.Open the Lock/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0752.Open the Lock/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0752.Open the Lock/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0752.Open the Lock/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0752.Open the Lock/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0752.Open the Lock/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0752.Open the Lock/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0752.Open the Lock/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0752.Open the Lock/Solution3.py",
+            "sourceFile": "Solution3.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0752.Open the Lock/Solution3.cpp",
+            "sourceFile": "Solution3.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0752.Open the Lock/Solution3.java",
+            "sourceFile": "Solution3.java"
+        }
+    ]
+}

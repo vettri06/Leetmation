@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-size-of-a-set-after-removals",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumSetSize(self, nums1: List[int], nums2: List[int]) -> int:\r\n        s1 = set(nums1)\r\n        s2 = set(nums2)\r\n        n = len(nums1)\r\n        a = min(len(s1 - s2), n // 2)\r\n        b = min(len(s2 - s1), n // 2)\r\n        return min(a + b + len(s1 & s2), n)",
+    "problemId": 3002,
+    "title": "Maximum Size of a Set After Removals",
+    "problemUrl": "https://leetcode.com/problems/maximum-size-of-a-set-after-removals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3002.Maximum Size of a Set After Removals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3002.Maximum Size of a Set After Removals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3002.Maximum Size of a Set After Removals/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3002.Maximum Size of a Set After Removals/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3002.Maximum Size of a Set After Removals/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3002.Maximum Size of a Set After Removals/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "problemName": "minimum-costs-using-the-train-line",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumCosts(\r\n        self, regular: List[int], express: List[int], expressCost: int\r\n    ) -> List[int]:\r\n        n = len(regular)\r\n        f = [0] * (n + 1)\r\n        g = [inf] * (n + 1)\r\n        cost = [0] * n\r\n        for i, (a, b) in enumerate(zip(regular, express), 1):\r\n            f[i] = min(f[i - 1] + a, g[i - 1] + a)\r\n            g[i] = min(f[i - 1] + expressCost + b, g[i - 1] + b)\r\n            cost[i - 1] = min(f[i], g[i])\r\n        return cost",
+    "problemId": 2361,
+    "title": "Minimum Costs Using the Train Line",
+    "problemUrl": "https://leetcode.com/problems/minimum-costs-using-the-train-line/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2361.Minimum Costs Using the Train Line/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2361.Minimum Costs Using the Train Line/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2361.Minimum Costs Using the Train Line/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2361.Minimum Costs Using the Train Line/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2361.Minimum Costs Using the Train Line/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2361.Minimum Costs Using the Train Line/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2361.Minimum Costs Using the Train Line/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2361.Minimum Costs Using the Train Line/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2361.Minimum Costs Using the Train Line/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2361.Minimum Costs Using the Train Line/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2361.Minimum Costs Using the Train Line/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

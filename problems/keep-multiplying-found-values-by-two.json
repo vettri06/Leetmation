@@ -1,0 +1,38 @@
+{
+    "problemName": "keep-multiplying-found-values-by-two",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findFinalValue(self, nums: List[int], original: int) -> int:\r\n        s = set(nums)\r\n        while original in s:\r\n            original <<= 1\r\n        return original",
+    "problemId": 2154,
+    "title": "Keep Multiplying Found Values by Two",
+    "problemUrl": "https://leetcode.com/problems/keep-multiplying-found-values-by-two/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2154.Keep Multiplying Found Values by Two/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2154.Keep Multiplying Found Values by Two/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2154.Keep Multiplying Found Values by Two/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2154.Keep Multiplying Found Values by Two/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2154.Keep Multiplying Found Values by Two/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2154.Keep Multiplying Found Values by Two/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

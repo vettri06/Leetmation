@@ -1,0 +1,48 @@
+{
+    "problemName": "determine-if-string-halves-are-alike",
+    "language": "python3",
+    "code": "class Solution:\r\n    def halvesAreAlike(self, s: str) -> bool:\r\n        cnt, n = 0, len(s) >> 1\r\n        vowels = set('aeiouAEIOU')\r\n        for i in range(n):\r\n            cnt += s[i] in vowels\r\n            cnt -= s[i + n] in vowels\r\n        return cnt == 0",
+    "problemId": 1704,
+    "title": "Determine if String Halves Are Alike",
+    "problemUrl": "https://leetcode.com/problems/determine-if-string-halves-are-alike/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1704.Determine if String Halves Are Alike/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1704.Determine if String Halves Are Alike/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1704.Determine if String Halves Are Alike/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1704.Determine if String Halves Are Alike/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1704.Determine if String Halves Are Alike/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1704.Determine if String Halves Are Alike/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1704.Determine if String Halves Are Alike/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1704.Determine if String Halves Are Alike/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

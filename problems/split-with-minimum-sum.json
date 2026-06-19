@@ -1,0 +1,73 @@
+{
+    "problemName": "split-with-minimum-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def splitNum(self, num: int) -> int:\r\n        cnt = Counter()\r\n        n = 0\r\n        while num:\r\n            cnt[num % 10] += 1\r\n            num //= 10\r\n            n += 1\r\n        ans = [0] * 2\r\n        j = 0\r\n        for i in range(n):\r\n            while cnt[j] == 0:\r\n                j += 1\r\n            cnt[j] -= 1\r\n            ans[i & 1] = ans[i & 1] * 10 + j\r\n        return sum(ans)",
+    "problemId": 2578,
+    "title": "Split With Minimum Sum",
+    "problemUrl": "https://leetcode.com/problems/split-with-minimum-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2578.Split With Minimum Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2578.Split With Minimum Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2578.Split With Minimum Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2578.Split With Minimum Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2578.Split With Minimum Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2578.Split With Minimum Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2578.Split With Minimum Sum/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2578.Split With Minimum Sum/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2578.Split With Minimum Sum/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2578.Split With Minimum Sum/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2578.Split With Minimum Sum/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2578.Split With Minimum Sum/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2578.Split With Minimum Sum/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

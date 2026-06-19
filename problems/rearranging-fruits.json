@@ -1,0 +1,38 @@
+{
+    "problemName": "rearranging-fruits",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, basket1: List[int], basket2: List[int]) -> int:\r\n        cnt = Counter()\r\n        for a, b in zip(basket1, basket2):\r\n            cnt[a] += 1\r\n            cnt[b] -= 1\r\n        mi = min(cnt)\r\n        nums = []\r\n        for x, v in cnt.items():\r\n            if v % 2:\r\n                return -1\r\n            nums.extend([x] * (abs(v) // 2))\r\n        nums.sort()\r\n        m = len(nums) // 2\r\n        return sum(min(x, mi * 2) for x in nums[:m])",
+    "problemId": 2561,
+    "title": "Rearranging Fruits",
+    "problemUrl": "https://leetcode.com/problems/rearranging-fruits/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2561.Rearranging Fruits/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2561.Rearranging Fruits/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2561.Rearranging Fruits/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2561.Rearranging Fruits/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2561.Rearranging Fruits/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2561.Rearranging Fruits/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

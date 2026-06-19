@@ -1,0 +1,33 @@
+{
+    "problemName": "minimize-max-distance-to-gas-station",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minmaxGasDist(self, stations: List[int], k: int) -> float:\r\n        def check(x):\r\n            return sum(int((b - a) / x) for a, b in pairwise(stations)) <= k\r\n\r\n        left, right = 0, 1e8\r\n        while right - left > 1e-6:\r\n            mid = (left + right) / 2\r\n            if check(mid):\r\n                right = mid\r\n            else:\r\n                left = mid\r\n        return left",
+    "problemId": 774,
+    "title": "Minimize Max Distance to Gas Station",
+    "problemUrl": "https://leetcode.com/problems/minimize-max-distance-to-gas-station/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0774.Minimize Max Distance to Gas Station/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0774.Minimize Max Distance to Gas Station/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0774.Minimize Max Distance to Gas Station/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0774.Minimize Max Distance to Gas Station/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0774.Minimize Max Distance to Gas Station/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

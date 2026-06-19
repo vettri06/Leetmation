@@ -1,0 +1,18 @@
+{
+    "problemName": "curry",
+    "language": "typescript",
+    "code": "function curry(fn: Function): Function {\r\n    return function curried(...args) {\r\n        if (args.length >= fn.length) {\r\n            return fn(...args);\r\n        }\r\n        return (...nextArgs) => curried(...args, ...nextArgs);\r\n    };\r\n}\r\n\r\n/**\r\n * function sum(a, b) { return a + b; }\r\n * const csum = curry(sum);\r\n * csum(1)(2) // 3\r\n */",
+    "problemId": 2632,
+    "title": "Curry",
+    "problemUrl": "https://leetcode.com/problems/curry/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2632.Curry/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2632.Curry/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

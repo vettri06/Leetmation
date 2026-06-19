@@ -1,0 +1,38 @@
+{
+    "problemName": "longest-alternating-subarray",
+    "language": "python3",
+    "code": "class Solution:\r\n    def alternatingSubarray(self, nums: List[int]) -> int:\r\n        ans, n = -1, len(nums)\r\n        for i in range(n):\r\n            k = 1\r\n            j = i\r\n            while j + 1 < n and nums[j + 1] - nums[j] == k:\r\n                j += 1\r\n                k *= -1\r\n            if j - i + 1 > 1:\r\n                ans = max(ans, j - i + 1)\r\n        return ans",
+    "problemId": 2765,
+    "title": "Longest Alternating Subarray",
+    "problemUrl": "https://leetcode.com/problems/longest-alternating-subarray/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2765.Longest Alternating Subarray/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2765.Longest Alternating Subarray/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2765.Longest Alternating Subarray/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2765.Longest Alternating Subarray/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2765.Longest Alternating Subarray/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2765.Longest Alternating Subarray/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

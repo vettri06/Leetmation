@@ -1,0 +1,23 @@
+{
+    "problemName": "find-overbooked-employees",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_overbooked_employees(\r\n    employees: pd.DataFrame, meetings: pd.DataFrame\r\n) -> pd.DataFrame:\r\n    meetings[\"meeting_date\"] = pd.to_datetime(meetings[\"meeting_date\"])\r\n    meetings[\"year\"] = meetings[\"meeting_date\"].dt.isocalendar().year\r\n    meetings[\"week\"] = meetings[\"meeting_date\"].dt.isocalendar().week\r\n\r\n    week_meeting_hours = (\r\n        meetings.groupby([\"employee_id\", \"year\", \"week\"], as_index=False)[\r\n            \"duration_hours\"\r\n        ]\r\n        .sum()\r\n        .rename(columns={\"duration_hours\": \"hours\"})\r\n    )\r\n\r\n    intensive_weeks = week_meeting_hours[week_meeting_hours[\"hours\"] >= 20]\r\n\r\n    intensive_count = (\r\n        intensive_weeks.groupby(\"employee_id\")\r\n        .size()\r\n        .reset_index(name=\"meeting_heavy_weeks\")\r\n    )\r\n\r\n    result = intensive_count.merge(employees, on=\"employee_id\")\r\n\r\n    result = result[result[\"meeting_heavy_weeks\"] >= 2]\r\n\r\n    result = result.sort_values(\r\n        [\"meeting_heavy_weeks\", \"employee_name\"], ascending=[False, True]\r\n    )\r\n\r\n    return result[\r\n        [\"employee_id\", \"employee_name\", \"department\", \"meeting_heavy_weeks\"]\r\n    ].reset_index(drop=True)",
+    "problemId": 3611,
+    "title": "Find Overbooked Employees",
+    "problemUrl": "https://leetcode.com/problems/find-overbooked-employees/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3611.Find Overbooked Employees/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3611.Find Overbooked Employees/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3611.Find Overbooked Employees/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

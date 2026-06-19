@@ -1,0 +1,38 @@
+{
+    "problemName": "maximize-sum-of-squares-of-digits",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSumOfSquares(self, num: int, sum: int) -> str:\r\n        if num * 9 < sum:\r\n            return \"\"\r\n        k, s = divmod(sum, 9)\r\n        ans = \"9\" * k\r\n        if s:\r\n            ans += digits[s]\r\n        ans += \"0\" * (num - len(ans))\r\n        return ans",
+    "problemId": 3723,
+    "title": "Maximize Sum of Squares of Digits",
+    "problemUrl": "https://leetcode.com/problems/maximize-sum-of-squares-of-digits/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3723.Maximize Sum of Squares of Digits/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3723.Maximize Sum of Squares of Digits/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3723.Maximize Sum of Squares of Digits/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3723.Maximize Sum of Squares of Digits/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3723.Maximize Sum of Squares of Digits/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3723.Maximize Sum of Squares of Digits/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "count-the-number-of-fair-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countFairPairs(self, nums: List[int], lower: int, upper: int) -> int:\r\n        nums.sort()\r\n        ans = 0\r\n        for i, x in enumerate(nums):\r\n            j = bisect_left(nums, lower - x, lo=i + 1)\r\n            k = bisect_left(nums, upper - x + 1, lo=i + 1)\r\n            ans += k - j\r\n        return ans",
+    "problemId": 2563,
+    "title": "Count the Number of Fair Pairs",
+    "problemUrl": "https://leetcode.com/problems/count-the-number-of-fair-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2563.Count the Number of Fair Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2563.Count the Number of Fair Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2563.Count the Number of Fair Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2563.Count the Number of Fair Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2563.Count the Number of Fair Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2563.Count the Number of Fair Pairs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

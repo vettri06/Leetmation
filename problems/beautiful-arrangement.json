@@ -1,0 +1,48 @@
+{
+    "problemName": "beautiful-arrangement",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countArrangement(self, n: int) -> int:\r\n        def dfs(i):\r\n            nonlocal ans, n\r\n            if i == n + 1:\r\n                ans += 1\r\n                return\r\n            for j in match[i]:\r\n                if not vis[j]:\r\n                    vis[j] = True\r\n                    dfs(i + 1)\r\n                    vis[j] = False\r\n\r\n        ans = 0\r\n        vis = [False] * (n + 1)\r\n        match = defaultdict(list)\r\n        for i in range(1, n + 1):\r\n            for j in range(1, n + 1):\r\n                if j % i == 0 or i % j == 0:\r\n                    match[i].append(j)\r\n\r\n        dfs(1)\r\n        return ans",
+    "problemId": 526,
+    "title": "Beautiful Arrangement",
+    "problemUrl": "https://leetcode.com/problems/beautiful-arrangement/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0526.Beautiful Arrangement/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0526.Beautiful Arrangement/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0526.Beautiful Arrangement/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0526.Beautiful Arrangement/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0526.Beautiful Arrangement/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0526.Beautiful Arrangement/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0526.Beautiful Arrangement/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0526.Beautiful Arrangement/Solution2.java",
+            "sourceFile": "Solution2.java"
+        }
+    ]
+}

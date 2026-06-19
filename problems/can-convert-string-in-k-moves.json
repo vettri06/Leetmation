@@ -1,0 +1,33 @@
+{
+    "problemName": "can-convert-string-in-k-moves",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canConvertString(self, s: str, t: str, k: int) -> bool:\r\n        if len(s) != len(t):\r\n            return False\r\n        cnt = [0] * 26\r\n        for a, b in zip(s, t):\r\n            x = (ord(b) - ord(a) + 26) % 26\r\n            cnt[x] += 1\r\n        for i in range(1, 26):\r\n            if i + 26 * (cnt[i] - 1) > k:\r\n                return False\r\n        return True",
+    "problemId": 1540,
+    "title": "Can Convert String in K Moves",
+    "problemUrl": "https://leetcode.com/problems/can-convert-string-in-k-moves/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1540.Can Convert String in K Moves/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1540.Can Convert String in K Moves/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1540.Can Convert String in K Moves/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1540.Can Convert String in K Moves/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1540.Can Convert String in K Moves/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "sqrt-x",
+    "language": "python3",
+    "code": "class Solution:\r\n    def mySqrt(self, x: int) -> int:\r\n        l, r = 0, x\r\n        while l < r:\r\n            mid = (l + r + 1) >> 1\r\n            if mid > x // mid:\r\n                r = mid - 1\r\n            else:\r\n                l = mid\r\n        return l",
+    "problemId": 69,
+    "title": "Sqrt(x)",
+    "problemUrl": "https://leetcode.com/problems/sqrt-x/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0069.Sqrt(x)/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0069.Sqrt(x)/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0069.Sqrt(x)/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0069.Sqrt(x)/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0069.Sqrt(x)/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0069.Sqrt(x)/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0069.Sqrt(x)/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0069.Sqrt(x)/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

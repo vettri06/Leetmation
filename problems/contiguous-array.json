@@ -1,0 +1,38 @@
+{
+    "problemName": "contiguous-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findMaxLength(self, nums: List[int]) -> int:\r\n        d = {0: -1}\r\n        ans = s = 0\r\n        for i, x in enumerate(nums):\r\n            s += 1 if x else -1\r\n            if s in d:\r\n                ans = max(ans, i - d[s])\r\n            else:\r\n                d[s] = i\r\n        return ans",
+    "problemId": 525,
+    "title": "Contiguous Array",
+    "problemUrl": "https://leetcode.com/problems/contiguous-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0525.Contiguous Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0525.Contiguous Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0525.Contiguous Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0525.Contiguous Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0525.Contiguous Array/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0525.Contiguous Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

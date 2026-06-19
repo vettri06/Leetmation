@@ -1,0 +1,48 @@
+{
+    "problemName": "find-the-original-array-of-prefix-xor",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findArray(self, pref: List[int]) -> List[int]:\r\n        return [a ^ b for a, b in pairwise([0] + pref)]",
+    "problemId": 2433,
+    "title": "Find The Original Array of Prefix Xor",
+    "problemUrl": "https://leetcode.com/problems/find-the-original-array-of-prefix-xor/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2433.Find The Original Array of Prefix Xor/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2433.Find The Original Array of Prefix Xor/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2433.Find The Original Array of Prefix Xor/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2433.Find The Original Array of Prefix Xor/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2433.Find The Original Array of Prefix Xor/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2433.Find The Original Array of Prefix Xor/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2433.Find The Original Array of Prefix Xor/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2433.Find The Original Array of Prefix Xor/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

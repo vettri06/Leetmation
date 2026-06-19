@@ -1,0 +1,33 @@
+{
+    "problemName": "find-products-of-elements-of-big-array",
+    "language": "python3",
+    "code": "m = 50\r\ncnt = [0] * (m + 1)\r\ns = [0] * (m + 1)\r\np = 1\r\nfor i in range(1, m + 1):\r\n    cnt[i] = cnt[i - 1] * 2 + p\r\n    s[i] = s[i - 1] * 2 + p * (i - 1)\r\n    p *= 2\r\n\r\n\r\ndef num_idx_and_sum(x: int) -> tuple:\r\n    idx = 0\r\n    total_sum = 0\r\n    while x:\r\n        i = x.bit_length() - 1\r\n        idx += cnt[i]\r\n        total_sum += s[i]\r\n        x -= 1 << i\r\n        total_sum += (x + 1) * i\r\n        idx += x + 1\r\n    return (idx, total_sum)\r\n\r\n\r\ndef f(i: int) -> int:\r\n    l, r = 0, 1 << m\r\n    while l < r:\r\n        mid = (l + r + 1) >> 1\r\n        idx, _ = num_idx_and_sum(mid)\r\n        if idx < i:\r\n            l = mid\r\n        else:\r\n            r = mid - 1\r\n\r\n    total_sum = 0\r\n    idx, total_sum = num_idx_and_sum(l)\r\n    i -= idx\r\n    x = l + 1\r\n    for _ in range(i):\r\n        y = x & -x\r\n        total_sum += y.bit_length() - 1\r\n        x -= y\r\n    return total_sum\r\n\r\n\r\nclass Solution:\r\n    def findProductsOfElements(self, queries: List[List[int]]) -> List[int]:\r\n        return [pow(2, f(right + 1) - f(left), mod) for left, right, mod in queries]",
+    "problemId": 3145,
+    "title": "Find Products of Elements of Big Array",
+    "problemUrl": "https://leetcode.com/problems/find-products-of-elements-of-big-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3145.Find Products of Elements of Big Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3145.Find Products of Elements of Big Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3145.Find Products of Elements of Big Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3145.Find Products of Elements of Big Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3145.Find Products of Elements of Big Array/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

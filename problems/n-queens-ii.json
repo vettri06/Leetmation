@@ -1,0 +1,48 @@
+{
+    "problemName": "n-queens-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def totalNQueens(self, n: int) -> int:\r\n        def dfs(i: int):\r\n            if i == n:\r\n                nonlocal ans\r\n                ans += 1\r\n                return\r\n            for j in range(n):\r\n                a, b = i + j, i - j + n\r\n                if cols[j] or dg[a] or udg[b]:\r\n                    continue\r\n                cols[j] = dg[a] = udg[b] = True\r\n                dfs(i + 1)\r\n                cols[j] = dg[a] = udg[b] = False\r\n\r\n        cols = [False] * 10\r\n        dg = [False] * 20\r\n        udg = [False] * 20\r\n        ans = 0\r\n        dfs(0)\r\n        return ans",
+    "problemId": 52,
+    "title": "N-Queens II",
+    "problemUrl": "https://leetcode.com/problems/n-queens-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0052.N-Queens II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0052.N-Queens II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0052.N-Queens II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0052.N-Queens II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0052.N-Queens II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0052.N-Queens II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0052.N-Queens II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0052.N-Queens II/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

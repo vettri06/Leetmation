@@ -1,0 +1,43 @@
+{
+    "problemName": "watering-plants-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumRefill(self, plants: List[int], capacityA: int, capacityB: int) -> int:\r\n        a, b = capacityA, capacityB\r\n        ans = 0\r\n        i, j = 0, len(plants) - 1\r\n        while i < j:\r\n            if a < plants[i]:\r\n                ans += 1\r\n                a = capacityA\r\n            a -= plants[i]\r\n            if b < plants[j]:\r\n                ans += 1\r\n                b = capacityB\r\n            b -= plants[j]\r\n            i, j = i + 1, j - 1\r\n        ans += i == j and max(a, b) < plants[i]\r\n        return ans",
+    "problemId": 2105,
+    "title": "Watering Plants II",
+    "problemUrl": "https://leetcode.com/problems/watering-plants-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2105.Watering Plants II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2105.Watering Plants II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2105.Watering Plants II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2105.Watering Plants II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2105.Watering Plants II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2105.Watering Plants II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2105.Watering Plants II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

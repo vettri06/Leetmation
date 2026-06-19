@@ -1,0 +1,33 @@
+{
+    "problemName": "number-of-ways-to-build-sturdy-brick-wall",
+    "language": "python3",
+    "code": "class Solution:\r\n    def buildWall(self, height: int, width: int, bricks: List[int]) -> int:\r\n        def dfs(v):\r\n            if v > width:\r\n                return\r\n            if v == width:\r\n                s.append(t[:])\r\n                return\r\n            for x in bricks:\r\n                t.append(x)\r\n                dfs(v + x)\r\n                t.pop()\r\n\r\n        def check(a, b):\r\n            s1, s2 = a[0], b[0]\r\n            i = j = 1\r\n            while i < len(a) and j < len(b):\r\n                if s1 == s2:\r\n                    return False\r\n                if s1 < s2:\r\n                    s1 += a[i]\r\n                    i += 1\r\n                else:\r\n                    s2 += b[j]\r\n                    j += 1\r\n            return True\r\n\r\n        mod = 10**9 + 7\r\n        s = []\r\n        t = []\r\n        dfs(0)\r\n        g = defaultdict(list)\r\n        n = len(s)\r\n        for i in range(n):\r\n            if check(s[i], s[i]):\r\n                g[i].append(i)\r\n            for j in range(i + 1, n):\r\n                if check(s[i], s[j]):\r\n                    g[i].append(j)\r\n                    g[j].append(i)\r\n        dp = [[0] * n for _ in range(height)]\r\n        for j in range(n):\r\n            dp[0][j] = 1\r\n        for i in range(1, height):\r\n            for j in range(n):\r\n                for k in g[j]:\r\n                    dp[i][j] += dp[i - 1][k]\r\n                    dp[i][j] %= mod\r\n        return sum(dp[-1]) % mod",
+    "problemId": 2184,
+    "title": "Number of Ways to Build Sturdy Brick Wall",
+    "problemUrl": "https://leetcode.com/problems/number-of-ways-to-build-sturdy-brick-wall/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2184.Number of Ways to Build Sturdy Brick Wall/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2184.Number of Ways to Build Sturdy Brick Wall/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2184.Number of Ways to Build Sturdy Brick Wall/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2184.Number of Ways to Build Sturdy Brick Wall/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2184.Number of Ways to Build Sturdy Brick Wall/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

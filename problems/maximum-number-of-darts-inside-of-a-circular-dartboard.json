@@ -1,0 +1,23 @@
+{
+    "problemName": "maximum-number-of-darts-inside-of-a-circular-dartboard",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numPoints(self, darts: list[list[int]], r: int) -> int:\r\n        def countDarts(x, y):\r\n            count = 0\r\n            for x1, y1 in darts:\r\n                if dist((x, y), (x1, y1)) <= r + 1e-7:\r\n                    count += 1\r\n            return count\r\n\r\n        def possibleCenters(x1, y1, x2, y2):\r\n            dx, dy = x2 - x1, y2 - y1\r\n            d = sqrt(dx * dx + dy * dy)\r\n            if d > 2 * r:\r\n                return []\r\n            mid_x, mid_y = (x1 + x2) / 2, (y1 + y2) / 2\r\n            dist_to_center = sqrt(r * r - (d / 2) * (d / 2))\r\n            offset_x = dist_to_center * dy / d\r\n            offset_y = dist_to_center * -dx / d\r\n            return [\r\n                (mid_x + offset_x, mid_y + offset_y),\r\n                (mid_x - offset_x, mid_y - offset_y),\r\n            ]\r\n\r\n        n = len(darts)\r\n        max_darts = 1\r\n\r\n        for i in range(n):\r\n            for j in range(i + 1, n):\r\n                centers = possibleCenters(\r\n                    darts[i][0], darts[i][1], darts[j][0], darts[j][1]\r\n                )\r\n                for center in centers:\r\n                    max_darts = max(max_darts, countDarts(center[0], center[1]))\r\n\r\n        return max_darts",
+    "problemId": 1453,
+    "title": "Maximum Number of Darts Inside of a Circular Dartboard",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-darts-inside-of-a-circular-dartboard/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1453.Maximum Number of Darts Inside of a Circular Dartboard/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1453.Maximum Number of Darts Inside of a Circular Dartboard/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1453.Maximum Number of Darts Inside of a Circular Dartboard/Solution.java",
+            "sourceFile": "Solution.java"
+        }
+    ]
+}

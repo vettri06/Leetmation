@@ -1,0 +1,48 @@
+{
+    "problemName": "convert-the-temperature",
+    "language": "python3",
+    "code": "class Solution:\r\n    def convertTemperature(self, celsius: float) -> List[float]:\r\n        return [celsius + 273.15, celsius * 1.8 + 32]",
+    "problemId": 2469,
+    "title": "Convert the Temperature",
+    "problemUrl": "https://leetcode.com/problems/convert-the-temperature/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2469.Convert the Temperature/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2469.Convert the Temperature/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2469.Convert the Temperature/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2469.Convert the Temperature/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2469.Convert the Temperature/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2469.Convert the Temperature/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2469.Convert the Temperature/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2469.Convert the Temperature/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "minimize-maximum-of-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimizeArrayValue(self, nums: List[int]) -> int:\r\n        def check(mx):\r\n            d = 0\r\n            for x in nums[:0:-1]:\r\n                d = max(0, d + x - mx)\r\n            return nums[0] + d <= mx\r\n\r\n        left, right = 0, max(nums)\r\n        while left < right:\r\n            mid = (left + right) >> 1\r\n            if check(mid):\r\n                right = mid\r\n            else:\r\n                left = mid + 1\r\n        return left",
+    "problemId": 2439,
+    "title": "Minimize Maximum of Array",
+    "problemUrl": "https://leetcode.com/problems/minimize-maximum-of-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2439.Minimize Maximum of Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2439.Minimize Maximum of Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2439.Minimize Maximum of Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2439.Minimize Maximum of Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2439.Minimize Maximum of Array/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "sum-of-root-to-leaf-binary-numbers",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def sumRootToLeaf(self, root: Optional[TreeNode]) -> int:\r\n        def dfs(root: Optional[TreeNode], x: int) -> int:\r\n            if root is None:\r\n                return 0\r\n            x = x << 1 | root.val\r\n            if root.left == root.right:\r\n                return x\r\n            return dfs(root.left, x) + dfs(root.right, x)\r\n\r\n        return dfs(root, 0)",
+    "problemId": 1022,
+    "title": "Sum of Root To Leaf Binary Numbers",
+    "problemUrl": "https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1022.Sum of Root To Leaf Binary Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1022.Sum of Root To Leaf Binary Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1022.Sum of Root To Leaf Binary Numbers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1022.Sum of Root To Leaf Binary Numbers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1022.Sum of Root To Leaf Binary Numbers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1022.Sum of Root To Leaf Binary Numbers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1022.Sum of Root To Leaf Binary Numbers/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

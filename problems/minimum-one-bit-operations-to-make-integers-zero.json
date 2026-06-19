@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-one-bit-operations-to-make-integers-zero",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumOneBitOperations(self, n: int) -> int:\r\n        ans = 0\r\n        while n:\r\n            ans ^= n\r\n            n >>= 1\r\n        return ans",
+    "problemId": 1611,
+    "title": "Minimum One Bit Operations to Make Integers Zero",
+    "problemUrl": "https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1611.Minimum One Bit Operations to Make Integers Zero/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1611.Minimum One Bit Operations to Make Integers Zero/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1611.Minimum One Bit Operations to Make Integers Zero/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1611.Minimum One Bit Operations to Make Integers Zero/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1611.Minimum One Bit Operations to Make Integers Zero/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1611.Minimum One Bit Operations to Make Integers Zero/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1611.Minimum One Bit Operations to Make Integers Zero/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "number-of-accounts-that-did-not-stream",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT COUNT(sub.account_id) AS accounts_count\r\nFROM\r\n    Subscriptions AS sub\r\n    LEFT JOIN Streams USING (account_id)\r\nWHERE\r\n    YEAR(start_date) <= 2021\r\n    AND YEAR(end_date) >= 2021\r\n    AND (YEAR(stream_date) != 2021 OR stream_date > end_date);",
+    "problemId": 2020,
+    "title": "Number of Accounts That Did Not Stream",
+    "problemUrl": "https://leetcode.com/problems/number-of-accounts-that-did-not-stream/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2020.Number of Accounts That Did Not Stream/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2020.Number of Accounts That Did Not Stream/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

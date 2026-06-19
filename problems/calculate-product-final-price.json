@@ -1,0 +1,23 @@
+{
+    "problemName": "calculate-product-final-price",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef calculate_final_prices(\r\n    products: pd.DataFrame, discounts: pd.DataFrame\r\n) -> pd.DataFrame:\r\n    # Perform a left join on the 'category' column\r\n    merged_df = pd.merge(products, discounts, on=\"category\", how=\"left\")\r\n\r\n    # Calculate the final price\r\n    merged_df[\"final_price\"] = (\r\n        merged_df[\"price\"] * (100 - merged_df[\"discount\"].fillna(0)) / 100\r\n    )\r\n\r\n    # Select the necessary columns and sort by 'product_id'\r\n    result_df = merged_df[[\"product_id\", \"final_price\", \"category\"]].sort_values(\r\n        \"product_id\"\r\n    )\r\n\r\n    return result_df",
+    "problemId": 3293,
+    "title": "Calculate Product Final Price",
+    "problemUrl": "https://leetcode.com/problems/calculate-product-final-price/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3293.Calculate Product Final Price/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3293.Calculate Product Final Price/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3293.Calculate Product Final Price/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "design-a-text-editor",
+    "language": "python3",
+    "code": "class TextEditor:\r\n    def __init__(self):\r\n        self.left = []\r\n        self.right = []\r\n\r\n    def addText(self, text: str) -> None:\r\n        self.left.extend(list(text))\r\n\r\n    def deleteText(self, k: int) -> int:\r\n        k = min(k, len(self.left))\r\n        for _ in range(k):\r\n            self.left.pop()\r\n        return k\r\n\r\n    def cursorLeft(self, k: int) -> str:\r\n        k = min(k, len(self.left))\r\n        for _ in range(k):\r\n            self.right.append(self.left.pop())\r\n        return ''.join(self.left[-10:])\r\n\r\n    def cursorRight(self, k: int) -> str:\r\n        k = min(k, len(self.right))\r\n        for _ in range(k):\r\n            self.left.append(self.right.pop())\r\n        return ''.join(self.left[-10:])\r\n\r\n\r\n# Your TextEditor object will be instantiated and called as such:\r\n# obj = TextEditor()\r\n# obj.addText(text)\r\n# param_2 = obj.deleteText(k)\r\n# param_3 = obj.cursorLeft(k)\r\n# param_4 = obj.cursorRight(k)",
+    "problemId": 2296,
+    "title": "Design a Text Editor",
+    "problemUrl": "https://leetcode.com/problems/design-a-text-editor/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2296.Design a Text Editor/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2296.Design a Text Editor/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2296.Design a Text Editor/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2296.Design a Text Editor/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2296.Design a Text Editor/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2296.Design a Text Editor/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2296.Design a Text Editor/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

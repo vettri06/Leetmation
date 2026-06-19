@@ -1,0 +1,43 @@
+{
+    "problemName": "unique-substrings-in-wraparound-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findSubstringInWraproundString(self, s: str) -> int:\r\n        f = defaultdict(int)\r\n        k = 0\r\n        for i, c in enumerate(s):\r\n            if i and (ord(c) - ord(s[i - 1])) % 26 == 1:\r\n                k += 1\r\n            else:\r\n                k = 1\r\n            f[c] = max(f[c], k)\r\n        return sum(f.values())",
+    "problemId": 467,
+    "title": "Unique Substrings in Wraparound String",
+    "problemUrl": "https://leetcode.com/problems/unique-substrings-in-wraparound-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0467.Unique Substrings in Wraparound String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0467.Unique Substrings in Wraparound String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0467.Unique Substrings in Wraparound String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0467.Unique Substrings in Wraparound String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0467.Unique Substrings in Wraparound String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0467.Unique Substrings in Wraparound String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0467.Unique Substrings in Wraparound String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

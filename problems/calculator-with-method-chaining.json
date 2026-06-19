@@ -1,0 +1,18 @@
+{
+    "problemName": "calculator-with-method-chaining",
+    "language": "typescript",
+    "code": "class Calculator {\r\n    private x: number;\r\n\r\n    constructor(value: number) {\r\n        this.x = value;\r\n    }\r\n\r\n    add(value: number): Calculator {\r\n        this.x += value;\r\n        return this;\r\n    }\r\n\r\n    subtract(value: number): Calculator {\r\n        this.x -= value;\r\n        return this;\r\n    }\r\n\r\n    multiply(value: number): Calculator {\r\n        this.x *= value;\r\n        return this;\r\n    }\r\n\r\n    divide(value: number): Calculator {\r\n        if (value === 0) {\r\n            throw new Error('Division by zero is not allowed');\r\n        }\r\n        this.x /= value;\r\n        return this;\r\n    }\r\n\r\n    power(value: number): Calculator {\r\n        this.x **= value;\r\n        return this;\r\n    }\r\n\r\n    getResult(): number {\r\n        return this.x;\r\n    }\r\n}",
+    "problemId": 2726,
+    "title": "Calculator with Method Chaining",
+    "problemUrl": "https://leetcode.com/problems/calculator-with-method-chaining/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2726.Calculator with Method Chaining/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2726.Calculator with Method Chaining/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

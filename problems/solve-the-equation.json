@@ -1,0 +1,33 @@
+{
+    "problemName": "solve-the-equation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def solveEquation(self, equation: str) -> str:\r\n        def f(s):\r\n            x = y = 0\r\n            if s[0] != '-':\r\n                s = '+' + s\r\n            i, n = 0, len(s)\r\n            while i < n:\r\n                sign = 1 if s[i] == '+' else -1\r\n                i += 1\r\n                j = i\r\n                while j < n and s[j] not in '+-':\r\n                    j += 1\r\n                v = s[i:j]\r\n                if v[-1] == 'x':\r\n                    x += sign * (int(v[:-1]) if len(v) > 1 else 1)\r\n                else:\r\n                    y += sign * int(v)\r\n                i = j\r\n            return x, y\r\n\r\n        a, b = equation.split('=')\r\n        x1, y1 = f(a)\r\n        x2, y2 = f(b)\r\n        if x1 == x2:\r\n            return 'Infinite solutions' if y1 == y2 else 'No solution'\r\n        return f'x={(y2 - y1) // (x1 - x2)}'",
+    "problemId": 640,
+    "title": "Solve the Equation",
+    "problemUrl": "https://leetcode.com/problems/solve-the-equation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0640.Solve the Equation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0640.Solve the Equation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0640.Solve the Equation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0640.Solve the Equation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0640.Solve the Equation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-height-by-stacking-cuboids",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxHeight(self, cuboids: List[List[int]]) -> int:\r\n        for c in cuboids:\r\n            c.sort()\r\n        cuboids.sort()\r\n        n = len(cuboids)\r\n        f = [0] * n\r\n        for i in range(n):\r\n            for j in range(i):\r\n                if cuboids[j][1] <= cuboids[i][1] and cuboids[j][2] <= cuboids[i][2]:\r\n                    f[i] = max(f[i], f[j])\r\n            f[i] += cuboids[i][2]\r\n        return max(f)",
+    "problemId": 1691,
+    "title": "Maximum Height by Stacking Cuboids",
+    "problemUrl": "https://leetcode.com/problems/maximum-height-by-stacking-cuboids/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1691.Maximum Height by Stacking Cuboids/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1691.Maximum Height by Stacking Cuboids/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1691.Maximum Height by Stacking Cuboids/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1691.Maximum Height by Stacking Cuboids/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1691.Maximum Height by Stacking Cuboids/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1691.Maximum Height by Stacking Cuboids/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1691.Maximum Height by Stacking Cuboids/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

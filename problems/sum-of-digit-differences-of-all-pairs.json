@@ -1,0 +1,38 @@
+{
+    "problemName": "sum-of-digit-differences-of-all-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumDigitDifferences(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        m = int(log10(nums[0])) + 1\r\n        ans = 0\r\n        for _ in range(m):\r\n            cnt = Counter()\r\n            for i, x in enumerate(nums):\r\n                nums[i], y = divmod(x, 10)\r\n                cnt[y] += 1\r\n            ans += sum(v * (n - v) for v in cnt.values()) // 2\r\n        return ans",
+    "problemId": 3153,
+    "title": "Sum of Digit Differences of All Pairs",
+    "problemUrl": "https://leetcode.com/problems/sum-of-digit-differences-of-all-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3153.Sum of Digit Differences of All Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3153.Sum of Digit Differences of All Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3153.Sum of Digit Differences of All Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3153.Sum of Digit Differences of All Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3153.Sum of Digit Differences of All Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3153.Sum of Digit Differences of All Pairs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

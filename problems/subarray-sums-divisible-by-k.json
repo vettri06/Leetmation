@@ -1,0 +1,38 @@
+{
+    "problemName": "subarray-sums-divisible-by-k",
+    "language": "python3",
+    "code": "class Solution:\r\n    def subarraysDivByK(self, nums: List[int], k: int) -> int:\r\n        cnt = Counter({0: 1})\r\n        ans = s = 0\r\n        for x in nums:\r\n            s = (s + x) % k\r\n            ans += cnt[s]\r\n            cnt[s] += 1\r\n        return ans",
+    "problemId": 974,
+    "title": "Subarray Sums Divisible by K",
+    "problemUrl": "https://leetcode.com/problems/subarray-sums-divisible-by-k/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0900-0999/0974.Subarray Sums Divisible by K/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0974.Subarray Sums Divisible by K/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0974.Subarray Sums Divisible by K/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0974.Subarray Sums Divisible by K/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0974.Subarray Sums Divisible by K/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0900-0999/0974.Subarray Sums Divisible by K/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

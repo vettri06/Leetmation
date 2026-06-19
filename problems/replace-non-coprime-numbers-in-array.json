@@ -1,0 +1,48 @@
+{
+    "problemName": "replace-non-coprime-numbers-in-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def replaceNonCoprimes(self, nums: List[int]) -> List[int]:\r\n        stk = []\r\n        for x in nums:\r\n            stk.append(x)\r\n            while len(stk) > 1:\r\n                x, y = stk[-2:]\r\n                g = gcd(x, y)\r\n                if g == 1:\r\n                    break\r\n                stk.pop()\r\n                stk[-1] = x * y // g\r\n        return stk",
+    "problemId": 2197,
+    "title": "Replace Non-Coprime Numbers in Array",
+    "problemUrl": "https://leetcode.com/problems/replace-non-coprime-numbers-in-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2197.Replace Non-Coprime Numbers in Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2197.Replace Non-Coprime Numbers in Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2197.Replace Non-Coprime Numbers in Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2197.Replace Non-Coprime Numbers in Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2197.Replace Non-Coprime Numbers in Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2197.Replace Non-Coprime Numbers in Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2197.Replace Non-Coprime Numbers in Array/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2197.Replace Non-Coprime Numbers in Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

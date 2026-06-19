@@ -1,0 +1,43 @@
+{
+    "problemName": "shortest-subarray-with-or-at-least-k-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumSubarrayLength(self, nums: List[int], k: int) -> int:\r\n        n = len(nums)\r\n        cnt = [0] * 32\r\n        ans = n + 1\r\n        s = i = 0\r\n        for j, x in enumerate(nums):\r\n            s |= x\r\n            for h in range(32):\r\n                if x >> h & 1:\r\n                    cnt[h] += 1\r\n            while s >= k and i <= j:\r\n                ans = min(ans, j - i + 1)\r\n                y = nums[i]\r\n                for h in range(32):\r\n                    if y >> h & 1:\r\n                        cnt[h] -= 1\r\n                        if cnt[h] == 0:\r\n                            s ^= 1 << h\r\n                i += 1\r\n        return -1 if ans > n else ans",
+    "problemId": 3097,
+    "title": "Shortest Subarray With OR at Least K II",
+    "problemUrl": "https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3097.Shortest Subarray With OR at Least K II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3097.Shortest Subarray With OR at Least K II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3097.Shortest Subarray With OR at Least K II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3097.Shortest Subarray With OR at Least K II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3097.Shortest Subarray With OR at Least K II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3097.Shortest Subarray With OR at Least K II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3097.Shortest Subarray With OR at Least K II/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

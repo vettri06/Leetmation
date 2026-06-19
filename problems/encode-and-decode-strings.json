@@ -1,0 +1,33 @@
+{
+    "problemName": "encode-and-decode-strings",
+    "language": "python3",
+    "code": "class Codec:\r\n    def encode(self, strs: List[str]) -> str:\r\n        \"\"\"Encodes a list of strings to a single string.\"\"\"\r\n        ans = []\r\n        for s in strs:\r\n            ans.append(\"{:4}\".format(len(s)) + s)\r\n        return \"\".join(ans)\r\n\r\n    def decode(self, s: str) -> List[str]:\r\n        \"\"\"Decodes a single string to a list of strings.\"\"\"\r\n        ans = []\r\n        i, n = 0, len(s)\r\n        while i < n:\r\n            size = int(s[i : i + 4])\r\n            i += 4\r\n            ans.append(s[i : i + size])\r\n            i += size\r\n        return ans\r\n\r\n\r\n# Your Codec object will be instantiated and called as such:\r\n# codec = Codec()\r\n# codec.decode(codec.encode(strs))",
+    "problemId": 271,
+    "title": "Encode and Decode Strings",
+    "problemUrl": "https://leetcode.com/problems/encode-and-decode-strings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0271.Encode and Decode Strings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0271.Encode and Decode Strings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0271.Encode and Decode Strings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0271.Encode and Decode Strings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0271.Encode and Decode Strings/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

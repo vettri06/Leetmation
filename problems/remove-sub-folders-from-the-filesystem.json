@@ -1,0 +1,73 @@
+{
+    "problemName": "remove-sub-folders-from-the-filesystem",
+    "language": "python3",
+    "code": "class Solution:\r\n    def removeSubfolders(self, folder: List[str]) -> List[str]:\r\n        folder.sort()\r\n        ans = [folder[0]]\r\n        for f in folder[1:]:\r\n            m, n = len(ans[-1]), len(f)\r\n            if m >= n or not (ans[-1] == f[:m] and f[m] == '/'):\r\n                ans.append(f)\r\n        return ans",
+    "problemId": 1233,
+    "title": "Remove Sub-Folders from the Filesystem",
+    "problemUrl": "https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1233.Remove Sub-Folders from the Filesystem/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1233.Remove Sub-Folders from the Filesystem/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1233.Remove Sub-Folders from the Filesystem/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1233.Remove Sub-Folders from the Filesystem/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1233.Remove Sub-Folders from the Filesystem/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1233.Remove Sub-Folders from the Filesystem/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1233.Remove Sub-Folders from the Filesystem/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1233.Remove Sub-Folders from the Filesystem/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1233.Remove Sub-Folders from the Filesystem/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1233.Remove Sub-Folders from the Filesystem/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1233.Remove Sub-Folders from the Filesystem/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1233.Remove Sub-Folders from the Filesystem/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1233.Remove Sub-Folders from the Filesystem/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

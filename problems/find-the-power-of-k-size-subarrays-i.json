@@ -1,0 +1,48 @@
+{
+    "problemName": "find-the-power-of-k-size-subarrays-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def resultsArray(self, nums: List[int], k: int) -> List[int]:\r\n        n = len(nums)\r\n        f = [1] * n\r\n        for i in range(1, n):\r\n            if nums[i] == nums[i - 1] + 1:\r\n                f[i] = f[i - 1] + 1\r\n        return [nums[i] if f[i] >= k else -1 for i in range(k - 1, n)]",
+    "problemId": 3254,
+    "title": "Find the Power of K-Size Subarrays I",
+    "problemUrl": "https://leetcode.com/problems/find-the-power-of-k-size-subarrays-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3254.Find the Power of K-Size Subarrays I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3254.Find the Power of K-Size Subarrays I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3254.Find the Power of K-Size Subarrays I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3254.Find the Power of K-Size Subarrays I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3254.Find the Power of K-Size Subarrays I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3254.Find the Power of K-Size Subarrays I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3254.Find the Power of K-Size Subarrays I/Solution2.js",
+            "sourceFile": "Solution2.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3254.Find the Power of K-Size Subarrays I/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

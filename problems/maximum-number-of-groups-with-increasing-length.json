@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-number-of-groups-with-increasing-length",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxIncreasingGroups(self, usageLimits: List[int]) -> int:\r\n        usageLimits.sort()\r\n        k, n = 0, len(usageLimits)\r\n        for i in range(n):\r\n            if usageLimits[i] > k:\r\n                k += 1\r\n                usageLimits[i] -= k\r\n            if i + 1 < n:\r\n                usageLimits[i + 1] += usageLimits[i]\r\n        return k",
+    "problemId": 2790,
+    "title": "Maximum Number of Groups With Increasing Length",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-groups-with-increasing-length/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2790.Maximum Number of Groups With Increasing Length/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2790.Maximum Number of Groups With Increasing Length/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2790.Maximum Number of Groups With Increasing Length/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2790.Maximum Number of Groups With Increasing Length/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2790.Maximum Number of Groups With Increasing Length/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2790.Maximum Number of Groups With Increasing Length/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2790.Maximum Number of Groups With Increasing Length/Solution2.py",
+            "sourceFile": "Solution2.py"
+        }
+    ]
+}

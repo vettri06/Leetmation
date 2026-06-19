@@ -1,0 +1,38 @@
+{
+    "problemName": "append-k-integers-with-minimal-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimalKSum(self, nums: List[int], k: int) -> int:\r\n        nums.extend([0, 2 * 10**9])\r\n        nums.sort()\r\n        ans = 0\r\n        for a, b in pairwise(nums):\r\n            m = max(0, min(k, b - a - 1))\r\n            ans += (a + 1 + a + m) * m // 2\r\n            k -= m\r\n        return ans",
+    "problemId": 2195,
+    "title": "Append K Integers With Minimal Sum",
+    "problemUrl": "https://leetcode.com/problems/append-k-integers-with-minimal-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2195.Append K Integers With Minimal Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2195.Append K Integers With Minimal Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2195.Append K Integers With Minimal Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2195.Append K Integers With Minimal Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2195.Append K Integers With Minimal Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2195.Append K Integers With Minimal Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

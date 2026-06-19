@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-sum-of-almost-unique-subarray",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxSum(self, nums: List[int], m: int, k: int) -> int:\r\n        cnt = Counter(nums[:k])\r\n        s = sum(nums[:k])\r\n        ans = s if len(cnt) >= m else 0\r\n        for i in range(k, len(nums)):\r\n            cnt[nums[i]] += 1\r\n            cnt[nums[i - k]] -= 1\r\n            s += nums[i] - nums[i - k]\r\n            if cnt[nums[i - k]] == 0:\r\n                cnt.pop(nums[i - k])\r\n            if len(cnt) >= m:\r\n                ans = max(ans, s)\r\n        return ans",
+    "problemId": 2841,
+    "title": "Maximum Sum of Almost Unique Subarray",
+    "problemUrl": "https://leetcode.com/problems/maximum-sum-of-almost-unique-subarray/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2841.Maximum Sum of Almost Unique Subarray/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2841.Maximum Sum of Almost Unique Subarray/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2841.Maximum Sum of Almost Unique Subarray/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2841.Maximum Sum of Almost Unique Subarray/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2841.Maximum Sum of Almost Unique Subarray/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2841.Maximum Sum of Almost Unique Subarray/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2841.Maximum Sum of Almost Unique Subarray/Solution.cs",
+            "sourceFile": "Solution.cs"
+        }
+    ]
+}

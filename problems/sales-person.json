@@ -1,0 +1,18 @@
+{
+    "problemName": "sales-person",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT s.name\r\nFROM\r\n    SalesPerson AS s\r\n    LEFT JOIN Orders USING (sales_id)\r\n    LEFT JOIN Company AS c USING (com_id)\r\nGROUP BY sales_id\r\nHAVING IFNULL(SUM(c.name = 'RED'), 0) = 0;",
+    "problemId": 607,
+    "title": "Sales Person",
+    "problemUrl": "https://leetcode.com/problems/sales-person/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0607.Sales Person/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0607.Sales Person/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

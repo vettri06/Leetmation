@@ -1,0 +1,38 @@
+{
+    "problemName": "sum-of-increasing-product-blocks",
+    "language": "python3",
+    "code": "class Solution:\r\n    def sumOfBlocks(self, n: int) -> int:\r\n        ans = 0\r\n        mod = 10**9 + 7\r\n        k = 1\r\n        for i in range(1, n + 1):\r\n            x = 1\r\n            for j in range(k, k + i):\r\n                x = (x * j) % mod\r\n            ans = (ans + x) % mod\r\n            k += i\r\n        return ans",
+    "problemId": 3792,
+    "title": "Sum of Increasing Product Blocks",
+    "problemUrl": "https://leetcode.com/problems/sum-of-increasing-product-blocks/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3792.Sum of Increasing Product Blocks/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3792.Sum of Increasing Product Blocks/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3792.Sum of Increasing Product Blocks/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3792.Sum of Increasing Product Blocks/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3792.Sum of Increasing Product Blocks/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3792.Sum of Increasing Product Blocks/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

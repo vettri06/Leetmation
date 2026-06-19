@@ -1,0 +1,33 @@
+{
+    "problemName": "delete-duplicate-emails",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\n# Modify Person in place\r\ndef delete_duplicate_emails(person: pd.DataFrame) -> None:\r\n    # Sort the rows based on id (Ascending order)\r\n    person.sort_values(by=\"id\", ascending=True, inplace=True)\r\n    # Drop the duplicates based on email.\r\n    person.drop_duplicates(subset=\"email\", keep=\"first\", inplace=True)",
+    "problemId": 196,
+    "title": "Delete Duplicate Emails",
+    "problemUrl": "https://leetcode.com/problems/delete-duplicate-emails/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0100-0199/0196.Delete Duplicate Emails/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0196.Delete Duplicate Emails/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0196.Delete Duplicate Emails/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0196.Delete Duplicate Emails/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0100-0199/0196.Delete Duplicate Emails/Solution3.sql",
+            "sourceFile": "Solution3.sql"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "problemName": "kth-smallest-element-in-a-sorted-matrix",
+    "language": "python3",
+    "code": "class Solution:\r\n    def kthSmallest(self, matrix: List[List[int]], k: int) -> int:\r\n        def check(matrix, mid, k, n):\r\n            count = 0\r\n            i, j = n - 1, 0\r\n            while i >= 0 and j < n:\r\n                if matrix[i][j] <= mid:\r\n                    count += i + 1\r\n                    j += 1\r\n                else:\r\n                    i -= 1\r\n            return count >= k\r\n\r\n        n = len(matrix)\r\n        left, right = matrix[0][0], matrix[n - 1][n - 1]\r\n        while left < right:\r\n            mid = (left + right) >> 1\r\n            if check(matrix, mid, k, n):\r\n                right = mid\r\n            else:\r\n                left = mid + 1\r\n        return left",
+    "problemId": 378,
+    "title": "Kth Smallest Element in a Sorted Matrix",
+    "problemUrl": "https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0378.Kth Smallest Element in a Sorted Matrix/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0378.Kth Smallest Element in a Sorted Matrix/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0378.Kth Smallest Element in a Sorted Matrix/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0378.Kth Smallest Element in a Sorted Matrix/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0378.Kth Smallest Element in a Sorted Matrix/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

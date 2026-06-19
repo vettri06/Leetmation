@@ -1,0 +1,33 @@
+{
+    "problemName": "rectangle-area-ii",
+    "language": "python3",
+    "code": "class Node:\r\n    def __init__(self):\r\n        self.l = self.r = 0\r\n        self.cnt = self.length = 0\r\n\r\n\r\nclass SegmentTree:\r\n    def __init__(self, nums):\r\n        n = len(nums) - 1\r\n        self.nums = nums\r\n        self.tr = [Node() for _ in range(n << 2)]\r\n        self.build(1, 0, n - 1)\r\n\r\n    def build(self, u, l, r):\r\n        self.tr[u].l, self.tr[u].r = l, r\r\n        if l != r:\r\n            mid = (l + r) >> 1\r\n            self.build(u << 1, l, mid)\r\n            self.build(u << 1 | 1, mid + 1, r)\r\n\r\n    def modify(self, u, l, r, k):\r\n        if self.tr[u].l >= l and self.tr[u].r <= r:\r\n            self.tr[u].cnt += k\r\n        else:\r\n            mid = (self.tr[u].l + self.tr[u].r) >> 1\r\n            if l <= mid:\r\n                self.modify(u << 1, l, r, k)\r\n            if r > mid:\r\n                self.modify(u << 1 | 1, l, r, k)\r\n        self.pushup(u)\r\n\r\n    def pushup(self, u):\r\n        if self.tr[u].cnt:\r\n            self.tr[u].length = self.nums[self.tr[u].r + 1] - self.nums[self.tr[u].l]\r\n        elif self.tr[u].l == self.tr[u].r:\r\n            self.tr[u].length = 0\r\n        else:\r\n            self.tr[u].length = self.tr[u << 1].length + self.tr[u << 1 | 1].length\r\n\r\n    @property\r\n    def length(self):\r\n        return self.tr[1].length\r\n\r\n\r\nclass Solution:\r\n    def rectangleArea(self, rectangles: List[List[int]]) -> int:\r\n        segs = []\r\n        alls = set()\r\n        for x1, y1, x2, y2 in rectangles:\r\n            segs.append((x1, y1, y2, 1))\r\n            segs.append((x2, y1, y2, -1))\r\n            alls.update([y1, y2])\r\n\r\n        segs.sort()\r\n        alls = sorted(alls)\r\n        tree = SegmentTree(alls)\r\n        m = {v: i for i, v in enumerate(alls)}\r\n        ans = 0\r\n        for i, (x, y1, y2, k) in enumerate(segs):\r\n            if i:\r\n                ans += tree.length * (x - segs[i - 1][0])\r\n            tree.modify(1, m[y1], m[y2] - 1, k)\r\n        ans %= int(1e9 + 7)\r\n        return ans",
+    "problemId": 850,
+    "title": "Rectangle Area II",
+    "problemUrl": "https://leetcode.com/problems/rectangle-area-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0850.Rectangle Area II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0850.Rectangle Area II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0850.Rectangle Area II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0850.Rectangle Area II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0850.Rectangle Area II/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

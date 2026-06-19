@@ -1,0 +1,43 @@
+{
+    "problemName": "add-minimum-number-of-rungs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def addRungs(self, rungs: List[int], dist: int) -> int:\r\n        rungs = [0] + rungs\r\n        return sum((b - a - 1) // dist for a, b in pairwise(rungs))",
+    "problemId": 1936,
+    "title": "Add Minimum Number of Rungs",
+    "problemUrl": "https://leetcode.com/problems/add-minimum-number-of-rungs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1936.Add Minimum Number of Rungs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1936.Add Minimum Number of Rungs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1936.Add Minimum Number of Rungs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1936.Add Minimum Number of Rungs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1936.Add Minimum Number of Rungs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1936.Add Minimum Number of Rungs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1936.Add Minimum Number of Rungs/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

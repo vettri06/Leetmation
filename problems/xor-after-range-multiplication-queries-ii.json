@@ -1,0 +1,23 @@
+{
+    "problemName": "xor-after-range-multiplication-queries-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def xorAfterQueries(self, nums: List[int], queries: List[List[int]]) -> int:\r\n        MOD = 1_000_000_007\r\n        n = len(nums)\r\n        B = int(math.isqrt(n)) + 1\r\n\r\n        # events[k][res] = list of (t, v)\r\n        events = [[[] for _ in range(k)] for k in range(B + 1)]\r\n\r\n        for l, r, k, v in queries:\r\n            if k > B:\r\n                for idx in range(l, r + 1, k):\r\n                    nums[idx] = nums[idx] * v % MOD\r\n            else:\r\n                res = l % k\r\n                t1 = (l - res) // k\r\n                t2 = (r - res) // k\r\n                events[k][res].append((t1, v))\r\n\r\n                if t2 + 1 <= (n - 1 - res) // k:\r\n                    invv = pow(v, MOD - 2, MOD)\r\n                    events[k][res].append((t2 + 1, invv))\r\n\r\n        for k in range(1, B + 1):\r\n            for res in range(k):\r\n                ev = events[k][res]\r\n                if not ev:\r\n                    continue\r\n\r\n                ev.sort()\r\n                comp = []\r\n                for t, val in ev:\r\n                    if comp and comp[-1][0] == t:\r\n                        comp[-1] = (t, comp[-1][1] * val % MOD)\r\n                    else:\r\n                        comp.append([t, val])\r\n\r\n                cur = 1\r\n                ptr = 0\r\n                t = 0\r\n                idx = res\r\n                while idx < n:\r\n                    while ptr < len(comp) and comp[ptr][0] == t:\r\n                        cur = cur * comp[ptr][1] % MOD\r\n                        ptr += 1\r\n                    nums[idx] = nums[idx] * cur % MOD\r\n                    idx += k\r\n                    t += 1\r\n\r\n        xr = 0\r\n        for x in nums:\r\n            xr ^= x\r\n        return xr",
+    "problemId": 3655,
+    "title": "XOR After Range Multiplication Queries II",
+    "problemUrl": "https://leetcode.com/problems/xor-after-range-multiplication-queries-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3655.XOR After Range Multiplication Queries II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3655.XOR After Range Multiplication Queries II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3655.XOR After Range Multiplication Queries II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "problemName": "project-employees-i",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement\r\nSELECT project_id, ROUND(AVG(experience_years), 2) AS average_years\r\nFROM\r\n    Project\r\n    JOIN Employee USING (employee_id)\r\nGROUP BY 1;",
+    "problemId": 1075,
+    "title": "Project Employees I",
+    "problemUrl": "https://leetcode.com/problems/project-employees-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1075.Project Employees I/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1075.Project Employees I/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

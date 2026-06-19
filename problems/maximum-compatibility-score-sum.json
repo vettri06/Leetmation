@@ -1,0 +1,48 @@
+{
+    "problemName": "maximum-compatibility-score-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxCompatibilitySum(\r\n        self, students: List[List[int]], mentors: List[List[int]]\r\n    ) -> int:\r\n        def dfs(i: int, s: int):\r\n            if i >= m:\r\n                nonlocal ans\r\n                ans = max(ans, s)\r\n                return\r\n            for j in range(m):\r\n                if not vis[j]:\r\n                    vis[j] = True\r\n                    dfs(i + 1, s + g[i][j])\r\n                    vis[j] = False\r\n\r\n        ans = 0\r\n        m = len(students)\r\n        vis = [False] * m\r\n        g = [[0] * m for _ in range(m)]\r\n        for i, x in enumerate(students):\r\n            for j, y in enumerate(mentors):\r\n                g[i][j] = sum(a == b for a, b in zip(x, y))\r\n        dfs(0, 0)\r\n        return ans",
+    "problemId": 1947,
+    "title": "Maximum Compatibility Score Sum",
+    "problemUrl": "https://leetcode.com/problems/maximum-compatibility-score-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1947.Maximum Compatibility Score Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1947.Maximum Compatibility Score Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1947.Maximum Compatibility Score Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1947.Maximum Compatibility Score Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1947.Maximum Compatibility Score Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1947.Maximum Compatibility Score Sum/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1947.Maximum Compatibility Score Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1947.Maximum Compatibility Score Sum/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

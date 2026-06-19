@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-average-of-smallest-and-largest-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumAverage(self, nums: List[int]) -> float:\r\n        nums.sort()\r\n        n = len(nums)\r\n        return min(nums[i] + nums[-i - 1] for i in range(n // 2)) / 2",
+    "problemId": 3194,
+    "title": "Minimum Average of Smallest and Largest Elements",
+    "problemUrl": "https://leetcode.com/problems/minimum-average-of-smallest-and-largest-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3194.Minimum Average of Smallest and Largest Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3194.Minimum Average of Smallest and Largest Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3194.Minimum Average of Smallest and Largest Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3194.Minimum Average of Smallest and Largest Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3194.Minimum Average of Smallest and Largest Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3194.Minimum Average of Smallest and Largest Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3194.Minimum Average of Smallest and Largest Elements/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

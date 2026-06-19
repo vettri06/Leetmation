@@ -1,0 +1,18 @@
+{
+    "problemName": "market-analysis-ii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    u.user_id AS seller_id,\r\n    CASE\r\n        WHEN u.favorite_brand = i.item_brand THEN 'yes'\r\n        ELSE 'no'\r\n    END AS 2nd_item_fav_brand\r\nFROM\r\n    users AS u\r\n    LEFT JOIN (\r\n        SELECT\r\n            order_date,\r\n            item_id,\r\n            seller_id,\r\n            RANK() OVER (\r\n                PARTITION BY seller_id\r\n                ORDER BY order_date\r\n            ) AS rk\r\n        FROM orders\r\n    ) AS o\r\n        ON u.user_id = o.seller_id AND o.rk = 2\r\n    LEFT JOIN items AS i ON o.item_id = i.item_id;",
+    "problemId": 1159,
+    "title": "Market Analysis II",
+    "problemUrl": "https://leetcode.com/problems/market-analysis-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1159.Market Analysis II/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1159.Market Analysis II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

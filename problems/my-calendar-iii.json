@@ -1,0 +1,38 @@
+{
+    "problemName": "my-calendar-iii",
+    "language": "python3",
+    "code": "class Node:\r\n    def __init__(self, l, r):\r\n        self.left = None\r\n        self.right = None\r\n        self.l = l\r\n        self.r = r\r\n        self.mid = (l + r) >> 1\r\n        self.v = 0\r\n        self.add = 0\r\n\r\n\r\nclass SegmentTree:\r\n    def __init__(self):\r\n        self.root = Node(1, int(1e9 + 1))\r\n\r\n    def modify(self, l: int, r: int, v: int, node: Node = None):\r\n        if l > r:\r\n            return\r\n        if node is None:\r\n            node = self.root\r\n        if node.l >= l and node.r <= r:\r\n            node.v += v\r\n            node.add += v\r\n            return\r\n        self.pushdown(node)\r\n        if l <= node.mid:\r\n            self.modify(l, r, v, node.left)\r\n        if r > node.mid:\r\n            self.modify(l, r, v, node.right)\r\n        self.pushup(node)\r\n\r\n    def query(self, l: int, r: int, node: Node = None) -> int:\r\n        if l > r:\r\n            return 0\r\n        if node is None:\r\n            node = self.root\r\n        if node.l >= l and node.r <= r:\r\n            return node.v\r\n        self.pushdown(node)\r\n        v = 0\r\n        if l <= node.mid:\r\n            v = max(v, self.query(l, r, node.left))\r\n        if r > node.mid:\r\n            v = max(v, self.query(l, r, node.right))\r\n        return v\r\n\r\n    def pushup(self, node: Node):\r\n        node.v = max(node.left.v, node.right.v)\r\n\r\n    def pushdown(self, node: Node):\r\n        if node.left is None:\r\n            node.left = Node(node.l, node.mid)\r\n        if node.right is None:\r\n            node.right = Node(node.mid + 1, node.r)\r\n        if node.add:\r\n            node.left.v += node.add\r\n            node.right.v += node.add\r\n            node.left.add += node.add\r\n            node.right.add += node.add\r\n            node.add = 0\r\n\r\n\r\nclass MyCalendarThree:\r\n    def __init__(self):\r\n        self.tree = SegmentTree()\r\n\r\n    def book(self, start: int, end: int) -> int:\r\n        self.tree.modify(start + 1, end, 1)\r\n        return self.tree.query(1, int(1e9 + 1))\r\n\r\n\r\n# Your MyCalendarThree object will be instantiated and called as such:\r\n# obj = MyCalendarThree()\r\n# param_1 = obj.book(start,end)",
+    "problemId": 732,
+    "title": "My Calendar III",
+    "problemUrl": "https://leetcode.com/problems/my-calendar-iii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0700-0799/0732.My Calendar III/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0732.My Calendar III/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0732.My Calendar III/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0732.My Calendar III/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0732.My Calendar III/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0700-0799/0732.My Calendar III/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

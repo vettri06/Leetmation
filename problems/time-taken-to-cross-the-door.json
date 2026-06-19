@@ -1,0 +1,43 @@
+{
+    "problemName": "time-taken-to-cross-the-door",
+    "language": "python3",
+    "code": "class Solution:\r\n    def timeTaken(self, arrival: List[int], state: List[int]) -> List[int]:\r\n        q = [deque(), deque()]\r\n        n = len(arrival)\r\n        t = i = 0\r\n        st = 1\r\n        ans = [0] * n\r\n        while i < n or q[0] or q[1]:\r\n            while i < n and arrival[i] <= t:\r\n                q[state[i]].append(i)\r\n                i += 1\r\n            if q[0] and q[1]:\r\n                ans[q[st].popleft()] = t\r\n            elif q[0] or q[1]:\r\n                st = 0 if q[0] else 1\r\n                ans[q[st].popleft()] = t\r\n            else:\r\n                st = 1\r\n            t += 1\r\n        return ans",
+    "problemId": 2534,
+    "title": "Time Taken to Cross the Door",
+    "problemUrl": "https://leetcode.com/problems/time-taken-to-cross-the-door/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2500-2599/2534.Time Taken to Cross the Door/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2534.Time Taken to Cross the Door/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2534.Time Taken to Cross the Door/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2534.Time Taken to Cross the Door/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2534.Time Taken to Cross the Door/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2534.Time Taken to Cross the Door/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2500-2599/2534.Time Taken to Cross the Door/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "problemName": "the-number-of-weak-characters-in-the-game",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numberOfWeakCharacters(self, properties: List[List[int]]) -> int:\r\n        properties.sort(key=lambda x: (-x[0], x[1]))\r\n        ans = mx = 0\r\n        for _, x in properties:\r\n            ans += x < mx\r\n            mx = max(mx, x)\r\n        return ans",
+    "problemId": 1996,
+    "title": "The Number of Weak Characters in the Game",
+    "problemUrl": "https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1900-1999/1996.The Number of Weak Characters in the Game/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1996.The Number of Weak Characters in the Game/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1996.The Number of Weak Characters in the Game/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1996.The Number of Weak Characters in the Game/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1996.The Number of Weak Characters in the Game/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1996.The Number of Weak Characters in the Game/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1900-1999/1996.The Number of Weak Characters in the Game/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

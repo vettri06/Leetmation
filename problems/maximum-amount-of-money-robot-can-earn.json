@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-amount-of-money-robot-can-earn",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumAmount(self, coins: List[List[int]]) -> int:\r\n        @cache\r\n        def dfs(i: int, j: int, k: int) -> int:\r\n            if i >= m or j >= n:\r\n                return -inf\r\n            if i == m - 1 and j == n - 1:\r\n                return max(coins[i][j], 0) if k else coins[i][j]\r\n            ans = coins[i][j] + max(dfs(i + 1, j, k), dfs(i, j + 1, k))\r\n            if coins[i][j] < 0 and k:\r\n                ans = max(ans, dfs(i + 1, j, k - 1), dfs(i, j + 1, k - 1))\r\n            return ans\r\n\r\n        m, n = len(coins), len(coins[0])\r\n        ans = dfs(0, 0, 2)\r\n        dfs.cache_clear()\r\n        return ans",
+    "problemId": 3418,
+    "title": "Maximum Amount of Money Robot Can Earn",
+    "problemUrl": "https://leetcode.com/problems/maximum-amount-of-money-robot-can-earn/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3418.Maximum Amount of Money Robot Can Earn/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3418.Maximum Amount of Money Robot Can Earn/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3418.Maximum Amount of Money Robot Can Earn/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3418.Maximum Amount of Money Robot Can Earn/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3418.Maximum Amount of Money Robot Can Earn/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3418.Maximum Amount of Money Robot Can Earn/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

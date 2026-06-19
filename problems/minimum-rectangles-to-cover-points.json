@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-rectangles-to-cover-points",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minRectanglesToCoverPoints(self, points: List[List[int]], w: int) -> int:\r\n        points.sort()\r\n        ans, x1 = 0, -1\r\n        for x, _ in points:\r\n            if x > x1:\r\n                ans += 1\r\n                x1 = x + w\r\n        return ans",
+    "problemId": 3111,
+    "title": "Minimum Rectangles to Cover Points",
+    "problemUrl": "https://leetcode.com/problems/minimum-rectangles-to-cover-points/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3111.Minimum Rectangles to Cover Points/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3111.Minimum Rectangles to Cover Points/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3111.Minimum Rectangles to Cover Points/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3111.Minimum Rectangles to Cover Points/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3111.Minimum Rectangles to Cover Points/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3111.Minimum Rectangles to Cover Points/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3111.Minimum Rectangles to Cover Points/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3111.Minimum Rectangles to Cover Points/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

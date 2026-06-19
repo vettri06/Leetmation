@@ -1,0 +1,38 @@
+{
+    "problemName": "smallest-divisible-digit-product-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def smallestNumber(self, n: int, t: int) -> int:\r\n        for i in count(n):\r\n            p = 1\r\n            x = i\r\n            while x:\r\n                p *= x % 10\r\n                x //= 10\r\n            if p % t == 0:\r\n                return i",
+    "problemId": 3345,
+    "title": "Smallest Divisible Digit Product I",
+    "problemUrl": "https://leetcode.com/problems/smallest-divisible-digit-product-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3345.Smallest Divisible Digit Product I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3345.Smallest Divisible Digit Product I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3345.Smallest Divisible Digit Product I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3345.Smallest Divisible Digit Product I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3345.Smallest Divisible Digit Product I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3345.Smallest Divisible Digit Product I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

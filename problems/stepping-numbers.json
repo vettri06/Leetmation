@@ -1,0 +1,38 @@
+{
+    "problemName": "stepping-numbers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSteppingNumbers(self, low: int, high: int) -> List[int]:\r\n        ans = []\r\n        if low == 0:\r\n            ans.append(0)\r\n        q = deque(range(1, 10))\r\n        while q:\r\n            v = q.popleft()\r\n            if v > high:\r\n                break\r\n            if v >= low:\r\n                ans.append(v)\r\n            x = v % 10\r\n            if x:\r\n                q.append(v * 10 + x - 1)\r\n            if x < 9:\r\n                q.append(v * 10 + x + 1)\r\n        return ans",
+    "problemId": 1215,
+    "title": "Stepping Numbers",
+    "problemUrl": "https://leetcode.com/problems/stepping-numbers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1215.Stepping Numbers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1215.Stepping Numbers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1215.Stepping Numbers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1215.Stepping Numbers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1215.Stepping Numbers/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1215.Stepping Numbers/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "problemName": "add-binary",
+    "language": "python3",
+    "code": "class Solution:\r\n    def addBinary(self, a: str, b: str) -> str:\r\n        ans = []\r\n        i, j, carry = len(a) - 1, len(b) - 1, 0\r\n        while i >= 0 or j >= 0 or carry:\r\n            carry += (0 if i < 0 else int(a[i])) + (0 if j < 0 else int(b[j]))\r\n            carry, v = divmod(carry, 2)\r\n            ans.append(str(v))\r\n            i, j = i - 1, j - 1\r\n        return \"\".join(ans[::-1])",
+    "problemId": 67,
+    "title": "Add Binary",
+    "problemUrl": "https://leetcode.com/problems/add-binary/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0067.Add Binary/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0067.Add Binary/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0067.Add Binary/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0067.Add Binary/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0067.Add Binary/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0067.Add Binary/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0067.Add Binary/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0067.Add Binary/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

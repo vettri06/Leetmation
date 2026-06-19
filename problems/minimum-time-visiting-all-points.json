@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-time-visiting-all-points",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minTimeToVisitAllPoints(self, points: List[List[int]]) -> int:\r\n        return sum(\r\n            max(abs(p1[0] - p2[0]), abs(p1[1] - p2[1])) for p1, p2 in pairwise(points)\r\n        )",
+    "problemId": 1266,
+    "title": "Minimum Time Visiting All Points",
+    "problemUrl": "https://leetcode.com/problems/minimum-time-visiting-all-points/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1266.Minimum Time Visiting All Points/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1266.Minimum Time Visiting All Points/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1266.Minimum Time Visiting All Points/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1266.Minimum Time Visiting All Points/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1266.Minimum Time Visiting All Points/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1266.Minimum Time Visiting All Points/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1266.Minimum Time Visiting All Points/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1266.Minimum Time Visiting All Points/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

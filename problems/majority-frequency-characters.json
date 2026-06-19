@@ -1,0 +1,38 @@
+{
+    "problemName": "majority-frequency-characters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def majorityFrequencyGroup(self, s: str) -> str:\r\n        cnt = Counter(s)\r\n        f = defaultdict(list)\r\n        for c, v in cnt.items():\r\n            f[v].append(c)\r\n        mx = mv = 0\r\n        ans = []\r\n        for v, cs in f.items():\r\n            if mx < len(cs) or (mx == len(cs) and mv < v):\r\n                mx = len(cs)\r\n                mv = v\r\n                ans = cs\r\n        return \"\".join(ans)",
+    "problemId": 3692,
+    "title": "Majority Frequency Characters",
+    "problemUrl": "https://leetcode.com/problems/majority-frequency-characters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3692.Majority Frequency Characters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3692.Majority Frequency Characters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3692.Majority Frequency Characters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3692.Majority Frequency Characters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3692.Majority Frequency Characters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3692.Majority Frequency Characters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

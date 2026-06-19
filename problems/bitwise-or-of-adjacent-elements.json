@@ -1,0 +1,38 @@
+{
+    "problemName": "bitwise-or-of-adjacent-elements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def orArray(self, nums: List[int]) -> List[int]:\r\n        return [a | b for a, b in pairwise(nums)]",
+    "problemId": 3173,
+    "title": "Bitwise OR of Adjacent Elements",
+    "problemUrl": "https://leetcode.com/problems/bitwise-or-of-adjacent-elements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3173.Bitwise OR of Adjacent Elements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3173.Bitwise OR of Adjacent Elements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3173.Bitwise OR of Adjacent Elements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3173.Bitwise OR of Adjacent Elements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3173.Bitwise OR of Adjacent Elements/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3173.Bitwise OR of Adjacent Elements/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

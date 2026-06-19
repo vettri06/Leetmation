@@ -1,0 +1,43 @@
+{
+    "problemName": "make-array-empty",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countOperationsToEmptyArray(self, nums: List[int]) -> int:\r\n        pos = {x: i for i, x in enumerate(nums)}\r\n        nums.sort()\r\n        sl = SortedList()\r\n        ans = pos[nums[0]] + 1\r\n        n = len(nums)\r\n        for k, (a, b) in enumerate(pairwise(nums)):\r\n            i, j = pos[a], pos[b]\r\n            d = j - i - sl.bisect(j) + sl.bisect(i)\r\n            ans += d + (n - k) * int(i > j)\r\n            sl.add(i)\r\n        return ans",
+    "problemId": 2659,
+    "title": "Make Array Empty",
+    "problemUrl": "https://leetcode.com/problems/make-array-empty/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2659.Make Array Empty/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2659.Make Array Empty/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2659.Make Array Empty/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2659.Make Array Empty/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2659.Make Array Empty/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2659.Make Array Empty/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2659.Make Array Empty/Solution2.py",
+            "sourceFile": "Solution2.py"
+        }
+    ]
+}

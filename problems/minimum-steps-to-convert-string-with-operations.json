@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-steps-to-convert-string-with-operations",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minOperations(self, word1: str, word2: str) -> int:\r\n        def calc(l: int, r: int, rev: bool) -> int:\r\n            cnt = Counter()\r\n            res = 0\r\n            for i in range(l, r + 1):\r\n                j = r - (i - l) if rev else i\r\n                a, b = word1[j], word2[i]\r\n                if a != b:\r\n                    if cnt[(b, a)] > 0:\r\n                        cnt[(b, a)] -= 1\r\n                    else:\r\n                        cnt[(a, b)] += 1\r\n                        res += 1\r\n            return res\r\n\r\n        n = len(word1)\r\n        f = [inf] * (n + 1)\r\n        f[0] = 0\r\n        for i in range(1, n + 1):\r\n            for j in range(i):\r\n                t = min(calc(j, i - 1, False), 1 + calc(j, i - 1, True))\r\n                f[i] = min(f[i], f[j] + t)\r\n        return f[n]",
+    "problemId": 3579,
+    "title": "Minimum Steps to Convert String with Operations",
+    "problemUrl": "https://leetcode.com/problems/minimum-steps-to-convert-string-with-operations/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3579.Minimum Steps to Convert String with Operations/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3579.Minimum Steps to Convert String with Operations/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3579.Minimum Steps to Convert String with Operations/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3579.Minimum Steps to Convert String with Operations/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3579.Minimum Steps to Convert String with Operations/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3579.Minimum Steps to Convert String with Operations/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3579.Minimum Steps to Convert String with Operations/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "problemName": "two-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\r\n        d = {}\r\n        for i, x in enumerate(nums):\r\n            if (y := target - x) in d:\r\n                return [d[y], i]\r\n            d[x] = i",
+    "problemId": 1,
+    "title": "Two Sum",
+    "problemUrl": "https://leetcode.com/problems/two-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0000-0099/0001.Two Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0001.Two Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0001.Two Sum/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0001.Two Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0001.Two Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0001.Two Sum/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0001.Two Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0001.Two Sum/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0001.Two Sum/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "kotlin",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0001.Two Sum/Solution.kt",
+            "sourceFile": "Solution.kt"
+        },
+        {
+            "language": "swift",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0001.Two Sum/Solution.swift",
+            "sourceFile": "Solution.swift"
+        },
+        {
+            "language": "ruby",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0001.Two Sum/Solution.rb",
+            "sourceFile": "Solution.rb"
+        },
+        {
+            "language": "scala",
+            "sourcePath": "solution2/leetcode/solution/0000-0099/0001.Two Sum/Solution.scala",
+            "sourceFile": "Solution.scala"
+        }
+    ]
+}

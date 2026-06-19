@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-coins-heroes-can-collect",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumCoins(\r\n        self, heroes: List[int], monsters: List[int], coins: List[int]\r\n    ) -> List[int]:\r\n        m = len(monsters)\r\n        idx = sorted(range(m), key=lambda i: monsters[i])\r\n        s = list(accumulate((coins[i] for i in idx), initial=0))\r\n        ans = []\r\n        for h in heroes:\r\n            i = bisect_right(idx, h, key=lambda i: monsters[i])\r\n            ans.append(s[i])\r\n        return ans",
+    "problemId": 2838,
+    "title": "Maximum Coins Heroes Can Collect",
+    "problemUrl": "https://leetcode.com/problems/maximum-coins-heroes-can-collect/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2838.Maximum Coins Heroes Can Collect/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2838.Maximum Coins Heroes Can Collect/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2838.Maximum Coins Heroes Can Collect/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2838.Maximum Coins Heroes Can Collect/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2838.Maximum Coins Heroes Can Collect/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2838.Maximum Coins Heroes Can Collect/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

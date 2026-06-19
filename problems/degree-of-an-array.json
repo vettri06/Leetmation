@@ -1,0 +1,38 @@
+{
+    "problemName": "degree-of-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def findShortestSubArray(self, nums: List[int]) -> int:\r\n        cnt = Counter(nums)\r\n        degree = cnt.most_common()[0][1]\r\n        left, right = {}, {}\r\n        for i, v in enumerate(nums):\r\n            if v not in left:\r\n                left[v] = i\r\n            right[v] = i\r\n        ans = inf\r\n        for v in nums:\r\n            if cnt[v] == degree:\r\n                t = right[v] - left[v] + 1\r\n                if ans > t:\r\n                    ans = t\r\n        return ans",
+    "problemId": 697,
+    "title": "Degree of an Array",
+    "problemUrl": "https://leetcode.com/problems/degree-of-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0697.Degree of an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0697.Degree of an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0697.Degree of an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0697.Degree of an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0697.Degree of an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0697.Degree of an Array/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

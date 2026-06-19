@@ -1,0 +1,18 @@
+{
+    "problemName": "count-beautiful-substrings-ii",
+    "language": "typescript",
+    "code": "function beautifulSubstrings(s: string, k: number): number {\r\n    const l = pSqrt(k * 4);\r\n    const n = s.length;\r\n    let sum = n;\r\n    let ans = 0;\r\n    const counter = new Map();\r\n    counter.set(((l - 1) << 17) | sum, 1);\r\n    for (let i = 0; i < n; i++) {\r\n        const char = s[i];\r\n        const bit = (AEIOU_MASK >> (char.charCodeAt(0) - 'a'.charCodeAt(0))) & 1;\r\n        sum += bit * 2 - 1; // 1 -> 1    0 -> -1\r\n        const key = ((i % l) << 17) | sum;\r\n        ans += counter.get(key) || 0; // ans += cnt[(i%k,sum)]++\r\n        counter.set(key, (counter.get(key) ?? 0) + 1);\r\n    }\r\n    return ans;\r\n}\r\nconst AEIOU_MASK = 1065233;\r\n\r\nfunction pSqrt(n: number) {\r\n    let res = 1;\r\n    for (let i = 2; i * i <= n; i++) {\r\n        let i2 = i * i;\r\n        while (n % i2 == 0) {\r\n            res *= i;\r\n            n /= i2;\r\n        }\r\n        if (n % i == 0) {\r\n            res *= i;\r\n            n /= i;\r\n        }\r\n    }\r\n    if (n > 1) {\r\n        res *= n;\r\n    }\r\n    return res;\r\n}",
+    "problemId": 2949,
+    "title": "Count Beautiful Substrings II",
+    "problemUrl": "https://leetcode.com/problems/count-beautiful-substrings-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2900-2999/2949.Count Beautiful Substrings II/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2900-2999/2949.Count Beautiful Substrings II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

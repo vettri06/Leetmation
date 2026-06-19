@@ -1,0 +1,48 @@
+{
+    "problemName": "execution-of-all-suffix-instructions-staying-in-a-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def executeInstructions(self, n: int, startPos: List[int], s: str) -> List[int]:\r\n        ans = []\r\n        m = len(s)\r\n        mp = {\"L\": [0, -1], \"R\": [0, 1], \"U\": [-1, 0], \"D\": [1, 0]}\r\n        for i in range(m):\r\n            x, y = startPos\r\n            t = 0\r\n            for j in range(i, m):\r\n                a, b = mp[s[j]]\r\n                if 0 <= x + a < n and 0 <= y + b < n:\r\n                    x, y, t = x + a, y + b, t + 1\r\n                else:\r\n                    break\r\n            ans.append(t)\r\n        return ans",
+    "problemId": 2120,
+    "title": "Execution of All Suffix Instructions Staying in a Grid",
+    "problemUrl": "https://leetcode.com/problems/execution-of-all-suffix-instructions-staying-in-a-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2100-2199/2120.Execution of All Suffix Instructions Staying in a Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2120.Execution of All Suffix Instructions Staying in a Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "c",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2120.Execution of All Suffix Instructions Staying in a Grid/Solution.c",
+            "sourceFile": "Solution.c"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2120.Execution of All Suffix Instructions Staying in a Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2120.Execution of All Suffix Instructions Staying in a Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2120.Execution of All Suffix Instructions Staying in a Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2120.Execution of All Suffix Instructions Staying in a Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2100-2199/2120.Execution of All Suffix Instructions Staying in a Grid/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

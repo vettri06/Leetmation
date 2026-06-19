@@ -1,0 +1,18 @@
+{
+    "problemName": "infinite-method-object",
+    "language": "typescript",
+    "code": "function createInfiniteObject(): Record<string, () => string> {\r\n    return new Proxy(\r\n        {},\r\n        {\r\n            get: (_, prop) => () => prop.toString(),\r\n        },\r\n    );\r\n}\r\n\r\n/**\r\n * const obj = createInfiniteObject();\r\n * obj['abc123'](); // \"abc123\"\r\n */",
+    "problemId": 2690,
+    "title": "Infinite Method Object",
+    "problemUrl": "https://leetcode.com/problems/infinite-method-object/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2690.Infinite Method Object/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2690.Infinite Method Object/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

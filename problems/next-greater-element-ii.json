@@ -1,0 +1,43 @@
+{
+    "problemName": "next-greater-element-ii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def nextGreaterElements(self, nums: List[int]) -> List[int]:\r\n        n = len(nums)\r\n        ans = [-1] * n\r\n        stk = []\r\n        for i in range(n * 2 - 1, -1, -1):\r\n            i %= n\r\n            while stk and stk[-1] <= nums[i]:\r\n                stk.pop()\r\n            if stk:\r\n                ans[i] = stk[-1]\r\n            stk.append(nums[i])\r\n        return ans",
+    "problemId": 503,
+    "title": "Next Greater Element II",
+    "problemUrl": "https://leetcode.com/problems/next-greater-element-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0503.Next Greater Element II/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0503.Next Greater Element II/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0503.Next Greater Element II/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0503.Next Greater Element II/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0503.Next Greater Element II/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0503.Next Greater Element II/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0503.Next Greater Element II/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

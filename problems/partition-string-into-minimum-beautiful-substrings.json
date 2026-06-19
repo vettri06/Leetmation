@@ -1,0 +1,38 @@
+{
+    "problemName": "partition-string-into-minimum-beautiful-substrings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumBeautifulSubstrings(self, s: str) -> int:\r\n        @cache\r\n        def dfs(i: int) -> int:\r\n            if i >= n:\r\n                return 0\r\n            if s[i] == \"0\":\r\n                return inf\r\n            x = 0\r\n            ans = inf\r\n            for j in range(i, n):\r\n                x = x << 1 | int(s[j])\r\n                if x in ss:\r\n                    ans = min(ans, 1 + dfs(j + 1))\r\n            return ans\r\n\r\n        n = len(s)\r\n        x = 1\r\n        ss = {x}\r\n        for i in range(n):\r\n            x *= 5\r\n            ss.add(x)\r\n        ans = dfs(0)\r\n        return -1 if ans == inf else ans",
+    "problemId": 2767,
+    "title": "Partition String Into Minimum Beautiful Substrings",
+    "problemUrl": "https://leetcode.com/problems/partition-string-into-minimum-beautiful-substrings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2767.Partition String Into Minimum Beautiful Substrings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2767.Partition String Into Minimum Beautiful Substrings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2767.Partition String Into Minimum Beautiful Substrings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2767.Partition String Into Minimum Beautiful Substrings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2767.Partition String Into Minimum Beautiful Substrings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2767.Partition String Into Minimum Beautiful Substrings/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

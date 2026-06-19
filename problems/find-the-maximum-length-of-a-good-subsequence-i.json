@@ -1,0 +1,38 @@
+{
+    "problemName": "find-the-maximum-length-of-a-good-subsequence-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maximumLength(self, nums: List[int], k: int) -> int:\r\n        n = len(nums)\r\n        f = [[1] * (k + 1) for _ in range(n)]\r\n        ans = 0\r\n        for i, x in enumerate(nums):\r\n            for h in range(k + 1):\r\n                for j, y in enumerate(nums[:i]):\r\n                    if x == y:\r\n                        f[i][h] = max(f[i][h], f[j][h] + 1)\r\n                    elif h:\r\n                        f[i][h] = max(f[i][h], f[j][h - 1] + 1)\r\n            ans = max(ans, f[i][k])\r\n        return ans",
+    "problemId": 3176,
+    "title": "Find the Maximum Length of a Good Subsequence I",
+    "problemUrl": "https://leetcode.com/problems/find-the-maximum-length-of-a-good-subsequence-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3100-3199/3176.Find the Maximum Length of a Good Subsequence I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3176.Find the Maximum Length of a Good Subsequence I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3176.Find the Maximum Length of a Good Subsequence I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3176.Find the Maximum Length of a Good Subsequence I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3176.Find the Maximum Length of a Good Subsequence I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3100-3199/3176.Find the Maximum Length of a Good Subsequence I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

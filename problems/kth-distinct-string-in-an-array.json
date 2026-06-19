@@ -1,0 +1,48 @@
+{
+    "problemName": "kth-distinct-string-in-an-array",
+    "language": "python3",
+    "code": "class Solution:\r\n    def kthDistinct(self, arr: List[str], k: int) -> str:\r\n        cnt = Counter(arr)\r\n        for s in arr:\r\n            if cnt[s] == 1:\r\n                k -= 1\r\n                if k == 0:\r\n                    return s\r\n        return \"\"",
+    "problemId": 2053,
+    "title": "Kth Distinct String in an Array",
+    "problemUrl": "https://leetcode.com/problems/kth-distinct-string-in-an-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2053.Kth Distinct String in an Array/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2053.Kth Distinct String in an Array/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2053.Kth Distinct String in an Array/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2053.Kth Distinct String in an Array/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2053.Kth Distinct String in an Array/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2053.Kth Distinct String in an Array/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2053.Kth Distinct String in an Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2053.Kth Distinct String in an Array/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

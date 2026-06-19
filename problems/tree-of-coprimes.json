@@ -1,0 +1,33 @@
+{
+    "problemName": "tree-of-coprimes",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getCoprimes(self, nums: List[int], edges: List[List[int]]) -> List[int]:\r\n        def dfs(i, fa, depth):\r\n            t = k = -1\r\n            for v in f[nums[i]]:\r\n                stk = stks[v]\r\n                if stk and stk[-1][1] > k:\r\n                    t, k = stk[-1]\r\n            ans[i] = t\r\n            for j in g[i]:\r\n                if j != fa:\r\n                    stks[nums[i]].append((i, depth))\r\n                    dfs(j, i, depth + 1)\r\n                    stks[nums[i]].pop()\r\n\r\n        g = defaultdict(list)\r\n        for u, v in edges:\r\n            g[u].append(v)\r\n            g[v].append(u)\r\n        f = defaultdict(list)\r\n        for i in range(1, 51):\r\n            for j in range(1, 51):\r\n                if gcd(i, j) == 1:\r\n                    f[i].append(j)\r\n        stks = defaultdict(list)\r\n        ans = [-1] * len(nums)\r\n        dfs(0, -1, 0)\r\n        return ans",
+    "problemId": 1766,
+    "title": "Tree of Coprimes",
+    "problemUrl": "https://leetcode.com/problems/tree-of-coprimes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1766.Tree of Coprimes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1766.Tree of Coprimes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1766.Tree of Coprimes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1766.Tree of Coprimes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1766.Tree of Coprimes/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

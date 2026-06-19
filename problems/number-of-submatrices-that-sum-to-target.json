@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-submatrices-that-sum-to-target",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numSubmatrixSumTarget(self, matrix: List[List[int]], target: int) -> int:\r\n        def f(nums: List[int]) -> int:\r\n            d = defaultdict(int)\r\n            d[0] = 1\r\n            cnt = s = 0\r\n            for x in nums:\r\n                s += x\r\n                cnt += d[s - target]\r\n                d[s] += 1\r\n            return cnt\r\n\r\n        m, n = len(matrix), len(matrix[0])\r\n        ans = 0\r\n        for i in range(m):\r\n            col = [0] * n\r\n            for j in range(i, m):\r\n                for k in range(n):\r\n                    col[k] += matrix[j][k]\r\n                ans += f(col)\r\n        return ans",
+    "problemId": 1074,
+    "title": "Number of Submatrices That Sum to Target",
+    "problemUrl": "https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1074.Number of Submatrices That Sum to Target/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1074.Number of Submatrices That Sum to Target/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1074.Number of Submatrices That Sum to Target/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1074.Number of Submatrices That Sum to Target/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1074.Number of Submatrices That Sum to Target/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1074.Number of Submatrices That Sum to Target/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

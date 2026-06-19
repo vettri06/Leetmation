@@ -1,0 +1,43 @@
+{
+    "problemName": "maximum-number-of-k-divisible-components",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxKDivisibleComponents(\r\n        self, n: int, edges: List[List[int]], values: List[int], k: int\r\n    ) -> int:\r\n        def dfs(i: int, fa: int) -> int:\r\n            s = values[i]\r\n            for j in g[i]:\r\n                if j != fa:\r\n                    s += dfs(j, i)\r\n            nonlocal ans\r\n            ans += s % k == 0\r\n            return s\r\n\r\n        g = [[] for _ in range(n)]\r\n        for a, b in edges:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n        ans = 0\r\n        dfs(0, -1)\r\n        return ans",
+    "problemId": 2872,
+    "title": "Maximum Number of K-Divisible Components",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-k-divisible-components/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2800-2899/2872.Maximum Number of K-Divisible Components/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2872.Maximum Number of K-Divisible Components/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2872.Maximum Number of K-Divisible Components/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2872.Maximum Number of K-Divisible Components/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2872.Maximum Number of K-Divisible Components/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2872.Maximum Number of K-Divisible Components/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2800-2899/2872.Maximum Number of K-Divisible Components/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

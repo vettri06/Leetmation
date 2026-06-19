@@ -1,0 +1,33 @@
+{
+    "problemName": "number-of-excellent-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countExcellentPairs(self, nums: List[int], k: int) -> int:\r\n        s = set(nums)\r\n        ans = 0\r\n        cnt = Counter()\r\n        for v in s:\r\n            cnt[v.bit_count()] += 1\r\n        for v in s:\r\n            t = v.bit_count()\r\n            for i, x in cnt.items():\r\n                if t + i >= k:\r\n                    ans += x\r\n        return ans",
+    "problemId": 2354,
+    "title": "Number of Excellent Pairs",
+    "problemUrl": "https://leetcode.com/problems/number-of-excellent-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2354.Number of Excellent Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2354.Number of Excellent Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2354.Number of Excellent Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2354.Number of Excellent Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2354.Number of Excellent Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

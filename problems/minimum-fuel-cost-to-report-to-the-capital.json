@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-fuel-cost-to-report-to-the-capital",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumFuelCost(self, roads: List[List[int]], seats: int) -> int:\r\n        def dfs(a: int, fa: int) -> int:\r\n            nonlocal ans\r\n            sz = 1\r\n            for b in g[a]:\r\n                if b != fa:\r\n                    t = dfs(b, a)\r\n                    ans += ceil(t / seats)\r\n                    sz += t\r\n            return sz\r\n\r\n        g = defaultdict(list)\r\n        for a, b in roads:\r\n            g[a].append(b)\r\n            g[b].append(a)\r\n        ans = 0\r\n        dfs(0, -1)\r\n        return ans",
+    "problemId": 2477,
+    "title": "Minimum Fuel Cost to Report to the Capital",
+    "problemUrl": "https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2477.Minimum Fuel Cost to Report to the Capital/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2477.Minimum Fuel Cost to Report to the Capital/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2477.Minimum Fuel Cost to Report to the Capital/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2477.Minimum Fuel Cost to Report to the Capital/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2477.Minimum Fuel Cost to Report to the Capital/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2477.Minimum Fuel Cost to Report to the Capital/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2477.Minimum Fuel Cost to Report to the Capital/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

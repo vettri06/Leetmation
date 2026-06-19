@@ -1,0 +1,38 @@
+{
+    "problemName": "process-restricted-friend-requests",
+    "language": "python3",
+    "code": "class Solution:\r\n    def friendRequests(\r\n        self, n: int, restrictions: List[List[int]], requests: List[List[int]]\r\n    ) -> List[bool]:\r\n        def find(x: int) -> int:\r\n            if p[x] != x:\r\n                p[x] = find(p[x])\r\n            return p[x]\r\n\r\n        p = list(range(n))\r\n        ans = []\r\n        for u, v in requests:\r\n            pu, pv = find(u), find(v)\r\n            if pu == pv:\r\n                ans.append(True)\r\n            else:\r\n                ok = True\r\n                for x, y in restrictions:\r\n                    px, py = find(x), find(y)\r\n                    if (pu == px and pv == py) or (pu == py and pv == px):\r\n                        ok = False\r\n                        break\r\n                ans.append(ok)\r\n                if ok:\r\n                    p[pu] = pv\r\n        return ans",
+    "problemId": 2076,
+    "title": "Process Restricted Friend Requests",
+    "problemUrl": "https://leetcode.com/problems/process-restricted-friend-requests/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2000-2099/2076.Process Restricted Friend Requests/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2076.Process Restricted Friend Requests/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2076.Process Restricted Friend Requests/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2076.Process Restricted Friend Requests/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2076.Process Restricted Friend Requests/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2000-2099/2076.Process Restricted Friend Requests/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

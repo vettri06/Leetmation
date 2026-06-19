@@ -1,0 +1,18 @@
+{
+    "problemName": "number-of-times-a-driver-was-a-passenger",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH T AS (SELECT DISTINCT driver_id FROM Rides)\r\nSELECT t.driver_id, COUNT(passenger_id) AS cnt\r\nFROM\r\n    T AS t\r\n    LEFT JOIN Rides AS r ON t.driver_id = r.passenger_id\r\nGROUP BY 1;",
+    "problemId": 2238,
+    "title": "Number of Times a Driver Was a Passenger",
+    "problemUrl": "https://leetcode.com/problems/number-of-times-a-driver-was-a-passenger/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2238.Number of Times a Driver Was a Passenger/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2238.Number of Times a Driver Was a Passenger/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

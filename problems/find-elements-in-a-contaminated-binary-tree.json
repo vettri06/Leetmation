@@ -1,0 +1,38 @@
+{
+    "problemName": "find-elements-in-a-contaminated-binary-tree",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass FindElements:\r\n\r\n    def __init__(self, root: Optional[TreeNode]):\r\n        def dfs(root: Optional[TreeNode]):\r\n            self.s.add(root.val)\r\n            if root.left:\r\n                root.left.val = root.val * 2 + 1\r\n                dfs(root.left)\r\n            if root.right:\r\n                root.right.val = root.val * 2 + 2\r\n                dfs(root.right)\r\n\r\n        root.val = 0\r\n        self.s = set()\r\n        dfs(root)\r\n\r\n    def find(self, target: int) -> bool:\r\n        return target in self.s\r\n\r\n\r\n# Your FindElements object will be instantiated and called as such:\r\n# obj = FindElements(root)\r\n# param_1 = obj.find(target)",
+    "problemId": 1261,
+    "title": "Find Elements in a Contaminated Binary Tree",
+    "problemUrl": "https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1261.Find Elements in a Contaminated Binary Tree/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1261.Find Elements in a Contaminated Binary Tree/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1261.Find Elements in a Contaminated Binary Tree/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1261.Find Elements in a Contaminated Binary Tree/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1261.Find Elements in a Contaminated Binary Tree/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1261.Find Elements in a Contaminated Binary Tree/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

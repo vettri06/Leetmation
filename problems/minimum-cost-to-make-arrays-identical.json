@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-to-make-arrays-identical",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, arr: List[int], brr: List[int], k: int) -> int:\r\n        c1 = sum(abs(a - b) for a, b in zip(arr, brr))\r\n        arr.sort()\r\n        brr.sort()\r\n        c2 = k + sum(abs(a - b) for a, b in zip(arr, brr))\r\n        return min(c1, c2)",
+    "problemId": 3424,
+    "title": "Minimum Cost to Make Arrays Identical",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-make-arrays-identical/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3424.Minimum Cost to Make Arrays Identical/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3424.Minimum Cost to Make Arrays Identical/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3424.Minimum Cost to Make Arrays Identical/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3424.Minimum Cost to Make Arrays Identical/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3424.Minimum Cost to Make Arrays Identical/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3424.Minimum Cost to Make Arrays Identical/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

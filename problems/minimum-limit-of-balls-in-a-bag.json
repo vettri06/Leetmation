@@ -1,0 +1,48 @@
+{
+    "problemName": "minimum-limit-of-balls-in-a-bag",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumSize(self, nums: List[int], maxOperations: int) -> int:\r\n        def check(mx: int) -> bool:\r\n            return sum((x - 1) // mx for x in nums) <= maxOperations\r\n\r\n        return bisect_left(range(1, max(nums) + 1), True, key=check) + 1",
+    "problemId": 1760,
+    "title": "Minimum Limit of Balls in a Bag",
+    "problemUrl": "https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1760.Minimum Limit of Balls in a Bag/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1760.Minimum Limit of Balls in a Bag/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1760.Minimum Limit of Balls in a Bag/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1760.Minimum Limit of Balls in a Bag/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1760.Minimum Limit of Balls in a Bag/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1760.Minimum Limit of Balls in a Bag/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1760.Minimum Limit of Balls in a Bag/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1760.Minimum Limit of Balls in a Bag/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

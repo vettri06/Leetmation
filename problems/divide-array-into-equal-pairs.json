@@ -1,0 +1,48 @@
+{
+    "problemName": "divide-array-into-equal-pairs",
+    "language": "python3",
+    "code": "class Solution:\r\n    def divideArray(self, nums: List[int]) -> bool:\r\n        cnt = Counter(nums)\r\n        return all(v % 2 == 0 for v in cnt.values())",
+    "problemId": 2206,
+    "title": "Divide Array Into Equal Pairs",
+    "problemUrl": "https://leetcode.com/problems/divide-array-into-equal-pairs/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2200-2299/2206.Divide Array Into Equal Pairs/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2206.Divide Array Into Equal Pairs/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2206.Divide Array Into Equal Pairs/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2206.Divide Array Into Equal Pairs/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2206.Divide Array Into Equal Pairs/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2206.Divide Array Into Equal Pairs/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2206.Divide Array Into Equal Pairs/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/2200-2299/2206.Divide Array Into Equal Pairs/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

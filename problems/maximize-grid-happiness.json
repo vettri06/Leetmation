@@ -1,0 +1,63 @@
+{
+    "problemName": "maximize-grid-happiness",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getMaxGridHappiness(\r\n        self, m: int, n: int, introvertsCount: int, extrovertsCount: int\r\n    ) -> int:\r\n        @cache\r\n        def dfs(i: int, pre: int, ic: int, ec: int) -> int:\r\n            if i == m or (ic == 0 and ec == 0):\r\n                return 0\r\n            ans = 0\r\n            for cur in range(mx):\r\n                if ix[cur] <= ic and ex[cur] <= ec:\r\n                    a = f[cur] + g[pre][cur]\r\n                    b = dfs(i + 1, cur, ic - ix[cur], ec - ex[cur])\r\n                    ans = max(ans, a + b)\r\n            return ans\r\n\r\n        mx = pow(3, n)\r\n        f = [0] * mx\r\n        g = [[0] * mx for _ in range(mx)]\r\n        h = [[0, 0, 0], [0, -60, -10], [0, -10, 40]]\r\n        bits = [[0] * n for _ in range(mx)]\r\n        ix = [0] * mx\r\n        ex = [0] * mx\r\n        for i in range(mx):\r\n            mask = i\r\n            for j in range(n):\r\n                mask, x = divmod(mask, 3)\r\n                bits[i][j] = x\r\n                if x == 1:\r\n                    ix[i] += 1\r\n                    f[i] += 120\r\n                elif x == 2:\r\n                    ex[i] += 1\r\n                    f[i] += 40\r\n                if j:\r\n                    f[i] += h[x][bits[i][j - 1]]\r\n        for i in range(mx):\r\n            for j in range(mx):\r\n                for k in range(n):\r\n                    g[i][j] += h[bits[i][k]][bits[j][k]]\r\n        return dfs(0, 0, introvertsCount, extrovertsCount)",
+    "problemId": 1659,
+    "title": "Maximize Grid Happiness",
+    "problemUrl": "https://leetcode.com/problems/maximize-grid-happiness/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1659.Maximize Grid Happiness/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1659.Maximize Grid Happiness/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1659.Maximize Grid Happiness/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1659.Maximize Grid Happiness/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1659.Maximize Grid Happiness/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1659.Maximize Grid Happiness/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1659.Maximize Grid Happiness/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1659.Maximize Grid Happiness/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1659.Maximize Grid Happiness/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1659.Maximize Grid Happiness/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1659.Maximize Grid Happiness/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

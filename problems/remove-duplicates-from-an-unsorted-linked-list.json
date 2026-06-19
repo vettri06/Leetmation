@@ -1,0 +1,38 @@
+{
+    "problemName": "remove-duplicates-from-an-unsorted-linked-list",
+    "language": "python3",
+    "code": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def deleteDuplicatesUnsorted(self, head: ListNode) -> ListNode:\r\n        cnt = Counter()\r\n        cur = head\r\n        while cur:\r\n            cnt[cur.val] += 1\r\n            cur = cur.next\r\n        dummy = ListNode(0, head)\r\n        pre, cur = dummy, head\r\n        while cur:\r\n            if cnt[cur.val] > 1:\r\n                pre.next = cur.next\r\n            else:\r\n                pre = cur\r\n            cur = cur.next\r\n        return dummy.next",
+    "problemId": 1836,
+    "title": "Remove Duplicates From an Unsorted Linked List",
+    "problemUrl": "https://leetcode.com/problems/remove-duplicates-from-an-unsorted-linked-list/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1836.Remove Duplicates From an Unsorted Linked List/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1836.Remove Duplicates From an Unsorted Linked List/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1836.Remove Duplicates From an Unsorted Linked List/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1836.Remove Duplicates From an Unsorted Linked List/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1836.Remove Duplicates From an Unsorted Linked List/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1836.Remove Duplicates From an Unsorted Linked List/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

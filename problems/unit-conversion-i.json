@@ -1,0 +1,38 @@
+{
+    "problemName": "unit-conversion-i",
+    "language": "python3",
+    "code": "class Solution:\r\n    def baseUnitConversions(self, conversions: List[List[int]]) -> List[int]:\r\n        def dfs(s: int, mul: int) -> None:\r\n            ans[s] = mul\r\n            for t, w in g[s]:\r\n                dfs(t, mul * w % mod)\r\n\r\n        mod = 10**9 + 7\r\n        n = len(conversions) + 1\r\n        g = [[] for _ in range(n)]\r\n        for s, t, w in conversions:\r\n            g[s].append((t, w))\r\n        ans = [0] * n\r\n        dfs(0, 1)\r\n        return ans",
+    "problemId": 3528,
+    "title": "Unit Conversion I",
+    "problemUrl": "https://leetcode.com/problems/unit-conversion-i/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3500-3599/3528.Unit Conversion I/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3528.Unit Conversion I/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3528.Unit Conversion I/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3528.Unit Conversion I/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3528.Unit Conversion I/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3500-3599/3528.Unit Conversion I/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

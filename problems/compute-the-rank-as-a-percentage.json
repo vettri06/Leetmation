@@ -1,0 +1,18 @@
+{
+    "problemName": "compute-the-rank-as-a-percentage",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    student_id,\r\n    department_id,\r\n    IFNULL(\r\n        ROUND(\r\n            (\r\n                RANK() OVER (\r\n                    PARTITION BY department_id\r\n                    ORDER BY mark DESC\r\n                ) - 1\r\n            ) * 100 / (COUNT(1) OVER (PARTITION BY department_id) - 1),\r\n            2\r\n        ),\r\n        0\r\n    ) AS percentage\r\nFROM Students;",
+    "problemId": 2346,
+    "title": "Compute the Rank as a Percentage",
+    "problemUrl": "https://leetcode.com/problems/compute-the-rank-as-a-percentage/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2346.Compute the Rank as a Percentage/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2346.Compute the Rank as a Percentage/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

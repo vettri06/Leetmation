@@ -1,0 +1,68 @@
+{
+    "problemName": "longest-increasing-subsequence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def lengthOfLIS(self, nums: List[int]) -> int:\r\n        n = len(nums)\r\n        f = [1] * n\r\n        for i in range(1, n):\r\n            for j in range(i):\r\n                if nums[j] < nums[i]:\r\n                    f[i] = max(f[i], f[j] + 1)\r\n        return max(f)",
+    "problemId": 300,
+    "title": "Longest Increasing Subsequence",
+    "problemUrl": "https://leetcode.com/problems/longest-increasing-subsequence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0300.Longest Increasing Subsequence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0300.Longest Increasing Subsequence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0300.Longest Increasing Subsequence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0300.Longest Increasing Subsequence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0300.Longest Increasing Subsequence/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0300.Longest Increasing Subsequence/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0300.Longest Increasing Subsequence/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0300.Longest Increasing Subsequence/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0300.Longest Increasing Subsequence/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0300.Longest Increasing Subsequence/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0300.Longest Increasing Subsequence/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0300.Longest Increasing Subsequence/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

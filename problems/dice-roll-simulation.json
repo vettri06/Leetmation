@@ -1,0 +1,53 @@
+{
+    "problemName": "dice-roll-simulation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def dieSimulator(self, n: int, rollMax: List[int]) -> int:\r\n        @cache\r\n        def dfs(i, j, x):\r\n            if i >= n:\r\n                return 1\r\n            ans = 0\r\n            for k in range(1, 7):\r\n                if k != j:\r\n                    ans += dfs(i + 1, k, 1)\r\n                elif x < rollMax[j - 1]:\r\n                    ans += dfs(i + 1, j, x + 1)\r\n            return ans % (10**9 + 7)\r\n\r\n        return dfs(0, 0, 0)",
+    "problemId": 1223,
+    "title": "Dice Roll Simulation",
+    "problemUrl": "https://leetcode.com/problems/dice-roll-simulation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1223.Dice Roll Simulation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1223.Dice Roll Simulation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1223.Dice Roll Simulation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1223.Dice Roll Simulation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1223.Dice Roll Simulation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1223.Dice Roll Simulation/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1223.Dice Roll Simulation/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1223.Dice Roll Simulation/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1223.Dice Roll Simulation/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

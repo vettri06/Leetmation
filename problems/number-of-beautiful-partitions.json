@@ -1,0 +1,38 @@
+{
+    "problemName": "number-of-beautiful-partitions",
+    "language": "python3",
+    "code": "class Solution:\r\n    def beautifulPartitions(self, s: str, k: int, minLength: int) -> int:\r\n        primes = '2357'\r\n        if s[0] not in primes or s[-1] in primes:\r\n            return 0\r\n        mod = 10**9 + 7\r\n        n = len(s)\r\n        f = [[0] * (k + 1) for _ in range(n + 1)]\r\n        g = [[0] * (k + 1) for _ in range(n + 1)]\r\n        f[0][0] = g[0][0] = 1\r\n        for i, c in enumerate(s, 1):\r\n            if i >= minLength and c not in primes and (i == n or s[i] in primes):\r\n                for j in range(1, k + 1):\r\n                    f[i][j] = g[i - minLength][j - 1]\r\n            for j in range(k + 1):\r\n                g[i][j] = (g[i - 1][j] + f[i][j]) % mod\r\n        return f[n][k]",
+    "problemId": 2478,
+    "title": "Number of Beautiful Partitions",
+    "problemUrl": "https://leetcode.com/problems/number-of-beautiful-partitions/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2478.Number of Beautiful Partitions/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2478.Number of Beautiful Partitions/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2478.Number of Beautiful Partitions/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2478.Number of Beautiful Partitions/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2478.Number of Beautiful Partitions/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2478.Number of Beautiful Partitions/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

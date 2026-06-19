@@ -1,0 +1,33 @@
+{
+    "problemName": "erect-the-fence",
+    "language": "python3",
+    "code": "class Solution:\r\n    def outerTrees(self, trees: List[List[int]]) -> List[List[int]]:\r\n        def cross(i, j, k):\r\n            a, b, c = trees[i], trees[j], trees[k]\r\n            return (b[0] - a[0]) * (c[1] - b[1]) - (b[1] - a[1]) * (c[0] - b[0])\r\n\r\n        n = len(trees)\r\n        if n < 4:\r\n            return trees\r\n        trees.sort()\r\n        vis = [False] * n\r\n        stk = [0]\r\n        for i in range(1, n):\r\n            while len(stk) > 1 and cross(stk[-2], stk[-1], i) < 0:\r\n                vis[stk.pop()] = False\r\n            vis[i] = True\r\n            stk.append(i)\r\n        m = len(stk)\r\n        for i in range(n - 2, -1, -1):\r\n            if vis[i]:\r\n                continue\r\n            while len(stk) > m and cross(stk[-2], stk[-1], i) < 0:\r\n                stk.pop()\r\n            stk.append(i)\r\n        stk.pop()\r\n        return [trees[i] for i in stk]",
+    "problemId": 587,
+    "title": "Erect the Fence",
+    "problemUrl": "https://leetcode.com/problems/erect-the-fence/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0500-0599/0587.Erect the Fence/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0587.Erect the Fence/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0587.Erect the Fence/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0587.Erect the Fence/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0500-0599/0587.Erect the Fence/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "problemName": "maximum-product-of-word-lengths",
+    "language": "python3",
+    "code": "class Solution:\r\n    def maxProduct(self, words: List[str]) -> int:\r\n        mask = [0] * len(words)\r\n        ans = 0\r\n        for i, s in enumerate(words):\r\n            for c in s:\r\n                mask[i] |= 1 << (ord(c) - ord(\"a\"))\r\n            for j, t in enumerate(words[:i]):\r\n                if (mask[i] & mask[j]) == 0:\r\n                    ans = max(ans, len(s) * len(t))\r\n        return ans",
+    "problemId": 318,
+    "title": "Maximum Product of Word Lengths",
+    "problemUrl": "https://leetcode.com/problems/maximum-product-of-word-lengths/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0318.Maximum Product of Word Lengths/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0318.Maximum Product of Word Lengths/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0318.Maximum Product of Word Lengths/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0318.Maximum Product of Word Lengths/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0318.Maximum Product of Word Lengths/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0318.Maximum Product of Word Lengths/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0318.Maximum Product of Word Lengths/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0318.Maximum Product of Word Lengths/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0318.Maximum Product of Word Lengths/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0318.Maximum Product of Word Lengths/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0318.Maximum Product of Word Lengths/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

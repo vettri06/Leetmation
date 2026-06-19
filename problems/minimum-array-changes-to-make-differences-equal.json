@@ -1,0 +1,43 @@
+{
+    "problemName": "minimum-array-changes-to-make-differences-equal",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minChanges(self, nums: List[int], k: int) -> int:\r\n        d = [0] * (k + 2)\r\n        n = len(nums)\r\n        for i in range(n // 2):\r\n            x, y = nums[i], nums[-i - 1]\r\n            if x > y:\r\n                x, y = y, x\r\n            d[0] += 1\r\n            d[y - x] -= 1\r\n            d[y - x + 1] += 1\r\n            d[max(y, k - x) + 1] -= 1\r\n            d[max(y, k - x) + 1] += 2\r\n        return min(accumulate(d))",
+    "problemId": 3224,
+    "title": "Minimum Array Changes to Make Differences Equal",
+    "problemUrl": "https://leetcode.com/problems/minimum-array-changes-to-make-differences-equal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3224.Minimum Array Changes to Make Differences Equal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3224.Minimum Array Changes to Make Differences Equal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3224.Minimum Array Changes to Make Differences Equal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3224.Minimum Array Changes to Make Differences Equal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3224.Minimum Array Changes to Make Differences Equal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3224.Minimum Array Changes to Make Differences Equal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3224.Minimum Array Changes to Make Differences Equal/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

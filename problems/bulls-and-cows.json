@@ -1,0 +1,38 @@
+{
+    "problemName": "bulls-and-cows",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getHint(self, secret: str, guess: str) -> str:\r\n        cnt1, cnt2 = Counter(), Counter()\r\n        x = 0\r\n        for a, b in zip(secret, guess):\r\n            if a == b:\r\n                x += 1\r\n            else:\r\n                cnt1[a] += 1\r\n                cnt2[b] += 1\r\n        y = sum(min(cnt1[c], cnt2[c]) for c in cnt1)\r\n        return f\"{x}A{y}B\"",
+    "problemId": 299,
+    "title": "Bulls and Cows",
+    "problemUrl": "https://leetcode.com/problems/bulls-and-cows/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0200-0299/0299.Bulls and Cows/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0299.Bulls and Cows/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0299.Bulls and Cows/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0299.Bulls and Cows/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0299.Bulls and Cows/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0200-0299/0299.Bulls and Cows/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

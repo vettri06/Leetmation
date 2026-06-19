@@ -1,0 +1,48 @@
+{
+    "problemName": "insert-delete-getrandom-o-1",
+    "language": "python3",
+    "code": "class RandomizedSet:\r\n    def __init__(self):\r\n        self.d = {}\r\n        self.q = []\r\n\r\n    def insert(self, val: int) -> bool:\r\n        if val in self.d:\r\n            return False\r\n        self.d[val] = len(self.q)\r\n        self.q.append(val)\r\n        return True\r\n\r\n    def remove(self, val: int) -> bool:\r\n        if val not in self.d:\r\n            return False\r\n        i = self.d[val]\r\n        self.d[self.q[-1]] = i\r\n        self.q[i] = self.q[-1]\r\n        self.q.pop()\r\n        self.d.pop(val)\r\n        return True\r\n\r\n    def getRandom(self) -> int:\r\n        return choice(self.q)\r\n\r\n\r\n# Your RandomizedSet object will be instantiated and called as such:\r\n# obj = RandomizedSet()\r\n# param_1 = obj.insert(val)\r\n# param_2 = obj.remove(val)\r\n# param_3 = obj.getRandom()",
+    "problemId": 380,
+    "title": "Insert Delete GetRandom O(1)",
+    "problemUrl": "https://leetcode.com/problems/insert-delete-getrandom-o-1/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0300-0399/0380.Insert Delete GetRandom O(1)/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0380.Insert Delete GetRandom O(1)/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0380.Insert Delete GetRandom O(1)/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0380.Insert Delete GetRandom O(1)/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0380.Insert Delete GetRandom O(1)/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0380.Insert Delete GetRandom O(1)/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0380.Insert Delete GetRandom O(1)/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0300-0399/0380.Insert Delete GetRandom O(1)/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-adjacent-swaps-to-reach-the-kth-smallest-number",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getMinSwaps(self, num: str, k: int) -> int:\r\n        def next_permutation(nums: List[str]) -> bool:\r\n            n = len(nums)\r\n            i = n - 2\r\n            while i >= 0 and nums[i] >= nums[i + 1]:\r\n                i -= 1\r\n            if i < 0:\r\n                return False\r\n            j = n - 1\r\n            while j >= 0 and nums[j] <= nums[i]:\r\n                j -= 1\r\n            nums[i], nums[j] = nums[j], nums[i]\r\n            nums[i + 1 : n] = nums[i + 1 : n][::-1]\r\n            return True\r\n\r\n        s = list(num)\r\n        for _ in range(k):\r\n            next_permutation(s)\r\n        d = [[] for _ in range(10)]\r\n        idx = [0] * 10\r\n        n = len(s)\r\n        for i, c in enumerate(num):\r\n            j = ord(c) - ord(\"0\")\r\n            d[j].append(i)\r\n        arr = [0] * n\r\n        for i, c in enumerate(s):\r\n            j = ord(c) - ord(\"0\")\r\n            arr[i] = d[j][idx[j]]\r\n            idx[j] += 1\r\n        return sum(arr[j] > arr[i] for i in range(n) for j in range(i))",
+    "problemId": 1850,
+    "title": "Minimum Adjacent Swaps to Reach the Kth Smallest Number",
+    "problemUrl": "https://leetcode.com/problems/minimum-adjacent-swaps-to-reach-the-kth-smallest-number/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1850.Minimum Adjacent Swaps to Reach the Kth Smallest Number/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1850.Minimum Adjacent Swaps to Reach the Kth Smallest Number/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1850.Minimum Adjacent Swaps to Reach the Kth Smallest Number/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1850.Minimum Adjacent Swaps to Reach the Kth Smallest Number/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1850.Minimum Adjacent Swaps to Reach the Kth Smallest Number/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1850.Minimum Adjacent Swaps to Reach the Kth Smallest Number/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

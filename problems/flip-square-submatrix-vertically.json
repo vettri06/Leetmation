@@ -1,0 +1,43 @@
+{
+    "problemName": "flip-square-submatrix-vertically",
+    "language": "python3",
+    "code": "class Solution:\r\n    def reverseSubmatrix(\r\n        self, grid: List[List[int]], x: int, y: int, k: int\r\n    ) -> List[List[int]]:\r\n        for i in range(x, x + k // 2):\r\n            i2 = x + k - 1 - (i - x)\r\n            for j in range(y, y + k):\r\n                grid[i][j], grid[i2][j] = grid[i2][j], grid[i][j]\r\n        return grid",
+    "problemId": 3643,
+    "title": "Flip Square Submatrix Vertically",
+    "problemUrl": "https://leetcode.com/problems/flip-square-submatrix-vertically/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3600-3699/3643.Flip Square Submatrix Vertically/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3643.Flip Square Submatrix Vertically/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3643.Flip Square Submatrix Vertically/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3643.Flip Square Submatrix Vertically/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3643.Flip Square Submatrix Vertically/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3643.Flip Square Submatrix Vertically/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3600-3699/3643.Flip Square Submatrix Vertically/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

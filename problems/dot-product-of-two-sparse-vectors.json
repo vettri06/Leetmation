@@ -1,0 +1,43 @@
+{
+    "problemName": "dot-product-of-two-sparse-vectors",
+    "language": "python3",
+    "code": "class SparseVector:\r\n    def __init__(self, nums: List[int]):\r\n        self.d = {i: v for i, v in enumerate(nums) if v}\r\n\r\n    # Return the dotProduct of two sparse vectors\r\n    def dotProduct(self, vec: \"SparseVector\") -> int:\r\n        a, b = self.d, vec.d\r\n        if len(b) < len(a):\r\n            a, b = b, a\r\n        return sum(v * b.get(i, 0) for i, v in a.items())\r\n\r\n\r\n# Your SparseVector object will be instantiated and called as such:\r\n# v1 = SparseVector(nums1)\r\n# v2 = SparseVector(nums2)\r\n# ans = v1.dotProduct(v2)",
+    "problemId": 1570,
+    "title": "Dot Product of Two Sparse Vectors",
+    "problemUrl": "https://leetcode.com/problems/dot-product-of-two-sparse-vectors/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1570.Dot Product of Two Sparse Vectors/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1570.Dot Product of Two Sparse Vectors/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1570.Dot Product of Two Sparse Vectors/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1570.Dot Product of Two Sparse Vectors/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1570.Dot Product of Two Sparse Vectors/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1570.Dot Product of Two Sparse Vectors/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1570.Dot Product of Two Sparse Vectors/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

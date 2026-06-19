@@ -1,0 +1,38 @@
+{
+    "problemName": "relocate-marbles",
+    "language": "python3",
+    "code": "class Solution:\r\n    def relocateMarbles(\r\n        self, nums: List[int], moveFrom: List[int], moveTo: List[int]\r\n    ) -> List[int]:\r\n        pos = set(nums)\r\n        for f, t in zip(moveFrom, moveTo):\r\n            pos.remove(f)\r\n            pos.add(t)\r\n        return sorted(pos)",
+    "problemId": 2766,
+    "title": "Relocate Marbles",
+    "problemUrl": "https://leetcode.com/problems/relocate-marbles/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2700-2799/2766.Relocate Marbles/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2766.Relocate Marbles/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2766.Relocate Marbles/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2766.Relocate Marbles/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2766.Relocate Marbles/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2700-2799/2766.Relocate Marbles/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

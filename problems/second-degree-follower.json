@@ -1,0 +1,18 @@
+{
+    "problemName": "second-degree-follower",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT f1.follower AS follower, f2.follower AS followee\r\n        FROM\r\n            Follow AS f1\r\n            JOIN Follow AS f2 ON f1.follower = f2.followee\r\n    )\r\nSELECT follower, COUNT(DISTINCT followee) AS num\r\nFROM T\r\nGROUP BY 1\r\nORDER BY 1;",
+    "problemId": 614,
+    "title": "Second Degree Follower",
+    "problemUrl": "https://leetcode.com/problems/second-degree-follower/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0614.Second Degree Follower/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0614.Second Degree Follower/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

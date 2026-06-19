@@ -1,0 +1,18 @@
+{
+    "problemName": "fix-product-name-format",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    t AS (\r\n        SELECT\r\n            LOWER(TRIM(product_name)) AS product_name,\r\n            DATE_FORMAT(sale_date, '%Y-%m') AS sale_date\r\n        FROM Sales\r\n    )\r\nSELECT product_name, sale_date, COUNT(1) AS total\r\nFROM t\r\nGROUP BY 1, 2\r\nORDER BY 1, 2;",
+    "problemId": 1543,
+    "title": "Fix Product Name Format",
+    "problemUrl": "https://leetcode.com/problems/fix-product-name-format/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1500-1599/1543.Fix Product Name Format/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1500-1599/1543.Fix Product Name Format/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

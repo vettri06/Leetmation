@@ -1,0 +1,33 @@
+{
+    "problemName": "check-if-dfs-strings-are-palindromes",
+    "language": "python3",
+    "code": "class Hashing:\r\n    __slots__ = [\"mod\", \"h\", \"p\"]\r\n\r\n    def __init__(self, s: List[str], base: int, mod: int):\r\n        self.mod = mod\r\n        self.h = [0] * (len(s) + 1)\r\n        self.p = [1] * (len(s) + 1)\r\n        for i in range(1, len(s) + 1):\r\n            self.h[i] = (self.h[i - 1] * base + ord(s[i - 1])) % mod\r\n            self.p[i] = (self.p[i - 1] * base) % mod\r\n\r\n    def query(self, l: int, r: int) -> int:\r\n        return (self.h[r] - self.h[l - 1] * self.p[r - l + 1]) % self.mod\r\n\r\n\r\nclass Solution:\r\n    def findAnswer(self, parent: List[int], s: str) -> List[bool]:\r\n        def dfs(i: int):\r\n            l = len(dfsStr) + 1\r\n            for j in g[i]:\r\n                dfs(j)\r\n            dfsStr.append(s[i])\r\n            r = len(dfsStr)\r\n            pos[i] = (l, r)\r\n\r\n        n = len(s)\r\n        g = [[] for _ in range(n)]\r\n        for i in range(1, n):\r\n            g[parent[i]].append(i)\r\n        dfsStr = []\r\n        pos = {}\r\n        dfs(0)\r\n\r\n        base, mod = 13331, 998244353\r\n        h1 = Hashing(dfsStr, base, mod)\r\n        h2 = Hashing(dfsStr[::-1], base, mod)\r\n        ans = []\r\n        for i in range(n):\r\n            l, r = pos[i]\r\n            k = r - l + 1\r\n            v1 = h1.query(l, l + k // 2 - 1)\r\n            v2 = h2.query(n - r + 1, n - r + 1 + k // 2 - 1)\r\n            ans.append(v1 == v2)\r\n        return ans",
+    "problemId": 3327,
+    "title": "Check if DFS Strings Are Palindromes",
+    "problemUrl": "https://leetcode.com/problems/check-if-dfs-strings-are-palindromes/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3300-3399/3327.Check if DFS Strings Are Palindromes/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3327.Check if DFS Strings Are Palindromes/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3327.Check if DFS Strings Are Palindromes/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3327.Check if DFS Strings Are Palindromes/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3300-3399/3327.Check if DFS Strings Are Palindromes/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

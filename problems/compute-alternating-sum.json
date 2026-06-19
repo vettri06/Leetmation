@@ -1,0 +1,38 @@
+{
+    "problemName": "compute-alternating-sum",
+    "language": "python3",
+    "code": "class Solution:\r\n    def alternatingSum(self, nums: List[int]) -> int:\r\n        return sum(nums[0::2]) - sum(nums[1::2])",
+    "problemId": 3701,
+    "title": "Compute Alternating Sum",
+    "problemUrl": "https://leetcode.com/problems/compute-alternating-sum/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3700-3799/3701.Compute Alternating Sum/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3701.Compute Alternating Sum/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3701.Compute Alternating Sum/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3701.Compute Alternating Sum/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3701.Compute Alternating Sum/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3700-3799/3701.Compute Alternating Sum/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

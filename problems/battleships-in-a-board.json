@@ -1,0 +1,38 @@
+{
+    "problemName": "battleships-in-a-board",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countBattleships(self, board: List[List[str]]) -> int:\r\n        m, n = len(board), len(board[0])\r\n        ans = 0\r\n        for i in range(m):\r\n            for j in range(n):\r\n                if board[i][j] == '.':\r\n                    continue\r\n                if i > 0 and board[i - 1][j] == 'X':\r\n                    continue\r\n                if j > 0 and board[i][j - 1] == 'X':\r\n                    continue\r\n                ans += 1\r\n        return ans",
+    "problemId": 419,
+    "title": "Battleships in a Board",
+    "problemUrl": "https://leetcode.com/problems/battleships-in-a-board/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0400-0499/0419.Battleships in a Board/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0419.Battleships in a Board/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0419.Battleships in a Board/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0419.Battleships in a Board/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0419.Battleships in a Board/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0400-0499/0419.Battleships in a Board/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

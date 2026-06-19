@@ -1,0 +1,23 @@
+{
+    "problemName": "number-of-calls-between-two-persons",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nSELECT\r\n    IF(from_id < to_id, from_id, to_id) AS person1,\r\n    IF(from_id < to_id, to_id, from_id) AS person2,\r\n    COUNT(1) AS call_count,\r\n    SUM(duration) AS total_duration\r\nFROM Calls\r\nGROUP BY 1, 2;",
+    "problemId": 1699,
+    "title": "Number of Calls Between Two Persons",
+    "problemUrl": "https://leetcode.com/problems/number-of-calls-between-two-persons/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1699.Number of Calls Between Two Persons/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1699.Number of Calls Between Two Persons/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1699.Number of Calls Between Two Persons/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

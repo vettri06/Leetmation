@@ -1,0 +1,63 @@
+{
+    "problemName": "palindromic-substrings",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countSubstrings(self, s: str) -> int:\r\n        ans, n = 0, len(s)\r\n        for k in range(n * 2 - 1):\r\n            i, j = k // 2, (k + 1) // 2\r\n            while ~i and j < n and s[i] == s[j]:\r\n                ans += 1\r\n                i, j = i - 1, j + 1\r\n        return ans",
+    "problemId": 647,
+    "title": "Palindromic Substrings",
+    "problemUrl": "https://leetcode.com/problems/palindromic-substrings/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0600-0699/0647.Palindromic Substrings/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0647.Palindromic Substrings/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0647.Palindromic Substrings/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0647.Palindromic Substrings/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0647.Palindromic Substrings/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0647.Palindromic Substrings/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0647.Palindromic Substrings/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0647.Palindromic Substrings/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0647.Palindromic Substrings/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0647.Palindromic Substrings/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0600-0699/0647.Palindromic Substrings/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

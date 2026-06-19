@@ -1,0 +1,18 @@
+{
+    "problemName": "monthly-transactions-ii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT * FROM Transactions\r\n        UNION\r\n        SELECT id, country, 'chargeback', amount, c.trans_date\r\n        FROM\r\n            Transactions AS t\r\n            JOIN Chargebacks AS c ON t.id = c.trans_id\r\n    )\r\nSELECT\r\n    DATE_FORMAT(trans_date, '%Y-%m') AS month,\r\n    country,\r\n    SUM(state = 'approved') AS approved_count,\r\n    SUM(IF(state = 'approved', amount, 0)) AS approved_amount,\r\n    SUM(state = 'chargeback') AS chargeback_count,\r\n    SUM(IF(state = 'chargeback', amount, 0)) AS chargeback_amount\r\nFROM T\r\nGROUP BY 1, 2\r\nHAVING approved_amount OR chargeback_amount;",
+    "problemId": 1205,
+    "title": "Monthly Transactions II",
+    "problemUrl": "https://leetcode.com/problems/monthly-transactions-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1205.Monthly Transactions II/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1205.Monthly Transactions II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

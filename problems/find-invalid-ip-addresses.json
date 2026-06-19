@@ -1,0 +1,23 @@
+{
+    "problemName": "find-invalid-ip-addresses",
+    "language": "python3",
+    "code": "import pandas as pd\r\n\r\n\r\ndef find_invalid_ips(logs: pd.DataFrame) -> pd.DataFrame:\r\n    def is_valid_ip(ip: str) -> bool:\r\n        octets = ip.split(\".\")\r\n        if len(octets) != 4:\r\n            return False\r\n        for octet in octets:\r\n            if not octet.isdigit():\r\n                return False\r\n            value = int(octet)\r\n            if not 0 <= value <= 255 or octet != str(value):\r\n                return False\r\n        return True\r\n\r\n    logs[\"is_valid\"] = logs[\"ip\"].apply(is_valid_ip)\r\n    invalid_ips = logs[~logs[\"is_valid\"]]\r\n    invalid_count = invalid_ips[\"ip\"].value_counts().reset_index()\r\n    invalid_count.columns = [\"ip\", \"invalid_count\"]\r\n    result = invalid_count.sort_values(\r\n        by=[\"invalid_count\", \"ip\"], ascending=[False, False]\r\n    )\r\n    return result",
+    "problemId": 3451,
+    "title": "Find Invalid IP Addresses",
+    "problemUrl": "https://leetcode.com/problems/find-invalid-ip-addresses/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3400-3499/3451.Find Invalid IP Addresses/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3451.Find Invalid IP Addresses/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/3400-3499/3451.Find Invalid IP Addresses/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

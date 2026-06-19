@@ -1,0 +1,38 @@
+{
+    "problemName": "concatenate-array-with-reverse",
+    "language": "python3",
+    "code": "class Solution:\r\n    def concatWithReverse(self, nums: list[int]) -> list[int]:\r\n        n = len(nums)\r\n        ans = [0] * (2 * n)\r\n        for i, x in enumerate(nums):\r\n            ans[i] = x\r\n            ans[i + n] = nums[n - i - 1]\r\n        return ans",
+    "problemId": 3925,
+    "title": "Concatenate Array With Reverse",
+    "problemUrl": "https://leetcode.com/problems/concatenate-array-with-reverse/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3925.Concatenate Array With Reverse/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3925.Concatenate Array With Reverse/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3925.Concatenate Array With Reverse/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3925.Concatenate Array With Reverse/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3925.Concatenate Array With Reverse/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3925.Concatenate Array With Reverse/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

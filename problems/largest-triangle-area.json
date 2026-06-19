@@ -1,0 +1,43 @@
+{
+    "problemName": "largest-triangle-area",
+    "language": "python3",
+    "code": "class Solution:\r\n    def largestTriangleArea(self, points: List[List[int]]) -> float:\r\n        ans = 0\r\n        for x1, y1 in points:\r\n            for x2, y2 in points:\r\n                for x3, y3 in points:\r\n                    u1, v1 = x2 - x1, y2 - y1\r\n                    u2, v2 = x3 - x1, y3 - y1\r\n                    t = abs(u1 * v2 - u2 * v1) / 2\r\n                    ans = max(ans, t)\r\n        return ans",
+    "problemId": 812,
+    "title": "Largest Triangle Area",
+    "problemUrl": "https://leetcode.com/problems/largest-triangle-area/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0812.Largest Triangle Area/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0812.Largest Triangle Area/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0812.Largest Triangle Area/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0812.Largest Triangle Area/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0812.Largest Triangle Area/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0812.Largest Triangle Area/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0812.Largest Triangle Area/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

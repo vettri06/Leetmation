@@ -1,0 +1,33 @@
+{
+    "problemName": "prime-arrangements",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numPrimeArrangements(self, n: int) -> int:\r\n        def count(n):\r\n            cnt = 0\r\n            primes = [True] * (n + 1)\r\n            for i in range(2, n + 1):\r\n                if primes[i]:\r\n                    cnt += 1\r\n                    for j in range(i + i, n + 1, i):\r\n                        primes[j] = False\r\n            return cnt\r\n\r\n        cnt = count(n)\r\n        ans = factorial(cnt) * factorial(n - cnt)\r\n        return ans % (10**9 + 7)",
+    "problemId": 1175,
+    "title": "Prime Arrangements",
+    "problemUrl": "https://leetcode.com/problems/prime-arrangements/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1100-1199/1175.Prime Arrangements/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1175.Prime Arrangements/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1175.Prime Arrangements/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1175.Prime Arrangements/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1100-1199/1175.Prime Arrangements/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

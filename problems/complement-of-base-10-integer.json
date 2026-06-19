@@ -1,0 +1,48 @@
+{
+    "problemName": "complement-of-base-10-integer",
+    "language": "python3",
+    "code": "class Solution:\r\n    def bitwiseComplement(self, n: int) -> int:\r\n        if n == 0:\r\n            return 1\r\n        ans = i = 0\r\n        while n:\r\n            ans |= (n & 1 ^ 1) << i\r\n            i += 1\r\n            n >>= 1\r\n        return ans",
+    "problemId": 1009,
+    "title": "Complement of Base 10 Integer",
+    "problemUrl": "https://leetcode.com/problems/complement-of-base-10-integer/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1000-1099/1009.Complement of Base 10 Integer/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1009.Complement of Base 10 Integer/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1009.Complement of Base 10 Integer/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1009.Complement of Base 10 Integer/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1009.Complement of Base 10 Integer/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1009.Complement of Base 10 Integer/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1009.Complement of Base 10 Integer/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1000-1099/1009.Complement of Base 10 Integer/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

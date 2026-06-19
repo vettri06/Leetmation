@@ -1,0 +1,18 @@
+{
+    "problemName": "product-sales-analysis-iv",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    T AS (\r\n        SELECT\r\n            user_id,\r\n            product_id,\r\n            RANK() OVER (\r\n                PARTITION BY user_id\r\n                ORDER BY SUM(quantity * price) DESC\r\n            ) AS rk\r\n        FROM\r\n            Sales\r\n            JOIN Product USING (product_id)\r\n        GROUP BY 1, 2\r\n    )\r\nSELECT user_id, product_id\r\nFROM T\r\nWHERE rk = 1;",
+    "problemId": 2324,
+    "title": "Product Sales Analysis IV",
+    "problemUrl": "https://leetcode.com/problems/product-sales-analysis-iv/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2300-2399/2324.Product Sales Analysis IV/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/2300-2399/2324.Product Sales Analysis IV/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

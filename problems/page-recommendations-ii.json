@@ -1,0 +1,18 @@
+{
+    "problemName": "page-recommendations-ii",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    S AS (\r\n        SELECT * FROM Friendship\r\n        UNION\r\n        SELECT user2_id, user1_id FROM Friendship\r\n    )\r\nSELECT user1_id AS user_id, page_id, COUNT(1) AS friends_likes\r\nFROM\r\n    S AS s\r\n    LEFT JOIN Likes AS l ON s.user2_id = l.user_id\r\nWHERE\r\n    NOT EXISTS (\r\n        SELECT 1\r\n        FROM Likes AS l2\r\n        WHERE user1_id = l2.user_id AND l.page_id = l2.page_id\r\n    )\r\nGROUP BY user1_id, page_id;",
+    "problemId": 1892,
+    "title": "Page Recommendations II",
+    "problemUrl": "https://leetcode.com/problems/page-recommendations-ii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1892.Page Recommendations II/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1892.Page Recommendations II/Solution.sql",
+            "sourceFile": "Solution.sql"
+        }
+    ]
+}

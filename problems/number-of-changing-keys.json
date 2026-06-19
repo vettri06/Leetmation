@@ -1,0 +1,43 @@
+{
+    "problemName": "number-of-changing-keys",
+    "language": "python3",
+    "code": "class Solution:\r\n    def countKeyChanges(self, s: str) -> int:\r\n        return sum(a != b for a, b in pairwise(s.lower()))",
+    "problemId": 3019,
+    "title": "Number of Changing Keys",
+    "problemUrl": "https://leetcode.com/problems/number-of-changing-keys/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3000-3099/3019.Number of Changing Keys/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3019.Number of Changing Keys/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3019.Number of Changing Keys/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3019.Number of Changing Keys/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3019.Number of Changing Keys/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3019.Number of Changing Keys/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3000-3099/3019.Number of Changing Keys/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

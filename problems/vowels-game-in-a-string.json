@@ -1,0 +1,48 @@
+{
+    "problemName": "vowels-game-in-a-string",
+    "language": "python3",
+    "code": "class Solution:\r\n    def doesAliceWin(self, s: str) -> bool:\r\n        vowels = set(\"aeiou\")\r\n        return any(c in vowels for c in s)",
+    "problemId": 3227,
+    "title": "Vowels Game in a String",
+    "problemUrl": "https://leetcode.com/problems/vowels-game-in-a-string/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3200-3299/3227.Vowels Game in a String/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3227.Vowels Game in a String/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3227.Vowels Game in a String/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3227.Vowels Game in a String/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3227.Vowels Game in a String/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3227.Vowels Game in a String/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "csharp",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3227.Vowels Game in a String/Solution.cs",
+            "sourceFile": "Solution.cs"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/3200-3299/3227.Vowels Game in a String/Solution.rs",
+            "sourceFile": "Solution.rs"
+        }
+    ]
+}

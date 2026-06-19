@@ -1,0 +1,38 @@
+{
+    "problemName": "remove-covered-intervals",
+    "language": "python3",
+    "code": "class Solution:\r\n    def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:\r\n        intervals.sort(key=lambda x: (x[0], -x[1]))\r\n        ans = 0\r\n        pre = -inf\r\n        for _, cur in intervals:\r\n            if cur > pre:\r\n                ans += 1\r\n                pre = cur\r\n        return ans",
+    "problemId": 1288,
+    "title": "Remove Covered Intervals",
+    "problemUrl": "https://leetcode.com/problems/remove-covered-intervals/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1200-1299/1288.Remove Covered Intervals/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1288.Remove Covered Intervals/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1288.Remove Covered Intervals/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1288.Remove Covered Intervals/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1288.Remove Covered Intervals/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1200-1299/1288.Remove Covered Intervals/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

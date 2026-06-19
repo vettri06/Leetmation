@@ -1,0 +1,38 @@
+{
+    "problemName": "minimum-cost-to-move-between-indices",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minCost(self, nums: list[int], queries: list[list[int]]) -> list[int]:\r\n        n = len(nums)\r\n        s1 = [0] * n\r\n        s2 = [0] * n\r\n        for i in range(1, n):\r\n            c1 = (\r\n                nums[i] - nums[i - 1]\r\n                if i > 1 and nums[i - 1] - nums[i - 2] <= nums[i] - nums[i - 1]\r\n                else 1\r\n            )\r\n            c2 = (\r\n                nums[i] - nums[i - 1]\r\n                if i < n - 1 and nums[i] - nums[i - 1] > nums[i + 1] - nums[i]\r\n                else 1\r\n            )\r\n            s1[i] = s1[i - 1] + c1\r\n            s2[i] = s2[i - 1] + c2\r\n        m = len(queries)\r\n        ans = [0] * m\r\n        for i, (l, r) in enumerate(queries):\r\n            ans[i] = s1[r] - s1[l] if l < r else s2[l] - s2[r]\r\n        return ans",
+    "problemId": 3919,
+    "title": "Minimum Cost to Move Between Indices",
+    "problemUrl": "https://leetcode.com/problems/minimum-cost-to-move-between-indices/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/3900-3999/3919.Minimum Cost to Move Between Indices/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3919.Minimum Cost to Move Between Indices/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3919.Minimum Cost to Move Between Indices/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3919.Minimum Cost to Move Between Indices/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3919.Minimum Cost to Move Between Indices/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/3900-3999/3919.Minimum Cost to Move Between Indices/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

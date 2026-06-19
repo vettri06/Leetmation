@@ -1,0 +1,58 @@
+{
+    "problemName": "stone-game-viii",
+    "language": "python3",
+    "code": "class Solution:\r\n    def stoneGameVIII(self, stones: List[int]) -> int:\r\n        @cache\r\n        def dfs(i: int) -> int:\r\n            if i >= len(stones) - 1:\r\n                return s[-1]\r\n            return max(dfs(i + 1), s[i] - dfs(i + 1))\r\n\r\n        s = list(accumulate(stones))\r\n        return dfs(1)",
+    "problemId": 1872,
+    "title": "Stone Game VIII",
+    "problemUrl": "https://leetcode.com/problems/stone-game-viii/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1872.Stone Game VIII/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1872.Stone Game VIII/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1872.Stone Game VIII/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1872.Stone Game VIII/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1872.Stone Game VIII/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1872.Stone Game VIII/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1872.Stone Game VIII/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1872.Stone Game VIII/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1872.Stone Game VIII/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1872.Stone Game VIII/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

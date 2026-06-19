@@ -1,0 +1,18 @@
+{
+    "problemName": "filter-elements-from-array",
+    "language": "typescript",
+    "code": "function filter(arr: number[], fn: (n: number, i: number) => any): number[] {\r\n    const ans: number[] = [];\r\n    for (let i = 0; i < arr.length; ++i) {\r\n        if (fn(arr[i], i)) {\r\n            ans.push(arr[i]);\r\n        }\r\n    }\r\n    return ans;\r\n}",
+    "problemId": 2634,
+    "title": "Filter Elements from Array",
+    "problemUrl": "https://leetcode.com/problems/filter-elements-from-array/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2600-2699/2634.Filter Elements from Array/Solution.ts",
+    "sourceFile": "Solution.ts",
+    "sourceCandidates": [
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2600-2699/2634.Filter Elements from Array/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}

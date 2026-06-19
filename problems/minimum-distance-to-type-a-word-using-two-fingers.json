@@ -1,0 +1,33 @@
+{
+    "problemName": "minimum-distance-to-type-a-word-using-two-fingers",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumDistance(self, word: str) -> int:\r\n        def dist(a: int, b: int) -> int:\r\n            x1, y1 = divmod(a, 6)\r\n            x2, y2 = divmod(b, 6)\r\n            return abs(x1 - x2) + abs(y1 - y2)\r\n\r\n        n = len(word)\r\n        f = [[[inf] * 26 for _ in range(26)] for _ in range(n)]\r\n        for j in range(26):\r\n            f[0][ord(word[0]) - ord('A')][j] = 0\r\n            f[0][j][ord(word[0]) - ord('A')] = 0\r\n        for i in range(1, n):\r\n            a, b = ord(word[i - 1]) - ord('A'), ord(word[i]) - ord('A')\r\n            d = dist(a, b)\r\n            for j in range(26):\r\n                f[i][b][j] = min(f[i][b][j], f[i - 1][a][j] + d)\r\n                f[i][j][b] = min(f[i][j][b], f[i - 1][j][a] + d)\r\n                if j == a:\r\n                    for k in range(26):\r\n                        t = dist(k, b)\r\n                        f[i][b][j] = min(f[i][b][j], f[i - 1][k][a] + t)\r\n                        f[i][j][b] = min(f[i][j][b], f[i - 1][a][k] + t)\r\n        a = min(f[n - 1][ord(word[-1]) - ord('A')])\r\n        b = min(f[n - 1][j][ord(word[-1]) - ord('A')] for j in range(26))\r\n        return int(min(a, b))",
+    "problemId": 1320,
+    "title": "Minimum Distance to Type a Word Using Two Fingers",
+    "problemUrl": "https://leetcode.com/problems/minimum-distance-to-type-a-word-using-two-fingers/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1300-1399/1320.Minimum Distance to Type a Word Using Two Fingers/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1320.Minimum Distance to Type a Word Using Two Fingers/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1320.Minimum Distance to Type a Word Using Two Fingers/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1320.Minimum Distance to Type a Word Using Two Fingers/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1300-1399/1320.Minimum Distance to Type a Word Using Two Fingers/Solution.go",
+            "sourceFile": "Solution.go"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "problemName": "suspicious-bank-accounts",
+    "language": "mysql",
+    "code": "# Write your MySQL query statement below\r\nWITH\r\n    S AS (\r\n        SELECT DISTINCT\r\n            t.account_id,\r\n            DATE_FORMAT(day, '%Y-%m-01') AS day,\r\n            transaction_id AS tx,\r\n            SUM(amount) OVER (\r\n                PARTITION BY account_id, DATE_FORMAT(day, '%Y-%m-01')\r\n            ) > max_income AS marked\r\n        FROM\r\n            Transactions AS t\r\n            LEFT JOIN Accounts AS a ON t.account_id = a.account_id\r\n        WHERE type = 'Creditor'\r\n    )\r\nSELECT DISTINCT s1.account_id\r\nFROM\r\n    S AS s1\r\n    LEFT JOIN S AS s2 ON s1.account_id = s2.account_id AND TIMESTAMPDIFF(Month, s1.day, s2.day) = 1\r\nWHERE s1.marked = 1 AND s2.marked = 1\r\nORDER BY s1.tx;",
+    "problemId": 1843,
+    "title": "Suspicious Bank Accounts",
+    "problemUrl": "https://leetcode.com/problems/suspicious-bank-accounts/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1800-1899/1843.Suspicious Bank Accounts/Solution.sql",
+    "sourceFile": "Solution.sql",
+    "sourceCandidates": [
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1843.Suspicious Bank Accounts/Solution.sql",
+            "sourceFile": "Solution.sql"
+        },
+        {
+            "language": "mysql",
+            "sourcePath": "solution2/leetcode/solution/1800-1899/1843.Suspicious Bank Accounts/Solution2.sql",
+            "sourceFile": "Solution2.sql"
+        }
+    ]
+}

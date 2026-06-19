@@ -1,0 +1,58 @@
+{
+    "problemName": "construct-binary-tree-from-preorder-and-postorder-traversal",
+    "language": "python3",
+    "code": "# Definition for a binary tree node.\r\n# class TreeNode:\r\n#     def __init__(self, val=0, left=None, right=None):\r\n#         self.val = val\r\n#         self.left = left\r\n#         self.right = right\r\nclass Solution:\r\n    def constructFromPrePost(\r\n        self, preorder: List[int], postorder: List[int]\r\n    ) -> Optional[TreeNode]:\r\n        def dfs(a: int, b: int, c: int, d: int) -> Optional[TreeNode]:\r\n            if a > b:\r\n                return None\r\n            root = TreeNode(preorder[a])\r\n            if a == b:\r\n                return root\r\n            i = pos[preorder[a + 1]]\r\n            m = i - c + 1\r\n            root.left = dfs(a + 1, a + m, c, i)\r\n            root.right = dfs(a + m + 1, b, i + 1, d - 1)\r\n            return root\r\n\r\n        pos = {x: i for i, x in enumerate(postorder)}\r\n        return dfs(0, len(preorder) - 1, 0, len(postorder) - 1)",
+    "problemId": 889,
+    "title": "Construct Binary Tree from Preorder and Postorder Traversal",
+    "problemUrl": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/0800-0899/0889.Construct Binary Tree from Preorder and Postorder Traversal/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0889.Construct Binary Tree from Preorder and Postorder Traversal/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0889.Construct Binary Tree from Preorder and Postorder Traversal/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0889.Construct Binary Tree from Preorder and Postorder Traversal/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0889.Construct Binary Tree from Preorder and Postorder Traversal/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0889.Construct Binary Tree from Preorder and Postorder Traversal/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0889.Construct Binary Tree from Preorder and Postorder Traversal/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0889.Construct Binary Tree from Preorder and Postorder Traversal/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0889.Construct Binary Tree from Preorder and Postorder Traversal/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/0800-0899/0889.Construct Binary Tree from Preorder and Postorder Traversal/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

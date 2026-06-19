@@ -1,0 +1,68 @@
+{
+    "problemName": "check-array-formation-through-concatenation",
+    "language": "python3",
+    "code": "class Solution:\r\n    def canFormArray(self, arr: List[int], pieces: List[List[int]]) -> bool:\r\n        i = 0\r\n        while i < len(arr):\r\n            k = 0\r\n            while k < len(pieces) and pieces[k][0] != arr[i]:\r\n                k += 1\r\n            if k == len(pieces):\r\n                return False\r\n            j = 0\r\n            while j < len(pieces[k]) and arr[i] == pieces[k][j]:\r\n                i, j = i + 1, j + 1\r\n        return True",
+    "problemId": 1640,
+    "title": "Check Array Formation Through Concatenation",
+    "problemUrl": "https://leetcode.com/problems/check-array-formation-through-concatenation/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1600-1699/1640.Check Array Formation Through Concatenation/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1640.Check Array Formation Through Concatenation/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1640.Check Array Formation Through Concatenation/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1640.Check Array Formation Through Concatenation/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1640.Check Array Formation Through Concatenation/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "javascript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1640.Check Array Formation Through Concatenation/Solution.js",
+            "sourceFile": "Solution.js"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1640.Check Array Formation Through Concatenation/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1640.Check Array Formation Through Concatenation/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1640.Check Array Formation Through Concatenation/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1640.Check Array Formation Through Concatenation/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1640.Check Array Formation Through Concatenation/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1600-1699/1640.Check Array Formation Through Concatenation/Solution2.go",
+            "sourceFile": "Solution2.go"
+        }
+    ]
+}

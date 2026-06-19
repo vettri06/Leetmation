@@ -1,0 +1,73 @@
+{
+    "problemName": "number-of-ways-to-paint-n-3-grid",
+    "language": "python3",
+    "code": "class Solution:\r\n    def numOfWays(self, n: int) -> int:\r\n        mod = 10**9 + 7\r\n        f0 = f1 = 6\r\n        for _ in range(n - 1):\r\n            g0 = (3 * f0 + 2 * f1) % mod\r\n            g1 = (2 * f0 + 2 * f1) % mod\r\n            f0, f1 = g0, g1\r\n        return (f0 + f1) % mod",
+    "problemId": 1411,
+    "title": "Number of Ways to Paint N × 3 Grid",
+    "problemUrl": "https://leetcode.com/problems/number-of-ways-to-paint-n-3-grid/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1400-1499/1411.Number of Ways to Paint N × 3 Grid/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1411.Number of Ways to Paint N × 3 Grid/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1411.Number of Ways to Paint N × 3 Grid/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1411.Number of Ways to Paint N × 3 Grid/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1411.Number of Ways to Paint N × 3 Grid/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1411.Number of Ways to Paint N × 3 Grid/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1411.Number of Ways to Paint N × 3 Grid/Solution.rs",
+            "sourceFile": "Solution.rs"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1411.Number of Ways to Paint N × 3 Grid/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1411.Number of Ways to Paint N × 3 Grid/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1411.Number of Ways to Paint N × 3 Grid/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1411.Number of Ways to Paint N × 3 Grid/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1411.Number of Ways to Paint N × 3 Grid/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        },
+        {
+            "language": "rust",
+            "sourcePath": "solution2/leetcode/solution/1400-1499/1411.Number of Ways to Paint N × 3 Grid/Solution2.rs",
+            "sourceFile": "Solution2.rs"
+        }
+    ]
+}

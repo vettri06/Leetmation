@@ -1,0 +1,63 @@
+{
+    "problemName": "minimum-time-to-kill-all-monsters",
+    "language": "python3",
+    "code": "class Solution:\r\n    def minimumTime(self, power: List[int]) -> int:\r\n        @cache\r\n        def dfs(mask: int) -> int:\r\n            if mask == 0:\r\n                return 0\r\n            ans = inf\r\n            gain = 1 + (n - mask.bit_count())\r\n            for i, x in enumerate(power):\r\n                if mask >> i & 1:\r\n                    ans = min(ans, dfs(mask ^ (1 << i)) + (x + gain - 1) // gain)\r\n            return ans\r\n\r\n        n = len(power)\r\n        return dfs((1 << n) - 1)",
+    "problemId": 2403,
+    "title": "Minimum Time to Kill All Monsters",
+    "problemUrl": "https://leetcode.com/problems/minimum-time-to-kill-all-monsters/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/2400-2499/2403.Minimum Time to Kill All Monsters/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2403.Minimum Time to Kill All Monsters/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2403.Minimum Time to Kill All Monsters/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2403.Minimum Time to Kill All Monsters/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2403.Minimum Time to Kill All Monsters/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2403.Minimum Time to Kill All Monsters/Solution.ts",
+            "sourceFile": "Solution.ts"
+        },
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2403.Minimum Time to Kill All Monsters/Solution2.py",
+            "sourceFile": "Solution2.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2403.Minimum Time to Kill All Monsters/Solution2.cpp",
+            "sourceFile": "Solution2.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2403.Minimum Time to Kill All Monsters/Solution2.java",
+            "sourceFile": "Solution2.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2403.Minimum Time to Kill All Monsters/Solution2.go",
+            "sourceFile": "Solution2.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/2400-2499/2403.Minimum Time to Kill All Monsters/Solution2.ts",
+            "sourceFile": "Solution2.ts"
+        }
+    ]
+}

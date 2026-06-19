@@ -1,0 +1,38 @@
+{
+    "problemName": "maximum-number-of-consecutive-values-you-can-make",
+    "language": "python3",
+    "code": "class Solution:\r\n    def getMaximumConsecutive(self, coins: List[int]) -> int:\r\n        ans = 1\r\n        for v in sorted(coins):\r\n            if v > ans:\r\n                break\r\n            ans += v\r\n        return ans",
+    "problemId": 1798,
+    "title": "Maximum Number of Consecutive Values You Can Make",
+    "problemUrl": "https://leetcode.com/problems/maximum-number-of-consecutive-values-you-can-make/",
+    "sourceCollection": "solution2/leetcode/solution",
+    "sourcePath": "solution2/leetcode/solution/1700-1799/1798.Maximum Number of Consecutive Values You Can Make/Solution.py",
+    "sourceFile": "Solution.py",
+    "sourceCandidates": [
+        {
+            "language": "python3",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1798.Maximum Number of Consecutive Values You Can Make/Solution.py",
+            "sourceFile": "Solution.py"
+        },
+        {
+            "language": "cpp",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1798.Maximum Number of Consecutive Values You Can Make/Solution.cpp",
+            "sourceFile": "Solution.cpp"
+        },
+        {
+            "language": "java",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1798.Maximum Number of Consecutive Values You Can Make/Solution.java",
+            "sourceFile": "Solution.java"
+        },
+        {
+            "language": "golang",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1798.Maximum Number of Consecutive Values You Can Make/Solution.go",
+            "sourceFile": "Solution.go"
+        },
+        {
+            "language": "typescript",
+            "sourcePath": "solution2/leetcode/solution/1700-1799/1798.Maximum Number of Consecutive Values You Can Make/Solution.ts",
+            "sourceFile": "Solution.ts"
+        }
+    ]
+}
